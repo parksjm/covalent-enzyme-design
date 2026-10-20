@@ -1,0 +1,125 @@
+{
+  "purpose": "external artifact locations and hashes; not copied into Git",
+  "files": [
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_af3_ti1/prediction/nyl12_pa6_l2_ti1_af3_seed20261019/nyl12_pa6_l2_ti1_af3_seed20261019_model.cif",
+      "size_bytes": 907612,
+      "sha256": "5ba720f3fbee6b5a29bdb07c33b3a594d1f192cc1b370adbf74e729fb670bc88"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_af3_ti1/canonical/audit.json",
+      "size_bytes": 2215,
+      "sha256": "6148bbc854c5a5fdd51e920a4a9f157fe24abef2921703d30d3bc10fa2b4eabc"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_ti1_af3_neutral_beta/ti1.prmtop",
+      "size_bytes": 8730875,
+      "sha256": "c2b7a7b8675b2d5eb2c97ad8a3a933b062ac8b1c27d784b8c660faad5509a796"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_ti1_af3_neutral_beta/ti1.inpcrd",
+      "size_bytes": 728925,
+      "sha256": "3ccb4e81348f465ecb2daca956cac91b82a979d252c5787cb0cc69be8751a08a"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_ti1_af3_neutral_beta/ti1_audit.json",
+      "size_bytes": 592,
+      "sha256": "36a3033b5025a4f657050055379c8c9527387063b6e0d44cc6af2f51cc26f3ae"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_ti1_af3_neutral_beta/ti1_provenance.json",
+      "size_bytes": 3798,
+      "sha256": "7b3305bd51a0f3be95fa833cc9c7027f311495893325b76a3111f07bfef92c18"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/pa6_l2/water_search/water_search.json",
+      "size_bytes": 4514,
+      "sha256": "56516ee770a7ede82d4f717b6ccfc427cbfe2c11f07759741661a8dc9a31ad52"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/pa6_l2/water_search/contact_diagnostic_v2.json",
+      "size_bytes": 28406,
+      "sha256": "254057adc55b2a3c9b80e1963dce16b138b990f93038c925971fcc36da5bf4fd"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_af3_ti1/prediction/nyl12_poly_xama_maxa_ti1_af3_seed20261019/nyl12_poly_xama_maxa_ti1_af3_seed20261019_model.cif",
+      "size_bytes": 931874,
+      "sha256": "923b088c2494870e57d29a012ca6fec9772e83c52f36b9b4708beac27c8d1a7e"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_af3_ti1/canonical/audit.json",
+      "size_bytes": 2507,
+      "sha256": "0ce8862447e2e7fd09fff2f1967c76267d0e601a3ac7503129e31664852f6d67"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_ti1_af3_neutral_beta/ti1.prmtop",
+      "size_bytes": 8758748,
+      "sha256": "94b8458bf2d5989f57e4dc5633fea8d5f47b98e4103f394832d99d056eed5a9a"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_ti1_af3_neutral_beta/ti1.inpcrd",
+      "size_bytes": 731553,
+      "sha256": "2ee749be8bedf4c451a84bfe5057fd5541437031b5825ebf819ae79c46b51411"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_ti1_af3_neutral_beta/ti1_audit.json",
+      "size_bytes": 595,
+      "sha256": "9fda68077fd8a8695503839b78985f4ef8cee0afe9e6b5cded8a5bf918779f2f"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/poly_xama_maxa_ti1_af3_neutral_beta/ti1_provenance.json",
+      "size_bytes": 3535,
+      "sha256": "e79c95f531600049e259828b7eed74dc1523d926611aafc1377f27b5f1972a4e"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/poly_xama_maxa/water_search/water_search.json",
+      "size_bytes": 4524,
+      "sha256": "5cb94ec8fef92a9d7b74db81099b67f5d7145b94a64fe8b0588f3b68bb15d842"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/poly_xama_maxa/water_search/contact_diagnostic_v2.json",
+      "size_bytes": 34918,
+      "sha256": "cf14ecf554c4b782576dc52cf5164ec9a0caa1cb1f74be4201b9b15b2b86e23d"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/jobs/qm_region_audit_pa6_r1/report.json",
+      "size_bytes": 24951,
+      "sha256": "5303659cc9b9ceb3ed3650f889c9068decc6198d08ea8d818b005f5eb278b1ad"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/jobs/qm_region_audit_poly_r1/report.json",
+      "size_bytes": 41367,
+      "sha256": "de240d689d79a59df18ba6ceb0780416904d7dfb361cd5b4ac013fd87d701d88"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/gaussian_preflight_violet_20261020/preflight.json",
+      "size_bytes": 1177,
+      "sha256": "0c51f05485641e5ec07bf0e9964c6882d3276f43a5e8e871ee3a11945fc36601"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/gaussian_preflight_violet_20261020/water.gjf",
+      "size_bytes": 216,
+      "sha256": "1f81e9d5a85b3c61a113cae8ab9bf3b287552e940be7435bc5008f11b5d2f4c2"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/gaussian_preflight_violet_20261020/water.log",
+      "size_bytes": 19514,
+      "sha256": "664449e279d55d6be99b99d1f7a2bc7642d11158c7ec7ca2d4351c750a21cfd1"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/jobs/g16_preflight/status.json",
+      "size_bytes": 999,
+      "sha256": "7637fe5cb5c2b5cdae94bd6d00e85ecffb2cb612c069f538abd8a8f359e1c6aa"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/jobs/repository_export/status.json",
+      "size_bytes": 983,
+      "sha256": "330da305c5bc307e2c45923846363186b89ed0bc6ba4c19fad873beb66c519b3"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/jobs/repository_import/status.json",
+      "size_bytes": 1379,
+      "sha256": "6196c07e517a8ad32c09352a152fe4dffe550fd90454b74f2c517a19693096e5"
+    }
+  ]
+}

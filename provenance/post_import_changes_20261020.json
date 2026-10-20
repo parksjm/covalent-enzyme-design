@@ -1,0 +1,16 @@
+{
+  "changed_imported_files": [
+    {
+      "path": "tests/test_diagnose_nyl12_relay_water_contacts.py",
+      "import_sha256": "3e261a1bb7494f47347190c7e6d20c0a99d9fc0c60cc698d1d6d86b99adcb41a",
+      "current_sha256": "833b36d0f9c25288d6774c2eb115f4d898a098c9230120407bc9fe5668e7675d"
+    },
+    {
+      "path": "tools/skills/scientific-tmux-jobs/references/pipeline.md",
+      "import_sha256": "9759ee96dfe2f5992568ed57388e6e36c8b519c40bc28a8f99192c7476c8ba59",
+      "current_sha256": "5519a64ae5637eda2077264bf8d1406dbec2e08331fd903ce84ff1b754f91c27"
+    }
+  ],
+  "additional_files": "Root scaffold, uv.lock, standalone handoff, new tests and provenance records are captured by the initial Git commit.",
+  "original_snapshot_retained": true
+}

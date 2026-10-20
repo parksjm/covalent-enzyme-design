@@ -1,0 +1,13 @@
+{
+  "archive_source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/repository_export/source_snapshot.tar.gz",
+  "archive_sha256": "f5162d49f2f493090168e51b1a85fb231e0cbeffb6100aad99522a4de24d2f8d",
+  "inventory_sha256": "b4f2cccda76aee343eb24e21f3f7762f619108ae3bc77a708d8a44b49411c391",
+  "source_file_count": 42,
+  "root_files_copied_from": "tools/covalent_repository_template",
+  "argv": [
+    "import_snapshot.py",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/repository_export/source_snapshot.tar.gz",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_ti1_refinement_20261020/repository_export/source_inventory.json",
+    "/data/jpc/covalent-enzyme-design"
+  ]
+}

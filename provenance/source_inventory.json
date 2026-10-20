@@ -1,0 +1,302 @@
+{
+  "created_utc": "2026-10-20T16:19:30.155050+00:00",
+  "files": [
+    {
+      "git_status": "untracked",
+      "path": "docs/covalent_pipeline_repository_plan_20261020.md",
+      "role": "extraction plan",
+      "sha256": "1ef819734935c647e5b09055455c6a6e5c75e7d32764dbc3b5446bdd22e0b09a",
+      "size_bytes": 4845
+    },
+    {
+      "git_status": "untracked",
+      "path": "docs/nyl12_covalent_resume_20261019.md",
+      "role": "workflow handoff",
+      "sha256": "20b4515e0255b8592fb56e8189942a0b0f4f8675e40a829b5804daa8b74689bc",
+      "size_bytes": 15399
+    },
+    {
+      "git_status": "untracked",
+      "path": "docs/nyl12_pa6_covalent_qmmm_plan_20261019.md",
+      "role": "scientific plan",
+      "sha256": "49364a1f78795c3793f7659a8e6089e22d96a059cd7650fc466fd52f654852f1",
+      "size_bytes": 20755
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/audit_nyl12_ti1_qm_region.py",
+      "role": "pipeline entry point",
+      "sha256": "d0346f3ac7e008735e6c9b0809fa8625433aaa079e7d7305d0c8a86feb800147",
+      "size_bytes": 1224
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/build_nyl12_acyl_qmmm.py",
+      "role": "pipeline entry point",
+      "sha256": "497e52596684b0e40c247ad369763ea87a99613629afdf6d7e5ce641499cf0ee",
+      "size_bytes": 6462
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/build_nyl12_ti1_qmmm.py",
+      "role": "pipeline entry point",
+      "sha256": "ac8ecf474e7e15b43b60f09b5e4fb388b50e975754a3f1e6632ae81722367886",
+      "size_bytes": 5172
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/canonicalize_nyl12_af3_ti1.py",
+      "role": "pipeline entry point",
+      "sha256": "bd2abd2c15e52f6d38c3694fe35fddaf66f3014c1f03e05728a9997e1007dea0",
+      "size_bytes": 1420
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/diagnose_nyl12_relay_water_contacts.py",
+      "role": "pipeline entry point",
+      "sha256": "1bfba226fe6505a3e4479c0c1e2d7b7468f9d0131fd4022de9372a40f5b6c482",
+      "size_bytes": 7173
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/inventory_covalent_pipeline.py",
+      "role": "inventory generator",
+      "sha256": "f74586e281c89062e89ea28a5b9dffaddef33d4489cf89c219ce7076d9fb44c0",
+      "size_bytes": 5949
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/preflight_gaussian16.py",
+      "role": "pipeline entry point",
+      "sha256": "3c40cf4114c441bae9240f751e96056d1004546e82a2d7e99c1431cdfc9f424a",
+      "size_bytes": 4126
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/prepare_nyl12_af3_ti1.py",
+      "role": "pipeline entry point",
+      "sha256": "452e45e20ac5b35c9f93341d7e5939af7606bc3fec0768a93327135d000f8c1e",
+      "size_bytes": 2020
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/run_nyl12_job.py",
+      "role": "pipeline entry point",
+      "sha256": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3",
+      "size_bytes": 2478
+    },
+    {
+      "git_status": "untracked",
+      "path": "scripts/search_nyl12_relay_water.py",
+      "role": "pipeline entry point",
+      "sha256": "3ebe7e76b965c7542e6d23d668d4391355ac0f6b429d7e9342a427213eccfa43",
+      "size_bytes": 2413
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/__init__.py",
+      "role": "package module",
+      "sha256": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+      "size_bytes": 70
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/af3.py",
+      "role": "package module",
+      "sha256": "a6774d2e70f38bc8195647fa391919fb2862ac3f6c9af472127e38442bcfc34a",
+      "size_bytes": 7434
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/af3_postprocess.py",
+      "role": "package module",
+      "sha256": "06d46a5873db0c49cfd1c6f86e18bff0c229c6a7bb59ef99cd2e4fc3c31470ff",
+      "size_bytes": 8229
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/chemistry.py",
+      "role": "package module",
+      "sha256": "193192af1b3b4862c8848a26bf4f8c77744e9dc3e714d91d3506144b7ae81bb8",
+      "size_bytes": 10312
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/inspection.py",
+      "role": "package module",
+      "sha256": "de3c616d5861bc7b146498b89bba6af9e04816a2d19da1c4c92c9f6c5d087cac",
+      "size_bytes": 4793
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/jobs.py",
+      "role": "package module",
+      "sha256": "8fed4fa052e6e0d8cf92b74af3c51707925028e9e100179ee82815336a5da441",
+      "size_bytes": 6381
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/parameter_cache.py",
+      "role": "package module",
+      "sha256": "2d65c7336470bfb01aa27adf1ccb5e1114041fe1446b74808d3918a3d8972fa1",
+      "size_bytes": 8666
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/pose.py",
+      "role": "package module",
+      "sha256": "551af710e984d41ef1345a833463c9716617867fbb22c73aeccb25850abe75c0",
+      "size_bytes": 6090
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/qm_region.py",
+      "role": "package module",
+      "sha256": "98e80041ca544a59ff95c93a2983e6741373646cc155df4ff55c543b2ce84dc2",
+      "size_bytes": 8471
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/qmmm.py",
+      "role": "package module",
+      "sha256": "f6668ffa69b4c52dcee3b5810ebfa65327fe99b65d30f9a43c6971a91d0a90f0",
+      "size_bytes": 6587
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/relay_water.py",
+      "role": "package module",
+      "sha256": "75c6f56b8c9aad2042e52d1699990e7c04bad70e0400294345c8310eb9a8a662",
+      "size_bytes": 7195
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/tetrahedral.py",
+      "role": "package module",
+      "sha256": "78f19f2c3b4b341048e5b0b6f6dc2e66a9fdb265612662f642bf00a06aa054c6",
+      "size_bytes": 10271
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/topology.py",
+      "role": "package module",
+      "sha256": "f9dfd679a789972110ef339cbb53d5460a181fbbcb86ef63134a73143dc6963d",
+      "size_bytes": 13822
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/validate_ti1.py",
+      "role": "package module",
+      "sha256": "c2f5bedcc73a768bc7e5f587c23ae93595e81930ce72b87b858f398953eab7a5",
+      "size_bytes": 4803
+    },
+    {
+      "git_status": "untracked",
+      "path": "src/nyl12_covalent/validate_topology.py",
+      "role": "package module",
+      "sha256": "259bfc9e09bd76f46496b90fcb8a310082309dee49311edbfb2852d5246be43d",
+      "size_bytes": 3461
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_diagnose_nyl12_relay_water_contacts.py",
+      "role": "relay-water diagnostic tests",
+      "sha256": "3e261a1bb7494f47347190c7e6d20c0a99d9fc0c60cc698d1d6d86b99adcb41a",
+      "size_bytes": 2180
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_inventory_covalent_pipeline.py",
+      "role": "inventory generator tests",
+      "sha256": "9dc5c2665f82ceab6cb22057789d34b945757ab754e87e982ed08ee59d0f326e",
+      "size_bytes": 3591
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_nyl12_inspection.py",
+      "role": "module tests",
+      "sha256": "c976f9ad7d6e6ca3439c45725b890562e65edd144d37829639f11dfa5989a45f",
+      "size_bytes": 2413
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_nyl12_jobs.py",
+      "role": "module tests",
+      "sha256": "d2bbaf5cefa39bbd5bd2e21960f8e9321376c45a32f009520e1b2b96dec316af",
+      "size_bytes": 5238
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_nyl12_parameter_cache.py",
+      "role": "module tests",
+      "sha256": "fe9cfb053e165ec1da15b449dd53ebf39194f89625103701c98310277b88878f",
+      "size_bytes": 3558
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_nyl12_qm_region.py",
+      "role": "QM-region module tests",
+      "sha256": "8ef73815790f2c296fb1d0977504de79a9023878a2596cc7d6417649a76e8785",
+      "size_bytes": 5524
+    },
+    {
+      "git_status": "untracked",
+      "path": "tests/test_preflight_gaussian16.py",
+      "role": "Gaussian preflight tests",
+      "sha256": "44b2faee69e62da7c9b462c3429372ccedff2d3cbe979373a98eb43e0a3658db",
+      "size_bytes": 2837
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/covalent_repository_template/.gitignore",
+      "role": "extracted repository ignores",
+      "sha256": "055d14b1e69ab1509b24b7740e0eda88f49ea94e6aa5d86daee7a6d0af07c1c7",
+      "size_bytes": 165
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/covalent_repository_template/AGENTS.md",
+      "role": "extracted repository instructions",
+      "sha256": "da3a4982507cb893628c2a88b209cd1233b058bbbba845158b8a8cb2a846cce6",
+      "size_bytes": 1421
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/covalent_repository_template/README.md",
+      "role": "extracted repository guide",
+      "sha256": "49910bd1abbc626fbf4bc9009d81548df3fc37e7ff604854058e2a66334fac26",
+      "size_bytes": 3812
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/covalent_repository_template/pyproject.toml",
+      "role": "extracted repository configuration",
+      "sha256": "1be849f18a9e262a610ba17f7c40b4321b69fd2952c8e81e6242f74c576d7e0d",
+      "size_bytes": 459
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/skills/scientific-tmux-jobs/SKILL.md",
+      "role": "skill instructions",
+      "sha256": "51f54b2c8c4e42cc46d641188e3369eb30a519e2a1ed693c63b0d95441b5d91f",
+      "size_bytes": 3130
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/skills/scientific-tmux-jobs/agents/openai.yaml",
+      "role": "skill metadata",
+      "sha256": "357bbdf0684ffd51fddefec8ffda1dd59963c61346027f55b2d16896ff97a61b",
+      "size_bytes": 268
+    },
+    {
+      "git_status": "untracked",
+      "path": "tools/skills/scientific-tmux-jobs/references/pipeline.md",
+      "role": "skill adapter",
+      "sha256": "9759ee96dfe2f5992568ed57388e6e36c8b519c40bc28a8f99192c7476c8ba59",
+      "size_bytes": 2025
+    }
+  ],
+  "head": "1fd7ce93a48c63fddb1c36148600940b79b59f38",
+  "head_captures_untracked_changes": false,
+  "source_root": "/data/jpc/enzyme-substrate-modeling"
+}

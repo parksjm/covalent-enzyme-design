@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-20T16:37:10.011794+00:00",
+  "tests_passed": 51,
+  "pytest_command": "uv run pytest --cov=src/nyl12_covalent --cov=scripts --cov-report=term-missing --cov-report=json:provenance/coverage_20261020.json -q",
+  "ruff_command": "uv run ruff check src scripts tests provenance",
+  "ruff_passed": true,
+  "overall_line_coverage_percent": 38.10840707964602,
+  "scope_note": "Imported chemistry/topology/prediction code lacks unit coverage; new workflow modules and wrappers each exceed 80%. No converged TI1 geometry is claimed.",
+  "runtime_python": "3.12.11",
+  "environment": "uv.lock plus .venv in standalone checkout"
+}

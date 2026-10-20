@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Jobs in tmux"
+  short_description: "Run persistent scientific jobs with provenance"
+  default_prompt: "Use $scientific-tmux-jobs to launch or resume this calculation with recorded inputs, logs, and scientific acceptance checks."

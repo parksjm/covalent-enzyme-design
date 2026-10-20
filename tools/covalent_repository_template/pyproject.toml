@@ -1,0 +1,26 @@
+[project]
+name = "covalent-enzyme-design"
+version = "0.1.0"
+description = "Research workflows for covalent enzyme-substrate modeling"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==1.26.4",
+    "rdkit==2025.3.6",
+    "ParmEd==4.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.0.2",
+    "ruff==0.15.13",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py312"
