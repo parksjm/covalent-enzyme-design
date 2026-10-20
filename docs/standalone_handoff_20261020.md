@@ -1,5 +1,31 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Paused at the user's request — 2026-10-20
+
+Ready to resume; no calculations from this work remain active. All tracked
+job attempts have terminal exit records. Failed water searches and superseded
+diagnostic attempts remain preserved alongside successful later diagnostics.
+All delegated agents finished. Existing unrelated tmux sessions
+`nyl12_effective_strain_20261015` and
+`nyl12_focused_redesign_preflight_20261016` were left untouched.
+
+Implementation checkpoint: `ab85811962f40f8988f9113c3c9e7b9edcc0e13c` on
+`codex/initial-import`, pushed to the private remote. This pause update changes
+documentation only; the last checks remain 51 passing tests and passing Ruff.
+No new jobs were launched for the pause.
+
+To resume, open `/data/jpc/covalent-enzyme-design` and read this note first.
+Start with the **Next scientific work** section below. Do not rerun the old
+TI1 runner unchanged: it still uses the earlier QM boundary and lacks safe
+checkpoint continuation. Geometry repair and charge fitting remain unfinished.
+
+Suggested resume request:
+
+> Read `/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md`
+> and resume Nyl12 TI1 work. Delegate routine scripting to less expensive
+> models, run scientific jobs in tmux, and preserve manuscript provenance.
+
+
 ## Authoritative locations
 
 - New development checkout: `/data/jpc/covalent-enzyme-design`.
@@ -70,7 +96,7 @@ is part of this workflow.
 
 `scientific-tmux-jobs` is installed at
 `/home/jpc/.codex-hosts/violet/skills/scientific-tmux-jobs` and versioned under
-`tools/skills/`. Update its pipeline adapter to this checkout after import.
+`tools/skills/`. Its installed pipeline adapter already points to this checkout.
 The covalent-modeling skill is authorized but awaits a validated refinement
 workflow. Consider parameter-fitting/cache, canonical inspection, and manuscript
 provenance skills when repeated use justifies separate routing.
