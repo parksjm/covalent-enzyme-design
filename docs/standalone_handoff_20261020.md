@@ -1,5 +1,35 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Latest checkpoint — 2026-10-21, before 18:00 Eastern
+
+- User authorized work until 18:00 Eastern and a minimal AF3 water test that may
+  run after disconnect: one alpha A, beta E, covalent PA6 L4 TI1 substrate I,
+  and explicit HOH ligand J. Full-sequence Thr233 is E1.
+- Launched `nyl12_af3_water_pa6_l4_20261021` in tmux on GPU0. Artifacts:
+  `output_nyl12_af3_water_test_20261021/pa6_l4_alpha_beta/attempt_01/`.
+  Check `job/status.json`, `job/job.log`, `feature_acceptance.json`, and
+  `prediction/` on resume; do not infer success from session absence.
+- AF3 inference also completed and wrote one predicted structure; the output
+  water/covalent geometry has NOT yet been independently audited.
+- Actual feature preflight PASSED: one water O and both contact restraints
+  retained. Explicit HOH ligand has a non-polymer chain type. Restraints connect
+  E1 N and OG1 to J1 O, range 2.6–3.2 Å, water endpoint mobile. One seed
+  20261021, one sample, three recycles; guidance 0.5/interval1/20steps.
+  Existing MSAs/templates/CCD reused. Source/input snapshots and hashes retained.
+  Heavy-atom feature success does NOT establish NH3 protonation, water H-bond
+  directions, TI1 geometry, or catalytic accuracy. No QM/MM refinement launched.
+- Scripted local relay repair remains experimental and has NOT run on real
+  models. Finish search-path tests/review before launch. Geometry/helper and
+  CLI/export tests exist; 249 project tests passed at this checkpoint before
+  final newly added tests. Full new-code coverage is not yet established.
+- Canonical inspection labels are `pa6_l4` and `maxa_maxa`; original identifiers
+  remain provenance aliases. Viewer source fixes `resi 113+186` and adds
+  `set valence, 0`. Existing protein coordinates remain unrefined/clashy until
+  a separately accepted replacement exists. Do not describe renaming as repair.
+- Active journal: `output_agent_actions/20261021.jsonl`. Repeated automatic
+  approval-review timeouts delayed tools; no safety rejection was inferred.
+  See live journal for final export/commit/push outcomes.
+
 ## Resume checkpoint — 2026-10-21
 
 This section supersedes historical job-state statements below.

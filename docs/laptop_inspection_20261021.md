@@ -107,13 +107,17 @@ References: [PyMOL load](https://www.pymolwiki.org/Load),
 
 ## Protein structures
 
-Open `protein/pa6_l2_ti1_starting.pdb` and
-`protein/poly_xama_maxa_ti1_starting.pdb`. To use the saved view, change PyMOL's
+Open `protein/pa6_l4_ti1_starting.pdb` and
+`protein/maxa_maxa_ti1_starting.pdb`. PA6 L4 is the substrate; L2 is its
+hydrolysis product. The other substrate is MAXA|MAXA. Historical identifiers
+remain in original source paths and provenance records only.
+To use the saved view, change PyMOL's
 working directory to the package's `protein` directory and run
 `@view_models.pml`. It retains the requested commands:
 
 ```pml
-show sticks, resi 113 +186 and chain A
+set valence, 0
+show sticks, resi 113+186 and chain A
 util.cnc
 ```
 
@@ -127,9 +131,18 @@ and current classical parameters remain provisional. Inspect:
 - Ligand **I1**: PA6 C54/O49/N59 or poly C033/O034/N035; the substrate C–N
   bond remains intact in TI1. Relay water is **J1**.
 - Crowding near Asn186 and the relay water, substrate fit and uncertain tails.
-  The retained `poly_xama_maxa` filename is a stable historical identifier;
-  its audited chemical sequence is **MAXA|MAXA**. Confidence is particularly
+  Confidence is particularly
   poor in the tails, so their displayed placement should not be treated as fixed.
 
 `reports/` contains original active-site metrics and ligand-confidence evidence.
 No noncovalent ES, true TS1 or acyl-enzyme validation model is included yet.
+
+Water repair and all exports are scripted; see
+`docs/relay_water_repair_20261021.md`. The intended TI1 bridge is
+Thr233 N–H…water O–H…Thr233 OG1. A replacement structure requires both
+directional hydrogen-bond and full-environment clash acceptance. Renaming alone
+does not establish that a water position has been repaired.
+
+The pull script preserves local files. Previously downloaded files bearing the
+historical names may remain beside the corrected names; the regenerated viewer
+loads only the canonical filenames above.

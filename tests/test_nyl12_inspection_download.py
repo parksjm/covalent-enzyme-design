@@ -74,7 +74,13 @@ def test_inventory_and_cli(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> N
     """Only small inspection types enter the explicit inventory."""
     old = tmp_path / "output_nyl12_resume_20261020/nyl12_pymol_starting_models"
     old.mkdir(parents=True)
-    for name in ("model.pdb", "view.pml", "scratch.chk", "raw.log"):
+    for name in (
+        "pa6_l2_ti1_starting.pdb",
+        "poly_xama_maxa_ti1_starting.pdb",
+        "view.pml",
+        "scratch.chk",
+        "raw.log",
+    ):
         (old / name).write_text("fixture")
     for folder in ("docs", "manuscript"):
         (tmp_path / folder).mkdir()
@@ -82,9 +88,14 @@ def test_inventory_and_cli(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> N
     inventory = export.selected_files(
         tmp_path, tmp_path / "audit", tmp_path / "optimized", tmp_path / "trajectories"
     )
-    assert "protein/model.pdb" in inventory
+    assert "protein/pa6_l4_ti1_starting.pdb" in inventory
+    assert "protein/maxa_maxa_ti1_starting.pdb" in inventory
+    assert (
+        inventory["protein/pa6_l4_ti1_starting.pdb"].name == "pa6_l2_ti1_starting.pdb"
+    )
     assert "protein/scratch.chk" not in inventory
     assert "protein/raw.log" not in inventory
+    assert inventory["protein/view_models.pml"] == export.VIEWER_SOURCE
     assert (
         inventory["qm/neutral_thr_nme/conformer_01/optimized.sdf"]
         == tmp_path / "optimized/conformer_01.sdf"
@@ -112,6 +123,63 @@ def test_inventory_and_cli(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> N
     )
     export.main()
     assert (output / "small.txt").read_text() == "source"
+
+
+def test_alternate_protein_source_and_canonical_viewer(tmp_path: Path) -> None:
+    """An explicit source directory is used and incomplete sources fail."""
+    protein_source = tmp_path / "repaired_models"
+    protein_source.mkdir()
+    for name in (
+        "pa6_l4_ti1_starting.pdb",
+        "maxa_maxa_ti1_starting.pdb",
+    ):
+        (protein_source / name).write_text(name)
+    inventory = export.selected_files(
+        tmp_path,
+        tmp_path / "audit",
+        tmp_path / "optimized",
+        tmp_path / "trajectories",
+        protein_source,
+    )
+    assert inventory["protein/pa6_l4_ti1_starting.pdb"] == (
+        protein_source / "pa6_l4_ti1_starting.pdb"
+    )
+    assert inventory["protein/maxa_maxa_ti1_starting.pdb"] == (
+        protein_source / "maxa_maxa_ti1_starting.pdb"
+    )
+    viewer = inventory["protein/view_models.pml"].read_text()
+    assert "load pa6_l4_ti1_starting.pdb, pa6_l4" in viewer
+    assert "load maxa_maxa_ti1_starting.pdb, maxa_maxa" in viewer
+    assert "set valence, 0" in viewer
+    assert "show sticks, resi 113+186 and chain A" in viewer
+    assert "resi 113 +186" not in viewer
+    empty_source = tmp_path / "empty"
+    empty_source.mkdir()
+    with pytest.raises(FileNotFoundError, match="No source model"):
+        export.selected_files(
+            tmp_path,
+            tmp_path / "audit",
+            tmp_path / "optimized",
+            tmp_path / "trajectories",
+            empty_source,
+        )
+
+
+def test_alias_provenance_keeps_substrate_and_product_distinct(
+    tmp_path: Path,
+) -> None:
+    """Export aliases retain legacy IDs and measured product identities."""
+    source = tmp_path / "source.txt"
+    source.write_text("source")
+    report = export.build_package({"source.txt": source}, tmp_path / "package")
+    aliases = report["model_aliases"]
+    assert aliases["pa6_l4"]["source_ids"] == ["pa6_l2", "pa6_l4"]
+    assert aliases["pa6_l4"]["product"] == "L2"
+    assert aliases["maxa_maxa"]["source_ids"] == [
+        "poly_xama_maxa",
+        "maxa_maxa",
+    ]
+    assert aliases["maxa_maxa"]["product"] == "MAXA"
 
 
 def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:

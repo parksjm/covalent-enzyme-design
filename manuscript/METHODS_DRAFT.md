@@ -16,9 +16,10 @@ canonicalized models; identifiers from different prediction pipelines are not
 interchanged without checking the underlying molecular graph.
 
 Substrates were specified by explicit molecular graphs and intended hydrolysis
-products. The PA6 reference uses an L2-producing register. The copolyamide
-target retains the identifier `poly_xama_maxa`, but its literal modeled sequence
-is MAXAMAXA, cleaved at MAXA|MAXA. M denotes hexamethylenediamine, X denotes
+products. The PA6 substrate is L4 (`pa6_l4`), cleaved in an L2-producing
+register; `pa6_l2` is a historical input alias. The copolyamide substrate is
+MAXA|MAXA (`maxa_maxa`), historically labeled `poly_xama_maxa`. Its literal
+modeled sequence is MAXAMAXA. M denotes hexamethylenediamine, X denotes
 p-xylylenediamine and A denotes adipic acid [R1]. Graph cleavage yields two
 MAXA fragments, each C26H42N4O5. This soluble fragment represents a selected
 poly(X,AMA) register; it is not evidence for the activity of Nyl12 on separately
