@@ -7,14 +7,17 @@ XYZ files are small coordinate histories of the two Gaussian calculations.
 
 ## Download from your laptop
 
-Copy `scripts/pull_nyl12_inspection.sh` from the workstation to your laptop,
-then run it in a terminal. Replace `jpc@violet` with your usual SSH destination
-or alias if needed:
+Copy the script from violet to your laptop, then run it from the directory where
+you want the download:
 
 ```bash
-bash pull_nyl12_inspection.sh --dry-run jpc@violet ./nyl12-inspection-20261021
-bash pull_nyl12_inspection.sh jpc@violet ./nyl12-inspection-20261021
+scp -p violet:/data/jpc/covalent-enzyme-design/scripts/pull_nyl12_inspection.sh .
+./pull_nyl12_inspection.sh
 ```
+
+It connects as your current laptop username to `violet` and downloads into
+`./nyl12-inspection-20261021/`. `./pull_nyl12_inspection.sh --dry-run` previews
+the transfer. Remote and destination arguments remain optional overrides.
 
 Only the curated `output_laptop_inspection_20261021/` directory is transferred.
 The script uses the laptop's existing `rsync`, SSH and `shasum` or `sha256sum`.

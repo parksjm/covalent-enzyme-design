@@ -112,7 +112,7 @@ def build_package(files: dict[str, Path], output: Path) -> dict[str, object]:
     for name, source in files.items():
         target = output / name
         target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(source, target)
+        shutil.copy2(source, target)
         if hashlib.sha256(target.read_bytes()).hexdigest() != rows[name]["sha256"]:
             raise RuntimeError(f"Source changed during packaging: {source}")
     report = {

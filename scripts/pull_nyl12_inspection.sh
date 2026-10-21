@@ -3,8 +3,8 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: bash $0 [--dry-run] USER@WORKSTATION [DESTINATION]"
-    echo "Example: bash $0 jpc@violet ./nyl12-inspection-20261021"
+    echo "Usage: $0 [--dry-run] [USER@HOST [DESTINATION]]"
+    echo "By default, pull from $(id -un)@violet into ./nyl12-inspection-20261021"
 }
 
 dry_run=0
@@ -16,11 +16,11 @@ if [[ ${1:-} == --help || ${1:-} == -h ]]; then
     usage
     exit 0
 fi
-if [[ $# -lt 1 || $# -gt 2 ]]; then
+if [[ $# -gt 2 ]]; then
     usage >&2
     exit 2
 fi
-remote=$1
+remote=${1:-$(id -un)@violet}
 destination=${2:-./nyl12-inspection-20261021}
 # Keep the SSH/rsync remote specification unambiguous; SSH aliases are supported.
 if [[ ! $remote =~ ^[a-zA-Z0-9_][a-zA-Z0-9_.@-]*$ ]]; then
@@ -48,7 +48,7 @@ if [[ $dry_run -eq 0 ]]; then
 fi
 # No --delete: files already on the laptop are never deleted.
 # These exclusions are defensive; the workstation package is already curated.
-rsync_args=(-rtvz --safe-links --max-size=10m)
+rsync_args=(-rtpvz --safe-links --max-size=10m)
 if [[ $dry_run -eq 1 ]]; then
     rsync_args+=(--dry-run)
 fi
