@@ -55,3 +55,22 @@ can yet be described as completed. Before including historical quantitative
 activity comparisons, recover their original assay definitions and raw tables.
 Before release, complete the bibliography and archive accepted input/output
 artifacts with a repository revision and retrievable storage location.
+# 2026-10-21 execution update
+
+The two original Gaussian runs under
+`output_nyl12_resume_20261020/neutral_thr_nme_wb97xd/calculations/` completed
+normally and passed geometry/frequency/ESP prerequisites. Their original
+acceptance and process files remain unchanged. Independent rechecking and
+optimized-coordinate exports are in
+`output_nyl12_resume_20261021/qm_conformer_audit_v2/`, with source snapshots,
+input/output hashes and a separate tmux process record. The initial analysis
+attempt is retained as failed; no scientific result is taken from it.
+
+The portable log converter produced 64/24 selected Input-orientation snapshots
+under `output_nyl12_resume_20261021/qm_trajectories/`, with per-file provenance.
+These snapshots are visualization artifacts, not a new dynamical calculation.
+Relay oxygen feasibility reports are in
+`output_nyl12_resume_20261021/relay_feasibility/{pa6_l2,poly_xama_maxa}/report.json`;
+the optimistic atom exclusions were diagnostic only and did not alter any
+protein coordinates. See the current handoff and
+`provenance/resume_20261021_checkpoint.json` for consolidated evidence.

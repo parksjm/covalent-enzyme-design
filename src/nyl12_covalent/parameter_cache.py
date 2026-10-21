@@ -7,6 +7,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import shutil
 import tempfile
 from contextlib import contextmanager
@@ -42,6 +43,17 @@ def _artifact_name(name: str) -> str:
     return candidate.as_posix()
 
 
+def _entry_label(label: str | None) -> str:
+    """Validate a readable cache-directory label."""
+    if label is None:
+        return "parameter_artifacts"
+    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,119}", label):
+        raise ValueError(f"Unsafe parameter cache label: {label!r}")
+    if label in {".", ".."} or label.startswith("."):
+        raise ValueError(f"Unsafe parameter cache label: {label!r}")
+    return label
+
+
 class ParameterArtifactCache:
     """Store and materialize parameter files using scientific identity hashes.
 
@@ -62,7 +74,10 @@ class ParameterArtifactCache:
     def key_for(identity: Any) -> str:
         """Return a stable SHA256 key for a JSON-serializable identity."""
         encoded = json.dumps(
-            identity, sort_keys=True, separators=(",", ":"), ensure_ascii=False,
+            identity,
+            sort_keys=True,
+            separators=(",", ":"),
+            ensure_ascii=False,
             allow_nan=False,
         ).encode("utf-8")
         return hashlib.sha256(encoded).hexdigest()
@@ -87,39 +102,66 @@ class ParameterArtifactCache:
     @staticmethod
     def _canonical_identity(identity: Any) -> Any:
         """Normalize JSON values so tuples and lists compare consistently."""
-        encoded = json.dumps(identity, sort_keys=True, separators=(",", ":"),
-                             ensure_ascii=False, allow_nan=False)
+        encoded = json.dumps(
+            identity,
+            sort_keys=True,
+            separators=(",", ":"),
+            ensure_ascii=False,
+            allow_nan=False,
+        )
         return json.loads(encoded)
 
-    def _read_entry(self, identity: Any) -> dict[str, Any] | None:
+    def _find_entry(self, identity: Any) -> tuple[Path, dict[str, Any]] | None:
         identity = self._canonical_identity(identity)
         key = self.key_for(identity)
-        entry = self.root / key
-        if not entry.exists():
-            return None
-        manifest_path = entry / MANIFEST
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError) as error:
-            raise RuntimeError(f"Corrupt parameter cache manifest: {manifest_path}") from error
-        if manifest.get("key") != key or manifest.get("identity") != identity:
-            raise RuntimeError(f"Parameter cache identity mismatch: {entry}")
-        files = manifest.get("files")
-        if not isinstance(files, dict) or not files:
-            raise RuntimeError(f"Invalid parameter cache file list: {manifest_path}")
-        for name, expected in files.items():
-            safe_name = _artifact_name(name)
-            path = entry / safe_name
-            if not path.is_file() or _digest(path) != expected:
-                raise RuntimeError(f"Parameter cache artifact is corrupt: {path}")
-        return manifest
+        matches: list[tuple[Path, dict[str, Any]]] = []
+        for entry in self.root.iterdir():
+            if not entry.is_dir() or entry.name.startswith("."):
+                continue
+            manifest_path = entry / MANIFEST
+            if not manifest_path.is_file():
+                raise RuntimeError(f"Missing parameter cache manifest: {manifest_path}")
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError) as error:
+                raise RuntimeError(
+                    f"Corrupt parameter cache manifest: {manifest_path}"
+                ) from error
+            entry_key = manifest.get("key")
+            entry_identity = manifest.get("identity")
+            if entry_key != self.key_for(entry_identity):
+                raise RuntimeError(f"Parameter cache identity mismatch: {entry}")
+            files = manifest.get("files")
+            if not isinstance(files, dict) or not files:
+                raise RuntimeError(
+                    f"Invalid parameter cache file list: {manifest_path}"
+                )
+            if entry_key == key:
+                if entry_identity != identity:
+                    raise RuntimeError(f"Parameter cache identity mismatch: {entry}")
+                for name, expected in files.items():
+                    safe_name = _artifact_name(name)
+                    path = entry / safe_name
+                    if not path.is_file() or _digest(path) != expected:
+                        raise RuntimeError(
+                            f"Parameter cache artifact is corrupt: {path}"
+                        )
+                matches.append((entry, manifest))
+        if len(matches) > 1:
+            raise RuntimeError(
+                f"Multiple parameter cache entries found for identity {key}"
+            )
+        return matches[0] if matches else None
 
-    def store(self, identity: Any, artifacts: Mapping[str, Path]) -> str:
-        """Store named existing files and return their content-addressed key.
+    def store(
+        self, identity: Any, artifacts: Mapping[str, Path], label: str | None = None
+    ) -> str:
+        """Store named existing files under a readable label and return their key.
 
         Args:
             identity: Complete JSON-serializable scientific provenance.
             artifacts: Mapping from stable artifact names to existing files.
+            label: Human-readable directory name; defaults to ``parameter_artifacts``.
 
         Raises:
             FileNotFoundError: An input artifact does not exist.
@@ -128,9 +170,12 @@ class ParameterArtifactCache:
         """
         identity = self._canonical_identity(identity)
         key = self.key_for(identity)
+        directory_name = _entry_label(label)
         if not artifacts:
             raise ValueError("At least one parameter artifact is required")
-        normalized = {_artifact_name(name): Path(source) for name, source in artifacts.items()}
+        normalized = {
+            _artifact_name(name): Path(source) for name, source in artifacts.items()
+        }
         if len(normalized) != len(artifacts):
             raise ValueError("Artifact names must be unique after normalization")
         names = set(normalized)
@@ -141,13 +186,23 @@ class ParameterArtifactCache:
                 raise FileNotFoundError(source)
         source_hashes = {name: _digest(source) for name, source in normalized.items()}
         with self._locked() as lock:
-            existing = self._read_entry(identity)
+            existing = self._find_entry(identity)
             if existing is not None:
-                if existing["files"] != source_hashes:
-                    raise RuntimeError("Existing parameter cache entry has different artifacts")
+                _, manifest = existing
+                if manifest["files"] != source_hashes:
+                    raise RuntimeError(
+                        "Existing parameter cache entry has different artifacts"
+                    )
                 LOGGER.info("Reusing parameter cache entry %s", key)
                 return key
-            staging = Path(tempfile.mkdtemp(prefix=f".{key}.", dir=self.root))
+            destination = self.root / directory_name
+            if destination.exists():
+                raise FileExistsError(
+                    f"Parameter cache label is already in use: {destination}"
+                )
+            staging = Path(
+                tempfile.mkdtemp(prefix=f".{directory_name}.", dir=self.root)
+            )
             try:
                 hashes: dict[str, str] = {}
                 for name, source in normalized.items():
@@ -157,16 +212,32 @@ class ParameterArtifactCache:
                     hashes[name] = _digest(target)
                 manifest = {"key": key, "identity": identity, "files": hashes}
                 (staging / MANIFEST).write_text(
-                    json.dumps(manifest, sort_keys=True, indent=2, ensure_ascii=False,
-                               allow_nan=False) + "\n",
+                    json.dumps(
+                        manifest,
+                        sort_keys=True,
+                        indent=2,
+                        ensure_ascii=False,
+                        allow_nan=False,
+                    )
+                    + "\n",
                     encoding="utf-8",
                 )
-                os.replace(staging, self.root / key)
+                os.replace(staging, destination)
             finally:
                 if staging.exists():
                     shutil.rmtree(staging)
             fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
         return key
+
+    def migrate_entry(self, identity: Any, label: str) -> Path:
+        """Rename a verified hash-named entry and record its old and new paths.
+
+        The original manifest and artifacts remain unchanged. Migration is
+        explicit so historical provenance paths are not moved by ordinary reads.
+        """
+        from .parameter_cache_migration import migrate_entry
+
+        return migrate_entry(self, identity, label)
 
     def materialize(self, identity: Any, target_dir: Path) -> list[Path] | None:
         """Verify and copy a cached entry into an empty target directory.
@@ -176,17 +247,23 @@ class ParameterArtifactCache:
         """
         target_dir = Path(target_dir)
         with self._locked():
-            manifest = self._read_entry(identity)
-            if manifest is None:
+            located = self._find_entry(identity)
+            if located is None:
                 return None
+            entry, manifest = located
             names = [_artifact_name(name) for name in manifest["files"]]
-            collisions = [target_dir / name for name in names if (target_dir / name).exists()]
+            collisions = [
+                target_dir / name for name in names if (target_dir / name).exists()
+            ]
             if collisions:
-                raise FileExistsError(f"Refusing to overwrite cached artifacts: {collisions}")
+                raise FileExistsError(
+                    f"Refusing to overwrite cached artifacts: {collisions}"
+                )
             target_dir.parent.mkdir(parents=True, exist_ok=True)
-            staging = Path(tempfile.mkdtemp(prefix=".parameter-cache.", dir=target_dir.parent))
+            staging = Path(
+                tempfile.mkdtemp(prefix=".parameter-cache.", dir=target_dir.parent)
+            )
             try:
-                entry = self.root / manifest["key"]
                 for name in names:
                     staged = staging / name
                     staged.parent.mkdir(parents=True, exist_ok=True)

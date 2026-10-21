@@ -193,7 +193,11 @@ def run_template(
         artifacts = {
             str(p.relative_to(output)): p for p in output.rglob("*") if p.is_file()
         }
-        cache.store(identity, artifacts)
+        cache.store(
+            identity,
+            artifacts,
+            label=f"neutral_thr_nme_{source.name}_qm_geometry_frequency_esp",
+        )
         LOGGER.info(
             "Validated QM template artifacts cached; RESP/bonded fitting remains: %s",
             output,

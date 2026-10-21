@@ -16,6 +16,14 @@
   edits when feasible. Ensure at least 80% coverage of new code and report
   when coverage cannot be measured.
 - Keep responses compact: changes, checks run, and a short rationale.
+- Record every agent/tool action, including delegated work and failures, in the
+  active append-only action journal. Record intent before execution and outcome
+  afterward; include permission mode, reason, affected-file hashes and rollback
+  guidance. If logging fails, stop dependent mutations and repair the logging
+  path. See `docs/action_logging_and_rollback.md` for the active journal and
+  checkpoint procedure. Keep the user informed of meaningful changes.
+- Use descriptive artifact/cache directory names. Keep identity hashes in
+  metadata; do not use hashes as the normal user-facing directory names.
 
 Read the current resume note before calculations. TI1 protonation/connectivity,
 measured product identities, and parameter quality are scientific requirements.

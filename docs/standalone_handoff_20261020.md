@@ -1,5 +1,60 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Resume checkpoint — 2026-10-21
+
+This section supersedes historical job-state statements below.
+
+- Both overnight neutral free-NH2 L-Thr-NME Gaussian calculations finished
+  normally and passed independent rechecking: 21 atoms, CA S/CB R, 57 positive
+  frequencies, minimum frequencies 45.9612 and 42.2567 cm^-1. Opt/Freq used
+  wB97XD/def2TZVP; separate HF/6-31G(d) ESP grids contain 5636 and 5767 points.
+  They are QM prerequisites, **not fitted force-field parameters**.
+- The read-only paired audit and optimized SDF/XYZ exports are under
+  `output_nyl12_resume_20261021/qm_conformer_audit_v2/`. Conformer 02 is
+  4.6017 kcal/mol higher in electronic DFT energy; same-order heavy-atom RMSD
+  is 1.3993 A. No thermal populations are inferred. The first audit attempt is
+  retained: it failed on repeated optimization completion during Opt/Freq;
+  parser correction and regression tests preceded the separate v2 attempt.
+- `scripts/gaussian_log_to_xyz.py` converts logs without third-party Python
+  packages. Both current logs were converted in tmux under
+  `output_nyl12_resume_20261021/qm_trajectories/`: 64 and 24 Input-orientation
+  snapshots, respectively, each with 21 atoms. Repeated frequency/ESP frames
+  remain; these are not MD trajectories or one-frame-per-iteration promises.
+- The finite-grid relay diagnostic ran in tmux under
+  `output_nyl12_resume_20261021/relay_feasibility/`. Neither original model has
+  an eligible oxygen site on the 5832-point grid (best maximum shortfall
+  0.2510 A PA6 / 0.2679 A poly; gate 0.10 A). Optimistically excluding only
+  Asn186 side-chain atoms and Thr929 N hydrogens exposes 9 / 5 eligible sites,
+  respectively. No atoms were actually moved. This supports trying the
+  documented rotamer/NH3 orientation repair; it does not prove a valid water
+  orientation, a clash-free rotamer or an energy minimum.
+- RESP still requires an explicit shared multi-conformer fit, cap constraints
+  and transfer validation. Atom names repeat across THR/NME: use residue plus
+  name or mapped indices. The current nonreacting beta-N charge -0.6254 is a
+  charge-balance placeholder, not fitted evidence. Do not change only that
+  charge or transfer neutral-template charges onto TI1 NH3+.
+- User requested descriptive cache directories, a small laptop rsync package,
+  a Gaussian trajectory converter, complete action logging, and commit/push.
+  See `docs/laptop_inspection_20261021.md` and
+  `docs/action_logging_and_rollback.md`. Logs and original scientific artifacts
+  are preserved. Cache identity hashes remain metadata, not normal directory
+  names. The inspection package distinguishes optimized small-molecule QM
+  models from the still-unrefined protein TI1 starting models.
+
+Next scientific work: explicit Asn186 rotamer/NH3 orientation sampling with
+full-environment clash checks, followed by unchanged TI1 preflight before any
+Sander launch; independently finalize RESP cap/transfer constraints. No repaired
+TI1 minimum, TS1, ES model, reaction path or fitted FF is claimed by this resume.
+
+Verification at this checkpoint: **212 tests pass**; Ruff lint, changed-file
+formatting, shell syntax and diff checks pass. New measured modules have
+80–97% coverage (89% combined); see
+`provenance/resume_20261021_coverage.json`. Both cache directories were migrated
+with all file and manifest digests unchanged; exact old/new paths are in
+`provenance/cache_directory_migration_20261021.json`. Final code and documentation
+are to be committed/pushed to the existing `codex/initial-import` branch at the
+user's explicit request; the live action journal records the actual outcome.
+
 ## Evening stopping point — 2026-10-20, America/New_York
 
 User requested a wrap-up for the night and authorized commit/push. Gaussian

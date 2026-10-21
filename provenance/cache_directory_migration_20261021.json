@@ -1,0 +1,26 @@
+{
+  "migrations": [
+    {
+      "conformer": "conformer_01",
+      "old_path": "/data/jpc/covalent-enzyme-design/output_parameter_cache/f52481332ffe766ea6060f73a79f69af23a6f03473ba81309eb2f7281cde10cf",
+      "new_path": "/data/jpc/covalent-enzyme-design/output_parameter_cache/neutral_thr_nme_conformer_01_wb97xd_def2tzvp_hf_6_31gd_esp",
+      "manifest_sha256_unchanged": "e93783824f8a61da262e596b90b7b5f941844204d4434bad6cd09c824504931d",
+      "artifact_count_verified": 19,
+      "identity_key": "f52481332ffe766ea6060f73a79f69af23a6f03473ba81309eb2f7281cde10cf"
+    },
+    {
+      "conformer": "conformer_02",
+      "old_path": "/data/jpc/covalent-enzyme-design/output_parameter_cache/fa7260f1b6610578cb287d3f3766df68a0c5aea32be6cbddb3f394996bfcfcce",
+      "new_path": "/data/jpc/covalent-enzyme-design/output_parameter_cache/neutral_thr_nme_conformer_02_wb97xd_def2tzvp_hf_6_31gd_esp",
+      "manifest_sha256_unchanged": "9cfc3d7490514cb0ce14704c4b94070995737ca1e98bc316e7e233f549379a92",
+      "artifact_count_verified": 19,
+      "identity_key": "fa7260f1b6610578cb287d3f3766df68a0c5aea32be6cbddb3f394996bfcfcce"
+    }
+  ],
+  "script_sha256": "6d40c70db1c6bcc03ffcef746134c21f508c0827c1d0f5c83504cff0390d3cba",
+  "implementation_sha256": {
+    "parameter_cache.py": "ebefe13e120668e86063a7739a074b7259ba2d1d792536d2c29a62e0d15c1257",
+    "parameter_cache_migration.py": "7044e43d8b2c6975853f95c85b3396efb2bc8bb6feda560badc218afe54d4cbf"
+  },
+  "original_calculation_directories_unchanged": true
+}

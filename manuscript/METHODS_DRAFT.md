@@ -1,6 +1,6 @@
 # Methods — working draft
 
-Status: 2026-10-20. Sections explicitly distinguish completed preparation from
+Status: 2026-10-21. Sections explicitly distinguish completed preparation from
 planned methods. Unresolved numerical settings must be filled from accepted
 run manifests, not inferred from a generic protocol. References are in
 [REFERENCES.md](REFERENCES.md); local evidence is in [SOURCE_LEDGER.md](SOURCE_LEDGER.md).
@@ -63,7 +63,7 @@ Both original TI1 starts failed the relay-water contact gate after passing
 connectivity and QM-inventory checks. Sander did not run in these preflight
 attempts. No accepted TI1 minimum or TS1 is available at this checkpoint [S5].
 
-## Parameter-model quantum calculations — launched, acceptance pending
+## Parameter-model quantum calculations — executed; RESP pending
 
 Two neutral free-NH2 L-threonine methylamide conformers were prepared with
 RDKit ETKDGv3 using seeds 20261020 and 20261021 and initial psi values of -40
@@ -78,9 +78,13 @@ A separate HF/6-31G(d) Merz–Kollman ESP step follows each optimization, with
 `Pop=MK IOp(6/33=2,6/42=6)`. Subsequent RESP fitting is planned [R7]. Acceptance
 requires completed optimization, 57 positive vibrational frequencies, normal
 termination, correct atom inventory/order and stereochemistry, conservative
-connectivity/contact checks, and successful ESP extraction. Each job uses four
-cores and 4 GB memory. Actual completion and Gaussian revision must be taken
-from the retained logs before manuscript finalization [S8]. No fitted charges
+connectivity/contact checks, and successful ESP extraction. Each job used four
+cores and 4 GB memory. Both jobs completed on 2026-10-20/21 (local time) with
+Gaussian 16 revision ES64L-G16RevC.02 and passed independent rechecking. The
+minimum frequencies were 45.9612 and 42.2567 cm^-1, respectively; extracted ESP
+grids contained 5636 and 5767 points. Original logs, independent acceptance
+records and optimized-coordinate exports are retained [S8; 2026-10-21 source
+ledger update]. No fitted charges
 or new force-field parameters have yet been accepted. Compatibility with the
 intended ff19SB environment requires validation of charge constraints, caps,
 bonded parameters and relevant conformational energies [R8].

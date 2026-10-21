@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-21",
+  "tests_passed": 212,
+  "ruff_lint": "passed",
+  "changed_python_format": "passed",
+  "shell_syntax": "passed",
+  "scientific_records_sha256": {
+    "output_nyl12_resume_20261021/qm_conformer_audit_v2/report.json": "d29144125c2aa286d5e9b6a2e55a19648f5f887442f8afd1b06f21f510c02efc",
+    "output_nyl12_resume_20261021/qm_conformer_audit/job/status.json": "0b8fd5afe2287b5a8c982f9a4c9b4d28cae0d5ab592b8473ccb60858f1884a9d",
+    "output_nyl12_resume_20261021/qm_conformer_audit_v2/job/status.json": "92bd1c3ae04f00e3848014954005cd2cdb0c1c10581d401865822bee5c7dec5b",
+    "provenance/cache_directory_migration_20261021.json": "fe624393df4af748d645760b2a48cfbb95ea20d4aba255ea04c7d32d538cafe6",
+    "provenance/resume_20261021_coverage.json": "767db226596c26c5efb2808e8594bc0cc680d6574e9c60fb9e067ad08486445e",
+    "output_nyl12_resume_20261021/relay_feasibility/pa6_l2/report.json": "405def7d916b31b5d49133e59250f9bce92fdaeab56f5f45ebf85d735529c1c7",
+    "output_nyl12_resume_20261021/relay_feasibility/jobs/pa6_l2/status.json": "ee89a715352823bbf14075705b9130b2284590c2335e5a2a735b797d3aff2bc4",
+    "output_nyl12_resume_20261021/relay_feasibility/poly_xama_maxa/report.json": "150a989e9846c4e22734b01d8454fd7ed4b207815a60e42bd3e9edbea7b60393",
+    "output_nyl12_resume_20261021/relay_feasibility/jobs/poly_xama_maxa/status.json": "d78741127ef80283f3fe7c60d48a7472e249890f29c2931f710d8f5afcca7465",
+    "output_nyl12_resume_20261021/qm_trajectories/conformer_01.json": "ac0e71df3dc2f0d3a683bdb1c17d412f6eeb9acee9c9904ced6ecdd69ccb96fd",
+    "output_nyl12_resume_20261021/qm_trajectories/jobs/conformer_01/status.json": "24bd9e620b7b55daffe06b5a2a1d972f126d40d9838b03f96b58bd91b212df1f",
+    "output_nyl12_resume_20261021/qm_trajectories/conformer_02.json": "1947178c02cbae708bfa7b0aa8b24070f1d51d018e02b1b557efecb2a43a0865",
+    "output_nyl12_resume_20261021/qm_trajectories/jobs/conformer_02/status.json": "0540e9a5b74c9947efedfdfbe1430ee8eba8c196ec3f7970a709394a67b47442"
+  },
+  "qm_prerequisites_accepted": true,
+  "fitted_force_field_ready": false,
+  "accepted_ti1_minimum_available": false,
+  "cache_migration": "Verified identical manifests and all artifacts before/after renaming",
+  "large_artifacts_tracked_in_git": false
+}

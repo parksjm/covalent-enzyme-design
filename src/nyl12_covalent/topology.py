@@ -179,7 +179,11 @@ def parameterize_poly_xama(
                 [str(tools["parmchk2"]), "-i", str(named_mol2), "-f", "mol2",
                  "-o", str(frcmod), "-s", "gaff"], output, "parmchk2.log",
             )
-            cache.store(identity, artifacts)
+            cache.store(
+                identity,
+                artifacts,
+                label=f"poly_xama_intact_neutral_{charge_method}_gaff",
+            )
     return named_mol2, frcmod
 
 
