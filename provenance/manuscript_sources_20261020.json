@@ -1,0 +1,94 @@
+{
+  "recorded_utc": "2026-10-21T01:59:58.484702+00:00",
+  "user_date": "2026-10-20",
+  "timezone": "America/New_York",
+  "sources": {
+    "S1": {
+      "original": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/manuscript_modeling_section_20261011/METHODS_SECTION_DRAFT.md",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S1_METHODS_SECTION_DRAFT.md",
+      "sha256": "f57b97a496fb263b65e16742b20b7c914f3b733fafad9175b5c0c904c607426e"
+    },
+    "S2": {
+      "original": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_PA6_PA66_FINAL_INTERPRETATION_AND_NEXT_PLAN_20260928.md",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S2_NYL12_PA6_PA66_FINAL_INTERPRETATION_AND_NEXT_PLAN_20260928.md",
+      "sha256": "724e0b48bfb026536ddcb9019b2ba69e66999a604b8458d54a3905fc8b617609"
+    },
+    "S3": {
+      "original": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_WT_MUTANT_PROTOCOL_NARRATIVE_AND_AF3_RESTRAINT_TEST_20261009.md",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S3_NYL12_WT_MUTANT_PROTOCOL_NARRATIVE_AND_AF3_RESTRAINT_TEST_20261009.md",
+      "sha256": "805a5e614b74f9858670fd7695b417ec377fc82bedc40f691f2332245cb93f38"
+    },
+    "S4_notes": {
+      "original": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_four_site_static_20261009/RUN_NOTES.md",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S4_notes_RUN_NOTES.md",
+      "sha256": "9cab759e4ee102498acf3e97949497610fbcfbe1df5919b18dbd038ca6e12a98"
+    },
+    "S4_pre": {
+      "original": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_four_site_static_20261009/geometry_pre_relax/SUMMARY.json",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S4_pre_SUMMARY.json",
+      "sha256": "883b619b7eb48911dee845ec89005d7b9237dd2c9f05fc3883695dac42257b1d"
+    },
+    "S4_post": {
+      "original": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_four_site_static_20261009/geometry_post_relax/SUMMARY.json",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S4_post_SUMMARY.json",
+      "sha256": "81d31348020b0812896daead4164a877288d7825d809f19082a4314178adffdf"
+    },
+    "S4_analyzer": {
+      "original": "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_af3_contact_four_site.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S4_analyzer_analyze_nyl12_af3_contact_four_site.py",
+      "sha256": "6f0704d9fb0122a47b60e055baeca7f18887d4c0ef0f9b60ec702d68c447fcff"
+    },
+    "S4_sites": {
+      "original": "/data/jpc/enzyme-substrate-modeling/scripts/analyze_unrestrained_polyamide_four_site_geometry.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S4_sites_analyze_unrestrained_polyamide_four_site_geometry.py",
+      "sha256": "d4415ef5cbf68551de28725c1a5fe79a304d92937d43265fce0568448f41ecfe"
+    },
+    "S7_math": {
+      "original": "/data/jpc/enzyme-substrate-modeling/scripts/lib/nyl12_four_site_geometry_math.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S7_math_nyl12_four_site_geometry_math.py",
+      "sha256": "32816c9bb94e873fb08dff4c56272b64137ec28e88a45bb22783e10d86924205"
+    },
+    "S9_sander": {
+      "original": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sander/sander.F90",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S9_sander_sander.F90",
+      "sha256": "140e9aa20b9261c5884e97cb85424d75b79fb6594e00a3ad84f572a1a9a831b6"
+    },
+    "S9_dlfind_interface": {
+      "original": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sander/dlfind_module.F90",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S9_dlfind_interface_dlfind_module.F90",
+      "sha256": "6b6542ed69435912fda6d25d1883bf4c05c34d26ed091467848f47f825fb55fb"
+    },
+    "S9_prfo": {
+      "original": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dlf_formstep.F90",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S9_prfo_dlf_formstep.F90",
+      "sha256": "cc8525ddbfa0ac871b77a272e5c7e3eb3922555ff28201a640ae11abba9161c2"
+    },
+    "S9_defaults": {
+      "original": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dl-find.F90",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S9_defaults_dl-find.F90",
+      "sha256": "b7cf5bf4cf7c1e22d9e87a3ddb636abbdb3b62f5f53c8aeea747a9b57d848b0d"
+    },
+    "S9_license": {
+      "original": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/COPYING.LESSER",
+      "snapshot": "/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/manuscript_source_snapshot/S9_license_COPYING.LESSER",
+      "sha256": "a5681bf9b05db14d86776930017c647ad9e6e56ff6bbcfdf21e5848288dfaf1b"
+    }
+  },
+  "contact_fork": {
+    "path": "/data/jpc/code/alphafold3-contact-restraints",
+    "head": "ef5dc91d65b4845f63e95ea03316f1613c6dfb5e",
+    "status": ""
+  },
+  "evidence_limits": [
+    "Source/library inspection only for native DL-FIND; no runtime TS benchmark",
+    "Methods draft contains explicit planned sections",
+    "Original manuscript files unchanged; historical production evidence separate from new work"
+  ],
+  "manuscript_sha256": {
+    "manuscript/INTRODUCTION_DRAFT.md": "ff16136a54378da99c099fbb8bec35cd7dc3c4a5c89f5eec206eee76cc69c859",
+    "manuscript/README.md": "520a384d5906fb3a2e5485f14daef7b0515d5cd4ff7fa3c7a8053b7a3cef19ba",
+    "manuscript/SOURCE_LEDGER.md": "82b885e22428aba20c933ab58dfcc3df828cea111696e2d79a69f47fb92fb7ca",
+    "manuscript/METHODS_DRAFT.md": "f64ad55437d8e6508d11b1d5fcbbc3745772d25e83104dda5527f0571b5e35fe",
+    "manuscript/REFERENCES.md": "4dbd241fd4ce4ea51627ae5586da4d02cbe73d9b997e647f37d7cdc15f24be32"
+  }
+}

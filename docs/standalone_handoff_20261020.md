@@ -1,5 +1,144 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Evening stopping point — 2026-10-20, America/New_York
+
+User requested a wrap-up for the night and authorized commit/push. Gaussian
+jobs from the next section remain running independently in tmux on violet;
+the laptop can disconnect. No new scientific jobs were launched in this
+documentation/TS-capability assessment. Inspect current job records on resume.
+
+- Started `manuscript/INTRODUCTION_DRAFT.md`, `METHODS_DRAFT.md`, `REFERENCES.md`
+  and `SOURCE_LEDGER.md`. Existing Nyl12 manuscript sources were reviewed and
+  left untouched. Completed preparation and proposed methods are separated;
+  no TS, fitted parameter set or improved enzyme is claimed. Source hashes
+  and revisions are in `provenance/manuscript_sources_20261020.json`.
+- Read `docs/ts_search_and_symmetry_decisions_20261020.md` before TS work.
+  Installed Sander supports native DL-FIND via `imin=1,ntmin=5`, with P-RFO,
+  two-point numerical Hessians, Bofill updates and Hessian export. Source and
+  library linkage were inspected; no runtime saddle-search test has been run.
+  The interface follows the lowest mode and disables microiterations. Require
+  a fresh final Hessian and endpoint tests in the declared mobile subspace.
+- DL-FIND is freely available under LGPL; the user accepts it on that basis
+  and requested newer alternatives. Sella is the preferred newer benchmark
+  candidate (iterative Hessian diagonalization/RS-P-RFO); pysisyphus and
+  geomeTRIC were also assessed. No new dependency was added or optimizer
+  silently substituted. A benchmark proposal is documented, not executed.
+- AF3 contact guidance already exists in
+  `/data/jpc/code/alphafold3-contact-restraints` at
+  `ef5dc91d65b4845f63e95ea03316f1613c6dfb5e`. Tests/source and actual historical
+  production manifests/geometry summaries were located. Reuse this capability
+  if needed; guided and independent prediction arms must remain distinguishable.
+- Unrestrained ES ligands may occupy any equivalent site AE/BF/CG/DH.
+  Score all four using a fixed register, permit symmetry-equivalent matches,
+  and treat sites as nested within each model. The historical four-ligand
+  analyzer's fixed I/J/K/L assignments and old atom names must not be applied
+  blindly to single-ligand ES or current TI1 models. Symmetry-aware ES scoring
+  remains to be implemented.
+
+Immediate restart: check both running Gaussian jobs and acceptance records,
+then continue parameter validation and TI1 geometry repair. Do not restart
+duplicate calculations or claim the old water clashes have been resolved.
+
+## Active Gaussian jobs and design clarification — 2026-10-20, evening
+
+This section supersedes the job-state statements in earlier checkpoints.
+See [method, substrate audit and multistate design plan](qm_method_and_substrate_checkpoint_20261020.md).
+
+- User approved **wB97XD/def2TZVP** geometry/frequency calculations, with no
+  additional dispersion correction, and separate HF/6-31G(d) ESP for RESP.
+  Two neutral free-NH2 L-Thr-NME conformers (CA S, CB R, charge 0/singlet)
+  are running on violet in tmux: `nyl12_thr_wb97xd_01_20261020` and
+  `nyl12_thr_wb97xd_02_20261020`, each four cores/4 GB. Gaussian has produced
+  SCF output; optimization/frequency/ESP acceptance is not yet established.
+  Output root: `output_nyl12_resume_20261020/neutral_thr_nme_wb97xd/`.
+  Check `jobs/conformer_*/status.json`, `calculations/conformer_*/gaussian.log`
+  and eventual `process.json`/`acceptance.json`. Do not rerun blindly.
+- Preparation, source snapshots, input/tool hashes, software versions, logs,
+  separate scratch and content-addressed cache are implemented. Accepted QM
+  data are not fitted FF parameters. RESP/cap constraints, bonded/torsional
+  validation and production use remain unfinished. Existing unrelated tmux
+  sessions were left untouched; no other workstation was needed.
+- Completed ligand audit in tmux:
+  `output_nyl12_resume_20261020/confidence_audit_v2/report.json`.
+  Literal sequence is **MAXA|MAXA**, producing two MAXA fragments. Stable target
+  ID remains `poly_xama_maxa`. Ligand mean pLDDT is 29.64 (59/69 atoms <50),
+  terminal monads mean 13.36; reactive C/O/N 83.84/54.43/60.16. PA6 ligand mean
+  60.84; reactive C/O/N 92.53/85.86/87.64. Retain full MAXA|MAXA as the
+  product-consistent reference while sampling uncertain tails; no truncation
+  or coordinate change occurred. Initial audit failed on rounded JSON versus
+  full-precision CSV ranking scores and is preserved under `confidence_audit/`.
+- Completed both descriptive metric baselines in tmux under
+  `output_nyl12_resume_20261020/active_site_baseline/`:
+  PA6 (d1,d2,d3,a_BD,phi) = (1.3320,2.7468,2.9584,101.9127,-99.1807);
+  poly = (1.2864,2.9455,2.9865,103.3262,87.9888), distances A/angles degrees.
+  Signed projected Herschlag convention matches the original reference math.
+  These are measurements of original unrefined starts, not acceptance results.
+- Recommended downstream plan: validated TI1 -> TS1 -> ES; focused LigandMPNN
+  initially, optional RFD3 local backbone diversification; independent covalent
+  AF3 and unforced noncovalent ES predictions; cheap multistate checks including
+  acyl enzyme/water and TI2 geometry; reaction barriers for a shortlist.
+  Map the reference cycle coarsely so TS1 is not assumed rate-limiting. This is
+  a documented plan, not completed redesign or a reaction profile.
+- All **149 tests pass**, Ruff passes. New-code coverage: geometry 97%, metric
+  CLI 95%, template preparation 94%, Gaussian acceptance 100%, Gaussian runner
+  98%, confidence audit 82%. Evidence:
+  `provenance/qm_preparation_20261020_coverage.json` and
+  `provenance/qm_design_checkpoint_20261020.json`. Routine scripting delegated
+  to GPT-6 Luna and reviewed. No dependencies added; changes remain uncommitted.
+
+TI1 water-contact failures remain unresolved. No new Sander optimization,
+accepted TI1 minimum, transition state, ES model or validated parameter set
+has been produced. Next: inspect the running Gaussian jobs without duplicating
+them; fit/validate parameters after scientific acceptance; implement local
+TI1 geometry repair before starting reaction paths or redesign.
+
+## Resumed checkpoint — 2026-10-20, 17:50 America/New_York
+
+This section supersedes the earlier pause/runner status below. The previous
+bwrap-blocked resume attempt made no changes. This session also encountered
+`bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`; approved
+escalated execution worked. No infrastructure settings were changed.
+
+- Integrated the expanded audited mask into the TI1 input writer. Added
+  `scripts/run_nyl12_ti1_qmmm.py`, `ti1_attempt.py`, and `ti1_checks.py` for
+  explicit fresh attempts and terminal-checkpoint continuation. Legacy implicit
+  build-and-run is rejected before writing. No dependencies were added.
+- New attempts preserve actual inputs, code snapshots, environment/version
+  metadata and hashes, original restraint references, and separate process and
+  scientific acceptance records. Continuation rejects mismatched topology,
+  reference, target/method, executable, DFTB data, or checkpoint digest.
+- Both real-model preflights ran in tmux and have terminal wrapper exit 1:
+  `/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/jobs/preflight_pa6_l2/`
+  and `jobs/preflight_poly_xama_maxa/`. Attempts are under the same output root
+  at `{pa6_l2,poly_xama_maxa}/starting_model_preflight/`.
+  Both passed expanded-QM and proton/connectivity inventories, then failed the
+  original water-placement contact gate: maximum shortfalls 0.686619 and
+  0.661263 A, respectively, against 0.10 A. These are the original LEaP seeds,
+  not the improved but still failed rigid-search candidates from earlier jobs.
+  Sander did not start; there is no new optimized geometry or restart.
+- Routine CLI/test scripting was delegated to GPT-6 Luna and reviewed. All
+  89 tests pass; Ruff lint passes. New-module line coverage: attempt 84%,
+  chemistry/convergence checks 92%, CLI 96%. Full coverage evidence is
+  `provenance/ti1_resume_20261020_coverage.json`. The new files are uncommitted.
+- The concrete next work is local conformer/geometry repair as described in
+  `docs/ti1_attempt_protocol_20261020.md`. No repair success is claimed.
+  Gaussian/RESP fitting, separate neutral-NH2 ES, and parameter validation
+  remain unfinished. Do not lower the water gate or repeat an unchanged job.
+- A completed tmux export produced both full hydrogenated, canonical-chain
+  starting models for PyMOL:
+  `/data/jpc/covalent-enzyme-design/output_nyl12_resume_20261020/nyl12_pymol_starting_models.tar.gz`.
+  It includes the viewer, residue maps, original audits, provenance, and hashes.
+  The viewer now ends with the user-requested commands
+  `show sticks, resi 113 +186 and chain A` and `util.cnc`.
+  The original archive/viewer/manifest remain in `inspection_revisions/v1/`
+  under that output root; the revision script and source export snapshot are
+  in `inspection_source/`. No enzyme coordinates changed during this revision.
+
+No jobs from this resumed checkpoint remain active. The two unrelated tmux
+sessions listed in the historical pause note remain untouched. Code tests and
+passing inventory checks do not certify physical models or MD readiness.
+
+
 ## Paused at the user's request — 2026-10-20
 
 Ready to resume; no calculations from this work remain active. All tracked

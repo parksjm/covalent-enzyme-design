@@ -8,6 +8,8 @@ import os
 import subprocess
 from pathlib import Path
 
+from .qm_region import QM_MASK, audit_qm_region
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -109,71 +111,73 @@ def write_ti1_dftb3_input(output: Path, max_cycles: int = 300) -> Path:
     Returns:
         Amber minimization input path.
     """
-    audit = json.loads((output / "ti1_audit.json").read_text())
-    if abs(audit["qm_region_partial_charge"]) > 0.002:
-        raise ValueError("TI1 QM-region charge is not zero")
     if max_cycles < 1:
         raise ValueError("max_cycles must be positive")
+    audit_qm_region(output / "ti1.prmtop")
     mdin = output / "ti1_dftb3.mdin"
-    mdin.write_text(
-        "Nyl12 first tetrahedral adduct with neutral relay water\n"
-        " &cntrl\n"
-        f"  imin=1, ntmin=3, maxcyc={max_cycles},\n"
-        "  drms=0.05, ntb=0, igb=8, cut=999.0,\n"
-        "  ntc=1, ntf=1, ntpr=10, ntwr=100,\n"
-        "  ntr=1, restraint_wt=5.0,\n"
-        "  restraintmask=':1-928,930-1312@N,CA,C,O',\n"
-        "  ifqnt=1,\n"
-        " /\n"
-        " &qmmm\n"
-        "  qmmask=':929,1313,1314', qmcharge=0,\n"
-        "  qm_theory='DFTB3', scfconv=1.0d-8,\n"
-        "  verbosity=1,\n"
-        " /\n"
-    )
+    with mdin.open("x") as stream:
+        stream.write(
+            "Nyl12 first tetrahedral adduct with neutral relay water\n"
+            " &cntrl\n"
+            f"  imin=1, ntmin=3, maxcyc={max_cycles},\n"
+            "  drms=0.05, ntb=0, igb=8, cut=999.0,\n"
+            "  ntc=1, ntf=1, ntpr=10, ntwr=100,\n"
+            "  ntr=1, restraint_wt=5.0,\n"
+            "  restraintmask=':1-928,930-1312@N,CA,C,O',\n"
+            "  ifqnt=1,\n"
+            " /\n"
+            " &qmmm\n"
+            f"  qmmask='{QM_MASK}', qmcharge=0,\n"
+            "  qm_theory='DFTB3', scfconv=1.0d-8,\n"
+            "  verbosity=1,\n"
+            " /\n"
+        )
     return mdin
 
 
-def run_ti1_dftb3(output: Path, amber_bin: Path, max_cycles: int = 300) -> Path:
-    """Run the validated TI1 DFTB3/MM geometry optimization.
+def run_ti1_dftb3(
+    output: Path,
+    amber_bin: Path,
+    max_cycles: int = 300,
+    *,
+    coordinates: Path | None = None,
+    reference: Path | None = None,
+    attempt: Path | None = None,
+    target: str | None = None,
+    checkpoint_attempt: Path | None = None,
+) -> Path:
+    """Run TI1 only with explicit coordinates and a fresh attempt directory.
 
     Args:
-        output: TI1 topology and starting coordinates directory.
+        output: Directory containing the source TI1 topology.
         amber_bin: AmberTools26 bin directory.
         max_cycles: Maximum minimization cycles.
+        coordinates: Explicit starting coordinates or source checkpoint.
+        reference: Original positional-restraint reference.
+        attempt: New attempt directory; existing paths are rejected.
+        target: Product-gated substrate identifier.
+        checkpoint_attempt: Source attempt for checkpoint continuation.
 
     Returns:
-        Sander output path.
+        Sander output path only after scientific acceptance.
+
+    Raises:
+        ValueError: If explicit safe-run arguments are missing.
     """
-    mdin = write_ti1_dftb3_input(output, max_cycles)
-    mdout = output / "ti1_dftb3.mdout"
-    restart = output / "ti1_dftb3.rst7"
-    command = [
-        str(amber_bin / "sander"), "-O", "-i", str(mdin), "-o", str(mdout),
-        "-p", str(output / "ti1.prmtop"),
-        "-c", str(output / "ti1.inpcrd"),
-        "-ref", str(output / "ti1.inpcrd"),
-        "-r", str(restart),
-        "-inf", str(output / "ti1_dftb3.mdinfo"),
-    ]
-    environment = os.environ.copy()
-    environment["AMBERHOME"] = str(amber_bin.parent)
-    environment["OMP_NUM_THREADS"] = "4"
-    environment["LD_LIBRARY_PATH"] = ":".join(
-        part for part in (str(amber_bin.parent / "lib"), environment.get("LD_LIBRARY_PATH"))
-        if part
-    )
-    (output / "ti1_qmmm_command.json").write_text(
-        json.dumps({"argv": command, "environment": {
-            key: environment[key]
-            for key in ("AMBERHOME", "OMP_NUM_THREADS", "LD_LIBRARY_PATH")
-        }}, indent=2) + "\n"
-    )
-    with (output / "ti1_sander.stderr.log").open("w") as stderr:
-        result = subprocess.run(
-            command, cwd=output, env=environment, stdout=stderr,
-            stderr=subprocess.STDOUT, check=False,
+    from .ti1_attempt import run_attempt
+
+    if any(value is None for value in (coordinates, reference, attempt, target)):
+        raise ValueError(
+            "TI1 requires explicit coordinates, reference, attempt, and target; "
+            "use scripts/run_nyl12_ti1_qmmm.py inside the tmux job launcher"
         )
-    if result.returncode or not restart.is_file():
-        raise RuntimeError(f"TI1 DFTB3 did not finish; inspect {mdout}")
-    return mdout
+    return run_attempt(
+        topology=output / "ti1.prmtop",
+        coordinates=coordinates,
+        reference=reference,
+        output=attempt,
+        amber_bin=amber_bin,
+        target=target,
+        max_cycles=max_cycles,
+        checkpoint_attempt=checkpoint_attempt,
+    )

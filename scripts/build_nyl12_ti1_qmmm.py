@@ -16,7 +16,7 @@ from nyl12_covalent.chemistry import (  # noqa: E402
     build_poly_xama_maxa,
     load_pa6,
 )
-from nyl12_covalent.qmmm import run_ti1_dftb3, write_ti1_dftb3_input  # noqa: E402
+from nyl12_covalent.qmmm import write_ti1_dftb3_input  # noqa: E402
 from nyl12_covalent.tetrahedral import build_ti1  # noqa: E402
 
 SOURCE = ROOT / (
@@ -51,13 +51,18 @@ def build(
         source_dir: Original matched Nyl12 WT bound complex.
         poly_model: Parameterized intact poly(X,AMA) candidate directory.
         amber_bin: Installed AmberTools26 binary directory.
-        run_qmmm: Run DFTB3 geometry optimization after assembly.
+        run_qmmm: Legacy flag; rejected before writes. Use the explicit attempt CLI.
         protein_pdb: Optional canonical AF3 protein coordinates.
         ligand_pdb: Optional canonical AF3 full-substrate coordinates.
 
     Returns:
         Machine-readable chemistry and topology provenance.
     """
+    if run_qmmm:
+        raise ValueError(
+            "Build and screen TI1 first; run scripts/run_nyl12_ti1_qmmm.py with "
+            "explicit coordinates, reference, and a fresh output via tmux"
+        )
     if target not in {"pa6_l2", "poly_xama_maxa"}:
         raise ValueError(f"Unsupported target {target}")
     output = output.resolve()
@@ -102,8 +107,6 @@ def build(
         },
     }
     (output / "ti1_provenance.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    if run_qmmm:
-        run_ti1_dftb3(output, amber_bin)
     LOGGER.info("Built %s first tetrahedral intermediate at %s", target, output)
     return manifest
 
