@@ -1,2 +1,4 @@
 # Gaussian input sections require terminating blank records.
 *.gjf whitespace=-blank-at-eof
+# Preserve standard CSV record terminators in hashed scientific exports.
+provenance/**/trajectory_metrics.csv whitespace=trailing-space,space-before-tab,cr-at-eol

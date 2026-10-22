@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/data/jpc/code/miniforge3/envs/nyl12-pymol/bin/python",
+    "output_nyl12_parameter_validation_20261022/check_progress_pymol_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T19:50:47.768131Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/check_progress_pymol_20261022.py": "6913716801d220a841734ab4a8735addc71f202057cf58e2217ec53068e8e1d8",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/viewer_revision_02/manifest.json": "19cb44b37ccd7f94b83fc523c8bc8c68f3e96d90a19ba2150751cdd307a146c6"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_viewer_check_03/job/job.log",
+  "session_name": "nyl12_ti1_progress_pymol03_20261022",
+  "started_utc": "2026-10-22T19:50:47.204132Z"
+}

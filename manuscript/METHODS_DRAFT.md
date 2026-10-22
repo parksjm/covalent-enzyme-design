@@ -106,6 +106,18 @@ and CIF hashes, preparation screens and optimization process records are under
 `output_nyl12_ti1_parameters_20261022/pa6_local_bonded/`; prospective acceptance
 criteria are in `docs/ti1_parameter_protocol_20261022.md`.
 
+An interim audit froze complete prefixes of the four active optimization logs
+at approximately 19:45 UTC on 2026-10-22. All complete Input-orientation tables
+were retained, yielding 7/7/7/8 snapshots of 37 atoms with 20 explicit hydrogens.
+These include trial geometries and do not establish convergence. Latest frames
+passed the predeclared geometry screens; both S references displayed capped-Thr
+backbone N–H/oxyanion contacts of approximately 1.77–1.93 angstrom. Such contacts
+require cap-sensitivity review before fitting. A transient S/-120 frame had
+C*–O 1.225 angstrom and failed its bond screen; the failed frame was retained.
+PyMOL checks verified atom/hydrogen inventories and coordinate fidelity in all
+exported states. These observations are interim model diagnostics, not accepted
+parameters or mechanistic results.
+
 ### Exploratory local relay-water refinement — in progress
 
 The minimal alpha/beta PA6 L4 covalent AF3 model used explicit HOH and two

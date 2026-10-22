@@ -1,0 +1,246 @@
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+INFO:root:PyMOL viewer check passed: {'case': 'attack_R_cap_phi_minus120', 'states': 7, 'atoms_per_state': 37, 'hydrogens_per_state': 20, 'visible_hydrogens': 20, 'maximum_coordinate_delta_A': 2.3565673856751346e-07, 'bonds_in_display_topology': 36, 'accepted': True}
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+INFO:root:PyMOL viewer check passed: {'case': 'attack_R_cap_phi_minus60', 'states': 7, 'atoms_per_state': 37, 'hydrogens_per_state': 20, 'visible_hydrogens': 20, 'maximum_coordinate_delta_A': 2.368774412175867e-07, 'bonds_in_display_topology': 36, 'accepted': True}
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+INFO:root:PyMOL viewer check passed: {'case': 'attack_S_cap_phi_minus120', 'states': 7, 'atoms_per_state': 37, 'hydrogens_per_state': 20, 'visible_hydrogens': 20, 'maximum_coordinate_delta_A': 2.2286987277908565e-07, 'bonds_in_display_topology': 36, 'accepted': True}
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ ObjectMoleculeReadStr: read through molecule 8.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+PyMOL>@view_progress.pml
+ ObjectMoleculeReadStr: read through molecule 1.
+ ObjectMoleculeReadStr: read through molecule 2.
+ ObjectMoleculeReadStr: read through molecule 3.
+ ObjectMoleculeReadStr: read through molecule 4.
+ ObjectMoleculeReadStr: read through molecule 5.
+ ObjectMoleculeReadStr: read through molecule 6.
+ ObjectMoleculeReadStr: read through molecule 7.
+ ObjectMoleculeReadStr: read through molecule 8.
+ CmdLoad: "trajectory.xyz" loaded as "ti1_progress".
+ Setting: valence set to off.
+ Executive: Colored 27 atoms.
+ Setting: label_color set to black.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+ Label: labelled 1 atoms.
+INFO:root:PyMOL viewer check passed: {'case': 'attack_S_cap_phi_minus60', 'states': 8, 'atoms_per_state': 37, 'hydrogens_per_state': 20, 'visible_hydrogens': 20, 'maximum_coordinate_delta_A': 2.3562622075701256e-07, 'bonds_in_display_topology': 36, 'accepted': True}
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1
+PyMOL>delete ti1_progress
+PyMOL>load trajectory.xyz, ti1_progress
+PyMOL>hide everything
+PyMOL>show sticks, ti1_progress
+PyMOL>set valence, 0
+PyMOL>util.cnc
+PyMOL>bg_color white
+PyMOL>set label_color, black
+PyMOL>label ti1_progress and index 4, "Thr OG1"
+PyMOL>label ti1_progress and index 23, "C*"
+PyMOL>label ti1_progress and index 24, "O-"
+PyMOL>label ti1_progress and index 25, "leaving N"
+PyMOL>zoom ti1_progress
+PyMOL>frame 1

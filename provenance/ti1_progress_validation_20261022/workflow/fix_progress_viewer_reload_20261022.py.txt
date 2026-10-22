@@ -1,0 +1,45 @@
+"""Make generated progress viewers repeatable while preserving their originals."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import shutil
+from pathlib import Path
+
+ROOT = Path(
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022"
+)
+
+
+def main() -> None:
+    """Preserve initial viewers and record the exact display-only correction."""
+    logging.basicConfig(level=logging.INFO)
+    backup = ROOT / "progress_audit_01/viewer_revision_02"
+    backup.mkdir()
+    records = []
+    for directory in sorted((ROOT / "progress_audit_01/result").glob("attack_*")):
+        viewer = directory / "view_progress.pml"
+        original = viewer.read_text()
+        target = "load trajectory.xyz, ti1_progress\n"
+        if original.count(target) != 1 or "delete ti1_progress" in original:
+            raise ValueError(f"Unexpected original viewer: {viewer}")
+        shutil.copy2(viewer, backup / f"{directory.name}.pml")
+        viewer.write_text(original.replace(target, "delete ti1_progress\n" + target))
+        records.append(
+            {
+                "viewer": str(viewer),
+                "before_sha256": hashlib.sha256(original.encode()).hexdigest(),
+                "after_sha256": hashlib.sha256(viewer.read_bytes()).hexdigest(),
+            }
+        )
+    (backup / "manifest.json").write_text(json.dumps(records, indent=2) + "\n")
+    shutil.copy2(__file__, backup / Path(__file__).name)
+    logging.info(
+        "Updated %d display scripts without changing coordinates", len(records)
+    )
+
+
+if __name__ == "__main__":
+    main()

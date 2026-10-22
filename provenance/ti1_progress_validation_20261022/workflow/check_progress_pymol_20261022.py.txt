@@ -1,0 +1,73 @@
+"""Check actual PyMOL states, explicit hydrogens and snapshot coordinates."""
+
+from __future__ import annotations
+
+import json
+import logging
+import os
+from pathlib import Path
+
+import pymol2
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+DATA = ROOT / "output_nyl12_parameter_validation_20261022/progress_audit_01/result"
+REPORT = (
+    ROOT
+    / "output_nyl12_parameter_validation_20261022/progress_viewer_check_03/report.json"
+)
+
+
+def main() -> None:
+    """Open each real viewer and compare every state with its XYZ source."""
+    logging.basicConfig(level=logging.INFO)
+    results = []
+    with pymol2.PyMOL() as application:
+        cmd = application.cmd
+        for case in sorted(DATA.glob("attack_*")):
+            cmd.reinitialize()
+            os.chdir(case)
+            cmd.do("@view_progress.pml")
+            expected = json.loads((case / "geometry_checks.json").read_text())
+            states = cmd.count_states("ti1_progress")
+            assert states == expected["frames"], (case.name, states)
+            cmd.do("@view_progress.pml")
+            assert cmd.count_states("ti1_progress") == states
+            assert cmd.count_atoms("ti1_progress") == 37
+            assert cmd.count_atoms("ti1_progress and elem H") == 20
+            assert cmd.count_atoms("ti1_progress and elem H and visible") == 20
+            assert cmd.get_setting_int("valence") == 0
+            lines = (case / "trajectory.xyz").read_text().splitlines()
+            maximum_delta = 0.0
+            for state in range(1, states + 1):
+                model = cmd.get_model("ti1_progress", state=state)
+                assert len(model.atom) == 37
+                assert sum(atom.symbol == "H" for atom in model.atom) == 20
+                rows = lines[(state - 1) * 39 + 2 : state * 39]
+                for atom, row in zip(model.atom, rows, strict=True):
+                    fields = row.split()
+                    assert atom.symbol == fields[0]
+                    maximum_delta = max(
+                        maximum_delta,
+                        *[abs(atom.coord[i] - float(fields[i + 1])) for i in range(3)],
+                    )
+            assert maximum_delta < 2e-5
+            results.append(
+                {
+                    "case": case.name,
+                    "states": states,
+                    "atoms_per_state": 37,
+                    "hydrogens_per_state": 20,
+                    "visible_hydrogens": 20,
+                    "maximum_coordinate_delta_A": maximum_delta,
+                    "bonds_in_display_topology": len(
+                        cmd.get_model("ti1_progress", 1).bond
+                    ),
+                    "accepted": True,
+                }
+            )
+            logging.info("PyMOL viewer check passed: %s", results[-1])
+    REPORT.write_text(json.dumps({"accepted": True, "cases": results}, indent=2) + "\n")
+
+
+if __name__ == "__main__":
+    main()

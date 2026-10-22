@@ -1,0 +1,251 @@
+"""Freeze Gaussian log prefixes and audit unconverged TI1 coordinates."""
+
+from __future__ import annotations
+
+import csv
+import datetime
+import hashlib
+import json
+import logging
+import re
+import shutil
+from pathlib import Path
+
+import numpy as np
+from rdkit import Chem
+from rdkit.Chem import rdMolTransforms
+
+from nyl12_covalent.gaussian_checks import validate_geometry
+from scripts.gaussian_log_to_xyz import convert, parse_log, trajectory_text
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+AUDIT = ROOT / "output_nyl12_parameter_validation_20261022/progress_audit_01"
+WINDOWS = {
+    "THR:OG1": (1.30, 1.75),
+    "TIL:O": (1.25, 1.65),
+    "TIL:N": (1.25, 1.70),
+    "TIL:acylCH3": (1.35, 1.75),
+}
+LOGGER = logging.getLogger(__name__)
+
+
+def write_json(path: Path, payload: object) -> None:
+    """Write an exclusive, human-readable JSON result."""
+    with path.open("x") as stream:
+        json.dump(payload, stream, indent=2)
+        stream.write("\n")
+
+
+def main() -> None:
+    """Audit all complete coordinate tables without changing live jobs."""
+    logging.basicConfig(level=logging.INFO)
+    result = AUDIT / "result"
+    result.mkdir()
+    source = AUDIT / "source"
+    source.mkdir()
+    shutil.copy2(__file__, source / Path(__file__).name)
+    shutil.copy2(
+        ROOT / "scripts/gaussian_log_to_xyz.py", source / "gaussian_log_to_xyz.py"
+    )
+    records = []
+    cases = json.loads((BASE / "preparation_screen.json").read_text())["cases"]
+    for entry in cases:
+        name = entry["case"]
+        opt = BASE / name / "optimization_01"
+        snapshots = AUDIT / "snapshots" / name
+        snapshots.mkdir(parents=True)
+        exported = result / name
+        exported.mkdir()
+        expected = json.loads((opt / "job/command.json").read_text())["input_sha256"]
+        for filename, checksum in expected.items():
+            if hashlib.sha256(Path(filename).read_bytes()).hexdigest() != checksum:
+                raise ValueError(f"Original optimization input changed: {filename}")
+        payload = (opt / "optimization.log").read_bytes()
+        captured = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        log = snapshots / "optimization.log"
+        log.write_bytes(payload)
+        checksum = hashlib.sha256(payload).hexdigest()
+        for filename in ("atom_map.json", "molecule.sdf", "input.gjf"):
+            shutil.copy2(opt / filename, snapshots / filename)
+        for filename in ("atom_map.json", "input.gjf"):
+            shutil.copy2(snapshots / filename, exported / filename)
+        text = payload.decode("utf-8")
+        parsed = parse_log(text, orientation="input", allow_incomplete=True)
+        conversion = convert(log, exported / "trajectory.xyz", "input", True)
+        metadata = json.loads((snapshots / "atom_map.json").read_text())
+        indices = metadata["atom_index_by_origin"]
+        molecule = Chem.SDMolSupplier(str(snapshots / "molecule.sdf"), removeHs=False)[
+            0
+        ]
+        if molecule is None:
+            raise ValueError(f"Invalid molecular graph: {name}")
+        if molecule.GetNumAtoms() != 37:
+            raise ValueError(f"Wrong reference atom inventory: {name}")
+        metrics = []
+        checks = []
+        for frame_number, frame in enumerate(parsed.frames, 1):
+            xyz = np.asarray(frame.coordinates)
+            geometry = validate_geometry(molecule, list(frame.atomic_numbers), xyz)
+            conformer = Chem.Conformer(37)
+            conformer.Set3D(True)
+            for index, point in enumerate(xyz):
+                conformer.SetAtomPosition(index, tuple(float(value) for value in point))
+            bonds = {
+                origin: float(
+                    np.linalg.norm(xyz[indices["TIL:C*"]] - xyz[indices[origin]])
+                )
+                for origin in WINDOWS
+            }
+            torsions = []
+            for constraint in metadata["constraints"]:
+                observed = rdMolTransforms.GetDihedralDeg(
+                    conformer, *[i - 1 for i in constraint["atoms_one_based"]]
+                )
+                error = abs((observed - constraint["degrees"] + 180.0) % 360.0 - 180.0)
+                torsions.append(
+                    {
+                        "name": constraint["name"],
+                        "observed_degrees": observed,
+                        "error_degrees": error,
+                    }
+                )
+            hydrogen_contacts = [
+                {
+                    "origin_id": atom["origin_id"],
+                    "distance_A": float(
+                        np.linalg.norm(xyz[indices["TIL:O"]] - xyz[atom["index"]])
+                    ),
+                }
+                for atom in metadata["atoms"]
+                if atom["element"] == "H"
+            ]
+            close_hydrogens = [
+                row for row in hydrogen_contacts if row["distance_A"] < 2.5
+            ]
+            bond_pass = all(
+                low <= bonds[origin] <= high for origin, (low, high) in WINDOWS.items()
+            )
+            torsion_pass = all(row["error_degrees"] <= 0.10 for row in torsions)
+            proton_pass = all(row["distance_A"] >= 1.20 for row in hydrogen_contacts)
+            passed = bool(
+                geometry["accepted"] and bond_pass and torsion_pass and proton_pass
+            )
+            checks.append(
+                {
+                    "frame": frame_number,
+                    "source_line": frame.line,
+                    "current_geometry_screen_passed": passed,
+                    "geometry": geometry,
+                    "reactive_bonds_A": bonds,
+                    "torsions": torsions,
+                    "oxyanion_H_contacts_below_2_5_A": close_hydrogens,
+                    "reactive_bond_screen_passed": bond_pass,
+                    "torsion_screen_passed": torsion_pass,
+                    "proton_inventory_screen_passed": proton_pass,
+                }
+            )
+            metrics.append(
+                {
+                    "frame": frame_number,
+                    "source_line": frame.line,
+                    "OG1_Cstar_A": bonds["THR:OG1"],
+                    "Cstar_O_A": bonds["TIL:O"],
+                    "Cstar_N_A": bonds["TIL:N"],
+                    "Cstar_C_A": bonds["TIL:acylCH3"],
+                    "minimum_oxyanion_H_A": min(
+                        row["distance_A"] for row in hydrogen_contacts
+                    ),
+                    "max_frozen_torsion_error_deg": max(
+                        row["error_degrees"] for row in torsions
+                    ),
+                    "geometry_screen_passed": passed,
+                }
+            )
+        latest = parsed.frames[-1]
+        single = type(parsed)((latest,), parsed.counts, parsed.skipped_trailing)
+        (exported / "latest_geometry.xyz").write_text(
+            trajectory_text(single, log.name, checksum)
+        )
+        latest_molecule = Chem.Mol(molecule)
+        latest_molecule.RemoveAllConformers()
+        latest_molecule.AddConformer(conformer)
+        with Chem.SDWriter(str(exported / "latest_geometry.sdf")) as writer:
+            writer.write(latest_molecule)
+        with (exported / "trajectory_metrics.csv").open("x", newline="") as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(metrics[0]))
+            writer.writeheader()
+            writer.writerows(metrics)
+        progress = {
+            "case": name,
+            "captured_utc": captured,
+            "source_log": str(opt / "optimization.log"),
+            "source_prefix_sha256": checksum,
+            "source_prefix_bytes": len(payload),
+            "frames": len(parsed.frames),
+            "atom_count": 37,
+            "hydrogens_per_frame": sum(z == 1 for z in latest.atomic_numbers),
+            "scope": "Unconverged coordinate snapshots; latest table may be an unevaluated trial, not a minimum",
+            "normal_termination_seen": "Normal termination of Gaussian 16" in text,
+            "optimization_steps_reported": [
+                int(value) for value in re.findall(r"Step number\s+(\d+)", text)
+            ],
+            "forcefield_validated": False,
+            "fit_ready": False,
+            "all_frame_checks": checks,
+            "latest": metrics[-1],
+            "conversion": conversion,
+        }
+        write_json(exported / "geometry_checks.json", progress)
+        viewer = [
+            "# Unconverged capped-reference snapshots, not a validated TI1 minimum",
+            "load trajectory.xyz, ti1_progress",
+            "hide everything",
+            "show sticks, ti1_progress",
+            "set valence, 0",
+            "util.cnc",
+            "bg_color white",
+            "set label_color, black",
+        ]
+        for origin, label in (
+            ("THR:OG1", "Thr OG1"),
+            ("TIL:C*", "C*"),
+            ("TIL:O", "O-"),
+            ("TIL:N", "leaving N"),
+        ):
+            viewer.append(
+                f'label ti1_progress and index {indices[origin] + 1}, "{label}"'
+            )
+        viewer.extend(["zoom ti1_progress", "frame 1", ""])
+        (exported / "view_progress.pml").write_text("\n".join(viewer))
+        records.append(
+            {
+                key: value
+                for key, value in progress.items()
+                if key not in {"all_frame_checks", "conversion"}
+            }
+        )
+        LOGGER.info("%s frames=%d latest=%s", name, len(parsed.frames), metrics[-1])
+    write_json(
+        result / "report.json",
+        {
+            "scope": "Interim geometry audit only",
+            "forcefield_validated": False,
+            "cases": records,
+        },
+    )
+    (result / "README.md").write_text(
+        "# TI1 capped-reference progress snapshots\n\n"
+        "These four 37-atom ACE/Thr/NME anions are unconverged Gaussian fitting references, not enzyme structures or accepted minima.\n"
+        "Each contains all 20 explicit hydrogens. No relay water belongs to this small bonded-fitting surrogate.\n"
+        "For each case, cd into its directory and run `pymol view_progress.pml`. Use the movie controls to inspect all saved coordinate tables.\n"
+        "VMD can open `trajectory.xyz`. `latest_geometry.xyz` and `.sdf` contain the latest table, which may be an unevaluated trial.\n"
+        "SDF connectivity is the intended graph, not a proof that QM preserved it. Consult `geometry_checks.json` and `trajectory_metrics.csv`.\n"
+        "Inspect the tetrahedral C*, intact OG1-C* and C*-N bonds, oxyanion proton inventory, and cap/backbone H bonds.\n"
+        "Only phi, psi and chi1 are frozen. Close cap H bonds are reported and may signal gas-phase cap sensitivity.\n"
+        "The XYZ tables are optimization snapshots, not dynamics or guaranteed one-frame-per-step output.\n"
+    )
+
+
+if __name__ == "__main__":
+    main()

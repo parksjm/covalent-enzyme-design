@@ -1,5 +1,34 @@
 # Nyl12 laptop inspection package — 2026-10-21
 
+## TI1 Gaussian reference progress — 2026-10-22
+
+The refreshed package includes `qm/ti1_bonded_reference_progress/`: four small
+37-atom capped-anion references with **20 explicit hydrogens each**. These are
+unconverged Gaussian coordinate snapshots captured at about 19:45 UTC, not
+accepted minima or validated force-field parameters. Relay water is deliberately
+absent from this local bonded-fitting surrogate; the enzyme model retains it.
+
+Run `./pull_nyl12_inspection.sh` again. In PyMOL, change to a case directory,
+for example `qm/ti1_bonded_reference_progress/attack_S_cap_phi_minus60/`, then
+run `@view_progress.pml`. The viewer labels Thr OG1, the tetrahedral C*, the
+oxyanion and leaving-group N. Use the movie controls for all saved tables;
+VMD can read `trajectory.xyz`. `latest_geometry.xyz`/`.sdf` contain the latest
+table, which may be an unevaluated trial. SDF bonds represent the intended graph.
+
+Inspect the S/-60 case against R/-60 first. Both S references show short
+oxyanion contacts to the capped Thr backbone N–H (about 1.77–1.93 angstrom at
+capture), potentially the gas-phase H bonding that motivated torsion constraints.
+Frozen phi/psi/chi1 do not by themselves exclude such contacts. No proton
+transfer is detected in the latest snapshots, and the reactive bonds remain
+within the declared interim screens. One earlier S/-120 trial shortened C*–O
+to 1.225 angstrom and failed that screen; it is retained as frame 4.
+
+Each case includes `trajectory_metrics.csv`, `geometry_checks.json`,
+`atom_map.json` and the exact `input.gjf`. The four original live Gaussian logs
+are under `/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/<case>/optimization_01/optimization.log`.
+The snapshot audit is under `output_nyl12_parameter_validation_20261022/progress_audit_01/`.
+The raw logs/checkpoints are excluded from the laptop transfer.
+
 ## Latest local-repair diagnostic
 
 Viewer correction on 2026-10-22: both water hydrogens were present in all 100

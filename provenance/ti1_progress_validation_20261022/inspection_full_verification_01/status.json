@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; uv run ruff check src scripts tests; uv run pytest"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T19:48:55.148668Z",
+  "env_overrides": {
+    "NYL12_REPAIR_FIXTURE": "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/preparation_01"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/scripts/prepare_nyl12_inspection_download.py": "65c99ded6879b43ee12d0989d2b5cd5c5054c1d67022b8c810cdef06cdb41478",
+    "/data/jpc/covalent-enzyme-design/tests/test_ti1_inspection_inventory.py": "e2db665ecd5a27836d80d4d5a5e78d5841d2e8e8a2040b32c746abfddf19030d"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/inspection_full_verification_01/job/job.log",
+  "session_name": "nyl12_ti1_inspection_full_verify_20261022",
+  "started_utc": "2026-10-22T19:48:02.381047Z"
+}

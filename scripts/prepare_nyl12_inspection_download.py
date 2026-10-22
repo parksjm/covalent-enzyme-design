@@ -27,6 +27,44 @@ MODEL_ALIASES = {
 }
 
 
+def ti1_reference_files(audit: Path) -> dict[str, Path]:
+    """Return the explicit TI1 bonded-reference progress inventory.
+
+    Args:
+        audit: Frozen progress audit directory containing the report and cases.
+
+    Returns:
+        Mapping from package-relative destination paths to source files.
+    """
+    package_prefix = "qm/ti1_bonded_reference_progress"
+    files: dict[str, Path] = {
+        f"{package_prefix}/report.json": audit / "report.json",
+        f"{package_prefix}/README.md": audit / "README.md",
+    }
+    case_names = (
+        "attack_R_cap_phi_minus120",
+        "attack_R_cap_phi_minus60",
+        "attack_S_cap_phi_minus120",
+        "attack_S_cap_phi_minus60",
+    )
+    artifact_names = (
+        "trajectory.xyz",
+        "trajectory.json",
+        "latest_geometry.xyz",
+        "latest_geometry.sdf",
+        "atom_map.json",
+        "geometry_checks.json",
+        "trajectory_metrics.csv",
+        "view_progress.pml",
+        "input.gjf",
+    )
+    for case_name in case_names:
+        for artifact_name in artifact_names:
+            destination = f"{package_prefix}/{case_name}/{artifact_name}"
+            files[destination] = audit / case_name / artifact_name
+    return files
+
+
 def selected_files(
     repo: Path,
     audit: Path,
@@ -37,6 +75,7 @@ def selected_files(
     af3_audits: list[Path] | None = None,
     local_repair: Path | None = None,
     optimization_trajectory: Path | None = None,
+    ti1_reference_audit: Path | None = None,
 ) -> dict[str, Path]:
     """Select the documented small artifacts using explicit file inventories.
 
@@ -52,6 +91,7 @@ def selected_files(
         af3_audits: Explicit result directories for diagnostic AF3 water models.
         local_repair: Retained local-repair calculation with failed QM/MM output.
         optimization_trajectory: Export directory containing actual minimizer frames.
+        ti1_reference_audit: Frozen TI1 bonded-reference progress audit directory.
 
     Returns:
         Relative download names mapped to original source paths.
@@ -175,6 +215,8 @@ def selected_files(
         files[f"{prefix}/view_optimization.pml"] = (
             repo / "scripts/nyl12_optimization_view.pml"
         )
+    if ti1_reference_audit is not None:
+        files.update(ti1_reference_files(ti1_reference_audit))
     return files
 
 
@@ -247,6 +289,7 @@ def main() -> None:
     parser.add_argument("--af3-audit", type=Path, action="append", default=[])
     parser.add_argument("--local-repair", type=Path)
     parser.add_argument("--optimization-trajectory", type=Path)
+    parser.add_argument("--ti1-reference-audit", type=Path)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     report = build_package(
@@ -260,6 +303,7 @@ def main() -> None:
             args.af3_audit,
             args.local_repair,
             args.optimization_trajectory,
+            args.ti1_reference_audit,
         ),
         args.output,
     )

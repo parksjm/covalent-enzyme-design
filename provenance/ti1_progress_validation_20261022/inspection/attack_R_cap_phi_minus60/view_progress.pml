@@ -1,0 +1,15 @@
+# Unconverged capped-reference snapshots, not a validated TI1 minimum
+delete ti1_progress
+load trajectory.xyz, ti1_progress
+hide everything
+show sticks, ti1_progress
+set valence, 0
+util.cnc
+bg_color white
+set label_color, black
+label ti1_progress and index 4, "Thr OG1"
+label ti1_progress and index 23, "C*"
+label ti1_progress and index 24, "O-"
+label ti1_progress and index 25, "leaving N"
+zoom ti1_progress
+frame 1

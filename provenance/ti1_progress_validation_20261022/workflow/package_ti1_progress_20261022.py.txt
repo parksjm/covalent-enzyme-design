@@ -1,0 +1,174 @@
+"""Freeze interim validation evidence and promote a verified laptop bundle."""
+
+from __future__ import annotations
+
+import datetime
+import fcntl
+import hashlib
+import json
+import logging
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+sys.path.insert(0, str(ROOT))
+from scripts.prepare_nyl12_inspection_download import (  # noqa: E402
+    build_package,
+    ti1_reference_files,
+)
+
+WORK = ROOT / "output_nyl12_parameter_validation_20261022"
+AUDIT = WORK / "progress_audit_01"
+SNAPSHOT = ROOT / "provenance/ti1_progress_validation_20261022"
+
+
+def sha256(path: Path) -> str:
+    """Return the digest of a small retained artifact."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main() -> None:
+    """Require checks, freeze evidence, build a fresh bundle and preserve revision07."""
+    logging.basicConfig(level=logging.INFO)
+    current = ROOT / "output_laptop_inspection_20261021"
+    prepared = ROOT / "output_laptop_inspection_20261021_ti1_progress_staging"
+    backup = ROOT / "output_laptop_inspection_20261021_revision_07"
+    for path in (SNAPSHOT, prepared, backup):
+        if path.exists():
+            raise FileExistsError(path)
+    for check in (
+        "inspection_full_verification_01",
+        "inspection_verification_02",
+        "progress_viewer_check_03",
+    ):
+        status = json.loads((WORK / check / "job/status.json").read_text())
+        if status["exit_status"] != 0:
+            raise ValueError(f"Required verification did not pass: {check}")
+        for filename, expected in status["input_sha256"].items():
+            if sha256(Path(filename)) != expected:
+                raise ValueError(f"Verified source changed: {filename}")
+    if (
+        json.loads((WORK / "progress_viewer_check_03/report.json").read_text())[
+            "accepted"
+        ]
+        is not True
+    ):
+        raise ValueError("Real PyMOL movie checks failed")
+    SNAPSHOT.mkdir()
+    records = []
+
+    def copy(source: Path, relative: str) -> None:
+        target = SNAPSHOT / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            raise FileExistsError(target)
+        shutil.copy2(source, target)
+        checksum = sha256(source)
+        if sha256(target) != checksum:
+            raise ValueError(f"Copied artifact changed: {source}")
+        records.append(
+            {"source": str(source), "snapshot": relative, "sha256": checksum}
+        )
+
+    selected = ti1_reference_files(AUDIT / "result")
+    prefix = "qm/ti1_bonded_reference_progress/"
+    for name, path in selected.items():
+        copy(path, "inspection/" + name.removeprefix(prefix))
+    for check in (
+        "inspection_full_verification_01",
+        "inspection_verification_02",
+        "progress_viewer_check_03",
+    ):
+        for name in ("command.json", "status.json", "job.log"):
+            copy(
+                WORK / check / "job" / name,
+                f"{check}/{name}.txt" if name.endswith(".log") else f"{check}/{name}",
+            )
+    copy(
+        WORK / "inspection_verification_02/coverage.json",
+        "inspection_verification_02/coverage.json",
+    )
+    copy(WORK / "progress_viewer_check_03/report.json", "pymol_viewer_check.json")
+    for name in (
+        "audit_ti1_progress_20261022.py",
+        "check_progress_pymol_20261022.py",
+        "fix_progress_viewer_reload_20261022.py",
+        "package_ti1_progress_20261022.py",
+    ):
+        copy(WORK / name, f"workflow/{name}.txt")
+    for name in ("command.json", "status.json", "job.log"):
+        copy(
+            AUDIT / "job" / name,
+            f"audit_job/{name}.txt" if name.endswith(".log") else f"audit_job/{name}",
+        )
+    for source in (AUDIT / "viewer_revision_02").iterdir():
+        if source.is_file():
+            copy(source, f"original_viewers/{source.name}.txt")
+    journal = ROOT / "output_agent_actions/20261021.jsonl"
+    frozen_journal = SNAPSHOT / "agent_actions_snapshot.jsonl"
+    with journal.open("rb") as source:
+        fcntl.flock(source, fcntl.LOCK_SH)
+        with frozen_journal.open("xb") as destination:
+            shutil.copyfileobj(source, destination)
+        fcntl.flock(source, fcntl.LOCK_UN)
+    records.append(
+        {
+            "source": str(journal),
+            "snapshot": frozen_journal.name,
+            "sha256": sha256(frozen_journal),
+        }
+    )
+    (SNAPSHOT / "manifest.json").write_text(
+        json.dumps(
+            {
+                "observed_utc": datetime.datetime.now(
+                    datetime.timezone.utc
+                ).isoformat(),
+                "scope": "Interim unconverged reference geometry and verified inspection exports only",
+                "forcefield_validated": False,
+                "raw_log_snapshots_retained_at": str(AUDIT / "snapshots"),
+                "files": records,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    previous = json.loads((current / "provenance.json").read_text())["files"]
+    files = {name: Path(row["source"]) for name, row in previous.items()}
+    for name, row in previous.items():
+        if (
+            name.startswith(("protein/", "qm/", "diagnostics/"))
+            and sha256(Path(row["source"])) != row["sha256"]
+        ):
+            raise ValueError(f"Previous scientific inspection artifact changed: {name}")
+    for folder in ("docs", "manuscript"):
+        for path in sorted((ROOT / folder).glob("*.md")):
+            files[f"{folder}/{path.name}"] = path
+    files.update(selected)
+    files["provenance/agent_actions_at_export.jsonl"] = frozen_journal
+    files["provenance/ti1_progress_manifest.json"] = SNAPSHOT / "manifest.json"
+    files[prefix + "pymol_viewer_check.json"] = (
+        WORK / "progress_viewer_check_03/report.json"
+    )
+    report = build_package(files, prepared)
+    for line in (prepared / "MANIFEST.sha256").read_text().splitlines():
+        expected, name = line.split("  ", 1)
+        if sha256(prepared / name) != expected:
+            raise ValueError(f"Package integrity failure: {name}")
+    current.rename(backup)
+    try:
+        prepared.rename(current)
+    except BaseException:
+        backup.rename(current)
+        raise
+    logging.info(
+        "Promoted %d files, %d bytes; preserved %s",
+        len(report["files"]),
+        report["payload_bytes"],
+        backup,
+    )
+
+
+if __name__ == "__main__":
+    main()

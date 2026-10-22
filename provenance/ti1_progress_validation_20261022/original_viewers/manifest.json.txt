@@ -1,0 +1,22 @@
+[
+  {
+    "viewer": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/result/attack_R_cap_phi_minus120/view_progress.pml",
+    "before_sha256": "82ec8db78b7baa84477d5b4d230212a5f9e2d74f10bf70d4a513b3cefd74de94",
+    "after_sha256": "efc9f4b9d30f3c8c354d2bed154b125454edbe60869159972a6fe270fbec338d"
+  },
+  {
+    "viewer": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/result/attack_R_cap_phi_minus60/view_progress.pml",
+    "before_sha256": "82ec8db78b7baa84477d5b4d230212a5f9e2d74f10bf70d4a513b3cefd74de94",
+    "after_sha256": "efc9f4b9d30f3c8c354d2bed154b125454edbe60869159972a6fe270fbec338d"
+  },
+  {
+    "viewer": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/result/attack_S_cap_phi_minus120/view_progress.pml",
+    "before_sha256": "82ec8db78b7baa84477d5b4d230212a5f9e2d74f10bf70d4a513b3cefd74de94",
+    "after_sha256": "efc9f4b9d30f3c8c354d2bed154b125454edbe60869159972a6fe270fbec338d"
+  },
+  {
+    "viewer": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/result/attack_S_cap_phi_minus60/view_progress.pml",
+    "before_sha256": "82ec8db78b7baa84477d5b4d230212a5f9e2d74f10bf70d4a513b3cefd74de94",
+    "after_sha256": "efc9f4b9d30f3c8c354d2bed154b125454edbe60869159972a6fe270fbec338d"
+  }
+]

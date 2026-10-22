@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/audit_ti1_progress_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/frequency_controller_source/src:/data/jpc/covalent-enzyme-design"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_ti1_progress_20261022.py": "dea39d1e018da8bb58b253a7096a156e4173f1bb3e4105c13b06a8dd6e7433a2",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/frequency_controller_source/source_identity.json": "c03907218e0a4abea95e277e357465e1d0cd4627a153e24e44b9046fb5540c45",
+    "/data/jpc/covalent-enzyme-design/scripts/gaussian_log_to_xyz.py": "6a5628c8e38a244121e6135efe5cc69620e9be72f4593a5c4e5b1ba774a3632b"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/progress_audit_01/job/job.log",
+  "session_name": "nyl12_ti1_progress_audit01_20261022",
+  "started_utc": null
+}

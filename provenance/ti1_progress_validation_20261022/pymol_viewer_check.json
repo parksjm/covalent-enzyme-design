@@ -1,0 +1,45 @@
+{
+  "accepted": true,
+  "cases": [
+    {
+      "case": "attack_R_cap_phi_minus120",
+      "states": 7,
+      "atoms_per_state": 37,
+      "hydrogens_per_state": 20,
+      "visible_hydrogens": 20,
+      "maximum_coordinate_delta_A": 2.3565673856751346e-07,
+      "bonds_in_display_topology": 36,
+      "accepted": true
+    },
+    {
+      "case": "attack_R_cap_phi_minus60",
+      "states": 7,
+      "atoms_per_state": 37,
+      "hydrogens_per_state": 20,
+      "visible_hydrogens": 20,
+      "maximum_coordinate_delta_A": 2.368774412175867e-07,
+      "bonds_in_display_topology": 36,
+      "accepted": true
+    },
+    {
+      "case": "attack_S_cap_phi_minus120",
+      "states": 7,
+      "atoms_per_state": 37,
+      "hydrogens_per_state": 20,
+      "visible_hydrogens": 20,
+      "maximum_coordinate_delta_A": 2.2286987277908565e-07,
+      "bonds_in_display_topology": 36,
+      "accepted": true
+    },
+    {
+      "case": "attack_S_cap_phi_minus60",
+      "states": 8,
+      "atoms_per_state": 37,
+      "hydrogens_per_state": 20,
+      "visible_hydrogens": 20,
+      "maximum_coordinate_delta_A": 2.3562622075701256e-07,
+      "bonds_in_display_topology": 36,
+      "accepted": true
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+All checks passed!
+============================= test session starts ==============================
+platform linux -- Python 3.12.11, pytest-9.0.2, pluggy-1.7.0
+rootdir: /data/jpc/covalent-enzyme-design
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0
+collected 371 items
+
+tests/test_active_site_geometry.py ...............                       [  4%]
+tests/test_af3_water_audit.py .............                              [  7%]
+tests/test_af3_water_input.py ..........                                 [ 10%]
+tests/test_audit_nyl12_ligand_confidence.py .......                      [ 12%]
+tests/test_diagnose_nyl12_relay_water_contacts.py ......                 [ 13%]
+tests/test_gaussian_checks.py .................                          [ 18%]
+tests/test_gaussian_conformer_provenance.py ..........                   [ 21%]
+tests/test_gaussian_fchk.py ........                                     [ 23%]
+tests/test_gaussian_log_to_xyz.py ...........                            [ 26%]
+tests/test_gaussian_template_job.py .........                            [ 28%]
+tests/test_inventory_covalent_pipeline.py ..                             [ 29%]
+tests/test_launch_nyl12_relay_repair.py .......                          [ 30%]
+tests/test_local_hydrogens.py .........                                  [ 33%]
+tests/test_local_repair_engine.py ..                                     [ 33%]
+tests/test_local_repair_workstation.py .............                     [ 37%]
+tests/test_local_water_seed.py ...........                               [ 40%]
+tests/test_measure_nyl12_active_site.py .....                            [ 41%]
+tests/test_minimization_trajectory.py ..........                         [ 44%]
+tests/test_nyl12_gaussian_conformer_audit.py ........                    [ 46%]
+tests/test_nyl12_inspection.py ..                                        [ 47%]
+tests/test_nyl12_inspection_download.py ....................             [ 52%]
+tests/test_nyl12_jobs.py ......                                          [ 54%]
+tests/test_nyl12_parameter_cache.py ..........                           [ 56%]
+tests/test_nyl12_qm_region.py ..........                                 [ 59%]
+tests/test_nyl12_relay_feasibility.py .....                              [ 60%]
+tests/test_nyl12_relay_water.py ......                                   [ 62%]
+tests/test_nyl12_ti1_attempt.py ...............                          [ 66%]
+tests/test_nyl12_ti1_checks.py ...................                       [ 71%]
+tests/test_nyl12_workflow_cli.py ........                                [ 73%]
+tests/test_preflight_gaussian16.py .....                                 [ 75%]
+tests/test_prepare_ti1_bonded_reference.py .......                       [ 77%]
+tests/test_record_agent_action.py ...........                            [ 80%]
+tests/test_relay_feasibility_cli.py .                                    [ 80%]
+tests/test_relay_inspection_package.py ....                              [ 81%]
+tests/test_relay_repair_cli.py ........                                  [ 83%]
+tests/test_relay_repair_geometry.py ...............                      [ 87%]
+tests/test_run_nyl12_ti1_qmmm_cli.py ....                                [ 88%]
+tests/test_terminal_template.py .......                                  [ 90%]
+tests/test_ti1_bonded_model.py ......                                    [ 92%]
+tests/test_ti1_inspection_inventory.py ...                               [ 92%]
+tests/test_ti1_reference_coordinates.py .........                        [ 95%]
+tests/test_ti1_reference_graph.py ......                                 [ 97%]
+tests/test_ti1_reference_validation.py ...........                       [100%]
+
+============================= 371 passed in 51.99s =============================

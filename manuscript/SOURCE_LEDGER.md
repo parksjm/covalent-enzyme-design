@@ -1,5 +1,24 @@
 # Manuscript source and claim ledger — 2026-10-20
 
+## Interim reference geometry checks — 2026-10-22, 19:45 UTC
+
+`../output_nyl12_parameter_validation_20261022/progress_audit_01/` retains
+frozen Gaussian log prefixes, their hashes, the executed analysis source and
+7/7/7/8-frame exports. No optimizer completed at this check. Latest frames
+pass interim geometry screens; all states retain 37 atoms and 20 explicit H.
+Both S cases show capped Thr N–H/oxyanion contacts of 1.77–1.93 A. S/-120
+frame 4 has a failed C*–O screen (1.225 A) and is retained. No proton transfer
+is detected in the latest frames. These checks do not validate the force field.
+
+Actual PyMOL all-state coordinate/hydrogen checks and repeatable reloads are
+under `../output_nyl12_parameter_validation_20261022/progress_viewer_check_03/`.
+The earlier checker failure was an API mismatch for the textual `off` setting,
+not missing hydrogens or a coordinate change. Its source/logs remain available.
+The new optional laptop inventory has 34 focused passing tests and 97% module
+coverage; the complete regression suite passed 371 tests. Versioned small
+artifacts and workflow snapshots are in
+`../provenance/ti1_progress_validation_20261022/`; raw logs remain on violet.
+
 ## Capped TI1 reference launch — 2026-10-22
 
 The user requested an ACE/Thr/NME anionic bonded reference and selected

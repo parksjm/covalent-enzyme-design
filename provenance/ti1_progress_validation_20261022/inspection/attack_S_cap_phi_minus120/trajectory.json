@@ -1,0 +1,19 @@
+{
+  "source_basename": "optimization.log",
+  "source_sha256": "a94de1eaa001480abe8f1ff6ec626e526d85e07a8e311a52ac2d2b745869f169",
+  "script_sha256": "6a5628c8e38a244121e6135efe5cc69620e9be72f4593a5c4e5b1ba774a3632b",
+  "requested_orientation": "input",
+  "selected_orientation": "Input",
+  "orientation_counts": {
+    "Standard": 0,
+    "Input": 7
+  },
+  "ignored_trailing_incomplete_counts": {
+    "Standard": 0,
+    "Input": 0
+  },
+  "selected_frame_count": 7,
+  "atom_count_per_frame": 37,
+  "trajectory_sha256": "7d91025d723c85fbe08d4733e0bd99abff45578229bf4e6bdcc1ba72e52c0322",
+  "frame_selection_note": "Every complete table from the selected orientation stream is retained, including identical snapshots; tables may come from optimization, frequency, ESP, or other Gaussian sections and are not asserted to be optimizer steps."
+}

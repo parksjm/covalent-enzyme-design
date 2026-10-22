@@ -1,5 +1,37 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Interim TI1 validation — 2026-10-22, 19:45 UTC
+
+User requested validation and inspectable Gaussian outputs. All four optimizers
+remain active around steps 6–7, with force criteria unmet; no frequency or final
+parameter acceptance is available. Frozen live-log prefixes were audited in
+tmux under `output_nyl12_parameter_validation_20261022/progress_audit_01/`.
+Its `result/` contains 7/7/7/8-frame XYZ trajectories, latest XYZ/SDF, input
+and atom maps, all-frame geometry checks, CSV metrics and PyMOL viewers.
+Every frame has 37 atoms and 20 explicit H. Latest frames pass the declared
+geometry/stereo/torsion/proton screens, but remain unconverged.
+
+Both S cases show capped Thr backbone N–H/oxyanion contacts (1.77–1.93 A),
+so cap H bonding needs explicit review before accepting any fitted reference.
+The earlier S/-120 frame 4 had C*–O 1.225 A and failed the predeclared bond
+screen; latest C*–O is 1.291 A. Retain all trials and unchanged final gates.
+Do not interpret the latest-screen pass as convergence, a free minimum,
+validated parameters or proof of negligible cap artifacts. Inspect S/-60
+against R/-60 first. Relay water is intentionally absent from these small
+bonded surrogates, not missing from the enzyme refinement model.
+
+Actual PyMOL checks verified every exported state, 20 visible H, 36 intended
+display bonds, coordinate agreement below 2.4e-7 A, and repeatable viewer reloads.
+Checks: 371 full-suite tests passed; 34 focused export/converter tests passed,
+97% packager coverage. Raw check outputs are `progress_viewer_check_03/` and
+`inspection_full_verification_01/` under the same parameter-validation root.
+The laptop package adds `qm/ti1_bonded_reference_progress/`; the existing
+zero-argument pull script is unchanged. Original package revision 07 is retained
+when the refreshed bundle is promoted. The next real calculation-stage gate
+remains completed-optimization acceptance, then the existing automatic Hessian
+continuation. Fitting/native-state transfer validation cannot use these interim
+snapshots as final references.
+
 ## Active TI1 parameter checkpoint — 2026-10-22, afternoon
 
 The user explicitly resumed after the earlier immediate stop. Four actual

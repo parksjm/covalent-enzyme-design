@@ -1,0 +1,491 @@
+{
+  "case": "attack_S_cap_phi_minus120",
+  "captured_utc": "2026-10-22T19:45:17.681746+00:00",
+  "source_log": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/optimization.log",
+  "source_prefix_sha256": "a94de1eaa001480abe8f1ff6ec626e526d85e07a8e311a52ac2d2b745869f169",
+  "source_prefix_bytes": 407140,
+  "frames": 7,
+  "atom_count": 37,
+  "hydrogens_per_frame": 20,
+  "scope": "Unconverged coordinate snapshots; latest table may be an unevaluated trial, not a minimum",
+  "normal_termination_seen": false,
+  "optimization_steps_reported": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "forcefield_validated": false,
+  "fit_ready": false,
+  "all_frame_checks": [
+    {
+      "frame": 1,
+      "source_line": 400,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.3635740266395513,
+        "TIL:O": 1.3884627461318508,
+        "TIL:N": 1.444846972733099,
+        "TIL:acylCH3": 1.5357733717101623
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99997072289048,
+          "error_degrees": 2.92771095473654e-05
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.11025895272869,
+          "error_degrees": 1.7475286739454532e-05
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96438409753385,
+          "error_degrees": 3.378016842248144e-05
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.4885637507279177
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.3868625071641643
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.38635236856295
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 2,
+      "source_line": 1890,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.4035569278419027,
+        "TIL:O": 1.35096305790721,
+        "TIL:N": 1.4565461084102354,
+        "TIL:acylCH3": 1.5506183696980376
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99998662838807,
+          "error_degrees": 1.3371611942147865e-05
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.1102351425208,
+          "error_degrees": 4.1285494631893016e-05
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96452868542352,
+          "error_degrees": 0.00011080772122795679
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 2.477087410017862
+        },
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.482568439532131
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.4098696977390706
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.3817677267300854
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 3,
+      "source_line": 2724,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.470098257098484,
+        "TIL:O": 1.290797757702964,
+        "TIL:N": 1.4765910735738585,
+        "TIL:acylCH3": 1.5682322510961186
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99985081787591,
+          "error_degrees": 0.0001491821241188518
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.11047672990398,
+          "error_degrees": 0.0002003018885545771
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96438875069876,
+          "error_degrees": 2.9127003529083595e-05
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 1.3642431767808112
+        },
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.4733306306082494
+        },
+        {
+          "origin_id": "ACE:CH3H1",
+          "distance_A": 2.459222395497406
+        },
+        {
+          "origin_id": "ACE:CH3H3",
+          "distance_A": 2.410830652731958
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.4853955440366025
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.4001724003058618
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 4,
+      "source_line": 3580,
+      "current_geometry_screen_passed": false,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.5354588352570702,
+        "TIL:O": 1.2253506116512123,
+        "TIL:N": 1.4971214476805146,
+        "TIL:acylCH3": 1.5904679972715579
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99993548300121,
+          "error_degrees": 6.451699880472006e-05
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.11037341207785,
+          "error_degrees": 9.698406242364399e-05
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96450201281678,
+          "error_degrees": 8.413511449134603e-05
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 2.2543239609765493
+        },
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.419088046841826
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.4856466104836783
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.401655915075888
+        }
+      ],
+      "reactive_bond_screen_passed": false,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 5,
+      "source_line": 4418,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.4839155635564312,
+        "TIL:O": 1.3017998634959214,
+        "TIL:N": 1.479234890179379,
+        "TIL:acylCH3": 1.5659964674918652
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99996331416155,
+          "error_degrees": 3.668583846661022e-05
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.11019488150959,
+          "error_degrees": 8.154650583946932e-05
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96452725470226,
+          "error_degrees": 0.00010937700000113182
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 2.02940259072122
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.477641534050275
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.409649060415645
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 6,
+      "source_line": 5233,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.4965124961299185,
+        "TIL:O": 1.3063064181140656,
+        "TIL:N": 1.4779216195468554,
+        "TIL:acylCH3": 1.5600241844500358
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99979886121135,
+          "error_degrees": 0.00020113878866823143
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.110460797969,
+          "error_degrees": 0.00018436995358683816
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.96444537526378,
+          "error_degrees": 2.7497561518430302e-05
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 1.982338113100033
+        },
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.3353166887377395
+        },
+        {
+          "origin_id": "TIL:acylCH3H2",
+          "distance_A": 2.4916782435760036
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.3812087624807283
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    },
+    {
+      "frame": 7,
+      "source_line": 6053,
+      "current_geometry_screen_passed": true,
+      "geometry": {
+        "accepted": true,
+        "expected_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "observed_stereocenters": {
+          "1": "S",
+          "2": "R",
+          "22": "S"
+        },
+        "geometry_failures": []
+      },
+      "reactive_bonds_A": {
+        "THR:OG1": 1.5155153892461797,
+        "TIL:O": 1.2910008125504802,
+        "TIL:N": 1.4800394490681659,
+        "TIL:acylCH3": 1.5521152080145337
+      },
+      "torsions": [
+        {
+          "name": "phi",
+          "observed_degrees": -119.99988471399101,
+          "error_degrees": 0.00011528600902011021
+        },
+        {
+          "name": "psi",
+          "observed_degrees": 134.1104442576113,
+          "error_degrees": 0.00016782959588113044
+        },
+        {
+          "name": "chi1",
+          "observed_degrees": -58.964496688569085,
+          "error_degrees": 7.88108667961751e-05
+        }
+      ],
+      "oxyanion_H_contacts_below_2_5_A": [
+        {
+          "origin_id": "THR:H",
+          "distance_A": 1.9330256894154305
+        },
+        {
+          "origin_id": "THR:HB",
+          "distance_A": 2.0022409562357875
+        },
+        {
+          "origin_id": "TIL:HN",
+          "distance_A": 2.387890526526499
+        }
+      ],
+      "reactive_bond_screen_passed": true,
+      "torsion_screen_passed": true,
+      "proton_inventory_screen_passed": true
+    }
+  ],
+  "latest": {
+    "frame": 7,
+    "source_line": 6053,
+    "OG1_Cstar_A": 1.5155153892461797,
+    "Cstar_O_A": 1.2910008125504802,
+    "Cstar_N_A": 1.4800394490681659,
+    "Cstar_C_A": 1.5521152080145337,
+    "minimum_oxyanion_H_A": 1.9330256894154305,
+    "max_frozen_torsion_error_deg": 0.00016782959588113044,
+    "geometry_screen_passed": true
+  },
+  "conversion": {
+    "source_basename": "optimization.log",
+    "source_sha256": "a94de1eaa001480abe8f1ff6ec626e526d85e07a8e311a52ac2d2b745869f169",
+    "script_sha256": "6a5628c8e38a244121e6135efe5cc69620e9be72f4593a5c4e5b1ba774a3632b",
+    "requested_orientation": "input",
+    "selected_orientation": "Input",
+    "orientation_counts": {
+      "Standard": 0,
+      "Input": 7
+    },
+    "ignored_trailing_incomplete_counts": {
+      "Standard": 0,
+      "Input": 0
+    },
+    "selected_frame_count": 7,
+    "atom_count_per_frame": 37,
+    "trajectory_sha256": "7d91025d723c85fbe08d4733e0bd99abff45578229bf4e6bdcc1ba72e52c0322",
+    "frame_selection_note": "Every complete table from the selected orientation stream is retained, including identical snapshots; tables may come from optimization, frequency, ESP, or other Gaussian sections and are not asserted to be optimizer steps."
+  }
+}
