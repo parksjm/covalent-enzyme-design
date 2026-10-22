@@ -1,0 +1,14 @@
+{
+  "accepted": true,
+  "expected_stereocenters": {
+    "1": "S",
+    "2": "R",
+    "22": "S"
+  },
+  "observed_stereocenters": {
+    "1": "S",
+    "2": "R",
+    "22": "S"
+  },
+  "geometry_failures": []
+}

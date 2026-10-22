@@ -1,0 +1,21 @@
+All checks passed!
+============================= test session starts ==============================
+platform linux -- Python 3.12.11, pytest-9.0.2, pluggy-1.7.0
+rootdir: /data/jpc/covalent-enzyme-design
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected 9 items
+
+output_nyl12_parameter_validation_20261022/test_frequency_continuation.py . [ 11%]
+........                                                                 [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                                                               Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------------------------------------------------
+output_nyl12_parameter_validation_20261022/continue_bonded_frequency_20261022.py     134      9    93%   70, 89, 106, 110, 117, 135, 152, 253, 284
+----------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                134      9    93%
+Coverage JSON written to file output_nyl12_parameter_validation_20261022/controller_verification_01/coverage.json
+============================== 9 passed in 0.98s ===============================

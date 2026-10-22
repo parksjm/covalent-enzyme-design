@@ -1,0 +1,138 @@
+"""Prepare and screen four explicit capped TI1 reference cases."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+
+
+def main() -> None:
+    """Preserve sources, run explicit preparations, and reject bad seeds."""
+    logging.basicConfig(level=logging.INFO)
+    BASE.mkdir(parents=True, exist_ok=False)
+    snapshot = BASE / "source"
+    relative_paths = [
+        Path("src/nyl12_covalent") / name
+        for name in (
+            "__init__.py",
+            "terminal_template.py",
+            "ti1_bonded_model.py",
+            "ti1_reference_coordinates.py",
+            "gaussian_checks.py",
+        )
+    ] + [
+        Path(name)
+        for name in (
+            "scripts/prepare_nyl12_ti1_bonded_reference.py",
+            "pyproject.toml",
+            "uv.lock",
+            "docs/ti1_parameter_protocol_20261022.md",
+            "cif/n12c.cif",
+        )
+    ]
+    sources = {}
+    for relative in relative_paths:
+        original, copied = ROOT / relative, snapshot / relative
+        copied.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(original, copied)
+        digest = hashlib.sha256(copied.read_bytes()).hexdigest()
+        if digest != hashlib.sha256(original.read_bytes()).hexdigest():
+            raise RuntimeError(f"Source changed during snapshot: {original}")
+        sources[str(relative)] = {"original": str(original), "sha256": digest}
+    shutil.copyfile(__file__, snapshot / Path(__file__).name)
+    (BASE / "source_identity.json").write_text(
+        json.dumps(
+            {
+                "base_git_commit": subprocess.check_output(
+                    ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
+                ).strip(),
+                "sources": sources,
+                "python": sys.executable,
+                "forcefield_validated": False,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    sys.path.insert(0, str(snapshot / "src"))
+    from nyl12_covalent.gaussian_checks import validate_geometry
+    from rdkit import Chem
+
+    screens = []
+    for configuration in ("R", "S"):
+        for phi in (-120, -60):
+            name = f"attack_{configuration}_cap_phi_minus{abs(phi)}"
+            case = BASE / name
+            case.mkdir()
+            prepared = case / "prepared"
+            command = [
+                sys.executable,
+                str(snapshot / "scripts/prepare_nyl12_ti1_bonded_reference.py"),
+                "--cif",
+                str(snapshot / "cif/n12c.cif"),
+                "--chain",
+                "A",
+                "--residue",
+                "233",
+                "--cip",
+                configuration,
+                "--cap-phi",
+                str(phi),
+                "--seed",
+                "20261022",
+                "--cores",
+                "8",
+                "--memory-gb",
+                "16",
+                "--output",
+                str(prepared),
+            ]
+            (case / "preparation_command.json").write_text(
+                json.dumps({"argv": command}, indent=2) + "\n"
+            )
+            with (case / "preparation.log").open("x") as log:
+                subprocess.run(
+                    command, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT, check=True
+                )
+            molecules = list(
+                Chem.SDMolSupplier(str(prepared / "molecule.sdf"), removeHs=False)
+            )
+            if len(molecules) != 1 or molecules[0] is None:
+                raise ValueError(f"Invalid prepared SDF: {name}")
+            molecule = molecules[0]
+            report = validate_geometry(
+                molecule,
+                [atom.GetAtomicNum() for atom in molecule.GetAtoms()],
+                molecule.GetConformer().GetPositions(),
+            )
+            (case / "starting_geometry_screen.json").write_text(
+                json.dumps(report, indent=2) + "\n"
+            )
+            screens.append({"case": name, "accepted": report["accepted"]})
+            logging.info("%s: starting-geometry screen=%s", name, report["accepted"])
+    (BASE / "preparation_screen.json").write_text(
+        json.dumps(
+            {
+                "cases": screens,
+                "accepted": all(row["accepted"] for row in screens),
+                "scope": "starting geometry only; not optimized or fitted parameters",
+                "forcefield_validated": False,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    if not all(row["accepted"] for row in screens):
+        raise ValueError("At least one initial conformer failed the chemical screen")
+
+
+if __name__ == "__main__":
+    main()

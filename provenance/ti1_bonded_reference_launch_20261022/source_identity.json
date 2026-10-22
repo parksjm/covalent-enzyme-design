@@ -1,0 +1,47 @@
+{
+  "base_git_commit": "72c29b7670296fbaf41634a41f10db63fb619431",
+  "sources": {
+    "src/nyl12_covalent/__init__.py": {
+      "original": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/__init__.py",
+      "sha256": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204"
+    },
+    "src/nyl12_covalent/terminal_template.py": {
+      "original": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/terminal_template.py",
+      "sha256": "efa0c4593587fd4715705a233f2809192df9a7a25a772a1d34fa28e7dc9979b3"
+    },
+    "src/nyl12_covalent/ti1_bonded_model.py": {
+      "original": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_bonded_model.py",
+      "sha256": "a54ae3c49b71df94143822e6d5adc4d494dd7a89b79d628ce34fad3ad24acd04"
+    },
+    "src/nyl12_covalent/ti1_reference_coordinates.py": {
+      "original": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_coordinates.py",
+      "sha256": "48bb4d3395746ac00ac95634050cde2eed591e9fd51107cc4a2836ac8675e628"
+    },
+    "src/nyl12_covalent/gaussian_checks.py": {
+      "original": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_checks.py",
+      "sha256": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547"
+    },
+    "scripts/prepare_nyl12_ti1_bonded_reference.py": {
+      "original": "/data/jpc/covalent-enzyme-design/scripts/prepare_nyl12_ti1_bonded_reference.py",
+      "sha256": "88f2538db938d1885431f5e60892487083f215e27050173b8348a8a90f3888d7"
+    },
+    "pyproject.toml": {
+      "original": "/data/jpc/covalent-enzyme-design/pyproject.toml",
+      "sha256": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a"
+    },
+    "uv.lock": {
+      "original": "/data/jpc/covalent-enzyme-design/uv.lock",
+      "sha256": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07"
+    },
+    "docs/ti1_parameter_protocol_20261022.md": {
+      "original": "/data/jpc/covalent-enzyme-design/docs/ti1_parameter_protocol_20261022.md",
+      "sha256": "ea368a264ee0e8df9117e7f50fba9045c6354a7df454bc59c594c0bc84e0a7bc"
+    },
+    "cif/n12c.cif": {
+      "original": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+      "sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c"
+    }
+  },
+  "python": "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+  "forcefield_validated": false
+}

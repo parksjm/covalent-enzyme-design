@@ -1,0 +1,105 @@
+"""Freeze small, auditable TI1 launch evidence without binary calculation data."""
+
+from __future__ import annotations
+
+import datetime
+import fcntl
+import hashlib
+import json
+import logging
+import shutil
+from pathlib import Path
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+WORK = ROOT / "output_nyl12_parameter_validation_20261022"
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+DESTINATION = ROOT / "provenance/ti1_bonded_reference_launch_20261022"
+
+
+def main() -> None:
+    """Copy exact small artifacts, then record their source and snapshot hashes."""
+    logging.basicConfig(level=logging.INFO)
+    DESTINATION.mkdir()
+    files: list[dict[str, str]] = []
+
+    def copy(source: Path, relative: str) -> None:
+        target = DESTINATION / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.exists():
+            raise FileExistsError(target)
+        shutil.copy2(source, target)
+        checksum = hashlib.sha256(source.read_bytes()).hexdigest()
+        if checksum != hashlib.sha256(target.read_bytes()).hexdigest():
+            raise ValueError(f"Snapshot copy mismatch: {source}")
+        files.append({"source": str(source), "snapshot": relative, "sha256": checksum})
+
+    for name in ("source_identity.json", "preparation_screen.json"):
+        copy(BASE / name, name)
+    copy(WORK / "crystal_probe_01/reference.json", "reference_torsions.json")
+    for row in json.loads((BASE / "preparation_screen.json").read_text())["cases"]:
+        case = BASE / row["case"]
+        for name in (
+            "input.gjf",
+            "frequency.gjf",
+            "esp.gjf",
+            "atom_map.json",
+            "coordinates.xyz",
+            "molecule.sdf",
+        ):
+            copy(case / "prepared" / name, f"{row['case']}/prepared/{name}")
+        copy(
+            case / "starting_geometry_screen.json",
+            f"{row['case']}/starting_geometry_screen.json",
+        )
+        for stage in ("optimization_01", "frequency_controller_01"):
+            for name in ("command.json", "status.json", "run.sh"):
+                copy(case / stage / "job" / name, f"{row['case']}/{stage}/{name}")
+        copy(
+            case / "optimization_01/gaussian_identity.txt",
+            f"{row['case']}/gaussian_identity.txt",
+        )
+    for verification in ("full_verification_01", "controller_verification_01"):
+        for name in ("command.json", "status.json", "job.log"):
+            copy(WORK / verification / "job" / name, f"{verification}/{name}")
+        copy(WORK / verification / "coverage.json", f"{verification}/coverage.json")
+    for name in (
+        "prepare_bonded_references_20261022.py",
+        "launch_bonded_optimizations_20261022.py",
+        "continue_bonded_frequency_20261022.py",
+        "test_frequency_continuation.py",
+        "launch_gated_frequencies_20261022.py",
+        "freeze_ti1_launch_provenance_20261022.py",
+    ):
+        copy(WORK / name, f"workflow/{name}.txt")
+    copy(
+        BASE / "frequency_controller_source/source_identity.json",
+        "frequency_controller_source_identity.json",
+    )
+    journal = ROOT / "output_agent_actions/20261021.jsonl"
+    journal_target = DESTINATION / "agent_actions_snapshot.jsonl"
+    with journal.open("rb") as source:
+        fcntl.flock(source, fcntl.LOCK_SH)
+        with journal_target.open("xb") as destination:
+            shutil.copyfileobj(source, destination)
+        fcntl.flock(source, fcntl.LOCK_UN)
+    files.append(
+        {
+            "source": str(journal),
+            "snapshot": journal_target.name,
+            "sha256": hashlib.sha256(journal_target.read_bytes()).hexdigest(),
+        }
+    )
+    manifest = {
+        "observed_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "scope": "Prepared references and verified workflow launch; running process snapshots are observations, not completion records",
+        "forcefield_validated": False,
+        "full_reference_cif_retained_at": str(BASE / "source/cif/n12c.cif"),
+        "binary_checkpoints_and_live_calculations": str(BASE),
+        "files": files,
+    }
+    (DESTINATION / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    logging.info("Froze %d small artifacts under %s", len(files), DESTINATION)
+
+
+if __name__ == "__main__":
+    main()

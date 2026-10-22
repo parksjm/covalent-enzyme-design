@@ -1,0 +1,7 @@
+%nprocshared=8
+%mem=16GB
+%oldchk=reference.chk
+%chk=hessian.chk
+#p wB97XD/def2TZVP Int=UltraFine Freq Geom=AllCheck Guess=Read SCF=(Tight,XQC) NoSymm
+
+

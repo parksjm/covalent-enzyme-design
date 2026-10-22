@@ -1,0 +1,4 @@
+9dd1b1a7495c313954b5243ea427389adac55e55829ab4934f89b8e46fb0c8d5  /usr/local/g16/g16
+a0f692ef393da4f7961706eb6882be257d7d52e4beecfabad7eeee20e28de8d0  /usr/local/g16/formchk
+3c657a7d07ab22be53afcdd70e4a4456a6ddcd398d8be341d9625c5b4da670ed  /usr/local/g16/bsd/g16.profile
+uid=11702(jpc) gid=31746(g16) groups=31746(g16),27(sudo),100(users),983(ollama),55236(cades-oicxfer),55702(ssh-wks-proxy-user),56003(besdcmb)

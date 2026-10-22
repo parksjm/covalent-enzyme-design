@@ -1,0 +1,98 @@
+"""Launch the four screened TI1 surrogate optimizations without overwriting data."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import shlex
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+sys.path.insert(0, str(ROOT / "src"))
+from nyl12_covalent.jobs import launch_job  # noqa: E402
+
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+LOGGER = logging.getLogger(__name__)
+
+
+def main() -> None:
+    """Create retained scripts and launch the four independent calculations."""
+    logging.basicConfig(level=logging.INFO)
+    screen = json.loads((BASE / "preparation_screen.json").read_text())
+    if not screen["accepted"] or len(screen["cases"]) != 4:
+        raise ValueError("All four starting reference cases must pass first")
+    version_cmd = "sha256sum /usr/local/g16/g16 /usr/local/g16/formchk /usr/local/g16/bsd/g16.profile; id"
+    identity = subprocess.run(
+        ["sg", "g16", "-c", version_cmd], check=True, text=True, capture_output=True
+    ).stdout
+    for case in screen["cases"]:
+        name = case["case"]
+        directory = BASE / name / "optimization_01"
+        directory.mkdir()
+        for filename in (
+            "input.gjf",
+            "frequency.gjf",
+            "esp.gjf",
+            "molecule.sdf",
+            "coordinates.xyz",
+            "atom_map.json",
+        ):
+            shutil.copy2(BASE / name / "prepared" / filename, directory / filename)
+        scratch = (
+            Path("/data/scratch/gaussian_scratch/jpc") / f"ti1_20261022_{name}_opt01"
+        )
+        script = directory / "run_gaussian.sh"
+        script.write_text(
+            "#!/usr/bin/env bash\nset -eo pipefail\n"
+            "export g16root=/usr/local\n"
+            "source /usr/local/g16/bsd/g16.profile\n"
+            f"export GAUSS_SCRDIR={shlex.quote(str(scratch))}\n"
+            'mkdir -- "$GAUSS_SCRDIR"\n'
+            f"cd -- {shlex.quote(str(directory))}\n"
+            "/usr/local/g16/g16 < input.gjf > optimization.log 2>&1\n"
+        )
+        script.chmod(0o750)
+        (directory / "gaussian_identity.txt").write_text(identity)
+        shutil.copy2(__file__, directory / "launch_source.py")
+        inputs = {
+            p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in directory.iterdir()
+            if p.is_file()
+        }
+        (directory / "input_identity.json").write_text(
+            json.dumps(
+                {
+                    "inputs_sha256": inputs,
+                    "parent_source_identity": str(BASE / "source_identity.json"),
+                    "cores": 8,
+                    "memory_gb": 16,
+                    "forcefield_validated": False,
+                    "scientific_acceptance": "pending; optimization process alone is insufficient",
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        session = f"nyl12_ti1_{name}_20261022"
+        launch_job(
+            session,
+            directory / "job",
+            directory,
+            ["sg", "g16", "-c", shlex.join(["bash", str(script)])],
+            input_paths=[
+                script,
+                directory / "input.gjf",
+                directory / "atom_map.json",
+                directory / "molecule.sdf",
+                directory / "input_identity.json",
+            ],
+        )
+        LOGGER.info("Launched %s in %s", session, directory)
+
+
+if __name__ == "__main__":
+    main()

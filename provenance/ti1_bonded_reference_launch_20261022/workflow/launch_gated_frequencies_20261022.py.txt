@@ -1,0 +1,102 @@
+"""Pin the verified TI1 frequency controller and launch resource-neutral waiters."""
+
+from __future__ import annotations
+
+import hashlib
+import importlib.metadata
+import json
+import logging
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+sys.path.insert(0, str(ROOT / "src"))
+from nyl12_covalent.jobs import launch_job  # noqa: E402
+
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+WORK = ROOT / "output_nyl12_parameter_validation_20261022"
+LOGGER = logging.getLogger(__name__)
+
+
+def main() -> None:
+    """Verify tested source hashes, snapshot dependencies and start waiters."""
+    logging.basicConfig(level=logging.INFO)
+    for verification in ("full_verification_01", "controller_verification_01"):
+        status = json.loads((WORK / verification / "job/status.json").read_text())
+        if status["exit_status"] != 0:
+            raise ValueError(f"Verification failed: {verification}")
+        for filename, checksum in status["input_sha256"].items():
+            if hashlib.sha256(Path(filename).read_bytes()).hexdigest() != checksum:
+                raise ValueError(f"Tested source changed: {filename}")
+    snapshot = BASE / "frequency_controller_source"
+    snapshot.mkdir()
+    package = snapshot / "src/nyl12_covalent"
+    package.mkdir(parents=True)
+    paths = []
+    for name in (
+        "__init__.py",
+        "gaussian_checks.py",
+        "gaussian_fchk.py",
+        "ti1_reference_coordinates.py",
+        "ti1_reference_validation.py",
+    ):
+        source = ROOT / "src/nyl12_covalent" / name
+        destination = package / name
+        shutil.copy2(source, destination)
+        paths.append(destination)
+    for source in (
+        WORK / "continue_bonded_frequency_20261022.py",
+        WORK / "test_frequency_continuation.py",
+        ROOT / "pyproject.toml",
+        ROOT / "uv.lock",
+        ROOT / "scripts/record_agent_action.py",
+        Path(__file__),
+    ):
+        destination = snapshot / source.name
+        shutil.copy2(source, destination)
+        paths.append(destination)
+    identity = {
+        "python": sys.version,
+        "executable": sys.executable,
+        "package_versions": {
+            name: importlib.metadata.version(name)
+            for name in ("numpy", "rdkit", "ParmEd")
+        },
+        "files_sha256": {
+            str(p.relative_to(snapshot)): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in paths
+        },
+        "forcefield_validated": False,
+    }
+    (snapshot / "source_identity.json").write_text(
+        json.dumps(identity, indent=2) + "\n"
+    )
+    for row in json.loads((BASE / "preparation_screen.json").read_text())["cases"]:
+        case = BASE / row["case"]
+        session = f"nyl12_ti1_freq_{row['case']}_20261022"
+        launch_job(
+            session,
+            case / "frequency_controller_01/job",
+            ROOT,
+            [
+                str(ROOT / ".venv/bin/python"),
+                str(snapshot / "continue_bonded_frequency_20261022.py"),
+                "--case",
+                str(case),
+                "--journal",
+                str(ROOT / "output_agent_actions/20261021.jsonl"),
+            ],
+            env_overrides={
+                "PYTHONPATH": str(snapshot / "src"),
+                "OPENBLAS_NUM_THREADS": "1",
+                "MKL_NUM_THREADS": "1",
+                "OMP_NUM_THREADS": "8",
+            },
+            input_paths=paths + [snapshot / "source_identity.json"],
+        )
+        LOGGER.info("Launched gated frequency waiter %s", session)
+
+
+if __name__ == "__main__":
+    main()

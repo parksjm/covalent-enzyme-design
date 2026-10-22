@@ -49,6 +49,12 @@ is cited as such, not represented as a peer-reviewed benchmark.
 - **R13.** Steinmetzer et al. *pysisyphus: Exploring potential energy surfaces
   in ground and excited states*. Int. J. Quantum Chem. (2021).
   https://doi.org/10.1002/qua.26390
+- **R14.** Allen, Payne and Cole. *Harmonic Force Constants for Molecular
+  Mechanics Force Fields via Hessian Matrix Projection*. JCTC (2018), 14,
+  274–281. https://doi.org/10.1021/acs.jctc.7b00785
+  Publisher abstract and author-repository bibliographic record verified
+  2026-10-22; full-text retrieval timed out. This is the modified-Seminario
+  candidate method, not evidence that the present TI1 parameters are validated.
 
 Before submission add the exact Gaussian 16 revision citation, AmberTools 26
 release citation, software versions for production design/prediction, the

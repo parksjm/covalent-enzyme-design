@@ -1,0 +1,7 @@
+%nprocshared=8
+%mem=16GB
+%oldchk=reference.chk
+%chk=esp.chk
+#p HF/6-31G(d) Pop=MK IOp(6/33=2,6/42=6) Geom=AllCheck Guess=Read SCF=(Tight,XQC) NoSymm
+
+

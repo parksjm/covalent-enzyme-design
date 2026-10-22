@@ -1,0 +1,284 @@
+#!/usr/bin/env python3
+"""Continue an accepted TI1 optimization into a retained Hessian job.
+
+This controller records process and scientific acceptance separately. It does
+not generate ESP data or validate a force field.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import logging
+import re
+import shlex
+import shutil
+import subprocess
+import sys
+import time
+from pathlib import Path
+from typing import Any
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+G16_PROFILE = Path("/usr/local/g16/bsd/g16.profile")
+G16 = Path("/usr/local/g16/g16")
+FORMCHK = Path("/usr/local/g16/formchk")
+SCRATCH_ROOT = Path("/data/scratch/gaussian_scratch/jpc")
+ANGSTROM_PER_BOHR = 0.529177210903
+GEOMETRY_TOLERANCE_A = 2.0e-5
+
+
+def record(journal: Path, phase: str, action: str) -> None:
+    """Append an action record and stop if journaling fails."""
+    subprocess.run(
+        [
+            str(ROOT / ".venv/bin/python"),
+            str(ROOT / "scripts/record_agent_action.py"),
+            "--log",
+            str(journal),
+            "--agent",
+            "root",
+            "--phase",
+            phase,
+            "--action",
+            action,
+            "--permission-mode",
+            "escalated",
+            "--reason",
+            "Authorized TI1 reference frequency workflow",
+            "--rollback",
+            "Preserve retained job artifacts; make a new case for retries",
+        ],
+        check=True,
+    )
+
+
+def digest(path: Path) -> str:
+    """Return a file's SHA-256 digest."""
+    hasher = hashlib.sha256()
+    with path.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            hasher.update(block)
+    return hasher.hexdigest()
+
+
+def accepted(result: dict[str, Any]) -> bool:
+    """Read the explicit acceptance flag from a validation result."""
+    value = result["accepted"]
+    if not isinstance(value, bool):
+        raise TypeError("validation result must expose a boolean 'accepted' field")
+    return value
+
+
+def wait_for_optimizer(
+    status_path: Path, wait_hours: float, poll_seconds: int
+) -> dict[str, Any]:
+    """Wait until the optimization has an end timestamp and exit status."""
+    deadline = time.monotonic() + wait_hours * 3600
+    while True:
+        if status_path.is_file():
+            status = json.loads(status_path.read_text())
+            if (
+                status.get("ended_utc") is not None
+                and status.get("exit_status") is not None
+            ):
+                return status
+        if time.monotonic() >= deadline:
+            raise TimeoutError(f"optimizer did not finish within {wait_hours:g} hours")
+        time.sleep(poll_seconds)
+
+
+def require_inputs(case: Path) -> tuple[Path, Path, dict[str, Any]]:
+    """Check expected optimization artifacts and verify the submitted input hash."""
+    opt = case / "optimization_01"
+    required = [
+        opt / "job/status.json",
+        opt / "job/command.json",
+        opt / "input.gjf",
+        opt / "atom_map.json",
+        opt / "molecule.sdf",
+        opt / "frequency.gjf",
+        opt / "input_identity.json",
+    ]
+    missing = [str(path) for path in required if not path.is_file()]
+    if missing:
+        raise FileNotFoundError("missing optimizer artifacts: " + ", ".join(missing))
+    command = json.loads((opt / "job/command.json").read_text())
+    expected = command["input_sha256"]
+    if not isinstance(expected, dict) or not expected:
+        raise ValueError("Missing optimizer input identity dictionary")
+    for filename, target in expected.items():
+        if digest(Path(filename)) != target:
+            raise ValueError(f"Optimizer input hash mismatch: {filename}")
+    identity = json.loads((opt / "input_identity.json").read_text())
+    for filename, target in identity["inputs_sha256"].items():
+        if digest(opt / filename) != target:
+            raise ValueError(f"Prepared artifact hash mismatch: {filename}")
+    return opt, required[0], command
+
+
+def main() -> int:
+    """Run the gated bonded-frequency continuation."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--case", type=Path, required=True)
+    parser.add_argument("--journal", type=Path, required=True)
+    parser.add_argument("--poll-seconds", type=int, default=30)
+    parser.add_argument("--wait-hours", type=float, default=48)
+    args = parser.parse_args()
+    logging.basicConfig(
+        level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
+    )
+    case = args.case.resolve()
+    journal = args.journal.resolve()
+    if args.poll_seconds < 1 or args.wait_hours <= 0:
+        parser.error(
+            "poll-seconds must be positive and wait-hours must be greater than zero"
+        )
+    opt, status_path, _ = require_inputs(case)
+    record(
+        journal, "intent", f"Wait for TI1 optimizer and gate bonded frequency in {case}"
+    )
+    status = wait_for_optimizer(status_path, args.wait_hours, args.poll_seconds)
+    if status["exit_status"] != 0:
+        record(
+            journal,
+            "outcome",
+            f"Optimizer failed with exit status {status['exit_status']}; frequency not started",
+        )
+        return 1
+    require_inputs(case)
+    if not (opt / "reference.chk").is_file():
+        raise FileNotFoundError("Completed optimizer has no reference.chk")
+
+    # The source snapshot is supplied by the retained job environment.
+    from nyl12_covalent.gaussian_fchk import read_gaussian_fchk
+    from nyl12_covalent.ti1_reference_validation import (
+        assess_reference_hessian,
+        assess_reference_optimization,
+    )
+
+    record(
+        journal,
+        "intent",
+        f"Assess TI1 optimization and write exclusive acceptance in {opt}",
+    )
+    optimization_result = assess_reference_optimization(opt)
+    optimization_acceptance = {
+        "assessment": optimization_result,
+        "accepted": accepted(optimization_result),
+        "optimizer_status": status,
+    }
+    opt_acceptance_path = opt / "scientific_acceptance.json"
+    with opt_acceptance_path.open("x") as stream:
+        json.dump(optimization_acceptance, stream, indent=2)
+        stream.write("\n")
+    if not optimization_acceptance["accepted"]:
+        record(
+            journal,
+            "outcome",
+            "Optimization scientific gate rejected; frequency not started",
+        )
+        return 3
+
+    frequency = case / "frequency_01"
+    record(
+        journal,
+        "intent",
+        f"Create gated frequency job at {frequency} and execute Gaussian through sg g16",
+    )
+    frequency.mkdir()
+    for source_name, target_name in (
+        ("reference.chk", "reference.chk"),
+        ("atom_map.json", "atom_map.json"),
+        ("molecule.sdf", "molecule.sdf"),
+        ("frequency.gjf", "input.gjf"),
+    ):
+        shutil.copy2(opt / source_name, frequency / target_name)
+    identity = {
+        name: digest(frequency / name)
+        for name in ("reference.chk", "atom_map.json", "molecule.sdf", "input.gjf")
+    }
+    with (frequency / "input_identity.json").open("x") as stream:
+        json.dump(identity, stream, indent=2)
+        stream.write("\n")
+
+    case_tag = re.sub(r"[^A-Za-z0-9_.-]+", "_", case.name)
+    scratch = SCRATCH_ROOT / f"ti1_20261022_{case_tag}_freq01"
+    command = "\n".join(
+        (
+            "#!/usr/bin/env bash",
+            "set -eo pipefail",
+            "export g16root=/usr/local",
+            f"source {shlex.quote(str(G16_PROFILE))}",
+            f"export GAUSS_SCRDIR={shlex.quote(str(scratch))}",
+            f"mkdir -- {shlex.quote(str(scratch))}",
+            f"cd -- {shlex.quote(str(frequency))}",
+            f"{shlex.quote(str(G16))} < input.gjf > frequency.log 2>&1",
+            f"{shlex.quote(str(FORMCHK))} hessian.chk hessian.fchk > formchk.log 2>&1",
+            "",
+        )
+    )
+    script = frequency / "run_gaussian.sh"
+    with script.open("x") as stream:
+        stream.write(command)
+    process = subprocess.run(
+        ["sg", "g16", "-c", shlex.join(["bash", str(script)])],
+        cwd=frequency,
+        check=False,
+    )
+    process_record = {
+        "argv": ["sg", "g16", "-c", shlex.join(["bash", str(script)])],
+        "exit_status": process.returncode,
+    }
+    with (frequency / "process_result.json").open("x") as stream:
+        json.dump(process_record, stream, indent=2)
+        stream.write("\n")
+    record(
+        journal,
+        "outcome",
+        f"Gaussian/formchk frequency process exited {process.returncode} in {frequency}",
+    )
+    if process.returncode != 0:
+        return 1
+
+    record(
+        journal, "intent", f"Assess raw Hessian and checkpoint geometry in {frequency}"
+    )
+    hessian_result = assess_reference_hessian(frequency)
+    fchk = read_gaussian_fchk(frequency / "hessian.fchk")
+    final_a = optimization_result["final_coordinates_A"]
+    coords_bohr = fchk.coordinates_bohr
+    if coords_bohr.shape != (len(final_a), 3):
+        raise ValueError("Hessian and optimization coordinate shapes differ")
+    max_delta = max(
+        abs(float(coords_bohr[i][j]) * ANGSTROM_PER_BOHR - float(final_a[i][j]))
+        for i in range(len(final_a))
+        for j in range(3)
+    )
+    match = max_delta <= GEOMETRY_TOLERANCE_A
+    hessian_acceptance = {
+        "assessment": hessian_result,
+        "accepted": accepted(hessian_result) and match,
+        "checkpoint_geometry_match": {
+            "accepted": match,
+            "max_coordinate_delta_A": max_delta,
+            "tolerance_A": GEOMETRY_TOLERANCE_A,
+        },
+        "forcefield_validated": False,
+        "conditional_curvature_validation_pending": True,
+        "scope": "raw reference Hessian prerequisites only; no ESP or force-field validation",
+    }
+    with (frequency / "scientific_acceptance.json").open("x") as stream:
+        json.dump(hessian_acceptance, stream, indent=2)
+        stream.write("\n")
+    record(
+        journal,
+        "outcome",
+        f"Hessian assessment accepted={hessian_acceptance['accepted']} geometry_match={match}",
+    )
+    return 0 if hessian_acceptance["accepted"] and match else 3
+
+
+if __name__ == "__main__":
+    sys.exit(main())

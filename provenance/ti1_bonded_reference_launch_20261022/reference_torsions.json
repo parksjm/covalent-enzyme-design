@@ -1,0 +1,49 @@
+{
+  "source": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c",
+  "chain": "A",
+  "residue_number": 233,
+  "phi_degrees": null,
+  "phi_scope": "undefined",
+  "psi_degrees": 134.11027642801542,
+  "chi1_degrees": -58.964417877702274,
+  "previous_C_to_N_A": null,
+  "C_to_next_N_A": 1.3217386277172958,
+  "thr_coordinates_A": {
+    "C": [
+      -50.782,
+      -4.706,
+      12.842
+    ],
+    "CA": [
+      -51.829,
+      -4.69,
+      13.96
+    ],
+    "CB": [
+      -51.656,
+      -5.953,
+      14.786
+    ],
+    "CG2": [
+      -50.291,
+      -6.054,
+      15.435
+    ],
+    "N": [
+      -53.197,
+      -4.671,
+      13.394
+    ],
+    "O": [
+      -50.82,
+      -5.579,
+      11.941
+    ],
+    "OG1": [
+      -52.632,
+      -5.96,
+      15.815
+    ]
+  }
+}

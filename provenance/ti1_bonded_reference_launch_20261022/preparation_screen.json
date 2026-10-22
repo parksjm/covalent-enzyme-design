@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "case": "attack_R_cap_phi_minus120",
+      "accepted": true
+    },
+    {
+      "case": "attack_R_cap_phi_minus60",
+      "accepted": true
+    },
+    {
+      "case": "attack_S_cap_phi_minus120",
+      "accepted": true
+    },
+    {
+      "case": "attack_S_cap_phi_minus60",
+      "accepted": true
+    }
+  ],
+  "accepted": true,
+  "scope": "starting geometry only; not optimized or fitted parameters",
+  "forcefield_validated": false
+}

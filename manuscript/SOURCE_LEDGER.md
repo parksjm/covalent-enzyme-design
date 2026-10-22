@@ -1,5 +1,33 @@
 # Manuscript source and claim ledger — 2026-10-20
 
+## Capped TI1 reference launch — 2026-10-22
+
+The user requested an ACE/Thr/NME anionic bonded reference and selected
+`/data/jpc/covalent-enzyme-design/cif/n12c.cif` as its torsion source. Exact
+source SHA-256: `e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c`.
+Author chain A Thr233 has psi 134.110276428 and chi1 -58.964417878 degrees;
+native phi is undefined. Both declared cap phi values (-120/-60) and both
+attacked-carbon configurations (R/S) are retained. This 37-atom, -1 singlet
+surrogate supports local bonded fitting, not native NH3+/oxyanion charges.
+The CIF entry label is `NYL12_CRYO-READY-FOR-MD`; no `_exptl` method record
+is present. Preserve the supplied coordinates without inferring an experimental
+structure determination method from the filename or format.
+
+All four starting geometries passed the predeclared contact/connectivity
+screen. Four actual 8-core/16-GB Gaussian optimizations launched in tmux;
+launch is not completion or scientific acceptance. Source/CIF snapshots,
+inputs, screens and process records are under
+`../output_nyl12_ti1_parameters_20261022/pa6_local_bonded/`. Protocol:
+`../docs/ti1_parameter_protocol_20261022.md`. Native charge fitting, conditional
+curvature, held-out validation and the protein-refinement gate remain open.
+
+An existing neutral final-HF checkpoint was converted with formchk and used
+to check actual text-record parsing. The first reader failed on fixed-width
+character arrays; its correction now reaches the deliberate missing-Hessian
+rejection because this HF checkpoint contains no Cartesian Force Constants.
+Neither probe is a validated TI1 Hessian. Retained attempts:
+`../output_nyl12_parameter_validation_20261022/real_fchk_probe_01/`.
+
 ## Local water repair evidence — 2026-10-21 evening
 
 User-directed prerequisite after the diagnostic: validate the coupled TI1

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01",
+  "ended_utc": null,
+  "env_overrides": {},
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/atom_map.json": "d57f6073ed967758f27da2f91913a45253b861c1ea4d17899de4ba289fb7a6eb",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/input.gjf": "553430be14d38ec7237a44f35810367fd38b5b6aa4c68a56b65977562d6063f4",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/input_identity.json": "753cacac3bb27ef8a55b7635bd1d7c36ed8958ba635fd7756cf5d4e0d2203299",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/molecule.sdf": "2650d215d283984392866588790494d2a24562ed72e20440f89ba9a651b409a0",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/run_gaussian.sh": "7db9e055f46a9f330fac97920bf419b7825a4358d08d2865f8cd6f1e0fb52c69"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/job/job.log",
+  "session_name": "nyl12_ti1_attack_R_cap_phi_minus120_20261022",
+  "started_utc": null
+}

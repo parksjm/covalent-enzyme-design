@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; uv run ruff check src scripts tests; uv run pytest --cov=nyl12_covalent.gaussian_fchk --cov=nyl12_covalent.ti1_reference_graph --cov=nyl12_covalent.ti1_bonded_model --cov=nyl12_covalent.ti1_reference_coordinates --cov=nyl12_covalent.ti1_reference_validation --cov=scripts.prepare_nyl12_ti1_bonded_reference --cov-report=term-missing --cov-report=json:output_nyl12_parameter_validation_20261022/full_verification_01/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "NYL12_REPAIR_FIXTURE": "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/preparation_01"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_fchk.py": "d7cf382a8fcff53d74e62300aa774352bcc91af325836e5f9e6c29a1ec37c9b8",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_validation.py": "0237a32133e3695140d4a692d12daa11130a9166b8f020ee8950699fe25b6936",
+    "/data/jpc/covalent-enzyme-design/tests/test_gaussian_fchk.py": "79ed9140e69cbfe4a2756554330f8a439921af8096daed208be115f905779aef",
+    "/data/jpc/covalent-enzyme-design/tests/test_prepare_ti1_bonded_reference.py": "6168e5358e030a47ac1f288cd90878c548cb030c34e26d0e2fa3c96f373e2040",
+    "/data/jpc/covalent-enzyme-design/tests/test_ti1_reference_validation.py": "36ff2bcd3876df9cd13e07cc495e5f118ff5deb53a854d34491d1778d19dcc28"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/full_verification_01/job/job.log",
+  "session_name": "nyl12_ti1_full_verify_20261022",
+  "started_utc": null
+}

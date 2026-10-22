@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; export PYTHONPATH=/data/jpc/covalent-enzyme-design/src; uv run ruff check output_nyl12_parameter_validation_20261022/continue_bonded_frequency_20261022.py output_nyl12_parameter_validation_20261022/test_frequency_continuation.py; uv run pytest output_nyl12_parameter_validation_20261022/test_frequency_continuation.py --cov=frequency_controller --cov-report=term-missing --cov-report=json:output_nyl12_parameter_validation_20261022/controller_verification_01/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {},
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/continue_bonded_frequency_20261022.py": "e8b31153dd87db0187d0b6496ecc8302cdb749ed7bb391ec51ab037bbf5d6621",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/test_frequency_continuation.py": "425da2d6abd20c0486f8ce36128a0a0872858174f8a6c691a3d79fa5819945be"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/controller_verification_01/job/job.log",
+  "session_name": "nyl12_frequency_controller_verify_20261022",
+  "started_utc": null
+}

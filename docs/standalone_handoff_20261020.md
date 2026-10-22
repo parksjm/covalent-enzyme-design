@@ -1,5 +1,63 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Active TI1 parameter checkpoint — 2026-10-22, afternoon
+
+The user explicitly resumed after the earlier immediate stop. Four actual
+Gaussian constrained optimizations are now running in detached tmux sessions
+on violet, each with 8 cores and 16 GB. Inspect their retained status/logs;
+this statement describes launch, not successful completion or fitted parameters.
+
+The user selected `cif/n12c.cif` as the geometry reference. Author chain A,
+Thr233 gives psi 134.110276428 degrees and chi1 -58.964417878 degrees;
+native phi is undefined at this N-terminal Thr. The prescribed small bonded
+surrogate is ACE-THR(-O-C*(O−)(CH3)(NHCH3))-NME, 37 atoms, charge -1,
+singlet. Compare explicit ACE-cap phi choices -120/-60 degrees and both
+attacked-carbon R/S configurations. Only phi, psi and chi1 are frozen;
+reactive bonds and hydrogens are free. This capped anion does **not** supply
+transferable charges for the native NH3+/oxyanion TI1.
+
+All four deterministic starting geometries passed the predeclared geometry
+screen. Prepared inputs, exact source/CIF snapshots, hashes and per-case jobs:
+`output_nyl12_ti1_parameters_20261022/pa6_local_bonded/`.
+Cases are `attack_R_cap_phi_minus120`, `attack_R_cap_phi_minus60`,
+`attack_S_cap_phi_minus120`, `attack_S_cap_phi_minus60`; each actual run is
+`optimization_01/`, containing `input.gjf`, `optimization.log`, retained
+launcher and `job/status.json`. Tmux session names are
+`nyl12_ti1_<case>_20261022`. Use the existing passwordless `sg g16 -c ...`
+wrapper, explicit Gaussian profile and descriptive scratch directories.
+No sudo or permission changes were made.
+
+Optimization method is wB97XD/def2TZVP with UltraFine grid, Tight SCF/Opt,
+CalcFC and XQC, no extra dispersion. Do not launch frequencies/ESP until
+normal completion **and** TI1 protonation/connectivity/stereochemistry pass.
+Four source-pinned frequency continuations also run in tmux as
+`nyl12_ti1_freq_<case>_20261022`; their status/logs are under
+`<case>/frequency_controller_01/job/`. They wait for the optimizer's final
+process record, verify unchanged input hashes and apply the tested scientific
+gate. Only an accepted reference proceeds to fresh `<case>/frequency_01/`,
+with a separate Hessian checkpoint, formchk output and geometry cross-check.
+Rejected references stop with retained acceptance records. There is no
+automatic ESP fit, parameter certification or protein refinement.
+Frequency and HF/6-31G(d) MK inputs use separate checkpoint names. Raw
+frequencies of this constrained reference do not certify a free minimum;
+conditional curvature, bonded fitting, held-out validation and native-state
+RESP/transfer checks remain outstanding. The protein-refinement gate is closed.
+See `docs/ti1_parameter_protocol_20261022.md` for the prospective acceptance
+criteria and scope.
+
+Latest full verification passed **368 tests**, Ruff and 87% combined coverage;
+each new scientific module/entry point measured 82–99%. The separate
+continuation safety tests passed **9 tests**, Ruff and 93% coverage without
+invoking engines. Retained outputs are `full_verification_01/` and
+`controller_verification_01/` under `output_nyl12_parameter_validation_20261022/`.
+A real neutral-reference checkpoint conversion succeeded
+in tmux under `output_nyl12_parameter_validation_20261022/real_fchk_probe_01/`;
+the first parser check found a fixed-width character-array bug and was retained
+as a failure. The corrected reader handles those records, then correctly
+rejects this final-HF checkpoint because it has no Cartesian Hessian. No real TI1
+Hessian has yet been accepted. Active append-only journal remains
+`output_agent_actions/20261021.jsonl`; all original artifacts are preserved.
+
 ## Resumed 2026-10-22: viewer correction and TI1 validation
 
 User is independently improving the AF3 contact-restraint fork and will report

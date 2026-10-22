@@ -1,0 +1,384 @@
+{
+  "observed_utc": "2026-10-22T17:38:20.691900+00:00",
+  "scope": "Prepared references and verified workflow launch; running process snapshots are observations, not completion records",
+  "forcefield_validated": false,
+  "full_reference_cif_retained_at": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/source/cif/n12c.cif",
+  "binary_checkpoints_and_live_calculations": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded",
+  "files": [
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/source_identity.json",
+      "snapshot": "source_identity.json",
+      "sha256": "d850e5f6419df4fdcbf4b2db03826a30145a274d2b11a55f45d3506f8c19c610"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/preparation_screen.json",
+      "snapshot": "preparation_screen.json",
+      "sha256": "fa5426c8fed645c7458c1727b4d5adac30d672f3ecc066ccb3b75689f778ea50"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/crystal_probe_01/reference.json",
+      "snapshot": "reference_torsions.json",
+      "sha256": "39e3770b0eaeee6022a0c4756eb97c60f05d5fda357190154707244fb7127bc4"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/input.gjf",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/input.gjf",
+      "sha256": "553430be14d38ec7237a44f35810367fd38b5b6aa4c68a56b65977562d6063f4"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/frequency.gjf",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/frequency.gjf",
+      "sha256": "2941e4ae5637a81651efeebaeef11022d5f76c1ace6f73cae3ca70af6760e7b1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/esp.gjf",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/esp.gjf",
+      "sha256": "102deec7f21eb5f8134a9fea295140ddbbc8e5ce3646a453aeb3cf73756105e6"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/atom_map.json",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/atom_map.json",
+      "sha256": "d57f6073ed967758f27da2f91913a45253b861c1ea4d17899de4ba289fb7a6eb"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/coordinates.xyz",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/coordinates.xyz",
+      "sha256": "53b55128e0d3e3114e9e6299668dba7a776db91735bf4ca64e506df3e62bfa50"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/prepared/molecule.sdf",
+      "snapshot": "attack_R_cap_phi_minus120/prepared/molecule.sdf",
+      "sha256": "2650d215d283984392866588790494d2a24562ed72e20440f89ba9a651b409a0"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/starting_geometry_screen.json",
+      "snapshot": "attack_R_cap_phi_minus120/starting_geometry_screen.json",
+      "sha256": "a52b88858e44b88e4d922f9f3f6ed5acca17faf57a1fcc7ff339168b6070b30c"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/job/command.json",
+      "snapshot": "attack_R_cap_phi_minus120/optimization_01/command.json",
+      "sha256": "464f03de0f9854e18a4e511973cd38803453441efa6f4bea1ba4c601b7ef8611"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/job/status.json",
+      "snapshot": "attack_R_cap_phi_minus120/optimization_01/status.json",
+      "sha256": "c2802f451a13b23ea17f37430646dea40b1522193bed38e7d78986f7c1eec134"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/job/run.sh",
+      "snapshot": "attack_R_cap_phi_minus120/optimization_01/run.sh",
+      "sha256": "bfe533566591ccaea2664cc035c69b82ddf0c247cd4e4a5608b49d49256d5a9d"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/frequency_controller_01/job/command.json",
+      "snapshot": "attack_R_cap_phi_minus120/frequency_controller_01/command.json",
+      "sha256": "a2f5af9167f5f6c10ce7d4b5255bc18c35f6a66adb18bf75f42406cf4a0daf5d"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/frequency_controller_01/job/status.json",
+      "snapshot": "attack_R_cap_phi_minus120/frequency_controller_01/status.json",
+      "sha256": "c85713bfcd1cb8e2f4e5bbe1545959c93dea191eaf1d3790944461347fcc34cc"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/frequency_controller_01/job/run.sh",
+      "snapshot": "attack_R_cap_phi_minus120/frequency_controller_01/run.sh",
+      "sha256": "e86462e3dc825f2917d8d38f956b0e700339f1e3567e53641ab26f6813733dc2"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/optimization_01/gaussian_identity.txt",
+      "snapshot": "attack_R_cap_phi_minus120/gaussian_identity.txt",
+      "sha256": "b80f315bfad252aa2d07f78cc3bc26c92f3ba40a75c8b319ea0827618c6bd85b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/input.gjf",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/input.gjf",
+      "sha256": "83246f8d4c341a9cac7322c162cb7e8e89f38ab3950c1a95e01f4a0c6c9edf49"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/frequency.gjf",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/frequency.gjf",
+      "sha256": "2941e4ae5637a81651efeebaeef11022d5f76c1ace6f73cae3ca70af6760e7b1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/esp.gjf",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/esp.gjf",
+      "sha256": "102deec7f21eb5f8134a9fea295140ddbbc8e5ce3646a453aeb3cf73756105e6"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/atom_map.json",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/atom_map.json",
+      "sha256": "3487344e66fa7937532df7ef0afdee182f659f1f2c683033dd2ef6842dd2989d"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/coordinates.xyz",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/coordinates.xyz",
+      "sha256": "81846e1fea9928286da21750fb8d989089ad9b8d6d4dd2104e498eaebca5b654"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/prepared/molecule.sdf",
+      "snapshot": "attack_R_cap_phi_minus60/prepared/molecule.sdf",
+      "sha256": "4b406a08fbdd45fd5f8a5e914f2bc1e61fbedbdb3427362c4f14df0036ec2358"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/starting_geometry_screen.json",
+      "snapshot": "attack_R_cap_phi_minus60/starting_geometry_screen.json",
+      "sha256": "a52b88858e44b88e4d922f9f3f6ed5acca17faf57a1fcc7ff339168b6070b30c"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/optimization_01/job/command.json",
+      "snapshot": "attack_R_cap_phi_minus60/optimization_01/command.json",
+      "sha256": "8aa3d01545a46fa9d9a79f2097cf64a5a4de30505868000506613603724bc75b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/optimization_01/job/status.json",
+      "snapshot": "attack_R_cap_phi_minus60/optimization_01/status.json",
+      "sha256": "670a4af3200b3fa01ad1848de647cb7558ce446cd051e9849a1c72dde2bb98d4"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/optimization_01/job/run.sh",
+      "snapshot": "attack_R_cap_phi_minus60/optimization_01/run.sh",
+      "sha256": "a5be81c0739bc9bd0d2ada18901a6a72325c6ed7b881109438a7af4e2555dd8b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_controller_01/job/command.json",
+      "snapshot": "attack_R_cap_phi_minus60/frequency_controller_01/command.json",
+      "sha256": "c659a9762f020f9f465956e45a1c3a04b6ecebf7cbbdc46e4f2e9fd2a96f4930"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_controller_01/job/status.json",
+      "snapshot": "attack_R_cap_phi_minus60/frequency_controller_01/status.json",
+      "sha256": "4b2965dae8a4aaf4e7b3381eff594362f29f4a4be9268c5b65a4b62fbb93a929"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_controller_01/job/run.sh",
+      "snapshot": "attack_R_cap_phi_minus60/frequency_controller_01/run.sh",
+      "sha256": "eed654abdacf1de12fde6ec3f019c1f770bf3b483f89eb4b6f753af2d0754277"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/optimization_01/gaussian_identity.txt",
+      "snapshot": "attack_R_cap_phi_minus60/gaussian_identity.txt",
+      "sha256": "b80f315bfad252aa2d07f78cc3bc26c92f3ba40a75c8b319ea0827618c6bd85b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/input.gjf",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/input.gjf",
+      "sha256": "a5aeb23c96def7a9e084659d5add4b7b6ffaf3c59991eca83e1394411fb9a101"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/frequency.gjf",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/frequency.gjf",
+      "sha256": "2941e4ae5637a81651efeebaeef11022d5f76c1ace6f73cae3ca70af6760e7b1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/esp.gjf",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/esp.gjf",
+      "sha256": "102deec7f21eb5f8134a9fea295140ddbbc8e5ce3646a453aeb3cf73756105e6"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/atom_map.json",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/atom_map.json",
+      "sha256": "a8f6bdb9a2f5a315fb74145e06d891df430b36bb22461491d9ca82b7605050a6"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/coordinates.xyz",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/coordinates.xyz",
+      "sha256": "056c12ec6facfa23f2b96b0eaa4b5f937aa9030192d4a0cd26b78a77ae6e914e"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/prepared/molecule.sdf",
+      "snapshot": "attack_S_cap_phi_minus120/prepared/molecule.sdf",
+      "sha256": "1656e68280f4ee84a9ef69e1a9e45c97761d5307bd6a048cc5522b5f7ca71cbd"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/starting_geometry_screen.json",
+      "snapshot": "attack_S_cap_phi_minus120/starting_geometry_screen.json",
+      "sha256": "024d70cf7aab6786650df45081b7128725d3ab7916c4c38e9f5494b24173beeb"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/job/command.json",
+      "snapshot": "attack_S_cap_phi_minus120/optimization_01/command.json",
+      "sha256": "5b1d70cb4347ce151e9fc5d7a31842d89bbf8fee8b2f1d1a36364cf85a383541"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/job/status.json",
+      "snapshot": "attack_S_cap_phi_minus120/optimization_01/status.json",
+      "sha256": "7a45edc21dad23930c128772b2af52482c126245970e5bdae7be32ef7367ef97"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/job/run.sh",
+      "snapshot": "attack_S_cap_phi_minus120/optimization_01/run.sh",
+      "sha256": "8cc4c94327d539097699b8493b38c484737f35ce115134041b70fc31690e8b36"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/frequency_controller_01/job/command.json",
+      "snapshot": "attack_S_cap_phi_minus120/frequency_controller_01/command.json",
+      "sha256": "385f468a0d86532d36cd5606d9324bbfc9c2c855c285a3a87624e6157f663f1f"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/frequency_controller_01/job/status.json",
+      "snapshot": "attack_S_cap_phi_minus120/frequency_controller_01/status.json",
+      "sha256": "2bfc2f26a87dcaddda12236a60fb0ef3aa6e97bb23d24b8c7cfd78a7a5e6ffd1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/frequency_controller_01/job/run.sh",
+      "snapshot": "attack_S_cap_phi_minus120/frequency_controller_01/run.sh",
+      "sha256": "f0388ada46a1d84c3b0719f62aa9183198509a12c58876a733be50828478ae4f"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/gaussian_identity.txt",
+      "snapshot": "attack_S_cap_phi_minus120/gaussian_identity.txt",
+      "sha256": "b80f315bfad252aa2d07f78cc3bc26c92f3ba40a75c8b319ea0827618c6bd85b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/input.gjf",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/input.gjf",
+      "sha256": "f1e31df2eba00b0106509dc8f03c9eec37659fb47d3f2a1fc5d2763612bcaa08"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/frequency.gjf",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/frequency.gjf",
+      "sha256": "2941e4ae5637a81651efeebaeef11022d5f76c1ace6f73cae3ca70af6760e7b1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/esp.gjf",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/esp.gjf",
+      "sha256": "102deec7f21eb5f8134a9fea295140ddbbc8e5ce3646a453aeb3cf73756105e6"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/atom_map.json",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/atom_map.json",
+      "sha256": "a1dbe8b50322d59bf83be2ccf4f8a39f4ff8844ad0026bd1d5f19d5ee1645b1b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/coordinates.xyz",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/coordinates.xyz",
+      "sha256": "68252c0b1885b6045d16adf32da82f6de4999a8f67335c3310755e2c1168d754"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/prepared/molecule.sdf",
+      "snapshot": "attack_S_cap_phi_minus60/prepared/molecule.sdf",
+      "sha256": "8ba0e7c0050050f73aeb1b4b1390a2efdc24cba76f019dcb299f92f824433d21"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/starting_geometry_screen.json",
+      "snapshot": "attack_S_cap_phi_minus60/starting_geometry_screen.json",
+      "sha256": "024d70cf7aab6786650df45081b7128725d3ab7916c4c38e9f5494b24173beeb"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/optimization_01/job/command.json",
+      "snapshot": "attack_S_cap_phi_minus60/optimization_01/command.json",
+      "sha256": "30a10cfedf865817d65dc030608097e54290f99c17cf2af442b5756c51014aca"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/optimization_01/job/status.json",
+      "snapshot": "attack_S_cap_phi_minus60/optimization_01/status.json",
+      "sha256": "f5a67457b825b760a53d25ee8e4dda29b5a3332521bbf7071e8d53dfb3456750"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/optimization_01/job/run.sh",
+      "snapshot": "attack_S_cap_phi_minus60/optimization_01/run.sh",
+      "sha256": "585f873a1a67f17246a39b657ae78f2893638ebea387fb7db471775716400c16"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/frequency_controller_01/job/command.json",
+      "snapshot": "attack_S_cap_phi_minus60/frequency_controller_01/command.json",
+      "sha256": "6b504443fe4cef3ffee2d008955b9f8e917aac6c5e5fde0ba49a5f6ab46706de"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/frequency_controller_01/job/status.json",
+      "snapshot": "attack_S_cap_phi_minus60/frequency_controller_01/status.json",
+      "sha256": "c9de4cb84e227ac55243f411c396a133911edb2c0e8a6e74a1ed739f6982283e"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/frequency_controller_01/job/run.sh",
+      "snapshot": "attack_S_cap_phi_minus60/frequency_controller_01/run.sh",
+      "sha256": "89ac076d61dd9d223a9ca5b66c9cb2d89dfe8c37f28b17a73f079df18ae8d2b1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/optimization_01/gaussian_identity.txt",
+      "snapshot": "attack_S_cap_phi_minus60/gaussian_identity.txt",
+      "sha256": "b80f315bfad252aa2d07f78cc3bc26c92f3ba40a75c8b319ea0827618c6bd85b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/full_verification_01/job/command.json",
+      "snapshot": "full_verification_01/command.json",
+      "sha256": "741a8c53baf870dc6a2ab19d123f83a38b9e0cc419cdf2a227951ee58e3b5325"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/full_verification_01/job/status.json",
+      "snapshot": "full_verification_01/status.json",
+      "sha256": "b81093f13e60317486253d9e32c4155935e5e89f680fc98d93efc222a9a7e2aa"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/full_verification_01/job/job.log",
+      "snapshot": "full_verification_01/job.log",
+      "sha256": "dc53a341f879c49c7a03f9f474529580b3f12b98e997a3128bb4e4c597378a36"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/full_verification_01/coverage.json",
+      "snapshot": "full_verification_01/coverage.json",
+      "sha256": "fc87cf4f9e3d19a74f56020f5cbccc43b17ffb86aab22c11d4929b8e21bccf8f"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/controller_verification_01/job/command.json",
+      "snapshot": "controller_verification_01/command.json",
+      "sha256": "6ab61cc915bf056f494599e5d23cb7f336cbc72da93b1bcb239e1d1ec59d6d6b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/controller_verification_01/job/status.json",
+      "snapshot": "controller_verification_01/status.json",
+      "sha256": "896a5c843db11a7d1be2d41b8b6dd042c266c3a3b619f1400138ac12ddb2fa43"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/controller_verification_01/job/job.log",
+      "snapshot": "controller_verification_01/job.log",
+      "sha256": "d49bf508e11f2f08b4815eaef5cc50f5576526a878ec349bbba268dedf38d53e"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/controller_verification_01/coverage.json",
+      "snapshot": "controller_verification_01/coverage.json",
+      "sha256": "06229219877f277d4bc6b53631606be1a3adb7857219e9fa30144d41ef4aef52"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/prepare_bonded_references_20261022.py",
+      "snapshot": "workflow/prepare_bonded_references_20261022.py.txt",
+      "sha256": "8e5636f479de14d70ee71fe5be922e4b3c4b9cc6648607d1c8b0db91db1b3cb3"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/launch_bonded_optimizations_20261022.py",
+      "snapshot": "workflow/launch_bonded_optimizations_20261022.py.txt",
+      "sha256": "417b1778bdf6f111f27f69172bb4df2a2ba3628d86e09bb39ddb5c1af2a83351"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/continue_bonded_frequency_20261022.py",
+      "snapshot": "workflow/continue_bonded_frequency_20261022.py.txt",
+      "sha256": "e8b31153dd87db0187d0b6496ecc8302cdb749ed7bb391ec51ab037bbf5d6621"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/test_frequency_continuation.py",
+      "snapshot": "workflow/test_frequency_continuation.py.txt",
+      "sha256": "425da2d6abd20c0486f8ce36128a0a0872858174f8a6c691a3d79fa5819945be"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/launch_gated_frequencies_20261022.py",
+      "snapshot": "workflow/launch_gated_frequencies_20261022.py.txt",
+      "sha256": "3a1afd083d1e410d6e0a76de5dfbdb590f4ceb1cf95f52f48bb9d4733d3b7daa"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/freeze_ti1_launch_provenance_20261022.py",
+      "snapshot": "workflow/freeze_ti1_launch_provenance_20261022.py.txt",
+      "sha256": "673524d283f3c4c8a6757cd5281030d20a79d465d398370bbe1cef35825635c2"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/frequency_controller_source/source_identity.json",
+      "snapshot": "frequency_controller_source_identity.json",
+      "sha256": "c03907218e0a4abea95e277e357465e1d0cd4627a153e24e44b9046fb5540c45"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/output_agent_actions/20261021.jsonl",
+      "snapshot": "agent_actions_snapshot.jsonl",
+      "sha256": "c70c6237b5ec5d61287fbb265e1c4b36cec74968ae433e5c19d1c4abac70debd"
+    }
+  ]
+}

@@ -66,6 +66,46 @@ attempts. No accepted TI1 minimum or TS1 is available at this checkpoint [S5].
 
 ## Parameter-model quantum calculations — executed; RESP pending
 
+### Capped anionic TI1 bonded reference — prepared; optimization running
+
+A local bonded-parameter surrogate was constructed as
+ACE-THR(-O-C*(O−)(CH3)(NHCH3))-NME, retaining the tetrahedral carbon and intact
+leaving-group C*–N bond. Its explicit-hydrogen graph contains 37 atoms
+(C10H20N3O4−), charge -1 and singlet multiplicity; Thr CA/CB configurations
+are S/R. Methyl groups truncate the reacting substrate amide. The surrogate
+has neutral peptide caps and does not represent the native catalytic NH3+
+group, full substrate termini or relay water. Its charges cannot be transferred
+directly to the native TI1 model.
+
+The user-selected protein reference `cif/n12c.cif` was parsed with an
+explicit author-chain-A, Thr233 selection. Measured psi and chi1 were
+134.110276428 and -58.964417878 degrees. Because native phi is undefined at
+this chain terminus, ACE-cap phi values -120 and -60 degrees were declared
+model choices. Each was combined with an explicit R or S attacked-carbon
+configuration, yielding four references without assigning a preferred attack
+face. ETKDGv3 coordinates, seed 20261022, were adjusted to these three
+dihedrals and passed a conservative starting connectivity/contact screen;
+embedding was not an energy minimization.
+
+Four gas-phase Gaussian 16 wB97XD/def2TZVP optimizations were launched with
+UltraFine integration, Tight SCF/optimization, CalcFC, XQC, no symmetry and
+no additional dispersion [R4,R5]. Each uses 8 cores and 16 GB. Only phi, psi
+and chi1 are frozen; reaction-center bonds and hydrogens remain mobile.
+Completion, electronic state, atom order, stereochemistry, reactive-bond
+lengths, proton inventory and frozen torsions must pass before a separate
+DFT frequency/Hessian calculation. Independent checkpoint names preserve
+optimization, Hessian and HF/6-31G(d) MK ESP data separately.
+
+Constrained references are not free minima. Gradients, constraints and raw
+Hessians must support conditional-curvature assessment before accepting
+bonded parameters. Existing AmberTools modified-Seminario routines are being
+evaluated for candidate bond/angle terms [R14]; no fitted terms are accepted
+at this checkpoint. Cap sensitivity, held-out QM/MM comparisons and a separate
+native NH3+/oxyanion RESP/transfer validation remain required. Inputs, source
+and CIF hashes, preparation screens and optimization process records are under
+`output_nyl12_ti1_parameters_20261022/pa6_local_bonded/`; prospective acceptance
+criteria are in `docs/ti1_parameter_protocol_20261022.md`.
+
 ### Exploratory local relay-water refinement — in progress
 
 The minimal alpha/beta PA6 L4 covalent AF3 model used explicit HOH and two

@@ -1,0 +1,203 @@
+"""Exercise continuation safety gates without invoking a scientific engine."""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import sys
+from pathlib import Path
+from types import ModuleType, SimpleNamespace
+
+import numpy as np
+import pytest
+
+from nyl12_covalent import gaussian_fchk, ti1_reference_validation
+
+SCRIPT = Path(__file__).with_name("continue_bonded_frequency_20261022.py")
+SPEC = importlib.util.spec_from_file_location("frequency_controller", SCRIPT)
+assert SPEC is not None and SPEC.loader is not None
+CONTROLLER = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(CONTROLLER)
+
+
+@pytest.fixture
+def prepared(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> tuple[ModuleType, Path]:
+    """Create a minimal retained optimizer bundle and mock scientific assessment."""
+    case = tmp_path / "attack_R_cap_phi_minus120"
+    opt = case / "optimization_01"
+    (opt / "job").mkdir(parents=True)
+    for filename in ("input.gjf", "frequency.gjf", "molecule.sdf", "atom_map.json"):
+        (opt / filename).write_text(filename)
+    identities = {p.name: CONTROLLER.digest(p) for p in opt.iterdir() if p.is_file()}
+    (opt / "input_identity.json").write_text(json.dumps({"inputs_sha256": identities}))
+    manifest = {
+        str(opt / filename): checksum for filename, checksum in identities.items()
+    }
+    manifest[str(opt / "input_identity.json")] = CONTROLLER.digest(
+        opt / "input_identity.json"
+    )
+    (opt / "job/command.json").write_text(json.dumps({"input_sha256": manifest}))
+    (opt / "job/status.json").write_text(
+        json.dumps({"ended_utc": "2026-10-22Z", "exit_status": 0})
+    )
+    (opt / "reference.chk").write_text("mock checkpoint, not Gaussian data")
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            str(SCRIPT),
+            "--case",
+            str(case),
+            "--journal",
+            str(tmp_path / "journal.jsonl"),
+        ],
+    )
+    monkeypatch.setattr(CONTROLLER, "record", lambda *_args: None)
+    monkeypatch.setattr(
+        ti1_reference_validation,
+        "assess_reference_optimization",
+        lambda path: {
+            "accepted": True,
+            "final_coordinates_A": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
+        },
+    )
+    monkeypatch.setattr(
+        ti1_reference_validation,
+        "assess_reference_hessian",
+        lambda path: {"accepted": path == case / "frequency_01"},
+    )
+    monkeypatch.setattr(
+        gaussian_fchk,
+        "read_gaussian_fchk",
+        lambda path: SimpleNamespace(coordinates_bohr=np.zeros((2, 3))),
+    )
+    monkeypatch.setattr(
+        CONTROLLER.subprocess,
+        "run",
+        lambda *_args, **_kwargs: SimpleNamespace(returncode=0),
+    )
+    return CONTROLLER, case
+
+
+def test_success_retains_separate_raw_hessian_scope(
+    prepared: tuple[ModuleType, Path],
+) -> None:
+    controller, case = prepared
+    assert controller.main() == 0
+    report = json.loads((case / "frequency_01/scientific_acceptance.json").read_text())
+    assert report["accepted"]
+    assert report["checkpoint_geometry_match"]["accepted"]
+    assert report["forcefield_validated"] is False
+    assert report["conditional_curvature_validation_pending"] is True
+    assert (case / "frequency_01/run_gaussian.sh").is_file()
+
+
+def test_optimizer_process_failure_blocks_frequency(
+    prepared: tuple[ModuleType, Path],
+) -> None:
+    controller, case = prepared
+    (case / "optimization_01/job/status.json").write_text(
+        json.dumps({"ended_utc": "2026-10-22Z", "exit_status": 1})
+    )
+    assert controller.main() == 1
+    assert not (case / "frequency_01").exists()
+
+
+def test_scientific_failure_blocks_frequency(
+    prepared: tuple[ModuleType, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    controller, case = prepared
+    monkeypatch.setattr(
+        ti1_reference_validation,
+        "assess_reference_optimization",
+        lambda path: {"accepted": False},
+    )
+    assert controller.main() == 3
+    assert not (case / "frequency_01").exists()
+    assert not json.loads(
+        (case / "optimization_01/scientific_acceptance.json").read_text()
+    )["accepted"]
+
+
+def test_hash_mutation_blocks_frequency(prepared: tuple[ModuleType, Path]) -> None:
+    controller, case = prepared
+    (case / "optimization_01/atom_map.json").write_text("changed")
+    with pytest.raises(ValueError, match="hash mismatch"):
+        controller.main()
+    assert not (case / "frequency_01").exists()
+
+
+def test_geometry_mismatch_is_rejection(
+    prepared: tuple[ModuleType, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    controller, case = prepared
+    monkeypatch.setattr(
+        gaussian_fchk,
+        "read_gaussian_fchk",
+        lambda path: SimpleNamespace(coordinates_bohr=np.ones((2, 3))),
+    )
+    assert controller.main() == 3
+    report = json.loads((case / "frequency_01/scientific_acceptance.json").read_text())
+    assert not report["accepted"]
+    assert not report["checkpoint_geometry_match"]["accepted"]
+
+
+def test_engine_failure_stops_before_hessian_assessment(
+    prepared: tuple[ModuleType, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    controller, case = prepared
+    monkeypatch.setattr(
+        controller.subprocess,
+        "run",
+        lambda *_args, **_kwargs: SimpleNamespace(returncode=7),
+    )
+    assert controller.main() == 1
+    assert not (case / "frequency_01/scientific_acceptance.json").exists()
+    assert (
+        json.loads((case / "frequency_01/process_result.json").read_text())[
+            "exit_status"
+        ]
+        == 7
+    )
+
+
+def test_journal_failure_prevents_mutations(
+    prepared: tuple[ModuleType, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    controller, case = prepared
+
+    def reject_journal(*_args: object) -> None:
+        raise OSError("journal unavailable")
+
+    monkeypatch.setattr(controller, "record", reject_journal)
+    with pytest.raises(OSError, match="journal unavailable"):
+        controller.main()
+    assert not (case / "optimization_01/scientific_acceptance.json").exists()
+    assert not (case / "frequency_01").exists()
+
+
+def test_wait_timeout_preserves_incomplete_optimizer(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    status = tmp_path / "status.json"
+    status.write_text(json.dumps({"ended_utc": None, "exit_status": None}))
+    times = iter([0.0, 10.0])
+    monkeypatch.setattr(CONTROLLER.time, "monotonic", lambda: next(times))
+    with pytest.raises(TimeoutError):
+        CONTROLLER.wait_for_optimizer(status, 1e-6, 30)
+
+
+def test_record_uses_checked_journal_command(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    calls = []
+    monkeypatch.setattr(
+        CONTROLLER.subprocess,
+        "run",
+        lambda *args, **kwargs: calls.append((args, kwargs)),
+    )
+    CONTROLLER.record(tmp_path / "journal.jsonl", "intent", "test")
+    assert calls[0][1]["check"] is True
+    assert "--rollback" in calls[0][0][0]
