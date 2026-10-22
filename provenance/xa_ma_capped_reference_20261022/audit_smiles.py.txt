@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""Inventory atom indices, formal charge, and amide bonds in a supplied SMILES."""
+
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+
+from rdkit import Chem
+from rdkit.Chem import rdMolDescriptors
+
+
+def main() -> int:
+    """Parse the exact input and write a zero-based atom inventory."""
+    input_path = Path(sys.argv[1])
+    output_path = Path(sys.argv[2])
+    raw = input_path.read_text(encoding="utf-8")
+    smiles = raw.strip()
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        raise ValueError("RDKit could not parse the supplied SMILES")
+
+    atoms = []
+    for atom in mol.GetAtoms():
+        idx = atom.GetIdx()
+        atoms.append(
+            {
+                "index_zero_based": idx,
+                "index_one_based": idx + 1,
+                "element": atom.GetSymbol(),
+                "formal_charge": atom.GetFormalCharge(),
+                "neighbors": [
+                    {
+                        "index_zero_based": neighbor.GetIdx(),
+                        "element": neighbor.GetSymbol(),
+                        "bond": str(mol.GetBondBetweenAtoms(idx, neighbor.GetIdx()).GetBondType()),
+                    }
+                    for neighbor in atom.GetNeighbors()
+                ],
+            }
+        )
+
+    amides = []
+    for carbon in mol.GetAtoms():
+        if carbon.GetAtomicNum() != 6:
+            continue
+        oxygens = [
+            bond.GetOtherAtom(carbon)
+            for bond in carbon.GetBonds()
+            if bond.GetBondType() == Chem.BondType.DOUBLE
+            and bond.GetOtherAtom(carbon).GetAtomicNum() == 8
+        ]
+        nitrogens = [
+            bond.GetOtherAtom(carbon)
+            for bond in carbon.GetBonds()
+            if bond.GetBondType() == Chem.BondType.SINGLE
+            and bond.GetOtherAtom(carbon).GetAtomicNum() == 7
+        ]
+        if oxygens and nitrogens:
+            amides.append(
+                {
+                    "carbonyl_c_zero_based": carbon.GetIdx(),
+                    "carbonyl_c_one_based": carbon.GetIdx() + 1,
+                    "carbonyl_o_zero_based": [atom.GetIdx() for atom in oxygens],
+                    "amide_n_zero_based": [atom.GetIdx() for atom in nitrogens],
+                    "carbonyl_c_other_neighbors": [
+                        atom.GetIdx()
+                        for atom in carbon.GetNeighbors()
+                        if atom.GetIdx() not in {item.GetIdx() for item in oxygens + nitrogens}
+                    ],
+                }
+            )
+
+    result = {
+        "input_file": str(input_path),
+        "input_verbatim": raw,
+        "index_convention": "RDKit input-SMILES atom order; zero-based indices are primary",
+        "canonical_smiles": Chem.MolToSmiles(mol),
+        "formula": rdMolDescriptors.CalcMolFormula(mol),
+        "formal_charge": sum(atom.GetFormalCharge() for atom in mol.GetAtoms()),
+        "atom_count": mol.GetNumAtoms(),
+        "atoms": atoms,
+        "amide_carbonyls": amides,
+    }
+    output_path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

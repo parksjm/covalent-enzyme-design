@@ -1,0 +1,22 @@
+{
+  "pymol_version": "3.1.0",
+  "viewer": "/data/jpc/covalent-enzyme-design/scripts/nyl12_local_repair_view.pml",
+  "viewer_sha256": "ef92196e916f574cee427e39c9e2557d61945535f200c0764cd41c1dfc31ad88",
+  "states": 1,
+  "water_atoms_per_state": 3,
+  "visible_water_hydrogens": 2,
+  "water_states": [
+    {
+      "state": 1,
+      "OH_A": [
+        0.970880406528852,
+        0.9764901882673682
+      ],
+      "bonds": 2
+    }
+  ],
+  "parser_errors": [],
+  "accepted": true,
+  "coordinates_changed_by_audit": false,
+  "reload_did_not_append_states": true
+}

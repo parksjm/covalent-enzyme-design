@@ -1,5 +1,44 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Resumed 2026-10-22: viewer correction and TI1 validation
+
+User is independently improving the AF3 contact-restraint fork and will report
+when ready. Leave that fork untouched; no new AF3 tests until their update.
+Water hydrogens exist in all 100 saved frames. Viewer scripts hid them, and a
+semicolon in a comment caused the reported PyMOL SyntaxError. Corrected viewers
+were tested twice in actual PyMOL 3.1.0: 100 trajectory states/one final state,
+O/H1/H2 inventory, both O–H bonds, two visible water H, and no parser errors or
+state duplication. Coordinate files are unchanged. Raw before/after reports and
+PyMOL console logs are under `output_nyl12_viewer_fix_20261022/`.
+Next scientific work remains coupled TI1 force-field validation. Source audit
+confirms guessed junction terms, unfitted reactive charges and arbitrary O49
+charge balancing; neutral free-NH2 Thr-NME QM artifacts are reusable provenance
+but do not validate the covalent NH3+/oxyanion state.
+
+The user clarified substrate termination on 2026-10-22: retain a real charged
+PA6 terminus to support L2 release; a capped XA/MA fragment may be appropriate
+for local copolyamide chemistry, recalling the Dishner JACS model. This concerns
+substrate caps, separately from the peptide cap on Thr. See
+`docs/substrate_termini_decision_20261022.md`. Preserve the existing full PA6 L4
+reference and its terminal chemistry; source inspection confirms NH3+/COO−
+termini. Do not silently cap it. The user subsequently supplied the original
+capped copolyamide SMILES, preserved verbatim in the decision note. Scripted
+RDKit/tmux audit confirms neutral acetyl-X-A|M-A-N-methylamide, C29H47N5O5;
+slash cut C17/O36/N18 in zero-based original SMILES atom order. Original input,
+script, report and job records are in
+`output_nyl12_parameter_validation_20261022/substrate_termini_01/`.
+
+Latest user clarification: PA6 L4 and L2 were both detected by MS, supporting
+the hypothesis that soluble L4 can be a substrate yielding two L2 molecules.
+Keep this first PA6 reference, but detection alone does not establish turnover.
+Both charged termini represent a small oligomer; a long-polymer end model
+would instead retain one real N- or C-terminus with a neutral distal boundary.
+That is a separate future comparison. Only certain soluble low-molecular-weight
+oligomers are detectable in the user's MS activity assay; do not infer the full
+cleavage mechanism or total polymer conversion from that readout alone.
+No coupled TI1 reference, QM calculation or AF3 refinement has been generated
+in this audit. Next define its stabilization before generating QM fitting data.
+
 ## New scientific prerequisite — TI1 force-field validation
 
 The user now requires validated TI1 parameters before classical AF3-model

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "audit_smiles.py",
+    "input_user.smi",
+    "report.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01",
+  "ended_utc": "2026-10-22T14:31:42.368370Z",
+  "env_overrides": {
+    "PYTHONHASHSEED": "0",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/audit_smiles.py": "838d43b0143096ca18ba897467ce2bec415893ddacd81bb325ddc4a20d069f2d",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/input_user.smi": "8751a44ba962a73d00711a7dc1234f72238d1a0eccb5cd6984654dc9dad745bc",
+    "/data/jpc/covalent-enzyme-design/pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+    "/data/jpc/covalent-enzyme-design/scripts/run_nyl12_job.py": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/chemistry.py": "193192af1b3b4862c8848a26bf4f8c77744e9dc3e714d91d3506144b7ae81bb8",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/jobs.py": "8fed4fa052e6e0d8cf92b74af3c51707925028e9e100179ee82815336a5da441",
+    "/data/jpc/covalent-enzyme-design/uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/job/job.log",
+  "session_name": "nyl12_substrate_termini_20261022",
+  "started_utc": "2026-10-22T14:31:42.061599Z"
+}

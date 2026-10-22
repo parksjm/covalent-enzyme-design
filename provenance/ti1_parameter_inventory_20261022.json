@@ -1,0 +1,1144 @@
+{
+  "topology": "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/model.prmtop",
+  "topology_sha256": "bb0f1eeed62af7afac5bf4a361e2acd1c7604edcf58416190fa416f714754aa2",
+  "audit_type": "read-only provisional parameter inventory",
+  "classical_ti1_ready": false,
+  "validated_parameter_set": false,
+  "formal_state_declared": "reacting Thr NH3+, tetrahedral substrate oxyanion, neutral water; partial charges do not establish formal charges",
+  "reactive_atoms": [
+    {
+      "index": 3477,
+      "residue": 233,
+      "name": "N",
+      "element_number": 7,
+      "type": "N3",
+      "partial_charge": 0.1812,
+      "lj_rmin_half_A": 1.8240000001431578,
+      "lj_epsilon_kcal_mol": 0.16999999991766696
+    },
+    {
+      "index": 3478,
+      "residue": 233,
+      "name": "H1",
+      "element_number": 1,
+      "type": "H",
+      "partial_charge": 0.1934,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 3479,
+      "residue": 233,
+      "name": "H2",
+      "element_number": 1,
+      "type": "H",
+      "partial_charge": 0.1934,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 3480,
+      "residue": 233,
+      "name": "H3",
+      "element_number": 1,
+      "type": "H",
+      "partial_charge": 0.1934,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 3481,
+      "residue": 233,
+      "name": "CA",
+      "element_number": 6,
+      "type": "CX",
+      "partial_charge": 0.0034,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 3482,
+      "residue": 233,
+      "name": "HA",
+      "element_number": 1,
+      "type": "HP",
+      "partial_charge": 0.10869999999999999,
+      "lj_rmin_half_A": 1.099999999494113,
+      "lj_epsilon_kcal_mol": 0.015700000062726108
+    },
+    {
+      "index": 3483,
+      "residue": 233,
+      "name": "CB",
+      "element_number": 6,
+      "type": "3C",
+      "partial_charge": 0.45139999999999997,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 3484,
+      "residue": 233,
+      "name": "HB",
+      "element_number": 1,
+      "type": "H1",
+      "partial_charge": -0.0323,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 3485,
+      "residue": 233,
+      "name": "CG2",
+      "element_number": 6,
+      "type": "CT",
+      "partial_charge": -0.2554,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 3486,
+      "residue": 233,
+      "name": "HG21",
+      "element_number": 1,
+      "type": "HC",
+      "partial_charge": 0.0627,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 3487,
+      "residue": 233,
+      "name": "HG22",
+      "element_number": 1,
+      "type": "HC",
+      "partial_charge": 0.0627,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 3488,
+      "residue": 233,
+      "name": "HG23",
+      "element_number": 1,
+      "type": "HC",
+      "partial_charge": 0.0627,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 3489,
+      "residue": 233,
+      "name": "OG1",
+      "element_number": 8,
+      "type": "os",
+      "partial_charge": -0.465,
+      "lj_rmin_half_A": 1.6836999998645996,
+      "lj_epsilon_kcal_mol": 0.17000000010548533
+    },
+    {
+      "index": 3490,
+      "residue": 233,
+      "name": "C",
+      "element_number": 6,
+      "type": "C",
+      "partial_charge": 0.6163000005487781,
+      "lj_rmin_half_A": 1.9079999997313366,
+      "lj_epsilon_kcal_mol": 0.08600000012835884
+    },
+    {
+      "index": 3491,
+      "residue": 233,
+      "name": "O",
+      "element_number": 8,
+      "type": "O",
+      "partial_charge": -0.5722000021951126,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 4973,
+      "residue": 329,
+      "name": "N56",
+      "element_number": 7,
+      "type": "n4",
+      "partial_charge": 0.052399999999999995,
+      "lj_rmin_half_A": 1.8240000001431578,
+      "lj_epsilon_kcal_mol": 0.16999999991766696
+    },
+    {
+      "index": 4974,
+      "residue": 329,
+      "name": "C64",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.036199999999999996,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4975,
+      "residue": 329,
+      "name": "C72",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.0684,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4976,
+      "residue": 329,
+      "name": "C76",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": 0.0086,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4977,
+      "residue": 329,
+      "name": "C68",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.05740000000000001,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4978,
+      "residue": 329,
+      "name": "C60",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.1084,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4979,
+      "residue": 329,
+      "name": "C52",
+      "element_number": 6,
+      "type": "c",
+      "partial_charge": 0.5980999983536656,
+      "lj_rmin_half_A": 1.9079999997313366,
+      "lj_epsilon_kcal_mol": 0.08600000012835884
+    },
+    {
+      "index": 4980,
+      "residue": 329,
+      "name": "O47",
+      "element_number": 8,
+      "type": "o",
+      "partial_charge": -0.6220999983536655,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 4981,
+      "residue": 329,
+      "name": "N58",
+      "element_number": 7,
+      "type": "n",
+      "partial_charge": -0.2359,
+      "lj_rmin_half_A": 1.8240000001431578,
+      "lj_epsilon_kcal_mol": 0.16999999991766696
+    },
+    {
+      "index": 4982,
+      "residue": 329,
+      "name": "C66",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": 0.039,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4983,
+      "residue": 329,
+      "name": "C74",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.04239999999999999,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4984,
+      "residue": 329,
+      "name": "C78",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.016399999999999998,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4985,
+      "residue": 329,
+      "name": "C70",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.0544,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4986,
+      "residue": 329,
+      "name": "C62",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.0504,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4987,
+      "residue": 329,
+      "name": "C54",
+      "element_number": 6,
+      "type": "c",
+      "partial_charge": 0.5351,
+      "lj_rmin_half_A": 1.9079999997313366,
+      "lj_epsilon_kcal_mol": 0.08600000012835884
+    },
+    {
+      "index": 4988,
+      "residue": 329,
+      "name": "O49",
+      "element_number": 8,
+      "type": "o",
+      "partial_charge": -1.4654990094554474,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 4989,
+      "residue": 329,
+      "name": "N59",
+      "element_number": 7,
+      "type": "n",
+      "partial_charge": -0.1809,
+      "lj_rmin_half_A": 1.8240000001431578,
+      "lj_epsilon_kcal_mol": 0.16999999991766696
+    },
+    {
+      "index": 4990,
+      "residue": 329,
+      "name": "C67",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": 0.047999999999999994,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4991,
+      "residue": 329,
+      "name": "C75",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.053399999999999996,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4992,
+      "residue": 329,
+      "name": "C79",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.011399999999999999,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4993,
+      "residue": 329,
+      "name": "C71",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.1574,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4994,
+      "residue": 329,
+      "name": "C63",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.1254,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4995,
+      "residue": 329,
+      "name": "C55",
+      "element_number": 6,
+      "type": "c",
+      "partial_charge": 0.5451,
+      "lj_rmin_half_A": 1.9079999997313366,
+      "lj_epsilon_kcal_mol": 0.08600000012835884
+    },
+    {
+      "index": 4996,
+      "residue": 329,
+      "name": "O50",
+      "element_number": 8,
+      "type": "o",
+      "partial_charge": -0.6370999983536656,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 4997,
+      "residue": 329,
+      "name": "N57",
+      "element_number": 7,
+      "type": "n",
+      "partial_charge": -0.1439,
+      "lj_rmin_half_A": 1.8240000001431578,
+      "lj_epsilon_kcal_mol": 0.16999999991766696
+    },
+    {
+      "index": 4998,
+      "residue": 329,
+      "name": "C65",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": 0.02,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 4999,
+      "residue": 329,
+      "name": "C73",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.052399999999999995,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 5000,
+      "residue": 329,
+      "name": "C77",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.08239999999999999,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 5001,
+      "residue": 329,
+      "name": "C69",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": 0.0376,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 5002,
+      "residue": 329,
+      "name": "C61",
+      "element_number": 6,
+      "type": "c3",
+      "partial_charge": -0.1674,
+      "lj_rmin_half_A": 1.9080000000152688,
+      "lj_epsilon_kcal_mol": 0.10939999991572774
+    },
+    {
+      "index": 5003,
+      "residue": 329,
+      "name": "C53",
+      "element_number": 6,
+      "type": "c",
+      "partial_charge": 0.9896000010975563,
+      "lj_rmin_half_A": 1.9079999997313366,
+      "lj_epsilon_kcal_mol": 0.08600000012835884
+    },
+    {
+      "index": 5004,
+      "residue": 329,
+      "name": "O48",
+      "element_number": 8,
+      "type": "o",
+      "partial_charge": -0.8997999978048874,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 5005,
+      "residue": 329,
+      "name": "O51",
+      "element_number": 8,
+      "type": "o",
+      "partial_charge": -0.8997999978048874,
+      "lj_rmin_half_A": 1.661200000277935,
+      "lj_epsilon_kcal_mol": 0.20999999984182244
+    },
+    {
+      "index": 5006,
+      "residue": 329,
+      "name": "H1",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.23213300022499903,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5007,
+      "residue": 329,
+      "name": "H2",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.23213300022499903,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5008,
+      "residue": 329,
+      "name": "H3",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.23213300022499903,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5009,
+      "residue": 329,
+      "name": "H4",
+      "element_number": 1,
+      "type": "hx",
+      "partial_charge": 0.0872,
+      "lj_rmin_half_A": 1.099999999494113,
+      "lj_epsilon_kcal_mol": 0.015700000062726108
+    },
+    {
+      "index": 5010,
+      "residue": 329,
+      "name": "H5",
+      "element_number": 1,
+      "type": "hx",
+      "partial_charge": 0.0872,
+      "lj_rmin_half_A": 1.099999999494113,
+      "lj_epsilon_kcal_mol": 0.015700000062726108
+    },
+    {
+      "index": 5011,
+      "residue": 329,
+      "name": "H6",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0532,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5012,
+      "residue": 329,
+      "name": "H7",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0532,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5013,
+      "residue": 329,
+      "name": "H8",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0132,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5014,
+      "residue": 329,
+      "name": "H9",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0132,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5015,
+      "residue": 329,
+      "name": "H10",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.041199999999999994,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5016,
+      "residue": 329,
+      "name": "H11",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.041199999999999994,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5017,
+      "residue": 329,
+      "name": "H12",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0322,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5018,
+      "residue": 329,
+      "name": "H13",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0322,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5019,
+      "residue": 329,
+      "name": "H14",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.1805,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5020,
+      "residue": 329,
+      "name": "H15",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.0392,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5021,
+      "residue": 329,
+      "name": "H16",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.0392,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5022,
+      "residue": 329,
+      "name": "H17",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0282,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5023,
+      "residue": 329,
+      "name": "H18",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0282,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5024,
+      "residue": 329,
+      "name": "H19",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0031999999999999997,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5025,
+      "residue": 329,
+      "name": "H20",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0031999999999999997,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5026,
+      "residue": 329,
+      "name": "H21",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0417,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5027,
+      "residue": 329,
+      "name": "H22",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0417,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5028,
+      "residue": 329,
+      "name": "H23",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0187,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5029,
+      "residue": 329,
+      "name": "H24",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0187,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5030,
+      "residue": 329,
+      "name": "H25",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.18349999999999997,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5031,
+      "residue": 329,
+      "name": "H26",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.028700000000000003,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5032,
+      "residue": 329,
+      "name": "H27",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.028700000000000003,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5033,
+      "residue": 329,
+      "name": "H28",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.026199999999999998,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5034,
+      "residue": 329,
+      "name": "H29",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.026199999999999998,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5035,
+      "residue": 329,
+      "name": "H30",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0017,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5036,
+      "residue": 329,
+      "name": "H31",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0017,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5037,
+      "residue": 329,
+      "name": "H32",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.06420000000000001,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5038,
+      "residue": 329,
+      "name": "H33",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.06420000000000001,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5039,
+      "residue": 329,
+      "name": "H34",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0692,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5040,
+      "residue": 329,
+      "name": "H35",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0692,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5041,
+      "residue": 329,
+      "name": "H36",
+      "element_number": 1,
+      "type": "hn",
+      "partial_charge": 0.1695,
+      "lj_rmin_half_A": 0.5999999999731258,
+      "lj_epsilon_kcal_mol": 0.015700000004219245
+    },
+    {
+      "index": 5042,
+      "residue": 329,
+      "name": "H37",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.0247,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5043,
+      "residue": 329,
+      "name": "H38",
+      "element_number": 1,
+      "type": "h1",
+      "partial_charge": 0.0247,
+      "lj_rmin_half_A": 1.3869999991698632,
+      "lj_epsilon_kcal_mol": 0.01570000009846142
+    },
+    {
+      "index": 5044,
+      "residue": 329,
+      "name": "H39",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0367,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5045,
+      "residue": 329,
+      "name": "H40",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0367,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5046,
+      "residue": 329,
+      "name": "H41",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.005699999999999999,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5047,
+      "residue": 329,
+      "name": "H42",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.005699999999999999,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5048,
+      "residue": 329,
+      "name": "H43",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0142,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5049,
+      "residue": 329,
+      "name": "H44",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0142,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5050,
+      "residue": 329,
+      "name": "H45",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0012,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5051,
+      "residue": 329,
+      "name": "H46",
+      "element_number": 1,
+      "type": "hc",
+      "partial_charge": 0.0012,
+      "lj_rmin_half_A": 1.4869999997254757,
+      "lj_epsilon_kcal_mol": 0.01570000002623629
+    },
+    {
+      "index": 5052,
+      "residue": 330,
+      "name": "O",
+      "element_number": 8,
+      "type": "OW",
+      "partial_charge": -0.834,
+      "lj_rmin_half_A": 1.768300000311453,
+      "lj_epsilon_kcal_mol": 0.15199999972108216
+    },
+    {
+      "index": 5053,
+      "residue": 330,
+      "name": "H1",
+      "element_number": 1,
+      "type": "HW",
+      "partial_charge": 0.417,
+      "lj_rmin_half_A": 0,
+      "lj_epsilon_kcal_mol": 0
+    },
+    {
+      "index": 5054,
+      "residue": 330,
+      "name": "H2",
+      "element_number": 1,
+      "type": "HW",
+      "partial_charge": 0.417,
+      "lj_rmin_half_A": 0,
+      "lj_epsilon_kcal_mol": 0
+    }
+  ],
+  "bonds_at_reactive_center": [
+    {
+      "atoms": [
+        "233:OG1",
+        "233:CB"
+      ],
+      "k": 308.6,
+      "req_A": 1.4316
+    },
+    {
+      "atoms": [
+        "233:OG1",
+        "329:C54"
+      ],
+      "k": 390.8,
+      "req_A": 1.3584
+    },
+    {
+      "atoms": [
+        "329:C54",
+        "329:C62"
+      ],
+      "k": 313.0,
+      "req_A": 1.5241
+    },
+    {
+      "atoms": [
+        "329:O49",
+        "329:C54"
+      ],
+      "k": 637.7,
+      "req_A": 1.2183
+    },
+    {
+      "atoms": [
+        "329:N59",
+        "329:C54"
+      ],
+      "k": 427.6,
+      "req_A": 1.3789
+    }
+  ],
+  "angles_at_reactive_center": [
+    {
+      "atoms": [
+        "233:CB",
+        "233:OG1",
+        "329:C54"
+      ],
+      "k": 63.3,
+      "equilibrium_degrees": 115.98004947702422
+    },
+    {
+      "atoms": [
+        "233:OG1",
+        "329:C54",
+        "329:C62"
+      ],
+      "k": 68.9,
+      "equilibrium_degrees": 110.72004768108238
+    },
+    {
+      "atoms": [
+        "233:OG1",
+        "329:C54",
+        "329:O49"
+      ],
+      "k": 75.3,
+      "equilibrium_degrees": 123.25005253547363
+    },
+    {
+      "atoms": [
+        "233:OG1",
+        "329:C54",
+        "329:N59"
+      ],
+      "k": 75.3,
+      "equilibrium_degrees": 109.22004703821885
+    },
+    {
+      "atoms": [
+        "329:O49",
+        "329:C54",
+        "329:C62"
+      ],
+      "k": 67.4,
+      "equilibrium_degrees": 123.20005280052374
+    },
+    {
+      "atoms": [
+        "329:N59",
+        "329:C54",
+        "329:C62"
+      ],
+      "k": 66.8,
+      "equilibrium_degrees": 115.18004913416365
+    },
+    {
+      "atoms": [
+        "329:N59",
+        "329:C54",
+        "329:O49"
+      ],
+      "k": 74.2,
+      "equilibrium_degrees": 123.0500530227163
+    }
+  ],
+  "torsions_across_junction": [
+    {
+      "atoms": [
+        "233:CB",
+        "233:OG1",
+        "329:C54",
+        "329:C62"
+      ],
+      "improper": false,
+      "terms": [
+        {
+          "k": 2.7,
+          "periodicity": 2,
+          "phase_degrees": 180.00007714362235
+        }
+      ]
+    },
+    {
+      "atoms": [
+        "233:CB",
+        "233:OG1",
+        "329:C54",
+        "329:O49"
+      ],
+      "improper": false,
+      "terms": [
+        {
+          "k": 2.7,
+          "periodicity": 2,
+          "phase_degrees": 180.00007714362235
+        }
+      ]
+    },
+    {
+      "atoms": [
+        "233:CB",
+        "233:OG1",
+        "329:C54",
+        "329:N59"
+      ],
+      "improper": false,
+      "terms": [
+        {
+          "k": 2.7,
+          "periodicity": 2,
+          "phase_degrees": 180.00007714362235
+        }
+      ]
+    }
+  ],
+  "missing_evidence": [
+    "QM reference for the coupled TI1 adduct and its stated environment",
+    "coupled-state constrained RESP fit and cap-transfer validation",
+    "TI1-specific bonded parameters and independent geometry/curvature/torsion checks",
+    "acceptance tolerances and final validation tied to exact topology digest"
+  ],
+  "parameters_modified": false
+}

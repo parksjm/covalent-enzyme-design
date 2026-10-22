@@ -1,10 +1,13 @@
 # Diagnostic only: this model failed TI1 bond and hydrogen-bond checks.
+delete af3_start
+delete dftb3_diagnostic
 load af3_starting_with_hydrogens.pdb, af3_start
 load pa6_l4_dftb3_diagnostic.pdb, dftb3_diagnostic
 hide everything
 show cartoon, chain A+E
 show sticks, chain I or (chain E and resi 1+2)
 show sticks, resi 113+186 and chain A
+show sticks, chain J
 show spheres, chain J and name O
 set sphere_scale, 0.25, chain J
 set valence, 0

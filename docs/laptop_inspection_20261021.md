@@ -2,6 +2,15 @@
 
 ## Latest local-repair diagnostic
 
+Viewer correction on 2026-10-22: both water hydrogens were present in all 100
+trajectory states but hidden by the original display commands. The corrected
+viewers show water sticks explicitly. A semicolon in a comment caused PyMOL to
+parse the remaining comment text as Python; the comment is corrected. Actual
+headless PyMOL 3.1.0 checks now verify O/H1/H2, both O–H bonds and visible H atoms
+in all 100 states. Reloading the viewer replaces its own object instead of
+appending another 100 states. Run the pull script again, then rerun
+`@view_optimization.pml` (or `@view_local_repair.pml`) from its directory.
+
 The workstation `optimized.pdb` was originally exported under the descriptive
 name `pa6_l4_dftb3_diagnostic.pdb`. The refreshed package includes **both names**
 with identical contents in `diagnostics/local_repair/pa6_l4_alpha_beta/`.

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/bin/bash",
+    "-c",
+    "set -e\n.venv/bin/python -m coverage run --data-file=output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/coverage.data output_nyl12_parameter_validation_20261022/substrate_termini_01/audit_smiles.py output_nyl12_parameter_validation_20261022/substrate_termini_01/input_user.smi output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/report.json\n.venv/bin/python -m coverage json --data-file=output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/coverage.data --include=\"*/substrate_termini_01/audit_smiles.py\" -o output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T14:38:34.624971Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/audit_smiles.py": "838d43b0143096ca18ba897467ce2bec415893ddacd81bb325ddc4a20d069f2d",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/input_user.smi": "8751a44ba962a73d00711a7dc1234f72238d1a0eccb5cd6984654dc9dad745bc"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/job/job.log",
+  "session_name": "nyl12_substrate_coverage_20261022",
+  "started_utc": "2026-10-22T14:38:34.022474Z"
+}

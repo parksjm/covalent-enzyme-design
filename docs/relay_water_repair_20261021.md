@@ -2,8 +2,8 @@
 
 ## Chemistry and scope
 
-The substrate names are PA6 L4 (`pa 6_l 4`) and MAXA|MAXA (`maxa_maxa`).
-Historical `pa 6_l 2` and `poly_xama_maxa` input identifiers are provenance
+The substrate names are PA6 L4 (`pa6_l4`) and MAXA|MAXA (`maxa_maxa`).
+Historical `pa6_l2` and `poly_xama_maxa` input identifiers are provenance
 aliases, not the current substrate names. L2 and MAXA remain the respective
 hydrolysis products; renaming does not change their molecular graphs.
 

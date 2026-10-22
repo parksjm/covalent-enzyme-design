@@ -1,0 +1,63 @@
+{
+  "files": {
+    "input_user.smi": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/input_user.smi",
+      "sha256": "8751a44ba962a73d00711a7dc1234f72238d1a0eccb5cd6984654dc9dad745bc",
+      "bytes": 62
+    },
+    "audit_smiles.py.txt": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/audit_smiles.py",
+      "sha256": "838d43b0143096ca18ba897467ce2bec415893ddacd81bb325ddc4a20d069f2d",
+      "bytes": 3180
+    },
+    "report.json": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/report.json",
+      "sha256": "7deb2fd6ec4004ef2d80b3e9215f96a5d7c81119f27de27d3a102882f5aac473",
+      "bytes": 15793
+    },
+    "job_status.json": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/job/status.json",
+      "sha256": "a9defddaa22815273a19810dd5bf3dcc2097677c0f34336c632718c9208e9b25",
+      "bytes": 1668
+    },
+    "job_command.json": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/job/command.json",
+      "sha256": "1b316f7df7a959fb7196c4e481902b40677398b15175547bf2e6c3901f2052b5",
+      "bytes": 1621
+    },
+    "job_run.sh.txt": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_01/job/run.sh",
+      "sha256": "460826fb66ca625932095ad3885585ab1cb9351e588d085143f8530d7007ce54",
+      "bytes": 1558
+    },
+    "coverage.json": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/coverage.json",
+      "sha256": "ed6d7e86d9c33c0c7d1f31c5436749a966eb296d95a88b49a84cfc831d1b7990",
+      "bytes": 2215
+    },
+    "coverage_job_status.json": {
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/substrate_termini_coverage_01/job/status.json",
+      "sha256": "e0966da336946e47291a4326674271801d05fbfd2aa28e9953e4a25ff8c4e871",
+      "bytes": 1483
+    },
+    "pa6_l4_source.mol2": {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_wt_model_41/lig_sub/lig_h.mol2",
+      "sha256": "77785fae1b6d4cf4173b28cde5113faddfa8d47a581b109aa526618887c8da61",
+      "bytes": 8041
+    }
+  },
+  "python_version": "3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]",
+  "rdkit_version": "2025.03.6",
+  "capped_substrate": "acetyl-X-A|M-A-N-methylamide",
+  "selected_scissile_original_smiles_zero_based": {
+    "carbonyl_c": 17,
+    "carbonyl_o": 36,
+    "amide_n": 18
+  },
+  "pa6_source_role": "Soluble zwitterionic L4-to-two-L2 substrate hypothesis; not proof of long-polymer end recognition",
+  "evidence_limits": [
+    "No TI1 geometry or parameters generated",
+    "Original script retained verbatim with .txt suffix",
+    "Input comes directly from user; independent paper SI access blocked"
+  ]
+}

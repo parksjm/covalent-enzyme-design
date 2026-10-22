@@ -45,6 +45,36 @@ The original manuscript files were read and remain unchanged.
 
 ## Newly supplied information and verification
 
+- **2026-10-22 viewer evidence:** corrected viewers were checked twice in
+  actual PyMOL 3.1.0. All 100 movie frames retain water O/H1/H2 and two O–H
+  bonds; both H are visible. A comment semicolon caused the reported parser
+  error. Coordinate files are unchanged. Frozen reports:
+  `../provenance/pymol_movie_water_check_20261022.json` and
+  `../provenance/pymol_final_water_check_20261022.json`.
+- **2026-10-22 parameter inventory:**
+  `../provenance/ti1_parameter_inventory_20261022.json` records the provisional
+  topology digest and reactive terms. The tetrahedral center retains GAFF
+  carbonyl type `c`, a 1.2183 A C54–O49 equilibrium target and several angles
+  near 123 degrees; it is not a validated TI1 classical force field. These
+  observations motivate reparameterization and do not establish why the
+  DFTB3/MM diagnostic dissociated.
+- **User clarification, 2026-10-22:** preserve a real charged PA6 terminus for
+  L2-directed design. For local copolyamide chemistry, consider the shorter
+  capped XA/MA model used in the Dishner study. The user supplied its explicit
+  SMILES; see `../docs/substrate_termini_decision_20261022.md`. A scripted
+  RDKit/tmux audit confirms neutral acetyl-X-A|M-A-N-methylamide, C29H47N5O5,
+  with slash C17/O36/N18 in zero-based original input order. Protein peptide caps and substrate
+  caps are distinct choices. This is a planned reference specification,
+  not an accepted parameter set or demonstrated product selectivity.
+- **Further user assay clarification, 2026-10-22:** PA6 L4 and L2 products were
+  both detected. L4 turnover to two L2 molecules is a substrate hypothesis;
+  retain the doubly charged L4 reference for that purpose. One-end recognition
+  on a long polymer requires a different substrate representation. The assay
+  detects only certain soluble, low-molecular-weight oligomers; distinguish
+  those measured products from total cleavage and inferred endo/exo mechanism.
+- **User update, 2026-10-22:** the AF3 contact-restraint fork is being improved
+  independently. No new AF3 run or fork modification is part of this checkpoint.
+
 - **User instruction, 2026-10-20:** the contact-restraint fork exists at
   `/data/jpc/code/alphafold3-contact-restraints`, has tests and successful
   production use, and remains available even though independent ES prediction
