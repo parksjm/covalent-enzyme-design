@@ -2,6 +2,11 @@
 
 ## Local water repair evidence — 2026-10-21 evening
 
+Terminal outcome: attempt 05 completed its first QM/MM stage and failed TI1
+acceptance (OG1–C54 2.195122 A; directional water bridge lost; RMS 0.63057).
+Water steric screening passed with maximum shortfall 0.029899 A. Later stages
+were withheld. No accepted minimum or active calculation remains.
+
 `docs/local_repair_checkpoint_20261021.md` records the current protocol and
 limitations. Actual immutable inputs, source/engine-data snapshots, commands,
 atom permutations, process logs and acceptance records are under

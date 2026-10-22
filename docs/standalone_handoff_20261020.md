@@ -2,6 +2,17 @@
 
 ## Latest evening checkpoint — 2026-10-21
 
+**Terminal update before disconnect:** attempt05 stopped after its first 100-cycle
+QM/MM stage at 22:37 Eastern. No calculation from this work remains active.
+Water contacts pass (maximum shortfall 0.029899 A), but OG1–C54 stretched to
+2.195122 A, the directional water bridge failed, and RMS 0.63057 exceeded 0.5.
+Later stages were withheld. This is a retained failed TI1 repair.
+Diagnostic canonical-chain PDB:
+`output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/01_hydrogens_water/optimized.pdb`.
+Next review state-preservation during early water relaxation and the DFTB3
+Hamiltonian/starting geometry before defining another experiment. Do not rerun
+unchanged or relax acceptance. The former running-state notes below are historical.
+
 Read `docs/local_repair_checkpoint_20261021.md` first. The user authorized work
 for about45 minutes after21:56 Eastern, with wrap-up around22:41. Active tmux
 job: `nyl12_local_preconditioned_20261021`, attempt05 under

@@ -1,5 +1,18 @@
 # Local water repair checkpoint — 2026-10-21, evening
 
+## Terminal outcome at 22:37 Eastern
+
+The first 100-cycle DFTB3/MM stage completed, then the chemistry gate stopped
+the workflow. No calculation remains active. Water's maximum contact shortfall
+is 0.029899 A (passes 0.10 A), but OG1–C54 is 2.195122 A (fails 1.2–1.8 A),
+both directional H-bond screens fail, and RMS 0.63057 exceeds 0.5. Chirality
+was retained. Later pocket/release stages did not run. This is a failed TI1
+repair with useful steric cleanup, not an accepted minimum. The diagnostic PDB
+and acceptance JSON are in `calculation/01_hydrogens_water/` of attempt05.
+Review state-preserving restraints and the DFTB3/starting-geometry assumptions
+before another experiment; do not repeat this attempt unchanged.
+Running-state descriptions below record the earlier checkpoint.
+
 The user authorized roughly positioned AF3 water -> explicit hydrogens -> local
 restrained minimization. They subsequently rejected a geometric oxygen shift
 and approved preoptimization with the existing Amber/TIP3P parameters.
