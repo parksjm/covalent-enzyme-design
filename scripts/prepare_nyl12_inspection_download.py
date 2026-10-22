@@ -35,6 +35,7 @@ def selected_files(
     protein_source: Path | None = None,
     action_journal: Path | None = None,
     af3_audits: list[Path] | None = None,
+    local_repair: Path | None = None,
 ) -> dict[str, Path]:
     """Select the documented small artifacts using explicit file inventories.
 
@@ -48,6 +49,7 @@ def selected_files(
         action_journal: Optional frozen journal to package instead of the legacy
             repository journal.
         af3_audits: Explicit result directories for diagnostic AF3 water models.
+        local_repair: Retained local-repair calculation with failed QM/MM output.
 
     Returns:
         Relative download names mapped to original source paths.
@@ -144,6 +146,21 @@ def selected_files(
             if destination in files:
                 raise ValueError(f"Duplicate AF3 audit label: {label}")
             files[destination] = result / name
+    if local_repair is not None:
+        prefix = "diagnostics/local_repair/pa6_l4_alpha_beta"
+        for destination, source in {
+            "pa6_l4_dftb3_diagnostic.pdb": "01_hydrogens_water/optimized.pdb",
+            "af3_starting_with_hydrogens.pdb": "prepared.pdb",
+            "dftb3_acceptance.json": "01_hydrogens_water/acceptance.json",
+            "dftb3_process.json": "01_hydrogens_water/process.json",
+            "tip3p_preconditioning.json": "00_tip3p_water_only/acceptance.json",
+            "preparation.json": "preparation.json",
+            "flexible_selection.json": "selection.json",
+        }.items():
+            files[f"{prefix}/{destination}"] = local_repair / source
+        files[f"{prefix}/view_local_repair.pml"] = (
+            repo / "scripts/nyl12_local_repair_view.pml"
+        )
     return files
 
 
@@ -214,6 +231,7 @@ def main() -> None:
     parser.add_argument("--protein-source", type=Path)
     parser.add_argument("--action-journal", type=Path)
     parser.add_argument("--af3-audit", type=Path, action="append", default=[])
+    parser.add_argument("--local-repair", type=Path)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     report = build_package(
@@ -225,6 +243,7 @@ def main() -> None:
             args.protein_source,
             args.action_journal,
             args.af3_audit,
+            args.local_repair,
         ),
         args.output,
     )

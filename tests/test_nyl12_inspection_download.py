@@ -15,6 +15,36 @@ ROOT = Path(__file__).resolve().parents[1]
 PULL = ROOT / "scripts/pull_nyl12_inspection.sh"
 
 
+def test_local_repair_diagnostic_inventory(tmp_path: Path) -> None:
+    protein = tmp_path / "protein_source"
+    protein.mkdir()
+    for name in ("pa6_l4", "maxa_maxa"):
+        (protein / f"{name}_ti1_starting.pdb").write_text("fixture")
+    calculation = tmp_path / "calculation"
+    files = export.selected_files(
+        tmp_path,
+        tmp_path / "audit",
+        tmp_path / "structures",
+        tmp_path / "trajectories",
+        protein_source=protein,
+        local_repair=calculation,
+    )
+    prefix = "diagnostics/local_repair/pa6_l4_alpha_beta/"
+    assert (
+        files[prefix + "pa6_l4_dftb3_diagnostic.pdb"]
+        == calculation / "01_hydrogens_water/optimized.pdb"
+    )
+    assert (
+        files[prefix + "dftb3_acceptance.json"]
+        == calculation / "01_hydrogens_water/acceptance.json"
+    )
+    assert (
+        files[prefix + "view_local_repair.pml"]
+        == tmp_path / "scripts/nyl12_local_repair_view.pml"
+    )
+    assert sum(name.startswith(prefix) for name in files) == 8
+
+
 def test_package_integrity_and_collision(tmp_path: Path) -> None:
     """Copied bytes and both manifests agree, with no silent overwrites."""
     source = tmp_path / "original.xyz"
@@ -171,7 +201,13 @@ def _selected_files_inputs(repo: Path) -> tuple[Path, Path, Path, Path, Path]:
     proteins.mkdir(parents=True)
     (proteins / "pa6_l4_ti1_starting.pdb").write_text("pa6", encoding="utf-8")
     (proteins / "maxa_maxa_ti1_starting.pdb").write_text("maxa", encoding="utf-8")
-    return repo, repo / "audit.json", repo / "optimized", repo / "trajectories", proteins
+    return (
+        repo,
+        repo / "audit.json",
+        repo / "optimized",
+        repo / "trajectories",
+        proteins,
+    )
 
 
 def test_selected_files_adds_exact_af3_water_artifacts_per_attempt(

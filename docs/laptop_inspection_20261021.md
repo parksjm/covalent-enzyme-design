@@ -1,5 +1,16 @@
 # Nyl12 laptop inspection package — 2026-10-21
 
+## Latest local-repair diagnostic
+
+Run the existing `./pull_nyl12_inspection.sh` again to retrieve the refreshed
+package. In PyMOL, change to `diagnostics/local_repair/pa6_l4_alpha_beta/` and run
+`@view_local_repair.pml`. The DFTB3/MM output is
+`pa6_l4_dftb3_diagnostic.pdb`; the hydrogenated AF3 start is alongside it.
+Water sterics improved, but the OG1–substrate bond stretched to 2.195 A and the
+directional hydrogen-bond checks failed. This is a **failed TI1 diagnostic**,
+not an accepted optimized intermediate. Acceptance/process reports accompany
+the coordinates. Both AF3 water tests are in `diagnostics/af3_water/`.
+
 This package contains small structures, validation reports, documentation,
 manuscript drafts and provenance. Gaussian checkpoint/scratch files, raw logs,
 force-field topologies and simulation trajectories are excluded. The included
