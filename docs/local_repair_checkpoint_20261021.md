@@ -2,6 +2,27 @@
 
 ## Terminal outcome at 22:37 Eastern
 
+### Trajectory and force-treatment follow-up
+
+The original stage lacked ntwx and a trajectory output path; the overwritten
+restart cannot supply an optimization history. A separate replay under
+`output_nyl12_local_repair_20261021/trajectory_replay_01/` changed only ntwx=1,
+ioutfm=0 and the trajectory path, retaining method/start/reference/engine/data
+identities. It saved100 full-system force-call snapshots and reproduced the
+original endpoint with maximum coordinate difference0.0 A. The compressed
+multi-model PDB export is under `trajectory_export_01/result/` and included
+in the refreshed laptop package. It is a replay trajectory of a failed TI1
+repair, not an accepted intermediate. Future stage inputs save trajectories.
+
+TI1 force-field distinction: OG1 and C54 are both QM atoms. The provisional
+topology bond has k390.8 kcal/mol/A^2 and req1.3584 A; it is not a fitted TI1
+parameter. Installed Sander source `sander.F90:845–853` removes classical QM–QM
+bond terms, so DFTB3 determines this interaction. Position restraints did not
+enforce covalent connectivity. No validated TI1 force field was used or exists
+yet. Bond elongation therefore diagnoses this model/setup rather than proving
+that the real TI1 cannot exist. Any state-preserving setup restraint must be
+documented and released/tested before stationary-point interpretation.
+
 The first 100-cycle DFTB3/MM stage completed, then the chemistry gate stopped
 the workflow. No calculation remains active. Water's maximum contact shortfall
 is 0.029899 A (passes 0.10 A), but OG1–C54 is 2.195122 A (fails 1.2–1.8 A),

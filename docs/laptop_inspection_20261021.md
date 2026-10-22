@@ -2,6 +2,23 @@
 
 ## Latest local-repair diagnostic
 
+The workstation `optimized.pdb` was originally exported under the descriptive
+name `pa6_l4_dftb3_diagnostic.pdb`. The refreshed package includes **both names**
+with identical contents in `diagnostics/local_repair/pa6_l4_alpha_beta/`.
+
+For the actual optimization snapshots, run `@view_optimization.pml` from that
+directory in PyMOL, then use the frame slider or `mplay`. The file
+`optimization_trajectory.pdb.gz` contains100 full-system frames of5054 atoms.
+It comes from a separate replay with only coordinate-output settings changed;
+its final coordinates match the original run exactly. Frames preserve actual
+Sander minimizer snapshots, including possible trial/line-search or repeated
+points; frame numbers are not MD time or guaranteed accepted iterations.
+Source hashes and frame counts are in `trajectory_report.json`. No snapshots
+were reconstructed by interpolation. Future MM and QM/MM stages now save
+coordinate output explicitly. PyMOL accepts compressed PDB input; see its
+[load documentation](https://pymolwiki.org/Cmd_load). For VMD, decompress a copy
+first with `gzip -dk optimization_trajectory.pdb.gz` and load the resulting PDB.
+
 Run the existing `./pull_nyl12_inspection.sh` again to retrieve the refreshed
 package. In PyMOL, change to `diagnostics/local_repair/pa6_l4_alpha_beta/` and run
 `@view_local_repair.pml`. The DFTB3/MM output is

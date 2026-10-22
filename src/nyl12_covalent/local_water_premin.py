@@ -60,7 +60,7 @@ def preminimize_water(
     mdin.write_text(
         "TIP3P water-only coordinate preconditioning; nonwater atoms fixed\n"
         " &cntrl\n imin=1, ntmin=1, ncyc=50, maxcyc=200, drms=0.001,\n"
-        " ntb=0, igb=8, cut=999.0, ntc=1, ntf=1, ntpr=10,\n"
+        " ntb=0, igb=8, cut=999.0, ntc=1, ntf=1, ntpr=10, ntwx=1, ioutfm=0,\n"
         " ibelly=1, bellymask=':1', ifqnt=0, nmropt=1,\n /\n"
         " &wt type='END' /\nDISANG=bridge.RST\n"
     )
@@ -85,6 +85,8 @@ def preminimize_water(
         str(restart),
         "-inf",
         str(stage / "minimize.mdinfo"),
+        "-x",
+        str(stage / "optimization.mdcrd"),
     ]
     (stage / "command.json").write_text(
         json.dumps(

@@ -1,5 +1,17 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## New scientific prerequisite — TI1 force-field validation
+
+The user now requires validated TI1 parameters before classical AF3-model
+relaxation, followed by DFTB3/MM. Read
+`docs/ti1_forcefield_validation_gate_20261021.md` before any further refinement.
+The current reactive topology is provisional and does not satisfy this gate.
+The user suspects the poor initial geometry led the QM/MM structure toward a
+reactant-like state; this is plausible but is not an accepted ES assignment.
+The original failed run has been reproduced in a separate trajectory-only
+replay:100 full-system frames, endpoint coordinate difference0.0 A.
+No new model refinement was run after this prerequisite was established.
+
 ## Latest evening checkpoint — 2026-10-21
 
 **Terminal update before disconnect:** attempt05 stopped after its first 100-cycle

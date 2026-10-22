@@ -42,7 +42,37 @@ def test_local_repair_diagnostic_inventory(tmp_path: Path) -> None:
         files[prefix + "view_local_repair.pml"]
         == tmp_path / "scripts/nyl12_local_repair_view.pml"
     )
-    assert sum(name.startswith(prefix) for name in files) == 8
+    assert (
+        files[prefix + "optimized.pdb"]
+        == calculation / "01_hydrogens_water/optimized.pdb"
+    )
+    assert sum(name.startswith(prefix) for name in files) == 9
+    files = export.selected_files(
+        tmp_path,
+        tmp_path / "audit",
+        tmp_path / "structures",
+        tmp_path / "trajectories",
+        protein_source=protein,
+        local_repair=calculation,
+        optimization_trajectory=tmp_path / "movie",
+    )
+    assert (
+        files[prefix + "optimization_trajectory.pdb.gz"]
+        == tmp_path / "movie/optimization_trajectory.pdb.gz"
+    )
+    assert (
+        files[prefix + "view_optimization.pml"]
+        == tmp_path / "scripts/nyl12_optimization_view.pml"
+    )
+    with pytest.raises(ValueError, match="corresponding"):
+        export.selected_files(
+            tmp_path,
+            tmp_path / "audit",
+            tmp_path / "structures",
+            tmp_path / "trajectories",
+            protein_source=protein,
+            optimization_trajectory=tmp_path / "movie",
+        )
 
 
 def test_package_integrity_and_collision(tmp_path: Path) -> None:

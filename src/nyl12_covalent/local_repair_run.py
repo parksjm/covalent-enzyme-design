@@ -55,7 +55,7 @@ def write_stage_input(
         "PA6 L4 TI1 local DFTB3/MM repair; explicit QM water\n"
         " &cntrl\n"
         f" imin=1, ntmin=1, ncyc={min(20, cycles)}, maxcyc={cycles}, drms={drms},\n"
-        " ntb=0, igb=8, cut=999.0, ntc=1, ntf=1, ntpr=10, ntwr=50,\n"
+        " ntb=0, igb=8, cut=999.0, ntc=1, ntf=1, ntpr=10, ntwr=50, ntwx=1, ioutfm=0,\n"
         f" ntr=1, restraint_wt=5.0, restraintmask='{mask}',\n"
         " ifqnt=1, nmropt=1,\n /\n &qmmm\n"
         f" qmmask='{QM_MASK}', qmcharge=0, qm_theory='DFTB3',\n"
@@ -191,6 +191,8 @@ def run_repair(
             str(restart),
             "-inf",
             str(stage / "minimize.mdinfo"),
+            "-x",
+            str(stage / "optimization.mdcrd"),
         ]
         _write_json(
             stage / "command.json",

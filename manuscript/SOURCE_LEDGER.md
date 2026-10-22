@@ -2,6 +2,13 @@
 
 ## Local water repair evidence — 2026-10-21 evening
 
+User-directed prerequisite after the diagnostic: validate the coupled TI1
+force field, then classically relax the AF3 model, then perform DFTB3/MM.
+See `docs/ti1_forcefield_validation_gate_20261021.md`. Current reactive terms
+remain provisional. Reactant-like movement is a hypothesis, not a validated
+ES result. A trajectory-only replay reproduced the failed endpoint exactly;
+all100 full-system frames are retained with source hashes.
+
 Terminal outcome: attempt 05 completed its first QM/MM stage and failed TI1
 acceptance (OG1–C54 2.195122 A; directional water bridge lost; RMS 0.63057).
 Water steric screening passed with maximum shortfall 0.029899 A. Later stages

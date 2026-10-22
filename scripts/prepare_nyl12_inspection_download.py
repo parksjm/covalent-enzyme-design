@@ -36,6 +36,7 @@ def selected_files(
     action_journal: Path | None = None,
     af3_audits: list[Path] | None = None,
     local_repair: Path | None = None,
+    optimization_trajectory: Path | None = None,
 ) -> dict[str, Path]:
     """Select the documented small artifacts using explicit file inventories.
 
@@ -50,6 +51,7 @@ def selected_files(
             repository journal.
         af3_audits: Explicit result directories for diagnostic AF3 water models.
         local_repair: Retained local-repair calculation with failed QM/MM output.
+        optimization_trajectory: Export directory containing actual minimizer frames.
 
     Returns:
         Relative download names mapped to original source paths.
@@ -149,6 +151,7 @@ def selected_files(
     if local_repair is not None:
         prefix = "diagnostics/local_repair/pa6_l4_alpha_beta"
         for destination, source in {
+            "optimized.pdb": "01_hydrogens_water/optimized.pdb",
             "pa6_l4_dftb3_diagnostic.pdb": "01_hydrogens_water/optimized.pdb",
             "af3_starting_with_hydrogens.pdb": "prepared.pdb",
             "dftb3_acceptance.json": "01_hydrogens_water/acceptance.json",
@@ -160,6 +163,17 @@ def selected_files(
             files[f"{prefix}/{destination}"] = local_repair / source
         files[f"{prefix}/view_local_repair.pml"] = (
             repo / "scripts/nyl12_local_repair_view.pml"
+        )
+    if optimization_trajectory is not None:
+        if local_repair is None:
+            raise ValueError(
+                "Trajectory export requires the corresponding local-repair model"
+            )
+        prefix = "diagnostics/local_repair/pa6_l4_alpha_beta"
+        for name in ("optimization_trajectory.pdb.gz", "trajectory_report.json"):
+            files[f"{prefix}/{name}"] = optimization_trajectory / name
+        files[f"{prefix}/view_optimization.pml"] = (
+            repo / "scripts/nyl12_optimization_view.pml"
         )
     return files
 
@@ -232,6 +246,7 @@ def main() -> None:
     parser.add_argument("--action-journal", type=Path)
     parser.add_argument("--af3-audit", type=Path, action="append", default=[])
     parser.add_argument("--local-repair", type=Path)
+    parser.add_argument("--optimization-trajectory", type=Path)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     report = build_package(
@@ -244,6 +259,7 @@ def main() -> None:
             args.action_journal,
             args.af3_audit,
             args.local_repair,
+            args.optimization_trajectory,
         ),
         args.output,
     )
