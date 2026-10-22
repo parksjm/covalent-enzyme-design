@@ -16,7 +16,9 @@ sys.path.insert(0, str(ROOT / "src"))
 from nyl12_covalent.jobs import launch_job  # noqa: E402
 
 
-def prepare_input(original: Path, output: Path) -> Path:
+def prepare_input(
+    original: Path, output: Path, exclusion_audit: Path | None = None
+) -> Path:
     """Retain only alpha A, beta E, covalent substrate I, and water J."""
     payload = json.loads(original.read_text())
     proteins = [item for item in payload["sequences"] if "protein" in item]
@@ -62,6 +64,33 @@ def prepare_input(original: Path, output: Path) -> Path:
         }
         for atom in ("N", "OG1")
     ]
+    if exclusion_audit is not None:
+        audit = json.loads(exclusion_audit.read_text())
+        rows = audit["water_neighbors_within_5A"]
+        seen = {("E", 1, "N"), ("E", 1, "OG1")}
+        for row in rows:
+            chain, residue, _, atom = row["atom"].split(":")
+            key = (chain, int(residue), atom)
+            if key in seen:
+                continue
+            if chain not in {"A", "E", "I"} or not 0 < row["distance_A"] <= 5.0:
+                raise ValueError("Invalid atom or distance in exclusion audit")
+            if row["minimum_A"] not in {2.5, 2.75, 2.95}:
+                raise ValueError("Unexpected heavy-atom exclusion threshold")
+            seen.add(key)
+            payload["contactConstraints"].append(
+                {
+                    "token1": list(key),
+                    "token2": ["J", 1, "O"],
+                    "minDistance": row["minimum_A"],
+                    "maxDistance": 1000.0,
+                    "weight": 1.0,
+                    "mobileEndpoint": "token2",
+                }
+            )
+        if len(payload["contactConstraints"]) > 64:
+            raise ValueError("Exclusion set exceeds the fork's 64-restraint capacity")
+        shutil.copy2(exclusion_audit, output / "exclusion_reference_audit.json")
     path = output / "input.json"
     path.write_text(json.dumps(payload, indent=2) + "\n")
     return path
@@ -77,12 +106,13 @@ def main() -> None:
     parser.add_argument("--model-dir", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--session", required=True)
+    parser.add_argument("--exclusion-audit", type=Path)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     output = args.output.absolute()
     output.mkdir(parents=True, exist_ok=False)
     shutil.copy2(args.original_input, output / "original_input.json")
-    input_path = prepare_input(args.original_input, output)
+    input_path = prepare_input(args.original_input, output, args.exclusion_audit)
     source = output / "source"
     source.mkdir()
     shutil.copytree(
@@ -101,6 +131,8 @@ def main() -> None:
     manifest = {
         "purpose": "One-seed one-sample three-recycle AF3 water/contact smoke test; not TI1 validation",
         "source_fork": str(args.fork),
+        "exclusion_audit": str(args.exclusion_audit) if args.exclusion_audit else None,
+        "exclusion_scope": "Reference water neighbors within 5A; independent all-atom screening remains required",
         "original_input": str(args.original_input),
         "python": str(args.python),
         "model_dir": str(args.model_dir),

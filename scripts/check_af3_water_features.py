@@ -36,11 +36,15 @@ def main() -> None:
     if len(batches) != 1:
         raise ValueError("Expected exactly one featurized seed")
     constraints = features.ContactConstraints.from_data_dict(batches[0])
-    if int(np.count_nonzero(constraints.mask)) != 2:
-        raise ValueError("Both water contact restraints must map to retained atoms")
+    expected_count = len(fold.contact_constraints)
+    if expected_count < 2 or int(np.count_nonzero(constraints.mask)) != expected_count:
+        raise ValueError(
+            "Every declared water contact restraint must map to retained atoms"
+        )
     report = {
         "accepted": True,
         "input_water_oxygen_count": int(np.count_nonzero(water)),
+        "expected_contact_count": expected_count,
         "mapped_contact_count": int(np.count_nonzero(constraints.mask)),
         "token_indices": np.asarray(constraints.token_indices)[
             np.asarray(constraints.mask, dtype=bool)
@@ -50,7 +54,7 @@ def main() -> None:
         "limitations": "Input/features validation only; no hydrogen orientation or catalytic geometry acceptance",
     }
     args.output.write_text(json.dumps(report, indent=2) + "\n")
-    logging.info("Water and both contacts retained in AF3 features")
+    logging.info("Water and all declared contacts retained in AF3 features")
 
 
 if __name__ == "__main__":

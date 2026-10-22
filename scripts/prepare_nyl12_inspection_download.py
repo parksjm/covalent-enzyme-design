@@ -34,6 +34,7 @@ def selected_files(
     trajectories: Path,
     protein_source: Path | None = None,
     action_journal: Path | None = None,
+    af3_audits: list[Path] | None = None,
 ) -> dict[str, Path]:
     """Select the documented small artifacts using explicit file inventories.
 
@@ -46,6 +47,7 @@ def selected_files(
             Defaults to the retained legacy inspection snapshot.
         action_journal: Optional frozen journal to package instead of the legacy
             repository journal.
+        af3_audits: Explicit result directories for diagnostic AF3 water models.
 
     Returns:
         Relative download names mapped to original source paths.
@@ -130,6 +132,18 @@ def selected_files(
             files[f"qm/neutral_thr_nme/{name}/trajectory.{extension}"] = (
                 trajectories / f"{name}.{extension}"
             )
+    for result in af3_audits or []:
+        label = result.parent.name
+        prefix = f"diagnostics/af3_water/{label}"
+        for name in (
+            "report.json",
+            "pa6_l4_alpha_beta_water_test.cif",
+            "view_af3_water_test.pml",
+        ):
+            destination = f"{prefix}/{name}"
+            if destination in files:
+                raise ValueError(f"Duplicate AF3 audit label: {label}")
+            files[destination] = result / name
     return files
 
 
@@ -199,6 +213,7 @@ def main() -> None:
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--protein-source", type=Path)
     parser.add_argument("--action-journal", type=Path)
+    parser.add_argument("--af3-audit", type=Path, action="append", default=[])
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     report = build_package(
@@ -209,6 +224,7 @@ def main() -> None:
             args.qm_trajectories,
             args.protein_source,
             args.action_journal,
+            args.af3_audit,
         ),
         args.output,
     )

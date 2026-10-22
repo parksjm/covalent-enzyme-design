@@ -123,3 +123,92 @@ def test_prepare_input_rejects_missing_precomputed_fields(
     output.mkdir()
     with pytest.raises(ValueError, match=f"Missing precomputed {field}"):
         prepare_input(original, output)
+
+
+def _write_exclusion_audit(
+    path: Path, rows: list[dict[str, object]]
+) -> Path:
+    """Write a minimal reference-water exclusion audit."""
+    path.write_text(
+        json.dumps({"water_neighbors_within_5A": rows}), encoding="utf-8"
+    )
+    return path
+
+
+def test_prepare_input_adds_local_exclusions_and_copies_reference_audit(
+    tmp_path: Path,
+) -> None:
+    """Valid reference neighbors become mobile-water restraints with provenance."""
+    original, _, _ = _write_fixture(tmp_path)
+    output = tmp_path / "attempt"
+    output.mkdir()
+    audit = _write_exclusion_audit(
+        tmp_path / "reference.json",
+        [
+            {"atom": "E:1:THR:N", "distance_A": 1.2, "minimum_A": 2.5},
+            {"atom": "E:1:THR:OG1", "distance_A": 1.4, "minimum_A": 2.75},
+            {"atom": "A:40:ALA:O", "distance_A": 3.1, "minimum_A": 2.5},
+            {"atom": "I:1:LIG:C54", "distance_A": 3.4, "minimum_A": 2.75},
+        ],
+    )
+
+    prepared = json.loads(prepare_input(original, output, audit).read_text())
+
+    assert len(prepared["contactConstraints"]) == 4
+    assert [item["token1"] for item in prepared["contactConstraints"]] == [
+        ["E", 1, "N"],
+        ["E", 1, "OG1"],
+        ["A", 40, "O"],
+        ["I", 1, "C54"],
+    ]
+    for item in prepared["contactConstraints"][2:]:
+        assert item["token2"] == ["J", 1, "O"]
+        assert item["maxDistance"] == 1000.0
+        assert item["mobileEndpoint"] == "token2"
+    assert [item["minDistance"] for item in prepared["contactConstraints"][2:]] == [
+        2.5,
+        2.75,
+    ]
+    assert (output / "exclusion_reference_audit.json").read_bytes() == audit.read_bytes()
+
+
+@pytest.mark.parametrize(
+    ("row", "message"),
+    [
+        ({"atom": "Q:10:ALA:O", "distance_A": 3.0, "minimum_A": 2.5}, "Invalid atom or distance"),
+        ({"atom": "A:10:ALA:O", "distance_A": 5.1, "minimum_A": 2.5}, "Invalid atom or distance"),
+        ({"atom": "A:10:ALA:O", "distance_A": 3.0, "minimum_A": 3.0}, "Unexpected heavy-atom exclusion threshold"),
+    ],
+)
+def test_prepare_input_rejects_invalid_exclusion_rows(
+    tmp_path: Path, row: dict[str, object], message: str
+) -> None:
+    """Out-of-scope atoms, distances, and thresholds fail explicitly."""
+    original, _, _ = _write_fixture(tmp_path)
+    output = tmp_path / "attempt"
+    output.mkdir()
+    audit = _write_exclusion_audit(tmp_path / "reference.json", [row])
+
+    with pytest.raises(ValueError, match=message):
+        prepare_input(original, output, audit)
+
+    assert not (output / "input.json").exists()
+
+
+def test_prepare_input_rejects_exclusion_set_over_capacity(
+    tmp_path: Path,
+) -> None:
+    """More than 64 total restraints fail before writing an inference input."""
+    original, _, _ = _write_fixture(tmp_path)
+    output = tmp_path / "attempt"
+    output.mkdir()
+    rows = [
+        {"atom": f"A:{residue}:ALA:O", "distance_A": 3.0, "minimum_A": 2.5}
+        for residue in range(1, 64)
+    ]
+    audit = _write_exclusion_audit(tmp_path / "reference.json", rows)
+
+    with pytest.raises(ValueError, match="64-restraint capacity"):
+        prepare_input(original, output, audit)
+
+    assert not (output / "input.json").exists()

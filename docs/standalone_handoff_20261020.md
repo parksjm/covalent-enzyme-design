@@ -1,5 +1,32 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Latest evening checkpoint — 2026-10-21
+
+Read `docs/local_repair_checkpoint_20261021.md` first. The user authorized work
+for about45 minutes after21:56 Eastern, with wrap-up around22:41. Active tmux
+job: `nyl12_local_preconditioned_20261021`, attempt05 under
+`output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/`.
+Original AF3 oxygen is preserved during hydrogen construction. User-approved
+TIP3P water-only pre-minimization completed with all nonwater atoms fixed exactly;
+water O moved1.408215 A by minimization. It exhausted200 cycles above its gradient
+target and is labeled coordinate preconditioning. DFTB3/MM subsequently started
+with converged SCC evaluations. Inspect actual job/stage status on resume;
+no accepted local minimum is yet claimed. Earlier attempts and failures retained.
+
+## Active work — 2026-10-21, after evening resume
+
+User authorized AF3 rough-water placement -> explicit hydrogens -> restrained
+local DFTB3/MM repair. Begin with the two-restraint alpha/beta PA6 L4 model.
+Both AF3 predictions completed; both independent water screens failed.
+Attempt_01 has a 1.673 A water–C62 clash despite satisfying N/OG1 bounds;
+attempt_02 with 28 additional exclusions breaks the N bridge (4.847 A).
+See `docs/relay_water_repair_20261021.md` for the newly authorized separate
+repair stage and water naming/Lennard–Jones requirements. Preparation is in
+progress; no local minimization has been launched at this writing.
+The earlier 18:00 pause was followed by explicit user authorization to resume.
+Active journal remains `output_agent_actions/20261021.jsonl`.
+
+
 ## Latest checkpoint — 2026-10-21, before 18:00 Eastern
 
 - User authorized work until 18:00 Eastern and a minimal AF3 water test that may
@@ -333,3 +360,53 @@ New workflow modules/wrappers each have at least 80% line coverage. This
 coverage does not validate the physical models. The installed tmux skill now
 points to this checkout. Full machine-readable coverage, source differences,
 and external artifact hashes are retained under `provenance/`.
+
+## Model-switch handoff — 2026-10-21, evening
+
+User wants GPT-6.1 Sol High for continuation. The rough-water restrained local
+minimization remains authorized; no repair minimization has launched. Preserve
+all current uncommitted work. New draft modules are `local_repair_model.py`
+(explicit octamer topology subset -> 330-residue alpha/beta model; AF3 heavy
+coordinate mapping; retained TIP3P parameters), `local_water_seed.py` (bounded
+1.5 A oxygen displacement and water H orientation), and `local_hydrogens.py`
+(local bonded-frame transfer from original topology). All under
+`src/nyl12_covalent/`. These are development code, not accepted models.
+
+Luna hydrogen helper agent added `tests/test_local_hydrogens.py`: initial run
+reported 93% helper coverage but two incorrect expected-coordinate assertions;
+agent corrected them, then could not rerun because tool approval timed out.
+Water-seed test agent could not execute any command; no tests were added.
+Root has not yet reviewed or tested these modules. Source/import integration,
+terminal OXT handling, exact atom mapping, covalent inventory, QM boundary and
+water parameters must be checked before use. No new dependencies were added.
+
+Next: finish and test preparation, implement a separate local DFTB3/MM repair
+runner and geometry audit, then run in tmux. Proposed stages: initial H/water
+relaxation with protein/substrate heavy atoms restrained; local pocket relaxation
+with outer protein restraints; then a separately recorded bridge-restraint
+release. Use only two broad N/OG1–water distance restraints. Record flexible
+selection and constants explicitly. These stages are not implemented yet.
+Dimer QM mask is `:233,329,330|(:234&!@C,O)`, charge0, expected109 atoms,
+sole link CA234–C234; verify before launch. Existing runner/audits use octamer
+indices and must not be applied unchanged to this dimer. Do not silently relax
+legacy scientific acceptance to force a launch.
+
+Sources: topology/coordinates in
+`/data/jpc/enzyme-substrate-modeling/output_nyl12_covalent_qmmm_20261019/pa6_l2_ti1_af3_neutral_beta/ti1.prmtop`
+and sibling `ti1.inpcrd`; AF3 source is
+`output_nyl12_af3_water_test_20261021/pa6_l4_alpha_beta/attempt_01/prediction/nyl12_pa6_l4_ti1_alpha_beta_water_contact/nyl12_pa6_l4_ti1_alpha_beta_water_contact_model.cif`.
+Extract original residues1–232,929–1024,1313–1314 without changing parameters.
+Sander: `/data/jpc/code/ambertools26/venv/bin/sander`.
+
+AF3 audits are complete under
+`output_nyl12_af3_water_audit_20261021/pa6_l4_alpha_beta/attempt_{01,02}/result/`.
+Both failed water acceptance. Audit/export and optional exclusion-input code
+and tests remain uncommitted from prior work. Laptop export has not yet been
+refreshed with these diagnostic CIFs. Commit/push remains authorized at a
+verified stopping point; do not claim it was completed.
+
+Frequent automatic approval-review timeouts precede process creation; they are
+not safety rejections. Default sandbox still fails bwrap RTM_NEWADDR. Record
+failures honestly in `output_agent_actions/20261021.jsonl`; repair logging before
+mutations. Neither unrelated tmux session was changed. Current tools may work
+on a short single retry; do not repeatedly escalate unchanged rejected actions.

@@ -165,6 +165,74 @@ def test_alternate_protein_source_and_canonical_viewer(tmp_path: Path) -> None:
         )
 
 
+def _selected_files_inputs(repo: Path) -> tuple[Path, Path, Path, Path, Path]:
+    """Build the two required protein-source files and inventory arguments."""
+    proteins = repo / "proteins"
+    proteins.mkdir(parents=True)
+    (proteins / "pa6_l4_ti1_starting.pdb").write_text("pa6", encoding="utf-8")
+    (proteins / "maxa_maxa_ti1_starting.pdb").write_text("maxa", encoding="utf-8")
+    return repo, repo / "audit.json", repo / "optimized", repo / "trajectories", proteins
+
+
+def test_selected_files_adds_exact_af3_water_artifacts_per_attempt(
+    tmp_path: Path,
+) -> None:
+    """Each explicit AF3 attempt contributes only its report, model, and viewer."""
+    args = _selected_files_inputs(tmp_path / "repo")
+    result = tmp_path / "attempt_01" / "result"
+    result.mkdir(parents=True)
+    names = (
+        "report.json",
+        "pa6_l4_alpha_beta_water_test.cif",
+        "view_af3_water_test.pml",
+    )
+
+    inventory = export.selected_files(
+        *args[:4], protein_source=args[4], af3_audits=[result]
+    )
+
+    expected = {
+        f"diagnostics/af3_water/attempt_01/{name}": result / name for name in names
+    }
+    assert {name: inventory[name] for name in expected} == expected
+    assert not any(
+        name.startswith("diagnostics/af3_water/attempt_01/")
+        for name in inventory
+        if name not in expected
+    )
+
+
+def test_selected_files_default_inventory_has_no_af3_water_additions(
+    tmp_path: Path,
+) -> None:
+    """Omitting optional AF3 audits preserves the previous inventory exactly."""
+    args = _selected_files_inputs(tmp_path / "repo")
+
+    default = export.selected_files(*args[:4], protein_source=args[4])
+    explicit_empty = export.selected_files(
+        *args[:4], protein_source=args[4], af3_audits=[]
+    )
+
+    assert default == explicit_empty
+    assert not any(name.startswith("diagnostics/af3_water/") for name in default)
+
+
+def test_selected_files_rejects_duplicate_af3_attempt_labels(
+    tmp_path: Path,
+) -> None:
+    """Different directories with the same attempt label cannot collide."""
+    args = _selected_files_inputs(tmp_path / "repo")
+    first = tmp_path / "first" / "attempt_01" / "result"
+    second = tmp_path / "second" / "attempt_01" / "result"
+    first.mkdir(parents=True)
+    second.mkdir(parents=True)
+
+    with pytest.raises(ValueError, match="Duplicate AF3 audit label: attempt_01"):
+        export.selected_files(
+            *args[:4], protein_source=args[4], af3_audits=[first, second]
+        )
+
+
 def test_alias_provenance_keeps_substrate_and_product_distinct(
     tmp_path: Path,
 ) -> None:

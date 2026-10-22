@@ -1,5 +1,20 @@
 # Manuscript source and claim ledger — 2026-10-20
 
+## Local water repair evidence — 2026-10-21 evening
+
+`docs/local_repair_checkpoint_20261021.md` records the current protocol and
+limitations. Actual immutable inputs, source/engine-data snapshots, commands,
+atom permutations, process logs and acceptance records are under
+`output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/`. Attempts 01–04 preserve
+the superseded displacement, SCC failure, GB order rejection and ParmEd copy
+failure. Attempt 05 uses original AF3 oxygen plus approved TIP3P water-only
+preconditioning. Nonwater displacement was 0.0 A; O moved 1.408215 A through
+minimization, which exhausted 200 cycles above its gradient target. DFTB3/MM
+subsequently produced converged SCC evaluations. This is work in progress,
+with no accepted minimum or manuscript-level mechanistic result claimed.
+Final verification is `verification_08/` under the same output root: 310 tests
+passed; each new scientific module has at least 84% measured line coverage.
+
 Paths below are source records, not interchangeable datasets. File hashes and
 external repository revisions are in `../provenance/manuscript_sources_20261020.json`.
 The original manuscript files were read and remain unchanged.

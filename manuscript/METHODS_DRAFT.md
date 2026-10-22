@@ -66,6 +66,22 @@ attempts. No accepted TI1 minimum or TS1 is available at this checkpoint [S5].
 
 ## Parameter-model quantum calculations — executed; RESP pending
 
+### Exploratory local relay-water refinement — in progress
+
+The minimal alpha/beta PA6 L4 covalent AF3 model used explicit HOH and two
+Thr233 N/OG1–water-O bounds(2.6–3.2 A). Both distances were satisfied but an
+independent audit found a1.673 A water–substrate-carbon contact. Adding28
+exclusion restraints lost the N bridge. The active preparation retains the
+original AF3 oxygen, adds hydrogens preserving TI1 protonation/connectivity,
+and retains TIP3P WAT/OW/HW parameters. Direct DFTB3/MM minimization from this
+seed encountered SCC nonconvergence and was stopped. The approved alternative
+uses fixed-environment, water-only Amber/TIP3P pre-minimization, followed by
+staged local DFTB3/MM refinement with water in the QM region. Classical TI1
+energetics are not validated by this coordinate-preparation step. Inputs,
+failed attempts and actual outcomes are retained under
+`output_nyl12_local_repair_20261021/`; full specifications are in
+`docs/relay_water_repair_20261021.md`. No accepted minimum is yet claimed.
+
 Two neutral free-NH2 L-threonine methylamide conformers were prepared with
 RDKit ETKDGv3 using seeds 20261020 and 20261021 and initial psi values of -40
 and +140 degrees. The C5H12N2O2 model has CA S/CB R stereochemistry, charge
