@@ -1,0 +1,151 @@
+{
+  "status": "Proposed native RESP constraints; not an executed fit",
+  "model": "Native Thr-NH3+/PA6L4 oxyanion/NME and separate relay water",
+  "total_charge_target_e": 0,
+  "fixed_atoms": [
+    {
+      "origin_id": "THR:C",
+      "index_one_based": 6,
+      "partial_charge_e": 0.6163,
+      "source_template": "NTHR",
+      "source_atom_name": "C",
+      "source_atom_type": "C",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminont12.lib"
+    },
+    {
+      "origin_id": "THR:O",
+      "index_one_based": 7,
+      "partial_charge_e": -0.5722,
+      "source_template": "NTHR",
+      "source_atom_name": "O",
+      "source_atom_type": "O",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminont12.lib"
+    },
+    {
+      "origin_id": "NME:N",
+      "index_one_based": 8,
+      "partial_charge_e": -0.4157,
+      "source_template": "NME",
+      "source_atom_name": "N",
+      "source_atom_type": "N",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "NME:H",
+      "index_one_based": 18,
+      "partial_charge_e": 0.2719,
+      "source_template": "NME",
+      "source_atom_name": "H",
+      "source_atom_type": "H",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "NME:CH3",
+      "index_one_based": 9,
+      "partial_charge_e": -0.149,
+      "source_template": "NME",
+      "source_atom_name": "C",
+      "source_atom_type": "CT",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "NME:HH31",
+      "index_one_based": 19,
+      "partial_charge_e": 0.0976,
+      "source_template": "NME",
+      "source_atom_name": "H1",
+      "source_atom_type": "H1",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "NME:HH32",
+      "index_one_based": 20,
+      "partial_charge_e": 0.0976,
+      "source_template": "NME",
+      "source_atom_name": "H2",
+      "source_atom_type": "H1",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "NME:HH33",
+      "index_one_based": 21,
+      "partial_charge_e": 0.0976,
+      "source_template": "NME",
+      "source_atom_name": "H3",
+      "source_atom_type": "H1",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib"
+    },
+    {
+      "origin_id": "WAT:O",
+      "index_one_based": 101,
+      "partial_charge_e": -0.834,
+      "source_template": "TP3",
+      "source_atom_name": "O",
+      "source_atom_type": "OW",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib"
+    },
+    {
+      "origin_id": "WAT:H1",
+      "index_one_based": 102,
+      "partial_charge_e": 0.417,
+      "source_template": "TP3",
+      "source_atom_name": "H1",
+      "source_atom_type": "HW",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib"
+    },
+    {
+      "origin_id": "WAT:H2",
+      "index_one_based": 103,
+      "partial_charge_e": 0.417,
+      "source_template": "TP3",
+      "source_atom_name": "H2",
+      "source_atom_type": "HW",
+      "source_file": "/data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib"
+    }
+  ],
+  "fixed_charge_sum_e": 0.0440999999999999,
+  "free_atom_count_before_equivalence": 92,
+  "free_charge_sum_target_e": -0.0440999999999999,
+  "proposed_equivalence_groups": [
+    {
+      "parent_origin": "THR:N",
+      "origins": [
+        "THR:H1",
+        "THR:H2",
+        "THR:HG1"
+      ]
+    },
+    {
+      "parent_origin": "PA6:N56",
+      "origins": [
+        "PA6:H1",
+        "PA6:H2",
+        "PA6:H3"
+      ]
+    },
+    {
+      "parent_origin": "THR:CG2",
+      "origins": [
+        "THR:HG21",
+        "THR:HG22",
+        "THR:HG23"
+      ]
+    },
+    {
+      "parent_origin": "PA6:C53",
+      "origins": [
+        "PA6:O48",
+        "PA6:O51"
+      ],
+      "reason": "terminal carboxylate resonance equivalence"
+    }
+  ],
+  "no_per_residue_integer_partial_charge_constraints": true,
+  "water_policy": "Propose fixed TIP3P charges while including water in the native QM reference; test constrained and held-out ESP errors before acceptance",
+  "backbone_policy": "Protect N-terminal NTHR peptide C/O charges; fit reactive NH3+ and side chain jointly with substrate",
+  "native_geometry_generated": false,
+  "native_geometry_accepted": false,
+  "esp_available": false,
+  "fit_ready": false,
+  "forcefield_validated": false
+}

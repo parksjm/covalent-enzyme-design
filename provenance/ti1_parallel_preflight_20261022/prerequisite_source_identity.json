@@ -1,0 +1,15 @@
+{
+  "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminont12.lib": "a7a267adbe63c3559283204ffd135b37e14dac0f33a7eae76f94cba80a56b58c",
+  "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib": "4f45d160211ae20450ee59632012cba3ada60a5129de410da1bfbfd7f9a9a5f7",
+  "/data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib": "c8aeb703f5769331541d1233e2f2c8f823dd516e861b04e215ae4da903f1d69b",
+  "/data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.protein.ff19SB": "bcbfc9c1b0a2e11705f60113a654b95c89511f487c74238ec0389eea9b8741ac",
+  "/data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.water.tip3p": "679041e7b6a6776cd6a7552480ded0986c33ddd209da58f0c30a96bfb8818db7",
+  "/data/jpc/covalent-enzyme-design/provenance/xa_ma_capped_reference_20261022/pa6_l4_source.mol2": "77785fae1b6d4cf4173b28cde5113faddfa8d47a581b109aa526618887c8da61",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/prepare_parallel_prerequisites_20261022.py": "aed9f8752b6b1dbd1cd077aa909252041d8405fbeb0b84777d29514a480a4398",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_bonded_model.py": "a54ae3c49b71df94143822e6d5adc4d494dd7a89b79d628ce34fad3ad24acd04",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_graph.py": "77bbcc05daab8e00f509e76b8cba6374c28859d4068234450d030ea6a654d84c",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_model_crosswalk.py": "69d28cf24d32aa24fd3466a55a263cb5c2dd7325d0f47273365c3c095607b7ed",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/terminal_template.py": "efa0c4593587fd4715705a233f2809192df9a7a25a772a1d34fa28e7dc9979b3",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/chemistry.py": "193192af1b3b4862c8848a26bf4f8c77744e9dc3e714d91d3506144b7ae81bb8",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/dihedral_constraints.py": "2b2ef5537f2b5a1b68a2de044afe7b50d424a9f03178e1c9b63813b37112b7c4"
+}

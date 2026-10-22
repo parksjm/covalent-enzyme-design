@@ -1,0 +1,54 @@
+-I: Adding /data/jpc/code/ambertools26/venv/dat/leap/prep to search path.
+-I: Adding /data/jpc/code/ambertools26/venv/dat/leap/lib to search path.
+-I: Adding /data/jpc/code/ambertools26/venv/dat/leap/parm to search path.
+-I: Adding /data/jpc/code/ambertools26/venv/dat/leap/cmd to search path.
+-f: Source input.leap.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./input.leap
+----- Source: /data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.protein.ff19SB
+----- Source of /data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.protein.ff19SB done
+Log file: ./leap.log
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/parm19.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/frcmod.ff19SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff19SB AA-specific backbone CMAPs for protein 07/25/2019
+Loading library: /data/jpc/code/ambertools26/venv/dat/leap/lib/amino19.lib
+Loading library: /data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib
+Loading library: /data/jpc/code/ambertools26/venv/dat/leap/lib/aminont12.lib
+----- Source: /data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.water.tip3p
+----- Source of /data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.water.tip3p done
+Loading library: /data/jpc/code/ambertools26/venv/dat/leap/lib/atomic_ions.lib
+Loading library: /data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/frcmod.tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+This is the additional/replacement parameter set for TIP3P water
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/frcmod.ions1lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of monovalent ions for TIP3P water model (12-6 normal usage set)
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/frcmod.ionsjc_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters for Ewald and TIP3P water from Joung & Cheatham JPCB (2008)
+Loading parameters: /data/jpc/code/ambertools26/venv/dat/leap/parm/frcmod.ions234lm_126_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Li/Merz ion parameters of divalent to tetravalent ions for TIP3P water model (12-6 normal usage set)
+ Creating /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nthr_unit.lib
+Building topology.
+Building atom parameters.
+ Creating /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nme_unit.lib
+Building topology.
+Building atom parameters.
+ Creating /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/tip3p_unit.lib
+Building topology.
+Building atom parameters.
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

@@ -91,3 +91,65 @@ All preparation, engine calculations and real-input checks use scripted tmux
 jobs, source snapshots/hashes, explicit resources/environments, process logs
 and separate scientific acceptance records. Current action journal remains
 `output_agent_actions/20261021.jsonl`. AF3 fork changes remain the user's work.
+
+## Conditional-curvature implementation and prospective thresholds
+
+Before any completed TI1 Hessian was available, the following assessment was
+implemented and checked against analytic constrained problems. With frozen
+angular constraints g, use L = E - lambda.g, obtain lambda by solving
+J.T lambda = grad(E), and project H(E) - sum(lambda_i H(g_i)) into the
+constraint tangent after removing six independent rigid motions. The 37-atom
+nonlinear reference therefore has 102 tested internal directions. A projection
+of the raw energy Hessian alone omits the nonlinear constraint-force correction.
+Eigenvalues use an orthonormal, unweighted Cartesian basis (Hartree/bohr^2);
+they are not mass-weighted frequencies. No SciPy dependency was added.
+
+Prospective numerical settings: central finite differences at 0.0002 and
+0.0001 bohr; relative Frobenius changes in J and H(g) <=0.001; maximum
+Lagrangian-gradient residual <=0.00003 Hartree/bohr; every reduced eigenvalue
+>0.000001 Hartree/bohr^2 at both steps. Values within the sign tolerance are
+unresolved, not accepted minima. Require the actual Gaussian Cartesian gradient;
+never substitute zero. Require accepted optimization/frequency identity,
+connectivity and torsions before this analysis. These are project thresholds,
+not literature-certified error estimates. Passing establishes local stability
+only under the declared frozen torsions, not a free minimum or validated FF.
+
+The four interim geometries passed an independent derivative-only implementation
+check: relative step changes below 8.7e-8 and 102 remaining directions. That
+check uses no energy Hessian and cannot assess their energetic stability.
+On 2026-10-22 the user visually inspected the interim optimization trajectories
+and judged them good. This does not waive convergence, cap-artifact or parameter
+transfer checks, including the recorded S-reference cap N-H/oxyanion contacts.
+
+## Native-state atom mapping and proposed RESP constraints
+
+Scripted R/S graph crosswalks identify 14 corresponding heavy atoms between
+the capped bonded surrogate and the 103-atom native Thr-NH3+/PA6-L4/oxyanion/
+NME/water graph. Surrogate methyls become native methylenes at two boundaries;
+no hydrogen correspondence or capped-anion charge transfer is implied.
+The native graphs have no accepted 3D geometry or ESP data yet.
+
+A source-backed proposal protects the installed NTHR peptide C/O charges
+(+0.6163/-0.5722), the full NME cap, and TIP3P water (-0.834/+0.417/+0.417).
+These 11 fixed atoms sum to +0.0441 e; the remaining 92 atoms before equivalence
+must sum to -0.0441 e for total charge zero. Fit the reactive ammonium and
+substrate jointly without arbitrary integer residue charges. Proposed
+ammonium/methyl/carboxylate equivalences are explicit in the retained proposal;
+methylene hydrogen equivalence is not assumed. The retained Thr proton origin
+HG1 is bookkeeping provenance for the native ammonium H3, not an O-H bond.
+
+This is a proposed charge-fitting boundary, not an executed or accepted fit.
+Fixed TIP3P charges while water participates in the QM cluster require fit and
+held-out ESP-error validation. Water keeps TIP3P names/types and LJ parameters
+in the MM topology; its electrostatics inside a QM/MM calculation follow the
+QM/MM embedding policy rather than an extra duplicate MM charge contribution.
+
+Actual installed ff19SB/TIP3P leaprc files were sourced with tleap, and NTHR,
+NME and TP3 were independently exported and parsed with warnings treated as
+errors. All 11 proposed constraints match those clean source units for both
+native graphs. The first whole-library ParmEd read emitted warnings for an
+unrelated CHCL3BOX legacy unit; preserve that log, but base source acceptance
+on the subsequent clean target-unit extraction/verification. No library was
+modified. Reports and exact helpers are under
+output_nyl12_parameter_validation_20261022/{parallel_prerequisites_01,
+native_library_extract_01,native_library_verification_01}/.

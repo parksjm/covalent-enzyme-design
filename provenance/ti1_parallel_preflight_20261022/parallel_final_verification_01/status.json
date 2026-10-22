@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; uv run ruff check src scripts tests; uv run ruff format --check scripts/analyze_nyl12_ti1_curvature.py scripts/wait_nyl12_ti1_curvature.py src/nyl12_covalent/constrained_curvature.py src/nyl12_covalent/dihedral_constraints.py src/nyl12_covalent/gaussian_fchk.py src/nyl12_covalent/ti1_model_crosswalk.py tests/test_analyze_ti1_curvature.py tests/test_wait_ti1_curvature.py tests/test_constrained_curvature.py tests/test_dihedral_constraints.py tests/test_gaussian_fchk_gradient.py tests/test_ti1_model_crosswalk.py; uv run pytest --cov=nyl12_covalent.constrained_curvature --cov=nyl12_covalent.dihedral_constraints --cov=nyl12_covalent.gaussian_fchk --cov=nyl12_covalent.ti1_model_crosswalk --cov=scripts.analyze_nyl12_ti1_curvature --cov=scripts.wait_nyl12_ti1_curvature --cov-report=term-missing --cov-report=json:output_nyl12_parameter_validation_20261022/parallel_final_verification_01/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T20:35:27.938314Z",
+  "env_overrides": {
+    "NYL12_REPAIR_FIXTURE": "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/preparation_01",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/scripts/analyze_nyl12_ti1_curvature.py": "358af9196597e21d1b7884109b5270eee5e1f352bf5b94ea91019301e98db342",
+    "/data/jpc/covalent-enzyme-design/scripts/wait_nyl12_ti1_curvature.py": "f18114e5fed118d1cf4338534483e296b9fe699f5c3adb54ef2f6c6b8ef68c8b",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/constrained_curvature.py": "a3ad3317b183ef93d236dff30fc33402b00f11e1617813a57ea7a01799b82d4d",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/dihedral_constraints.py": "2b2ef5537f2b5a1b68a2de044afe7b50d424a9f03178e1c9b63813b37112b7c4",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_model_crosswalk.py": "69d28cf24d32aa24fd3466a55a263cb5c2dd7325d0f47273365c3c095607b7ed"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/parallel_final_verification_01/job/job.log",
+  "session_name": "nyl12_ti1_parallel_final_verify01_20261022",
+  "started_utc": "2026-10-22T20:34:21.463720Z"
+}

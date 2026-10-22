@@ -1,0 +1,235 @@
+"""Prepare native charge-fit identities and audit constraint derivatives."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import shutil
+from pathlib import Path
+
+import numpy as np
+from parmed.amber import AmberOFFLibrary
+from rdkit import Chem
+
+from nyl12_covalent.dihedral_constraints import (
+    dihedral_constraint_derivatives,
+    rigid_cartesian_directions,
+)
+from nyl12_covalent.ti1_bonded_model import build_ti1_bonded_model
+from nyl12_covalent.ti1_model_crosswalk import build_ti1_model_crosswalk
+from nyl12_covalent.ti1_reference_graph import build_ti1_reference_graph
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+WORK = ROOT / "output_nyl12_parameter_validation_20261022"
+OUT = WORK / "parallel_prerequisites_01"
+LEAP = Path("/data/jpc/code/ambertools26/venv/dat/leap")
+PA6 = ROOT / "provenance/xa_ma_capped_reference_20261022/pa6_l4_source.mol2"
+BOHR_A = 0.529177210903
+LOGGER = logging.getLogger(__name__)
+
+
+def write_json(path: Path, value: object) -> None:
+    """Write a new explicit JSON artifact without replacement."""
+    with path.open("x") as stream:
+        json.dump(value, stream, indent=2)
+        stream.write("\n")
+
+
+def main() -> None:
+    """Generate source-backed proposals and derivative-only numerical checks."""
+    logging.basicConfig(level=logging.INFO)
+    result = OUT / "result"
+    result.mkdir()
+    source = OUT / "source"
+    source.mkdir()
+    libraries = {
+        "nterm": LEAP / "lib/aminont12.lib",
+        "cterm": LEAP / "lib/aminoct12.lib",
+        "solvent": LEAP / "lib/solvents.lib",
+    }
+    paths = [
+        *libraries.values(),
+        LEAP / "cmd/leaprc.protein.ff19SB",
+        LEAP / "cmd/leaprc.water.tip3p",
+        PA6,
+        Path(__file__),
+    ]
+    paths += [
+        ROOT / "src/nyl12_covalent" / name
+        for name in (
+            "ti1_bonded_model.py",
+            "ti1_reference_graph.py",
+            "ti1_model_crosswalk.py",
+            "terminal_template.py",
+            "chemistry.py",
+            "dihedral_constraints.py",
+        )
+    ]
+    identity = {}
+    for index, path in enumerate(paths):
+        target = source / f"{index:02d}_{path.name}"
+        shutil.copy2(path, target)
+        checksum = hashlib.sha256(path.read_bytes()).hexdigest()
+        if hashlib.sha256(target.read_bytes()).hexdigest() != checksum:
+            raise ValueError(f"Source snapshot mismatch: {path}")
+        identity[str(path)] = checksum
+    write_json(source / "identity.json", identity)
+    terminal = AmberOFFLibrary.parse(str(libraries["nterm"]))["NTHR"]
+    cap = AmberOFFLibrary.parse(str(libraries["cterm"]))["NME"]
+    water = AmberOFFLibrary.parse(str(libraries["solvent"]))["TP3"]
+    templates = {"nterm": terminal, "cterm": cap, "solvent": water}
+    assignments = [
+        ("THR:C", "nterm", "C"),
+        ("THR:O", "nterm", "O"),
+        ("NME:N", "cterm", "N"),
+        ("NME:H", "cterm", "H"),
+        ("NME:CH3", "cterm", "C"),
+        ("NME:HH31", "cterm", "H1"),
+        ("NME:HH32", "cterm", "H2"),
+        ("NME:HH33", "cterm", "H3"),
+        ("WAT:O", "solvent", "O"),
+        ("WAT:H1", "solvent", "H1"),
+        ("WAT:H2", "solvent", "H2"),
+    ]
+    native_reports = []
+    for stereo in ("R", "S"):
+        directory = result / f"native_attack_{stereo}"
+        directory.mkdir()
+        surrogate, _ = build_ti1_bonded_model(stereo)
+        native, metadata = build_ti1_reference_graph(PA6, stereo)
+        crosswalk = build_ti1_model_crosswalk(surrogate, native)
+        write_json(directory / "crosswalk.json", crosswalk)
+        write_json(directory / "native_atom_map.json", metadata)
+        (directory / "native_graph.smi").write_text(
+            Chem.MolToSmiles(native, allHsExplicit=True) + "\n"
+        )
+        by_origin = {atom.GetProp("origin_id"): atom for atom in native.GetAtoms()}
+        fixed = []
+        for origin, key, library_name in assignments:
+            template = templates[key]
+            matches = [atom for atom in template.atoms if atom.name == library_name]
+            if len(matches) != 1:
+                raise ValueError(f"Ambiguous library atom {key}:{library_name}")
+            atom, target = matches[0], by_origin[origin]
+            if atom.atomic_number != target.GetAtomicNum() or not np.isfinite(
+                atom.charge
+            ):
+                raise ValueError(f"Invalid source-backed atom constraint: {origin}")
+            fixed.append(
+                {
+                    "origin_id": origin,
+                    "index_one_based": target.GetIdx() + 1,
+                    "partial_charge_e": float(atom.charge),
+                    "source_template": template.name,
+                    "source_atom_name": library_name,
+                    "source_atom_type": atom.type,
+                    "source_file": str(libraries[key]),
+                }
+            )
+        fixed_sum = sum(row["partial_charge_e"] for row in fixed)
+        equivalents = []
+        for parent_origin in ("THR:N", "PA6:N56", "THR:CG2"):
+            hydrogens = sorted(
+                atom.GetProp("origin_id")
+                for atom in by_origin[parent_origin].GetNeighbors()
+                if atom.GetAtomicNum() == 1
+            )
+            if len(hydrogens) != 3:
+                raise ValueError(f"Expected three equivalent H on {parent_origin}")
+            equivalents.append({"parent_origin": parent_origin, "origins": hydrogens})
+        equivalents.append(
+            {
+                "parent_origin": "PA6:C53",
+                "origins": ["PA6:O48", "PA6:O51"],
+                "reason": "terminal carboxylate resonance equivalence",
+            }
+        )
+        proposal = {
+            "status": "Proposed native RESP constraints; not an executed fit",
+            "model": "Native Thr-NH3+/PA6L4 oxyanion/NME and separate relay water",
+            "total_charge_target_e": 0,
+            "fixed_atoms": fixed,
+            "fixed_charge_sum_e": fixed_sum,
+            "free_atom_count_before_equivalence": native.GetNumAtoms() - len(fixed),
+            "free_charge_sum_target_e": -fixed_sum,
+            "proposed_equivalence_groups": equivalents,
+            "no_per_residue_integer_partial_charge_constraints": True,
+            "water_policy": "Propose fixed TIP3P charges while including water in the native QM reference; test constrained and held-out ESP errors before acceptance",
+            "backbone_policy": "Protect N-terminal NTHR peptide C/O charges; fit reactive NH3+ and side chain jointly with substrate",
+            "native_geometry_generated": False,
+            "native_geometry_accepted": False,
+            "esp_available": False,
+            "fit_ready": False,
+            "forcefield_validated": False,
+        }
+        write_json(directory / "resp_constraint_proposal.json", proposal)
+        native_reports.append(
+            {
+                "stereochemistry": stereo,
+                "matched_heavy_atoms": len(crosswalk["correspondences"]),
+                "native_atoms": native.GetNumAtoms(),
+                "fixed_atoms_proposed": len(fixed),
+                "free_charge_target_e": -fixed_sum,
+            }
+        )
+        LOGGER.info(
+            "Prepared native %s graph and constraint proposal: %s",
+            stereo,
+            native_reports[-1],
+        )
+    derivative_reports = []
+    for directory in sorted((WORK / "progress_audit_01/result").glob("attack_*")):
+        molecule = Chem.MolFromXYZFile(str(directory / "latest_geometry.xyz"))
+        if molecule is None or molecule.GetNumAtoms() != 37:
+            raise ValueError(f"Invalid frozen snapshot: {directory}")
+        metadata = json.loads((directory / "atom_map.json").read_text())
+        xyz = np.asarray(molecule.GetConformer().GetPositions()) / BOHR_A
+        torsions = [
+            tuple(index - 1 for index in row["atoms_one_based"])
+            for row in metadata["constraints"]
+        ]
+        coarse_j, coarse_h = dihedral_constraint_derivatives(
+            xyz, torsions, step_bohr=2e-4
+        )
+        fine_j, fine_h = dihedral_constraint_derivatives(xyz, torsions, step_bohr=1e-4)
+        relative_j = float(np.linalg.norm(coarse_j - fine_j) / np.linalg.norm(fine_j))
+        relative_h = float(np.linalg.norm(coarse_h - fine_h) / np.linalg.norm(fine_h))
+        rigid = rigid_cartesian_directions(xyz)
+        unit_rigid = np.linalg.svd(rigid, full_matrices=False)[0]
+        rigid_residual = float(
+            np.linalg.norm(fine_j @ unit_rigid) / np.linalg.norm(fine_j)
+        )
+        combined = np.vstack((fine_j, unit_rigid.T))
+        rank = int(np.linalg.matrix_rank(combined))
+        accepted = (
+            max(relative_j, relative_h) <= 1e-3 and rigid_residual <= 1e-6 and rank == 9
+        )
+        report = {
+            "case": directory.name,
+            "jacobian_relative_error": relative_j,
+            "constraint_hessian_relative_error": relative_h,
+            "relative_rigid_constraint_residual": rigid_residual,
+            "internal_tangent_dimension": int(xyz.size - rank),
+            "derivative_implementation_check_passed": bool(accepted),
+            "scope": "Numerical constraint derivatives only; no energy Hessian available",
+            "forcefield_validated": False,
+        }
+        derivative_reports.append(report)
+        LOGGER.info("Frozen snapshot derivative check: %s", report)
+    write_json(
+        result / "report.json",
+        {
+            "native_reports": native_reports,
+            "derivative_reports": derivative_reports,
+            "forcefield_validated": False,
+        },
+    )
+    if not all(
+        row["derivative_implementation_check_passed"] for row in derivative_reports
+    ):
+        raise ValueError("Frozen-snapshot derivative validation failed")
+
+
+if __name__ == "__main__":
+    main()

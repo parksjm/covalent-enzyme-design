@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/verify_native_charge_units_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T20:24:35.468993Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nme_unit.lib": "39ab054aa565ca18504537625d171df481b79a6048bad52b877acaacfd1d2480",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nthr_unit.lib": "5a38d6fb2c91dd090fad6864b0b08cf8080a673a3a4d2cec3df2fc6086fb7e10",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/tip3p_unit.lib": "08c5ed7f029295d6caea56282aaf18f719647de29d3aafcc9277d15e110eb632",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/verify_native_charge_units_20261022.py": "fa57b7b8dfb0396bf8f084f238b4be60efd85b2e03cdda0c704d633ede1c280f"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_verification_01/job/job.log",
+  "session_name": "nyl12_native_library_verify_20261022",
+  "started_utc": "2026-10-22T20:24:35.029107Z"
+}

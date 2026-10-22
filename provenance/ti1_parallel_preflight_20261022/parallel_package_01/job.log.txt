@@ -1,0 +1,1 @@
+INFO:__main__:Verified package: {'verified': True, 'files': 140, 'payload_bytes': 15014778, 'backup': '/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_08', 'structural_payload_unchanged': True}

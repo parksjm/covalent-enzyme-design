@@ -1,0 +1,22 @@
+{
+  "source_parameter_match_accepted": true,
+  "results": [
+    {
+      "stereochemistry": "R",
+      "fixed_source_constraints_matched": 11
+    },
+    {
+      "stereochemistry": "S",
+      "fixed_source_constraints_matched": 11
+    }
+  ],
+  "target_units_parse_without_warnings": true,
+  "extracted_source_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nthr_unit.lib": "5a38d6fb2c91dd090fad6864b0b08cf8080a673a3a4d2cec3df2fc6086fb7e10",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nme_unit.lib": "39ab054aa565ca18504537625d171df481b79a6048bad52b877acaacfd1d2480",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/tip3p_unit.lib": "08c5ed7f029295d6caea56282aaf18f719647de29d3aafcc9277d15e110eb632"
+  },
+  "scope": "Source consistency of proposed fixed constraints only",
+  "forcefield_validated": false,
+  "native_geometry_accepted": false
+}

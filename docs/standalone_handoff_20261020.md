@@ -1,5 +1,62 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Parallel preparation checkpoint — 2026-10-22, 20:36 UTC
+
+The user visually inspected the four interim optimization trajectories and
+judged them good. This is visual approval only: convergence, chemistry,
+cap-artifact and native-transfer gates remain unchanged. Work resumed for
+approximately one hour from 20:06 UTC; arrange a stopping point by 21:00 UTC.
+Existing authorized Gaussian jobs continue in tmux during the user's absence.
+
+At 20:35 UTC all four optimizers remain active and unconverged, around steps
+11/11/11/12 in R/-120, R/-60, S/-120, S/-60 order. No completed TI1 Hessian,
+ESP fit, accepted force field or new protein refinement is available.
+
+Completed while waiting:
+
+- Implemented conditional stability from the actual Gaussian gradient/Hessian,
+  including the nonlinear constraint-force (Lagrangian) correction. Three
+  frozen torsions plus six removed rigid motions leave 102 internal directions.
+  Raw energy-Hessian projection or raw frequencies alone are insufficient.
+  Both finite-difference steps must pass the prospective numerical criteria in
+  docs/ti1_parameter_protocol_20261022.md. Missing gradients fail explicitly.
+- Four tested analysis controllers now wait in detached tmux sessions
+  `nyl12_ti1_curvature_<case>_20261022`. Their retained commands/statuses live
+  under `<case>/conditional_curvature_controller_01/job/`, beside the existing
+  frequency controllers. After successful frequency-controller completion,
+  the pinned analyzer independently rechecks source/input identity, process
+  acceptance, geometry and torsions, then writes a fresh
+  `<case>/conditional_curvature_01/assessment.json`. Failed prerequisites,
+  negative/unresolved curvature or nonstationarity cannot certify parameters.
+  The source snapshot is `pa6_local_bonded/conditional_curvature_source/`.
+  Waiters use a 48-hour deadline and 60-second polling, one BLAS thread, and
+  launch no new Gaussian jobs. Original pinned frequency sources are unchanged.
+- Prepared R/S native graph crosswalks (14 heavy-atom correspondences) and
+  explicit proposed RESP constraints for the native 103-atom charge-zero
+  Thr-NH3+/PA6-L4/oxyanion/NME/water graph. No native 3D geometry or ESP exists
+  yet. No surrogate charge transfer or arbitrary residue integer charges.
+- Independently sourced ff19SB/TIP3P with tleap and verified all 11 proposed
+  fixed atoms against clean exported NTHR/NME/TP3 units. Peptide C/O are the
+  NTHR values +0.6163/-0.5722. Native free-atom charge target is -0.0441 e.
+  This is a source-consistent proposal, not an executed/accepted charge fit.
+  Whole-library CHCL3BOX parser warnings remain in the first retained log;
+  clean target-unit extraction/verification provides the source acceptance.
+
+Verification: **433 full-suite tests passed**, Ruff and changed-file formatting
+passed. New/modified module coverage is 84–96% (combined 89%). Separate waiter
+safety tests passed 14/14, 94% coverage, without invoking engines. All checks
+ran as scripted tmux jobs. Compact evidence, exact helpers and source hashes:
+`provenance/ti1_parallel_preflight_20261022/`; larger originals are under
+`output_nyl12_parameter_validation_20261022/`. The active append-only journal
+remains `output_agent_actions/20261021.jsonl`. No dependency was added.
+
+Next: inspect optimizer/frequency/conditional-curvature acceptance, then assess
+cap H bonding and cap sensitivity before extracting bonded terms. Validate
+bonded candidates with independent geometries/scans; build accepted native
+charge-fit conformers and execute separate HF/6-31G(d) ESP/RESP/held-out checks.
+Only after the full TI1 force-field gate passes may AF3-model classical repair
+resume, followed by DFTB3/MM. The AF3 fork remains the user's independent work.
+
 ## Interim TI1 validation — 2026-10-22, 19:45 UTC
 
 User requested validation and inspectable Gaussian outputs. All four optimizers

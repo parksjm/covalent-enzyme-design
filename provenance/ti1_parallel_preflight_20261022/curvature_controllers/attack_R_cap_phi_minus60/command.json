@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source/scripts/wait_nyl12_ti1_curvature.py",
+    "--case",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60",
+    "--snapshot",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source",
+    "--journal",
+    "/data/jpc/covalent-enzyme-design/output_agent_actions/20261021.jsonl",
+    "--wait-hours",
+    "48",
+    "--poll-seconds",
+    "60"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source/scripts/wait_nyl12_ti1_curvature.py": "f18114e5fed118d1cf4338534483e296b9fe699f5c3adb54ef2f6c6b8ef68c8b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source/source_identity.json": "7d81dfb0223924679f37f9e328876cfe3d3068b78a265115379bc6053d98cd6b"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/conditional_curvature_controller_01/job/job.log",
+  "session_name": "nyl12_ti1_curvature_attack_R_cap_phi_minus60_20261022",
+  "started_utc": null
+}

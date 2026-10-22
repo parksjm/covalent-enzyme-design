@@ -1,0 +1,87 @@
+"""Verify proposed charges using independently extracted target-only units."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import warnings
+from pathlib import Path
+
+from parmed.amber import AmberOFFLibrary
+from parmed.exceptions import AmberWarning
+
+ROOT = Path(
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022"
+)
+
+
+def main() -> None:
+    """Require clean target parsing and agreement for every proposed fixed charge."""
+    logging.basicConfig(level=logging.INFO)
+    extracted = ROOT / "native_library_extract_01"
+    status = json.loads((extracted / "job/status.json").read_text())
+    if status["exit_status"] != 0:
+        raise ValueError("Target-only extraction failed")
+    log = (extracted / "job/job.log").read_text()
+    if "Errors = 0; Warnings = 0; Notes = 0." not in log:
+        raise ValueError("Target library extraction was not clean")
+    templates = {}
+    source_hashes = {}
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", AmberWarning)
+        for name, filename in (
+            ("NTHR", "nthr_unit.lib"),
+            ("NME", "nme_unit.lib"),
+            ("TP3", "tip3p_unit.lib"),
+        ):
+            path = extracted / filename
+            parsed = AmberOFFLibrary.parse(str(path))
+            if set(parsed) != {name}:
+                raise ValueError(f"Unexpected template inventory in {filename}")
+            templates[name] = {atom.name: atom for atom in parsed[name].atoms}
+            source_hashes[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
+    results = []
+    for stereo in ("R", "S"):
+        path = (
+            ROOT
+            / f"parallel_prerequisites_01/result/native_attack_{stereo}/resp_constraint_proposal.json"
+        )
+        proposal = json.loads(path.read_text())
+        if len(proposal["fixed_atoms"]) != 11:
+            raise ValueError("Expected eleven proposed fixed-charge atoms")
+        for row in proposal["fixed_atoms"]:
+            atom = templates[row["source_template"]][row["source_atom_name"]]
+            if (
+                abs(atom.charge - row["partial_charge_e"]) > 1e-12
+                or atom.type != row["source_atom_type"]
+            ):
+                raise ValueError(f"Target library comparison failed: {row}")
+        results.append(
+            {"stereochemistry": stereo, "fixed_source_constraints_matched": 11}
+        )
+    destination = ROOT / "native_library_verification_01/report.json"
+    if destination.exists():
+        raise FileExistsError(destination)
+    destination.write_text(
+        json.dumps(
+            {
+                "source_parameter_match_accepted": True,
+                "results": results,
+                "target_units_parse_without_warnings": True,
+                "extracted_source_sha256": source_hashes,
+                "scope": "Source consistency of proposed fixed constraints only",
+                "forcefield_validated": False,
+                "native_geometry_accepted": False,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    logging.info(
+        "All eleven proposed fixed-charge values match clean target units in both graphs"
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,6 @@
+source leaprc.protein.ff19SB
+source leaprc.water.tip3p
+saveOff NTHR /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nthr_unit.lib
+saveOff NME /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/nme_unit.lib
+saveOff TP3 /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/tip3p_unit.lib
+quit

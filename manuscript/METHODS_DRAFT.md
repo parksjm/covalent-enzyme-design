@@ -217,3 +217,25 @@ restricted to accepted artifacts with matching identities. New attempts use
 new directories; rejected attempts and original coordinates remain available.
 Repository dependency versions are managed with uv. Manuscript source hashes
 and decision records are retained alongside the draft.
+
+
+## Constrained TI1 stability and native transfer — implemented checks
+
+For the capped, three-dihedral-constrained reference, local stability will be
+assessed from the Gaussian Cartesian gradient and Hessian using the reduced
+Lagrangian Hessian, including multiplier-weighted second derivatives of the
+nonlinear dihedral constraints. Six rigid motions are excluded. Central
+differences at two step sizes check constraint derivatives; unconstrained
+frequency signs alone do not establish constrained stability. Numerical
+thresholds and analytic tests are retained in the parameter protocol and source
+snapshot. At this checkpoint no completed TI1 Hessian has been accepted.
+
+The native-state charge model is separately mapped to full PA6 L4, reacting
+Thr-NH3+, the oxyanion and explicit relay water. A proposed RESP boundary
+protects installed NTHR peptide C/O, NME and TIP3P charges while jointly fitting
+the reactive region. Clean tleap exports independently verified these source
+values. This proposal has no accepted native geometry, ESP or fitted charges;
+fit/held-out ESP errors and transfer validation remain required. User visual
+approval of interim trajectories is recorded separately from computational
+acceptance. Neither this preparation nor test-suite success certifies the TI1
+force field.

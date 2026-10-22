@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/prepare_parallel_prerequisites_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-22T20:21:05.848308Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/prepare_parallel_prerequisites_20261022.py": "aed9f8752b6b1dbd1cd077aa909252041d8405fbeb0b84777d29514a480a4398",
+    "/data/jpc/covalent-enzyme-design/provenance/xa_ma_capped_reference_20261022/pa6_l4_source.mol2": "77785fae1b6d4cf4173b28cde5113faddfa8d47a581b109aa526618887c8da61",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/dihedral_constraints.py": "2b2ef5537f2b5a1b68a2de044afe7b50d424a9f03178e1c9b63813b37112b7c4",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_model_crosswalk.py": "69d28cf24d32aa24fd3466a55a263cb5c2dd7325d0f47273365c3c095607b7ed"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/parallel_prerequisites_01/job/job.log",
+  "session_name": "nyl12_ti1_native_preflight01_20261022",
+  "started_utc": "2026-10-22T20:21:03.069956Z"
+}

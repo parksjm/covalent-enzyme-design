@@ -1,0 +1,79 @@
+"""Preserve small parallel-preparation evidence without engine payloads."""
+from __future__ import annotations
+
+import hashlib
+import json
+import shutil
+from pathlib import Path
+
+ROOT = Path('/data/jpc/covalent-enzyme-design')
+WORK = ROOT / 'output_nyl12_parameter_validation_20261022'
+OUT = ROOT / 'provenance/ti1_parallel_preflight_20261022'
+
+
+def main() -> None:
+    """Copy original evidence and record every source and output digest."""
+    files: dict[str, Path] = {}
+    for case in ('R', 'S'):
+        for name in ('native_graph.smi', 'native_atom_map.json',
+                     'crosswalk.json', 'resp_constraint_proposal.json'):
+            files[f'native_attack_{case}/{name}'] = (
+                WORK / f'parallel_prerequisites_01/result/native_attack_{case}' / name)
+    files['derivative_and_native_report.json'] = WORK / 'parallel_prerequisites_01/result/report.json'
+    files['prerequisite_source_identity.json'] = WORK / 'parallel_prerequisites_01/source/identity.json'
+    for job in ('parallel_full_verification_02', 'curvature_waiter_verification_01',
+                'parallel_final_verification_01', 'native_library_extract_01',
+                'native_library_verification_01', 'parallel_prerequisites_01'):
+        source = WORK / job
+        status = json.loads((source / 'job/status.json').read_text())
+        if status['exit_status'] != 0 or not status['ended_utc']:
+            raise ValueError(f'Job incomplete/failed: {job}')
+        for name in ('status.json', 'command.json', 'run.sh'):
+            files[f'{job}/{name}'] = source / 'job' / name
+        if job != 'parallel_prerequisites_01':
+            files[f'{job}/job.log.txt'] = source / 'job/job.log'
+        if (source / 'coverage.json').is_file():
+            files[f'{job}/coverage.json'] = source / 'coverage.json'
+    for name in ('input.leap', 'nthr_unit.lib', 'nme_unit.lib', 'tip3p_unit.lib'):
+        files[f'native_library_extract_01/{name}'] = WORK / 'native_library_extract_01' / name
+    files['native_library_verification_01/report.json'] = WORK / 'native_library_verification_01/report.json'
+    for name in ('prepare_parallel_prerequisites_20261022.py',
+                 'verify_native_charge_units_20261022.py',
+                 'launch_curvature_controllers_20261022.py',
+                 'freeze_parallel_checkpoint_20261022.py'):
+        files[f'workflow/{name}.txt'] = WORK / name
+    base = ROOT / 'output_nyl12_ti1_parameters_20261022/pa6_local_bonded'
+    files['curvature_source_identity.json'] = base / 'conditional_curvature_source/source_identity.json'
+    for case in sorted(base.glob('attack_*')):
+        for name in ('command.json', 'run.sh'):
+            files[f'curvature_controllers/{case.name}/{name}'] = (
+                case / 'conditional_curvature_controller_01/job' / name)
+    OUT.mkdir()
+    manifest = {}
+    for name, source in files.items():
+        if source.stat().st_size > 2_000_000:
+            raise ValueError(f'Unexpected large checkpoint source: {source}')
+        target = OUT / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+        checksum = hashlib.sha256(source.read_bytes()).hexdigest()
+        if hashlib.sha256(target.read_bytes()).hexdigest() != checksum:
+            raise ValueError(f'Concurrent source mutation: {source}')
+        manifest[name] = {'source': str(source), 'sha256': checksum,
+                          'bytes': target.stat().st_size}
+    warning_log = WORK / 'parallel_prerequisites_01/job/job.log'
+    metadata = {
+        'files': manifest,
+        'large_warning_log_retained_on_violet': {
+            'path': str(warning_log), 'bytes': warning_log.stat().st_size,
+            'sha256': hashlib.sha256(warning_log.read_bytes()).hexdigest(),
+            'scope': 'Unrelated CHCL3BOX warnings; target units separately verified clean'},
+        'forcefield_validated': False,
+        'native_geometry_accepted': False,
+        'native_esp_available': False,
+    }
+    (OUT / 'manifest.json').write_text(json.dumps(metadata, indent=2)+'\n')
+
+
+if __name__ == '__main__':
+    main()

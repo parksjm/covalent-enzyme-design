@@ -40,6 +40,8 @@ class GaussianFchk:
             expanded symmetrically without mass weighting.
         charge: Molecular charge in elementary charge units.
         multiplicity: Spin multiplicity.
+        gradient_eh_per_bohr: Optional Cartesian gradient with shape ``(N, 3)``
+            in Hartree per bohr; ``None`` when the record is absent.
     """
 
     atomic_numbers: IntArray
@@ -47,6 +49,7 @@ class GaussianFchk:
     hessian_eh_per_bohr2: FloatArray
     charge: int
     multiplicity: int
+    gradient_eh_per_bohr: FloatArray | None = None
 
 
 def _label_key(label: str) -> str:
@@ -93,7 +96,7 @@ def _parse_records(text: str) -> dict[str, tuple[str, list[str]]]:
             raise ValueError(f"invalid fchk record header on line {index + 1}")
         label, kind, payload = parsed
         key = _label_key(label)
-        required = key in _REQUIRED
+        required = key in _REQUIRED or key == "cartesiangradient"
         if required and key in records:
             raise ValueError(f"duplicate fchk field {label!r}")
         index += 1
@@ -138,6 +141,27 @@ def _parse_records(text: str) -> dict[str, tuple[str, list[str]]]:
     if missing:
         raise ValueError(f"missing required fchk fields: {', '.join(sorted(missing))}")
     return records
+
+
+def _optional_gradient(
+    records: dict[str, tuple[str, list[str]]], dimension: int
+) -> FloatArray | None:
+    """Parse an optional Cartesian gradient in Hartree per bohr."""
+    key = "cartesiangradient"
+    if key not in records:
+        return None
+    kind, values = records[key]
+    if kind != "R":
+        raise ValueError("Cartesian Gradient must use real-valued records")
+    if len(values) != dimension:
+        raise ValueError(
+            f"Cartesian Gradient has {len(values)} values; expected {dimension}"
+        )
+    gradient = np.asarray(
+        [_as_real(token, "Cartesian Gradient") for token in values],
+        dtype=np.float64,
+    )
+    return gradient.reshape((dimension // 3, 3))
 
 
 def parse_gaussian_fchk(
@@ -223,6 +247,7 @@ def parse_gaussian_fchk(
         hessian_eh_per_bohr2=hessian,
         charge=charge,
         multiplicity=multiplicity,
+        gradient_eh_per_bohr=_optional_gradient(records, dimension),
     )
 
 

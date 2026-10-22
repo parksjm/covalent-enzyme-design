@@ -212,3 +212,13 @@ does not establish that a water position has been repaired.
 The pull script preserves local files. Previously downloaded files bearing the
 historical names may remain beside the corrected names; the regenerated viewer
 loads only the canonical filenames above.
+
+
+### Parallel preparation checkpoint, 2026-10-22
+
+The `reports/ti1_parameter_preparation/` directory contains graph-only native
+R/S atom mappings, proposed RESP constraints, derivative checks and the clean
+Amber source-unit verification. These are preparation reports, not fitted
+parameters or optimized native structures. Updated handoff, protocol and
+Methods remain under `docs/` and `manuscript/`. Existing inspectable models
+and trajectories are unchanged by this report-only update.

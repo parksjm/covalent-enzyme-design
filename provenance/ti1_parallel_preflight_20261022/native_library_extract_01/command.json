@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/tleap",
+    "-f",
+    "input.leap"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01",
+  "ended_utc": null,
+  "env_overrides": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.protein.ff19SB": "bcbfc9c1b0a2e11705f60113a654b95c89511f487c74238ec0389eea9b8741ac",
+    "/data/jpc/code/ambertools26/venv/dat/leap/cmd/leaprc.water.tip3p": "679041e7b6a6776cd6a7552480ded0986c33ddd209da58f0c30a96bfb8818db7",
+    "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminoct12.lib": "4f45d160211ae20450ee59632012cba3ada60a5129de410da1bfbfd7f9a9a5f7",
+    "/data/jpc/code/ambertools26/venv/dat/leap/lib/aminont12.lib": "a7a267adbe63c3559283204ffd135b37e14dac0f33a7eae76f94cba80a56b58c",
+    "/data/jpc/code/ambertools26/venv/dat/leap/lib/solvents.lib": "c8aeb703f5769331541d1233e2f2c8f823dd516e861b04e215ae4da903f1d69b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/input.leap": "3642645d290d43992e1247c44d085f638bd3659943fe9cc7f6f76a8acbadcf95"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/native_library_extract_01/job/job.log",
+  "session_name": "nyl12_native_library_extract_20261022",
+  "started_utc": null
+}

@@ -1,0 +1,1 @@
+INFO:root:All eleven proposed fixed-charge values match clean target units in both graphs

@@ -1,0 +1,20 @@
+All checks passed!
+============================= test session starts ==============================
+platform linux -- Python 3.12.11, pytest-9.0.2, pluggy-1.7.0
+rootdir: /data/jpc/covalent-enzyme-design
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected 14 items
+
+tests/test_wait_ti1_curvature.py ..............                          [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                  Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------
+scripts/wait_nyl12_ti1_curvature.py      68      4    94%   49, 131, 141-142
+-------------------------------------------------------------------
+TOTAL                                    68      4    94%
+Coverage JSON written to file output_nyl12_parameter_validation_20261022/curvature_waiter_verification_01/coverage.json
+============================== 14 passed in 0.19s ==============================

@@ -1,0 +1,13 @@
+{
+  "scripts/analyze_nyl12_ti1_curvature.py": "358af9196597e21d1b7884109b5270eee5e1f352bf5b94ea91019301e98db342",
+  "scripts/wait_nyl12_ti1_curvature.py": "f18114e5fed118d1cf4338534483e296b9fe699f5c3adb54ef2f6c6b8ef68c8b",
+  "scripts/record_agent_action.py": "d2ac92636e6bc1dca0f379542d77a9b0433151af22265765eac98035d1cf1e77",
+  "pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+  "uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07",
+  "src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+  "src/nyl12_covalent/constrained_curvature.py": "a3ad3317b183ef93d236dff30fc33402b00f11e1617813a57ea7a01799b82d4d",
+  "src/nyl12_covalent/dihedral_constraints.py": "2b2ef5537f2b5a1b68a2de044afe7b50d424a9f03178e1c9b63813b37112b7c4",
+  "src/nyl12_covalent/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553",
+  "src/nyl12_covalent/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547",
+  "src/nyl12_covalent/ti1_reference_coordinates.py": "48bb4d3395746ac00ac95634050cde2eed591e9fd51107cc4a2836ac8675e628"
+}

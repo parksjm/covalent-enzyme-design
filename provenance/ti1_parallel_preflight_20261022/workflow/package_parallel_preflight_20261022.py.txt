@@ -1,0 +1,66 @@
+"""Refresh only documented small laptop artifacts and retain the prior package."""
+from __future__ import annotations
+
+import fcntl
+import hashlib
+import json
+import logging
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path('/data/jpc/covalent-enzyme-design')
+sys.path.insert(0, str(ROOT))
+from scripts.prepare_nyl12_inspection_download import build_package  # noqa: E402
+
+LOGGER = logging.getLogger(__name__)
+
+
+def main() -> None:
+    """Verify a new manifest before preserving and replacing the old bundle."""
+    logging.basicConfig(level=logging.INFO)
+    snapshot = ROOT / 'provenance/ti1_parallel_preflight_20261022'
+    current = ROOT / 'output_laptop_inspection_20261021'
+    staging = ROOT / 'output_laptop_inspection_20261021_parallel_staging'
+    backup = ROOT / 'output_laptop_inspection_20261021_revision_08'
+    if staging.exists() or backup.exists():
+        raise FileExistsError('Fresh staging and backup paths required')
+    old = json.loads((current / 'provenance.json').read_text())
+    files = {name: Path(row['source']) for name,row in old['files'].items()}
+    journal = ROOT / 'output_agent_actions/20261021.jsonl'
+    frozen = snapshot / 'agent_actions_snapshot.jsonl'
+    with journal.open('rb') as source:
+        fcntl.flock(source, fcntl.LOCK_SH)
+        with frozen.open('xb') as target:
+            shutil.copyfileobj(source, target)
+        fcntl.flock(source, fcntl.LOCK_UN)
+    files['provenance/agent_actions_at_export.jsonl'] = frozen
+    selected = ['derivative_and_native_report.json',
+                'native_library_verification_01/report.json', 'manifest.json']
+    selected += [f'native_attack_{case}/{name}' for case in ('R','S')
+                 for name in ('crosswalk.json','resp_constraint_proposal.json',
+                              'native_graph.smi','native_atom_map.json')]
+    for name in selected:
+        files[f'reports/ti1_parameter_preparation/{name}'] = snapshot / name
+    result = build_package(files, staging)
+    for line in (staging / 'MANIFEST.sha256').read_text().splitlines():
+        expected,name = line.split('  ',1)
+        actual = hashlib.sha256((staging / name).read_bytes()).hexdigest()
+        if actual != expected:
+            raise ValueError(f'Package digest mismatch: {name}')
+    # Structural payload and viewers must remain byte-identical to prior bundle.
+    for name in old['files']:
+        if name.startswith(('protein/','qm/','af3/','optimization/')):
+            if (current / name).read_bytes() != (staging / name).read_bytes():
+                raise ValueError(f'Unexpected structural/viewer change: {name}')
+    current.rename(backup)
+    staging.rename(current)
+    report = {'verified': True, 'files': len(result['files']),
+              'payload_bytes': result['payload_bytes'], 'backup':str(backup),
+              'structural_payload_unchanged':True}
+    (snapshot / 'laptop_export.json').write_text(json.dumps(report,indent=2)+'\n')
+    LOGGER.info('Verified package: %s', report)
+
+
+if __name__ == '__main__':
+    main()

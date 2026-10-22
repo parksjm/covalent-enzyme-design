@@ -1,0 +1,61 @@
+{
+  "native_reports": [
+    {
+      "stereochemistry": "R",
+      "matched_heavy_atoms": 14,
+      "native_atoms": 103,
+      "fixed_atoms_proposed": 11,
+      "free_charge_target_e": -0.0440999999999999
+    },
+    {
+      "stereochemistry": "S",
+      "matched_heavy_atoms": 14,
+      "native_atoms": 103,
+      "fixed_atoms_proposed": 11,
+      "free_charge_target_e": -0.0440999999999999
+    }
+  ],
+  "derivative_reports": [
+    {
+      "case": "attack_R_cap_phi_minus120",
+      "jacobian_relative_error": 4.545368111903568e-09,
+      "constraint_hessian_relative_error": 7.901248202693959e-08,
+      "relative_rigid_constraint_residual": 1.2620372347480914e-10,
+      "internal_tangent_dimension": 102,
+      "derivative_implementation_check_passed": true,
+      "scope": "Numerical constraint derivatives only; no energy Hessian available",
+      "forcefield_validated": false
+    },
+    {
+      "case": "attack_R_cap_phi_minus60",
+      "jacobian_relative_error": 3.6690718142631243e-09,
+      "constraint_hessian_relative_error": 7.106358396327259e-08,
+      "relative_rigid_constraint_residual": 1.6098135124423984e-10,
+      "internal_tangent_dimension": 102,
+      "derivative_implementation_check_passed": true,
+      "scope": "Numerical constraint derivatives only; no energy Hessian available",
+      "forcefield_validated": false
+    },
+    {
+      "case": "attack_S_cap_phi_minus120",
+      "jacobian_relative_error": 3.644870335593742e-09,
+      "constraint_hessian_relative_error": 8.63153571012785e-08,
+      "relative_rigid_constraint_residual": 9.752154478502138e-11,
+      "internal_tangent_dimension": 102,
+      "derivative_implementation_check_passed": true,
+      "scope": "Numerical constraint derivatives only; no energy Hessian available",
+      "forcefield_validated": false
+    },
+    {
+      "case": "attack_S_cap_phi_minus60",
+      "jacobian_relative_error": 3.7018222432576213e-09,
+      "constraint_hessian_relative_error": 7.951066247968566e-08,
+      "relative_rigid_constraint_residual": 1.693428867934053e-10,
+      "internal_tangent_dimension": 102,
+      "derivative_implementation_check_passed": true,
+      "scope": "Numerical constraint derivatives only; no energy Hessian available",
+      "forcefield_validated": false
+    }
+  ],
+  "forcefield_validated": false
+}
