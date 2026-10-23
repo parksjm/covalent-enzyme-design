@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; uv run pytest tests/test_nyl12_inspection_download.py tests/test_ti1_inspection_inventory.py; bash -n scripts/pull_nyl12_inspection.sh; uv run ruff check output_nyl12_parameter_validation_20261022/package_design_ranking_20261022.py; uv run ruff format --check output_nyl12_parameter_validation_20261022/package_design_ranking_20261022.py; git diff --check"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T01:59:40.463207Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/design_ranking_and_iteration_20261022.md": "2589804fcbd10320a5040b7475dc87000462fa6e045a9243a1876cff62f6de46",
+    "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md": "87455baefcea8775d33e5b505acca808d4c911ce279e22256b9d85bbd167ff50",
+    "/data/jpc/covalent-enzyme-design/manuscript/METHODS_DRAFT.md": "68a9b708e7fa12ba0cab2c2af9f3d9f04771597fd2d63dcf75d099497d251d9d",
+    "/data/jpc/covalent-enzyme-design/manuscript/REFERENCES.md": "55c14370c3600911ee43308f9a69dea612b1194fc77899a0529b513c3163eb38",
+    "/data/jpc/covalent-enzyme-design/manuscript/SOURCE_LEDGER.md": "0c28ac8c6c8e3f96263bc80ae358f36e8bbb70138f56904a4e3eb8dd8c575eee",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/package_design_ranking_20261022.py": "924ff78ea201ff5e8315308d9ee8947750e865e960db8ce7eadfc72520ddc1ff",
+    "/data/jpc/covalent-enzyme-design/scripts/prepare_nyl12_inspection_download.py": "65c99ded6879b43ee12d0989d2b5cd5c5054c1d67022b8c810cdef06cdb41478",
+    "/data/jpc/covalent-enzyme-design/scripts/pull_nyl12_inspection.sh": "1b9784cd91331b5a1e303746bc36e0cc7991c69038f5e68bcab2e3cd6c78a5a3",
+    "/data/jpc/covalent-enzyme-design/tests/test_nyl12_inspection_download.py": "a7f3e6c0c6722809e2ce6fbd56dbcb8bcde058583ab786528838bf635cf1f2b6",
+    "/data/jpc/covalent-enzyme-design/tests/test_ti1_inspection_inventory.py": "e2db665ecd5a27836d80d4d5a5e78d5841d2e8e8a2040b32c746abfddf19030d"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/ranking_export_verification_01/job/job.log",
+  "session_name": "nyl12_ranking_export_check_20261022",
+  "started_utc": "2026-10-23T01:59:39.956327Z"
+}

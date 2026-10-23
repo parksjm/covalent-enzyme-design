@@ -1,0 +1,425 @@
+# Mutant Structure Prediction Literature Note
+
+Date: 2026-09-23
+
+## Bottom line
+
+The literature does not support a simple conclusion that our static-model failures are caused mainly by Boltz-2 being unable to model mutants. Mutant modeling is a real limitation for AF2/AF3/Boltz-like predictors, especially when the functional effect depends on subtle side-chain packing, loop shifts, altered conformational ensembles, or ligand-coupled active-site preorganization. However, recent work also shows that predicted WT and mutant structures can be useful when used as hypotheses or as inputs to downstream variant-effect pipelines.
+
+For the Nyl12 commercial-polyamide benchmark, the more defensible interpretation is that mutant-modeling uncertainty is one contributor within a harder composite problem: flexible repetitive polyamide ligands, uncertain substrate register and orientation, finite charged oligomer artifacts, catalytically restrictive near-attack geometry, local minimization rather than broad ensemble sampling, approximate Rosetta `interface_delta` scoring, and indirect lysate product measurements.
+
+## References to consider adding
+
+- Buel, G. R. and Walters, K. J. Can AlphaFold2 predict the impact of missense mutations on structure? Nat. Struct. Mol. Biol. 29, 1-2 (2022). DOI: 10.1038/s41594-021-00714-2.
+- Pak, M. A. et al. Using AlphaFold to predict the impact of single mutations on protein stability and function. PLoS One 18, e0282689 (2023). DOI: 10.1371/journal.pone.0282689.
+- Akdel, M. et al. A structural biology community assessment of AlphaFold2 applications. Nat. Struct. Mol. Biol. 29, 1056-1067 (2022). DOI: 10.1038/s41594-022-00849-w.
+- McBride, J. M., Polev, K., Abdirasulov, A., Reinharz, V., Grzybowski, B. A. and Tlusty, T. AlphaFold2 can predict single-mutation effects. Phys. Rev. Lett. 131, 218401 (2023). DOI: 10.1103/PhysRevLett.131.218401.
+- Terwilliger, T. C. et al. AlphaFold predictions are valuable hypotheses and accelerate but do not replace experimental structure determination. Nat. Methods 21, 110-116 (2024). DOI: 10.1038/s41592-023-02087-4.
+- McBride, J. M. and Tlusty, T. AI-predicted protein deformation encodes energy landscape perturbation. Phys. Rev. Lett. 133, 098401 (2024). DOI: 10.1103/PhysRevLett.133.098401.
+- Drake, J. A. et al. Deep-learning structure elucidation from single-mutant deep mutational scanning. Nat. Commun. 16, 6874 (2025). DOI: 10.1038/s41467-025-62261-4.
+- Wee, J. and Wei, G. W. Benchmarking AlphaFold3 protein-protein complex accuracy and machine learning prediction reliability for binding free energy changes upon mutation. arXiv (2024). DOI: 10.48550/arXiv.2406.03979.
+- BoltzOmics: Predicting genetic variant effects on drug binding with Boltz-2. iScience (2026). DOI: 10.1016/j.isci.2026.116797.
+- Wan, S. et al. On the reliability of AI methods in drug discovery: Evaluation of Boltz-2 for structure and binding affinity prediction. arXiv (2026). DOI: 10.48550/arXiv.2603.05532.
+- Sun, R. and Head-Gordon, T. A curated benchmark for cofolding models on kinase conformational states. npj Drug Discovery 3, 33 (2026). DOI: 10.1038/s44386-026-00068-z.
+
+Existing manuscript references that are also directly relevant include AlphaFold 3, Boltz-2, the Masters et al. protein-ligand co-folding adversarial analysis, Runs N Poses, and PoseBusters.
+
+## Citation-network check around the McBride/Tlusty effective-strain work
+
+The key missed item was the PRL follow-up by McBride and Tlusty in 2024. The 2023 PRL paper introduced effective strain as a local deformation metric and reported that AF2-predicted WT-vs-mutant deformation correlates with experimental structural and phenotypic effects across many proteins. The 2024 PRL paper extends that idea to stability, arguing that AF-predicted deformation contains information about energy-landscape perturbations and that averaging multiple AF structures helps separate mutation-induced deformation from stochastic prediction noise.
+
+The cited-reference neighborhood reinforces two points already relevant to our manuscript. First, pLDDT or global RMSD are weak diagnostics for mutation effects; local deformation or strain-style metrics can be more informative. Second, several cited and citing papers emphasize that AF2/ColabFold can sometimes sample alternate conformations or encode dynamical information, but this is context-dependent and not equivalent to predicting catalytic activity or ligand-bound productive geometry. I did not find a newer citing paper that overturns our interpretation. The most relevant addition is the 2024 PRL stability/energy-landscape paper, plus a clearer statement that our workflow did not use local strain metrics and therefore should not be judged as a direct test of that approach.
+
+## Manuscript-ready summary
+
+A related limitation concerns the WT-vs-mutant comparison itself. AF2/AF3/Boltz-family models are very useful for generating structural hypotheses, but the literature is mixed on whether independently predicted WT and single-mutant structures reliably capture subtle functional consequences of mutations. AF2-derived structures can be useful as inputs to downstream variant-effect predictors, and AF3-generated complexes have supported protein-protein mutant binding-energy benchmarks. However, direct comparison of predicted WT and mutant structures is not a validated route to subtle activity prediction: AF2 can be relatively insensitive to single substitutions, confidence-score changes correlate weakly or not at all with many experimental stability and function measurements, and current predictors often miss alternative conformational states. The effective-strain literature is an important counterpoint: local deformation metrics extracted from ensembles of AF2 predictions can capture average single-mutation effects and stability trends better than pLDDT or global RMSD. However, that approach is aimed at mutation-induced protein deformation, not at ranking catalytic enzyme-polyamide complexes by static protein-ligand interaction energy.
+
+Recent Boltz-2 applications to mutant drug-binding panels are encouraging, but they address relatively conventional drug-receptor binding problems rather than enzyme-substrate catalysis with large repetitive polymer fragments. Broader co-folding benchmarks also show that ligand-pose success and confidence metrics do not necessarily imply conformational correctness, physical validity, or energetic resolution. Thus, disagreement between our static Nyl12 models and experiment should not be attributed simply to Boltz-2 being unable to handle mutants. Mutant-specific conformational effects are plausible in some cases, especially for substitutions that perturb active-site loops or substrate-channel shape, but the larger challenge is the compounded task of predicting flexible polyamide register, catalytic near-attack geometry, local relaxation, and lysate activity from static co-folded complexes.
+
+## Implications for Nyl12
+
+- Treat static Boltz-2/OpenMM/Rosetta models as hypotheses, not activity predictors.
+- Interpret WT-vs-mutant score differences only within matched substrate/product/register comparisons.
+- Use catalytic geometry filters because productive hydrolysis is more restrictive than generic binding.
+- Avoid claiming that Boltz-2 cannot handle mutants; the literature supports a more nuanced statement.
+- Treat failures as arising from multiple coupled uncertainties: mutant conformational response, substrate register, polyamide chemistry, scoring, and assay biology.
+- In future work, compare direct variant co-folding against WT-template mutation-and-relaxation controls, broader local side-chain/loop sampling, and experimental kinetic validation for focused variants.
+
+## 2026-10-15 effective-strain feasibility and software installation
+
+Effective strain can be calculated for the existing Boltz single-mutant models.
+It measures local protein deformation between two structures or ensembles,
+after optimal local rotation of C-alpha neighborhood vectors. The original
+method uses a 13 A neighborhood. It is not merely a change in scalar pair
+distances, a physical elastic energy, or an independent model-accuracy score.
+Large strain can indicate either a real structural response or prediction
+variability; small strain can indicate either a small response or failure to
+capture one. Without experimental mutant structures, it cannot establish
+which mutant structures are correct. Applying it to Boltz oligomeric complexes
+is an exploratory extension of the published work, principally based on AF2.
+
+The authors' software is PDAnalysis, https://github.com/mirabdi/PDAnalysis,
+MIT license, version 0.0.3 in the inspected source. The downloaded revision is
+`78eb002c8b180c9cf2238f6c1ca932e5e1e64bf2`, under
+`external/PDAnalysis`. An isolated uv project under `tools/pdanalysis` contains
+the dependency declaration and lock file; this does not change the inference
+or relaxation environments. The source is an editable local dependency, so
+reproduction requires the same checkout revision as well as the uv lock file.
+The first smoke test exposed upstream use of `np.in1d`, removed in recent
+NumPy releases. The isolated environment therefore constrains NumPy to
+`>=1.26.4,<2`; the upstream scientific implementation remains unmodified.
+The upstream console entry point refers to a missing `PDAnalysis.main` module;
+use the Python API or the repository's top-level `main.py` instead.
+
+Reproduction from the project root:
+
+```bash
+git clone https://github.com/mirabdi/PDAnalysis.git external/PDAnalysis
+git -C external/PDAnalysis checkout 78eb002c8b180c9cf2238f6c1ca932e5e1e64bf2
+uv sync --project tools/pdanalysis --locked
+uv run --project tools/pdanalysis python scripts/check_nyl12_pdanalysis.py
+```
+
+The clone command is for a fresh installation. The scripted installation check
+uses the original WT PA6 model 40 alpha chain A and tests self-comparison,
+invariance under rigid rotation/translation, and sensitivity to a local 1 A
+displacement. Its report is
+`output_nyl12_effective_strain_setup_20261015/installation_checks.json`.
+These checks establish basic software behavior, not biological validation.
+All three passed on 2026-10-15: maximum identity strain was 4.15e-15,
+maximum strain after rigid motion was 3.80e-15, and a 1 A displacement at
+residue 101 produced strain 0.1064 there. Ruff lint and format checks passed.
+The locked compatible environment uses NumPy 1.26.4 and SciPy 1.17.1.
+
+### Recommended initial analysis, not yet executed
+
+1. Use all 50 original/unrelaxed models per sequence within each substrate
+   representation separately. Compare the protein C-alpha neighborhoods;
+   exclude ligand atoms from strain, while recognizing that protein
+   conformations were predicted in the ligand's presence. Removing ligand
+   coordinates does not convert a complex prediction into an apo prediction.
+2. Validate chain correspondence and residue identities before calculation.
+   The upstream PDB reader retains residue numbers but does not retain chain
+   identity in its coordinate indexing. Repeated numbering across chains can
+   silently overwrite coordinates. An adapter must assign a unique global
+   index to every protein residue and preserve a reversible chain/residue map.
+   Check the expected four copies of the mutation explicitly; chain labels
+   alone do not establish structural correspondence in a symmetric assembly.
+3. Preserve all eight physical subunits and inter-subunit neighborhoods for
+   the primary assembly analysis. Also examine within-subunit strain to
+   distinguish backbone deformation from changes in subunit arrangement.
+   Report sites and chains separately before a descriptive symmetry average;
+   the four copies in one model are not independent replicates.
+4. Use the upstream locally averaged-neighborhood implementation for ensemble
+   comparisons, rather than globally averaging PDB coordinates. Compare the
+   mutant-WT signal with equal-size independent WT-WT ensemble splits and
+   mutant-mutant splits. Repeated splits are a noise diagnostic, not new
+   independent observations. Assess convergence at 5, 10, 20, and 25 models
+   against the full 50-model comparison, with resampling uncertainty.
+5. Begin with the paper's confidence cutoff of 70 as an explicit transferred
+   convention, not a validated Boltz threshold. Define common residue masks
+   across comparisons and report coverage. Original Boltz PDBs preserve
+   confidence in B-factor fields; the Amber/OpenMM relaxed PDBs have zero
+   B-factors, so applying a confidence cutoff to them would reject everything.
+   A relaxed sensitivity analysis must transfer confidence through a validated
+   original-to-relaxed residue mapping. Inspect unmasked/high-confidence
+   sensitivity separately, especially for active-site loops.
+6. Summarize deformation at each mutated residue, its protein neighborhood
+   within 15 A, and predeclared active-site regions. These are descriptive
+   summaries; the paper's strain-stability relationships do not supply a
+   calibration for Nyl12 lysate activity. Avoid selecting regions or strain
+   thresholds by whichever combination best fits the eight activity values.
+7. Treat post-relaxation models and geometry-passing models as sensitivity
+   analyses. Catalytic filtering is not the primary inclusion rule for strain:
+   it conditions on substrate geometry, changes the sampled pose distribution,
+   and yields unequal and sometimes tiny ensembles (e.g. PA6 V111C, 1/50).
+   Report selection and sample counts, and do not compare a single accepted
+   mutant to a 50-model WT ensemble as evidence of mutation-induced strain.
+
+### Apo controls and sampling recommendation
+
+Start with the existing ensembles before generating additional predictions.
+If interpretation remains dominated by substrate pose, use an apo Boltz
+control with the same mature hetero-octamer and matched MSA/settings across WT
+and all eight mutants, without substrate-directed contacts. This isolates the
+protein-only prediction response while preserving the assembly that forms the
+active sites. It cannot explain substrate-specific activity by itself.
+
+Ten independent inference seeds per sequence is a proposed initial pilot,
+not a literature-derived sufficient sample size. Analyze convergence and
+within-sequence variability, then extend all nine sequences to 20 seeds if
+needed. One or two models per sequence would be a poor basis for separating
+subtle mutation effects from stochastic variation. McBride and Tlusty (2024),
+Supplementary Section 1.1, report that five structures provided much of the
+gain over a single prediction and recommend 20 structures. Their benchmark
+does not guarantee sufficient sampling for a flexible hetero-octamer.
+No apo inference campaign has been launched by this feasibility assessment.
+
+### Verified method references
+
+J.M. McBride, K. Polev, A. Abdirasulov, V. Reinharz, B.A. Grzybowski, and T. Tlusty. AlphaFold2 Can Predict Single-Mutation Effects. Phys. Rev. Lett. (2023) 131 (21): 218401. DOI: https://doi.org/10.1103/PhysRevLett.131.218401
+
+J.M. McBride and T. Tlusty. AI-Predicted Protein Deformation Encodes Energy Landscape Perturbation. Phys. Rev. Lett. (2024) 133: 098401. DOI: https://doi.org/10.1103/PhysRevLett.133.098401
+
+Primary implementation: https://github.com/mirabdi/PDAnalysis
+
+Accessible methods and sampling supplement: https://arxiv.org/html/2311.18222v2
+
+## 2026-10-15 existing-model analysis launched
+
+The user authorized analysis of the existing ensembles and delegation of
+bounded audit/implementation work. PA6 and PA6,6 analyses are running on
+violet in tmux session `nyl12_effective_strain_20261015`, windows `PA6` and
+`PA66`. No additional structure predictions are part of this job. Each worker
+uses one BLAS thread and CPU calculations; no GPUs are reserved.
+
+Reproducible launcher:
+`bash scripts/launch_nyl12_effective_strain_20261015.sh`.
+Per-substrate entry point:
+`bash scripts/run_nyl12_effective_strain_20261015.sh PA6` (or `PA66`).
+The launcher and analysis reject existing runs rather than silently overwrite
+results. Reproduction into a new output directory is supported by
+`scripts/analyze_nyl12_effective_strain.py --output-dir NEW_DIRECTORY`.
+
+Output root: `output_nyl12_effective_strain_20261015`.
+Persistent logs: `logs/PA6.log` and `logs/PA66.log`.
+Each substrate writes settings and source/code hashes, an explicit
+`residue_mapping_and_masks.csv`, 900 input-manifest rows, per-mutant
+per-residue and regional CSVs, resampling CSVs, skipped-comparison reasons,
+and completion status. Successful workers generate `EFFECTIVE_STRAIN_RESULTS.md`
+and `sampling_diagnostics.csv` automatically. Per-mutant primary/sensitivity
+tables appear before that mutant's resampling finishes. Substrate `status.json`
+is set to complete only after all eight mutant analyses have finished;
+the report is generated in the subsequent worker step.
+
+### Audits and chain correspondence
+
+All 900 original predictions and their 900 relaxed counterparts passed exact
+residue/sequence validation: 1312 C-alphas, alpha A-D residues 1-232 and beta
+E-H residues 1-96, 50 model indices per sequence, and exactly four copies of
+each expected substitution. Original and relaxed sequences agree.
+
+Three predictions exchange beta chains G/H relative to fixed alpha C/D:
+PA6 K59D model 42, PA6,6 F101E model 16, and PA6,6 T53Q model 43. The adapter
+matches alpha113 CA to beta1 CA by minimum-total-distance bipartite assignment,
+requires each matched distance <=12 A, and requires agreement with an
+independent assignment on the relaxed coordinates. The original-derived
+permutation is applied identically to coordinates, sequence, and confidence.
+Alpha labels remain fixed, preserving the restrained alpha-A site; anchored
+structural checks confirmed the three exceptions are beta G/H swaps.
+Only in-memory analysis arrays are reordered; no source PDB is changed.
+Every source mapping is retained in `source_manifest.csv`.
+
+### Primary and sensitivity definitions
+
+For each substrate, a residue is included in the primary common mask only if
+its mean original confidence over all 50 predictions exceeds 70 for every
+one of the nine sequences. This ensemble-mean rule is a documented adaptation
+of the paper's individual-prediction threshold. It retains 1023/1312 residues
+for PA6 and 1025/1312 for PA6,6, including all four copies of Thr1, Phe113,
+and Asn186. It excludes all four copies of mutation centers 59 and 101;
+mutation 55 lacks alpha C, and mutation 105 is represented in alpha A only
+for PA6 and A/B/D for PA6,6. Mutation centers 53 and 111 remain in all copies.
+Coverage is therefore part of every regional result, and no missing-center
+estimate is replaced by zero.
+
+The stricter common mask requires confidence >70 in every original prediction
+of every sequence and retains 792/1312 PA6 and 804/1312 PA6,6 residues.
+Both this mask and a fully unmasked calculation are sensitivity analyses.
+Additional sensitivities use within-physical-subunit neighborhoods,
+relaxed coordinates with original confidence masks, and Tier A/B subsets.
+The last comparison is skipped with an explicit reason if either arm has
+fewer than five models; otherwise its actual unequal arm sizes are reported.
+It is a conditional sensitivity, not a noise-matched primary result.
+
+Primary strain uses all 50 WT predictions and all 50 mutant predictions,
+WT as reference, fixed input index order, and a 13 A neighbor radius.
+For each arm, neighbors must be present in every model, their vectors are
+locally rotated to the first model, then averaged. Shared neighbors between
+arms are explicitly aligned by sorted global residue index before the final
+local rotation and reference-normalized vector-residual calculation.
+The memory-efficient adapter uses upstream `rotate_points` and agrees
+numerically with upstream `AverageProtein`/`Deformation` on multi-model tests;
+the scientific formula and per-arm intersection order are preserved.
+Reference direction and averaging order are retained in the reproducibility
+record because finite deformation need not be symmetric or order invariant.
+
+Summaries require at least three common neighbors at a residue. Predeclared
+regions are all protein residues, four mutation centers, a union of protein
+residues within 15 A of any mutation copy, each copy's 15 A neighborhood,
+and the twelve active-site core residues (alpha113/186 and beta1 at four sites).
+Region distances are averaged within-model WT distances, not distances
+between globally averaged coordinates. Neighborhood overlap is retained;
+per-copy summaries are descriptive and not independent replicates.
+
+### Noise, sampling, and interpretation
+
+For each mutant/substrate, 20 random partitions create disjoint WT 25+25 and
+mutant 25+25 splits, plus a matched-size WT25-versus-mutant25 comparison.
+These directly compare between-sequence deformation with prediction noise
+at the same ensemble size. Repeated partitions overlap across repetitions
+and are not independent biological observations or formal significance tests.
+
+One hundred bootstrap draws independently resample each complete 50-model
+arm with replacement. Three subset draws without replacement at each of
+5, 10, 20, and 25 models assess convergence toward the full 50-model result.
+Seeds are fixed at `20261015 + variant_index`, with the explicit sequence
+order in the source. Bootstrap percentiles quantify prediction-ensemble
+sampling uncertainty only and have limited Monte Carlo precision at 100 draws.
+Confidence masks and biological regions stay fixed during resampling, while
+neighbor intersections and evaluable coverage are recalculated. Convergence
+must be examined together with coverage because increasing ensemble size can
+remove neighbors that were not common to every prediction.
+
+Do not interpret strain magnitude or a positive confidence interval as proof
+of a genuine mutation response: effective strain is nonnegative even under
+within-sequence noise. Evaluate the matched-size controls, confidence coverage,
+subunit behavior, and substrate dependence. This analysis does not validate
+Boltz mutant coordinates against experimental structures or provide a
+calibrated catalytic-activity prediction.
+
+Verification before launch: 28 focused tests passed with 94% aggregate
+coverage over the core, IO, and resampling modules (97%, 90%, and 99%,
+respectively), Ruff passed, and a full-input/one-mutant end-to-end run
+completed all primary and sensitivity configurations successfully in 34 s.
+Initial production timing suggested approximately 1-2 hours for both
+substrates running concurrently; logs, rather than that estimate, are the
+authoritative progress record.
+
+Final combined verification before handoff: 38 tests passed with 97% aggregate
+coverage including the runner and automatic report generator. Both tmux
+workers were observed advancing through matched noise partitions normally.
+
+### Interpreting the four mutation copies
+
+Effective strain is dimensionless deformation, not a strain energy. The
+`mutation_sites` summary is the mean of the strain values at the four mapped
+alpha mutation positions, restricted to residues with confidence inclusion
+and at least three shared neighbors. The evaluated/expected count identifies
+partial coverage; an unavailable site is never counted as zero. Per-residue
+tables retain the individual copies, and 15 A neighborhood summaries are
+reported for A, B, C, and D separately. The union-based `mutation_15A` summary
+counts each included residue once; it is not the equal-weight average of four
+overlapping neighborhood means. Preserve these distinctions when preparing
+figures. Site asymmetry, including substrate-adjacent versus other sites,
+can be hidden by a symmetry average. All resampling is over whole models,
+keeping four mutation copies together; copies are not independent replicates.
+
+## 2026-10-16 interpretation, presentation statistic, and redesign implications
+
+### What the analysis establishes about mutant-model quality
+
+The predicted mutant ensembles differ from WT more than the matched-size
+within-WT sampling baseline in the mutation neighborhoods examined. This is
+evidence of reproducible sequence-associated differences within this prediction
+workflow, not experimental validation of those differences. Shared systematic
+errors remain possible, and effective strain cannot classify individual models
+as accurate or inaccurate. Small deformation likewise does not establish
+correctness, folding stability, or catalytic competence.
+
+Strain has not supplied an explanation for the poor PA6,6 static directionality.
+This does not exclude structural prediction errors as a contributor. The
+calculation uses protein C-alpha coordinates, not substrate atoms or side-chain
+atoms. Substrate register, side-chain packing, hydrogen-bond geometry, and
+near-attack geometry can be wrong without large protein-backbone strain.
+Reproducible deformation alone does not validate an interface_delta ranking or
+explain lysate activity. No formal strain-versus-activity or strain-versus-local-
+confidence correlation has been established by the current analysis.
+
+### Relationship with confidence and magnitude
+
+Confidence and deformation are different observables. Low-confidence regions
+can inflate deformation through inconsistent predictions, while high confidence
+does not preclude a reproducible structural change or systematic error.
+McBride et al. (2023; reference above) use confidence filtering and ensemble
+averaging to address prediction variability. Our transfer of that approach to
+Boltz and this oligomeric enzyme is not a validated activity predictor.
+
+For PA6 F101E, the full-50 mutation-neighborhood mean is 0.0077455 with the
+primary common confidence mask, 0.0067244 with the strict mask, and 0.1059994
+without masking. Relaxed coordinates with the primary mask give 0.0228686.
+These comparisons change included residues and/or their neighbor sets, so they
+demonstrate sensitivity rather than measuring a pure confidence effect at fixed
+coverage. Residue 101 has ensemble-mean original confidence of approximately
+43.5-45.3 in WT and 48.9-50.4 in F101E across A-D; its four copies are excluded
+from the primary mask, while retained surrounding residues contribute.
+
+Effective strain is a mean reference-normalized local vector displacement after
+local rotational alignment. A value of 0.015 is a dimensionless normalized
+deformation of about 1.5%, not a displacement of 0.015 A, an energy, a uniform
+bond extension, or a calibrated biological effect. There is no established
+Nyl12 threshold for biologically large or small strain. In the slide drafts,
+values are multiplied by 1,000, so a displayed value of 15 means 0.015.
+
+### Exact meaning of the presentation dots and table
+
+Reproducible exporter: `scripts/plot_nyl12_effective_strain_presentation.py`.
+Artifacts: `output_nyl12_effective_strain_20261015/presentation/`, including
+PNG/PDF/SVG dot plot and table, numeric CSV, and three-sentence speaker notes.
+Sources are each substrate's `sampling_diagnostics.csv`; the exporter uses
+`region == mutation_15A`, `matched25_median`, and `WT_split_median`.
+
+For each mutant/substrate, the colored dot is calculated as follows:
+
+1. Define a fixed WT-based union of protein C-alpha positions within 15 A of
+   any of the four alpha mutation positions; count overlapping residues once.
+2. For each of 20 comparisons, select 25 WT and 25 mutant whole assemblies
+   without replacement from their respective 50-model ensembles. Calculate
+   per-residue strain between locally averaged ensemble neighborhoods, using
+   the fixed confidence mask and 13 A common-neighbor rule.
+3. Average the strain over evaluable residues in the union, requiring at least
+   three shared neighbors per residue, then take the median of those 20
+   regional means. Multiply by 1,000 for display. The table reports the same
+   statistic rounded to one decimal in displayed units.
+
+Gray points are the corresponding medians of 20 disjoint 25-versus-25 WT
+partitions. Partitions overlap between repetitions. These are diagnostics of
+prediction sampling, not independent biological replicates or formal tests.
+The presentation statistic differs slightly from the full-50 regional mean.
+
+The dots are NOT averages of four mutation-center strains. `mutation_sites`
+is a separate summary with partial or missing coverage at several positions.
+Neither are the dots equal-weight averages of the four overlapping per-copy
+15 A neighborhood means. Therefore, an SD or SEM of four center values would
+not be an appropriate error bar for this plot.
+
+To show subunit asymmetry, plot the four labeled per-copy neighborhoods (or
+individual mutation centers with explicit coverage) as descriptive values in
+a separate panel, noting overlap and dependence. To show prediction-sampling
+spread around the existing dots, use the corresponding 20 matched-25 regional
+means and label a percentile range explicitly as split-to-split variability,
+not a confidence interval or between-chain SD. Existing full-50 bootstrap
+percentiles describe another statistic and must not be attached to the
+matched-25 medians. An uncertainty interval for the matched-25 median would
+require a resampling procedure targeting that estimator. No error bars have
+been added to the current prototype pending a choice of which variation to
+communicate; absence of bars does not imply zero variability.
+
+### Implications for LigandMPNN designs with multiple substitutions
+
+LigandMPNN conditions sequence design on a supplied backbone and atomic
+context; many compatible substitutions can therefore preserve the intended
+backbone, whereas a single incompatible substitution may cause a larger
+change. Mutation count does not imply monotonically increasing or decreasing
+effective strain. Compensating substitutions could reduce deformation, but
+that is a design hypothesis, not a guaranteed consequence of LigandMPNN.
+Low geometric strain is not synonymous with low energetic strain or improved
+stability. Reference: Dauparas et al., Atomic context-conditioned protein
+sequence design using LigandMPNN, Nature Methods (2025), DOI:
+https://doi.org/10.1038/s41592-025-02626-1; implementation:
+https://github.com/dauparas/LigandMPNN.
+
+For a future pilot of 10-20 designed sequences, predict repeated structures
+per sequence and compare them with both the actual design backbone and
+matched WT ensembles. Retain catalytic identities, assess their orientations
+and supporting contacts, and enforce equivalent sequence choices in the four
+copies of each physical subunit. Evaluate catalytic geometry, ligand register,
+assembly interfaces, local confidence, and reproducibility alongside strain.
+Use fixed catalytic/interface evaluation regions shared by all designs;
+expanding a mutation-neighborhood union with mutation count can change or
+dilute the summary. Retaining catalytic identities alone does not preserve
+their geometry. These are recommendations; no redesign campaign is launched.
+
+Suggested cautious slide title: "Predicted local deformation is greatest for
+T53Q and P105K." This is more directly supported than interpreting above-noise
+deformation as validated mutation-induced structural change.

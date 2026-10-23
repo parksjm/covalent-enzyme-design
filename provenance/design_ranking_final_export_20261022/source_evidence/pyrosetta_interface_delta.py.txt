@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+"""Compute interface_delta for a relaxed protein-ligand complex."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pyrosetta
+from pyrosetta import Pose
+from pyrosetta.teaching import get_score_function
+
+
+def _init_pyrosetta() -> None:
+    extra_res = ["LIG.params"]
+    if Path("COF.params").exists():
+        extra_res.append("COF.params")
+    pyrosetta.init(f"-extra_res_fa {' '.join(extra_res)}")
+
+
+def _find_ligand_index(pose: Pose) -> int:
+    for idx in range(pose.total_residue(), 0, -1):
+        if pose.residue(idx).name3().strip() == "LIG":
+            return idx
+    return pose.total_residue()
+
+
+def main() -> None:
+    _init_pyrosetta()
+    complex_pose = Pose()
+    pyrosetta.rosetta.core.import_pose.pose_from_file(complex_pose, "complex_min.pdb")
+
+    separated_pose = complex_pose.clone()
+    scorefxn = get_score_function(True)
+
+    e_complex = scorefxn(complex_pose)
+    ligand_res_idx = _find_ligand_index(separated_pose)
+
+    ligand_pose = Pose()
+    ligand_pose.append_residue_by_bond(
+        separated_pose.residue(ligand_res_idx).clone(),
+        True,
+    )
+    separated_pose.delete_residue_range_slow(ligand_res_idx, ligand_res_idx)
+
+    e_protein = scorefxn(separated_pose)
+    e_ligand = scorefxn(ligand_pose)
+    e_separated = e_protein + e_ligand
+    interface_delta = e_complex - e_separated
+
+    energy_path = Path("energy.json")
+    payload: dict[str, str | float]
+    if energy_path.exists():
+        payload = json.loads(energy_path.read_text(encoding="utf-8"))
+    else:
+        payload = {}
+
+    payload.update(
+        {
+            "e_protein": f"{e_protein:.2f}",
+            "e_ligand": f"{e_ligand:.2f}",
+            "e_separated": f"{e_separated:.2f}",
+            "interface_delta": f"{interface_delta:.2f}",
+        }
+    )
+    energy_path.write_text(json.dumps(payload, indent=4), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

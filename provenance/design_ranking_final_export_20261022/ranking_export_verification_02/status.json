@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/usr/bin/bash",
+    "-c",
+    "set -e; uv run pytest tests/test_nyl12_inspection_download.py tests/test_ti1_inspection_inventory.py; bash -n scripts/pull_nyl12_inspection.sh; uv run ruff check output_nyl12_parameter_validation_20261022/package_design_ranking_final_20261022.py; uv run ruff format --check output_nyl12_parameter_validation_20261022/package_design_ranking_final_20261022.py; git diff --check"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T02:01:36.718617Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/design_ranking_and_iteration_20261022.md": "656b52cd5e95474ea378aa46363160e3916bd5de5e7c40eeb24db90361efe6cd",
+    "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md": "9e02c16e5b1a1d9c9d1c25968819c93b0bbd1e19dd4698e466b06dca2d2d9521",
+    "/data/jpc/covalent-enzyme-design/manuscript/METHODS_DRAFT.md": "b05bd10e3748b7d0b11882eeabee8f01ceccb93b523bf9ee4a05035b2e9ff66f",
+    "/data/jpc/covalent-enzyme-design/manuscript/REFERENCES.md": "55c14370c3600911ee43308f9a69dea612b1194fc77899a0529b513c3163eb38",
+    "/data/jpc/covalent-enzyme-design/manuscript/SOURCE_LEDGER.md": "0c28ac8c6c8e3f96263bc80ae358f36e8bbb70138f56904a4e3eb8dd8c575eee",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/package_design_ranking_final_20261022.py": "e475643d67bfc9aab25780b498425d7e9b506800ea49742c0be1e279c8a11981",
+    "/data/jpc/covalent-enzyme-design/scripts/prepare_nyl12_inspection_download.py": "65c99ded6879b43ee12d0989d2b5cd5c5054c1d67022b8c810cdef06cdb41478",
+    "/data/jpc/covalent-enzyme-design/scripts/pull_nyl12_inspection.sh": "1b9784cd91331b5a1e303746bc36e0cc7991c69038f5e68bcab2e3cd6c78a5a3"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/ranking_export_verification_02/job/job.log",
+  "session_name": "nyl12_ranking_final_check_20261022",
+  "started_utc": "2026-10-23T02:01:36.251188Z"
+}

@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "source": "/data/jpc/code/LigandMPNN/README.md",
+      "sha256": "52d37fc1b25fc5a8d421bfcaf7cdf8cfe61cafcb5100af88f3723cc9b20a4272",
+      "snapshot": "/data/jpc/covalent-enzyme-design/provenance/design_ranking_final_export_20261022/source_evidence/README.md.txt"
+    },
+    {
+      "source": "/data/jpc/code/LigandMPNN/run.py",
+      "sha256": "10c588aeb8eb7280289b317bbbc78caab98760c15cf19a4c09517dd8eeeb1bd1",
+      "snapshot": "/data/jpc/covalent-enzyme-design/provenance/design_ranking_final_export_20261022/source_evidence/run.py.txt"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_FOCUSED_REDESIGN_WORKFLOW_20261016.md",
+      "sha256": "622060ff51c2871268153cc11e0becc5362f8bb39b163edeaedfb5ef25149706",
+      "snapshot": "/data/jpc/covalent-enzyme-design/provenance/design_ranking_final_export_20261022/source_evidence/NYL12_FOCUSED_REDESIGN_WORKFLOW_20261016.md.txt"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_MUTANT_STRUCTURE_PREDICTION_LITERATURE_20260923.md",
+      "sha256": "1c0eae4792bce012bbe2aa9d105191a5d7e9318c718f79796d95e7932c46f016",
+      "snapshot": "/data/jpc/covalent-enzyme-design/provenance/design_ranking_final_export_20261022/source_evidence/NYL12_MUTANT_STRUCTURE_PREDICTION_LITERATURE_20260923.md.txt"
+    },
+    {
+      "source": "/data/jpc/code/redesigner/scripts/amber_relaxation/pyrosetta_interface_delta.py",
+      "sha256": "ed57144bf209bf3a37a4be2730619daf5f12fd2ef50475aee2c541dddb5f3bc6",
+      "snapshot": "/data/jpc/covalent-enzyme-design/provenance/design_ranking_final_export_20261022/source_evidence/pyrosetta_interface_delta.py.txt"
+    }
+  ],
+  "delegated_review": "curvature_golden_tests read-only review; journal event 5dfeb353-24d2-49bc-a251-8bc5b3ff956f",
+  "primary_strain_references": [
+    "https://doi.org/10.1103/PhysRevLett.131.218401",
+    "https://doi.org/10.1103/PhysRevLett.133.098401"
+  ],
+  "limitation": "Effective strain is structural deformation, not mechanical energy or a calibrated Nyl12 activity predictor. No ranker or design campaign executed."
+}

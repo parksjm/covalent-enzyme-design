@@ -1,5 +1,28 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Ranking and LigandMPNN symmetry clarification — 2026-10-22
+
+New decision record: `docs/design_ranking_and_iteration_20261022.md`. The user
+reports single-mutant confidence/strain degradation relative to WT, and expects
+coordinated LigandMPNN redesign to improve fold/context compatibility. Preserve
+the observation without treating confidence as affinity or all WT-relative
+deformation as bad. Proposed ranking: chemistry gates, independent ES geometry
+robustness and multistate/access compatibility, then local confidence/physical
+quality/strain and noncovalent interface_delta as support. Sequence convergence
+is diagnostic. No ranker, matched no-MSA arm or design campaign is implemented.
+At the user's wrap-up clarification, primary geometry reproducibility refers to
+unguided noncovalent ES. Covalent TI1 geometry and TS saddle validation are
+separate gates. Interface_delta is optional pending demonstrated incremental
+value/accuracy; it may be omitted. Leave existing QM tmux jobs undisturbed.
+
+Official LigandMPNN README/run.py confirm automatic homooligomer mode ties all
+parsed chains. Mature Nyl12 needs explicit separate alpha and beta ties with
+equal weights and homo_oligomer0, as already used in the recent October16
+protected preparation. Sequence ties do not select a geometric point group;
+D2-like scaffold evidence and experimental assembly verification remain distinct.
+Methods and the laptop inspection export are updated at this checkpoint;
+scientific job state must still be read from current status/acceptance records.
+
 ## Redesign strategy/accessibility checkpoint — 2026-10-22
 
 The user supplied the more recent `/data/jpc/enzyme-substrate-modeling/` source.

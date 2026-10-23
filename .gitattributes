@@ -5,3 +5,4 @@ provenance/**/trajectory_metrics.csv whitespace=trailing-space,space-before-tab,
 # Preserve hashed Amber tool logs and force-field record terminators.
 provenance/**/antechamber.stdout.log.txt whitespace=-blank-at-eof
 provenance/**/gaff2_inventory.frcmod whitespace=-blank-at-eof
+provenance/design_ranking_final_export_20261022/source_evidence/README.md.txt whitespace=-blank-at-eol

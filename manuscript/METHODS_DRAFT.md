@@ -299,7 +299,10 @@ analysis; whole-fold backbone redesign is not the initial plan.
 
 The assembly will be treated as four alpha/beta repeats rather than eight
 identical chains. LigandMPNN will tie equivalent alpha positions and equivalent
-beta positions separately. A geometric audit of the retained scaffold is
+beta positions separately, using explicit tied groups and equal weights with
+`homo_oligomer=0`. Automatic homooligomer mode ties all parsed chains and is
+inappropriate for the mature eight-chain alpha/beta representation. A geometric
+audit of the retained scaffold is
 D2-like; the experimental assembly/operators will be checked before a production
 RFD3 symmetry specification. Symmetric sequence design does not require
 identical instantaneous loop conformations or ligand occupancy. The exact
@@ -342,6 +345,35 @@ a shortlist, after coarse reference-cycle mapping. Barrier comparisons require
 balanced atom/proton inventories and corresponding reactant basins. Electronic
 barriers, sampled free energies and experimental turnover will remain distinct
 observables; no activity improvement is inferred from confidence alone.
+
+Design ranking will use chemistry/maturation/assembly gates followed by a
+diverse Pareto shortlist. Primary evidence will be independent ES geometry
+recovery across seeds and compatibility with catalytic and accessible states.
+Local AF3 confidence, pose variability, physical quality, effective strain and
+same-state noncovalent Rosetta interface_delta will provide supporting evidence.
+Interface_delta remains optional: its incremental value and accuracy will be
+assessed against matched WT/mutant controls before inclusion. ES reproducibility
+specifically means noncovalent near-attack recovery without imposed catalytic
+contacts; retaining TI1's covalent bond is not equivalent evidence. TI1 requires
+state-specific tetrahedral, oxyanion, protonation and relay-water checks, and
+TS1 requires independent saddle-point and endpoint validation.
+All attempted samples, failures and missing outputs will be recorded; equivalent
+sites within one prediction will not count as independent replicates.
+Effective strain measures structural deformation rather than mechanical
+energy, and low WT-relative deformation will not be required for coordinated
+redesigns. Conventional separated-interface scoring will not be applied to
+covalent intermediates or interpreted as binding free energy.
+
+Independent no-MSA prediction is a planned sequence–structure consistency arm,
+with WT, single mutants and designs evaluated under matched settings. MSA- and
+template-assisted predictions, if used, will be labeled separately. LigandMPNN
+does not require an MSA for sequence generation [R10]; favorable model
+confidence does not establish folding stability, substrate affinity or activity.
+Sequence convergence will monitor diversity and iteration behavior rather
+than define scientific fitness. A bounded pilot will establish the evaluation
+budget and plateau rule, followed by an independent final assessment. Full
+definitions and implementation limits are recorded in
+`docs/design_ranking_and_iteration_20261022.md`.
 
 ## Reproducibility — implemented infrastructure
 

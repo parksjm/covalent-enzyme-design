@@ -1,5 +1,25 @@
 # Manuscript source and claim ledger — 2026-10-20
 
+## Ranking interpretation and symmetry verification — 2026-10-22
+
+The user reports lower confidence and increased effective strain for many
+single mutants and expects coordinated LigandMPNN designs to fold and bind
+well. This is retained as a project observation/design hypothesis, not a
+universal biological rule. Folding confidence, folding stability, binding
+affinity and activity remain distinct. Matched no-MSA prediction is proposed,
+not executed. Ranking and iteration definitions are in
+`../docs/design_ranking_and_iteration_20261022.md`.
+
+Official LigandMPNN GitHub README/run.py confirm all-chain automatic ties;
+local commit `26ec57ac976ade5379920dbd43c7f97a91cf82de` and the recent
+October16 protected source support explicit separate alpha/beta groups.
+The existing focused-redesign workflow's section4 supplies gate/Pareto ranking
+precedent. The old redesigner interface_delta helper was inspected directly:
+frozen-coordinate complex-minus-protein-minus-one-ligand scoring, with an
+unsafe missing-LIG fallback that must not be reused. Neither helper nor an
+implemented new ranker was run. Direct LigandMPNN publisher/author-PDF retrieval
+failed; primary publisher-indexed method/result excerpts were available.
+
 ## Interim reference geometry checks — 2026-10-22, 19:45 UTC
 
 `../output_nyl12_parameter_validation_20261022/progress_audit_01/` retains
