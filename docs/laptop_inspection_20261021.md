@@ -306,3 +306,29 @@ points. PDB bonds retain the input graph for display; consult the metrics.
 At frame14 OG1-C54=2.02549A and C54-O49=1.21644A, outside TI1 windows.
 This is not an accepted TI1 reference; parameter fitting remains blocked.
 The immutable log snapshot was captured at20:00:43UTC(16:00:43EDT).
+
+## Calculation stopped after state loss — 2026-10-23
+
+The water-free Gaussian run was stopped at16:20:27EDT at userrequest.
+The lastcompleteframe confirms N-to-OG1 proton transfer (N-H1.488A,
+OG1-H0.916A) and OG1-C54 cleavage (2.139A). The14frame movie is an earlier
+snapshot; it is not a validated TI1 reference. Read
+docs/ti1_state_loss_and_qm_options_20261023.md and the accompanying review
+report. No replacement QM job or basis/functional switch has been launched.
+
+## New 63-atom TI1 donor/water starting cluster — 2026-10-23
+
+Pull with the same zero-argument ./pull_nyl12_inspection.sh. Open
+qm/ti1_oxyanion_cluster/view_seed.pml from its containing directory in PyMOL.
+It loads native_seed.sdf with all 37 explicit hydrogens, including both on
+water. Inspect the N-methylacetamide backbone donor, acetamide Asn donor,
+oxyanion and Thr ammonium. This is an unoptimized starting cluster; its
+geometry screen passes, which does not establish TI1 stability.
+
+The new omegaB97X-D/def2-SVP short pilot is running on violet in tmux
+nyl12_oxyanion63_svp_20261023. Its exact input, frozen/mobile-atom policy
+and launch status snapshot are under qm/ti1_oxyanion_cluster/pilot/.
+Status copies are snapshots, not live monitoring. No optimization trajectory
+or final accepted structure for this new job is claimed. Prior water-free
+movies remain diagnostic failures, not TI1 references. See the updated
+state-loss/QM decision document for boundaries, chemistry and remaining gates.

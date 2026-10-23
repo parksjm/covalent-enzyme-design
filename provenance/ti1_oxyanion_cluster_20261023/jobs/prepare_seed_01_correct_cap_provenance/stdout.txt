@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 290, in <module>
+    main()
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 205, in main
+    report = assess_cluster(molecule, xyz)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 151, in assess_cluster
+    raise ValueError(
+ValueError: 63atom cluster graph/formula/charge/component inventory mismatch

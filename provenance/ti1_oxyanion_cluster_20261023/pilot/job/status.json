@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/assess_pilot.py": "17f17439ed0672039b66b13d28091f1b1d2632b4d26cd64b0406ccce3ac4921e",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/input.gjf": "49ac311f5f32c4e754816ee5f66c819a4aca9f35a63e63e7830ec9932946b924",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/pilot_policy.json": "f21c87b9c353f8dfed61d629772c518fb1d20d92dead5c2d8dc1fc906ccb070e",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/run_gaussian.sh": "a8dd6494b83561effe498e6686adfb220afcba64e0a4e703d9e30e8be69799ac",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/source_manifest.json": "7da99714b0fd057cf2c8320ee86934c03dca9f8cf3edc19bb7d5d713b7f0f4c2"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/job/job.log",
+  "session_name": "nyl12_oxyanion63_svp_20261023",
+  "started_utc": "2026-10-23T20:40:57.412865Z"
+}

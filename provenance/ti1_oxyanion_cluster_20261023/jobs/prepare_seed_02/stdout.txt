@@ -1,0 +1,1 @@
+INFO 63atom seed constructed; geometry screen passed: True

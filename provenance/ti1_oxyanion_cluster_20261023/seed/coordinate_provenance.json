@@ -1,0 +1,661 @@
+[
+  {
+    "origin_id": "THR:N",
+    "native_source_index_0based": 0,
+    "constructed_cap_H": false,
+    "index": 0,
+    "seed42_index_0based": 0,
+    "source_atom_index_1based": 3477,
+    "source_atom_name": "N",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:CA",
+    "native_source_index_0based": 1,
+    "constructed_cap_H": false,
+    "index": 1,
+    "seed42_index_0based": 1,
+    "source_atom_index_1based": 3481,
+    "source_atom_name": "CA",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:CB",
+    "native_source_index_0based": 2,
+    "constructed_cap_H": false,
+    "index": 2,
+    "seed42_index_0based": 2,
+    "source_atom_index_1based": 3483,
+    "source_atom_name": "CB",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:OG1",
+    "native_source_index_0based": 3,
+    "constructed_cap_H": false,
+    "index": 3,
+    "seed42_index_0based": 3,
+    "source_atom_index_1based": 3489,
+    "source_atom_name": "OG1",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:CG2",
+    "native_source_index_0based": 4,
+    "constructed_cap_H": false,
+    "index": 4,
+    "seed42_index_0based": 4,
+    "source_atom_index_1based": 3485,
+    "source_atom_name": "CG2",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:C",
+    "native_source_index_0based": 5,
+    "constructed_cap_H": false,
+    "index": 5,
+    "seed42_index_0based": 5,
+    "source_atom_index_1based": 3490,
+    "source_atom_name": "C",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:O",
+    "native_source_index_0based": 6,
+    "constructed_cap_H": false,
+    "index": 6,
+    "seed42_index_0based": 6,
+    "source_atom_index_1based": 3491,
+    "source_atom_name": "O",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:N",
+    "native_source_index_0based": 7,
+    "constructed_cap_H": false,
+    "index": 7,
+    "seed42_index_0based": 7,
+    "source_atom_index_1based": 3492,
+    "source_atom_name": "N",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:CH3",
+    "native_source_index_0based": 8,
+    "constructed_cap_H": false,
+    "index": 8,
+    "seed42_index_0based": 8,
+    "source_atom_index_1based": 3494,
+    "source_atom_name": "CA",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:H1",
+    "native_source_index_0based": 9,
+    "constructed_cap_H": false,
+    "index": 9,
+    "seed42_index_0based": 9,
+    "source_atom_index_1based": 3478,
+    "source_atom_name": "H1",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:H2",
+    "native_source_index_0based": 10,
+    "constructed_cap_H": false,
+    "index": 10,
+    "seed42_index_0based": 10,
+    "source_atom_index_1based": 3479,
+    "source_atom_name": "H2",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HA",
+    "native_source_index_0based": 11,
+    "constructed_cap_H": false,
+    "index": 11,
+    "seed42_index_0based": 11,
+    "source_atom_index_1based": 3482,
+    "source_atom_name": "HA",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HB",
+    "native_source_index_0based": 12,
+    "constructed_cap_H": false,
+    "index": 12,
+    "seed42_index_0based": 12,
+    "source_atom_index_1based": 3484,
+    "source_atom_name": "HB",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HG1",
+    "native_source_index_0based": 13,
+    "constructed_cap_H": false,
+    "index": 13,
+    "seed42_index_0based": 13,
+    "source_atom_index_1based": 3480,
+    "source_atom_name": "H3",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HG21",
+    "native_source_index_0based": 14,
+    "constructed_cap_H": false,
+    "index": 14,
+    "seed42_index_0based": 14,
+    "source_atom_index_1based": 3486,
+    "source_atom_name": "HG21",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HG22",
+    "native_source_index_0based": 15,
+    "constructed_cap_H": false,
+    "index": 15,
+    "seed42_index_0based": 15,
+    "source_atom_index_1based": 3487,
+    "source_atom_name": "HG22",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "THR:HG23",
+    "native_source_index_0based": 16,
+    "constructed_cap_H": false,
+    "index": 16,
+    "seed42_index_0based": 16,
+    "source_atom_index_1based": 3488,
+    "source_atom_name": "HG23",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:H",
+    "native_source_index_0based": 17,
+    "constructed_cap_H": false,
+    "index": 17,
+    "seed42_index_0based": 17,
+    "source_atom_index_1based": 3493,
+    "source_atom_name": "H",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:HH31",
+    "native_source_index_0based": 18,
+    "constructed_cap_H": false,
+    "index": 18,
+    "seed42_index_0based": 18,
+    "source_atom_index_1based": 3495,
+    "source_atom_name": "HA",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:HH32",
+    "native_source_index_0based": 19,
+    "constructed_cap_H": true,
+    "index": 19,
+    "seed42_index_0based": 19,
+    "source_atom_index_1based": 3504,
+    "source_atom_name": "C",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "NME:HH33",
+    "native_source_index_0based": 20,
+    "constructed_cap_H": true,
+    "index": 20,
+    "seed42_index_0based": 20,
+    "source_atom_index_1based": 3496,
+    "source_atom_name": "CB",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:C70",
+    "native_source_index_0based": 33,
+    "constructed_cap_H": false,
+    "index": 21,
+    "seed42_index_0based": 21,
+    "source_atom_index_1based": 4985,
+    "source_atom_name": "C70",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:C62",
+    "native_source_index_0based": 34,
+    "constructed_cap_H": false,
+    "index": 22,
+    "seed42_index_0based": 22,
+    "source_atom_index_1based": 4986,
+    "source_atom_name": "C62",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:C54",
+    "native_source_index_0based": 35,
+    "constructed_cap_H": false,
+    "index": 23,
+    "seed42_index_0based": 23,
+    "source_atom_index_1based": 4987,
+    "source_atom_name": "C54",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:O49",
+    "native_source_index_0based": 36,
+    "constructed_cap_H": false,
+    "index": 24,
+    "seed42_index_0based": 24,
+    "source_atom_index_1based": 4988,
+    "source_atom_name": "O49",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:N59",
+    "native_source_index_0based": 37,
+    "constructed_cap_H": false,
+    "index": 25,
+    "seed42_index_0based": 25,
+    "source_atom_index_1based": 4989,
+    "source_atom_name": "N59",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:C67",
+    "native_source_index_0based": 38,
+    "constructed_cap_H": false,
+    "index": 26,
+    "seed42_index_0based": 26,
+    "source_atom_index_1based": 4990,
+    "source_atom_name": "C67",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:C75",
+    "native_source_index_0based": 39,
+    "constructed_cap_H": false,
+    "index": 27,
+    "seed42_index_0based": 27,
+    "source_atom_index_1based": 4991,
+    "source_atom_name": "C75",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H21",
+    "native_source_index_0based": 74,
+    "constructed_cap_H": false,
+    "index": 28,
+    "seed42_index_0based": 28,
+    "source_atom_index_1based": 5026,
+    "source_atom_name": "H21",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H22",
+    "native_source_index_0based": 75,
+    "constructed_cap_H": false,
+    "index": 29,
+    "seed42_index_0based": 29,
+    "source_atom_index_1based": 5027,
+    "source_atom_name": "H22",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H23",
+    "native_source_index_0based": 76,
+    "constructed_cap_H": false,
+    "index": 30,
+    "seed42_index_0based": 30,
+    "source_atom_index_1based": 5028,
+    "source_atom_name": "H23",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H24",
+    "native_source_index_0based": 77,
+    "constructed_cap_H": false,
+    "index": 31,
+    "seed42_index_0based": 31,
+    "source_atom_index_1based": 5029,
+    "source_atom_name": "H24",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H25",
+    "native_source_index_0based": 78,
+    "constructed_cap_H": false,
+    "index": 32,
+    "seed42_index_0based": 32,
+    "source_atom_index_1based": 5030,
+    "source_atom_name": "H25",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H26",
+    "native_source_index_0based": 79,
+    "constructed_cap_H": false,
+    "index": 33,
+    "seed42_index_0based": 33,
+    "source_atom_index_1based": 5031,
+    "source_atom_name": "H26",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H27",
+    "native_source_index_0based": 80,
+    "constructed_cap_H": false,
+    "index": 34,
+    "seed42_index_0based": 34,
+    "source_atom_index_1based": 5032,
+    "source_atom_name": "H27",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H28",
+    "native_source_index_0based": 81,
+    "constructed_cap_H": false,
+    "index": 35,
+    "seed42_index_0based": 35,
+    "source_atom_index_1based": 5033,
+    "source_atom_name": "H28",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "PA6:H29",
+    "native_source_index_0based": 82,
+    "constructed_cap_H": false,
+    "index": 36,
+    "seed42_index_0based": 36,
+    "source_atom_index_1based": 5034,
+    "source_atom_name": "H29",
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "origin_id": "WAT:O",
+    "native_source_index_0based": 100,
+    "constructed_cap_H": false,
+    "index": 37,
+    "seed42_index_0based": 37,
+    "source_atom_index_1based": 5052,
+    "source_atom_name": "O",
+    "source_coordinates": "water_only/original_order.rst7"
+  },
+  {
+    "origin_id": "WAT:H1",
+    "native_source_index_0based": 101,
+    "constructed_cap_H": false,
+    "index": 38,
+    "seed42_index_0based": 38,
+    "source_atom_index_1based": 5053,
+    "source_atom_name": "H1",
+    "source_coordinates": "water_only/original_order.rst7"
+  },
+  {
+    "origin_id": "WAT:H2",
+    "native_source_index_0based": 102,
+    "constructed_cap_H": false,
+    "index": 39,
+    "seed42_index_0based": 39,
+    "source_atom_index_1based": 5054,
+    "source_atom_name": "H2",
+    "source_coordinates": "water_only/original_order.rst7"
+  },
+  {
+    "origin_id": "PA6:HC70",
+    "native_source_index_0based": null,
+    "constructed_cap_H": true,
+    "cut": [
+      "PA6:C70",
+      "PA6:C78"
+    ],
+    "CH_distance_A": 1.09,
+    "index": 40,
+    "seed42_index_0based": 40
+  },
+  {
+    "origin_id": "PA6:HC75",
+    "native_source_index_0based": null,
+    "constructed_cap_H": true,
+    "cut": [
+      "PA6:C75",
+      "PA6:C79"
+    ],
+    "CH_distance_A": 1.09,
+    "index": 41,
+    "seed42_index_0based": 41
+  },
+  {
+    "origin_id": "NMA:112:CA",
+    "source_atom_index_1based": 1621,
+    "source_residue_1based": 112,
+    "source_residue_name": "ILE",
+    "source_atom_name": "CA",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 42
+  },
+  {
+    "origin_id": "NMA:112:HA",
+    "source_atom_index_1based": 1622,
+    "source_residue_1based": 112,
+    "source_residue_name": "ILE",
+    "source_atom_name": "HA",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 43
+  },
+  {
+    "origin_id": "NMA:112:C",
+    "source_atom_index_1based": 1636,
+    "source_residue_1based": 112,
+    "source_residue_name": "ILE",
+    "source_atom_name": "C",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 44
+  },
+  {
+    "origin_id": "NMA:112:O",
+    "source_atom_index_1based": 1637,
+    "source_residue_1based": 112,
+    "source_residue_name": "ILE",
+    "source_atom_name": "O",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 45
+  },
+  {
+    "origin_id": "NMA:113:N",
+    "source_atom_index_1based": 1638,
+    "source_residue_1based": 113,
+    "source_residue_name": "PHE",
+    "source_atom_name": "N",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 46
+  },
+  {
+    "origin_id": "NMA:113:H",
+    "source_atom_index_1based": 1639,
+    "source_residue_1based": 113,
+    "source_residue_name": "PHE",
+    "source_atom_name": "H",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 47
+  },
+  {
+    "origin_id": "NMA:113:CA",
+    "source_atom_index_1based": 1640,
+    "source_residue_1based": 113,
+    "source_residue_name": "PHE",
+    "source_atom_name": "CA",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 48
+  },
+  {
+    "origin_id": "NMA:113:HA",
+    "source_atom_index_1based": 1641,
+    "source_residue_1based": 113,
+    "source_residue_name": "PHE",
+    "source_atom_name": "HA",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 49
+  },
+  {
+    "origin_id": "NMA:112:HCAP_N",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7",
+    "CH_distance_A": 1.09,
+    "cut_source_atom_indices_1based": [
+      1621,
+      1619
+    ],
+    "cut": [
+      "112:CA",
+      "112:N"
+    ],
+    "index": 50
+  },
+  {
+    "origin_id": "NMA:112:HCAP_CB",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7",
+    "CH_distance_A": 1.09,
+    "cut_source_atom_indices_1based": [
+      1621,
+      1623
+    ],
+    "cut": [
+      "112:CA",
+      "112:CB"
+    ],
+    "index": 51
+  },
+  {
+    "origin_id": "NMA:113:HCAP_C",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7",
+    "CH_distance_A": 1.09,
+    "cut_source_atom_indices_1based": [
+      1640,
+      1656
+    ],
+    "cut": [
+      "113:CA",
+      "113:C"
+    ],
+    "index": 52
+  },
+  {
+    "origin_id": "NMA:113:HCAP_CB",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7",
+    "CH_distance_A": 1.09,
+    "cut_source_atom_indices_1based": [
+      1640,
+      1642
+    ],
+    "cut": [
+      "113:CA",
+      "113:CB"
+    ],
+    "index": 53
+  },
+  {
+    "origin_id": "ACM:186:CB",
+    "source_atom_index_1based": 2727,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "CB",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 54
+  },
+  {
+    "origin_id": "ACM:186:HB2",
+    "source_atom_index_1based": 2728,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "HB2",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 55
+  },
+  {
+    "origin_id": "ACM:186:HB3",
+    "source_atom_index_1based": 2729,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "HB3",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 56
+  },
+  {
+    "origin_id": "ACM:186:CG",
+    "source_atom_index_1based": 2730,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "CG",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 57
+  },
+  {
+    "origin_id": "ACM:186:OD1",
+    "source_atom_index_1based": 2731,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "OD1",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 58
+  },
+  {
+    "origin_id": "ACM:186:ND2",
+    "source_atom_index_1based": 2732,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "ND2",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 59
+  },
+  {
+    "origin_id": "ACM:186:HD21",
+    "source_atom_index_1based": 2733,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "HD21",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 60
+  },
+  {
+    "origin_id": "ACM:186:HD22",
+    "source_atom_index_1based": 2734,
+    "source_residue_1based": 186,
+    "source_residue_name": "ASN",
+    "source_atom_name": "HD22",
+    "source_coordinates": "prepared.rst7",
+    "constructed_cap_H": false,
+    "index": 61
+  },
+  {
+    "origin_id": "ACM:186:HCAP_CA",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7",
+    "CH_distance_A": 1.09,
+    "cut_source_atom_indices_1based": [
+      2727,
+      2725
+    ],
+    "cut": [
+      "186:CB",
+      "186:CA"
+    ],
+    "index": 62
+  }
+]

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 287, in <module>
+    main()
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 201, in main
+    molecule, xyz, records, frame = build_cluster()
+                                    ^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 95, in build_cluster
+    records, frame = _frame_check(model, xyz)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/prepare_oxyanion_cluster.py", line 68, in _frame_check
+    raise ValueError(
+ValueError: Source coordinate-frame mismatch: NME:HH32

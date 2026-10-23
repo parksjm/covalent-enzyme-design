@@ -1,3 +1,64 @@
+## ACTIVE: oxyanion-donor/water cluster pilot — 2026-10-23
+
+User approved N-methylacetamide for Phe113 backbone NH, acetamide for Asn186
+side-chain amide, and relay water, then selected omegaB97X-D/def2-SVP.
+New cluster: output_nyl12_oxyanion_cluster_20261023/seed_01/; 63 atoms,
+C15H37N5O6, charge 0, singlet, 37 explicit H. Components: 39-atom TI1,
+3-atom water, 12-atom NMA, 9-atom acetamide. Original 42 seed coordinates
+unchanged; protein frame verified without alignment; R at C54 retained.
+Phe H--O49=1.7133 A; Asn HD22--O49=2.1559 A. Seed geometry screen passes.
+
+ACTIVE tmux: nyl12_oxyanion63_svp_20261023, started 16:40:57 EDT.
+Job: output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/job/.
+Gaussian input/policy/log in parent svp_pilot_01/. Uses 16 physical cores,
+32 GB, ReadAllGIC, MaxStep=2, at most 20 optimization cycles; no Hessian,
+extra dispersion or solvent. Short state-retention pilot, not a force-field
+reference. All 37 H and 5 reactive/water heavy atoms move. Freeze original
+12 scaffold heavy atoms, 9 added donor heavy atoms at protein positions,
+and source AF3 chi1. No reaction-bond/proton restraint. Donor heavy freezes
+represent held protein geometry, not a freely optimized isolated cluster.
+Remaining protein electrostatics are absent; enzyme TI1 is not established.
+
+Twelve focused tests pass in scripted tmux; Ruff passes. Source line coverage:
+assessor 93.44%, donor helper 93.02%, cluster builder 94.52%, pilot preparer
+91.94%. New gate checks all three ammonium N--H (0.85--1.25 A) and their
+OG1--H distances (>=1.20 A), in addition to graph/stereo/oxyanion checks.
+Final assessment runs even if Gaussian exits unsuccessfully. A cycle-limit
+exit is not convergence; retention over a short pilot is not a proven minimum.
+Inspect actual job status and log before continuing. No RESP, FF acceptance,
+protein refinement, MD, AF3 or redesign campaign was started. Earlier stopped
+water-free39 data remain preserved and rejected as a TI1 reference.
+
+Seed construction/preparation/test scripts, source snapshots, hashes and all
+failed preparation attempts remain in the new output root. Routine fragment
+scripting delegated to Sol High and reviewed. Active journal unchanged:
+output_agent_actions/20261021.jsonl. Unrelated cif/ and other tmux untouched.
+The laptop package includes qm/ti1_oxyanion_cluster/view_seed.pml and seed,
+plus pilot/input.gjf and pilot/pilot_policy.json. Next: assess state retention,
+not automatic extension, charge fitting or force-field transfer.
+
+## STOPPED: water-free TI1 reverses to reactant-like state — 2026-10-23
+
+User requested stop after observing reverse proton transfer. The verified
+worker3978424 receivedSIGTERM; jobended16:20:27EDT/20:20:27UTC,exit1.
+All files preserved. No Gaussian job from this effort is now running and no
+replacement model/method was launched. Earlier active-job notes are history.
+
+Stopped19-frame analysis confirms ThrN–H3 lengthens1.010->1.488A while
+OG1–H3 shortens1.993->0.916A; OG1–C54=2.139A, C54–O49=1.220A lastframe.
+This is not a TI1 fitting reference. See
+output_nyl12_waterfree_reference_20261023/state_loss_review_01/report.json.
+
+Source-protein candidate oxyanion donors: Phe113 backboneNH (H–O49=1.713A)
+and Asn186 ND2-HD22 (2.156A). Proposed next model restores relaywater plus
+these actual donor fragments, retains shortsubstrate, and defines protein
+boundary/embedding treatment. Exact caps still need mapping; no new run.
+See docs/ti1_state_loss_and_qm_options_20261023.md for the measured evidence,
+proposed~63atomlocalcluster, proton-transfer screening improvement and QM-cost
+options. Basis/functional pivot is not yet adopted. KeepexistingTZVPdata;
+considerlower-costbasis with samefunctional and targetedlarger/diffusebasis
+checks. No RESP/forcefield/MD accepted. Livejournal unchanged.
+
 ## Trajectory inspection warning — 2026-10-23
 
 A 14-frame snapshot is exported at

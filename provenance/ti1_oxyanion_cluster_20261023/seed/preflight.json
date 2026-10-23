@@ -1,0 +1,67 @@
+{
+  "chemical_inventory_passed": true,
+  "atom_count": 63,
+  "formula": "C15H37N5O6",
+  "formal_charge": 0,
+  "multiplicity": 1,
+  "explicit_H": 37,
+  "component_atom_counts": [
+    3,
+    9,
+    12,
+    39
+  ],
+  "coordinate_stereocenters": {
+    "THR:CA": "S",
+    "THR:CB": "R",
+    "PA6:C54": "R"
+  },
+  "geometry": {
+    "accepted": true,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "geometry_failures": []
+  },
+  "geometry_screen_passed": true,
+  "donor_contacts": [
+    {
+      "donor": "NMA:113:N",
+      "hydrogen": "NMA:113:H",
+      "N_O_A": 2.6965559515797186,
+      "H_O_A": 1.713312029837067,
+      "N_H_O_deg": 163.3553395050073
+    },
+    {
+      "donor": "ACM:186:ND2",
+      "hydrogen": "ACM:186:HD21",
+      "N_O_A": 2.977613473908258,
+      "H_O_A": 3.1603060178003597,
+      "N_H_O_deg": 70.40009224965246
+    },
+    {
+      "donor": "ACM:186:ND2",
+      "hydrogen": "ACM:186:HD22",
+      "N_O_A": 2.977613473908258,
+      "H_O_A": 2.155913947321133,
+      "N_H_O_deg": 137.25348189011896
+    }
+  ],
+  "optimized": false,
+  "parameter_validated": false,
+  "coordinate_frame": {
+    "common_nonwater_atoms": 35,
+    "common_nonwater_max_displacement_A": 0.0,
+    "water_atoms": 3,
+    "water_source_max_displacement_A": 0.0,
+    "alignment_applied": false
+  },
+  "retained_seed42_max_displacement_A": 0.0
+}

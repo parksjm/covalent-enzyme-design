@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/tmp/nyl12_donor_checkpoint.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md": "dfc2a32e2b26cff50bb44e029f5202e6d0934c19458fc504d258575aa43b3933",
+    "/data/jpc/covalent-enzyme-design/docs/ti1_state_loss_and_qm_options_20261023.md": "211c6a4cb3a7ccbf109973d9f16493430d3d4167f59704b74ca16d4073c2835d",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/seed_01/preflight.json": "d0792a6458d99f37d11a47a869ea3b50ae784a9b82c2b8318c0894426423aa77",
+    "/tmp/nyl12_donor_checkpoint.py": "4aa77b465eac3373166c4adbbf9923670b57d8c06a0e39229b4fffbc791809da"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/checkpoint_job/job.log",
+  "session_name": "nyl12_oxyanion_checkpoint_20261023",
+  "started_utc": null
+}

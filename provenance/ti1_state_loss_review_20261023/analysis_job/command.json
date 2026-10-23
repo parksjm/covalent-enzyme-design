@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_waterfree_reference_20261023/state_loss_review_01/review.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/state_loss_review_01/review.py": "69b2903bfba3e229a7bda298fef50a48d974ed44173cf8fc7f918d46902d5bd1",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/atom_map.json": "136c010370763290341861a262c4b08f3e8412eb5d03fda3f1bc5efbd613e2d3",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/optimization.log": "7379bbf6ae28f4e51cf9b289e3a941831168bcd1a9776e70c5986ffc750c5325"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/state_loss_review_01/job/job.log",
+  "session_name": "nyl12_ti1_state_loss_review_20261023",
+  "started_utc": null
+}

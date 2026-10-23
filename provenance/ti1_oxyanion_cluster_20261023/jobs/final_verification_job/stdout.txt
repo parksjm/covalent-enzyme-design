@@ -1,0 +1,6 @@
+............                                                             [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Coverage JSON written to file output_nyl12_oxyanion_cluster_20261023/final_coverage.json
+12 passed in 3.81s

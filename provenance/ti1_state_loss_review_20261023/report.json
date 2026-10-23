@@ -1,0 +1,133 @@
+{
+  "stopped_log_sha256": "7379bbf6ae28f4e51cf9b289e3a941831168bcd1a9776e70c5986ffc750c5325",
+  "frames": 19,
+  "initial": {
+    "source_log_line": 342,
+    "OG1_C54_A": 1.335330670658021,
+    "C54_O49_A": 1.3426935614651618,
+    "ammonium_H": {
+      "THR:H1": {
+        "N_H_A": 1.010000609264668,
+        "OG1_H_A": 3.3944579895345592
+      },
+      "THR:H2": {
+        "N_H_A": 1.0100004057370475,
+        "OG1_H_A": 3.0450548730013067
+      },
+      "THR:HG1": {
+        "N_H_A": 1.009999524464739,
+        "OG1_H_A": 1.9931171835642276
+      }
+    }
+  },
+  "last_complete": {
+    "source_log_line": 13943,
+    "OG1_C54_A": 2.139311092611124,
+    "C54_O49_A": 1.2200972239579932,
+    "ammonium_H": {
+      "THR:H1": {
+        "N_H_A": 1.0129039751782987,
+        "OG1_H_A": 3.1032121905372505
+      },
+      "THR:H2": {
+        "N_H_A": 1.012842153350659,
+        "OG1_H_A": 2.6467604962691658
+      },
+      "THR:HG1": {
+        "N_H_A": 1.4877881219081566,
+        "OG1_H_A": 0.9161251248186572
+      }
+    }
+  },
+  "candidate_donors_source_AF3_not_validated": [
+    {
+      "chain": "A",
+      "resid": 113,
+      "resname": "PHE",
+      "topology_residue_1based": 113,
+      "donor": "N",
+      "hydrogen": "H",
+      "H_O49_A": 1.713312029837067,
+      "donor_O49_A": 2.6965559515797186,
+      "D_H_O49_angle_deg": 163.3553395050073
+    },
+    {
+      "chain": "A",
+      "resid": 186,
+      "resname": "ASN",
+      "topology_residue_1based": 186,
+      "donor": "ND2",
+      "hydrogen": "HD22",
+      "H_O49_A": 2.155913947321133,
+      "donor_O49_A": 2.977613473908258,
+      "D_H_O49_angle_deg": 137.25348189011896
+    },
+    {
+      "chain": "E",
+      "resid": 1,
+      "resname": "THR",
+      "topology_residue_1based": 233,
+      "donor": "N",
+      "hydrogen": "H3",
+      "H_O49_A": 3.0272266296964205,
+      "donor_O49_A": 3.894428584529442,
+      "D_H_O49_angle_deg": 144.56556169253633
+    },
+    {
+      "chain": "A",
+      "resid": 186,
+      "resname": "ASN",
+      "topology_residue_1based": 186,
+      "donor": "ND2",
+      "hydrogen": "HD21",
+      "H_O49_A": 3.1603060178003597,
+      "donor_O49_A": 2.977613473908258,
+      "D_H_O49_angle_deg": 70.40009224965246
+    },
+    {
+      "chain": "E",
+      "resid": 41,
+      "resname": "GLY",
+      "topology_residue_1based": 273,
+      "donor": "N",
+      "hydrogen": "H",
+      "H_O49_A": 4.286776682050677,
+      "donor_O49_A": 5.1048985298436635,
+      "D_H_O49_angle_deg": 140.31020082246292
+    },
+    {
+      "chain": "E",
+      "resid": 1,
+      "resname": "THR",
+      "topology_residue_1based": 233,
+      "donor": "N",
+      "hydrogen": "H1",
+      "H_O49_A": 4.419908086350594,
+      "donor_O49_A": 3.894428584529442,
+      "D_H_O49_angle_deg": 52.87149778372644
+    },
+    {
+      "chain": "E",
+      "resid": 1,
+      "resname": "THR",
+      "topology_residue_1based": 233,
+      "donor": "N",
+      "hydrogen": "H2",
+      "H_O49_A": 4.632458293236251,
+      "donor_O49_A": 3.894428584529442,
+      "D_H_O49_angle_deg": 38.59935589431588
+    },
+    {
+      "chain": "A",
+      "resid": 112,
+      "resname": "ILE",
+      "topology_residue_1based": 112,
+      "donor": "N",
+      "hydrogen": "H",
+      "H_O49_A": 5.4331481247082865,
+      "donor_O49_A": 4.579227554948542,
+      "D_H_O49_angle_deg": 29.311185388609623
+    }
+  ],
+  "interpretation": "Geometry evidence only; no replacement calculation or parameter acceptance"
+}

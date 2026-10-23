@@ -1,0 +1,9 @@
+{
+  "pid": 3978424,
+  "command": "/usr/local/g16/l502.exe 4294967296 optimization.chk 1 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978424.int 0 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978424.rwf 0 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978424.d2e 0 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978424.skr 0 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978422.inp 0 no-output-file 0 /data/scratch/gaussian_scratch/jpc/waterfree39_gic_20261023_attempt01/Gau-3978424.nex 0 nofchk 0 ",
+  "signal": "SIGTERM",
+  "time_utc": "2026-10-23T20:20:26.608712+00:00",
+  "reason": "User requested stop: observed NH3-to-OG1 proton transfer and reactant-like TI1 collapse",
+  "preserve_all_original_artifacts": true,
+  "parameter_reference_accepted": false
+}

@@ -1,0 +1,9 @@
+{
+  "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/optimization.log": "7379bbf6ae28f4e51cf9b289e3a941831168bcd1a9776e70c5986ffc750c5325",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/atom_map.json": "136c010370763290341861a262c4b08f3e8412eb5d03fda3f1bc5efbd613e2d3",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/model.prmtop": "bb0f1eeed62af7afac5bf4a361e2acd1c7604edcf58416190fa416f714754aa2",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/prepared.rst7": "cb79558a0ec0496bf9b79902510c1560ae9be0a608094deaab0ee09dab77570e",
+  "/data/jpc/covalent-enzyme-design/scripts/gaussian_log_to_xyz.py": "6a5628c8e38a244121e6135efe5cc69620e9be72f4593a5c4e5b1ba774a3632b",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/active_site_geometry.py": "834b5782f41e2e71033de8fd74befc91b9fffa08d4802105bc597ebfa0bbd455",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/local_repair_model.py": "9d4ab9a290bbad5f2d29c7818dfc145e26342cef09423b9d409a02efe6baaf32"
+}
