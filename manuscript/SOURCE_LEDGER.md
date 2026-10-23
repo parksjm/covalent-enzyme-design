@@ -212,3 +212,17 @@ Small evidence and explicit failed/repaired audit attempts are in
 provenance/ti1_completed_reference_20261022/. Installed MCPB bond extraction
 passed eight analytic convention checks; modified-angle and real-QM fitting
 validation remain outstanding. These checks do not supply TI1 parameters.
+
+
+## Standard Amber workflow clarification — 2026-10-22 evening
+
+Installed topology.py confirms original GAFF, AM1-BCC/Gasteiger provisional
+scaffold charges and a hard-coded neutral intact substrate; it is not the
+new coupled-state Gaussian/RESP fit. The planned candidate is ff19SB/GAFF2
+with explicit native-state RESP controls and targeted refits only if needed.
+Official antechamber documentation and tutorial4b were consulted at
+https://ambermd.org/antechamber/ac.html and
+https://ambermd.org/tutorials/basic/tutorial4b/index.php; installed CLI was
+checked for current GAFF2 support. MCPB manufactured angle checks passed
+96 cases and three shared-angle examples; neither they nor the prospective
+22-point local validation plan supplies or certifies TI1 parameters.

@@ -153,3 +153,41 @@ on the subsequent clean target-unit extraction/verification. No library was
 modified. Reports and exact helpers are under
 output_nyl12_parameter_validation_20261022/{parallel_prerequisites_01,
 native_library_extract_01,native_library_verification_01}/.
+
+## Amber tools and force-field baseline — explicit clarification
+
+Source audit on 2026-10-22 confirms that the legacy topology helper
+`parameterize_poly_xama` uses original GAFF (`antechamber -at gaff`,
+`parmchk2 -s gaff`, `leaprc.gaff`) with provisional AM1-BCC or Gasteiger
+charges on the intact substrate. It hard-codes a neutral intact substrate.
+It has not parameterized the new coupled TI1 state with Gaussian RESP and
+must not be reused unchanged for the capped anion or native adduct.
+
+The intended new candidate baseline is ff19SB for unmodified protein and
+GAFF2 for ordinary substrate chemistry, with TIP3P water. Retain standard
+ff19SB protein atom types/terms; do not antechamber-type the entire protein.
+Use explicit GAFF2 selection consistently in antechamber, parmchk2 and LEaP;
+record the exact installed parameter-file hashes. This is a candidate method
+selection, not an executed migration or an accepted new force field.
+
+Use Gaussian wB97XD/def2TZVP for reference geometry/Hessian and separate
+HF/6-31G(d) MK ESP data for Amber RESP charges. Antechamber supports Gaussian
+output and charge/type preparation; espgen/respgen/resp are the standard
+AmberTools building blocks. The native multi-conformer, fixed-cap/backbone/
+water constraints require retained explicit RESP control files and charge
+mapping. A default one-command ligand RESP fit does not by itself implement
+those constraints. Surrogate and native charge fits remain separate.
+
+First assign and test the standard ff19SB/GAFF2 candidate, including review of
+all TI1 atom types and parmchk2 estimates. Refit missing or demonstrably
+inadequate reactive-region bond/angle/torsion terms against QM data, without
+replacing unrelated validated protein terms. The optional modified-Seminario
+candidate extraction and its manufactured convention tests are additional
+checks, not a claim that antechamber normally derives all bonded parameters
+from a Gaussian Hessian. Do not emit bespoke parameters merely because a
+Hessian block is available. Acceptance still requires cap sensitivity,
+independent local energy/geometry checks and native-state transfer validation.
+
+Primary sources inspected: installed AmberTools26 source/CLI and
+https://ambermd.org/antechamber/ac.html plus
+https://ambermd.org/tutorials/basic/tutorial4b/index.php.

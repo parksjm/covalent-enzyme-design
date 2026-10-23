@@ -1,0 +1,37 @@
+{
+  "files": {
+    "agent_actions_snapshot.jsonl": {
+      "sha256": "3977d3fe84282e971ab6de4b2fc7de8811ac9837a062e3fc543d0e178eb8fb0f",
+      "bytes": 511295
+    },
+    "angle_convention_audit.json": {
+      "sha256": "415601f1d238c607c76430e0663db5486afbbe084d1cbe90c89b118904930eb0",
+      "bytes": 41107
+    },
+    "check_mcpb_angle_conventions_20261022.py.txt": {
+      "sha256": "e6671300637b8be263d4ede3a3f2dff60ec0e2596644bf469cdaa3fb39213864",
+      "bytes": 10322
+    },
+    "command.json": {
+      "sha256": "f2d559e5bfe7fde59d225d6c2c45b308db7422ec1b4e6701fc69d8323c095499",
+      "bytes": 1120
+    },
+    "job.log.txt": {
+      "sha256": "649156605ee6a6fc7496907294967f2441f9e9174f8acf91e7985be623529b9b",
+      "bytes": 193
+    },
+    "run.sh": {
+      "sha256": "b02f90a1d44c44e2de6aac380377e5718a4b733298b378fb78d0ecfcb2fa86ce",
+      "bytes": 1595
+    },
+    "source_snapshots.json": {
+      "sha256": "5da2c94d1392f4feff1d350e8b9188fcf824777f397adfbcea252ee22d5d425c",
+      "bytes": 1097
+    },
+    "status.json": {
+      "sha256": "a2e7d81e88538fa306b874dcf513c1d5b67b603d3660a44e259e74a39a1b7b82",
+      "bytes": 1167
+    }
+  },
+  "forcefield_validated": false
+}

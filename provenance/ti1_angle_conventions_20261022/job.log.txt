@@ -1,0 +1,1 @@
+INFO:__main__:Manufactured MCPB angle convention audit passed: /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/mcpb_angle_conventions_01/angle_convention_audit.json

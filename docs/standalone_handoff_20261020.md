@@ -1,5 +1,39 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Amber workflow clarification and parallel checks — 2026-10-22 evening
+
+The user asked whether this uses standard Amber parameterization with
+antechamber/Gaussian and ff19SB plus GAFF/GAFF2. Source audit confirms the
+legacy scaffold uses original GAFF, not GAFF2, and provisional AM1-BCC or
+Gasteiger charges. The new coupled TI1 Gaussian/RESP fit has not run.
+Do not describe the existing topology as Gaussian-RESP parameterized.
+
+New candidate plan: retain ff19SB for unmodified protein, use GAFF2 for
+ordinary substrate chemistry, and fit separate HF/6-31G(d) MK ESP/RESP charges
+with AmberTools utilities and explicit coupled-state/cap constraints. Use
+antechamber for typing/file preparation and parmchk2 for parameter inventory;
+validate their assignments. First test the standard candidate; refit only
+missing or demonstrably inadequate reactive terms. Modified-Seminario is an
+optional targeted tool, not an antechamber replacement or an automatic refit
+of all bonds/angles. No legacy topology was migrated and no new FF was fitted.
+Full detail: docs/ti1_parameter_protocol_20261022.md, final section.
+
+While Hessians run, installed MCPB angle routines passed 96 manufactured
+pair-spring/compliance checks plus three shared-angle tests, covering units,
+AMBER harmonic convention, scaling, endpoint reversal and rotation. This is
+API/convention verification, not recovery of an arbitrary physical molecular
+Hessian or validation of TI1 parameters. Exact script, process log and report:
+output_nyl12_parameter_validation_20261022/mcpb_angle_conventions_01/.
+Compact versioned evidence: provenance/ti1_angle_conventions_20261022/.
+
+The prospective independent validation plan is now
+`docs/ti1_heldout_validation_plan_20261022.md`: 22 initial bond/angle distortions
+per accepted reference, fixed baseline torsions, exact-coordinate QM/full-MM
+comparisons and explicit training/validation separation. No scan inputs or
+Gaussian scan jobs have been generated. Torsions and native-state transfer
+still need separate coverage. Existing scientific gates and live tmux jobs
+remain unchanged; user AF3 work remains untouched.
+
 ## Resumed checkpoint — 2026-10-22, 20:36 EDT
 
 The user explicitly resumed; the previous 21:00 UTC stopping point is historical.

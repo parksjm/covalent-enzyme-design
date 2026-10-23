@@ -239,3 +239,15 @@ fit/held-out ESP errors and transfer validation remain required. User visual
 approval of interim trajectories is recorded separately from computational
 acceptance. Neither this preparation nor test-suite success certifies the TI1
 force field.
+
+
+## Planned Amber baseline — not yet parameterized
+
+The legacy provisional topology uses original GAFF and preliminary charges.
+The new candidate workflow will retain ff19SB for unmodified protein, use
+GAFF2 for ordinary substrate terms, and use Gaussian HF/6-31G(d) MK ESP data
+with AmberTools RESP utilities and explicit coupled-state constraints.
+Standard assigned terms will be validated before targeted QM refitting of
+missing or inadequate reactive-region terms. Antechamber/parmchk2 assignments
+are a baseline, not a certification of the covalent intermediate. No new
+coupled TI1 RESP fit or GAFF2 topology is completed at this checkpoint.

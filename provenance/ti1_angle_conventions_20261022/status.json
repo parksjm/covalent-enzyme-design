@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/check_mcpb_angle_conventions_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T00:46:23.469268Z",
+  "env_overrides": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7",
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mol/constants.py": "f393ec014df4a093e91d91164ff5e91682e431c32f198225a2720d321ad73a5f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/check_mcpb_angle_conventions_20261022.py": "e6671300637b8be263d4ede3a3f2dff60ec0e2596644bf469cdaa3fb39213864"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/mcpb_angle_conventions_01/job/job.log",
+  "session_name": "nyl12_mcpb_angle_units01_20261022",
+  "started_utc": "2026-10-23T00:46:22.251865Z"
+}

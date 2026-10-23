@@ -1,0 +1,1633 @@
+{
+  "accepted": true,
+  "angle_fit_cases": [
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967928,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449999,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967928,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449999,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728554,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008624,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728554,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008624,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967928,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449999,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967928,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449999,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728554,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008624,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728554,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 60.00000000000001,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008624,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 60.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814499956,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.9947759000862,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967935,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681450003,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967935,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681450003,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728561,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008627,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728561,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008627,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967935,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681450003,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967935,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681450003,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728561,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008627,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728561,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 90.0,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008627,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 90.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449995,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449995,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.994775900086196,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.994775900086196,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449995,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.9129802296792,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.50390681449995,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.994775900086196,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728547,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.994775900086196,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "identity",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967929,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814500006,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967929,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814500006,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728555,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008625,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728555,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008625,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": false,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967929,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814500006,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 86.9129802296792,
+      "force_constant": 86.91298022967929,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 56.503906814499956,
+      "force_constant": 56.503906814500006,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 1.0,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728555,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 0,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008625,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 78.43896465728548,
+      "force_constant": 78.43896465728555,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.0,
+        1.0
+      ],
+      "theta_degrees": 120.0
+    },
+    {
+      "angle_average": 1,
+      "angle_degrees": 119.99999999999999,
+      "expected_force_constant": 50.99477590008621,
+      "force_constant": 50.99477590008625,
+      "imaginary_magnitude": 0.0,
+      "passed": true,
+      "reversed_endpoints": true,
+      "rotation": "proper_rotation",
+      "scale": 0.95,
+      "shared_angle_scales": [
+        1.4,
+        1.8
+      ],
+      "theta_degrees": 120.0
+    }
+  ],
+  "forcefield_validated": false,
+  "manufactured_case_count": 96,
+  "scope": "Manufactured pair-block/compliance conventions only; not a physical free-molecule Hessian or TI1 validation.",
+  "shared_angle_cases": [
+    {
+      "actual": [
+        [
+          2.0,
+          2.0000000000000004
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0000000000000004,
+          2.0
+        ]
+      ],
+      "case": "three_planar_angles",
+      "expected": [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          2.0
+        ]
+      ]
+    },
+    {
+      "actual": [
+        [
+          1.5,
+          1.0
+        ],
+        [
+          1.5,
+          1.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "case": "three_nonplanar_angles",
+      "expected": [
+        [
+          1.5,
+          1.0
+        ],
+        [
+          1.5,
+          1.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "actual": [
+        [
+          1,
+          1
+        ]
+      ],
+      "case": "single_angle",
+      "expected": [
+        [
+          1.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "source_sha256": {
+    "audit_script": "e6671300637b8be263d4ede3a3f2dff60ec0e2596644bf469cdaa3fb39213864",
+    "constants_module": "f393ec014df4a093e91d91164ff5e91682e431c32f198225a2720d321ad73a5f",
+    "fitting_module": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7"
+  },
+  "ti1_parameters_fitted": false,
+  "versions": {
+    "numpy": "2.4.4",
+    "python": "3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]"
+  }
+}

@@ -1,0 +1,275 @@
+"""Check MCPB angle conversion on manufactured pair-spring Hessians."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import sys
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+from pymsmt.mol import constants
+from pymsmt.mcpb import gene_final_frcmod_file as fitting
+
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+OUTPUT = (
+    ROOT / "output_nyl12_parameter_validation_20261022" / "mcpb_angle_conventions_01"
+)
+LOGGER = logging.getLogger(__name__)
+PAIR_A = 0.08
+PAIR_C = 0.11
+PAIR_A_RADIAL = 0.25
+PAIR_C_RADIAL = 0.30
+PAIR_A_NORMAL = 0.05
+PAIR_C_NORMAL = 0.06
+
+
+def _sha256(path: Path) -> str:
+    """Return the SHA-256 digest of a source file."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _rotation() -> np.ndarray:
+    """Return a fixed proper rotation for the invariance checks."""
+    angle_z = 0.37
+    angle_y = -0.61
+    rotate_z = np.array(
+        [
+            [np.cos(angle_z), -np.sin(angle_z), 0.0],
+            [np.sin(angle_z), np.cos(angle_z), 0.0],
+            [0.0, 0.0, 1.0],
+        ]
+    )
+    rotate_y = np.array(
+        [
+            [np.cos(angle_y), 0.0, np.sin(angle_y)],
+            [0.0, 1.0, 0.0],
+            [-np.sin(angle_y), 0.0, np.cos(angle_y)],
+        ]
+    )
+    return rotate_z @ rotate_y
+
+
+def _manufactured_system(
+    angle_degrees: float,
+) -> tuple[np.ndarray, np.ndarray, float, float]:
+    """Build a three-atom geometry and anisotropic pair-spring Hessian."""
+    length_a = 2.3
+    length_c = 2.7
+    angle = np.deg2rad(angle_degrees)
+    direction_a = np.array([1.0, 0.0, 0.0])
+    direction_c = np.array([np.cos(angle), np.sin(angle), 0.0])
+    normal = np.array([0.0, 0.0, 1.0])
+    perpendicular_a = np.cross(normal, direction_a)
+    perpendicular_c = np.cross(direction_c, normal)
+    pair_a = (
+        PAIR_A * np.outer(perpendicular_a, perpendicular_a)
+        + PAIR_A_RADIAL * np.outer(direction_a, direction_a)
+        + PAIR_A_NORMAL * np.outer(normal, normal)
+    )
+    pair_c = (
+        PAIR_C * np.outer(perpendicular_c, perpendicular_c)
+        + PAIR_C_RADIAL * np.outer(direction_c, direction_c)
+        + PAIR_C_NORMAL * np.outer(normal, normal)
+    )
+    hessian = np.zeros((9, 9))
+    hessian[0:3, 0:3] += pair_a
+    hessian[3:6, 3:6] += pair_a + pair_c
+    hessian[6:9, 6:9] += pair_c
+    hessian[0:3, 3:6] -= pair_a
+    hessian[3:6, 0:3] -= pair_a
+    hessian[3:6, 6:9] -= pair_c
+    hessian[6:9, 3:6] -= pair_c
+    coordinates = np.concatenate(
+        (
+            length_a * direction_a,
+            np.zeros(3),
+            length_c * direction_c,
+        )
+    )
+    return coordinates, hessian, length_a, length_c
+
+
+def _permute_endpoints(
+    coordinates: np.ndarray, hessian: np.ndarray
+) -> tuple[np.ndarray, np.ndarray]:
+    """Reverse the outer-atom ordering while retaining the central atom."""
+    atom_order = (2, 1, 0)
+    coordinate_order = np.concatenate(
+        [np.arange(3 * index, 3 * index + 3) for index in atom_order]
+    )
+    return coordinates[coordinate_order], hessian[
+        np.ix_(coordinate_order, coordinate_order)
+    ]
+
+
+def _angle_scales() -> list[dict[str, Any]]:
+    """Evaluate the MCPB shared-angle scaling rule on known geometries."""
+    atom_ids = [10, 20, 30, 40]
+    atom_names = {10: 1, 20: 2, 30: 3, 40: 4}
+    angle_list = [(10, 20, 30), (10, 20, 40), (30, 20, 40)]
+    planar_positions = np.array(
+        [
+            [1.0, 0.0, 0.0],
+            [0.0, 0.0, 0.0],
+            [np.cos(2 * np.pi / 3), np.sin(2 * np.pi / 3), 0.0],
+            [np.cos(4 * np.pi / 3), np.sin(4 * np.pi / 3), 0.0],
+        ]
+    )
+    nonplanar_positions = np.array(
+        [
+            [2.0, 0.0, 0.0],
+            [0.0, 0.0, 0.0],
+            [0.0, 2.0, 0.0],
+            [0.0, np.sqrt(2.0), np.sqrt(2.0)],
+        ]
+    )
+    planar = fitting.get_angle_scaling_list(
+        angle_list, planar_positions.flatten().tolist(), atom_ids, atom_names
+    )
+    nonplanar = fitting.get_angle_scaling_list(
+        angle_list, nonplanar_positions.flatten().tolist(), atom_ids, atom_names
+    )
+    single = fitting.get_angle_scaling_list(
+        [(10, 20, 30)],
+        planar_positions[:3].flatten().tolist(),
+        atom_ids[:3],
+        atom_names,
+    )
+    return [
+        {
+            "case": "three_planar_angles",
+            "actual": np.asarray(planar).tolist(),
+            "expected": [[2.0, 2.0]] * 3,
+        },
+        {
+            "case": "three_nonplanar_angles",
+            "actual": np.asarray(nonplanar).tolist(),
+            "expected": [[1.5, 1.0], [1.5, 1.0], [1.0, 1.0]],
+        },
+        {
+            "case": "single_angle",
+            "actual": np.asarray(single).tolist(),
+            "expected": [[1.0, 1.0]],
+        },
+    ]
+
+
+def _angle_fit_cases() -> list[dict[str, Any]]:
+    """Run rotation, endpoint-order, and fit-option convention cases."""
+    cases: list[dict[str, Any]] = []
+    for theta in (60.0, 90.0, 120.0):
+        coordinates, hessian, length_a, length_c = _manufactured_system(theta)
+        for rotation_name, rotation in (
+            ("identity", np.eye(3)),
+            ("proper_rotation", _rotation()),
+        ):
+            rotation_blocks = np.kron(np.eye(3), rotation)
+            rotated_coordinates = rotation_blocks @ coordinates
+            rotated_hessian = rotation_blocks @ hessian @ rotation_blocks.T
+            for reversed_endpoints in (False, True):
+                fit_coordinates, fit_hessian = rotated_coordinates, rotated_hessian
+                if reversed_endpoints:
+                    fit_coordinates, fit_hessian = _permute_endpoints(
+                        fit_coordinates, fit_hessian
+                    )
+                for scale in (1.0, 0.95):
+                    for angle_average in (0, 1):
+                        for shared_scales in ((1.0, 1.0), (1.4, 1.8)):
+                            fit_scales = (
+                                shared_scales[::-1]
+                                if reversed_endpoints
+                                else shared_scales
+                            )
+                            angle, force_constant = fitting.get_ang_fc_with_mod_sem(
+                                [],
+                                fit_coordinates.tolist(),
+                                fit_hessian,
+                                1,
+                                2,
+                                3,
+                                scale,
+                                angle_average,
+                                fit_scales[0],
+                                fit_scales[1],
+                            )[:2]
+                            expected = (
+                                0.5
+                                * constants.H_TO_KCAL_MOL
+                                * scale**2
+                                / (
+                                    shared_scales[0] / (PAIR_A * length_a**2)
+                                    + shared_scales[1] / (PAIR_C * length_c**2)
+                                )
+                            )
+                            force_value = complex(force_constant)
+                            imaginary = abs(force_value.imag)
+                            magnitude = max(1.0, abs(force_value.real))
+                            passed = (
+                                np.isfinite(angle)
+                                and np.isfinite(force_value.real)
+                                and np.isfinite(imaginary)
+                                and imaginary <= 1e-12 * magnitude
+                                and abs(float(angle) - theta) <= 1e-10
+                                and abs(force_value.real - expected)
+                                <= 1e-10 * max(1.0, abs(expected))
+                            )
+                            cases.append(
+                                {
+                                    "theta_degrees": theta,
+                                    "rotation": rotation_name,
+                                    "reversed_endpoints": reversed_endpoints,
+                                    "scale": scale,
+                                    "angle_average": angle_average,
+                                    "shared_angle_scales": list(shared_scales),
+                                    "angle_degrees": float(angle),
+                                    "force_constant": force_value.real,
+                                    "imaginary_magnitude": imaginary,
+                                    "expected_force_constant": expected,
+                                    "passed": bool(passed),
+                                }
+                            )
+    return cases
+
+
+def main() -> None:
+    """Write a bounded, manufactured-data angle-convention audit."""
+    if not OUTPUT.is_dir() or not (OUTPUT / "job").is_dir():
+        raise FileNotFoundError(
+            f"Launcher-created output/job directory is missing: {OUTPUT}"
+        )
+    angle_cases = _angle_fit_cases()
+    scale_cases = _angle_scales()
+    source_paths = {
+        "audit_script": Path(__file__),
+        "fitting_module": Path(fitting.__file__),
+        "constants_module": Path(constants.__file__),
+    }
+    passed = all(case["passed"] for case in angle_cases) and all(
+        np.allclose(case["actual"], case["expected"], atol=1e-12, rtol=0.0)
+        for case in scale_cases
+    )
+    report = {
+        "accepted": bool(passed),
+        "scope": "Manufactured pair-block/compliance conventions only; not a physical free-molecule Hessian or TI1 validation.",
+        "forcefield_validated": False,
+        "ti1_parameters_fitted": False,
+        "manufactured_case_count": len(angle_cases),
+        "shared_angle_cases": scale_cases,
+        "angle_fit_cases": angle_cases,
+        "source_sha256": {key: _sha256(path) for key, path in source_paths.items()},
+        "versions": {"python": sys.version, "numpy": np.__version__},
+    }
+    report_path = OUTPUT / "angle_convention_audit.json"
+    report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
+    if not passed:
+        raise RuntimeError(f"MCPB angle convention audit failed: {report_path}")
+    LOGGER.info("Manufactured MCPB angle convention audit passed: %s", report_path)
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    main()
