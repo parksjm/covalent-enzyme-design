@@ -1,3 +1,16 @@
+## Trajectory inspection warning — 2026-10-23
+
+A 14-frame snapshot is exported at
+`output_nyl12_waterfree_reference_20261023/trajectory_snapshot_01/`.
+At its last frame OG1-C54=2.02549 A and C54-O49=1.21644 A; these exceed
+our TI1 acceptance windows, and frames13/14 fail the graph geometry screen.
+This is an in-progress snapshot, not a converged chemical-state conclusion.
+Do not fit parameters from this candidate without resolving state retention.
+Input graph connectivity in the PDB is for display only. The movie, XYZ,
+per-frame metrics and plain-command PyMOL viewer are in the laptop package.
+The user requested proportionate work and fewer tokens/credits for simple
+tasks: use existing tools first and avoid expanding small tasks unnecessarily.
+
 ## Water-free 39-atom candidate active — 2026-10-23
 
 The user authorized removal of water for the local parameter reference.

@@ -1,0 +1,1 @@
+INFO Trajectory inspection package: {'verified': True, 'frames': 14, 'payload_files': 219, 'payload_bytes': 15863574, 'retained_backup': '/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_20', 'old_nondocument_payloads_preserved': True, 'geometry_acceptance_claimed': False}

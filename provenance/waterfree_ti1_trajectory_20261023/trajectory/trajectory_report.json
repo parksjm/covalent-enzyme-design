@@ -1,0 +1,50 @@
+{
+  "captured_utc": "2026-10-23T20:00:43.510848+00:00",
+  "source_path": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/optimization.log",
+  "input_source_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/native_seed.sdf": "3d2b6472d08a28d1b7d373d2578acfa9a2bdbc2fa40ca67101b75643804fb485",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/atom_map.json": "136c010370763290341861a262c4b08f3e8412eb5d03fda3f1bc5efbd613e2d3",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/pilot_policy.json": "b408b084048e3c3b942ae03ce759e70ec862f867fb3aba0179f63a7ccb97865c",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/native_seed.xyz": "bf9686c7ed41a9c76ad60a28e8284d685d5a41e50e693ba22287680896f5e789",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/export_optimization_trajectory.py": "a62ba9f0197a63eb5bba6d98e1c2948134ff3f7632bb93683bfce047250c7846",
+    "/data/jpc/covalent-enzyme-design/scripts/gaussian_log_to_xyz.py": "6a5628c8e38a244121e6135efe5cc69620e9be72f4593a5c4e5b1ba774a3632b",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547"
+  },
+  "coordinate_precision_note": "XYZ prints ten decimals; source Gaussian tables typically contain six decimals in angstrom. PDB is rounded to0.001A.",
+  "frame_selection_note": "Every complete Input orientation table is retained, including trial/repeated snapshots; frame numbers are not asserted to be accepted optimizer steps or MD time.",
+  "source_basename": "optimization.log",
+  "source_sha256": "ae8932b8a34ac5f6ddace02f59fbe5194acf6f9661e5ed25b25c8ca6650393d3",
+  "orientation": "Input",
+  "orientation_counts": {
+    "Standard": 0,
+    "Input": 14
+  },
+  "ignored_trailing_incomplete_counts": {
+    "Standard": 0,
+    "Input": 0
+  },
+  "frames": 14,
+  "atoms_per_frame": 39,
+  "explicit_H_per_frame": 23,
+  "frame_source_lines": [
+    342,
+    1622,
+    2323,
+    3041,
+    3758,
+    4475,
+    5191,
+    5907,
+    6623,
+    7365,
+    8056,
+    8784,
+    9527,
+    10244
+  ],
+  "optimization_completed": false,
+  "normal_termination": false,
+  "geometry_acceptance_claimed": false,
+  "snapshot_note": "Frames are complete Input orientation tables from the snapshotted log. This export does not assert an optimized minimum, MD trajectory, or preserved bond connectivity.",
+  "connectivity_note": "PDB CONECT records describe only the fixed input SDF graph and do not prove bonds remain intact in each frame."
+}

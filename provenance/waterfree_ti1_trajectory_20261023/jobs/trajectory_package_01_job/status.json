@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_waterfree_reference_20261023/package_trajectory_snapshot.py",
+    "--snapshot",
+    "output_nyl12_waterfree_reference_20261023/trajectory_snapshot_01",
+    "--archive",
+    "provenance/waterfree_ti1_trajectory_20261023"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T20:09:30.129250Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/package_trajectory_snapshot.py": "0dac808766b8550ce4c955c1e900a4ce0f755ad240f858fb9282b60cee71f136",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/trajectory_snapshot_01/trajectory_report.json": "a465008309883256ce72c46e69804e31091e5affb8a4fa612141a0e8b450f791"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/trajectory_package_01_job/job.log",
+  "session_name": "nyl12_waterfree_trajectory_package01_20261023",
+  "started_utc": "2026-10-23T20:09:29.911203Z"
+}

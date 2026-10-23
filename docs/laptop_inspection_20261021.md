@@ -294,3 +294,15 @@ Input, atom map, coordinate provenance and preflight are included. The prior
 42-atom Gaussian job failed imposing constraints; its starting model is
 historical. The current job uses explicit GIC constraints on 16 physical cores.
 No final water-free optimized structure or trajectory exists at this checkpoint.
+
+## Water-free optimization movie — 2026-10-23
+
+The current snapshot contains14frames,39atoms and23explicitH per frame.
+After the usual pull, change PyMOL directory to
+`nyl12-inspection-20261021/qm/waterfree_ti1_optimization`, then run
+`@view_optimization.pml` and `mplay`. VMD can load optimization_trajectory.xyz.
+These are in-progress geometry snapshots, including possible trial/repeated
+points. PDB bonds retain the input graph for display; consult the metrics.
+At frame14 OG1-C54=2.02549A and C54-O49=1.21644A, outside TI1 windows.
+This is not an accepted TI1 reference; parameter fitting remains blocked.
+The immutable log snapshot was captured at20:00:43UTC(16:00:43EDT).

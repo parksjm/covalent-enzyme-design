@@ -1,0 +1,52 @@
+F.............../data/jpc/covalent-enzyme-design/.venv/lib/python3.12/site-packages/coverage/inorout.py:558: CoverageWarning: Module export_optimization_trajectory was never imported. (module-not-imported); see https://coverage.readthedocs.io/en/7.16.2/messages.html#warning-module-not-imported
+  self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
+/data/jpc/covalent-enzyme-design/.venv/lib/python3.12/site-packages/coverage/control.py:967: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.16.2/messages.html#warning-no-data-collected
+  self._warn("No data was collected.", slug="no-data-collected")
+/data/jpc/covalent-enzyme-design/.venv/lib/python3.12/site-packages/pytest_cov/plugin.py:366: CovReportWarning: Failed to generate report: No data to report.
+
+  warnings.warn(CovReportWarning(message), stacklevel=1)
+
+WARNING: Failed to generate report: No data to report.
+
+                                                                         [100%]
+=================================== FAILURES ===================================
+_________________ test_multi_frame_export_preserves_hydrogens __________________
+
+tmp_path = PosixPath('/tmp/pytest-of-jpc/pytest-283/test_multi_frame_export_preser0')
+
+    def test_multi_frame_export_preserves_hydrogens(tmp_path: Path) -> None:
+        """Require real table count, exact snapshot bytes and portable movie files."""
+        log = tmp_path / "synthetic.log"
+        data = fixture_log(log)
+        output = tmp_path / "export"
+        report = invoke(module(), log, output)
+        assert report["frames"] == 2
+        assert report["atoms_per_frame"] == 39
+        assert report["explicit_H_per_frame"] == 23
+        assert report["source_sha256"] == hashlib.sha256(data).hexdigest()
+        assert report["geometry_acceptance_claimed"] is False
+        assert not report["optimization_completed"]
+        assert not report["normal_termination"]
+        assert (output / "optimization.log.txt").read_bytes() == data
+        assert log.read_bytes() == data
+        pdb = (output / "optimization_trajectory.pdb").read_text()
+        assert sum(line.startswith("MODEL ") for line in pdb.splitlines()) == 2
+        assert sum(line.startswith(("ATOM  ", "HETATM")) for line in pdb.splitlines()) == 78
+        assert "CONECT" in pdb
+        mol = Chem.MolFromPDBFile(
+            str(output / "optimization_trajectory.pdb"),
+            removeHs=False,
+            sanitize=False,
+            proximityBonding=False,
+        )
+        assert mol is not None and mol.GetNumAtoms() == 39
+        assert sum(a.GetAtomicNum() == 1 for a in mol.GetAtoms()) == 23
+>       assert mol.GetNumBonds() > 0
+E       assert 0 > 0
+E        +  where 0 = GetNumBonds()
+E        +    where GetNumBonds = <rdkit.Chem.rdchem.Mol object at 0x79a36e98bc30>.GetNumBonds
+
+output_nyl12_waterfree_reference_20261023/test_trajectory_export.py:112: AssertionError
+=========================== short test summary info ============================
+FAILED output_nyl12_waterfree_reference_20261023/test_trajectory_export.py::test_multi_frame_export_preserves_hydrogens
+1 failed, 15 passed in 0.43s

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "-q",
+    "output_nyl12_waterfree_reference_20261023/test_trajectory_export.py",
+    "tests/test_gaussian_log_to_xyz.py",
+    "--cov",
+    "--cov-config=output_nyl12_waterfree_reference_20261023/trajectory.coveragerc",
+    "--cov-report=term-missing",
+    "--cov-report=json:output_nyl12_waterfree_reference_20261023/trajectory_coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src:/data/jpc/covalent-enzyme-design"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/export_optimization_trajectory.py": "a62ba9f0197a63eb5bba6d98e1c2948134ff3f7632bb93683bfce047250c7846",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/test_trajectory_export.py": "94dadf71276cec2c0834cd7f80db52b5c1cccc11c2b75821db2ce2adaaff4607",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/trajectory.coveragerc": "0e728c33316eb6e3cda761a66e5b18cb0439016ebaa30b401811587522370d48"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/trajectory_tests_02_job/job.log",
+  "session_name": "nyl12_waterfree_trajectory_tests02_20261023",
+  "started_utc": null
+}

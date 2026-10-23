@@ -1,0 +1,1640 @@
+REMARK Fixed input graph in CONECT; inspect metrics for actual bond distances.
+MODEL        1
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.691   9.007   0.084  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.411   7.345   1.252  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.479   7.847  -0.310  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.956   6.738  -0.854  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.459   7.787   1.472  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.481   8.647   0.884  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.888   7.336  -1.255  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.178   7.945   0.034  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.521   6.313   0.155  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.401   4.845  -0.778  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.922   3.336   1.738  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.180   2.843   0.218  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.980   2.771   0.433  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.355  10.241   0.468  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.879   9.966   1.693  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.457  10.556  -0.499  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.818  11.207   2.544  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.036  10.292   1.768  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.295  10.758   0.176  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.170  11.959  -0.362  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.752  11.138  -1.266  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.847   9.274   0.255  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.918   9.418  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.881  11.537   0.573  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.922  10.592  -0.468  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.095  12.067   1.666  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.889  11.785  -1.212  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        2
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.698   9.008   0.082  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.411   7.345   1.253  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.479   7.848  -0.310  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.956   6.739  -0.854  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.459   7.786   1.473  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.481   8.649   0.883  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.887   7.336  -1.255  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.178   7.945   0.033  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.521   6.313   0.155  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.400   4.845  -0.778  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.922   3.336   1.738  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.180   2.843   0.218  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.980   2.771   0.433  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.353  10.242   0.473  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.878   9.967   1.694  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.455  10.558  -0.501  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.819  11.207   2.544  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.036  10.292   1.767  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.295  10.757   0.174  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.171  11.960  -0.361  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.752  11.138  -1.265  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.848   9.275   0.255  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.918   9.418  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.880  11.537   0.572  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.922  10.592  -0.468  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.095  12.067   1.666  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.888  11.785  -1.212  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        3
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.729   9.015   0.070  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.413   7.347   1.254  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.482   7.854  -0.308  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.956   6.741  -0.856  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.460   7.786   1.476  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.482   8.655   0.882  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.885   7.335  -1.256  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.179   7.941   0.032  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.519   6.312   0.153  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.399   4.843  -0.778  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.922   3.336   1.738  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.180   2.842   0.217  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.979   2.771   0.433  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.343  10.246   0.483  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.874   9.970   1.698  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.452  10.562  -0.496  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.821  11.208   2.544  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.035  10.293   1.764  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.291  10.757   0.160  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.174  11.965  -0.355  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.753  11.141  -1.269  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.850   9.278   0.255  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.921   9.418  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.879  11.537   0.572  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.923  10.592  -0.469  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.096  12.066   1.666  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.888  11.786  -1.212  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        4
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.791   9.028   0.048  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.417   7.351   1.258  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.487   7.865  -0.305  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.955   6.746  -0.860  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.461   7.785   1.482  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.484   8.666   0.878  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.881   7.334  -1.259  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.180   7.935   0.030  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.514   6.309   0.150  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.397   4.841  -0.778  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.923   3.337   1.737  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.182   2.841   0.217  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.978   2.771   0.432  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.323  10.255   0.503  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.866   9.977   1.705  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.446  10.569  -0.485  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.826  11.209   2.544  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.033  10.294   1.757  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.282  10.755   0.133  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.181  11.975  -0.343  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.754  11.145  -1.278  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.855   9.283   0.256  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.926   9.419  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.877  11.537   0.571  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.923  10.592  -0.469  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.097  12.066   1.665  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.887  11.787  -1.211  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        5
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.854   9.041   0.025  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.421   7.354   1.262  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.491   7.876  -0.301  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.954   6.751  -0.863  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.463   7.784   1.487  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.486   8.678   0.875  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.877   7.334  -1.262  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.181   7.928   0.028  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.509   6.306   0.147  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.394   4.837  -0.779  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.923   3.337   1.737  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.183   2.839   0.216  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.977   2.770   0.431  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.303  10.264   0.524  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.858   9.983   1.713  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.440  10.577  -0.475  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.831  11.210   2.543  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.031  10.296   1.749  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.274  10.754   0.106  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.188  11.985  -0.331  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.756  11.150  -1.286  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.860   9.289   0.257  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.931   9.420  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.874  11.538   0.569  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.923  10.592  -0.469  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.098  12.065   1.664  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.885  11.788  -1.210  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        6
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.916   9.054   0.003  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.425   7.358   1.266  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.496   7.887  -0.298  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.954   6.756  -0.867  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.465   7.783   1.493  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.489   8.689   0.871  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.872   7.333  -1.266  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.182   7.922   0.026  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.504   6.303   0.143  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.391   4.834  -0.779  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.924   3.337   1.736  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.184   2.838   0.215  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.977   2.770   0.430  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.282  10.273   0.544  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.850   9.990   1.721  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.434  10.584  -0.464  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.836  11.212   2.543  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.029  10.297   1.742  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.266  10.752   0.079  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.195  11.995  -0.319  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.758  11.155  -1.294  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.865   9.294   0.258  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.937   9.420  -1.495  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.872  11.538   0.568  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.924  10.592  -0.469  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.100  12.065   1.663  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.884  11.789  -1.209  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        7
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -1.979   9.068  -0.020  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.429   7.361   1.270  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.501   7.898  -0.295  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.953   6.762  -0.870  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.466   7.782   1.498  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.491   8.701   0.867  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.868   7.332  -1.269  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.183   7.915   0.024  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.500   6.300   0.140  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.389   4.831  -0.779  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.924   3.338   1.736  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.185   2.836   0.214  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.976   2.770   0.429  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.262  10.281   0.565  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.842   9.996   1.729  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.428  10.592  -0.454  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.841  11.213   2.543  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.026  10.299   1.735  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.257  10.751   0.052  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.202  12.006  -0.307  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.759  11.160  -1.302  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.870   9.300   0.258  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.942   9.421  -1.495  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.869  11.538   0.567  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.924  10.592  -0.469  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.101  12.064   1.662  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.883  11.791  -1.209  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        8
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.042   9.081  -0.043  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.434   7.365   1.274  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.506   7.909  -0.292  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.952   6.767  -0.874  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.468   7.781   1.504  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.493   8.713   0.864  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.863   7.331  -1.272  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.184   7.909   0.021  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.495   6.297   0.137  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.386   4.828  -0.779  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.924   3.338   1.736  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.187   2.835   0.213  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.975   2.769   0.428  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.242  10.290   0.586  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.834  10.003   1.737  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.422  10.599  -0.444  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.846  11.215   2.542  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.024  10.301   1.727  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.249  10.749   0.024  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.209  12.016  -0.294  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.761  11.165  -1.310  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.875   9.305   0.259  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.948   9.421  -1.495  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.867  11.539   0.566  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.924  10.592  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.102  12.063   1.662  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.881  11.792  -1.208  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL        9
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.086   9.090  -0.059  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.436   7.367   1.276  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.510   7.917  -0.289  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.952   6.770  -0.877  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.469   7.780   1.508  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.494   8.721   0.861  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.860   7.330  -1.274  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.185   7.904   0.020  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.492   6.295   0.134  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.385   4.826  -0.780  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.925   3.338   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.188   2.834   0.213  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.974   2.769   0.427  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.227  10.296   0.600  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.828  10.007   1.743  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.418  10.604  -0.436  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.849  11.216   2.542  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.023  10.302   1.722  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.243  10.748   0.005  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.214  12.023  -0.286  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.762  11.168  -1.316  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.879   9.309   0.260  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.951   9.422  -1.496  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.865  11.539   0.565  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.925  10.593  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.103  12.063   1.661  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.880  11.793  -1.207  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL       10
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.099   9.079  -0.060  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.438   7.371   1.276  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.512   7.924  -0.286  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.951   6.774  -0.877  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.471   7.783   1.506  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.495   8.725   0.855  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.857   7.329  -1.274  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.188   7.901   0.019  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.489   6.295   0.132  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.383   4.825  -0.780  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.925   3.338   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.188   2.833   0.212  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.974   2.769   0.426  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.239  10.309   0.602  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.821  10.004   1.748  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.411  10.616  -0.449  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.852  11.217   2.543  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.022  10.302   1.717  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.232  10.750  -0.011  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.217  12.034  -0.278  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.760  11.161  -1.306  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.883   9.311   0.262  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.954   9.423  -1.495  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.863  11.539   0.564  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.925  10.593  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.104  12.062   1.660  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.880  11.794  -1.207  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL       11
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.125   9.057  -0.063  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.441   7.377   1.277  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.516   7.938  -0.280  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.949   6.782  -0.879  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.475   7.790   1.504  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.495   8.732   0.843  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.851   7.328  -1.276  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.194   7.896   0.016  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.484   6.295   0.128  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.379   4.821  -0.782  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.926   3.339   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.190   2.831   0.211  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.973   2.768   0.425  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.261  10.335   0.606  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.806   9.996   1.757  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.399  10.638  -0.473  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.858  11.219   2.545  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.020  10.301   1.706  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.210  10.753  -0.042  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.224  12.055  -0.262  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.755  11.147  -1.285  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.892   9.314   0.265  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.958   9.424  -1.495  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.860  11.540   0.564  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.925  10.594  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.106  12.061   1.659  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.878  11.795  -1.205  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL       12
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.162   9.030  -0.067  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.446   7.388   1.278  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.524   7.962  -0.268  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.947   6.795  -0.883  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.483   7.802   1.501  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.494   8.746   0.819  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.840   7.325  -1.278  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.205   7.886   0.011  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.476   6.296   0.121  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.372   4.815  -0.785  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.927   3.339   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.193   2.827   0.209  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.972   2.767   0.422  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.266  10.374   0.630  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.795   9.996   1.746  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.390  10.665  -0.485  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.870  11.223   2.549  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.017  10.301   1.686  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.170  10.761  -0.099  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.234  12.096  -0.230  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.751  11.132  -1.267  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.906   9.321   0.271  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.967   9.427  -1.494  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.853  11.542   0.562  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.926  10.596  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.110  12.059   1.656  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.875  11.798  -1.203  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL       13
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.214   8.996  -0.075  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.456   7.406   1.281  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.538   8.004  -0.249  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.941   6.819  -0.889  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.494   7.822   1.501  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.485   8.769   0.776  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.820   7.321  -1.281  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.222   7.866   0.003  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.462   6.295   0.109  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.358   4.804  -0.789  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.928   3.339   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.198   2.820   0.205  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.970   2.765   0.418  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.244  10.446   0.667  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.781  10.004   1.729  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.365  10.694  -0.467  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.890  11.229   2.556  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.010  10.299   1.649  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.095  10.776  -0.197  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.250  12.170  -0.164  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.758  11.121  -1.265  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.928   9.334   0.281  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.980   9.432  -1.492  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.841  11.544   0.560  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.927  10.600  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.117  12.055   1.648  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.869  11.803  -1.199  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+MODEL       14
+HETATM    1    N THR E   1      -3.896   7.804   0.514  1.00  0.00           N1+
+HETATM    2   CA THR E   1      -2.906   7.051   0.189  1.00  0.00           C  
+HETATM    3   CB THR E   1      -1.648   7.781   0.399  1.00  0.00           C  
+HETATM    4  OG1 THR E   1      -2.263   8.964  -0.083  1.00  0.00           O  
+HETATM    5  CG2 THR E   1      -0.699   7.335  -0.181  1.00  0.00           C  
+HETATM    6    C THR E   1      -2.974   5.748   0.897  1.00  0.00           C  
+HETATM    7    O THR E   1      -2.854   5.683   2.087  1.00  0.00           O  
+HETATM    8    N NME E   2      -3.143   4.689   0.186  1.00  0.00           N  
+HETATM    9  CH3 NME E   2      -3.060   3.312   0.657  1.00  0.00           C  
+HETATM   10   H1 THR E   1      -4.465   7.424   1.284  1.00  0.00           H  
+HETATM   11   H2 THR E   1      -4.551   8.044  -0.231  1.00  0.00           H  
+HETATM   12   HA THR E   1      -2.936   6.843  -0.894  1.00  0.00           H  
+HETATM   13   HB THR E   1      -1.506   7.842   1.500  1.00  0.00           H  
+HETATM   14   H3 THR E   1      -3.476   8.791   0.734  1.00  0.00           H  
+HETATM   15 HG21 THR E   1      -0.802   7.317  -1.284  1.00  0.00           H  
+HETATM   16 HG22 THR E   1       0.238   7.847  -0.005  1.00  0.00           H  
+HETATM   17 HG23 THR E   1      -0.448   6.294   0.097  1.00  0.00           H  
+HETATM   18    H NME E   2      -3.345   4.794  -0.793  1.00  0.00           H  
+HETATM   19 HH31 NME E   2      -2.930   3.340   1.735  1.00  0.00           H  
+HETATM   20 HH32 NME E   2      -2.203   2.814   0.202  1.00  0.00           H  
+HETATM   21 HH33 NME E   2      -3.969   2.763   0.413  1.00  0.00           H  
+HETATM   22  C70 TIL I   1      -3.421  11.213   1.596  1.00  0.00           C  
+HETATM   23  C62 TIL I   1      -2.417  11.337   0.520  1.00  0.00           C  
+HETATM   24  C54 TIL I   1      -1.223  10.514   0.703  1.00  0.00           C  
+HETATM   25  O49 TIL I   1      -0.767  10.012   1.713  1.00  0.00           O1-
+HETATM   26  N59 TIL I   1      -0.340  10.722  -0.450  1.00  0.00           N  
+HETATM   27  C67 TIL I   1       0.858  10.006  -0.565  1.00  0.00           C  
+HETATM   28  C75 TIL I   1       1.928  11.052  -0.406  1.00  0.00           C  
+HETATM   29  H21 TIL I   1      -2.909  11.235   2.562  1.00  0.00           H  
+HETATM   30  H22 TIL I   1      -4.005  10.298   1.613  1.00  0.00           H  
+HETATM   31  H23 TIL I   1      -3.024  10.791  -0.290  1.00  0.00           H  
+HETATM   32  H24 TIL I   1      -2.266  12.241  -0.101  1.00  0.00           H  
+HETATM   33  H25 TIL I   1      -0.765  11.110  -1.264  1.00  0.00           H  
+HETATM   34  H26 TIL I   1       0.950   9.347   0.291  1.00  0.00           H  
+HETATM   35  H27 TIL I   1       0.992   9.437  -1.491  1.00  0.00           H  
+HETATM   36  H28 TIL I   1       1.830  11.547   0.558  1.00  0.00           H  
+HETATM   37  H29 TIL I   1       2.928  10.604  -0.470  1.00  0.00           H  
+HETATM   38 HC70 TIL I   1      -4.124  12.050   1.642  1.00  0.00           H  
+HETATM   39 HC75 TIL I   1       1.863  11.808  -1.194  1.00  0.00           H  
+CONECT    1    2
+CONECT    2    1
+CONECT    2    3
+CONECT    3    2
+CONECT    3    4
+CONECT    4    3
+CONECT    3    5
+CONECT    5    3
+CONECT    2    6
+CONECT    6    2
+CONECT    6    7    7
+CONECT    7    6    6
+CONECT    6    8
+CONECT    8    6
+CONECT    8    9
+CONECT    9    8
+CONECT    1   10
+CONECT   10    1
+CONECT    1   11
+CONECT   11    1
+CONECT    2   12
+CONECT   12    2
+CONECT    3   13
+CONECT   13    3
+CONECT    5   15
+CONECT   15    5
+CONECT    5   16
+CONECT   16    5
+CONECT    5   17
+CONECT   17    5
+CONECT    8   18
+CONECT   18    8
+CONECT    9   19
+CONECT   19    9
+CONECT    9   20
+CONECT   20    9
+CONECT    9   21
+CONECT   21    9
+CONECT   37   28
+CONECT   28   37
+CONECT   36   28
+CONECT   28   36
+CONECT   28   27
+CONECT   27   28
+CONECT   33   26
+CONECT   26   33
+CONECT   27   35
+CONECT   35   27
+CONECT   27   26
+CONECT   26   27
+CONECT   27   34
+CONECT   34   27
+CONECT   26   24
+CONECT   24   26
+CONECT   32   23
+CONECT   23   32
+CONECT   24   23
+CONECT   23   24
+CONECT   31   23
+CONECT   23   31
+CONECT   23   22
+CONECT   22   23
+CONECT   22   29
+CONECT   29   22
+CONECT   22   30
+CONECT   30   22
+CONECT    1   14
+CONECT   14    1
+CONECT   24   25
+CONECT   25   24
+CONECT    4   24
+CONECT   24    4
+CONECT   22   38
+CONECT   38   22
+CONECT   28   39
+CONECT   39   28
+ENDMDL
+END
