@@ -1,0 +1,1 @@
+INFO:__main__:GAFF2 atom-typing inventory written to /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/report.json

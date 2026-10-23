@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/data/jpc/code/ambertools26/venv/bin/parmchk2",
+    "-i",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/typed.mol2",
+    "-f",
+    "mol2",
+    "-o",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/gaff2_inventory.frcmod",
+    "-s",
+    "gaff2",
+    "-a",
+    "Y"
+  ],
+  "returncode": 0,
+  "stderr_log": "parmchk2.stderr.log",
+  "stdout_log": "parmchk2.stdout.log",
+  "tool": "parmchk2"
+}

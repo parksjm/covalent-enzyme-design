@@ -1,0 +1,311 @@
+"""Check physical-chain mapping, design protection, symmetry, and preparation gates."""
+
+from __future__ import annotations
+
+import csv
+import json
+from pathlib import Path
+
+import numpy as np
+import pytest
+
+from scripts import prepare_nyl12_focused_redesign as runner
+from scripts.lib.nyl12_focused_redesign import (
+    aligned_rmsd,
+    design_pdb,
+    focused_positions,
+    mpnn_command,
+    split_atoms,
+    symmetry_tokens,
+    validate_assembly,
+)
+
+
+def pdb_atom(
+    serial: int,
+    name: str,
+    residue: str,
+    chain: str,
+    number: int,
+    xyz: tuple[float, float, float],
+    element: str = "C",
+) -> str:
+    """Construct a fixed-column test PDB atom."""
+    record = "HETATM" if chain == "I" else "ATOM  "
+    return (
+        f"{record}{serial:5d} {name:>4s} {residue:3s} {chain}{number:4d}    "
+        f"{xyz[0]:8.3f}{xyz[1]:8.3f}{xyz[2]:8.3f}  1.00 80.00          {element:>2s}  "
+    )
+
+
+@pytest.fixture
+def canonical() -> str:
+    """Create complete canonical protein coverage with a chemically plausible amide."""
+    lines = []
+    for chain_index, chain in enumerate("ABCD"):
+        for residue in range(1, 329):
+            name = {
+                113: "PHE",
+                186: "ASN",
+                229: "GLU",
+                232: "ASN",
+                233: "THR",
+                272: "ASP",
+                274: "ASP",
+            }.get(residue, "ALA")
+            xyz = (
+                float(residue + 30),
+                float(chain_index * 30 + residue % 11),
+                float(residue % 17),
+            )
+            if chain == "A" and residue in {53, 237}:
+                xyz = (4.0, float(residue % 2), 0.0)
+            lines.append(pdb_atom(len(lines) + 1, "CA", name, chain, residue, xyz))
+    for name, residue, xyz, element in (
+        ("OG1", 233, (0.0, 0.0, 3.05), "O"),
+        ("N", 113, (1.23, 0.0, 2.88), "N"),
+        ("ND2", 186, (1.23, 2.9, 0.0), "N"),
+    ):
+        lines.append(
+            pdb_atom(
+                len(lines) + 1,
+                name,
+                {233: "THR", 113: "PHE", 186: "ASN"}[residue],
+                "A",
+                residue,
+                xyz,
+                element,
+            )
+        )
+    for name, xyz, element in (
+        ("C54", (0.0, 0.0, 0.0), "C"),
+        ("O49", (1.23, 0.0, 0.0), "O"),
+        ("N59", (0.0, 1.35, 0.0), "N"),
+        ("H1", (0.0, 2.3, 0.0), "H"),
+    ):
+        lines.append(pdb_atom(len(lines) + 1, name, "LIG", "I", 1, xyz, element))
+    lines.append("CONECT 1316 1317 1318 1319")
+    return "\n".join(lines) + "\n"
+
+
+def test_split_and_connectivity(canonical: str) -> None:
+    atoms = split_atoms(canonical)
+    validate_assembly(atoms)
+    assert len([a for a in atoms if a.name == "CA"]) == 1312
+    assert any(a.chain == "E" and a.residue == 1 and a.name == "OG1" for a in atoms)
+    text = design_pdb(atoms, canonical)
+    assert text.count("TER\n") == 9
+    assert "CONECT 1316 1317 1318\n" in text
+    assert " H1 " not in text
+    assert {a.serial: a.xyz for a in atoms} == {
+        int(line[6:11]): tuple(float(line[start : start + 8]) for start in (30, 38, 46))
+        for line in text.splitlines()
+        if line[:6] in {"ATOM  ", "HETATM"}
+    }
+
+
+@pytest.mark.parametrize(
+    "kind", ["empty", "element", "duplicate", "residue", "alternate", "nan"]
+)
+def test_parser_rejects_invalid_atoms(canonical: str, kind: str) -> None:
+    first = canonical.splitlines()[0]
+    text = {
+        "empty": "END\n",
+        "element": first[:76] + "  ",
+        "duplicate": first + "\n" + first,
+        "residue": first[:21] + "Z" + first[22:],
+        "alternate": first[:16] + "A" + first[17:],
+        "nan": first[:30] + "     nan" + first[38:],
+    }[kind]
+    with pytest.raises(ValueError):
+        split_atoms(text)
+
+
+def test_assembly_rejects_missing_or_changed_residues(canonical: str) -> None:
+    atoms = split_atoms(canonical)
+    with pytest.raises(ValueError, match="complete"):
+        validate_assembly(atoms[1:])
+    for original, replacement, message in (
+        ("PHE", "ALA", "Oxyanion"),
+        ("THR", "ALA", "Catalytic"),
+    ):
+        with pytest.raises(ValueError, match=message):
+            validate_assembly(split_atoms(canonical.replace(original, replacement)))
+    changed = canonical.replace("ALA B   1", "GLY B   1")
+    with pytest.raises(ValueError, match="sequences differ"):
+        validate_assembly(split_atoms(changed))
+
+
+def test_mask_symmetry_and_commands(canonical: str) -> None:
+    atoms = split_atoms(canonical)
+    alpha, beta = focused_positions([atoms], ["C54", "O49"], 8, [113, 186], [1, 2, 3])
+    assert alpha == [53]
+    assert beta == [5]
+    redesigned, ties, weights = symmetry_tokens(alpha, beta)
+    assert redesigned == "A53 B53 C53 D53 E5 F5 G5 H5"
+    assert ties == "A53,B53,C53,D53|E5,F5,G5,H5"
+    assert weights == "0.25,0.25,0.25,0.25|0.25,0.25,0.25,0.25"
+    command = mpnn_command(
+        {
+            "ligandmpnn_python": "/env/python",
+            "ligandmpnn_directory": "/mpnn",
+            "ligandmpnn_checkpoint": "/weights.pt",
+            "sequences_per_temperature_per_backbone": 3,
+        },
+        Path("/in.pdb"),
+        Path("/output"),
+        alpha,
+        beta,
+        0.1,
+        123,
+    )
+    assert command[:2] == ["/env/python", "/mpnn/run.py"]
+    assert command[command.index("--homo_oligomer") + 1] == "0"
+    assert command[command.index("--symmetry_residues") + 1] == ties
+    assert command[command.index("--ligand_mpnn_use_side_chain_context") + 1] == "1"
+
+
+@pytest.mark.parametrize(
+    "centers,radius",
+    [
+        ([], 8),
+        (["C54", "C54"], 8),
+        (["missing"], 8),
+        (["C54"], -1),
+        (["C54"], float("nan")),
+    ],
+)
+def test_mask_fails_on_invalid_centers_or_radius(
+    canonical: str, centers: list[str], radius: float
+) -> None:
+    with pytest.raises(ValueError):
+        focused_positions([split_atoms(canonical)], centers, radius, [], [])
+
+
+def test_empty_mask_rejected(canonical: str) -> None:
+    with pytest.raises(ValueError, match="No designable"):
+        focused_positions(
+            [split_atoms(canonical)],
+            ["C54"],
+            8,
+            list(range(1, 233)),
+            list(range(1, 97)),
+        )
+
+
+def test_alignment_measures_deformation_not_rigid_motion(canonical: str) -> None:
+    from dataclasses import replace
+
+    atoms = split_atoms(canonical)
+    rotation = np.array([[0, -1, 0], [1, 0, 0], [0, 0, 1]])
+    moved = [replace(a, xyz=tuple(np.array(a.xyz) @ rotation + 10)) for a in atoms]
+    assert aligned_rmsd(atoms, moved) < 1e-10
+    changed = [
+        replace(a, xyz=(a.xyz[0] + 1, a.xyz[1], a.xyz[2]))
+        if a.chain == "A" and a.residue == 53
+        else a
+        for a in moved
+    ]
+    assert aligned_rmsd(atoms, changed) > 0.1
+    with pytest.raises(ValueError, match="Incomplete"):
+        aligned_rmsd(atoms, atoms[1:])
+
+
+@pytest.fixture
+def preparation(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, canonical: str
+) -> tuple[Path, Path]:
+    config = json.loads(
+        (runner.ROOT / "configs/nyl12_focused_redesign_pa6_20261016.json").read_text()
+    )
+    monkeypatch.setattr(runner, "ROOT", tmp_path)
+    monkeypatch.setattr(
+        runner,
+        "export_canonical",
+        lambda _source, destination: destination.write_text(canonical),
+    )
+    config.update(
+        {
+            "models": [40, 41],
+            "metrics": "metrics.csv",
+            "relaxed_pdb_directory": "sources",
+            "ligandmpnn_directory": str(tmp_path),
+            "ligandmpnn_python": str(tmp_path / "python"),
+            "ligandmpnn_checkpoint": str(tmp_path / "weights.pt"),
+        }
+    )
+    config["protection_source"] = str(tmp_path / "protections.yaml")
+    for name in ("python", "weights.pt", "run.py", "protections.yaml"):
+        (tmp_path / name).write_text("fixture\n")
+    (tmp_path / "sources").mkdir()
+    rows = []
+    for index in config["models"]:
+        model = f"{config['sequence_name']}_model_{index}"
+        (tmp_path / "sources" / f"{model}.pdb").write_text("source fixture\n")
+        rows.append(
+            {
+                "model": model,
+                "sequence_name": config["sequence_name"],
+                "geometry_tier": "A",
+                "d1": 3.05,
+                "d2": 2.88,
+                "d3": 2.9,
+            }
+        )
+    with (tmp_path / "metrics.csv").open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    config_path = tmp_path / "config.json"
+    config_path.write_text(json.dumps(config))
+    return config_path, tmp_path / "prepared"
+
+
+def test_prepare_freezes_inputs_and_refuses_overwrite(
+    preparation: tuple[Path, Path],
+) -> None:
+    config_path, output = preparation
+    manifest = runner.prepare(config_path, output)
+    assert manifest["status"] == "prepared_not_launched"
+    assert len(manifest["jobs"]) == 4
+    assert manifest["expected_sequences_before_deduplication"] == 12
+    assert manifest["design_mask"]["alpha_positions"] == [53]
+    assert json.loads((output / "preparation_manifest.json").read_text()) == manifest
+    with pytest.raises(FileExistsError):
+        runner.prepare(config_path, output)
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [
+        ("schema_version", 2),
+        ("reacting_atoms", ["C12", "O4"]),
+        ("protected_alpha_positions", [113]),
+        ("protected_beta_positions", []),
+        ("models", [40, 40]),
+        ("temperatures", [0]),
+        ("sequences_per_temperature_per_backbone", 0),
+    ],
+)
+def test_prepare_rejects_incompatible_config(
+    preparation: tuple[Path, Path], field: str, value: object
+) -> None:
+    config_path, output = preparation
+    config = json.loads(config_path.read_text())
+    config[field] = value
+    config_path.write_text(json.dumps(config))
+    with pytest.raises(ValueError):
+        runner.prepare(config_path, output)
+    assert not output.exists()
+
+
+def test_prepare_missing_model_fails_before_output(
+    preparation: tuple[Path, Path],
+) -> None:
+    config_path, output = preparation
+    config = json.loads(config_path.read_text())
+    config["models"] = [40, 99]
+    config_path.write_text(json.dumps(config))
+    with pytest.raises(ValueError, match="Tier A/B"):
+        runner.prepare(config_path, output)
+    assert not output.exists()

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/audit_gaff2_typing_ac_roundtrip_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T01:36:51.684069Z",
+  "env_overrides": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src:/data/jpc/covalent-enzyme-design"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/code/ambertools26/venv/dat/leap/parm/gaff2.dat": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_gaff2_typing_ac_roundtrip_20261022.py": "48d7f7ff49a721d1a5f57d6c94e070b5369284b548b70ef24731ea954f88e6fa",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/completed_reference_audit_02/result/final_structure.sdf": "270101f4c3fbbcf55d9fa6623c0d9d260d1cdb49f87c17ff42f1e9beadfd84e9"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/job/job.log",
+  "session_name": "nyl12_gaff2_typing_inventory02_20261022",
+  "started_utc": "2026-10-23T01:36:51.238267Z"
+}

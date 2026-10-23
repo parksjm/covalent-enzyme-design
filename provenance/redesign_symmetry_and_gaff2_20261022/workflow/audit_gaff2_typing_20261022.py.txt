@@ -1,0 +1,372 @@
+"""Audit GAFF2 atom typing and estimated-term coverage without fitting charges."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import os
+import re
+import shutil
+import subprocess
+from pathlib import Path
+from typing import Any
+
+from rdkit import Chem
+
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+CASE = (
+    ROOT
+    / "output_nyl12_ti1_parameters_20261022"
+    / "pa6_local_bonded"
+    / "attack_S_cap_phi_minus60"
+)
+REFERENCE_AUDIT = (
+    ROOT / "output_nyl12_parameter_validation_20261022" / "completed_reference_audit_02"
+)
+SOURCE_SDF = REFERENCE_AUDIT / "result" / "final_structure.sdf"
+SOURCE_MAP = REFERENCE_AUDIT / "source" / "atom_map.json"
+OUTPUT = (
+    ROOT / "output_nyl12_parameter_validation_20261022" / "gaff2_typing_inventory_01"
+)
+AMBER_ROOT = Path("/data/jpc/code/ambertools26/venv")
+ANTECHAMBER = AMBER_ROOT / "bin" / "antechamber"
+PARMCHK2 = AMBER_ROOT / "bin" / "parmchk2"
+AMBER_DATA = AMBER_ROOT / "dat"
+GAFF2_DATA = AMBER_DATA / "leap" / "parm" / "gaff2.dat"
+ATOMTYPE_DATA = AMBER_DATA / "antechamber" / "ATOMTYPE_GFF2.DEF"
+PARMCHK_DATA = AMBER_DATA / "antechamber" / "PARMCHK.DAT"
+LOGGER = logging.getLogger(__name__)
+
+
+def _sha256(path: Path) -> str:
+    """Return the SHA-256 digest of a file."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _require_prerequisites() -> None:
+    """Require accepted reference and curvature assessments before typing."""
+    curvature_path = CASE / "conditional_curvature_01" / "assessment.json"
+    frequency_path = CASE / "frequency_01" / "scientific_acceptance.json"
+    curvature = json.loads(curvature_path.read_text())
+    frequency = json.loads(frequency_path.read_text())
+    if curvature.get("accepted") is not True:
+        raise ValueError("S60 conditional-curvature assessment is not accepted")
+    if frequency.get("accepted") is not True:
+        raise ValueError("Reference frequency scientific acceptance is not accepted")
+    for name, expected in curvature["input_source_sha256"].items():
+        if _sha256(Path(name)) != expected:
+            raise ValueError(f"Accepted curvature source changed: {name}")
+    if not SOURCE_SDF.is_file() or not SOURCE_MAP.is_file():
+        raise FileNotFoundError("Completed reference audit SDF or atom map is missing")
+
+
+def _freeze_inputs(source_dir: Path) -> tuple[Chem.Mol, dict[str, Any], dict[str, str]]:
+    """Freeze the molecular graph, atom map, helper, and tool data hashes."""
+    sdf_copy = source_dir / SOURCE_SDF.name
+    map_copy = source_dir / SOURCE_MAP.name
+    shutil.copy2(SOURCE_SDF, sdf_copy)
+    shutil.copy2(SOURCE_MAP, map_copy)
+    shutil.copy2(Path(__file__), source_dir / Path(__file__).name)
+    tool_files = {
+        "antechamber": ANTECHAMBER,
+        "parmchk2": PARMCHK2,
+        "gaff2.dat": GAFF2_DATA,
+        "ATOMTYPE_GFF2.DEF": ATOMTYPE_DATA,
+        "PARMCHK.DAT": PARMCHK_DATA,
+    }
+    source_hashes = {
+        "frozen_sdf": _sha256(sdf_copy),
+        "frozen_atom_map": _sha256(map_copy),
+        "audit_script": _sha256(Path(__file__)),
+        **{name: _sha256(path) for name, path in tool_files.items()},
+    }
+    data_dir = source_dir / "amber_data"
+    data_dir.mkdir(exist_ok=False)
+    for name, path in tool_files.items():
+        if name in {"gaff2.dat", "ATOMTYPE_GFF2.DEF", "PARMCHK.DAT"}:
+            shutil.copy2(path, data_dir / name)
+    molecule = next(
+        (mol for mol in Chem.SDMolSupplier(str(sdf_copy), removeHs=False) if mol),
+        None,
+    )
+    if molecule is None:
+        raise ValueError("Frozen final_structure.sdf cannot be parsed")
+    if molecule.GetNumAtoms() != 37:
+        raise ValueError(f"Expected 37 input atoms, got {molecule.GetNumAtoms()}")
+    hydrogen_count = sum(atom.GetSymbol() == "H" for atom in molecule.GetAtoms())
+    if hydrogen_count != 20:
+        raise ValueError(f"Expected 20 explicit hydrogens, got {hydrogen_count}")
+    if Chem.GetFormalCharge(molecule) != -1:
+        raise ValueError(
+            "Frozen SDF must retain the intended molecular formal charge -1"
+        )
+    atom_map = json.loads(map_copy.read_text())
+    atoms = atom_map["atoms"]
+    origin_by_index = {int(atom["index"]): str(atom["origin_id"]) for atom in atoms}
+    if set(origin_by_index) != set(range(molecule.GetNumAtoms())):
+        raise ValueError("Atom map does not cover the frozen SDF indices exactly")
+    (source_dir / "source_hashes.json").write_text(
+        json.dumps(source_hashes, indent=2, sort_keys=True) + "\n"
+    )
+    return (
+        molecule,
+        {"raw": atom_map, "origin_by_index": origin_by_index},
+        source_hashes,
+    )
+
+
+def _run_tool(
+    name: str, command: list[str], output: Path, env: dict[str, str]
+) -> dict[str, Any]:
+    """Run one AmberTools command and preserve argv and both output streams."""
+    completed = subprocess.run(
+        command,
+        cwd=OUTPUT,
+        env=env,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    (OUTPUT / f"{name}.stdout.log").write_text(completed.stdout)
+    (OUTPUT / f"{name}.stderr.log").write_text(completed.stderr)
+    record = {
+        "tool": name,
+        "argv": command,
+        "returncode": completed.returncode,
+        "stdout_log": f"{name}.stdout.log",
+        "stderr_log": f"{name}.stderr.log",
+    }
+    (output / f"{name}.process.json").write_text(
+        json.dumps(record, indent=2, sort_keys=True) + "\n"
+    )
+    if completed.returncode != 0:
+        raise RuntimeError(f"{name} failed with exit status {completed.returncode}")
+    return record
+
+
+def _read_mol2(path: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Parse the Mol2 ATOM and BOND tables needed for graph verification."""
+    atoms: list[dict[str, Any]] = []
+    bonds: list[dict[str, Any]] = []
+    section = ""
+    for line in path.read_text().splitlines():
+        if line.startswith("@<TRIPOS>"):
+            section = line.removeprefix("@<TRIPOS>")
+            continue
+        fields = line.split()
+        if section == "ATOM" and fields:
+            if len(fields) < 9:
+                raise ValueError(f"Malformed Mol2 atom row: {line}")
+            atoms.append(
+                {
+                    "id": int(fields[0]),
+                    "name": fields[1],
+                    "atom_type": fields[5],
+                    "charge": float(fields[8]),
+                    "xyz": tuple(float(x) for x in fields[2:5]),
+                }
+            )
+        elif section == "BOND" and fields:
+            if len(fields) < 4:
+                raise ValueError(f"Malformed Mol2 bond row: {line}")
+            bonds.append(
+                {
+                    "id": int(fields[0]),
+                    "atom_1": int(fields[1]),
+                    "atom_2": int(fields[2]),
+                    "order": fields[3],
+                }
+            )
+    return atoms, bonds
+
+
+def _validate_typing(
+    molecule: Chem.Mol, origin_by_index: dict[int, str], mol2_path: Path
+) -> dict[str, Any]:
+    """Validate atom order/types, exact graph preservation, and deleted charges."""
+    atoms, bonds = _read_mol2(mol2_path)
+    if len(atoms) != 37 or molecule.GetNumAtoms() != 37 or len(bonds) != 36:
+        raise ValueError("Expected the 37-atom, 36-bond capped surrogate graph")
+    if [atom["id"] for atom in atoms] != list(range(1, 38)):
+        raise ValueError("Mol2 atom IDs are not contiguous and 1-based")
+    if [bond["id"] for bond in bonds] != list(range(1, 37)):
+        raise ValueError("Mol2 bond IDs are not contiguous and 1-based")
+    atom_type_records = []
+    maximum_coordinate_error = 0.0
+    for index, (atom, source_atom) in enumerate(
+        zip(atoms, molecule.GetAtoms(), strict=True)
+    ):
+        element_prefix = atom["atom_type"].split(".")[0][0].lower()
+        if element_prefix != source_atom.GetSymbol().lower():
+            raise ValueError(f"Atom type element mismatch at SDF index {index}")
+        if abs(atom["charge"]) > 1e-12:
+            raise ValueError("Antechamber -c dc did not delete Mol2 charges")
+        point = molecule.GetConformer().GetAtomPosition(index)
+        error = max(abs(atom["xyz"][axis] - point[axis]) for axis in range(3))
+        maximum_coordinate_error = max(maximum_coordinate_error, error)
+        if error > 0.00011:
+            raise ValueError("Atom order or coordinates changed during typing")
+        atom_type_records.append(
+            {
+                "index": index,
+                "origin_id": origin_by_index[index],
+                "element": source_atom.GetSymbol(),
+                "atom_type": atom["atom_type"],
+                "charge": atom["charge"],
+            }
+        )
+
+    def bond_key(first: int, second: int) -> tuple[int, int]:
+        return tuple(sorted((first, second)))
+
+    expected_bonds: dict[tuple[int, int], str] = {}
+    for bond in molecule.GetBonds():
+        order = bond.GetBondTypeAsDouble()
+        if order not in {1.0, 2.0}:
+            raise ValueError(f"Unsupported source bond order {order}")
+        expected_bonds[
+            bond_key(bond.GetBeginAtomIdx() + 1, bond.GetEndAtomIdx() + 1)
+        ] = str(int(order))
+    observed_bonds = {
+        bond_key(bond["atom_1"], bond["atom_2"]): bond["order"] for bond in bonds
+    }
+    if observed_bonds != expected_bonds:
+        raise ValueError(
+            "Mol2 bond pairs or bond orders differ from the original graph"
+        )
+    return {
+        "atom_count": len(atoms),
+        "bond_count": len(bonds),
+        "atom_types": atom_type_records,
+        "atom_type_counts": {
+            atom_type: sum(item["atom_type"] == atom_type for item in atom_type_records)
+            for atom_type in sorted({item["atom_type"] for item in atom_type_records})
+        },
+        "formal_charge": Chem.GetFormalCharge(molecule),
+        "mol2_partial_charge_sum": sum(atom["charge"] for atom in atoms),
+        "mol2_partial_charge_max_abs": max(abs(atom["charge"]) for atom in atoms),
+        "typing_graph_preserved": True,
+        "maximum_coordinate_error_A": maximum_coordinate_error,
+    }
+
+
+def _inventory_terms(path: Path, stdout: str) -> dict[str, Any]:
+    """Count parmchk2 output sections and retain its warning lines."""
+    section_counts: dict[str, int] = {}
+    current_section: str | None = None
+    warning_lines: list[str] = []
+    for line in path.read_text().splitlines():
+        stripped = line.strip()
+        upper = stripped.upper()
+        if upper in {"MASS", "BOND", "ANGLE", "DIHE", "IMPROPER", "NONBON", "HBOND"}:
+            current_section = upper
+            section_counts[current_section] = 0
+        elif current_section and stripped and not stripped.startswith("#"):
+            section_counts[current_section] += 1
+        if "ATTN" in upper:
+            warning_lines.append(line)
+    warning_lines.extend(line for line in stdout.splitlines() if "ATTN" in line.upper())
+    return {"section_entry_counts": section_counts, "attn_lines": warning_lines}
+
+
+def main() -> None:
+    """Run atom typing and parameter-coverage inventory for the capped model."""
+    _require_prerequisites()
+    if not OUTPUT.is_dir() or not (OUTPUT / "job").is_dir():
+        raise FileNotFoundError(
+            f"Launcher-created output/job directory is missing: {OUTPUT}"
+        )
+    source_dir = OUTPUT / "source"
+    source_dir.mkdir(exist_ok=False)
+    molecule, atom_metadata, source_hashes = _freeze_inputs(source_dir)
+    env = os.environ.copy()
+    if Path(env["AMBERHOME"]) != AMBER_ROOT:
+        raise ValueError("Launcher AMBERHOME differs from the pinned AmberTools path")
+    typed_mol2 = OUTPUT / "typed.mol2"
+    frcmod = OUTPUT / "gaff2_inventory.frcmod"
+    antechamber_command = [
+        str(ANTECHAMBER),
+        "-i",
+        str(source_dir / SOURCE_SDF.name),
+        "-fi",
+        "sdf",
+        "-o",
+        str(typed_mol2),
+        "-fo",
+        "mol2",
+        "-at",
+        "gaff2",
+        "-c",
+        "dc",
+        "-nc",
+        "-1",
+        "-m",
+        "1",
+        "-pf",
+        "n",
+        "-an",
+        "n",
+        "-s",
+        "2",
+    ]
+    ante_record = _run_tool("antechamber", antechamber_command, OUTPUT, env)
+    if not typed_mol2.is_file():
+        raise FileNotFoundError("Antechamber completed without producing typed.mol2")
+    validation = _validate_typing(
+        molecule, atom_metadata["origin_by_index"], typed_mol2
+    )
+    parmchk_command = [
+        str(PARMCHK2),
+        "-i",
+        str(typed_mol2),
+        "-f",
+        "mol2",
+        "-o",
+        str(frcmod),
+        "-s",
+        "gaff2",
+        "-a",
+        "Y",
+    ]
+    parmchk_record = _run_tool("parmchk2", parmchk_command, OUTPUT, env)
+    if not frcmod.is_file():
+        raise FileNotFoundError("parmchk2 completed without producing inventory frcmod")
+    for path in OUTPUT.glob("*.sqm"):
+        raise ValueError(
+            f"Unexpected QM charge-fitting artifact was produced: {path.name}"
+        )
+    ante_logs = (OUTPUT / "antechamber.stdout.log").read_text() + (
+        OUTPUT / "antechamber.stderr.log"
+    ).read_text()
+    if re.search(r"Running:.*(?:sqm|g16|mopac|am1bcc)", ante_logs, flags=re.IGNORECASE):
+        raise ValueError(
+            "Antechamber log indicates an unexpected charge/QM fitting call"
+        )
+    report = {
+        "accepted": True,
+        "scope": "GAFF2 typing/estimated-term inventory for 37-atom capped surrogate only; not a hybrid ff19SB protein model or usable MD topology.",
+        "typing_graph_preserved": validation["typing_graph_preserved"],
+        "forcefield_validated": False,
+        "charges_fitted": False,
+        "native_transfer_eligible": False,
+        "molecular_formal_charge": validation["formal_charge"],
+        "mol2_charge_handling": "Deleted with explicit antechamber -c dc; zero Mol2 charges do not imply neutral molecular charge.",
+        "atom_map": atom_metadata["raw"],
+        **validation,
+        "parameter_inventory": _inventory_terms(
+            frcmod, (OUTPUT / "parmchk2.stdout.log").read_text()
+        ),
+        "commands": [ante_record, parmchk_record],
+        "source_sha256": source_hashes,
+    }
+    (OUTPUT / "report.json").write_text(
+        json.dumps(report, indent=2, sort_keys=True) + "\n"
+    )
+    LOGGER.info("GAFF2 atom-typing inventory written to %s", OUTPUT / "report.json")
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    main()

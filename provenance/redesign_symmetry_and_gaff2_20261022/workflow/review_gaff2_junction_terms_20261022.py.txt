@@ -1,0 +1,99 @@
+"""Compare generic term labels with QM geometry without fitting parameters."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+from pathlib import Path
+
+import numpy as np
+from rdkit import Chem
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+WORK = ROOT / "output_nyl12_parameter_validation_20261022"
+INPUT = WORK / "gaff2_typing_inventory_02"
+OUT = WORK / "gaff2_junction_review_01"
+
+
+def main() -> None:
+    """Record generic equilibrium lengths and every bond sharing their labels."""
+    logging.basicConfig(level=logging.INFO)
+    report_path = INPUT / "report.json"
+    data = json.loads(report_path.read_text())
+    if (
+        data["typing_graph_preserved"] is not True
+        or data["charges_fitted"] is not False
+    ):
+        raise ValueError("Expected charge-free graph-preserving typing inventory")
+    sdf = INPUT / "source/final_structure.sdf"
+    molecule = Chem.SDMolSupplier(str(sdf), removeHs=False)[0]
+    if molecule is None:
+        raise ValueError("Missing reference molecular graph")
+    atoms = {a["index"]: a for a in data["atom_types"]}
+    terms = {}
+    section = ""
+    frcmod = INPUT / "gaff2_inventory.frcmod"
+    for line in frcmod.read_text().splitlines():
+        if line.strip() in ("MASS", "BOND", "ANGLE", "DIHE", "IMPROPER", "NONBON"):
+            section = line.strip()
+            continue
+        if section == "BOND" and line.strip():
+            types = tuple(sorted(x.strip() for x in line[:5].split("-")))
+            fields = line[5:].split()
+            if len(types) != 2 or len(fields) < 2:
+                raise ValueError("Unexpected BOND format")
+            if types in terms:
+                raise ValueError("Duplicate generic bond term")
+            terms[types] = {
+                "K_kcal_per_mol_A2": float(fields[0]),
+                "r0_A": float(fields[1]),
+            }
+    all_bonds = []
+    xyz = np.asarray(molecule.GetConformer().GetPositions())
+    for bond in molecule.GetBonds():
+        i, j = bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()
+        types = tuple(sorted((atoms[i]["atom_type"], atoms[j]["atom_type"])))
+        origins = (atoms[i]["origin_id"], atoms[j]["origin_id"])
+        length = float(np.linalg.norm(xyz[i] - xyz[j]))
+        all_bonds.append(
+            {
+                "origins": origins,
+                "types": types,
+                "QM_reference_length_A": length,
+                "generic_term": terms[types],
+                "reference_minus_r0_A": length - terms[types]["r0_A"],
+            }
+        )
+    selected = []
+    for row in all_bonds:
+        if "TIL:C*" in row["origins"] or set(row["origins"]) == {"THR:CB", "THR:OG1"}:
+            selected.append(
+                {
+                    **row,
+                    "same_type_bonds": [
+                        x["origins"] for x in all_bonds if x["types"] == row["types"]
+                    ],
+                }
+            )
+    sources = [report_path, sdf, frcmod, Path(__file__)]
+    result = {
+        "scope": "Term-label/equilibrium-length review only, not full MM optimization or validation",
+        "forcefield_validated": False,
+        "parameters_modified": False,
+        "reviewed_bonds": selected,
+        "empirical_or_analog_annotations": [
+            line
+            for line in frcmod.read_text().splitlines()
+            if "empirical" in line or "same as" in line
+        ],
+        "source_sha256": {
+            str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources
+        },
+    }
+    (OUT / "report.json").write_text(json.dumps(result, indent=2) + "\n")
+    logging.info("Reviewed %d junction/adjacent bonds; no terms changed", len(selected))
+
+
+if __name__ == "__main__":
+    main()

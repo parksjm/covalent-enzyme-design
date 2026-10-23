@@ -1,0 +1,170 @@
+{
+  "files": {
+    "gaff2_junction_review_01/command.json": {
+      "sha256": "447040fee4e0d5127f8f96989a64496eb13fbc0f8b6674145dc1bb861a5cf3c7",
+      "bytes": 1128
+    },
+    "gaff2_junction_review_01/job.log.txt": {
+      "sha256": "f7192913cd344538b242555ec087fa78b01deb3e665057a687e3d2d06a6e920a",
+      "bytes": 63
+    },
+    "gaff2_junction_review_01/report.json": {
+      "sha256": "3c4289f287ae0159ca318a5f1537dc8c7084260999a861d6315289a540c14661",
+      "bytes": 5027
+    },
+    "gaff2_junction_review_01/run.sh": {
+      "sha256": "a3674d0fc4028fbe2b0c257a7aa4b8b76cdb07b00bd772ec93c1c22c43e83e7b",
+      "bytes": 1548
+    },
+    "gaff2_junction_review_01/status.json": {
+      "sha256": "d0dc834cb5875fe8161a845d4ca693cc2a55bf6a873d81b66a16c7b01f613617",
+      "bytes": 1175
+    },
+    "gaff2_typing_inventory_01/antechamber.process.json": {
+      "sha256": "45dd305c6e079b70cfbaeb97d5f607a0a2491b137b6027f8c93c1d6ad4df2eb7",
+      "bytes": 667
+    },
+    "gaff2_typing_inventory_01/antechamber.stderr.log.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "gaff2_typing_inventory_01/antechamber.stdout.log.txt": {
+      "sha256": "3aafa9188f80567c5e19c5db7418c7e2707f8521c178b9172a503bb58538c616",
+      "bytes": 649
+    },
+    "gaff2_typing_inventory_01/command.json": {
+      "sha256": "2ebc8ca3fe1e56a81ae54454ed97683c9bf83e19e68cc6fb4af5d2529c1d2f66",
+      "bytes": 1566
+    },
+    "gaff2_typing_inventory_01/job.log.txt": {
+      "sha256": "57671084e88954e03dcd34f4f72640546426993841773dab69c71787d667e533",
+      "bytes": 669
+    },
+    "gaff2_typing_inventory_01/run.sh": {
+      "sha256": "97b2870288c8498f0b5ad4850a35a7617c4d656e10c16effe553f7f331731104",
+      "bytes": 1685
+    },
+    "gaff2_typing_inventory_01/status.json": {
+      "sha256": "26310461bdc89eb595ec1034621a46341099012c36db824cc717aac70e932d8f",
+      "bytes": 1613
+    },
+    "gaff2_typing_inventory_02/antechamber.process.json": {
+      "sha256": "1c71076c0f617372d842349d91902575af3a18c926275b1570e91653b4b72373",
+      "bytes": 667
+    },
+    "gaff2_typing_inventory_02/antechamber.stderr.log.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "gaff2_typing_inventory_02/antechamber.stdout.log.txt": {
+      "sha256": "3aafa9188f80567c5e19c5db7418c7e2707f8521c178b9172a503bb58538c616",
+      "bytes": 649
+    },
+    "gaff2_typing_inventory_02/command.json": {
+      "sha256": "645d955753ce3c69d183e70d42d7346a141cb66efa1b708291b652275ac285ac",
+      "bytes": 1232
+    },
+    "gaff2_typing_inventory_02/gaff2_inventory.frcmod": {
+      "sha256": "49887614960a5a999d09ec955f19a5c4906e7b3673ac48ba971d2b17431253b1",
+      "bytes": 5663
+    },
+    "gaff2_typing_inventory_02/job.log.txt": {
+      "sha256": "7729763491b422c450142c719199028930f4bfffb6982040029b18522480a9ff",
+      "bytes": 167
+    },
+    "gaff2_typing_inventory_02/parmchk2.process.json": {
+      "sha256": "7aebad5bb992038cff9b96b0f393b4138d7759d272d767b9d96542c1326166a0",
+      "bytes": 527
+    },
+    "gaff2_typing_inventory_02/parmchk2.stderr.log.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "gaff2_typing_inventory_02/parmchk2.stdout.log.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "gaff2_typing_inventory_02/report.json": {
+      "sha256": "2cdc5b6030c189755e431f4dd4db19a0d006b5ba08b796b2910e94dfb4853f37",
+      "bytes": 17924
+    },
+    "gaff2_typing_inventory_02/run.sh": {
+      "sha256": "8a19bec8bcff9a3b87117849c331751aca65a716d466b73d85e9a36cb0d709ae",
+      "bytes": 1692
+    },
+    "gaff2_typing_inventory_02/status.json": {
+      "sha256": "bbe869ba1ea7da7fbcf1e8ee49c0b9f79c550ae1122c30c2e2302b6c275c03b0",
+      "bytes": 1279
+    },
+    "recent_project_sources/00_nyl12_focused_redesign_pa6_20261016.json": {
+      "sha256": "37ba3de6f04f184e71bb3f80952515ebdbf038b5c938c2a35e6a6aa19ef19282",
+      "bytes": 1444
+    },
+    "recent_project_sources/01_nyl12_focused_redesign.py.txt": {
+      "sha256": "d18f990663835c3e649a978b30d3981485df7ca1e22c39a958b8a455da326eb6",
+      "bytes": 11102
+    },
+    "recent_project_sources/02_nyl12_redesign_protection.py.txt": {
+      "sha256": "d330316b777b60607ef08eefa8c4b81d6ce4180159e42b32c33c0cda6338015c",
+      "bytes": 2259
+    },
+    "recent_project_sources/03_test_nyl12_focused_redesign.py.txt": {
+      "sha256": "733351fdc576b8aa0331c85bf7e3d5ae51daac012cca48bdc3d3ffe20c9f74a6",
+      "bytes": 10399
+    },
+    "recent_project_sources/04_README.md": {
+      "sha256": "bb59c16babe62d6d7fd49621d58c60ef2810e4042c4af8c7529a8a2c4d22739c",
+      "bytes": 1095
+    },
+    "recent_project_sources/05_NYL12_FOCUSED_REDESIGN_WORKFLOW_20261016.md": {
+      "sha256": "622060ff51c2871268153cc11e0becc5362f8bb39b163edeaedfb5ef25149706",
+      "bytes": 23704
+    },
+    "recent_protected_preparation_summary.json": {
+      "sha256": "7552b8928a212a39cffc82267a6b61f397c92f8cbfaa416dd0edf64d52100f49",
+      "bytes": 15761
+    },
+    "recent_source_identity.json": {
+      "sha256": "7a06ea10c187857ade59e6f14933f54d0806fa294b5d8977ba558ff2a09f39d8",
+      "bytes": 1617
+    },
+    "repeat_symmetry_audit_01/command.json": {
+      "sha256": "aec6d951314ab16bbca07395cf1120cb4d08953f57c728da3dc4b7427889e2cb",
+      "bytes": 901
+    },
+    "repeat_symmetry_audit_01/job.log.txt": {
+      "sha256": "30686ab736b96e9b36d5d49b7a642412381657f0c6dd939a500e12487bcca8e5",
+      "bytes": 191
+    },
+    "repeat_symmetry_audit_01/report.json": {
+      "sha256": "d05ecceb322cf2e41f22476551637d908ffa852b87b694f81b1835a73728ba51",
+      "bytes": 3199
+    },
+    "repeat_symmetry_audit_01/run.sh": {
+      "sha256": "50dad0989efe0c4d7988e7e602b8bdc91c2a83e65a233ba9ecd190f86dcbc38f",
+      "bytes": 1542
+    },
+    "repeat_symmetry_audit_01/status.json": {
+      "sha256": "ed5060ee683b4236e0fb04e02f37475c07365eaf05d4fb60b3a93302e798d40d",
+      "bytes": 948
+    },
+    "workflow/audit_gaff2_typing_20261022.py.txt": {
+      "sha256": "f197b5c3badf7a2abe6db3304486fd0e9b26e658ea1394fa64c8460d0ff294b6",
+      "bytes": 14403
+    },
+    "workflow/audit_gaff2_typing_ac_roundtrip_20261022.py.txt": {
+      "sha256": "48d7f7ff49a721d1a5f57d6c94e070b5369284b548b70ef24731ea954f88e6fa",
+      "bytes": 14709
+    },
+    "workflow/audit_repeat_symmetry_20261022.py.txt": {
+      "sha256": "ad4f40785f20f3609f543fd9337c926d74867cec868f5163b55840c674c8f239",
+      "bytes": 4308
+    },
+    "workflow/review_gaff2_junction_terms_20261022.py.txt": {
+      "sha256": "22bbfd116266bc0be143f97fdca50231d0f5fa321999fc024f61b2d1636f959e",
+      "bytes": 3733
+    }
+  },
+  "forcefield_validated": false,
+  "new_design_campaign_executed": false
+}

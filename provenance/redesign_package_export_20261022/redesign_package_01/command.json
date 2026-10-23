@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/package_redesign_strategy_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/redesign_backbone_symmetry_and_access_20261022.md": "2b1f97079041cb0623d072d6d38b74623255864665f6f45c9373a8b6e3a03738",
+    "/data/jpc/covalent-enzyme-design/manuscript/METHODS_DRAFT.md": "b772cb3d2e63133889304e9948777976ce327f278ddccfa4cdb91f5497d0e9c4",
+    "/data/jpc/covalent-enzyme-design/manuscript/REFERENCES.md": "55c14370c3600911ee43308f9a69dea612b1194fc77899a0529b513c3163eb38",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/package_redesign_strategy_20261022.py": "fd1a148c945f79a75c5b504b6773b069597fec7231ac1ce98e127f35ce613f3e"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/redesign_package_01/job/job.log",
+  "session_name": "nyl12_redesign_package01_20261022",
+  "started_utc": null
+}

@@ -231,3 +231,12 @@ After running `./pull_nyl12_inspection.sh`, open
 Its bibliography is `manuscript/REFERENCES.md`; the implementation/status
 record is `manuscript/SOURCE_LEDGER.md`. The draft distinguishes completed
 reference preparation from planned GAFF2/RESP fitting and validation.
+
+
+### Backbone, symmetry and access strategy
+
+The current design recommendation and limitations are in
+`docs/redesign_backbone_symmetry_and_access_20261022.md`. It compares the
+LigandMPNN-first baseline, optional fixed-length local RFD3 and a separate
+future indel branch, and records the D2-like scaffold audit and loop-access
+requirements. This is a strategy record, not a completed design campaign.

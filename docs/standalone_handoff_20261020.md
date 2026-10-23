@@ -1,5 +1,40 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Redesign strategy/accessibility checkpoint — 2026-10-22
+
+The user supplied the more recent `/data/jpc/enzyme-substrate-modeling/` source.
+October16 focused redesign uses explicit separate alpha/beta ties, equal
+weights and homo_oligomer0. Use its protected_inputs, not superseded root/pilot
+snapshots; these were preparations, not an executed design campaign. Exact
+source/provenance and caveats are recorded in the new strategy document.
+
+The user's latest requirements and careful options comparison are recorded in
+`docs/redesign_backbone_symmetry_and_access_20261022.md`. Recommended first
+campaign: focused LigandMPNN on WT backbones/WT mature lengths, then independent
+AF3 and relaxation. RFD3 is optional; if needed, initially remodel only selected
+short pocket/entrance loops at exact WT lengths. Exact loop ranges are not yet
+selected. Preserve catalytic/maturation/core/interface context. Indels remain
+disabled until a per-design correspondence map and all postprocessing tests
+cover them; WT-specific exporters currently hard-code232/96 and Amber indices.
+
+The enzyme is (alpha-beta)4, not eight identical chains. Tie alpha copies and
+beta copies independently. User has working LigandMPNN symmetry examples and
+will point to them when needed. Do not assume C4 from tetramer stoichiometry:
+a source-pinned tmux audit of the retained scaffold is D2-like (three near180deg
+rotations, orthogonal axes, CA RMSD0.051–0.116A). Verify experimental assembly
+operators before production RFD3. Raw audit is
+output_nyl12_parameter_validation_20261022/repeat_symmetry_audit_01/.
+
+Access screening must include open-compatible apo/ES and catalytic states,
+actual substrate/product sterics, matched WT controls and state-aware sampling.
+Sequence symmetry is distinct from identical dynamics/occupancy. AF3 confidence
+and minimization do not establish opening kinetics; no opening in a short run
+is unresolved. LigandMPNN multiple-PDB mode is batching, not joint ensemble
+design. RFD3 exposure hints are static and do not guarantee channel access.
+No RFD3/LigandMPNN campaign or new AF3 run has launched here. User AF3 fork is
+untouched. Independent standard Amber typing/coverage preparation can proceed
+without fitting charges or relaxing a protein with an unvalidated force field.
+
 ## Amber workflow clarification and parallel checks — 2026-10-22 evening
 
 The user asked whether this uses standard Amber parameterization with

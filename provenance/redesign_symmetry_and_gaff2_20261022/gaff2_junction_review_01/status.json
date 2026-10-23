@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/review_gaff2_junction_terms_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T01:38:39.180658Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/gaff2_inventory.frcmod": "49887614960a5a999d09ec955f19a5c4906e7b3673ac48ba971d2b17431253b1",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/report.json": "2cdc5b6030c189755e431f4dd4db19a0d006b5ba08b796b2910e94dfb4853f37",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/review_gaff2_junction_terms_20261022.py": "22bbfd116266bc0be143f97fdca50231d0f5fa321999fc024f61b2d1636f959e"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_junction_review_01/job/job.log",
+  "session_name": "nyl12_gaff2_junction_review01_20261022",
+  "started_utc": "2026-10-23T01:38:38.851418Z"
+}

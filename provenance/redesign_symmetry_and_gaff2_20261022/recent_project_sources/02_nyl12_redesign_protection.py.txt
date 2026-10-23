@@ -1,0 +1,65 @@
+"""Enforce the recovered Nyl12 catalytic and maturation protection policy."""
+
+from __future__ import annotations
+
+from collections.abc import Mapping
+
+
+REQUIRED_ALPHA = frozenset({113, 186, *range(222, 233)})
+REQUIRED_BETA = frozenset({1, 2, 3, 40, 42})
+
+
+def validate_protection_config(config: Mapping[str, object]) -> None:
+    """Require the historical protected region and maturation/catalytic core.
+
+    Args:
+        config: Explicit alpha/beta protection lists in physical-chain numbering.
+
+    Raises:
+        ValueError: Required protections are absent.
+    """
+    for group, required in (("alpha", REQUIRED_ALPHA), ("beta", REQUIRED_BETA)):
+        actual = set(config[f"protected_{group}_positions"])
+        missing = sorted(required - actual)
+        if missing:
+            raise ValueError(
+                f"Missing required {group} catalytic/processing protections: {missing}"
+            )
+
+
+def audit_protected_identities(
+    residues: Mapping[tuple[str, int], str],
+) -> list[dict[str, str | int]]:
+    """Verify the documented seven protected core positions in all four copies.
+
+    Args:
+        residues: Physical chain/residue keys mapped to three-letter amino-acid names.
+
+    Returns:
+        Twenty-eight identity records with split and merged numbering.
+
+    Raises:
+        ValueError: A protected residue is missing or has the wrong identity.
+    """
+    output = []
+    for chains, positions, offset in (
+        ("ABCD", {113: "PHE", 186: "ASN", 229: "GLU", 232: "ASN"}, 0),
+        ("EFGH", {1: "THR", 40: "ASP", 42: "ASP"}, 232),
+    ):
+        for chain in chains:
+            for number, expected in positions.items():
+                if (chain, number) not in residues or residues[
+                    (chain, number)
+                ] != expected:
+                    raise ValueError(
+                        f"Protected identity mismatch at {chain}:{number}; expected {expected}"
+                    )
+                output.append(
+                    {
+                        "chain": chain,
+                        "physical_position": number,
+                        "merged_position": number + offset,
+                        "residue_name": expected,
+                    }
+                )
+    return output

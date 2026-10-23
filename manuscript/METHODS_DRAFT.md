@@ -287,9 +287,41 @@ points at the higher level.
 
 ## Design and independent prediction — proposed
 
-Validated catalytic atomic motifs will guide focused, symmetry-tied sequence
-redesign with protected maturation/catalytic residues. Local RFD3 backbone
-diversification is a later option [R10,R11]. Independent noncovalent ES
+The initial campaign will use focused LigandMPNN sequence redesign on retained
+WT backbones, followed by independent AF3 prediction and physical relaxation
+[R2,R10]. WT mature alpha/beta lengths (232/96 residues per repeat) will be
+retained. Fixed-backbone sequence design does not constrain the subsequent
+prediction/relaxation backbone. Maturation architecture and catalytic residues
+will be protected. RFD3 will be an optional later comparison for selected short
+pocket/entrance loops, initially using exact WT loop lengths and retained core/
+interface context [R11]. Exact loop ranges await accepted structural/access
+analysis; whole-fold backbone redesign is not the initial plan.
+
+The assembly will be treated as four alpha/beta repeats rather than eight
+identical chains. LigandMPNN will tie equivalent alpha positions and equivalent
+beta positions separately. A geometric audit of the retained scaffold is
+D2-like; the experimental assembly/operators will be checked before a production
+RFD3 symmetry specification. Symmetric sequence design does not require
+identical instantaneous loop conformations or ligand occupancy. The exact
+RFD3 combination of alpha/beta repeats, retained context and catalytic atomic
+motifs still requires an input preflight. Variable-length variants are deferred
+until explicit indel-aware mapping can regenerate residue selections, symmetry
+groups, maturation checks and Amber/QM indices; current WT exporters are not
+certified for indels.
+
+Candidates will be evaluated for compatibility with both catalytic and
+open-compatible apo/ES conformations, including substrate/product entry and
+exit. Cross-backbone comparison is a project-level screening step, not a claim
+that LigandMPNN's multiple-input option implements joint multistate design.
+Matched WT controls, geometry/steric checks and, after parameter validation,
+independent sampling from distinct starting conformations will assess gate
+behaviour. Neither confidence, minimization nor failure to observe opening in
+a short trajectory establishes an opening barrier or rate. RFD3 exposure hints
+can discourage inappropriate ligand burial but do not guarantee an access path
+or flexible loop. Full design/access requirements and source identities are
+recorded in docs/redesign_backbone_symmetry_and_access_20261022.md.
+
+Independent noncovalent ES
 predictions will omit enzyme–substrate bonds and imposed catalytic contacts.
 Every ligand will be evaluated against all four equivalent active sites using
 a fixed register and common criteria. All site outcomes and symmetry mappings

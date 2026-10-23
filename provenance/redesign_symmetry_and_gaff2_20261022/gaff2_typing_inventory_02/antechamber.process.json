@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/data/jpc/code/ambertools26/venv/bin/antechamber",
+    "-i",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/source/final_structure.sdf",
+    "-fi",
+    "sdf",
+    "-o",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/typed.mol2",
+    "-fo",
+    "mol2",
+    "-at",
+    "gaff2",
+    "-c",
+    "dc",
+    "-nc",
+    "-1",
+    "-m",
+    "1",
+    "-pf",
+    "n",
+    "-an",
+    "n",
+    "-s",
+    "2"
+  ],
+  "returncode": 0,
+  "stderr_log": "antechamber.stderr.log",
+  "stdout_log": "antechamber.stdout.log",
+  "tool": "antechamber"
+}

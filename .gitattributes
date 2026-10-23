@@ -2,3 +2,6 @@
 *.gjf whitespace=-blank-at-eof
 # Preserve standard CSV record terminators in hashed scientific exports.
 provenance/**/trajectory_metrics.csv whitespace=trailing-space,space-before-tab,cr-at-eol
+# Preserve hashed Amber tool logs and force-field record terminators.
+provenance/**/antechamber.stdout.log.txt whitespace=-blank-at-eof
+provenance/**/gaff2_inventory.frcmod whitespace=-blank-at-eof

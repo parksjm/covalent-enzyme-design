@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_gaff2_typing_20261022.py", line 372, in <module>
+    main()
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_gaff2_typing_20261022.py", line 317, in main
+    validation = _validate_typing(
+                 ^^^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_gaff2_typing_20261022.py", line 210, in _validate_typing
+    raise ValueError("Atom order or coordinates changed during typing")
+ValueError: Atom order or coordinates changed during typing

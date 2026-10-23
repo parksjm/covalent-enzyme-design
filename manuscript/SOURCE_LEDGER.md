@@ -249,3 +249,41 @@ The inspection exporter selects every manuscript/*.md and docs/*.md. A fresh
 package will preserve existing structures, include updated Methods/References/
 Source ledger and verify every packaged digest before promotion. Exact package
 job, source inventory and verification records accompany this checkpoint.
+
+
+## Backbone, loop-access and tetramer design decisions — 2026-10-22
+
+The user requested careful comparison of optional RFD3 versus LigandMPNN/AF3/
+relaxation, explicit length and indel handling, gate opening and tetramer symmetry.
+Working LigandMPNN symmetry examples exist and the user will point to them when
+needed. The recommendation is a WT-length LigandMPNN baseline; optional later
+exact-length local RFD3; indels only after explicit mapping/postprocessing tests.
+Detailed contract and open/catalytic-state screening limits are in
+`docs/redesign_backbone_symmetry_and_access_20261022.md`.
+
+A scripted rigid-transform audit of the retained AF3-derived WT model found
+three nearly180degree rotations about orthogonal axes (CA RMSD0.051–0.116A),
+consistent with D2-like geometry. This is not a crystal biological-assembly
+assignment. Preserve alpha and beta symmetry ties separately and verify the
+experimental operators before configuring RFD3. Existing WT-specific exporters
+contain fixed lengths/Amber indices and are not certified for indel variants.
+No new backbone/sequence design, AF3 inference or physical gate sampling was
+run. Source/audit records are retained at
+output_nyl12_parameter_validation_20261022/repeat_symmetry_audit_01/.
+
+
+### Recovered recent symmetry source and GAFF2 inventory
+
+The user corrected the preferred source to /data/jpc/enzyme-substrate-modeling.
+Recovered the October16 protected LigandMPNN preparation, explicit alpha/beta
+ties (weights0.25, homo_oligomer0), protection rules and tests. Preserve its
+preparation-only status and superseded-input guards. No literal earlier
+point-group statement was located; the separate D2-like geometric audit is
+not misattributed to that earlier prose.
+
+Charge-deleted GAFF2 typing and parmchk2 inventory preserved the capped graph.
+No ATTN placeholders, but empirical/analog estimates remain. Generic c3-os
+is shared by the reactive junction and ordinary CB-OG1; targeted corrections
+must avoid global collateral changes. This is not an accepted hybrid force
+field. Exact successful/failed attempts and source snapshots are retained in
+provenance/redesign_symmetry_and_gaff2_20261022/.

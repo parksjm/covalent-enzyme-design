@@ -1,0 +1,801 @@
+{
+  "accepted": true,
+  "atom_count": 37,
+  "atom_map": {
+    "atom_index_by_origin": {
+      "ACE:C": 19,
+      "ACE:CH3": 21,
+      "ACE:CH3H1": 27,
+      "ACE:CH3H2": 28,
+      "ACE:CH3H3": 29,
+      "ACE:O": 20,
+      "NME:CH3": 8,
+      "NME:H": 15,
+      "NME:HH31": 16,
+      "NME:HH32": 17,
+      "NME:HH33": 18,
+      "NME:N": 7,
+      "THR:C": 5,
+      "THR:CA": 1,
+      "THR:CB": 2,
+      "THR:CG2": 4,
+      "THR:H": 9,
+      "THR:HA": 10,
+      "THR:HB": 11,
+      "THR:HG21": 12,
+      "THR:HG22": 13,
+      "THR:HG23": 14,
+      "THR:N": 0,
+      "THR:O": 6,
+      "THR:OG1": 3,
+      "TIL:C*": 22,
+      "TIL:HN": 36,
+      "TIL:N": 24,
+      "TIL:O": 23,
+      "TIL:acylCH3": 25,
+      "TIL:acylCH3H1": 30,
+      "TIL:acylCH3H2": 31,
+      "TIL:acylCH3H3": 32,
+      "TIL:leavingCH3": 26,
+      "TIL:leavingCH3H1": 33,
+      "TIL:leavingCH3H2": 34,
+      "TIL:leavingCH3H3": 35
+    },
+    "atoms": [
+      {
+        "atom_name": "N",
+        "element": "N",
+        "formal_charge": 0,
+        "index": 0,
+        "origin_id": "THR:N",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "CA",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 1,
+        "origin_id": "THR:CA",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "CB",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 2,
+        "origin_id": "THR:CB",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "OG1",
+        "element": "O",
+        "formal_charge": 0,
+        "index": 3,
+        "origin_id": "THR:OG1",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "CG2",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 4,
+        "origin_id": "THR:CG2",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "C",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 5,
+        "origin_id": "THR:C",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "O",
+        "element": "O",
+        "formal_charge": 0,
+        "index": 6,
+        "origin_id": "THR:O",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "N",
+        "element": "N",
+        "formal_charge": 0,
+        "index": 7,
+        "origin_id": "NME:N",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "CH3",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 8,
+        "origin_id": "NME:CH3",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "H",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 9,
+        "origin_id": "THR:H",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "HA",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 10,
+        "origin_id": "THR:HA",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "HB",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 11,
+        "origin_id": "THR:HB",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "HG21",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 12,
+        "origin_id": "THR:HG21",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "HG22",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 13,
+        "origin_id": "THR:HG22",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "HG23",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 14,
+        "origin_id": "THR:HG23",
+        "residue_id": "THR"
+      },
+      {
+        "atom_name": "H",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 15,
+        "origin_id": "NME:H",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "HH31",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 16,
+        "origin_id": "NME:HH31",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "HH32",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 17,
+        "origin_id": "NME:HH32",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "HH33",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 18,
+        "origin_id": "NME:HH33",
+        "residue_id": "NME"
+      },
+      {
+        "atom_name": "C",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 19,
+        "origin_id": "ACE:C",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "O",
+        "element": "O",
+        "formal_charge": 0,
+        "index": 20,
+        "origin_id": "ACE:O",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "CH3",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 21,
+        "origin_id": "ACE:CH3",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "C*",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 22,
+        "origin_id": "TIL:C*",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "O",
+        "element": "O",
+        "formal_charge": -1,
+        "index": 23,
+        "origin_id": "TIL:O",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "N",
+        "element": "N",
+        "formal_charge": 0,
+        "index": 24,
+        "origin_id": "TIL:N",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "acylCH3",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 25,
+        "origin_id": "TIL:acylCH3",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "leavingCH3",
+        "element": "C",
+        "formal_charge": 0,
+        "index": 26,
+        "origin_id": "TIL:leavingCH3",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "CH3H1",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 27,
+        "origin_id": "ACE:CH3H1",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "CH3H2",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 28,
+        "origin_id": "ACE:CH3H2",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "CH3H3",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 29,
+        "origin_id": "ACE:CH3H3",
+        "residue_id": "ACE"
+      },
+      {
+        "atom_name": "acylCH3H1",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 30,
+        "origin_id": "TIL:acylCH3H1",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "acylCH3H2",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 31,
+        "origin_id": "TIL:acylCH3H2",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "acylCH3H3",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 32,
+        "origin_id": "TIL:acylCH3H3",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "leavingCH3H1",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 33,
+        "origin_id": "TIL:leavingCH3H1",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "leavingCH3H2",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 34,
+        "origin_id": "TIL:leavingCH3H2",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "leavingCH3H3",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 35,
+        "origin_id": "TIL:leavingCH3H3",
+        "residue_id": "TIL"
+      },
+      {
+        "atom_name": "HN",
+        "element": "H",
+        "formal_charge": 0,
+        "index": 36,
+        "origin_id": "TIL:HN",
+        "residue_id": "TIL"
+      }
+    ],
+    "attacked_carbon_cip": "S",
+    "cap_phi_override_degrees": -60.0,
+    "constraints": [
+      {
+        "atoms_one_based": [
+          20,
+          1,
+          2,
+          6
+        ],
+        "degrees": -59.99999999999999,
+        "name": "phi"
+      },
+      {
+        "atoms_one_based": [
+          1,
+          2,
+          6,
+          8
+        ],
+        "degrees": 134.11027642801542,
+        "name": "psi"
+      },
+      {
+        "atoms_one_based": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "degrees": -58.96441787770226,
+        "name": "chi1"
+      }
+    ],
+    "coordinate_reference": {
+      "C_to_next_N_A": 1.3217386277172958,
+      "chain": "A",
+      "chi1_degrees": -58.964417877702274,
+      "phi_degrees": null,
+      "phi_scope": "undefined",
+      "previous_C_to_N_A": null,
+      "psi_degrees": 134.11027642801542,
+      "residue_number": 233,
+      "sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c",
+      "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/source/cif/n12c.cif",
+      "thr_coordinates_A": {
+        "C": [
+          -50.782,
+          -4.706,
+          12.842
+        ],
+        "CA": [
+          -51.829,
+          -4.69,
+          13.96
+        ],
+        "CB": [
+          -51.656,
+          -5.953,
+          14.786
+        ],
+        "CG2": [
+          -50.291,
+          -6.054,
+          15.435
+        ],
+        "N": [
+          -53.197,
+          -4.671,
+          13.394
+        ],
+        "O": [
+          -50.82,
+          -5.579,
+          11.941
+        ],
+        "OG1": [
+          -52.632,
+          -5.96,
+          15.815
+        ]
+      }
+    },
+    "cores": 8,
+    "electron_count": 134,
+    "forcefield_validated": false,
+    "formal_charge": -1,
+    "formula": "C10H20N3O4-",
+    "full_stationary_minimum_claimed": false,
+    "geometry_method": "wB97XD/def2TZVP",
+    "memory_gb": 16,
+    "model_scope": "bonded_fit_surrogate_only",
+    "multiplicity": 1,
+    "native_esp_resp_transfer_eligible": false,
+    "proton_reservoir": {
+      "note": "This truncation omits the hydroxyl proton into an external reservoir; it does not specify a relay identity.",
+      "omitted_origin_id": "THR:HG1"
+    },
+    "seed": 20261022,
+    "solvent": "gas phase"
+  },
+  "atom_type_counts": {
+    "c": 2,
+    "c3": 8,
+    "h1": 8,
+    "hc": 9,
+    "hn": 3,
+    "n7": 1,
+    "ns": 2,
+    "o": 3,
+    "os": 1
+  },
+  "atom_types": [
+    {
+      "atom_type": "ns",
+      "charge": 0.0,
+      "element": "N",
+      "index": 0,
+      "origin_id": "THR:N"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 1,
+      "origin_id": "THR:CA"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 2,
+      "origin_id": "THR:CB"
+    },
+    {
+      "atom_type": "os",
+      "charge": 0.0,
+      "element": "O",
+      "index": 3,
+      "origin_id": "THR:OG1"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 4,
+      "origin_id": "THR:CG2"
+    },
+    {
+      "atom_type": "c",
+      "charge": 0.0,
+      "element": "C",
+      "index": 5,
+      "origin_id": "THR:C"
+    },
+    {
+      "atom_type": "o",
+      "charge": 0.0,
+      "element": "O",
+      "index": 6,
+      "origin_id": "THR:O"
+    },
+    {
+      "atom_type": "ns",
+      "charge": 0.0,
+      "element": "N",
+      "index": 7,
+      "origin_id": "NME:N"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 8,
+      "origin_id": "NME:CH3"
+    },
+    {
+      "atom_type": "hn",
+      "charge": 0.0,
+      "element": "H",
+      "index": 9,
+      "origin_id": "THR:H"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 10,
+      "origin_id": "THR:HA"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 11,
+      "origin_id": "THR:HB"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 12,
+      "origin_id": "THR:HG21"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 13,
+      "origin_id": "THR:HG22"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 14,
+      "origin_id": "THR:HG23"
+    },
+    {
+      "atom_type": "hn",
+      "charge": 0.0,
+      "element": "H",
+      "index": 15,
+      "origin_id": "NME:H"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 16,
+      "origin_id": "NME:HH31"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 17,
+      "origin_id": "NME:HH32"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 18,
+      "origin_id": "NME:HH33"
+    },
+    {
+      "atom_type": "c",
+      "charge": 0.0,
+      "element": "C",
+      "index": 19,
+      "origin_id": "ACE:C"
+    },
+    {
+      "atom_type": "o",
+      "charge": 0.0,
+      "element": "O",
+      "index": 20,
+      "origin_id": "ACE:O"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 21,
+      "origin_id": "ACE:CH3"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 22,
+      "origin_id": "TIL:C*"
+    },
+    {
+      "atom_type": "o",
+      "charge": 0.0,
+      "element": "O",
+      "index": 23,
+      "origin_id": "TIL:O"
+    },
+    {
+      "atom_type": "n7",
+      "charge": 0.0,
+      "element": "N",
+      "index": 24,
+      "origin_id": "TIL:N"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 25,
+      "origin_id": "TIL:acylCH3"
+    },
+    {
+      "atom_type": "c3",
+      "charge": 0.0,
+      "element": "C",
+      "index": 26,
+      "origin_id": "TIL:leavingCH3"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 27,
+      "origin_id": "ACE:CH3H1"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 28,
+      "origin_id": "ACE:CH3H2"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 29,
+      "origin_id": "ACE:CH3H3"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 30,
+      "origin_id": "TIL:acylCH3H1"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 31,
+      "origin_id": "TIL:acylCH3H2"
+    },
+    {
+      "atom_type": "hc",
+      "charge": 0.0,
+      "element": "H",
+      "index": 32,
+      "origin_id": "TIL:acylCH3H3"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 33,
+      "origin_id": "TIL:leavingCH3H1"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 34,
+      "origin_id": "TIL:leavingCH3H2"
+    },
+    {
+      "atom_type": "h1",
+      "charge": 0.0,
+      "element": "H",
+      "index": 35,
+      "origin_id": "TIL:leavingCH3H3"
+    },
+    {
+      "atom_type": "hn",
+      "charge": 0.0,
+      "element": "H",
+      "index": 36,
+      "origin_id": "TIL:HN"
+    }
+  ],
+  "bond_count": 36,
+  "charges_fitted": false,
+  "commands": [
+    {
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/antechamber",
+        "-i",
+        "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/source/final_structure.sdf",
+        "-fi",
+        "sdf",
+        "-o",
+        "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/typed.mol2",
+        "-fo",
+        "mol2",
+        "-at",
+        "gaff2",
+        "-c",
+        "dc",
+        "-nc",
+        "-1",
+        "-m",
+        "1",
+        "-pf",
+        "n",
+        "-an",
+        "n",
+        "-s",
+        "2"
+      ],
+      "returncode": 0,
+      "stderr_log": "antechamber.stderr.log",
+      "stdout_log": "antechamber.stdout.log",
+      "tool": "antechamber"
+    },
+    {
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/parmchk2",
+        "-i",
+        "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/typed.mol2",
+        "-f",
+        "mol2",
+        "-o",
+        "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/gaff2_inventory.frcmod",
+        "-s",
+        "gaff2",
+        "-a",
+        "Y"
+      ],
+      "returncode": 0,
+      "stderr_log": "parmchk2.stderr.log",
+      "stdout_log": "parmchk2.stdout.log",
+      "tool": "parmchk2"
+    }
+  ],
+  "coordinate_rule": "Exact source->three-decimal AC quantization; not geometry optimization",
+  "forcefield_validated": false,
+  "formal_charge": -1,
+  "maximum_coordinate_error_A": 0.0005000000000000004,
+  "mol2_charge_handling": "Deleted with explicit antechamber -c dc; zero Mol2 charges do not imply neutral molecular charge.",
+  "mol2_partial_charge_max_abs": 0.0,
+  "mol2_partial_charge_sum": 0.0,
+  "molecular_formal_charge": -1,
+  "native_transfer_eligible": false,
+  "parameter_inventory": {
+    "attn_lines": [],
+    "section_entry_counts": {
+      "ANGLE": 28,
+      "BOND": 12,
+      "DIHE": 57,
+      "IMPROPER": 2,
+      "MASS": 9,
+      "NONBON": 9
+    }
+  },
+  "scope": "GAFF2 typing/estimated-term inventory for 37-atom capped surrogate only; not a hybrid ff19SB protein model or usable MD topology.",
+  "source_sha256": {
+    "ATOMTYPE_GFF2.DEF": "7a076ac2e667ab87057befc7a5985be4cead83e01ff5d2d3dab9f1d65bff637e",
+    "PARMCHK.DAT": "5fc9aa69b118b58dfb377817de7ba0c2b08cd2a50542d63c83b70a62c8385a43",
+    "antechamber": "59060c69c5fca305794b10f19d950556fbd18db92d6c7af87252389858214c5d",
+    "audit_script": "48d7f7ff49a721d1a5f57d6c94e070b5369284b548b70ef24731ea954f88e6fa",
+    "frozen_atom_map": "a1dbe8b50322d59bf83be2ccf4f8a39f4ff8844ad0026bd1d5f19d5ee1645b1b",
+    "frozen_sdf": "270101f4c3fbbcf55d9fa6623c0d9d260d1cdb49f87c17ff42f1e9beadfd84e9",
+    "gaff2.dat": "2244b58627a85693776d12a0155a292f72b65b4398a03b87958136ad7460c67f",
+    "parmchk2": "c2ef0906b71c64e5277673bcba943512daf75ef334ad9421c0045b6b80b6d7cc"
+  },
+  "typing_graph_preserved": true
+}

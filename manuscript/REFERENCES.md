@@ -41,6 +41,9 @@ is cited as such, not represented as a peer-reviewed benchmark.
 - **R11.** RosettaCommons. *Enzyme Design in RFdiffusion3*, official Foundry
   documentation, accessed 2026-10-20.
   https://rosettacommons.github.io/foundry/models/rfd3/tutorials/enzyme_design_tutorial.html
+  Additional official input/symmetry documentation:
+  https://github.com/RosettaCommons/foundry/blob/production/models/rfd3/docs/input.md
+  and the sibling docs/examples/symmetry.md.
   Add the final RFD3 primary-paper citation after reconciling the project's
   stored Science 2026 citation with the exact release used for design.
 - **R12.** Hermes, Sargsyan, Najm and Zádor. *Sella, an Open-Source

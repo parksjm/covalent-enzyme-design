@@ -1,0 +1,160 @@
+{
+  "scope": "Term-label/equilibrium-length review only, not full MM optimization or validation",
+  "forcefield_validated": false,
+  "parameters_modified": false,
+  "reviewed_bonds": [
+    {
+      "origins": [
+        "THR:CB",
+        "THR:OG1"
+      ],
+      "types": [
+        "c3",
+        "os"
+      ],
+      "QM_reference_length_A": 1.3932502323703375,
+      "generic_term": {
+        "K_kcal_per_mol_A2": 282.27,
+        "r0_A": 1.427
+      },
+      "reference_minus_r0_A": -0.03374976762966253,
+      "same_type_bonds": [
+        [
+          "THR:CB",
+          "THR:OG1"
+        ],
+        [
+          "TIL:C*",
+          "THR:OG1"
+        ]
+      ]
+    },
+    {
+      "origins": [
+        "TIL:C*",
+        "TIL:O"
+      ],
+      "types": [
+        "c3",
+        "o"
+      ],
+      "QM_reference_length_A": 1.3029561351020225,
+      "generic_term": {
+        "K_kcal_per_mol_A2": 406.05,
+        "r0_A": 1.321
+      },
+      "reference_minus_r0_A": -0.01804386489797749,
+      "same_type_bonds": [
+        [
+          "TIL:C*",
+          "TIL:O"
+        ]
+      ]
+    },
+    {
+      "origins": [
+        "TIL:C*",
+        "TIL:N"
+      ],
+      "types": [
+        "c3",
+        "n7"
+      ],
+      "QM_reference_length_A": 1.4729097121005075,
+      "generic_term": {
+        "K_kcal_per_mol_A2": 255.52,
+        "r0_A": 1.463
+      },
+      "reference_minus_r0_A": 0.009909712100507395,
+      "same_type_bonds": [
+        [
+          "TIL:C*",
+          "TIL:N"
+        ],
+        [
+          "TIL:N",
+          "TIL:leavingCH3"
+        ]
+      ]
+    },
+    {
+      "origins": [
+        "TIL:C*",
+        "TIL:acylCH3"
+      ],
+      "types": [
+        "c3",
+        "c3"
+      ],
+      "QM_reference_length_A": 1.5471903115001722,
+      "generic_term": {
+        "K_kcal_per_mol_A2": 228.89,
+        "r0_A": 1.535
+      },
+      "reference_minus_r0_A": 0.012190311500172246,
+      "same_type_bonds": [
+        [
+          "THR:CA",
+          "THR:CB"
+        ],
+        [
+          "THR:CB",
+          "THR:CG2"
+        ],
+        [
+          "TIL:C*",
+          "TIL:acylCH3"
+        ]
+      ]
+    },
+    {
+      "origins": [
+        "TIL:C*",
+        "THR:OG1"
+      ],
+      "types": [
+        "c3",
+        "os"
+      ],
+      "QM_reference_length_A": 1.5086222489410661,
+      "generic_term": {
+        "K_kcal_per_mol_A2": 282.27,
+        "r0_A": 1.427
+      },
+      "reference_minus_r0_A": 0.08162224894106607,
+      "same_type_bonds": [
+        [
+          "THR:CB",
+          "THR:OG1"
+        ],
+        [
+          "TIL:C*",
+          "THR:OG1"
+        ]
+      ]
+    }
+  ],
+  "empirical_or_analog_annotations": [
+    "n7-c3-o    84.257     115.460   Calculated with empirical approach for n7-c3-o",
+    "o -c -ns-c3   4   10.000       180.000           2.000      same as X -c -n -X , penalty score=  0.0",
+    "c3-c -ns-hn   4   10.000       180.000           2.000      same as X -c -n -X , penalty score=  0.0",
+    "os-c3-n7-c3   6    1.800         0.000           3.000      same as X -c3-n3-X , penalty score=  0.0",
+    "os-c3-n7-hn   6    1.800         0.000           3.000      same as X -c3-n3-X , penalty score=  0.0",
+    "o -c -ns-hn   1    2.500       180.000          -2.000      same as o -c -n -hn",
+    "o -c -ns-hn   1    2.000         0.000           1.000      same as o -c -n -hn, penalty score=  0.0",
+    "c3-c3-ns-hn   6    0.000         0.000           2.000      same as X -c3-n -X , penalty score=  0.0",
+    "c -c3-ns-hn   6    0.000         0.000           2.000      same as X -c3-n -X , penalty score=  0.0",
+    "h1-c3-ns-hn   6    0.000         0.000           2.000      same as X -c3-n -X , penalty score=  0.0",
+    "o -c3-n7-c3   6    1.800         0.000           3.000      same as X -c3-n3-X , penalty score=  0.0",
+    "o -c3-n7-hn   6    1.800         0.000           3.000      same as X -c3-n3-X , penalty score=  0.0",
+    "hc-c3-c3-n7   1    0.100         0.000           3.000      same as hc-c3-c3-n3, penalty score=  0.0",
+    "c3-c3-n7-hn   1    0.217         0.000           3.000      same as c3-c3-n3-hn, penalty score=  0.0",
+    "h1-c3-n7-hn   6    1.800         0.000           3.000      same as X -c3-n3-X , penalty score=  0.0"
+  ],
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/report.json": "2cdc5b6030c189755e431f4dd4db19a0d006b5ba08b796b2910e94dfb4853f37",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/source/final_structure.sdf": "270101f4c3fbbcf55d9fa6623c0d9d260d1cdb49f87c17ff42f1e9beadfd84e9",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/gaff2_typing_inventory_02/gaff2_inventory.frcmod": "49887614960a5a999d09ec955f19a5c4906e7b3673ac48ba971d2b17431253b1",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/review_gaff2_junction_terms_20261022.py": "22bbfd116266bc0be143f97fdca50231d0f5fa321999fc024f61b2d1636f959e"
+  }
+}

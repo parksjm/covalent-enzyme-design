@@ -1,0 +1,314 @@
+"""Prepare physically split Nyl12 structures and symmetry-aware design arguments."""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from math import dist, isfinite
+from pathlib import Path
+
+import numpy as np
+
+from .nyl12_redesign_protection import audit_protected_identities
+
+
+@dataclass(frozen=True)
+class DesignAtom:
+    """A heavy atom with physical chain identity and its original PDB serial."""
+
+    serial: int
+    chain: str
+    residue: int
+    residue_name: str
+    name: str
+    xyz: tuple[float, float, float]
+    line: str
+
+
+def split_atoms(text: str) -> list[DesignAtom]:
+    """Split merged alpha/beta numbering into physical A-D/E-H chains.
+
+    Args:
+        text: Canonical PDB text with protein chains A-D numbered 1-328 and I ligand.
+
+    Returns:
+        Heavy atoms with alpha 1-232, beta 1-96, and unchanged ligand atom names.
+
+    Raises:
+        ValueError: Atoms have invalid numbering, duplicate keys, or coordinates.
+    """
+    atoms = []
+    seen = set()
+    serials = set()
+    for line in text.splitlines():
+        if line[:6] not in {"ATOM  ", "HETATM"}:
+            continue
+        element = line[76:78].strip()
+        if not element:
+            raise ValueError("PDB element fields are required")
+        if element in {"H", "D"}:
+            continue
+        chain, residue = line[21], int(line[22:26])
+        if line[16].strip() or line[26].strip():
+            raise ValueError("Alternate locations and insertion codes require curation")
+        if chain in "ABCD" and 1 <= residue <= 328:
+            if residue > 232:
+                chain = "EFGH"["ABCD".index(chain)]
+                residue -= 232
+        elif chain != "I" or residue != 1:
+            raise ValueError(f"Unexpected canonical residue {chain}:{residue}")
+        xyz = tuple(float(line[start : start + 8]) for start in (30, 38, 46))
+        if not all(isfinite(value) for value in xyz):
+            raise ValueError("Nonfinite coordinates")
+        name = line[12:16].strip()
+        key = (chain, residue, name)
+        serial = int(line[6:11])
+        if key in seen or serial in serials:
+            raise ValueError(f"Duplicate atom {key} or serial {serial}")
+        seen.add(key)
+        serials.add(serial)
+        rewritten = line[:21] + chain + f"{residue:4d}" + line[26:]
+        atoms.append(
+            DesignAtom(serial, chain, residue, line[17:20], name, xyz, rewritten)
+        )
+    if not atoms:
+        raise ValueError("No heavy atoms")
+    return atoms
+
+
+def design_pdb(atoms: list[DesignAtom], original: str) -> str:
+    """Write physical chains with TER records and retained heavy-atom connectivity.
+
+    Args:
+        atoms: Split heavy atoms with original serials.
+        original: Canonical source text supplying CONECT records.
+
+    Returns:
+        PDB text without hydrogens; coordinates and heavy-atom serials are preserved.
+    """
+    lines = ["REMARK Physical alpha A-D and beta E-H; one PA6 ligand I\n"]
+    retained = {atom.serial for atom in atoms}
+    for chain in "ABCDEFGHI":
+        group = [atom.line + "\n" for atom in atoms if atom.chain == chain]
+        if group:
+            lines.extend(group + ["TER\n"])
+    for line in original.splitlines():
+        if line.startswith("CONECT"):
+            serials = [
+                int(line[i : i + 5])
+                for i in range(6, len(line), 5)
+                if line[i : i + 5].strip()
+            ]
+            if serials and serials[0] in retained:
+                links = [number for number in serials[1:] if number in retained]
+                if links:
+                    lines.append(
+                        "CONECT"
+                        + "".join(f"{number:5d}" for number in [serials[0], *links])
+                        + "\n"
+                    )
+    return "".join(lines) + "END\n"
+
+
+def validate_assembly(atoms: list[DesignAtom]) -> None:
+    """Require all 1,312 protein residues, identical copies, and catalytic identities.
+
+    Args:
+        atoms: Physical-chain heavy atoms.
+
+    Raises:
+        ValueError: Protein sequence coverage, symmetry, or catalytic identities fail.
+    """
+    ca = {
+        (a.chain, a.residue): a.residue_name
+        for a in atoms
+        if a.name == "CA" and a.chain != "I"
+    }
+    expected = {(c, r) for c in "ABCD" for r in range(1, 233)}
+    expected |= {(c, r) for c in "EFGH" for r in range(1, 97)}
+    if set(ca) != expected:
+        raise ValueError(
+            "Expected complete 232-residue alpha and 96-residue beta chains"
+        )
+    for group, length in (("ABCD", 232), ("EFGH", 96)):
+        sequences = {tuple(ca[(c, r)] for r in range(1, length + 1)) for c in group}
+        if len(sequences) != 1:
+            raise ValueError("Equivalent chain sequences differ")
+    if any(
+        ca[(c, r)] != name for c in "ABCD" for r, name in ((113, "PHE"), (186, "ASN"))
+    ):
+        raise ValueError("Oxyanion-hole identities differ")
+    if any(ca[(c, 1)] != "THR" for c in "EFGH"):
+        raise ValueError("Catalytic beta N terminus is not Thr")
+    audit_protected_identities(ca)
+
+
+def focused_positions(
+    ensembles: list[list[DesignAtom]],
+    reacting_atoms: list[str],
+    radius: float,
+    protected_alpha: list[int],
+    protected_beta: list[int],
+) -> tuple[list[int], list[int]]:
+    """Choose a common design mask near the reacting group across input backbones.
+
+    Args:
+        ensembles: Prepared backbone atom lists.
+        reacting_atoms: Exact ligand atom names defining the focused region.
+        radius: Heavy-atom distance cutoff in angstroms.
+        protected_alpha: Alpha positions excluded from design in all copies.
+        protected_beta: Beta positions excluded from design in all copies.
+
+    Returns:
+        Sorted alpha and beta positions, subsequently tied across equivalent chains.
+
+    Raises:
+        ValueError: Centers are missing or duplicated, radius is invalid, or mask is empty.
+    """
+    if (
+        not ensembles
+        or not reacting_atoms
+        or len(set(reacting_atoms)) != len(reacting_atoms)
+    ):
+        raise ValueError("Unique reacting atoms and at least one backbone are required")
+    if not isfinite(radius) or radius <= 0:
+        raise ValueError("Radius must be positive and finite")
+    selected = {"alpha": set(), "beta": set()}
+    for atoms in ensembles:
+        centers = [a.xyz for a in atoms if a.chain == "I" and a.name in reacting_atoms]
+        if len(centers) != len(reacting_atoms):
+            raise ValueError("Missing or duplicate reacting ligand atoms")
+        for atom in atoms:
+            if (
+                atom.chain != "I"
+                and min(dist(atom.xyz, center) for center in centers) <= radius
+            ):
+                selected["alpha" if atom.chain in "ABCD" else "beta"].add(atom.residue)
+    alpha = sorted(selected["alpha"] - set(protected_alpha))
+    beta = sorted(selected["beta"] - set(protected_beta))
+    if not alpha and not beta:
+        raise ValueError("No designable positions remain")
+    return alpha, beta
+
+
+def symmetry_tokens(alpha: list[int], beta: list[int]) -> tuple[str, str, str]:
+    """Build LigandMPNN redesign tokens, tied groups, and equal symmetry weights.
+
+    Args:
+        alpha: Common alpha positions to design.
+        beta: Common beta positions to design.
+
+    Returns:
+        Space-separated redesign tokens, pipe-separated groups, and matching weights.
+    """
+    groups = [
+        [f"{chain}{position}" for chain in chains]
+        for chains, positions in (("ABCD", alpha), ("EFGH", beta))
+        for position in positions
+    ]
+    return (
+        " ".join(token for group in groups for token in group),
+        "|".join(",".join(group) for group in groups),
+        "|".join("0.25,0.25,0.25,0.25" for _ in groups),
+    )
+
+
+def mpnn_command(
+    config: dict[str, object],
+    pdb: Path,
+    output: Path,
+    alpha: list[int],
+    beta: list[int],
+    temperature: float,
+    seed: int,
+) -> list[str]:
+    """Build a command without executing it or enabling automatic homooligomer mode.
+
+    Args:
+        config: Explicit installed tool paths and sampling settings.
+        pdb: Full physical-chain tetramer with ligand.
+        output: Unique design-job destination.
+        alpha: Designable alpha positions.
+        beta: Designable beta positions.
+        temperature: Sequence sampling temperature.
+        seed: Reproducible random seed.
+
+    Returns:
+        Argument vector enabling ligand and fixed-sidechain context and explicit ties.
+    """
+    redesigned, symmetry, weights = symmetry_tokens(alpha, beta)
+    return [
+        str(config["ligandmpnn_python"]),
+        str(Path(str(config["ligandmpnn_directory"])) / "run.py"),
+        "--model_type",
+        "ligand_mpnn",
+        "--checkpoint_ligand_mpnn",
+        str(config["ligandmpnn_checkpoint"]),
+        "--pdb_path",
+        str(pdb),
+        "--out_folder",
+        str(output),
+        "--redesigned_residues",
+        redesigned,
+        "--symmetry_residues",
+        symmetry,
+        "--symmetry_weights",
+        weights,
+        "--homo_oligomer",
+        "0",
+        "--ligand_mpnn_use_atom_context",
+        "1",
+        "--ligand_mpnn_use_side_chain_context",
+        "1",
+        "--temperature",
+        str(temperature),
+        "--seed",
+        str(seed),
+        "--batch_size",
+        "1",
+        "--number_of_batches",
+        str(config["sequences_per_temperature_per_backbone"]),
+        "--save_stats",
+        "1",
+        "--pack_side_chains",
+        "0",
+    ]
+
+
+def aligned_rmsd(reference: list[DesignAtom], target: list[DesignAtom]) -> float:
+    """Measure focused C-alpha RMSD after fitting all protein C-alpha atoms.
+
+    Args:
+        reference: Reference assembly atoms with C54/O49 ligand centers.
+        target: Target assembly with exactly matching protein C-alpha keys.
+
+    Returns:
+        RMSD for reference C-alpha positions within 12 A of C54 or O49.
+
+    Raises:
+        ValueError: C-alpha correspondence or ligand centers are incomplete.
+    """
+    left = {
+        (a.chain, a.residue): a.xyz
+        for a in reference
+        if a.name == "CA" and a.chain != "I"
+    }
+    right = {
+        (a.chain, a.residue): a.xyz for a in target if a.name == "CA" and a.chain != "I"
+    }
+    centers = [a.xyz for a in reference if a.chain == "I" and a.name in {"C54", "O49"}]
+    if set(left) != set(right) or len(left) < 3 or len(centers) != 2:
+        raise ValueError("Incomplete C-alpha correspondence or ligand centers")
+    keys = sorted(left)
+    x, y = np.array([left[k] for k in keys]), np.array([right[k] for k in keys])
+    selected = [
+        i
+        for i, key in enumerate(keys)
+        if min(dist(left[key], c) for c in centers) <= 12
+    ]
+    if not selected:
+        raise ValueError("Empty focused alignment region")
+    xc, yc = x - x.mean(axis=0), y - y.mean(axis=0)
+    u, _, vt = np.linalg.svd(yc.T @ xc)
+    correction = np.diag([1, 1, np.linalg.det(u @ vt)])
+    residual = (yc @ (u @ correction @ vt) - xc)[selected]
+    return float(np.sqrt(np.mean(np.sum(residual**2, axis=1))))
