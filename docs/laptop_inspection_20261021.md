@@ -332,3 +332,23 @@ Status copies are snapshots, not live monitoring. No optimization trajectory
 or final accepted structure for this new job is claimed. Prior water-free
 movies remain diagnostic failures, not TI1 references. See the updated
 state-loss/QM decision document for boundaries, chemistry and remaining gates.
+
+## Pilot ended: TI1 state loss; trajectory available — 2026-10-23
+
+The63atom donor/water pilot ended17:10:33EDT at20cycle limit, exit1.
+No convergence and no TI1 acceptance: OG1-C54=1.90553A, N-H3=1.40361A,
+OG1-H3=1.03419A, consistent with reverse proton transfer. WaterO-N=3.30394A
+and waterO-OG1=3.53239A; an acceptable pseudo-ring is not established.
+No continuation is running. Earlier ACTIVE entries below are historical.
+
+Exported21complete Input orientation tables,63atoms and37explicitH each,
+with both water H. Workstation snapshot:
+output_nyl12_oxyanion_cluster_20261023/trajectory_snapshot_01/.
+The usual rsync pull now includes
+qm/ti1_oxyanion_cluster/optimization_progress/view_optimization.pml,
+optimization_trajectory.pdb and .xyz, CSV metrics and acceptance report.
+Run @view_optimization.pml then mplay from that directory. This is a
+snapshot, not a live feed; fixed PDB bonds do not prove connectivity survived.
+Source log snapshot/hash, exporter and tmux records preserved. Ruff and
+PDB frame/atom/H roundtrip checks pass. No new QM or force-field run launched.
+

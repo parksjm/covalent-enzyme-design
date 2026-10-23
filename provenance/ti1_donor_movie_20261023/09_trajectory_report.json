@@ -1,0 +1,18 @@
+{
+  "frames": 21,
+  "atoms_per_frame": 63,
+  "explicit_H_per_frame": 37,
+  "source_sha256": "eb6c42834fc96d2e9dd9a55163bb8d99b0a0623868bf1f4b364342bb4189e38c",
+  "source_log": "/data/jpc/covalent-enzyme-design/output_nyl12_oxyanion_cluster_20261023/svp_pilot_01/optimization.log",
+  "last_frame": {
+    "frame": 21,
+    "log_line": 14274,
+    "OG1_C54_A": 1.9055328110019507,
+    "N_H3_A": 1.403606312031262,
+    "OG1_H3_A": 1.0341857620389094,
+    "water_N_A": 3.303936694757331,
+    "water_OG1_A": 3.5323850156637793
+  },
+  "scientific_acceptance": false,
+  "note": "Complete Input orientation tables including trial steps. Cycle-limited, unconverged and TI1 state-retention failure. PDB connectivity is fixed input graph; not evidence bonds survived."
+}

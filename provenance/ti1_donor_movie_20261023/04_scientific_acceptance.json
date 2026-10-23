@@ -1,0 +1,79 @@
+{
+  "accepted": false,
+  "scope": "63-atom short constrained state-retention pilot; no FF/RESP or minimum acceptance",
+  "checks": {
+    "ammonium_retained": false,
+    "normal_termination": false,
+    "optimized": false,
+    "electronic_state": true,
+    "graph_and_stereo": false,
+    "fixed_coordinates": true,
+    "chi1": true,
+    "reaction_center": false,
+    "oxyanion_not_protonated_screen": true
+  },
+  "geometry": {
+    "accepted": false,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "geometry_failures": [
+      {
+        "pair": [
+          1,
+          14
+        ],
+        "distance_A": 1.403606312031262,
+        "reason": "input bond outside covalent-length screen"
+      },
+      {
+        "pair": [
+          4,
+          14
+        ],
+        "distance_A": 1.0341857620389094,
+        "reason": "new short nonbonded contact/possible proton transfer"
+      },
+      {
+        "pair": [
+          4,
+          24
+        ],
+        "distance_A": 1.9055328110019507,
+        "reason": "input bond outside covalent-length screen"
+      }
+    ]
+  },
+  "reactive_distances_A": {
+    "OG1_C54": 1.9055328110019507,
+    "C54_O49": 1.2404770394271711,
+    "C54_N59": 1.3702628190781505,
+    "C54_C62": 1.4963298195815653
+  },
+  "ammonium_proton_distances_A": {
+    "THR:H1": {
+      "N_H_A": 1.0203284204754859,
+      "OG1_H_A": 3.06855082947798
+    },
+    "THR:H2": {
+      "N_H_A": 1.014272876148229,
+      "OG1_H_A": 2.640405591517334
+    },
+    "THR:HG1": {
+      "N_H_A": 1.403606312031262,
+      "OG1_H_A": 1.0341857620389094
+    }
+  },
+  "max_frozen_displacement_A": 0.0,
+  "chi1_error_deg": 0.0006040228682877569,
+  "minimum_oxyanion_H_distance_A": 1.4993546745026676,
+  "forcefield_accepted": false,
+  "charge_fit_reference_accepted": false
+}
