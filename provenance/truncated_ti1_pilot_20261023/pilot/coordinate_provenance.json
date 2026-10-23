@@ -1,0 +1,222 @@
+[
+  {
+    "origin_id": "THR:N",
+    "native_source_index_0based": 0,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:CA",
+    "native_source_index_0based": 1,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:CB",
+    "native_source_index_0based": 2,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:OG1",
+    "native_source_index_0based": 3,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:CG2",
+    "native_source_index_0based": 4,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:C",
+    "native_source_index_0based": 5,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:O",
+    "native_source_index_0based": 6,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:N",
+    "native_source_index_0based": 7,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:CH3",
+    "native_source_index_0based": 8,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:H1",
+    "native_source_index_0based": 9,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:H2",
+    "native_source_index_0based": 10,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HA",
+    "native_source_index_0based": 11,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HB",
+    "native_source_index_0based": 12,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HG1",
+    "native_source_index_0based": 13,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HG21",
+    "native_source_index_0based": 14,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HG22",
+    "native_source_index_0based": 15,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "THR:HG23",
+    "native_source_index_0based": 16,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:H",
+    "native_source_index_0based": 17,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:HH31",
+    "native_source_index_0based": 18,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:HH32",
+    "native_source_index_0based": 19,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "NME:HH33",
+    "native_source_index_0based": 20,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:C70",
+    "native_source_index_0based": 33,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:C62",
+    "native_source_index_0based": 34,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:C54",
+    "native_source_index_0based": 35,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:O49",
+    "native_source_index_0based": 36,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:N59",
+    "native_source_index_0based": 37,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:C67",
+    "native_source_index_0based": 38,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:C75",
+    "native_source_index_0based": 39,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H21",
+    "native_source_index_0based": 74,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H22",
+    "native_source_index_0based": 75,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H23",
+    "native_source_index_0based": 76,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H24",
+    "native_source_index_0based": 77,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H25",
+    "native_source_index_0based": 78,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H26",
+    "native_source_index_0based": 79,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H27",
+    "native_source_index_0based": 80,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H28",
+    "native_source_index_0based": 81,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:H29",
+    "native_source_index_0based": 82,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "WAT:O",
+    "native_source_index_0based": 100,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "WAT:H1",
+    "native_source_index_0based": 101,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "WAT:H2",
+    "native_source_index_0based": 102,
+    "constructed_cap_H": false
+  },
+  {
+    "origin_id": "PA6:HC70",
+    "native_source_index_0based": null,
+    "constructed_cap_H": true,
+    "cut": [
+      "PA6:C70",
+      "PA6:C78"
+    ],
+    "CH_distance_A": 1.09
+  },
+  {
+    "origin_id": "PA6:HC75",
+    "native_source_index_0based": null,
+    "constructed_cap_H": true,
+    "cut": [
+      "PA6:C75",
+      "PA6:C79"
+    ],
+    "CH_distance_A": 1.09
+  }
+]

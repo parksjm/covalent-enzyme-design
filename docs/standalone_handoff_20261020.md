@@ -1,3 +1,33 @@
+## Truncated 42-atom pilot replaces 103-atom pilot — 2026-10-23
+
+The user explicitly authorized truncation and more cores on violet. The old
+worker PID 3922102 was identity-checked and sent SIGTERM; its job ended with
+exit status 1. Preserve the old native_frozen_scaffold_pilot_01 directory,
+including user_requested_interruption.json. It did not complete; this is
+supersession rather than chemical rejection.
+
+ACTIVE tmux: `nyl12_truncated_ti1_16core_20261023`.
+Directory: `output_nyl12_truncated_reference_20261023/truncated_pilot_01/`.
+The model has 42 atoms, formula C10H25N3O4, 25 explicit H, net charge 0 and
+singlet multiplicity. It retains Thr NH3+, the oxyanion and explicit water.
+C54 is R; Thr CA/CB are S/R. Retain two substrate carbons on each side; cut
+C70-C78 and C75-C79 and add H at 1.09 A along the old bond directions.
+All 40 retained atom coordinates are unchanged.
+
+Gaussian uses 16 physical cores (CPU affinity 0-15), 32 GB RAM and 677 basis
+functions. Method: wB97XD/def2TZVP optimization only, no CalcFC/Freq, extra
+dispersion or solvent. Same AF3-seed chi1 and frozen-scaffold pilot policy:
+12 frozen heavy atoms, 30 mobile atoms, reactive bonds free. This does not
+replace the n12c torsion reference. Eight focused tests pass: 97% overall
+coverage, 94% preparer and 95% assessor. See docs/native_ti1_reference_20261023.md.
+
+Next assess actual convergence, chemistry and water geometry, then consider
+a separate exact Hessian, gradient and constrained-curvature assessment.
+No native RESP, force-field transfer or protein relaxation is accepted.
+No MD: the user's proposal remains explicitly deferred. Active journal:
+output_agent_actions/20261021.jsonl. Unrelated cif/ is preserved. The earlier
+103-atom running-job note below is historical and superseded.
+
 ## Native TI1 pilot started — 2026-10-23
 
 User inspected capped geometries and authorized the next step. Native seed

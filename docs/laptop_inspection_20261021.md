@@ -271,3 +271,15 @@ read preflight.json and coordinate_provenance.json. It is not the final
 Gaussian model and not a validated force field. The frozen-scaffold Gaussian
 pilot is running on violet; no final native trajectory is available yet.
 The protocol is included at docs/native_ti1_reference_20261023.md.
+
+## Current truncated TI1 pilot — 2026-10-23
+
+Run the usual zero-argument pull, then inspect
+`qm/truncated_ti1_seed/native_seed.sdf` or run `view_seed.pml` in that
+directory. This 42-atom unoptimized starting cluster contains 25 explicit H,
+including both water H, native Thr NH3+, the oxyanion and C54 R. The retained
+atoms match the previous seed; two alkyl boundaries are methyl capped.
+Read atom_map.json, coordinate_provenance.json, preflight.json and input.gjf.
+The 103-atom Gaussian pilot was stopped at the user's request; its seed is
+historical. The 42-atom optimization is active on 16 physical cores. No final
+optimized 42-atom structure or trajectory is available at this checkpoint.

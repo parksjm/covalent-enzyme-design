@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01",
+  "ended_utc": "2026-10-23T17:21:38.783512Z",
+  "env_overrides": {},
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/assess_pilot.py": "d3ab4a1dacda111e4bba26d039c9473c4f6b9aca37423a5b504f48ef9b2900f6",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/atom_map.json": "604249b3655923a62d1b342411b214dc2a2c46c99b2e11392d77469848829a96",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/input.gjf": "ca93b525caca95391083b781192adbd50692fc1ebc820537c754eb743c83421b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/native_seed.sdf": "8911464f15786b035c157668be84a60dfcb6a67bd5c4f7455420a9c452ab8031",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/native_seed.xyz": "4de8a0ea60da7cbeb0bc224415fd8b6c89cff822df6b5207deeccb0ddf610704",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/pilot_policy.json": "03ea3f41cac0a754d40567043f48d8f3b7d0aa3d64546658cc380202cc7adb71",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/run_gaussian.sh": "e2575075276b62f4fe3ee9c00876497c9187ff274a3bbfdbfdbc77dbf7d6eef6"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/job/job.log",
+  "session_name": "nyl12_native_ti1_pilot_20261023",
+  "started_utc": "2026-10-23T16:53:07.085971Z"
+}

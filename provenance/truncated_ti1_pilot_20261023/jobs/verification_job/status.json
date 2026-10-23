@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "-q",
+    "output_nyl12_truncated_reference_20261023/test_prepare_truncated.py",
+    "output_nyl12_truncated_reference_20261023/test_assess_pilot.py",
+    "--cov=output_nyl12_truncated_reference_20261023",
+    "--cov-report=term-missing",
+    "--cov-report=json:output_nyl12_truncated_reference_20261023/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T17:24:23.066921Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/assess_pilot.py": "39b435f564f58ae7c5f9ddda5db2db40d033d94f1ee66941e11d06b2505d7c8b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/prepare_truncated_pilot.py": "c07fec1e57f9ca59d49a4b2c588ffba045501d36c4ea82264a68302c29f16163",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/test_assess_pilot.py": "d3edf0299f0ebcb1f40f4c110bd155048db84fe1cd769d21003a4a5ffdd751d4",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/test_prepare_truncated.py": "b1635348fa1d9521ff06f7db95c9994c11c6d87a3e4620e8c03ded17d0325d0d"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/verification_job/job.log",
+  "session_name": "nyl12_truncated_ti1_checks_20261023",
+  "started_utc": "2026-10-23T17:24:22.288711Z"
+}

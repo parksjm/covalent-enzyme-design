@@ -1,0 +1,38 @@
+{
+  "accepted": true,
+  "geometry": {
+    "accepted": true,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "geometry_failures": []
+  },
+  "atom_count": 42,
+  "explicit_H": 25,
+  "formula": "C10H25N3O4",
+  "formal_charge": 0,
+  "retained_original_atoms": 40,
+  "new_cap_H": 2,
+  "retained_coordinate_max_displacement_A": 0.0,
+  "cuts": [
+    [
+      "PA6:C70",
+      "PA6:C78",
+      "PA6:HC70"
+    ],
+    [
+      "PA6:C75",
+      "PA6:C79",
+      "PA6:HC75"
+    ]
+  ],
+  "source": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_seed_01",
+  "forcefield_validated": false
+}

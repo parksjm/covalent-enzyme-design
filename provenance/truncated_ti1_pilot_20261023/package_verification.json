@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "payload_files": 202,
+  "payload_bytes": 15716567,
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_18",
+  "old_nondocument_payloads_unchanged": true,
+  "forcefield_accepted": false,
+  "tests": "8 passed;97%overall,94%preparer,95%assessor coverage",
+  "active_session": "nyl12_truncated_ti1_16core_20261023"
+}

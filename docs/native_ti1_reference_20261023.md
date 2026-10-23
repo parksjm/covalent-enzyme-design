@@ -1,3 +1,60 @@
+# Truncated native-state TI1 pilot — 2026-10-23
+
+The user authorized replacing the 103-atom full-PA6-L4 pilot with a local
+substrate model and increasing the CPU allocation on violet. The old worker
+received a targeted SIGTERM; its launcher records exit status 1 and an end
+time. This is a user-requested supersession, not a chemical acceptance failure.
+Inputs, logs, checkpoint and scratch were not manually deleted.
+
+## Model and atom mapping
+
+The new model contains Thr NH3+, Thr-NME, the covalent tetrahedral oxyanion,
+and separate explicit H2O. The substrate fragment is
+`OG1-C*(O-)(CH2CH3)-NH-CH2CH3`: formula C10H25N3O4, 42 atoms including 25
+explicit hydrogens, net charge 0, singlet. PA6 bonds C70-C78 and C75-C79 are
+cut. Retain C54/O49/N59/C62/C70/C67/C75 and their attached original H atoms;
+add one H at C70 and one at C75 along the removed bond directions at 1.09 A.
+The nearest substrate methylenes, C62 and C67, are retained. No ACE is added.
+
+All 40 retained atom coordinates match the source seed exactly. C54 remains
+R and Thr CA/CB remain S/R. Initial graph, stereochemistry and short-contact
+checks pass. The water comes from the earlier physical TIP3P water-only
+preconditioning, including both water hydrogens. No manual water displacement
+or failed DFTB endpoint is used. This local parameter model does not change
+the intended full PA6 L4 substrate for subsequent enzyme calculations.
+
+## Calculation and acceptance
+
+Active tmux: `nyl12_truncated_ti1_16core_20261023`.
+Directory: `output_nyl12_truncated_reference_20261023/truncated_pilot_01/`.
+Gaussian runs a geometry optimization only: wB97XD/def2TZVP, Tight optimization
+and SCF, UltraFine integration, XQC, MaxCycles=150 and MaxStep=5. It uses 16
+shared-memory processors and 32 GB RAM, pinned to CPUs 0-15, which represent
+16 distinct physical cores out of 24. Gaussian confirms 16 processors and
+677 basis functions, versus 1,693 in the 103-atom pilot. Thread count alone
+does not establish scaling or a completion time.
+
+The same conditional pilot policy applies: 12 heavy atoms frozen, 30 atoms
+mobile, plus one AF3-seed chi1 constraint. Thr OG1, PA6 C54/O49/N59, water O,
+and all H atoms are mobile; reactive bonds are unrestrained. The AF3-seed
+torsions remain explicitly distinct from the n12c parameter-reference values.
+No extra dispersion correction or solvent is added.
+
+This is a state-retention pilot, not an accepted parameter reference. After
+a converged candidate passes the chemistry and water checks, separately
+obtain its exact Hessian and gradient and assess the constrained curvature.
+No Hessian job is automatically chained. The original R cap-sensitivity and
+charge/parameter-transfer gates remain unresolved. Effects of the remote PA6
+chain and charged termini are outside this cluster; full-system transfer
+validation remains necessary. No MD or new AF3 calculation has started.
+
+Eight focused chemistry and corruption tests passed in tmux: 97% overall
+coverage, 94% for preparation and 95% for the assessor. Ruff lint and format
+checks passed. The unchanged repository suite last passed 447 tests with 13
+optional fixture skips. No new production dependency or module was added.
+Exact inputs, source snapshots, hashes, process logs and separate scientific
+acceptance records are retained. The older 103-atom record below is history.
+
 # Native TI1 seed and frozen-scaffold pilot — 2026-10-23
 
 The user approved the four inspected capped reference geometries and authorized

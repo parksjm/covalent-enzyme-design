@@ -1,0 +1,9 @@
+{
+  "pid": 3922102,
+  "command": "/usr/local/g16/l502.exe 4294967296 optimization.chk 1 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922102.int 0 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922102.rwf 0 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922102.d2e 0 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922102.skr 0 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922100.inp 0 no-output-file 0 /data/scratch/gaussian_scratch/jpc/native_ti1_20261023_pilot01/Gau-3922102.nex 0 nofchk 0 ",
+  "signal": "SIGTERM",
+  "time_utc": "2026-10-23T17:21:37.574975+00:00",
+  "reason": "User authorized replacement with truncated42atom model",
+  "not_a_scientific_failure": true,
+  "preserve_all_original_artifacts": true
+}

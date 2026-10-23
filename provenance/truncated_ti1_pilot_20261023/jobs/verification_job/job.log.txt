@@ -1,0 +1,14 @@
+........                                                                 [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                                                   Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------------------------------------
+output_nyl12_truncated_reference_20261023/assess_pilot.py                 62      3    95%   26, 141-142
+output_nyl12_truncated_reference_20261023/prepare_truncated_pilot.py     107      6    94%   73, 116, 118, 197, 257-258
+output_nyl12_truncated_reference_20261023/test_assess_pilot.py            65      0   100%
+output_nyl12_truncated_reference_20261023/test_prepare_truncated.py       63      0   100%
+----------------------------------------------------------------------------------------------------
+TOTAL                                                                    297      9    97%
+Coverage JSON written to file output_nyl12_truncated_reference_20261023/coverage.json
+8 passed in 0.37s

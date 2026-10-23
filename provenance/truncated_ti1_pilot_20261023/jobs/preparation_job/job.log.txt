@@ -1,0 +1,1 @@
+INFO Truncated seed passes:42atoms25H,net0,R;30mobile12frozen;16physicalcores
