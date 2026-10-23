@@ -260,3 +260,14 @@ The current design recommendation and limitations are in
 LigandMPNN-first baseline, optional fixed-length local RFD3 and a separate
 future indel branch, and records the D2-like scaffold audit and loop-access
 requirements. This is a strategy record, not a completed design campaign.
+
+## Native TI1 starting seed — 2026-10-23
+
+After the usual zero-argument pull, inspect
+`qm/native_ti1_seed/native_seed.sdf` or run its `view_seed.pml` from that
+directory. It has all60 explicit hydrogens, including two on water, and
+geometry-derived R at C54. This is an unoptimized103-atom starting cluster;
+read preflight.json and coordinate_provenance.json. It is not the final
+Gaussian model and not a validated force field. The frozen-scaffold Gaussian
+pilot is running on violet; no final native trajectory is available yet.
+The protocol is included at docs/native_ti1_reference_20261023.md.

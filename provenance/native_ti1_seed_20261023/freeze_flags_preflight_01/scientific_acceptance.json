@@ -1,0 +1,16 @@
+{
+  "accepted": true,
+  "checks": {
+    "atom_order": true,
+    "normal_termination": true,
+    "optimized": true,
+    "frozen_atoms": true,
+    "mobile_atom_changed": true
+  },
+  "atom_displacements_A": [
+    0.0,
+    0.0,
+    0.07440496119211416
+  ],
+  "scope": "Installation/freeze syntax only; HF/STO-3G water is not TI1 parameter data"
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_native_reference_20261023/checkpoint_native_seed.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/laptop_inspection_20261021.md": "b23417ff300b2a99b488a747a495984db18841a249fd3476138591b4d339f990",
+    "/data/jpc/covalent-enzyme-design/docs/native_ti1_reference_20261023.md": "f289c20b64bc555bb0c07002d64b93d792939db3a7521d0f82d71a64810399d1",
+    "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md": "fc5a5f5dc30637a7b44a9dd9ebe506fe51e7d05d758e9084586c8fa058c8ad3a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/checkpoint_native_seed.py": "418cee790f9b206355060ce47bec30e4446258d27f54b6b507b5fd309036edc6"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/checkpoint_job/job.log",
+  "session_name": "nyl12_native_seed_checkpoint_20261023",
+  "started_utc": null
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "-q"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T16:54:53.833101Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+    "/data/jpc/covalent-enzyme-design/uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/repository_tests_job/job.log",
+  "session_name": "nyl12_native_checkpoint_tests_20261023",
+  "started_utc": "2026-10-23T16:54:47.262576Z"
+}

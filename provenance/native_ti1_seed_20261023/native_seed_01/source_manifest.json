@@ -1,0 +1,9 @@
+{
+  "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/prepare_native_seed.py": "08b0c847a3d98e1799783ba9521fb2c9ad9651eb5530b953936302673be41679",
+  "/data/jpc/covalent-enzyme-design/provenance/xa_ma_capped_reference_20261022/pa6_l4_source.mol2": "77785fae1b6d4cf4173b28cde5113faddfa8d47a581b109aa526618887c8da61",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/model.prmtop": "bb0f1eeed62af7afac5bf4a361e2acd1c7604edcf58416190fa416f714754aa2",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/prepared.rst7": "cb79558a0ec0496bf9b79902510c1560ae9be0a608094deaab0ee09dab77570e",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/00_tip3p_water_only/original_order.rst7": "444472470dbfb782f76e0e4a3d3ce349964b43446eb4a2f2e2031becfad7c4c2",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_graph.py": "77bbcc05daab8e00f509e76b8cba6374c28859d4068234450d030ea6a654d84c",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547"
+}

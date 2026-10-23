@@ -1,0 +1,943 @@
+{
+  "formula": "C29H60N6O8",
+  "formal_charge": 0,
+  "attacked_carbon_cip": "R",
+  "atom_index_by_origin": {
+    "THR:N": 0,
+    "THR:CA": 1,
+    "THR:CB": 2,
+    "THR:OG1": 3,
+    "THR:CG2": 4,
+    "THR:C": 5,
+    "THR:O": 6,
+    "NME:N": 7,
+    "NME:CH3": 8,
+    "THR:H1": 9,
+    "THR:H2": 10,
+    "THR:HA": 11,
+    "THR:HB": 12,
+    "THR:HG1": 13,
+    "THR:HG21": 14,
+    "THR:HG22": 15,
+    "THR:HG23": 16,
+    "NME:H": 17,
+    "NME:HH31": 18,
+    "NME:HH32": 19,
+    "NME:HH33": 20,
+    "PA6:N56": 21,
+    "PA6:C64": 22,
+    "PA6:C72": 23,
+    "PA6:C76": 24,
+    "PA6:C68": 25,
+    "PA6:C60": 26,
+    "PA6:C52": 27,
+    "PA6:O47": 28,
+    "PA6:N58": 29,
+    "PA6:C66": 30,
+    "PA6:C74": 31,
+    "PA6:C78": 32,
+    "PA6:C70": 33,
+    "PA6:C62": 34,
+    "PA6:C54": 35,
+    "PA6:O49": 36,
+    "PA6:N59": 37,
+    "PA6:C67": 38,
+    "PA6:C75": 39,
+    "PA6:C79": 40,
+    "PA6:C71": 41,
+    "PA6:C63": 42,
+    "PA6:C55": 43,
+    "PA6:O50": 44,
+    "PA6:N57": 45,
+    "PA6:C65": 46,
+    "PA6:C73": 47,
+    "PA6:C77": 48,
+    "PA6:C69": 49,
+    "PA6:C61": 50,
+    "PA6:C53": 51,
+    "PA6:O48": 52,
+    "PA6:O51": 53,
+    "PA6:H1": 54,
+    "PA6:H2": 55,
+    "PA6:H3": 56,
+    "PA6:H4": 57,
+    "PA6:H5": 58,
+    "PA6:H6": 59,
+    "PA6:H7": 60,
+    "PA6:H8": 61,
+    "PA6:H9": 62,
+    "PA6:H10": 63,
+    "PA6:H11": 64,
+    "PA6:H12": 65,
+    "PA6:H13": 66,
+    "PA6:H14": 67,
+    "PA6:H15": 68,
+    "PA6:H16": 69,
+    "PA6:H17": 70,
+    "PA6:H18": 71,
+    "PA6:H19": 72,
+    "PA6:H20": 73,
+    "PA6:H21": 74,
+    "PA6:H22": 75,
+    "PA6:H23": 76,
+    "PA6:H24": 77,
+    "PA6:H25": 78,
+    "PA6:H26": 79,
+    "PA6:H27": 80,
+    "PA6:H28": 81,
+    "PA6:H29": 82,
+    "PA6:H30": 83,
+    "PA6:H31": 84,
+    "PA6:H32": 85,
+    "PA6:H33": 86,
+    "PA6:H34": 87,
+    "PA6:H35": 88,
+    "PA6:H36": 89,
+    "PA6:H37": 90,
+    "PA6:H38": 91,
+    "PA6:H39": 92,
+    "PA6:H40": 93,
+    "PA6:H41": 94,
+    "PA6:H42": 95,
+    "PA6:H43": 96,
+    "PA6:H44": 97,
+    "PA6:H45": 98,
+    "PA6:H46": 99,
+    "WAT:O": 100,
+    "WAT:H1": 101,
+    "WAT:H2": 102
+  },
+  "atoms": [
+    {
+      "index": 0,
+      "origin_id": "THR:N",
+      "residue_id": "THR",
+      "atom_name": "N",
+      "element": "N",
+      "formal_charge": 1
+    },
+    {
+      "index": 1,
+      "origin_id": "THR:CA",
+      "residue_id": "THR",
+      "atom_name": "CA",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 2,
+      "origin_id": "THR:CB",
+      "residue_id": "THR",
+      "atom_name": "CB",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 3,
+      "origin_id": "THR:OG1",
+      "residue_id": "THR",
+      "atom_name": "OG1",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 4,
+      "origin_id": "THR:CG2",
+      "residue_id": "THR",
+      "atom_name": "CG2",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 5,
+      "origin_id": "THR:C",
+      "residue_id": "THR",
+      "atom_name": "C",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 6,
+      "origin_id": "THR:O",
+      "residue_id": "THR",
+      "atom_name": "O",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 7,
+      "origin_id": "NME:N",
+      "residue_id": "NME",
+      "atom_name": "N",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 8,
+      "origin_id": "NME:CH3",
+      "residue_id": "NME",
+      "atom_name": "CH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 9,
+      "origin_id": "THR:H1",
+      "residue_id": "THR",
+      "atom_name": "H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 10,
+      "origin_id": "THR:H2",
+      "residue_id": "THR",
+      "atom_name": "H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 11,
+      "origin_id": "THR:HA",
+      "residue_id": "THR",
+      "atom_name": "HA",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 12,
+      "origin_id": "THR:HB",
+      "residue_id": "THR",
+      "atom_name": "HB",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 13,
+      "origin_id": "THR:HG1",
+      "residue_id": "THR",
+      "atom_name": "H3",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 14,
+      "origin_id": "THR:HG21",
+      "residue_id": "THR",
+      "atom_name": "HG21",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 15,
+      "origin_id": "THR:HG22",
+      "residue_id": "THR",
+      "atom_name": "HG22",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 16,
+      "origin_id": "THR:HG23",
+      "residue_id": "THR",
+      "atom_name": "HG23",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 17,
+      "origin_id": "NME:H",
+      "residue_id": "NME",
+      "atom_name": "H",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 18,
+      "origin_id": "NME:HH31",
+      "residue_id": "NME",
+      "atom_name": "HH31",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 19,
+      "origin_id": "NME:HH32",
+      "residue_id": "NME",
+      "atom_name": "HH32",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 20,
+      "origin_id": "NME:HH33",
+      "residue_id": "NME",
+      "atom_name": "HH33",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 21,
+      "origin_id": "PA6:N56",
+      "residue_id": "PA6",
+      "atom_name": "N56",
+      "element": "N",
+      "formal_charge": 1
+    },
+    {
+      "index": 22,
+      "origin_id": "PA6:C64",
+      "residue_id": "PA6",
+      "atom_name": "C64",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 23,
+      "origin_id": "PA6:C72",
+      "residue_id": "PA6",
+      "atom_name": "C72",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 24,
+      "origin_id": "PA6:C76",
+      "residue_id": "PA6",
+      "atom_name": "C76",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 25,
+      "origin_id": "PA6:C68",
+      "residue_id": "PA6",
+      "atom_name": "C68",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 26,
+      "origin_id": "PA6:C60",
+      "residue_id": "PA6",
+      "atom_name": "C60",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 27,
+      "origin_id": "PA6:C52",
+      "residue_id": "PA6",
+      "atom_name": "C52",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 28,
+      "origin_id": "PA6:O47",
+      "residue_id": "PA6",
+      "atom_name": "O47",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 29,
+      "origin_id": "PA6:N58",
+      "residue_id": "PA6",
+      "atom_name": "N58",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 30,
+      "origin_id": "PA6:C66",
+      "residue_id": "PA6",
+      "atom_name": "C66",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 31,
+      "origin_id": "PA6:C74",
+      "residue_id": "PA6",
+      "atom_name": "C74",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 32,
+      "origin_id": "PA6:C78",
+      "residue_id": "PA6",
+      "atom_name": "C78",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 33,
+      "origin_id": "PA6:C70",
+      "residue_id": "PA6",
+      "atom_name": "C70",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 34,
+      "origin_id": "PA6:C62",
+      "residue_id": "PA6",
+      "atom_name": "C62",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 35,
+      "origin_id": "PA6:C54",
+      "residue_id": "PA6",
+      "atom_name": "C54",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 36,
+      "origin_id": "PA6:O49",
+      "residue_id": "PA6",
+      "atom_name": "O49",
+      "element": "O",
+      "formal_charge": -1
+    },
+    {
+      "index": 37,
+      "origin_id": "PA6:N59",
+      "residue_id": "PA6",
+      "atom_name": "N59",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 38,
+      "origin_id": "PA6:C67",
+      "residue_id": "PA6",
+      "atom_name": "C67",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 39,
+      "origin_id": "PA6:C75",
+      "residue_id": "PA6",
+      "atom_name": "C75",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 40,
+      "origin_id": "PA6:C79",
+      "residue_id": "PA6",
+      "atom_name": "C79",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 41,
+      "origin_id": "PA6:C71",
+      "residue_id": "PA6",
+      "atom_name": "C71",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 42,
+      "origin_id": "PA6:C63",
+      "residue_id": "PA6",
+      "atom_name": "C63",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 43,
+      "origin_id": "PA6:C55",
+      "residue_id": "PA6",
+      "atom_name": "C55",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 44,
+      "origin_id": "PA6:O50",
+      "residue_id": "PA6",
+      "atom_name": "O50",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 45,
+      "origin_id": "PA6:N57",
+      "residue_id": "PA6",
+      "atom_name": "N57",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 46,
+      "origin_id": "PA6:C65",
+      "residue_id": "PA6",
+      "atom_name": "C65",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 47,
+      "origin_id": "PA6:C73",
+      "residue_id": "PA6",
+      "atom_name": "C73",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 48,
+      "origin_id": "PA6:C77",
+      "residue_id": "PA6",
+      "atom_name": "C77",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 49,
+      "origin_id": "PA6:C69",
+      "residue_id": "PA6",
+      "atom_name": "C69",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 50,
+      "origin_id": "PA6:C61",
+      "residue_id": "PA6",
+      "atom_name": "C61",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 51,
+      "origin_id": "PA6:C53",
+      "residue_id": "PA6",
+      "atom_name": "C53",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 52,
+      "origin_id": "PA6:O48",
+      "residue_id": "PA6",
+      "atom_name": "O48",
+      "element": "O",
+      "formal_charge": -1
+    },
+    {
+      "index": 53,
+      "origin_id": "PA6:O51",
+      "residue_id": "PA6",
+      "atom_name": "O51",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 54,
+      "origin_id": "PA6:H1",
+      "residue_id": "PA6",
+      "atom_name": "H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 55,
+      "origin_id": "PA6:H2",
+      "residue_id": "PA6",
+      "atom_name": "H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 56,
+      "origin_id": "PA6:H3",
+      "residue_id": "PA6",
+      "atom_name": "H3",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 57,
+      "origin_id": "PA6:H4",
+      "residue_id": "PA6",
+      "atom_name": "H4",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 58,
+      "origin_id": "PA6:H5",
+      "residue_id": "PA6",
+      "atom_name": "H5",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 59,
+      "origin_id": "PA6:H6",
+      "residue_id": "PA6",
+      "atom_name": "H6",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 60,
+      "origin_id": "PA6:H7",
+      "residue_id": "PA6",
+      "atom_name": "H7",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 61,
+      "origin_id": "PA6:H8",
+      "residue_id": "PA6",
+      "atom_name": "H8",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 62,
+      "origin_id": "PA6:H9",
+      "residue_id": "PA6",
+      "atom_name": "H9",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 63,
+      "origin_id": "PA6:H10",
+      "residue_id": "PA6",
+      "atom_name": "H10",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 64,
+      "origin_id": "PA6:H11",
+      "residue_id": "PA6",
+      "atom_name": "H11",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 65,
+      "origin_id": "PA6:H12",
+      "residue_id": "PA6",
+      "atom_name": "H12",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 66,
+      "origin_id": "PA6:H13",
+      "residue_id": "PA6",
+      "atom_name": "H13",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 67,
+      "origin_id": "PA6:H14",
+      "residue_id": "PA6",
+      "atom_name": "H14",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 68,
+      "origin_id": "PA6:H15",
+      "residue_id": "PA6",
+      "atom_name": "H15",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 69,
+      "origin_id": "PA6:H16",
+      "residue_id": "PA6",
+      "atom_name": "H16",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 70,
+      "origin_id": "PA6:H17",
+      "residue_id": "PA6",
+      "atom_name": "H17",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 71,
+      "origin_id": "PA6:H18",
+      "residue_id": "PA6",
+      "atom_name": "H18",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 72,
+      "origin_id": "PA6:H19",
+      "residue_id": "PA6",
+      "atom_name": "H19",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 73,
+      "origin_id": "PA6:H20",
+      "residue_id": "PA6",
+      "atom_name": "H20",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 74,
+      "origin_id": "PA6:H21",
+      "residue_id": "PA6",
+      "atom_name": "H21",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 75,
+      "origin_id": "PA6:H22",
+      "residue_id": "PA6",
+      "atom_name": "H22",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 76,
+      "origin_id": "PA6:H23",
+      "residue_id": "PA6",
+      "atom_name": "H23",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 77,
+      "origin_id": "PA6:H24",
+      "residue_id": "PA6",
+      "atom_name": "H24",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 78,
+      "origin_id": "PA6:H25",
+      "residue_id": "PA6",
+      "atom_name": "H25",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 79,
+      "origin_id": "PA6:H26",
+      "residue_id": "PA6",
+      "atom_name": "H26",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 80,
+      "origin_id": "PA6:H27",
+      "residue_id": "PA6",
+      "atom_name": "H27",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 81,
+      "origin_id": "PA6:H28",
+      "residue_id": "PA6",
+      "atom_name": "H28",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 82,
+      "origin_id": "PA6:H29",
+      "residue_id": "PA6",
+      "atom_name": "H29",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 83,
+      "origin_id": "PA6:H30",
+      "residue_id": "PA6",
+      "atom_name": "H30",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 84,
+      "origin_id": "PA6:H31",
+      "residue_id": "PA6",
+      "atom_name": "H31",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 85,
+      "origin_id": "PA6:H32",
+      "residue_id": "PA6",
+      "atom_name": "H32",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 86,
+      "origin_id": "PA6:H33",
+      "residue_id": "PA6",
+      "atom_name": "H33",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 87,
+      "origin_id": "PA6:H34",
+      "residue_id": "PA6",
+      "atom_name": "H34",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 88,
+      "origin_id": "PA6:H35",
+      "residue_id": "PA6",
+      "atom_name": "H35",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 89,
+      "origin_id": "PA6:H36",
+      "residue_id": "PA6",
+      "atom_name": "H36",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 90,
+      "origin_id": "PA6:H37",
+      "residue_id": "PA6",
+      "atom_name": "H37",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 91,
+      "origin_id": "PA6:H38",
+      "residue_id": "PA6",
+      "atom_name": "H38",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 92,
+      "origin_id": "PA6:H39",
+      "residue_id": "PA6",
+      "atom_name": "H39",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 93,
+      "origin_id": "PA6:H40",
+      "residue_id": "PA6",
+      "atom_name": "H40",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 94,
+      "origin_id": "PA6:H41",
+      "residue_id": "PA6",
+      "atom_name": "H41",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 95,
+      "origin_id": "PA6:H42",
+      "residue_id": "PA6",
+      "atom_name": "H42",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 96,
+      "origin_id": "PA6:H43",
+      "residue_id": "PA6",
+      "atom_name": "H43",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 97,
+      "origin_id": "PA6:H44",
+      "residue_id": "PA6",
+      "atom_name": "H44",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 98,
+      "origin_id": "PA6:H45",
+      "residue_id": "PA6",
+      "atom_name": "H45",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 99,
+      "origin_id": "PA6:H46",
+      "residue_id": "PA6",
+      "atom_name": "H46",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 100,
+      "origin_id": "WAT:O",
+      "residue_id": "WAT",
+      "atom_name": "O",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 101,
+      "origin_id": "WAT:H1",
+      "residue_id": "WAT",
+      "atom_name": "H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 102,
+      "origin_id": "WAT:H2",
+      "residue_id": "WAT",
+      "atom_name": "H2",
+      "element": "H",
+      "formal_charge": 0
+    }
+  ],
+  "hydrogen_bookkeeping": {
+    "origin_id": "THR:HG1",
+    "source_atom_name": "HG1",
+    "atom_name_after_transfer": "H3",
+    "bonded_to_after_transfer": "THR:N",
+    "identity_note": "Origin and H3 name document graph bookkeeping, not literal relay-proton identity."
+  }
+}

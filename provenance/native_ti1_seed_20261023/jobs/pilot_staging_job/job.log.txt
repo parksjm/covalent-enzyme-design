@@ -1,0 +1,1 @@
+INFO Staged /data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01; 65 mobile atoms, 38 frozen

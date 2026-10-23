@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/freeze_flags_preflight_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {},
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/freeze_flags_preflight_01/input.gjf": "3bf7d5d53ac45ea73e5073c45e667d89144c25a9ce478f0393bb100d8de8a0ea",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/freeze_flags_preflight_01/run_gaussian.sh": "53bcd00a47b687d952add982ff16a9f298562b0231b7f187a8715c6c042ff80b"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_native_reference_20261023/freeze_flags_preflight_01/job/job.log",
+  "session_name": "nyl12_native_freeze_preflight_20261023",
+  "started_utc": null
+}

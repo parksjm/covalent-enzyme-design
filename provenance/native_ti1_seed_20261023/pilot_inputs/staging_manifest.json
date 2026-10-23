@@ -1,0 +1,16 @@
+{
+  "source_manifest.json": "5a83fd647356d1d8f3a6302defc3022551edc5202ced36b18a853e547f2d90b5",
+  "native_seed.xyz": "4de8a0ea60da7cbeb0bc224415fd8b6c89cff822df6b5207deeccb0ddf610704",
+  "input.gjf": "ca93b525caca95391083b781192adbd50692fc1ebc820537c754eb743c83421b",
+  "native_seed.sdf": "8911464f15786b035c157668be84a60dfcb6a67bd5c4f7455420a9c452ab8031",
+  "coordinate_provenance.json": "f71ed10d0ff36d3a42c986d18006ed99fbc68e9e2b71391eb803a6dd247bbce4",
+  "pilot_policy.json": "03ea3f41cac0a754d40567043f48d8f3b7d0aa3d64546658cc380202cc7adb71",
+  "run_gaussian.sh": "e2575075276b62f4fe3ee9c00876497c9187ff274a3bbfdbfdbc77dbf7d6eef6",
+  "atom_map.json": "604249b3655923a62d1b342411b214dc2a2c46c99b2e11392d77469848829a96",
+  "assess_pilot.py": "d3ab4a1dacda111e4bba26d039c9473c4f6b9aca37423a5b504f48ef9b2900f6",
+  "view_seed.pml": "bb2e92b72265f224069c46127187dd2bf8226349df1dccb0835396ada3443a64",
+  "preflight.json": "466703914c9a1048d8a94325eee480544e623d9dead15f1bdc3caa8515641995",
+  "source/prepare_gaussian_pilot.py": "bc4b25de572eec7903ac6765743744056d48788b872585f3ffd429ccc5aa0c1e",
+  "source/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547",
+  "source/ti1_reference_graph.py": "77bbcc05daab8e00f509e76b8cba6374c28859d4068234450d030ea6a654d84c"
+}

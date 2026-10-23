@@ -1,0 +1,826 @@
+[
+  {
+    "index": 0,
+    "origin_id": "THR:N",
+    "source_atom_index_1based": 3477,
+    "source_atom_name": "N",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 1,
+    "origin_id": "THR:CA",
+    "source_atom_index_1based": 3481,
+    "source_atom_name": "CA",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 2,
+    "origin_id": "THR:CB",
+    "source_atom_index_1based": 3483,
+    "source_atom_name": "CB",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 3,
+    "origin_id": "THR:OG1",
+    "source_atom_index_1based": 3489,
+    "source_atom_name": "OG1",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 4,
+    "origin_id": "THR:CG2",
+    "source_atom_index_1based": 3485,
+    "source_atom_name": "CG2",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 5,
+    "origin_id": "THR:C",
+    "source_atom_index_1based": 3490,
+    "source_atom_name": "C",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 6,
+    "origin_id": "THR:O",
+    "source_atom_index_1based": 3491,
+    "source_atom_name": "O",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 7,
+    "origin_id": "NME:N",
+    "source_atom_index_1based": 3492,
+    "source_atom_name": "N",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 8,
+    "origin_id": "NME:CH3",
+    "source_atom_index_1based": 3494,
+    "source_atom_name": "CA",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 9,
+    "origin_id": "THR:H1",
+    "source_atom_index_1based": 3478,
+    "source_atom_name": "H1",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 10,
+    "origin_id": "THR:H2",
+    "source_atom_index_1based": 3479,
+    "source_atom_name": "H2",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 11,
+    "origin_id": "THR:HA",
+    "source_atom_index_1based": 3482,
+    "source_atom_name": "HA",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 12,
+    "origin_id": "THR:HB",
+    "source_atom_index_1based": 3484,
+    "source_atom_name": "HB",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 13,
+    "origin_id": "THR:HG1",
+    "source_atom_index_1based": 3480,
+    "source_atom_name": "H3",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 14,
+    "origin_id": "THR:HG21",
+    "source_atom_index_1based": 3486,
+    "source_atom_name": "HG21",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 15,
+    "origin_id": "THR:HG22",
+    "source_atom_index_1based": 3487,
+    "source_atom_name": "HG22",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 16,
+    "origin_id": "THR:HG23",
+    "source_atom_index_1based": 3488,
+    "source_atom_name": "HG23",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 17,
+    "origin_id": "NME:H",
+    "source_atom_index_1based": 3493,
+    "source_atom_name": "H",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 18,
+    "origin_id": "NME:HH31",
+    "source_atom_index_1based": 3495,
+    "source_atom_name": "HA",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 19,
+    "origin_id": "NME:HH32",
+    "source_atom_index_1based": 3504,
+    "source_atom_name": "C",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 20,
+    "origin_id": "NME:HH33",
+    "source_atom_index_1based": 3496,
+    "source_atom_name": "CB",
+    "constructed_cap_H": true,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 21,
+    "origin_id": "PA6:N56",
+    "source_atom_index_1based": 4973,
+    "source_atom_name": "N56",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 22,
+    "origin_id": "PA6:C64",
+    "source_atom_index_1based": 4974,
+    "source_atom_name": "C64",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 23,
+    "origin_id": "PA6:C72",
+    "source_atom_index_1based": 4975,
+    "source_atom_name": "C72",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 24,
+    "origin_id": "PA6:C76",
+    "source_atom_index_1based": 4976,
+    "source_atom_name": "C76",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 25,
+    "origin_id": "PA6:C68",
+    "source_atom_index_1based": 4977,
+    "source_atom_name": "C68",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 26,
+    "origin_id": "PA6:C60",
+    "source_atom_index_1based": 4978,
+    "source_atom_name": "C60",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 27,
+    "origin_id": "PA6:C52",
+    "source_atom_index_1based": 4979,
+    "source_atom_name": "C52",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 28,
+    "origin_id": "PA6:O47",
+    "source_atom_index_1based": 4980,
+    "source_atom_name": "O47",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 29,
+    "origin_id": "PA6:N58",
+    "source_atom_index_1based": 4981,
+    "source_atom_name": "N58",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 30,
+    "origin_id": "PA6:C66",
+    "source_atom_index_1based": 4982,
+    "source_atom_name": "C66",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 31,
+    "origin_id": "PA6:C74",
+    "source_atom_index_1based": 4983,
+    "source_atom_name": "C74",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 32,
+    "origin_id": "PA6:C78",
+    "source_atom_index_1based": 4984,
+    "source_atom_name": "C78",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 33,
+    "origin_id": "PA6:C70",
+    "source_atom_index_1based": 4985,
+    "source_atom_name": "C70",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 34,
+    "origin_id": "PA6:C62",
+    "source_atom_index_1based": 4986,
+    "source_atom_name": "C62",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 35,
+    "origin_id": "PA6:C54",
+    "source_atom_index_1based": 4987,
+    "source_atom_name": "C54",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 36,
+    "origin_id": "PA6:O49",
+    "source_atom_index_1based": 4988,
+    "source_atom_name": "O49",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 37,
+    "origin_id": "PA6:N59",
+    "source_atom_index_1based": 4989,
+    "source_atom_name": "N59",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 38,
+    "origin_id": "PA6:C67",
+    "source_atom_index_1based": 4990,
+    "source_atom_name": "C67",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 39,
+    "origin_id": "PA6:C75",
+    "source_atom_index_1based": 4991,
+    "source_atom_name": "C75",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 40,
+    "origin_id": "PA6:C79",
+    "source_atom_index_1based": 4992,
+    "source_atom_name": "C79",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 41,
+    "origin_id": "PA6:C71",
+    "source_atom_index_1based": 4993,
+    "source_atom_name": "C71",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 42,
+    "origin_id": "PA6:C63",
+    "source_atom_index_1based": 4994,
+    "source_atom_name": "C63",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 43,
+    "origin_id": "PA6:C55",
+    "source_atom_index_1based": 4995,
+    "source_atom_name": "C55",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 44,
+    "origin_id": "PA6:O50",
+    "source_atom_index_1based": 4996,
+    "source_atom_name": "O50",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 45,
+    "origin_id": "PA6:N57",
+    "source_atom_index_1based": 4997,
+    "source_atom_name": "N57",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 46,
+    "origin_id": "PA6:C65",
+    "source_atom_index_1based": 4998,
+    "source_atom_name": "C65",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 47,
+    "origin_id": "PA6:C73",
+    "source_atom_index_1based": 4999,
+    "source_atom_name": "C73",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 48,
+    "origin_id": "PA6:C77",
+    "source_atom_index_1based": 5000,
+    "source_atom_name": "C77",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 49,
+    "origin_id": "PA6:C69",
+    "source_atom_index_1based": 5001,
+    "source_atom_name": "C69",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 50,
+    "origin_id": "PA6:C61",
+    "source_atom_index_1based": 5002,
+    "source_atom_name": "C61",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 51,
+    "origin_id": "PA6:C53",
+    "source_atom_index_1based": 5003,
+    "source_atom_name": "C53",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 52,
+    "origin_id": "PA6:O48",
+    "source_atom_index_1based": 5004,
+    "source_atom_name": "O48",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 53,
+    "origin_id": "PA6:O51",
+    "source_atom_index_1based": 5005,
+    "source_atom_name": "O51",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 54,
+    "origin_id": "PA6:H1",
+    "source_atom_index_1based": 5006,
+    "source_atom_name": "H1",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 55,
+    "origin_id": "PA6:H2",
+    "source_atom_index_1based": 5007,
+    "source_atom_name": "H2",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 56,
+    "origin_id": "PA6:H3",
+    "source_atom_index_1based": 5008,
+    "source_atom_name": "H3",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 57,
+    "origin_id": "PA6:H4",
+    "source_atom_index_1based": 5009,
+    "source_atom_name": "H4",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 58,
+    "origin_id": "PA6:H5",
+    "source_atom_index_1based": 5010,
+    "source_atom_name": "H5",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 59,
+    "origin_id": "PA6:H6",
+    "source_atom_index_1based": 5011,
+    "source_atom_name": "H6",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 60,
+    "origin_id": "PA6:H7",
+    "source_atom_index_1based": 5012,
+    "source_atom_name": "H7",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 61,
+    "origin_id": "PA6:H8",
+    "source_atom_index_1based": 5013,
+    "source_atom_name": "H8",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 62,
+    "origin_id": "PA6:H9",
+    "source_atom_index_1based": 5014,
+    "source_atom_name": "H9",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 63,
+    "origin_id": "PA6:H10",
+    "source_atom_index_1based": 5015,
+    "source_atom_name": "H10",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 64,
+    "origin_id": "PA6:H11",
+    "source_atom_index_1based": 5016,
+    "source_atom_name": "H11",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 65,
+    "origin_id": "PA6:H12",
+    "source_atom_index_1based": 5017,
+    "source_atom_name": "H12",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 66,
+    "origin_id": "PA6:H13",
+    "source_atom_index_1based": 5018,
+    "source_atom_name": "H13",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 67,
+    "origin_id": "PA6:H14",
+    "source_atom_index_1based": 5019,
+    "source_atom_name": "H14",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 68,
+    "origin_id": "PA6:H15",
+    "source_atom_index_1based": 5020,
+    "source_atom_name": "H15",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 69,
+    "origin_id": "PA6:H16",
+    "source_atom_index_1based": 5021,
+    "source_atom_name": "H16",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 70,
+    "origin_id": "PA6:H17",
+    "source_atom_index_1based": 5022,
+    "source_atom_name": "H17",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 71,
+    "origin_id": "PA6:H18",
+    "source_atom_index_1based": 5023,
+    "source_atom_name": "H18",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 72,
+    "origin_id": "PA6:H19",
+    "source_atom_index_1based": 5024,
+    "source_atom_name": "H19",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 73,
+    "origin_id": "PA6:H20",
+    "source_atom_index_1based": 5025,
+    "source_atom_name": "H20",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 74,
+    "origin_id": "PA6:H21",
+    "source_atom_index_1based": 5026,
+    "source_atom_name": "H21",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 75,
+    "origin_id": "PA6:H22",
+    "source_atom_index_1based": 5027,
+    "source_atom_name": "H22",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 76,
+    "origin_id": "PA6:H23",
+    "source_atom_index_1based": 5028,
+    "source_atom_name": "H23",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 77,
+    "origin_id": "PA6:H24",
+    "source_atom_index_1based": 5029,
+    "source_atom_name": "H24",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 78,
+    "origin_id": "PA6:H25",
+    "source_atom_index_1based": 5030,
+    "source_atom_name": "H25",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 79,
+    "origin_id": "PA6:H26",
+    "source_atom_index_1based": 5031,
+    "source_atom_name": "H26",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 80,
+    "origin_id": "PA6:H27",
+    "source_atom_index_1based": 5032,
+    "source_atom_name": "H27",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 81,
+    "origin_id": "PA6:H28",
+    "source_atom_index_1based": 5033,
+    "source_atom_name": "H28",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 82,
+    "origin_id": "PA6:H29",
+    "source_atom_index_1based": 5034,
+    "source_atom_name": "H29",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 83,
+    "origin_id": "PA6:H30",
+    "source_atom_index_1based": 5035,
+    "source_atom_name": "H30",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 84,
+    "origin_id": "PA6:H31",
+    "source_atom_index_1based": 5036,
+    "source_atom_name": "H31",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 85,
+    "origin_id": "PA6:H32",
+    "source_atom_index_1based": 5037,
+    "source_atom_name": "H32",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 86,
+    "origin_id": "PA6:H33",
+    "source_atom_index_1based": 5038,
+    "source_atom_name": "H33",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 87,
+    "origin_id": "PA6:H34",
+    "source_atom_index_1based": 5039,
+    "source_atom_name": "H34",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 88,
+    "origin_id": "PA6:H35",
+    "source_atom_index_1based": 5040,
+    "source_atom_name": "H35",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 89,
+    "origin_id": "PA6:H36",
+    "source_atom_index_1based": 5041,
+    "source_atom_name": "H36",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 90,
+    "origin_id": "PA6:H37",
+    "source_atom_index_1based": 5042,
+    "source_atom_name": "H37",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 91,
+    "origin_id": "PA6:H38",
+    "source_atom_index_1based": 5043,
+    "source_atom_name": "H38",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 92,
+    "origin_id": "PA6:H39",
+    "source_atom_index_1based": 5044,
+    "source_atom_name": "H39",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 93,
+    "origin_id": "PA6:H40",
+    "source_atom_index_1based": 5045,
+    "source_atom_name": "H40",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 94,
+    "origin_id": "PA6:H41",
+    "source_atom_index_1based": 5046,
+    "source_atom_name": "H41",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 95,
+    "origin_id": "PA6:H42",
+    "source_atom_index_1based": 5047,
+    "source_atom_name": "H42",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 96,
+    "origin_id": "PA6:H43",
+    "source_atom_index_1based": 5048,
+    "source_atom_name": "H43",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 97,
+    "origin_id": "PA6:H44",
+    "source_atom_index_1based": 5049,
+    "source_atom_name": "H44",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 98,
+    "origin_id": "PA6:H45",
+    "source_atom_index_1based": 5050,
+    "source_atom_name": "H45",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 99,
+    "origin_id": "PA6:H46",
+    "source_atom_index_1based": 5051,
+    "source_atom_name": "H46",
+    "constructed_cap_H": false,
+    "source_coordinates": "prepared.rst7"
+  },
+  {
+    "index": 100,
+    "origin_id": "WAT:O",
+    "source_atom_index_1based": 5052,
+    "source_atom_name": "O",
+    "constructed_cap_H": false,
+    "source_coordinates": "water_only/original_order.rst7"
+  },
+  {
+    "index": 101,
+    "origin_id": "WAT:H1",
+    "source_atom_index_1based": 5053,
+    "source_atom_name": "H1",
+    "constructed_cap_H": false,
+    "source_coordinates": "water_only/original_order.rst7"
+  },
+  {
+    "index": 102,
+    "origin_id": "WAT:H2",
+    "source_atom_index_1based": 5054,
+    "source_atom_name": "H2",
+    "constructed_cap_H": false,
+    "source_coordinates": "water_only/original_order.rst7"
+  }
+]

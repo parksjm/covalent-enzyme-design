@@ -1,3 +1,29 @@
+## Native TI1 pilot started — 2026-10-23
+
+User inspected capped geometries and authorized the next step. Native seed
+mapping establishes **R** at C54 (Thr CA S, CB R); do not select S to evade
+R cap sensitivity. A source-mapped103atom/60explicitH charge0 native seed
+passes initial graph/stereo/contact screening. Water comes from the earlier
+physical water-only TIP3P restart, not the manual displacement or failed DFTB
+endpoint. See docs/native_ti1_reference_20261023.md for exact construction.
+
+Active tmux: `nyl12_native_ti1_pilot_20261023`; directory
+`output_nyl12_native_reference_20261023/native_frozen_scaffold_pilot_01/`.
+Gaussian wB97XD/def2TZVP,8CPU32GB;65mobile atoms,38frozen heavy atoms plus
+seed chi1 constraint. This is a frozen-scaffold state-retention pilot using
+explicitly labeled AF3-seed torsions, not a replacement for n12c-derived
+parameter-reference torsions. No reactive-bond restraint, solvent or extra
+dispersion. Engine started; no convergence or scientific acceptance yet.
+Six checker corruption tests passed;95% assessor coverage. Tiny Gaussian
+freeze test confirmed fixed coordinates unchanged. Preserve all source hashes.
+
+The user suggested eventual explicit-solvent MD to find relay-water snapshots
+for QM/MM, and explicitly said **do not do this yet**. Proposal documented;
+no MD or new AF3 run. Parameter-transfer/protein-relaxation gate stays closed.
+Next inspect pilot process and scientific checks; do not auto-start RESP,
+production MD, or repeat the old DFTB repair. Active journal remains
+output_agent_actions/20261021.jsonl. Unrelated untracked cif/ preserved.
+
 # Standalone pipeline handoff — 2026-10-20
 
 ## Final follow-up checkpoint — 2026-10-23

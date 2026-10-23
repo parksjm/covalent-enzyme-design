@@ -1,0 +1,16 @@
+......                                                                   [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                                                Stmts   Miss  Cover   Missing
+-------------------------------------------------------------------------------------------------
+output_nyl12_native_reference_20261023/assess_pilot.py                 62      3    95%   26, 138-139
+output_nyl12_native_reference_20261023/checkpoint_native_seed.py       85     85     0%   3-127
+output_nyl12_native_reference_20261023/prepare_gaussian_pilot.py       63     63     0%   3-118
+output_nyl12_native_reference_20261023/prepare_native_seed.py          96     96     0%   3-193
+output_nyl12_native_reference_20261023/test_assess_pilot.py            65      0   100%
+output_nyl12_native_reference_20261023/verify_freeze_preflight.py      21     21     0%   3-44
+-------------------------------------------------------------------------------------------------
+TOTAL                                                                 392    268    32%
+Coverage JSON written to file output_nyl12_native_reference_20261023/checker_coverage.json
+6 passed in 0.72s

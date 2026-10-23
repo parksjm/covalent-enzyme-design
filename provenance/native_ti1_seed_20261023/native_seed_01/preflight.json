@@ -1,0 +1,33 @@
+{
+  "accepted": true,
+  "geometry": {
+    "accepted": true,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "35": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "35": "R"
+    },
+    "geometry_failures": []
+  },
+  "attacked_carbon_cip_from_geometry": "R",
+  "formula": "C29H60N6O8",
+  "formal_charge": 0,
+  "explicit_H": 60,
+  "max_nonwater_preconditioning_displacement_A": 0.0,
+  "water_oxygen_physical_displacement_A": 1.4082150752526017,
+  "water_preconditioning_converged": false,
+  "scope": "Starting coordinates only; not optimized or parameter validated",
+  "reactive_distances_A": {
+    "OG1_C54": 1.335330670658021,
+    "C54_O49": 1.3426935614651618,
+    "C54_N59": 1.3567306291228187,
+    "C54_C62": 1.527011460336824
+  },
+  "psi_deg": 115.36257414179195,
+  "chi1_deg": -38.78895388845329
+}

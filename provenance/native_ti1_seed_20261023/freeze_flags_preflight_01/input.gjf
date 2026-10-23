@@ -1,0 +1,11 @@
+%mem=256MB
+%nprocshared=1
+#p HF/STO-3G Opt=(ModRedundant,Tight,MaxCycles=30) SCF=Tight NoSymm
+
+Freeze flag syntax installation test only; not TI1 parameter data
+
+0 1
+O -1 1.0000000000 2.0000000000 3.0000000000
+H -1 1.0000000000 2.7570000000 3.5860000000
+H  0 1.0000000000 1.2430000000 3.5860000000
+
