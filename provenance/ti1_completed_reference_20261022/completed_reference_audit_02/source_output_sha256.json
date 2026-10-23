@@ -1,0 +1,16 @@
+{
+  "source/atom_map.json": "a1dbe8b50322d59bf83be2ccf4f8a39f4ff8844ad0026bd1d5f19d5ee1645b1b",
+  "source/audit_completed_reference_explicit_20261022.py": "e7db95cd6ebe02956ef89703995103ac401db49e50db1057e7181d978b927af9",
+  "source/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547",
+  "source/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553",
+  "source/input.gjf": "f1e31df2eba00b0106509dc8f03c9eec37659fb47d3f2a1fc5d2763612bcaa08",
+  "source/molecule.sdf": "8ba0e7c0050050f73aeb1b4b1390a2efdc24cba76f019dcb299f92f824433d21",
+  "source/optimization.log": "694a3ce2cf95028bf290171c31cbf19700dd4ad65b0b5852d791938b877bbe7d",
+  "source/process_status.json": "9ac938f7e9d1319854548f46be40094c97e47934c326f0470a90faed079fcb21",
+  "source/scientific_acceptance.json": "7a5f718781f5b46a45516c8a272640385ae0a21821ab94af255c2f6053581bc9",
+  "source/ti1_reference_coordinates.py": "48bb4d3395746ac00ac95634050cde2eed591e9fd51107cc4a2836ac8675e628",
+  "source/ti1_reference_validation.py": "0237a32133e3695140d4a692d12daa11130a9166b8f020ee8950699fe25b6936",
+  "result/assessment.json": "59ab80baccb5380743abeecf6bea171967087a5e59c41ca111b9c2cb86a301ba",
+  "result/final_structure.sdf": "270101f4c3fbbcf55d9fa6623c0d9d260d1cdb49f87c17ff42f1e9beadfd84e9",
+  "result/final_structure.xyz": "180a9548a5915e18385abc42fcf70d7ac8ce56aa720436384823f18c59a7b16a"
+}

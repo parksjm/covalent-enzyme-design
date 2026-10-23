@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_completed_reference_20261022.py", line 15, in <module>
+    from nyl12_covalent.gaussian_checks import final_orientation
+ModuleNotFoundError: No module named 'nyl12_covalent'

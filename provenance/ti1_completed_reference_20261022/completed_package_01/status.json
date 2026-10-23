@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/package_completed_reference_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T00:37:07.164646Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md": "48c84dca11a0776c7f31da0ca844748317f4e19cb969460580a7996956f4360e",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/package_completed_reference_20261022.py": "a51d0edaa0218cee04b24606c0b9d050cc55a1a7d84ca7a85505950c173767f6",
+    "/data/jpc/covalent-enzyme-design/scripts/prepare_nyl12_inspection_download.py": "65c99ded6879b43ee12d0989d2b5cd5c5054c1d67022b8c810cdef06cdb41478"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/completed_package_01/job/job.log",
+  "session_name": "nyl12_ti1_completed_package01_20261022",
+  "started_utc": "2026-10-23T00:37:06.915468Z"
+}

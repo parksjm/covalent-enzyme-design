@@ -1,0 +1,180 @@
+"""Freeze and independently re-audit the completed S60 reference geometry."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import shutil
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+from rdkit import Chem
+
+from nyl12_covalent.gaussian_checks import final_orientation
+from nyl12_covalent.ti1_reference_validation import assess_reference_optimization
+
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+CASE = (
+    ROOT
+    / "output_nyl12_ti1_parameters_20261022"
+    / "pa6_local_bonded"
+    / "attack_S_cap_phi_minus60"
+)
+OUTPUT = (
+    ROOT / "output_nyl12_parameter_validation_20261022" / "completed_reference_audit_01"
+)
+SOURCE_FILES = (
+    "optimization.log",
+    "atom_map.json",
+    "molecule.sdf",
+    "input.gjf",
+    "scientific_acceptance.json",
+)
+BOND_ORIGINS = ("THR:OG1", "TIL:O", "TIL:N", "TIL:acylCH3")
+
+LOGGER = logging.getLogger(__name__)
+
+
+def _sha256(path: Path) -> str:
+    """Return the SHA-256 digest of a file."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _freeze_source(source: Path, frozen: Path) -> None:
+    """Copy the completed calculation and verify its recorded input digests."""
+    command_path = source / "job" / "command.json"
+    command = json.loads(command_path.read_text())
+    recorded_hashes = command["input_sha256"]
+    if not isinstance(recorded_hashes, dict) or not recorded_hashes:
+        raise ValueError("Optimization command has no input SHA-256 manifest")
+    for name, expected_hash in recorded_hashes.items():
+        input_path = source / name
+        if not input_path.is_file() or _sha256(input_path) != expected_hash:
+            raise ValueError(f"Optimization input hash mismatch: {name}")
+
+    status_path = source / "job" / "status.json"
+    status = json.loads(status_path.read_text())
+    if status.get("exit_status") != 0 or not status.get("ended_utc"):
+        raise ValueError("Reference optimization did not complete successfully")
+
+    for name in SOURCE_FILES:
+        path = source / name
+        if not path.is_file():
+            raise FileNotFoundError(
+                f"Required optimization artifact is missing: {path}"
+            )
+        shutil.copy2(path, frozen / name)
+    shutil.copy2(status_path, frozen / "process_status.json")
+    shutil.copy2(Path(__file__), frozen / Path(__file__).name)
+    helper_path = Path(assess_reference_optimization.__code__.co_filename)
+    shutil.copy2(helper_path, frozen / helper_path.name)
+    for name in (
+        "gaussian_checks.py",
+        "gaussian_fchk.py",
+        "ti1_reference_coordinates.py",
+    ):
+        shutil.copy2(ROOT / "src/nyl12_covalent" / name, frozen / name)
+
+
+def _check_against_recorded_assessment(result: dict[str, Any], frozen: Path) -> None:
+    """Require the re-audit to preserve the accepted status and bond metrics."""
+    original = json.loads((frozen / "scientific_acceptance.json").read_text())
+    prior = original["assessment"]
+    if result["accepted"] is not prior["accepted"]:
+        raise ValueError("Re-audited acceptance differs from the original assessment")
+    current_bonds = result["reactive_bonds_A"]
+    prior_bonds = prior["reactive_bonds_A"]
+    for bond in BOND_ORIGINS:
+        if bond not in current_bonds or bond not in prior_bonds:
+            raise ValueError(f"Missing reactive-bond metric: {bond}")
+        if abs(float(current_bonds[bond]) - float(prior_bonds[bond])) > 1e-10:
+            raise ValueError(f"Re-audited bond metric changed: {bond}")
+
+
+def _write_final_structures(frozen: Path, result: dict[str, Any], output: Path) -> None:
+    """Write final optimized coordinates as XYZ and graph-preserving SDF."""
+    molecule_path = frozen / "molecule.sdf"
+    molecule = next(
+        (mol for mol in Chem.SDMolSupplier(str(molecule_path), removeHs=False) if mol),
+        None,
+    )
+    if molecule is None:
+        raise ValueError("Frozen molecule.sdf could not be read")
+    atomic_numbers, coordinates = final_orientation(
+        (frozen / "optimization.log").read_text()
+    )
+    if len(atomic_numbers) != molecule.GetNumAtoms() or coordinates.shape != (
+        molecule.GetNumAtoms(),
+        3,
+    ):
+        raise ValueError(
+            "Final Gaussian orientation does not match the frozen molecule"
+        )
+    expected_numbers = [atom.GetAtomicNum() for atom in molecule.GetAtoms()]
+    if list(atomic_numbers) != expected_numbers:
+        raise ValueError(
+            "Final Gaussian orientation atom order differs from molecule.sdf"
+        )
+    audited_coordinates = np.asarray(result["final_coordinates_A"], dtype=float)
+    if audited_coordinates.shape != coordinates.shape or not np.allclose(
+        audited_coordinates, coordinates, atol=1e-10, rtol=0.0
+    ):
+        raise ValueError(
+            "Audited final coordinates differ from the final log orientation"
+        )
+
+    xyz_path = output / "final_structure.xyz"
+    with xyz_path.open("w") as handle:
+        handle.write(f"{len(atomic_numbers)}\nFinal optimized reference geometry\n")
+        for atomic_number, (x, y, z) in zip(atomic_numbers, coordinates, strict=True):
+            symbol = Chem.GetPeriodicTable().GetElementSymbol(int(atomic_number))
+            handle.write(f"{symbol:2s} {x: .10f} {y: .10f} {z: .10f}\n")
+
+    conformer = Chem.Conformer(molecule.GetNumAtoms())
+    for index, coordinate in enumerate(coordinates):
+        conformer.SetAtomPosition(index, tuple(float(value) for value in coordinate))
+    molecule.RemoveAllConformers()
+    molecule.AddConformer(conformer, assignId=True)
+    writer = Chem.SDWriter(str(output / "final_structure.sdf"))
+    writer.write(molecule)
+    writer.close()
+
+
+def main() -> None:
+    """Freeze, re-audit, and export the accepted completed reference geometry."""
+    if not OUTPUT.is_dir():
+        raise FileNotFoundError(
+            f"Launcher-created output directory is missing: {OUTPUT}"
+        )
+    frozen = OUTPUT / "source"
+    result_dir = OUTPUT / "result"
+    frozen.mkdir(exist_ok=False)
+    result_dir.mkdir(exist_ok=False)
+    _freeze_source(CASE / "optimization_01", frozen)
+    result = assess_reference_optimization(frozen)
+    _check_against_recorded_assessment(result, frozen)
+    if result["accepted"] is not True:
+        raise ValueError(
+            "Completed reference optimization failed independent acceptance"
+        )
+    result_path = result_dir / "assessment.json"
+    result_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    _write_final_structures(frozen, result, result_dir)
+    manifest = {
+        str(path.relative_to(OUTPUT)): _sha256(path)
+        for directory in (frozen, result_dir)
+        for path in sorted(directory.iterdir())
+        if path.is_file()
+    }
+    (OUTPUT / "source_output_sha256.json").write_text(
+        json.dumps(manifest, indent=2) + "\n"
+    )
+    LOGGER.info("Completed reference audit written to %s", OUTPUT)
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    main()

@@ -1,0 +1,3 @@
+/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/check_mcpb_bond_conventions_20261022.py:38: ComplexWarning: Casting complex values to real discards the imaginary part
+  'observed_amber_k':float(observed[1]),
+INFO:__main__:Accepted 8 manufactured bond checks; no TI1 parameters fitted

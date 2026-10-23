@@ -1,0 +1,1 @@
+INFO:__main__:Accepted 8 manufactured bond checks; no TI1 parameters fitted

@@ -1,0 +1,59 @@
+"""Add small completed-reference exports to the existing inspection inventory."""
+from __future__ import annotations
+
+import fcntl
+import hashlib
+import json
+import logging
+import shutil
+import sys
+from pathlib import Path
+
+ROOT = Path('/data/jpc/covalent-enzyme-design')
+sys.path.insert(0,str(ROOT))
+from scripts.prepare_nyl12_inspection_download import build_package  # noqa: E402
+
+
+def main() -> None:
+    """Verify an additive package before preserving and promoting directories."""
+    logging.basicConfig(level=logging.INFO)
+    archive=ROOT/'provenance/ti1_completed_reference_20261022'
+    current=ROOT/'output_laptop_inspection_20261021'
+    staging=ROOT/'output_laptop_inspection_20261021_completed_staging'
+    backup=ROOT/'output_laptop_inspection_20261021_revision_09'
+    if staging.exists() or backup.exists():
+        raise FileExistsError('New staging and backup paths required')
+    old=json.loads((current/'provenance.json').read_text())
+    files={name:Path(row['source']) for name,row in old['files'].items()}
+    frozen=archive/'agent_actions_snapshot.jsonl'
+    with (ROOT/'output_agent_actions/20261021.jsonl').open('rb') as source:
+        fcntl.flock(source,fcntl.LOCK_SH)
+        with frozen.open('xb') as target:shutil.copyfileobj(source,target)
+        fcntl.flock(source,fcntl.LOCK_UN)
+    files['provenance/agent_actions_at_export.jsonl']=frozen
+    for name in ('final_structure.xyz','final_structure.sdf','assessment.json'):
+        files[f'qm/ti1_completed_reference/attack_S_cap_phi_minus60/{name}']=(
+            archive/'completed_reference_audit_02'/name)
+    for case in ('attack_R_cap_phi_minus60','attack_S_cap_phi_minus60'):
+        files[f'reports/ti1_completed_reference/{case}/scientific_acceptance.json']=(
+            archive/case/'scientific_acceptance.json')
+    report=build_package(files,staging)
+    for line in (staging/'MANIFEST.sha256').read_text().splitlines():
+        expected,name=line.split('  ',1)
+        if hashlib.sha256((staging/name).read_bytes()).hexdigest()!=expected:
+            raise ValueError(f'Package digest mismatch: {name}')
+    for name in old['files']:
+        if name.startswith(('protein/','qm/','af3/','optimization/')):
+            if (current/name).read_bytes()!=(staging/name).read_bytes():
+                raise ValueError(f'Previous structural payload changed: {name}')
+    current.rename(backup)
+    staging.rename(current)
+    (archive/'laptop_export.json').write_text(json.dumps({
+        'verified':True,'files':len(report['files']),
+        'payload_bytes':report['payload_bytes'],'backup':str(backup),
+        'existing_structures_unchanged':True},indent=2)+'\n')
+    logging.info('Verified %d-file completed-reference package',len(report['files']))
+
+
+if __name__=='__main__':
+    main()

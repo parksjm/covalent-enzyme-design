@@ -1,0 +1,2 @@
+INFO:nyl12_covalent.ti1_reference_validation:TI1 constrained reference geometry accepted: True
+INFO:__main__:Completed reference audit written to /data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/completed_reference_audit_02

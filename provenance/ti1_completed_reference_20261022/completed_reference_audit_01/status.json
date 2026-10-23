@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_parameter_validation_20261022/audit_completed_reference_20261022.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T00:34:09.912564Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/audit_completed_reference_20261022.py": "0697aebfbc187dc453a6b3c6d61bb3db3f8543b0d516be24eea593c0dac70f9c",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_coordinates.py": "48bb4d3395746ac00ac95634050cde2eed591e9fd51107cc4a2836ac8675e628",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/ti1_reference_validation.py": "0237a32133e3695140d4a692d12daa11130a9166b8f020ee8950699fe25b6936"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/completed_reference_audit_01/job/job.log",
+  "session_name": "nyl12_ti1_completed_audit01_20261022",
+  "started_utc": "2026-10-23T00:34:09.525545Z"
+}

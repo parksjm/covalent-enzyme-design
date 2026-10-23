@@ -1,0 +1,132 @@
+{
+  "accepted": true,
+  "scope": "Analytic isolated-bond units/conventions only",
+  "forcefield_validated": false,
+  "ti1_parameters_fitted": false,
+  "modified_angle_validation_pending": true,
+  "cases": [
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frequency_scaling": 1.0,
+      "average_blocks": 0,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 140.05479880217862,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 140.05479880217862,
+      "accepted": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frequency_scaling": 1.0,
+      "average_blocks": 1,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 140.05479880217862,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 140.05479880217862,
+      "accepted": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frequency_scaling": 0.95,
+      "average_blocks": 0,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 126.3994559189662,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 126.3994559189662,
+      "accepted": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frequency_scaling": 0.95,
+      "average_blocks": 1,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 126.3994559189662,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 126.3994559189662,
+      "accepted": true
+    },
+    {
+      "direction": [
+        0.2672612419124244,
+        0.5345224838248488,
+        0.8017837257372732
+      ],
+      "frequency_scaling": 1.0,
+      "average_blocks": 0,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 140.0547988021786,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 140.05479880217862,
+      "accepted": true
+    },
+    {
+      "direction": [
+        0.2672612419124244,
+        0.5345224838248488,
+        0.8017837257372732
+      ],
+      "frequency_scaling": 1.0,
+      "average_blocks": 1,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 140.0547988021786,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 140.05479880217862,
+      "accepted": true
+    },
+    {
+      "direction": [
+        0.2672612419124244,
+        0.5345224838248488,
+        0.8017837257372732
+      ],
+      "frequency_scaling": 0.95,
+      "average_blocks": 0,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 126.39945591896617,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 126.3994559189662,
+      "accepted": true
+    },
+    {
+      "direction": [
+        0.2672612419124244,
+        0.5345224838248488,
+        0.8017837257372732
+      ],
+      "frequency_scaling": 0.95,
+      "average_blocks": 1,
+      "observed_r_A": 1.2171076726999999,
+      "observed_amber_k": 126.39945591896617,
+      "observed_amber_k_imaginary_residual": 0.0,
+      "expected_amber_k": 126.3994559189662,
+      "accepted": true
+    }
+  ],
+  "input_conventions": {
+    "coordinates": "bohr",
+    "hessian": "Hartree/bohr^2",
+    "atom_indices": "one-based",
+    "harmonic_energy": "K*(r-r0)^2"
+  },
+  "source_sha256": {
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7",
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mol/constants.py": "f393ec014df4a093e91d91164ff5e91682e431c32f198225a2720d321ad73a5f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261022/check_mcpb_bond_conventions_explicit_20261022.py": "c7cb66cbe0f600faa184f27a7ac88601cd6f7c1bd86fc4505a888dc22f4845b7"
+  }
+}

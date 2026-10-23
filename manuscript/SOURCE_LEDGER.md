@@ -200,3 +200,15 @@ protein coordinates. See the current handoff and
   scipy.optimize.NonlinearConstraint.html, which documents the Hessian of the
   multiplier-weighted constraint function. This is an implementation reference,
   not a new software dependency or a molecular parameterization benchmark.
+
+
+## First completed constrained TI1 references — 2026-10-22 evening
+
+S/-60 and R/-60 completed normally and passed the declared geometry gate.
+S/-60 independently re-audited and exported 37 atoms/20 H; its 1.581748 A
+capped-backbone N-H/oxyanion contact remains a cap-sensitivity concern.
+No real Hessian or native transfer/parameter validation is accepted yet.
+Small evidence and explicit failed/repaired audit attempts are in
+provenance/ti1_completed_reference_20261022/. Installed MCPB bond extraction
+passed eight analytic convention checks; modified-angle and real-QM fitting
+validation remain outstanding. These checks do not supply TI1 parameters.

@@ -1,5 +1,45 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Resumed checkpoint — 2026-10-22, 20:36 EDT
+
+The user explicitly resumed; the previous 21:00 UTC stopping point is historical.
+Two optimizations have now converged normally and passed the geometry gate:
+`attack_S_cap_phi_minus60` and `attack_R_cap_phi_minus60`. Their fresh frequency
+calculations are active in the existing tmux controllers. R/-120 and S/-120
+remain unconverged at the time of inspection. No completed TI1 Hessian or
+conditional-stability assessment has yet been accepted. Do not fit yet.
+
+An independent frozen-log S/-60 audit reproduced its accepted geometry in
+`output_nyl12_parameter_validation_20261022/completed_reference_audit_02/`.
+Its `result/` contains assessment.json and final_structure.xyz/.sdf with all
+37 atoms and 20 explicit H. Reactive bonds: OG1-C* 1.508577 A, C*-O- 1.302946 A,
+C*-N 1.472865 A, C*-C 1.547196 A. No proton transfer detected. The capped Thr
+backbone N-H contacts the oxyanion at 1.581748 A; retain this possible cap bias
+for comparison against the other cap orientation. This is a constrained
+bonded surrogate, not the native charged TI1; relay water is absent by design.
+
+The installed pymsmt MCPB bond extractor passed eight manufactured quadratic
+checks for bohr/Hartree units, one-based indexing, rotation, block averaging,
+frequency-scale squaring and the AMBER K*(r-r0)^2 factor of one-half. Actual
+TI1 fitting and modified-angle validation remain pending. Do not substitute
+an arbitrary installed Seminario wrapper. Attempt01 emitted a complex-cast
+reporting warning; attempt02 explicitly recorded real/imaginary components,
+all with zero imaginary residuals. Both are retained. Independent geometry
+audit01 failed before execution due to missing PYTHONPATH; fresh audit02 used
+explicit project src/root paths and passed without changing chemistry gates.
+
+Compact outputs, exact helpers and both failures are versioned under
+`provenance/ti1_completed_reference_20261022/`. Production code/dependencies
+are unchanged; the previous full-suite 433-test result still applies to that
+source revision. New checks ran as scripted tmux jobs with source hashes.
+Active action journal remains `output_agent_actions/20261021.jsonl`.
+
+Next: finish the four geometry/Hessian/conditional-curvature gates, compare cap
+hydrogen bonding and sensitivity, then fit and independently validate bonded
+terms. Native 103-atom geometry and separate HF ESP/RESP/held-out validation
+follow. AF3-model MM relaxation remains gated on the full TI1 force field,
+then DFTB3/MM optimization. The user's AF3 fork remains untouched.
+
 ## Parallel preparation checkpoint — 2026-10-22, 20:36 UTC
 
 The user visually inspected the four interim optimization trajectories and

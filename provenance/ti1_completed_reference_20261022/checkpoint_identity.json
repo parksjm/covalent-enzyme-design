@@ -1,0 +1,169 @@
+{
+  "files": {
+    "agent_actions_snapshot.jsonl": {
+      "sha256": "f318940ebc6546754572e83622b687679322cc316c766740f572b54a80754377",
+      "bytes": 496536
+    },
+    "attack_R_cap_phi_minus60/atom_map.json": {
+      "sha256": "3487344e66fa7937532df7ef0afdee182f659f1f2c683033dd2ef6842dd2989d",
+      "bytes": 8983
+    },
+    "attack_R_cap_phi_minus60/input.gjf": {
+      "sha256": "83246f8d4c341a9cac7322c162cb7e8e89f38ab3950c1a95e01f4a0c6c9edf49",
+      "bytes": 1828
+    },
+    "attack_R_cap_phi_minus60/scientific_acceptance.json": {
+      "sha256": "efe0517493ac0a7cd00f7774f554a7c9d0b59ced736e5a75cccdb91fd771f616",
+      "bytes": 6783
+    },
+    "attack_S_cap_phi_minus60/atom_map.json": {
+      "sha256": "a1dbe8b50322d59bf83be2ccf4f8a39f4ff8844ad0026bd1d5f19d5ee1645b1b",
+      "bytes": 8982
+    },
+    "attack_S_cap_phi_minus60/input.gjf": {
+      "sha256": "f1e31df2eba00b0106509dc8f03c9eec37659fb47d3f2a1fc5d2763612bcaa08",
+      "bytes": 1830
+    },
+    "attack_S_cap_phi_minus60/scientific_acceptance.json": {
+      "sha256": "7a5f718781f5b46a45516c8a272640385ae0a21821ab94af255c2f6053581bc9",
+      "bytes": 6858
+    },
+    "completed_package_01/command.json": {
+      "sha256": "f2f4b65b8f0b805d4ddf5c9089ae10ddbcb6521e06b168554ebb4625fba1aa39",
+      "bytes": 997
+    },
+    "completed_package_01/job.log.txt": {
+      "sha256": "9b7b50fd0f22f2a343ff9365720f4b2811d4b646a4174eebf87364f85b4298bf",
+      "bytes": 56
+    },
+    "completed_package_01/run.sh": {
+      "sha256": "3fda6400a732ca74f581c0489674d80be041271a6e77d028d3508a81cc6b4c75",
+      "bytes": 1511
+    },
+    "completed_package_01/status.json": {
+      "sha256": "7708b4e9c930b554d40691f479f76b6a9190c1b47f103b3437ddd5cd19efc56f",
+      "bytes": 1044
+    },
+    "completed_reference_audit_01/command.json": {
+      "sha256": "2fa04999eaf1cdc8442306c5e455a86eda59347f15fb5cae9ec064bd31d183bf",
+      "bytes": 1338
+    },
+    "completed_reference_audit_01/job.log.txt": {
+      "sha256": "e5ea33947f8a94223e4be764f0ef0b0f51d619ccba7b63c54f5059a13f8a99ab",
+      "bytes": 299
+    },
+    "completed_reference_audit_01/run.sh": {
+      "sha256": "ffdccb3b7bf32354ea430d278a5202905959ae6123772ed83e680d71663ff680",
+      "bytes": 1554
+    },
+    "completed_reference_audit_01/status.json": {
+      "sha256": "60d45bc99c9b62cc8a426ff9eaf03a0ba619229bf12ff16e2b83aa32dae5dde5",
+      "bytes": 1385
+    },
+    "completed_reference_audit_02/assessment.json": {
+      "sha256": "59ab80baccb5380743abeecf6bea171967087a5e59c41ca111b9c2cb86a301ba",
+      "bytes": 4353
+    },
+    "completed_reference_audit_02/command.json": {
+      "sha256": "7c3099cad7243befc1788b1b93d81f12e6d7b4abb1cb201c19945c491b80bf1e",
+      "bytes": 1447
+    },
+    "completed_reference_audit_02/final_structure.sdf": {
+      "sha256": "270101f4c3fbbcf55d9fa6623c0d9d260d1cdb49f87c17ff42f1e9beadfd84e9",
+      "bytes": 3153
+    },
+    "completed_reference_audit_02/final_structure.xyz": {
+      "sha256": "180a9548a5915e18385abc42fcf70d7ac8ce56aa720436384823f18c59a7b16a",
+      "bytes": 1703
+    },
+    "completed_reference_audit_02/job.log.txt": {
+      "sha256": "2f316861e74070b0d8d930a74becea15df42ebe7212059f3f9156ee9a2518da2",
+      "bytes": 251
+    },
+    "completed_reference_audit_02/run.sh": {
+      "sha256": "e620276cf91a8b7c09f4433aff2ed9f1f7b26f73a6c7427a1e0379b86ac11e61",
+      "bytes": 1651
+    },
+    "completed_reference_audit_02/source_output_sha256.json": {
+      "sha256": "bd727759e16a29435ae86ae34fb2292205d92edfe6e83f10dd92d96ba8f4bc14",
+      "bytes": 1420
+    },
+    "completed_reference_audit_02/status.json": {
+      "sha256": "18faaa96939263f34857eafc630a9066e8aeef688950fb0163d1e758a4bd553f",
+      "bytes": 1494
+    },
+    "installed_bond_source_snapshot.json": {
+      "sha256": "bde5c423a2dfcaacdfe30dbdb5ca5c3167926de9bdd3cb0bddccf0fa7739cac8",
+      "bytes": 1110
+    },
+    "laptop_export.json": {
+      "sha256": "82a4ec7eaefc78161dfcdbe81fb6218534db529d26098791def889c7141f6d03",
+      "bytes": 203
+    },
+    "manifest.json": {
+      "sha256": "8af3052ea16c45ac345a2a0612e1e077a582e139e9aa8f902acfd6fb344650fb",
+      "bytes": 5321
+    },
+    "mcpb_bond_conventions_01/command.json": {
+      "sha256": "e66fb603ff2d6f1566d2c7e09f5832311046094fc421c0379256baeebc7f03e2",
+      "bytes": 1116
+    },
+    "mcpb_bond_conventions_01/job.log.txt": {
+      "sha256": "5f3800fd9ab2b2970db394a8471d14f19a0e6b876f5f0f088e8a803e437b0da2",
+      "bytes": 312
+    },
+    "mcpb_bond_conventions_01/report.json": {
+      "sha256": "26989bda5aba407f82a6130a0116cb315b14001058190dab7d8260250ce2a160",
+      "bytes": 3475
+    },
+    "mcpb_bond_conventions_01/run.sh": {
+      "sha256": "c61e71235cf6aab36a0787fe9201397e744fb54f34a1f808c9a5e94cf389154e",
+      "bytes": 1592
+    },
+    "mcpb_bond_conventions_01/status.json": {
+      "sha256": "06d42e514d3ee0df6110dadfcc597c7fb858e7aef2b2d18af30e33115de495ec",
+      "bytes": 1163
+    },
+    "mcpb_bond_conventions_02/command.json": {
+      "sha256": "188ca3872d42ae4f0b32cf72e8b0045e222dde7d92d4d0f2641857910222cefb",
+      "bytes": 1134
+    },
+    "mcpb_bond_conventions_02/job.log.txt": {
+      "sha256": "4f3b4d85e61232faafd3bbdc3b03a40abab5c7b09bfe1cc3390ed6fb52769fe0",
+      "bytes": 76
+    },
+    "mcpb_bond_conventions_02/report.json": {
+      "sha256": "0799f2a5a0d47b459ce605298bbc4b32663ad80e061ae3bad59e027100027931",
+      "bytes": 3884
+    },
+    "mcpb_bond_conventions_02/run.sh": {
+      "sha256": "73ef3cf499510067ac50ae190143e906bd6c013cda14a0d5f42995472b8d219c",
+      "bytes": 1601
+    },
+    "mcpb_bond_conventions_02/status.json": {
+      "sha256": "28ae203448d9c6430c4a413450ecba55302e1c6068129a0850b802095d25bd38",
+      "bytes": 1181
+    },
+    "workflow/audit_completed_reference_20261022.py.txt": {
+      "sha256": "0697aebfbc187dc453a6b3c6d61bb3db3f8543b0d516be24eea593c0dac70f9c",
+      "bytes": 7009
+    },
+    "workflow/audit_completed_reference_explicit_20261022.py.txt": {
+      "sha256": "e7db95cd6ebe02956ef89703995103ac401db49e50db1057e7181d978b927af9",
+      "bytes": 7009
+    },
+    "workflow/check_mcpb_bond_conventions_20261022.py.txt": {
+      "sha256": "88b0bc7a1d02bd200883f9793742b9e19c8a2318343922f636e880be8c46f39d",
+      "bytes": 2646
+    },
+    "workflow/check_mcpb_bond_conventions_explicit_20261022.py.txt": {
+      "sha256": "c7cb66cbe0f600faa184f27a7ac88601cd6f7c1bd86fc4505a888dc22f4845b7",
+      "bytes": 2936
+    },
+    "workflow/package_completed_reference_20261022.py.txt": {
+      "sha256": "a51d0edaa0218cee04b24606c0b9d050cc55a1a7d84ca7a85505950c173767f6",
+      "bytes": 2781
+    }
+  },
+  "forcefield_validated": false
+}
