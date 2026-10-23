@@ -1,0 +1,178 @@
+{
+  "user_xyz_sha256": "5a8bd98e04cec386f927b4bcac00053a74d7b2bc269d24eed8d92f0d80ab1781",
+  "geometry": {
+    "accepted": true,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "geometry_failures": []
+  },
+  "water_O_N_A": 2.6715446920208916,
+  "water_O_OG1_A": 2.902589570618795,
+  "N_H_Owater_angles_deg": {
+    "THR:H1": 21.681165335675846,
+    "THR:H2": 117.73072377266881,
+    "THR:HG1": 72.12456403122776
+  },
+  "Owater_H_OG1_angles_deg": {
+    "WAT:H1": 166.53465412687785,
+    "WAT:H2": 52.7437394719629
+  },
+  "water_OH_lengths_A": [
+    0.9600060761411879,
+    0.9599721247708184
+  ],
+  "HOH_deg": 104.50120762459655,
+  "nearest_full_context_atoms": [
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "HA",
+      "element_Z": 1,
+      "water_O_distance_A": 0.8175140151733369
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "CA",
+      "element_Z": 6,
+      "water_O_distance_A": 1.4431447610912083
+    },
+    {
+      "residue_topology_1based": 273,
+      "resname": "GLY",
+      "atom": "H",
+      "element_Z": 1,
+      "water_O_distance_A": 1.5510997244970461
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "HB3",
+      "element_Z": 1,
+      "water_O_distance_A": 2.033363730374367
+    },
+    {
+      "residue_topology_1based": 233,
+      "resname": "THR",
+      "atom": "H2",
+      "element_Z": 1,
+      "water_O_distance_A": 2.0475341351023966
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "CB",
+      "element_Z": 6,
+      "water_O_distance_A": 2.068005788063709
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "C",
+      "element_Z": 6,
+      "water_O_distance_A": 2.0748129220402016
+    },
+    {
+      "residue_topology_1based": 273,
+      "resname": "GLY",
+      "atom": "N",
+      "element_Z": 7,
+      "water_O_distance_A": 2.0799635817641136
+    },
+    {
+      "residue_topology_1based": 233,
+      "resname": "THR",
+      "atom": "HA",
+      "element_Z": 1,
+      "water_O_distance_A": 2.631105388750466
+    },
+    {
+      "residue_topology_1based": 233,
+      "resname": "THR",
+      "atom": "N",
+      "element_Z": 7,
+      "water_O_distance_A": 2.6715446920208916
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "OD1",
+      "element_Z": 8,
+      "water_O_distance_A": 2.7268012929923953
+    },
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "H23",
+      "element_Z": 1,
+      "water_O_distance_A": 2.754514926932243
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "N",
+      "element_Z": 7,
+      "water_O_distance_A": 2.7617449700261965
+    },
+    {
+      "residue_topology_1based": 272,
+      "resname": "ASP",
+      "atom": "CG",
+      "element_Z": 6,
+      "water_O_distance_A": 2.7781757049303053
+    },
+    {
+      "residue_topology_1based": 233,
+      "resname": "THR",
+      "atom": "H3",
+      "element_Z": 1,
+      "water_O_distance_A": 2.802594182656053
+    }
+  ],
+  "nearest_full_substrate_heavy_atoms": [
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "C54",
+      "element_Z": 6,
+      "water_O_distance_A": 3.629191764493163
+    },
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "C62",
+      "element_Z": 6,
+      "water_O_distance_A": 3.633794108017816
+    },
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "N59",
+      "element_Z": 7,
+      "water_O_distance_A": 3.964192406463768
+    },
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "C70",
+      "element_Z": 6,
+      "water_O_distance_A": 4.136998720263882
+    },
+    {
+      "residue_topology_1based": 329,
+      "resname": "LIG",
+      "atom": "O49",
+      "element_Z": 8,
+      "water_O_distance_A": 4.731724043460797
+    }
+  ],
+  "full_context_note": "Original unrelaxed alpha/beta pocket; distances reported, not a full vdW/energy acceptance. User seed unchanged."
+}

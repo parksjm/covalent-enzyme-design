@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_user_water_seed_20261023/check_seed.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/check_seed.py": "9cc31890e35fe02b4301568fcff56f82220ef7a6bd48f5897bd5bf7133ae7bc7",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/native_seed_jmp.xyz": "5a8bd98e04cec386f927b4bcac00053a74d7b2bc269d24eed8d92f0d80ab1781"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/check_job/job.log",
+  "session_name": "nyl12_user_water_check_20261023",
+  "started_utc": null
+}

@@ -1,3 +1,85 @@
+## PAUSED at user request — evening 2026-10-23
+
+No Gaussian process or tmux calculation from this effort remains running.
+Other three existing tmux sessions are unrelated and untouched. Stop work.
+Latest user XYZ is preserved exactly and checked; it clears the substrate but
+clashes with Asp topology272 backbone in the original full pocket. Resolve
+full-pocket geometry before treating that water placement as enzyme-compatible.
+No seed/reference/FF has been accepted. No automatic restart or continuation.
+SMD remains a diagnostic proposal with one user-rejected-placement pilot stopped;
+that interrupted run does not establish whether continuum stabilizes TI1.
+See detailed notes below and retained output roots. Active journal remains
+output_agent_actions/20261021.jsonl. Unrelated untracked cif/ is untouched.
+
+## User-supplied manual water seed checked — 2026-10-23
+
+Saved exact supplied XYZ: output_nyl12_user_water_seed_20261023/native_seed_jmp.xyz.
+Script/check_job/seed_checks.json preserve measurements and input hashes.
+63atom inventory, graph and S/R/R stereo pass. WaterO-N2.67154A,
+waterO-OG12.90269A; waterH-OG1 angle166.53deg, best NH-water117.73deg.
+Nearest substrateheavy3.629A. However FULL original AF3-derived alpha/beta
+pocket has severe clashes: ASP topology272 CA1.44314A, HA0.81751A from
+waterO. This is model-context evidence, not experimental steric assignment.
+Do not treat the isolated-cluster placement as enzyme-compatible. Native
+pocket geometry/possible rearrangement must be resolved separately. User
+coordinates remain unchanged; no new Gaussian calculation was launched.
+
+## STOP requested: SMD seed water rejected by user — 2026-10-23
+
+User inspected seed and requires water IN FRONT of amino terminus, away
+from the substrate-side placement shown. Identity-verified Gaussian worker
+4055951 sent SIGTERM; interruption record in SMD pilot. No replacement run.
+Check job/status.json for terminal record. Preserve all files. This rejects
+the water geometry, not SMD as a method. Earlier ACTIVE note is superseded.
+
+The deterministic search was insufficient: only water moved, so original
+NH3 proton directions biased donor selection toward H3; geometry screening
+used covalent-radius contacts in truncated63atom cluster, not full-pocket
+van der Waals clearance. Distance/angle satisfaction alone is not acceptance.
+Next place/check against FULL substrate/protein context, define exposed face
+in an atom-based frame, and allow NH3 H reorientation with water placement.
+Do not restart Gaussian with another unreviewed side/clearance assumption.
+User's five-minute departure constraint remains relevant; no extended work
+or autonomous continuation requested. SMD/RESP protocol distinction preserved.
+
+## ACTIVE SMD/water-bridge diagnostic — 2026-10-23
+
+User requested a decision and tmux launch before leaving in5min.
+New root: output_nyl12_smd_water_bridge_20261023/.
+ACTIVE tmux: nyl12_bridge63_smd_20261023; pilot svp_pilot_01/.
+63atoms, neutral singlet, wB97XD/def2SVP SCRF=(SMD,Solvent=Water),
+16cores32GB,20cycles maximum, same frozen21heavy plus chi1.
+No reactive-bond/proton/water restraints during optimization; no Hessian/RESP.
+
+Prior water was not a validated bridge. New deterministic search moves ONLY
+water O/H/H, retains every nonwater coordinate, and screens graph/clashes.
+1800 orientations evaluated; selected N-Owater=OG1-Owater=2.70A,
+N-H3-Owater=151.38deg, Owater-H-OG1=180deg, OH0.96A/HOH104.5deg.
+Initial63atom geometry passes. Final acceptance adds both water heavy-atom
+contacts2.5--3.3A and best NH-water / waterH-OG1 angles>=140deg, alongside
+existing NH3, oxyanion, graph/stereo and convergence checks. A retained
+state would be a constrained aqueous-continuum cluster diagnostic, not a
+native enzyme minimum or accepted FF reference. Water continuum is not a
+measured enzyme dielectric. Do not autoextend or fit parameters.
+
+Ruff passes and real seed/source geometry checks pass. New bridge-gate unit
+coverage has not been measured under the user's5min deadline. Earlier12tests
+apply to the preceding gas-phase pipeline, not these added water criteria.
+Source snapshots, input hashes and action journal retained. Job manifest pins
+launched assessor; separate assessment_source_hash_at_checkpoint.json discloses
+preformat digest in earlier staging source_manifest. No method silently changed.
+
+Literature: Meadows etal2026 JCTC22,4012--4025 DOI10.1021/acs.jctc.6c00162
+explicitly uses implicit water to stabilize glycine zwitterion for GAFF/RESP
+parameter variants: https://pmc.ncbi.nlm.nih.gov/articles/PMC13130867/ .
+Enzyme SMD dielectric4 precedent: https://doi.org/10.3389/fchem.2018.00249
+(singlepoint enzyme energies; not proof SMD Hessians transfer to Amber).
+Recommendation: solvated geometry is defensible; ESP charge protocol and
+bonded fitting remain separate decisions. Do not adopt fully solvated ESP
+charges or raw continuum Hessian as automatic ff19SB/GAFF2 parameters.
+No replacement RESP or force-field fit launched. Diffuse/larger-basis and
+actual protein-environment checks remain pending if TI1 survives.
+
 ## Pilot ended: TI1 state loss; trajectory available — 2026-10-23
 
 The63atom donor/water pilot ended17:10:33EDT at20cycle limit, exit1.

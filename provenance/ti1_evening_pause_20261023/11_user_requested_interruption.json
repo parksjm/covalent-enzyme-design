@@ -1,0 +1,7 @@
+{
+  "time_utc": "2026-10-23T21:54:34.791176+00:00",
+  "pid": 4055951,
+  "signal": "SIGTERM",
+  "verified_cmdline": "/usr/local/g16/l502.exe 4294967296 optimization.chk 1 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055951.int 0 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055951.rwf 0 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055951.d2e 0 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055951.skr 0 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055949.inp 0 no-output-file 0 /data/scratch/gaussian_scratch/jpc/bridge63_smd_20261023_pilot01/Gau-4055951.nex 0 nofchk 0 ",
+  "reason": "User rejected water on substrate-facing side; placement invalid. Not an assessment of SMD efficacy."
+}

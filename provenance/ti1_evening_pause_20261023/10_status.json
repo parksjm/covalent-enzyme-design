@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01",
+  "ended_utc": "2026-10-23T21:54:35.848150Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/seed_01/water_placement.json": "b25efe10ac07eef6e63bdda5518166d42fd8f996180d694d0ca5158fd20105c2",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/assess_pilot.py": "a9c45da5fcce879b971daaa9d3414614e1108d1f680ffec63d6c35fcc0f68f9c",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/input.gjf": "b8e68d5be2d02fee330909fbaf57d93040b90b38c25513f384c7bf1e44de8739",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/run_gaussian.sh": "d6a729c6a5ee6057003e1944ae0de378876495b4158f7456debaaa7c6fa6722b"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/job/job.log",
+  "session_name": "nyl12_bridge63_smd_20261023",
+  "started_utc": "2026-10-23T21:48:26.247950Z"
+}

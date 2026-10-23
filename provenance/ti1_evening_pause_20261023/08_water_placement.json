@@ -1,0 +1,11 @@
+{
+  "NH_donor_origin": "THR:HG1",
+  "N_H_Owater_angle_deg": 151.3822716752659,
+  "N_Owater_A": 2.7,
+  "OG1_Owater_A": 2.7,
+  "Owater_H_OG1_angle_deg": 180.0,
+  "OH_A": 0.96,
+  "HOH_deg": 104.5,
+  "tested_orientations": 1800,
+  "nonwater_max_displacement_A": 0.0
+}

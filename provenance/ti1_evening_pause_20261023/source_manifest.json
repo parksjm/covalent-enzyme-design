@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md",
+    "snapshot": "00_standalone_handoff_20261020.md",
+    "sha256": "5eb6a279ed8510346ae40af3d6a69bcf803427b1f3a55e3261eb70cff4004447"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_agent_actions/20261021.jsonl",
+    "snapshot": "01_20261021.jsonl",
+    "sha256": "66cbc40c9351dd136a67bbcde2bb10bc2f1b84fee68844659a998e260de086b1"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/prepare_bridge.py",
+    "snapshot": "02_prepare_bridge.py",
+    "sha256": "3de7f646172ebd5fea5823e326536830a9a7221eefbe196301a35663d0ac00ad"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/prepare_smd_pilot.py",
+    "snapshot": "03_prepare_smd_pilot.py",
+    "sha256": "7618a9f93f076d9393dfc4eb9dbf9148bdae0c7d85aace87c475c3980c9ed274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/assess_pilot.py",
+    "snapshot": "04_assess_pilot.py",
+    "sha256": "445fee50aeabd1050a22ea65f89536bf7ce1a0309d788ca1f1c1881cdc216f0b"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/decision_note.md",
+    "snapshot": "05_decision_note.md",
+    "sha256": "36e0cb6391a6a7a83b220137d968cc49429e935fa2e07de4b8bde5a79c4cba4a"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/bridge_source_hashes.json",
+    "snapshot": "06_bridge_source_hashes.json",
+    "sha256": "d61ee41ba0a6f63f2ba84bfffe81d1104be5b871fc8f3b77e2021b42bec513dd"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/seed_01/native_seed.xyz",
+    "snapshot": "07_native_seed.xyz",
+    "sha256": "85f86eaed47a76b2d7045a5638e63773f864affafef32b14b7de7cf7e3fc29f4"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/seed_01/water_placement.json",
+    "snapshot": "08_water_placement.json",
+    "sha256": "b25efe10ac07eef6e63bdda5518166d42fd8f996180d694d0ca5158fd20105c2"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/input.gjf",
+    "snapshot": "09_input.gjf",
+    "sha256": "b8e68d5be2d02fee330909fbaf57d93040b90b38c25513f384c7bf1e44de8739"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/job/status.json",
+    "snapshot": "10_status.json",
+    "sha256": "4b5c90352f509024b720277b46278c7f5e81ac509584cb0ea3145fb40ff3350c"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/user_requested_interruption.json",
+    "snapshot": "11_user_requested_interruption.json",
+    "sha256": "b711ac266fed5e20e7f304681a3f199fc7805bf5f16365b01a661b742058749e"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/assessment_source_hash_at_checkpoint.json",
+    "snapshot": "12_assessment_source_hash_at_checkpoint.json",
+    "sha256": "9f1f2b5fb561465e9b470e9972211d0a2145e9bb7df75217daee18418a1fe212"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/native_seed_jmp.xyz",
+    "snapshot": "13_native_seed_jmp.xyz",
+    "sha256": "5a8bd98e04cec386f927b4bcac00053a74d7b2bc269d24eed8d92f0d80ab1781"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/check_seed.py",
+    "snapshot": "14_check_seed.py",
+    "sha256": "9cc31890e35fe02b4301568fcff56f82220ef7a6bd48f5897bd5bf7133ae7bc7"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/seed_checks.json",
+    "snapshot": "15_seed_checks.json",
+    "sha256": "25090d5061de8f5f6407a31457546b9e79630101a238e39afac08cc2984f4ed7"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/check_job/status.json",
+    "snapshot": "16_status.json",
+    "sha256": "d520f11cf5b027721e8f7569f64bfd7370be8024f1f00543001365e818ef524b"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_user_water_seed_20261023/check_job/command.json",
+    "snapshot": "17_command.json",
+    "sha256": "a093ccbe20f34ceaf21dece042fb2ae8a80b5fdec237e93e55065d3b0969c935"
+  }
+]

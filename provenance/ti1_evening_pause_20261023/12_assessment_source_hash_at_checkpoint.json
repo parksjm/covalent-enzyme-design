@@ -1,0 +1,4 @@
+{
+  "note": "After Ruff formatting; job input manifest records exact launched assessor. Earlier source_manifest entry for pilot assessor was preformat; this record supersedes that digest only.",
+  "sha256": "a9c45da5fcce879b971daaa9d3414614e1108d1f680ffec63d6c35fcc0f68f9c"
+}
