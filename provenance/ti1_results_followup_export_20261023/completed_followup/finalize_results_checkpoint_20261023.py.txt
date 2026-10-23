@@ -1,0 +1,112 @@
+"""Close the authorized results/export/Git checkpoint without more calculations."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import shutil
+import subprocess
+from pathlib import Path
+
+ROOT = Path('/data/jpc/covalent-enzyme-design')
+WORK = ROOT / 'output_nyl12_parameter_validation_20261023'
+PYTHON = ROOT / '.venv/bin/python'
+ARCHIVE = ROOT / 'provenance/ti1_results_followup_export_20261023'
+LOGGER = logging.getLogger(__name__)
+
+
+def event(phase: str, reason: str) -> None:
+    """Record each checkpoint phase without rewriting earlier journal records."""
+    subprocess.run([
+        str(PYTHON), str(ROOT / 'scripts/record_agent_action.py'), '--log',
+        str(ROOT / 'output_agent_actions/20261021.jsonl'), '--agent', 'root',
+        '--phase', phase, '--action', 'final_results_checkpoint', '--permission-mode',
+        'escalated', '--reason', reason, '--rollback',
+        'Keep export revisions15/16 and original calculations. Revert only this commit; no force push.',
+    ], check=True)
+
+
+def main() -> None:
+    """Document existing results, refresh the export and push scoped changes."""
+    logging.basicConfig(level=logging.INFO)
+    event('intent', 'Stop additional diagnostics. Record completed four ESP acceptances and signed negative extractor probe; refresh verified small export and commit/push authorized checkpoint, preserving untracked cif/. Earlier automatic-review/bwrap failures remain retained; no new scientific calculation.')
+    report = json.loads((WORK / 'surrogate_esp_acceptance_01/report.json').read_text())
+    if not report['accepted_for_capped_surrogate_esp'] or len(report['cases']) != 4:
+        raise ValueError('Expected four accepted surrogate ESP datasets')
+    marker = '\n## Completed follow-up diagnostics — 2026-10-23\n'
+    note = ROOT / 'docs/ti1_qm_results_20261023.md'
+    if marker in note.read_text():
+        raise ValueError('Follow-up already recorded; do not duplicate checkpoint')
+    lines = [marker, '\nAll four standalone HF/6-31G(d) MK calculations completed and passed\n',
+             'the separate source/geometry/state/grid acceptance checks. Grid counts:\n\n']
+    for row in report['cases']:
+        lines.append(f'- `{row["case"]}`: {row["esp_grid_points"]} points.\n')
+    lines.append('\nNo RESP charges were fitted or transferred. The raw-Hessian probe for\n'
+                 'R/−60 OG1–C* returned a finite signed Amber-form K of −5.88965426\n'
+                 'kcal/mol/A², with zero imaginary component. The tuple convention\n'
+                 'was checked; no absolute-value replacement or parameter emission\n'
+                 'was made. A negative local block projection is not a failed\n'
+                 'full-molecule constrained-curvature test. The cap sensitivity and\n'
+                 'parameter-transfer gates remain closed; larger/native reference\n'
+                 'geometry and baseline/targeted validation are the next scientific\n'
+                 'requirements. No protein relaxation or AF3 fork change occurred.\n\n'
+                 'Records: `output_nyl12_parameter_validation_20261023/'
+                 'surrogate_esp_acceptance_01/` and `bond_sensitivity_diagnostic_04/`.\n')
+    note.write_text(note.read_text() + ''.join(lines))
+    handoff = ROOT / 'docs/standalone_handoff_20261020.md'
+    text = handoff.read_text()
+    heading = '# Standalone pipeline handoff — 2026-10-20\n'
+    if text.count(heading) != 1:
+        raise ValueError('Unexpected handoff heading')
+    handoff.write_text(text.replace(heading, heading + '\n## Final follow-up checkpoint — 2026-10-23\n\n'
+        'All four capped-surrogate HF/MK ESP datasets completed and passed separate\n'
+        'scientific acceptance (8606/8843/8712/8897 grid points). No RESP fit or native\n'
+        'transfer occurred. The signed raw-Hessian R/−60 OG1–C* projection is\n'
+        '−5.88965426 kcal/mol/A² and was rejected as an MM parameter; it does not\n'
+        'overturn the separate constrained-stability result. See the final section\n'
+        'of docs/ti1_qm_results_20261023.md. No further calculations were launched\n'
+        'after the user requested a quicker wrap-up. The next work is larger/native\n'
+        'reference preparation and validated parameter transfer, not protein repair.\n', 1))
+    original = WORK / 'package_completed_results_20261023.py'
+    helper = WORK / 'package_results_followup_20261023.py'
+    if helper.exists():
+        raise FileExistsError(helper)
+    content = original.read_text().replace('provenance/ti1_completed_results_export_20261023',
+                                          'provenance/ti1_results_followup_export_20261023')
+    content = content.replace('_revision_15', '_revision_16').replace('revision15', 'revision16')
+    helper.write_text(content)
+    subprocess.run([str(PYTHON), str(helper)], check=True)
+    evidence = ARCHIVE / 'completed_followup'
+    evidence.mkdir()
+    for name in ('surrogate_esp_acceptance_01', 'bond_sensitivity_diagnostic_04'):
+        shutil.copytree(WORK / name, evidence / name)
+    shutil.copy2(__file__, evidence / (Path(__file__).name + '.txt'))
+    for name in ('assess_surrogate_esp_20261023.py',):
+        shutil.copy2(WORK / name, evidence / (name + '.txt'))
+    hashes = {str(p.relative_to(evidence)): hashlib.sha256(p.read_bytes()).hexdigest()
+              for p in evidence.rglob('*') if p.is_file()}
+    (evidence / 'manifest.json').write_text(json.dumps(hashes, indent=2) + '\n')
+    event('note', 'Final export refreshed with completed ESP/negative-probe documentation; previous payload preserved. Source evidence and failures retained. Full447tests/13optional skips and100%checker coverage remain unchanged; no additional tests or calculations needed.')
+    branch = subprocess.run(['git', 'branch', '--show-current'], cwd=ROOT, check=True,
+                            text=True, capture_output=True).stdout.strip()
+    if branch != 'codex/initial-import':
+        raise ValueError(f'Unexpected checkpoint branch: {branch}')
+    paths = ['docs/laptop_inspection_20261021.md', 'docs/standalone_handoff_20261020.md',
+             'docs/ti1_qm_results_20261023.md', 'docs/af3_water_placement_decision_20261023.md',
+             'manuscript/METHODS_DRAFT.md', 'manuscript/SOURCE_LEDGER.md',
+             'src/nyl12_covalent/gaussian_esp.py', 'tests/test_gaussian_esp.py',
+             'provenance/ti1_completed_results_export_20261023',
+             'provenance/ti1_results_followup_export_20261023']
+    subprocess.run(['git', 'add', '--', *paths], cwd=ROOT, check=True)
+    subprocess.run(['git', 'diff', '--cached', '--check'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'commit', '-m', 'Audit completed TI1 references and cap-sensitivity limits'], cwd=ROOT, check=True)
+    subprocess.run(['git', 'push', 'origin', branch], cwd=ROOT, check=True)
+    commit = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, check=True,
+                            text=True, capture_output=True).stdout.strip()
+    event('outcome', f'Committed and pushed {commit}; final small laptop package verified. No forcefield/native-transfer acceptance claimed. User cif/ preserved; additional diagnostics stopped.')
+    LOGGER.info('Checkpoint pushed: %s', commit)
+
+
+if __name__ == '__main__':
+    main()

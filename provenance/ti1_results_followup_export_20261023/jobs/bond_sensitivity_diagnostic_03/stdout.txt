@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_03/source/diagnose_ti1_bond_sensitivity_20261023.py", line 311, in <module>
+    main()
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_03/source/diagnose_ti1_bond_sensitivity_20261023.py", line 246, in main
+    measured.extend(measure(branch, atom_map, fchk))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_03/source/diagnose_ti1_bond_sensitivity_20261023.py", line 167, in measure
+    raise ValueError(f"Invalid force constant for {branch} {label}")
+ValueError: Invalid force constant for attack_R_cap_phi_minus60 OG1-C*

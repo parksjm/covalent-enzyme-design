@@ -1,0 +1,328 @@
+#!/usr/bin/env python3
+"""Audit four completed capped TI1 references without changing coordinates."""
+
+from __future__ import annotations
+import hashlib
+import json
+import logging
+import re
+import sys
+from pathlib import Path
+from typing import Any
+import numpy as np
+from rdkit import Chem
+
+PROJECT = Path("/data/jpc/covalent-enzyme-design")
+OUTROOT = PROJECT / "output_nyl12_parameter_validation_20261023"
+AUDIT = OUTROOT / "completed_reference_audit_01"
+SNAPSHOT = AUDIT / "source"
+REFS = PROJECT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+sys.path.insert(0, str(SNAPSHOT / "conditional_curvature_source/src"))
+from nyl12_covalent.gaussian_checks import final_orientation, validate_geometry  # noqa: E402
+from nyl12_covalent.gaussian_fchk import read_gaussian_fchk  # noqa: E402
+
+LOG = logging.getLogger(__name__)
+BOHR_A = 0.529177210903
+CASES = (
+    "attack_R_cap_phi_minus120",
+    "attack_R_cap_phi_minus60",
+    "attack_S_cap_phi_minus120",
+    "attack_S_cap_phi_minus60",
+)
+BOND_GATE_A = 0.03
+INPUTS = (
+    "optimization_01/atom_map.json",
+    "optimization_01/coordinates.xyz",
+    "optimization_01/input.gjf",
+    "optimization_01/input_identity.json",
+    "optimization_01/molecule.sdf",
+    "optimization_01/optimization.log",
+    "optimization_01/reference.chk",
+    "optimization_01/scientific_acceptance.json",
+    "optimization_01/job/status.json",
+    "frequency_01/atom_map.json",
+    "frequency_01/input.gjf",
+    "frequency_01/input_identity.json",
+    "frequency_01/molecule.sdf",
+    "frequency_01/frequency.log",
+    "frequency_01/process_result.json",
+    "frequency_01/reference.chk",
+    "frequency_01/hessian.fchk",
+    "frequency_01/scientific_acceptance.json",
+    "frequency_controller_01/job/status.json",
+    "conditional_curvature_01/assessment.json",
+    "conditional_curvature_controller_01/job/status.json",
+)
+
+
+def hash_file(path: Path) -> str:
+    """Return one file's SHA-256 digest."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    """Read a JSON object from disk."""
+    result = json.loads(path.read_text())
+    if not isinstance(result, dict):
+        raise ValueError(f"Expected JSON object in {path}")
+    return result
+
+
+def verify_identity(directory: Path, filename: str, key: str = "") -> None:
+    """Verify all recorded input hashes for an existing source stage."""
+    data = read_json(directory / filename)
+    entries = data.get(key, data) if key else data
+    for name, expected in entries.items():
+        if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+            continue
+        path = directory / name
+        if not path.is_file() or hash_file(path) != expected:
+            raise ValueError(f"Input hash mismatch: {path}")
+
+
+def energy(path: Path) -> dict[str, Any]:
+    """Extract the final SCF energy from a Gaussian log."""
+    hits = re.findall(
+        r"SCF Done:\s+E\(([^)]+)\)\s*=\s*([-+]?\d+\.\d+)", path.read_text()
+    )
+    if not hits:
+        raise ValueError(f"No SCF energy in {path}")
+    method, value = hits[-1]
+    return {"method": method, "hartree": float(value)}
+
+
+def export(
+    case: str, mol: Chem.Mol, meta: dict[str, Any], xyz: np.ndarray, folder: Path
+) -> None:
+    """Export precise XYZ, graph-preserving SDF, and input atom-order map."""
+    atoms = meta["atoms"]
+    lines = [str(len(atoms)), f"{case}: final fchk coordinates in Angstrom"]
+    for atom, point in zip(atoms, xyz, strict=True):
+        lines.append(
+            f"{atom['element']:<2} {point[0]: .10f} {point[1]: .10f} {point[2]: .10f}"
+        )
+    (folder / "final_structure.xyz").write_text("\n".join(lines) + "\n")
+    (folder / "atom_order.json").write_text(json.dumps(atoms, indent=2) + "\n")
+    saved = Chem.Mol(mol)
+    saved.RemoveAllConformers()
+    conf = Chem.Conformer(saved.GetNumAtoms())
+    conf.Set3D(True)
+    for i, point in enumerate(xyz):
+        conf.SetAtomPosition(i, tuple(float(x) for x in point))
+    saved.AddConformer(conf)
+    saved.SetProp("audit_case", case)
+    writer = Chem.SDWriter(str(folder / "final_structure.sdf"))
+    writer.write(saved)
+    writer.close()
+
+
+def nh_contacts(
+    mol: Chem.Mol, meta: dict[str, Any], xyz: np.ndarray
+) -> list[dict[str, Any]]:
+    """List all N-H···oxyanion-O contacts, ordered by H-to-O distance."""
+    oxy = meta["atom_index_by_origin"]["TIL:O"]
+    result = []
+    for bond in mol.GetBonds():
+        ends = [
+            mol.GetAtomWithIdx(i)
+            for i in (bond.GetBeginAtomIdx(), bond.GetEndAtomIdx())
+        ]
+        nitrogen = next((a for a in ends if a.GetAtomicNum() == 7), None)
+        hydrogen = next((a for a in ends if a.GetAtomicNum() == 1), None)
+        if nitrogen is not None and hydrogen is not None:
+            ni, hi = nitrogen.GetIdx(), hydrogen.GetIdx()
+            result.append(
+                {
+                    "nitrogen": meta["atoms"][ni]["origin_id"],
+                    "hydrogen": meta["atoms"][hi]["origin_id"],
+                    "H_O_A": float(np.linalg.norm(xyz[hi] - xyz[oxy])),
+                    "N_O_A": float(np.linalg.norm(xyz[ni] - xyz[oxy])),
+                }
+            )
+    return sorted(result, key=lambda row: row["H_O_A"])
+
+
+def audit(case: str, folder: Path) -> dict[str, Any]:
+    """Check source identities and summarize one completed reference."""
+    src = REFS / case
+    opt, freq = src / "optimization_01", src / "frequency_01"
+    verify_identity(opt, "input_identity.json", "inputs_sha256")
+    verify_identity(freq, "input_identity.json")
+    optrep = read_json(opt / "scientific_acceptance.json")
+    freqrep = read_json(freq / "scientific_acceptance.json")
+    freqproc = read_json(freq / "process_result.json")
+    curv = read_json(src / "conditional_curvature_01/assessment.json")
+    opstat = read_json(opt / "job/status.json")
+    frstat = read_json(src / "frequency_controller_01/job/status.json")
+    cvstat = read_json(src / "conditional_curvature_controller_01/job/status.json")
+    oa, fa, fine = optrep["assessment"], freqrep["assessment"], curv["fine"]
+    meta = read_json(freq / "atom_map.json")
+    molecules = list(Chem.SDMolSupplier(str(freq / "molecule.sdf"), removeHs=False))
+    if len(molecules) != 1 or molecules[0] is None:
+        raise ValueError(f"Invalid SDF graph in {case}")
+    mol = molecules[0]
+    if mol.GetNumAtoms() != 37 or len(meta["atoms"]) != 37:
+        raise ValueError(f"Expected 37 atoms in {case}")
+    if [a["index"] for a in meta["atoms"]] != list(range(37)) or Chem.GetFormalCharge(
+        mol
+    ) != -1:
+        raise ValueError(f"Atom map/order or formal charge mismatch in {case}")
+    nums = tuple(a.GetAtomicNum() for a in mol.GetAtoms())
+    fchk = read_gaussian_fchk(
+        freq / "hessian.fchk",
+        expected_atomic_numbers=nums,
+        expected_charge=-1,
+        expected_multiplicity=1,
+    )
+    xyz = fchk.coordinates_bohr * BOHR_A
+    geom = validate_geometry(mol, list(nums), xyz)
+    lognums, logxyz = final_orientation((freq / "frequency.log").read_text())
+    if tuple(lognums) != nums:
+        raise ValueError(f"Gaussian atom order mismatch in {case}")
+    coordinate_delta = float(np.max(np.linalg.norm(logxyz - xyz, axis=1)))
+    if coordinate_delta > 2e-5:
+        raise ValueError(f"fchk/log coordinate mismatch in {case}: {coordinate_delta}")
+    oxy = mol.GetAtomWithIdx(meta["atom_index_by_origin"]["TIL:O"])
+    oxy_h = [n.GetIdx() for n in oxy.GetNeighbors() if n.GetAtomicNum() == 1]
+    no_transfer = (
+        oa["oxyanion_proton_transfer_detected"] is False
+        and oxy.GetFormalCharge() == -1
+        and not oxy_h
+        and "THR:HG1" not in meta["atom_index_by_origin"]
+    )
+    freqs = np.asarray(fa["unprojected_frequencies_cm_inverse"], dtype=float)
+    if freqs.size != 105 or not np.isfinite(freqs).all():
+        raise ValueError(f"Invalid raw frequency count/content in {case}")
+    export(case, mol, meta, xyz, folder)
+    energies = {
+        "optimization": energy(opt / "optimization.log"),
+        "frequency": energy(freq / "frequency.log"),
+    }
+    hashes = {str((src / name).resolve()): hash_file(src / name) for name in INPUTS}
+    hashes.update(curv["input_source_sha256"])
+    hashes[str(Path(__file__).resolve())] = hash_file(Path(__file__))
+    accepted = bool(
+        optrep["accepted"]
+        and freqrep["accepted"]
+        and curv["accepted"]
+        and opstat["exit_status"]
+        == frstat["exit_status"]
+        == freqproc["exit_status"]
+        == cvstat["exit_status"]
+        == 0
+        and geom["accepted"]
+        and no_transfer
+    )
+    return {
+        "accepted": accepted,
+        "scope": "Constrained capped-reference audit; not force-field validation",
+        "forcefield_validated": False,
+        "native_esp_resp_transfer_eligible": False,
+        "model_scope": meta["model_scope"],
+        "geometry_method": meta["geometry_method"],
+        "identity": {
+            "atom_count": 37,
+            "formal_charge": -1,
+            "multiplicity": fchk.multiplicity,
+            "atom_order_verified": True,
+            "stereochemistry": oa["geometry"],
+            "torsions": oa["constraints"],
+        },
+        "process": {
+            "optimizer_accepted": optrep["accepted"],
+            "optimizer_status": opstat,
+            "frequency_accepted": freqrep["accepted"],
+            "frequency_process": freqproc,
+            "frequency_controller_status": frstat,
+            "curvature_accepted": curv["accepted"],
+            "curvature_controller_status": cvstat,
+        },
+        "geometry": {
+            "accepted": geom["accepted"],
+            "reactive_bonds_A": oa["reactive_bonds_A"],
+            "oxyanion_proton_transfer_absent": no_transfer,
+            "oxyanion_formal_charge": oxy.GetFormalCharge(),
+            "oxyanion_attached_hydrogens": oxy_h,
+            "max_fchk_log_coordinate_delta_A": coordinate_delta,
+            "nearest_oxyanion_NH_contacts": nh_contacts(mol, meta, xyz),
+        },
+        "final_scf_energies": energies,
+        "raw_frequencies_cm_inverse": {
+            "count": int(freqs.size),
+            "minimum": float(freqs.min()),
+            "maximum": float(freqs.max()),
+            "negative_count": int(np.count_nonzero(freqs < 0)),
+            "negative_values": freqs[freqs < 0].tolist(),
+            "accepted": freqrep["accepted"],
+        },
+        "conditional_curvature": {
+            "accepted": curv["accepted"],
+            "classification": fine["curvature_classification"],
+            "minimum_eigenvalue_Eh_bohr2": min(fine["reduced_eigenvalues"]),
+            "tangent_dimension": fine["tangent_dimension"],
+            "stationarity_passed": fine["stationarity_passed"],
+            "unconstrained_minimum_claimed": False,
+        },
+        "source_sha256": hashes,
+    }
+
+
+def main() -> None:
+    """Write all per-case reports, exports, and combined scientific acceptance."""
+    if not (SNAPSHOT / "conditional_curvature_source/src/nyl12_covalent").is_dir():
+        raise FileNotFoundError("Immutable reader source snapshot is missing")
+    result = AUDIT / "result"
+    if result.exists():
+        raise FileExistsError(result)
+    result.mkdir()
+    reports = {}
+    for case in CASES:
+        folder = result / case
+        folder.mkdir()
+        reports[case] = audit(case, folder)
+        (folder / "assessment.json").write_text(
+            json.dumps(reports[case], indent=2) + "\n"
+        )
+    gate = {}
+    for hand in ("R", "S"):
+        a = reports[f"attack_{hand}_cap_phi_minus120"]["geometry"]["reactive_bonds_A"]
+        b = reports[f"attack_{hand}_cap_phi_minus60"]["geometry"]["reactive_bonds_A"]
+        bonds = {
+            k: {
+                "phi_minus120_A": a[k],
+                "phi_minus60_A": b[k],
+                "delta_A": abs(a[k] - b[k]),
+                "passed": abs(a[k] - b[k]) <= BOND_GATE_A,
+            }
+            for k in a
+        }
+        gate[hand] = {
+            "gate_A": BOND_GATE_A,
+            "bonds": bonds,
+            "passed": all(item["passed"] for item in bonds.values()),
+        }
+    individual = all(row["accepted"] for row in reports.values())
+    acceptance = {
+        "accepted": individual and all(x["passed"] for x in gate.values()),
+        "individual_references_accepted": individual,
+        "cap_sensitivity_gate_passed": all(x["passed"] for x in gate.values()),
+        "cap_sensitivity_by_attack_hand": gate,
+        "scope": "Four completed constrained TI1 surrogate references; R and S cap sensitivity assessed separately",
+        "forcefield_validated": False,
+        "native_esp_resp_transfer_eligible": False,
+        "unconstrained_minimum_claimed": False,
+    }
+    (result / "scientific_acceptance.json").write_text(
+        json.dumps(acceptance, indent=2) + "\n"
+    )
+    (result / "summary.json").write_text(json.dumps(reports, indent=2) + "\n")
+    LOG.info(
+        "Individual references accepted=%s; cap sensitivity passed=%s",
+        individual,
+        acceptance["cap_sensitivity_gate_passed"],
+    )
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+    main()

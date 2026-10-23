@@ -6,3 +6,5 @@ provenance/**/trajectory_metrics.csv whitespace=trailing-space,space-before-tab,
 provenance/**/antechamber.stdout.log.txt whitespace=-blank-at-eof
 provenance/**/gaff2_inventory.frcmod whitespace=-blank-at-eof
 provenance/design_ranking_final_export_20261022/source_evidence/README.md.txt whitespace=-blank-at-eol
+provenance/ti1_completed_results_export_20261023/references/*/final_structure.sdf whitespace=-blank-at-eol
+provenance/ti1_results_followup_export_20261023/references/*/final_structure.sdf whitespace=-blank-at-eol

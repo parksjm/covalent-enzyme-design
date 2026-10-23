@@ -1,5 +1,52 @@
 # Standalone pipeline handoff — 2026-10-20
 
+## Final follow-up checkpoint — 2026-10-23
+
+All four capped-surrogate HF/MK ESP datasets completed and passed separate
+scientific acceptance (8606/8843/8712/8897 grid points). No RESP fit or native
+transfer occurred. The signed raw-Hessian R/−60 OG1–C* projection is
+−5.88965426 kcal/mol/A² and was rejected as an MM parameter; it does not
+overturn the separate constrained-stability result. See the final section
+of docs/ti1_qm_results_20261023.md. No further calculations were launched
+after the user requested a quicker wrap-up. The next work is larger/native
+reference preparation and validated parameter transfer, not protein repair.
+
+## Completed Gaussian references and next gate — 2026-10-23
+
+User resumed and requested results, documentation and next steps. All four
+37atom capped TI1 optimizations, separate frequencies and conditional-curvature
+assessments finished successfully. Each has105 positive raw frequencies and
+102 positive constrained internal directions; no proton transfer or graph/
+stereochemistry failure was detected. These are constrained surrogate minima,
+not native enzyme TI1 or force-field validation. See
+`docs/ti1_qm_results_20261023.md` for all four bond/frequency values and scope.
+
+R cap sensitivity FAILS: OG1–C* shifts0.05327A and C*–O− shifts0.03166A,
+above the predeclared0.03A threshold. S length sensitivity passes. Do not select
+the passing configuration or average references to hide failure. Short capped
+Thr N–H/oxyanion contacts persist. Larger/native reference geometry and native
+charge/transfer validation remain necessary before protein TI1 refinement.
+
+Next work: independent frozen-output audit/final inspection exports, diagnostic
+raw-Hessian bond-stiffness comparison and separate capped-surrogate HF/MK ESP.
+No native charge transfer, force-field fit or protein relaxation is certified.
+New work is under `output_nyl12_parameter_validation_20261023/`; fresh surrogate
+ESP uses separate `surrogate_esp_01` calculation directories when launched.
+Read their process/acceptance records to distinguish preparation from execution.
+The final standalone ESP checker passed27 tests/100%line coverage; full regression
+passed447 tests with13 optional workstation-fixture skips, plus Ruff/format.
+Final source-pinned verification: `output_nyl12_parameter_validation_20261023/full_verification_02/`.
+
+The prior AF3-water discussion is now consolidated in
+`docs/af3_water_placement_decision_20261023.md`: both minimal AF3 water tests
+failed geometry acceptance; physical preconditioning removed crowding but the
+subsequent DFTB3/MM diagnostic failed TI1 preservation. Better AF3 restraints
+are useful parallel work but not the present prerequisite. Leave the user's
+AF3 fork untouched; no new AF3 run or unvalidated protein refinement is started.
+
+The active append-only journal remains `output_agent_actions/20261021.jsonl`.
+Retain permission-review timeouts/bwrap failures and all failed attempts.
+
 ## Ranking and LigandMPNN symmetry clarification — 2026-10-22
 
 New decision record: `docs/design_ranking_and_iteration_20261022.md`. The user

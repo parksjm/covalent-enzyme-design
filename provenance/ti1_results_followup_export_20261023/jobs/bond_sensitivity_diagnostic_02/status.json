@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/python",
+    "output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_02/source/diagnose_ti1_bond_sensitivity_20261023.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T14:18:28.533049Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_02/source/diagnose_ti1_bond_sensitivity_20261023.py": "2892fc7d8e95ef6f70658e212af9e4d122064128f0b5cdea05c8c7dff552e5c6",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_02/job/job.log",
+  "session_name": "nyl12_ti1_bond_diagnostic_20261023",
+  "started_utc": "2026-10-23T14:18:27.881021Z"
+}

@@ -1,0 +1,314 @@
+{
+  "assessment": {
+    "accepted": true,
+    "scope": "constrained capped QM geometry prerequisite only",
+    "forcefield_validated": false,
+    "native_charge_transfer_eligible": false,
+    "unconstrained_minimum_claimed": false,
+    "optimization_completed_normally": true,
+    "electronic_state_passed": true,
+    "geometry": {
+      "accepted": true,
+      "expected_stereocenters": {
+        "1": "S",
+        "2": "R",
+        "22": "S"
+      },
+      "observed_stereocenters": {
+        "1": "S",
+        "2": "R",
+        "22": "S"
+      },
+      "geometry_failures": []
+    },
+    "constraints": [
+      {
+        "name": "phi",
+        "atoms_one_based": [
+          20,
+          1,
+          2,
+          6
+        ],
+        "degrees": -120.00000000000001,
+        "observed_degrees": -119.99991602925486,
+        "error_degrees": 8.397074515187342e-05
+      },
+      {
+        "name": "psi",
+        "atoms_one_based": [
+          1,
+          2,
+          6,
+          8
+        ],
+        "degrees": 134.11027642801542,
+        "observed_degrees": 134.11028769330576,
+        "error_degrees": 1.1265290339679268e-05
+      },
+      {
+        "name": "chi1",
+        "atoms_one_based": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "degrees": -58.964417877702274,
+        "observed_degrees": -58.96438649038204,
+        "error_degrees": 3.1387320234443905e-05
+      }
+    ],
+    "constraint_tolerance_degrees": 0.1,
+    "reactive_bonds_A": {
+      "THR:OG1": 1.5225629544508168,
+      "TIL:O": 1.295531419078287,
+      "TIL:N": 1.480338634443822,
+      "TIL:acylCH3": 1.5469228039000527
+    },
+    "reactive_bond_windows_A": {
+      "THR:OG1": [
+        1.3,
+        1.75
+      ],
+      "TIL:O": [
+        1.25,
+        1.65
+      ],
+      "TIL:N": [
+        1.25,
+        1.7
+      ],
+      "TIL:acylCH3": [
+        1.35,
+        1.75
+      ]
+    },
+    "reactive_bond_screen_passed": true,
+    "oxyanion_close_hydrogens": [
+      {
+        "atom": "THR:H",
+        "distance_A": 1.7217960078850805
+      },
+      {
+        "atom": "THR:HB",
+        "distance_A": 2.3048671582618376
+      },
+      {
+        "atom": "TIL:HN",
+        "distance_A": 2.404935331420161
+      }
+    ],
+    "oxyanion_proton_transfer_detected": false,
+    "final_coordinates_A": [
+      [
+        -1.53186,
+        -1.221426,
+        -0.092305
+      ],
+      [
+        -1.369008,
+        0.167966,
+        0.268464
+      ],
+      [
+        0.090603,
+        0.364683,
+        0.770945
+      ],
+      [
+        0.312459,
+        -0.468144,
+        1.860384
+      ],
+      [
+        0.367454,
+        1.804469,
+        1.183511
+      ],
+      [
+        -1.598799,
+        1.084907,
+        -0.926589
+      ],
+      [
+        -1.066504,
+        0.939869,
+        -2.008555
+      ],
+      [
+        -2.396216,
+        2.161641,
+        -0.661201
+      ],
+      [
+        -2.740669,
+        3.110209,
+        -1.687518
+      ],
+      [
+        -0.6129,
+        -1.715851,
+        -0.144466
+      ],
+      [
+        -2.062236,
+        0.407979,
+        1.077404
+      ],
+      [
+        0.743439,
+        0.086743,
+        -0.06329
+      ],
+      [
+        0.24359,
+        2.500903,
+        0.351299
+      ],
+      [
+        1.392807,
+        1.876271,
+        1.549096
+      ],
+      [
+        -0.303431,
+        2.105926,
+        1.993095
+      ],
+      [
+        -2.956145,
+        2.121864,
+        0.170585
+      ],
+      [
+        -3.478908,
+        2.713413,
+        -2.39251
+      ],
+      [
+        -3.140556,
+        4.014213,
+        -1.226958
+      ],
+      [
+        -1.846074,
+        3.365173,
+        -2.25477
+      ],
+      [
+        -2.489992,
+        -1.934946,
+        0.552237
+      ],
+      [
+        -3.487221,
+        -1.437663,
+        1.061448
+      ],
+      [
+        -2.227218,
+        -3.420461,
+        0.597551
+      ],
+      [
+        1.128979,
+        -1.714023,
+        1.545299
+      ],
+      [
+        0.974816,
+        -2.170274,
+        0.342606
+      ],
+      [
+        0.599712,
+        -2.66213,
+        2.551466
+      ],
+      [
+        2.585026,
+        -1.281227,
+        1.837848
+      ],
+      [
+        0.785018,
+        -2.360119,
+        3.952294
+      ],
+      [
+        -1.473875,
+        -3.583092,
+        1.373862
+      ],
+      [
+        -3.14839,
+        -3.948093,
+        0.837976
+      ],
+      [
+        -1.808048,
+        -3.780817,
+        -0.342061
+      ],
+      [
+        3.244389,
+        -2.148167,
+        1.741208
+      ],
+      [
+        2.879259,
+        -0.546942,
+        1.085496
+      ],
+      [
+        2.711023,
+        -0.83706,
+        2.828214
+      ],
+      [
+        0.250704,
+        -3.096653,
+        4.560275
+      ],
+      [
+        0.351878,
+        -1.38096,
+        4.158807
+      ],
+      [
+        1.833817,
+        -2.341852,
+        4.294833
+      ],
+      [
+        0.992468,
+        -3.560046,
+        2.305241
+      ]
+    ]
+  },
+  "accepted": true,
+  "optimizer_status": {
+    "command": [
+      "/usr/bin/sg",
+      "g16",
+      "-c",
+      "bash /data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/run_gaussian.sh"
+    ],
+    "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01",
+    "ended_utc": "2026-10-23T01:17:54.731324Z",
+    "env_overrides": {},
+    "exit_status": 0,
+    "input_sha256": {
+      "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/atom_map.json": "a8f6bdb9a2f5a315fb74145e06d891df430b36bb22461491d9ca82b7605050a6",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/input.gjf": "a5aeb23c96def7a9e084659d5add4b7b6ffaf3c59991eca83e1394411fb9a101",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/input_identity.json": "1eadce60c9679b193cb4c33a4c58f6f63e615d9c6898b09a1f2857dd8fde93ef",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/molecule.sdf": "1656e68280f4ee84a9ef69e1a9e45c97761d5307bd6a048cc5522b5f7ca71cbd",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/run_gaussian.sh": "36de70edf294f29160e596997e32af83faf0c755ed8e08eedeb88a5d83c053e5"
+    },
+    "log": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/optimization_01/job/job.log",
+    "session_name": "nyl12_ti1_attack_S_cap_phi_minus120_20261022",
+    "started_utc": "2026-10-22T17:21:23.607528Z"
+  }
+}

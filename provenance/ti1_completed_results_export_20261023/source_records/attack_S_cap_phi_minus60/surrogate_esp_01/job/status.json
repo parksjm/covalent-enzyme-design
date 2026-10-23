@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01",
+  "ended_utc": "2026-10-23T15:47:42.677123Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/atom_map.json": "a1dbe8b50322d59bf83be2ccf4f8a39f4ff8844ad0026bd1d5f19d5ee1645b1b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/calculation_identity.json": "d6c14744982396ff9df5fad794fae131749e24027f97a9a17635ca64f26200cc",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/esp.gjf": "8568110b5da5035324feaac9da3ec85169c34158bf14cbc8865c0b7fa4c63cde",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/molecule.sdf": "8ba0e7c0050050f73aeb1b4b1390a2efdc24cba76f019dcb299f92f824433d21",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/run_gaussian.sh": "687d88175d11c5b8398365ab7fff8bf8591e41ccc6efc69c069a3351c4017576",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/source_manifest.json": "9bff8dfa5562d73ba946b31d26dfe6374307d49216ce7e986b8836cbae5fc828",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/source_reference.chk": "526461322b3be5bfd1737623141b78c035a1fe3e6b924acaf295146dc1acf0b4"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/job/job.log",
+  "session_name": "nyl12_esp_attack_S_cap_phi_minus60_20261023",
+  "started_utc": "2026-10-23T15:47:32.699788Z"
+}

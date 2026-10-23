@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""Prepare isolated capped-TI1 HF/MK ESP inputs without launching Gaussian."""
+
+from __future__ import annotations
+import json
+import logging
+import shutil
+from pathlib import Path
+from typing import Any
+from surrogate_esp_provenance import (
+    EXPECTED_ROUTE,
+    REPOSITORY,
+    SOURCE_ROOT,
+    matching_cache_records,
+    read_json,
+    sha256,
+    validate_case,
+)
+
+LOGGER = logging.getLogger(__name__)
+REPORT_ROOT = (
+    REPOSITORY
+    / "output_nyl12_parameter_validation_20261023/surrogate_esp_preparation_01"
+)
+CASE_NAMES = (
+    "attack_R_cap_phi_minus120",
+    "attack_R_cap_phi_minus60",
+    "attack_S_cap_phi_minus120",
+    "attack_S_cap_phi_minus60",
+)
+GAUSSIAN = Path("/usr/local/g16/g16")
+PROFILE = Path("/usr/local/g16/bsd/g16.profile")
+ESPGEN = Path("/data/jpc/code/ambertools26/venv/bin/espgen")
+SG = Path("/usr/bin/sg")
+TMUX = Path("/usr/bin/tmux")
+SCRATCH_ROOT = Path("/data/scratch/gaussian_scratch/jpc")
+
+
+def stage_case(
+    case_name: str, source_files_by_name: dict[str, Path], details: dict[str, Any]
+) -> dict[str, Any]:
+    """Create an isolated input bundle, checkpoint copy, and non-launched wrapper."""
+    case_root = SOURCE_ROOT / case_name
+    target = case_root / "surrogate_esp_01"
+    target.mkdir(parents=True, exist_ok=False)
+    source_checkpoint = source_files_by_name["optimized_reference_checkpoint"]
+    shutil.copyfile(source_checkpoint, target / "source_reference.chk")
+    if sha256(target / "source_reference.chk") != details["source_checkpoint_sha256"]:
+        raise ValueError(f"Copied checkpoint digest mismatch: {case_name}")
+
+    atom_map_source = source_files_by_name["atom_map"]
+    shutil.copyfile(atom_map_source, target / "atom_map.json")
+    shutil.copyfile(source_files_by_name["molecule_sdf"], target / "molecule.sdf")
+    source_copy = target / "source"
+    source_copy.mkdir()
+    helper_path = Path(__file__).resolve()
+    shutil.copyfile(helper_path, source_copy / helper_path.name)
+    provenance_path = Path(__file__).with_name("surrogate_esp_provenance.py").resolve()
+    shutil.copyfile(provenance_path, source_copy / provenance_path.name)
+    source_manifest = {
+        "source_files": {
+            label: {"path": str(path), "sha256": sha256(path)}
+            for label, path in source_files_by_name.items()
+        },
+        "preparation_helper": {
+            "path": str(source_copy / helper_path.name),
+            "sha256": sha256(source_copy / helper_path.name),
+        },
+        "provenance_helper": {
+            "path": str(source_copy / provenance_path.name),
+            "sha256": sha256(source_copy / provenance_path.name),
+        },
+        "checkpoint_copy": {
+            "source_path": str(source_checkpoint),
+            "copied_path": str(target / "source_reference.chk"),
+            "sha256": sha256(target / "source_reference.chk"),
+            "kind": "completed optimization reference checkpoint; frequency checkpoint copy verified identical",
+        },
+    }
+    (target / "source_manifest.json").write_text(
+        json.dumps(source_manifest, indent=2) + "\n"
+    )
+    (target / "reference_coordinates_angstrom.json").write_text(
+        json.dumps(details["reference_coordinates_angstrom"], indent=2) + "\n"
+    )
+
+    run_input = (
+        "%nprocshared=8\n%mem=16GB\n"
+        f"%oldchk={target / 'source_reference.chk'}\n%chk={target / 'esp.chk'}\n"
+        f"{EXPECTED_ROUTE}\n\n"
+    )
+    (target / "esp.gjf").write_text(run_input)
+    scratch = SCRATCH_ROOT / f"ti1_20261023_{case_name}_esp01"
+    wrapper = "\n".join(
+        (
+            "#!/usr/bin/env bash",
+            "set -eo pipefail",
+            "export g16root=/usr/local",
+            f"source {PROFILE}",
+            f"export GAUSS_SCRDIR={scratch}",
+            'mkdir -- "$GAUSS_SCRDIR"',
+            f"cd -- {target}",
+            f"{GAUSSIAN} < esp.gjf > esp.log 2>&1",
+            f"{ESPGEN} -i esp.log -o esp.dat > espgen.log 2>&1",
+            "",
+        )
+    )
+    run_script = target / "run_gaussian.sh"
+    run_script.write_text(wrapper)
+    run_script.chmod(0o755)
+    command = {
+        "session_name": f"ti1_20261023_{case_name}_esp01",
+        "argv": ["sg", "g16", "-c", f"bash {run_script}"],
+        "cwd": str(target),
+        "cores": 8,
+        "memory_gb": 16,
+        "gaussian_scratch": str(scratch),
+        "launch_status": "prepared_not_launched",
+        "process_record_expected": "job/status.json written by the reviewed tmux launcher",
+        "preparation_source_snapshot": str(source_copy / helper_path.name),
+    }
+    (target / "job_command.json").write_text(json.dumps(command, indent=2) + "\n")
+    identity = {
+        **details,
+        "case_name": case_name,
+        "model_scope": "capped TI1 bonded-parameter surrogate diagnostic only",
+        "cap_sensitivity_gate": "R reference already exceeds the 0.03 A sensitivity criterion; do not fit or transfer charges",
+        "native_charge_transfer_eligible": False,
+        "forcefield_validated": False,
+        "charge_fit_performed": False,
+        "gaussian_route": EXPECTED_ROUTE,
+        "old_checkpoint": "completed optimization reference.chk copied byte-for-byte to source_reference.chk",
+        "new_checkpoint": "esp.chk",
+        "source_manifest_sha256": sha256(target / "source_manifest.json"),
+        "atom_map_sha256": sha256(target / "atom_map.json"),
+        "molecule_sdf_sha256": sha256(target / "molecule.sdf"),
+        "input_sha256": sha256(target / "esp.gjf"),
+        "wrapper_sha256": sha256(run_script),
+        "job_command_sha256": sha256(target / "job_command.json"),
+        "software_identities": {
+            "gaussian": "Gaussian 16 ES64L Revision C.02 (7-Dec-2021)",
+            "ambertools": "AmberTools26 espgen",
+            "engine_sha256": {
+                str(path): sha256(path)
+                for path in (GAUSSIAN, PROFILE, ESPGEN, SG, TMUX)
+            },
+        },
+        "reference_coordinates_sha256": sha256(
+            target / "reference_coordinates_angstrom.json"
+        ),
+        "scratch_path": str(scratch),
+    }
+    (target / "calculation_identity.json").write_text(
+        json.dumps(identity, indent=2) + "\n"
+    )
+    return {
+        "directory": str(target),
+        **command,
+        "source_checkpoint_sha256": details["source_checkpoint_sha256"],
+    }
+
+
+def main() -> None:
+    """Validate sources and prepare the four Gaussian ESP input bundles."""
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+    report_path = REPORT_ROOT / "preparation_report.json"
+    if report_path.exists():
+        raise FileExistsError(
+            f"Refusing to overwrite preparation report: {report_path}"
+        )
+    if not SCRATCH_ROOT.is_dir():
+        raise FileNotFoundError(f"Gaussian scratch root is unavailable: {SCRATCH_ROOT}")
+    cases: dict[str, Any] = {}
+    all_cache_matches: list[dict[str, Any]] = []
+    prepared_sources: dict[
+        str, tuple[dict[str, Path], dict[str, Any], list[dict[str, Any]]]
+    ] = {}
+    for case_name in CASE_NAMES:
+        source_case = SOURCE_ROOT / case_name
+        files, details = validate_case(source_case)
+        atom_map = read_json(files["atom_map"])
+        matches = matching_cache_records(
+            sha256(files["atom_map"]),
+            sha256(files["molecule_sdf"]),
+            details["source_checkpoint_sha256"],
+            sha256(GAUSSIAN),
+        )
+        all_cache_matches.extend({"case": case_name, **match} for match in matches)
+        target = source_case / "surrogate_esp_01"
+        scratch = SCRATCH_ROOT / f"ti1_20261023_{case_name}_esp01"
+        if target.exists():
+            raise FileExistsError(
+                f"Refusing to overwrite ESP preparation directory: {target}"
+            )
+        if scratch.exists():
+            raise FileExistsError(f"Gaussian scratch path is already in use: {scratch}")
+        prepared_sources[case_name] = (files, details, matches)
+        LOGGER.info("Prepared input bundle for %s", case_name)
+
+    for case_name, (files, details, _matches) in prepared_sources.items():
+        cases[case_name] = stage_case(case_name, files, details)
+
+    engine = {
+        "gaussian_version": "Gaussian 16 ES64L Revision C.02 (7-Dec-2021)",
+        "ambertools_component": "AmberTools26 espgen",
+        "sha256": {
+            str(path): sha256(path) for path in (GAUSSIAN, PROFILE, ESPGEN, SG, TMUX)
+        },
+    }
+    report = {
+        "created_by": str(Path(__file__).resolve()),
+        "created_by_sha256": sha256(Path(__file__).resolve()),
+        "scope": "four separate HF/6-31G(d) MK ESP calculations on capped surrogate geometries",
+        "cap_sensitivity_gate": "R reference already exceeds the 0.03 A sensitivity criterion; ESP remains diagnostic only",
+        "preparation_only": True,
+        "gaussian_launched": False,
+        "espgen_launched": False,
+        "route": EXPECTED_ROUTE,
+        "charge_multiplicity": {"charge": -1, "multiplicity": 1, "electron_count": 134},
+        "formula": "C10H20N3O4-",
+        "atom_count": 37,
+        "native_charge_transfer_eligible": False,
+        "charge_fit_performed": False,
+        "forcefield_validated": False,
+        "existing_cache_search": {
+            "directories_checked": [
+                str(p.parent)
+                for p in sorted(
+                    (REPOSITORY / "output_parameter_cache").glob("*/manifest.json")
+                )
+            ],
+            "same_state_cache_candidates": all_cache_matches,
+            "reuse": "none; separate exact-geometry calculation is required for each cap/face geometry",
+        },
+        "engine_sha256": engine,
+        "cases": cases,
+    }
+    report_path.write_text(json.dumps(report, indent=2) + "\n")
+    LOGGER.info("Wrote preparation report: %s", report_path)
+
+
+if __name__ == "__main__":
+    main()

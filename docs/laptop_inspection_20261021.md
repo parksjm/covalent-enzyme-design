@@ -1,5 +1,25 @@
 # Nyl12 laptop inspection package — 2026-10-21
 
+## Completed TI1 reference results — 2026-10-23
+
+The latest export adds `qm/ti1_bonded_reference_completed/`, with four
+case directories containing final 37-atom XYZ/SDF coordinates, all20 explicit
+hydrogens, atom maps and per-case assessments. After running your usual pull
+script, change to a case directory and run `@view_final.pml` in PyMOL.
+These constrained capped models intentionally contain no relay water.
+
+All four geometry/frequency/conditional-stability checks passed, but the R
+cap-pair bond-length sensitivity failed the predeclared0.03A limit. Final
+coordinates are inspectable references, **not validated native parameters or
+accepted enzyme TI1 models**. Compare R/−120 against R/−60, then the S pair;
+inspect the short backbone N–H/oxyanion contacts. Source fchk files retain
+full coordinate precision and are excluded from the laptop transfer.
+
+Read `docs/ti1_qm_results_20261023.md` for the numerical results and
+`docs/af3_water_placement_decision_20261023.md` for the prior water-test status
+and why improved AF3 guidance is not a current prerequisite. The separately
+labeled interim trajectories below remain as historical snapshots.
+
 ## TI1 Gaussian reference progress — 2026-10-22
 
 The refreshed package includes `qm/ti1_bonded_reference_progress/`: four small

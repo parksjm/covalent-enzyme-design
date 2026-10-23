@@ -1,0 +1,439 @@
+{
+  "model_scope": "bonded_fit_surrogate_only",
+  "native_esp_resp_transfer_eligible": false,
+  "formula": "C10H20N3O4-",
+  "formal_charge": -1,
+  "electron_count": 134,
+  "multiplicity": 1,
+  "attacked_carbon_cip": "R",
+  "atom_index_by_origin": {
+    "THR:N": 0,
+    "THR:CA": 1,
+    "THR:CB": 2,
+    "THR:OG1": 3,
+    "THR:CG2": 4,
+    "THR:C": 5,
+    "THR:O": 6,
+    "NME:N": 7,
+    "NME:CH3": 8,
+    "THR:H": 9,
+    "THR:HA": 10,
+    "THR:HB": 11,
+    "THR:HG21": 12,
+    "THR:HG22": 13,
+    "THR:HG23": 14,
+    "NME:H": 15,
+    "NME:HH31": 16,
+    "NME:HH32": 17,
+    "NME:HH33": 18,
+    "ACE:C": 19,
+    "ACE:O": 20,
+    "ACE:CH3": 21,
+    "TIL:C*": 22,
+    "TIL:O": 23,
+    "TIL:N": 24,
+    "TIL:acylCH3": 25,
+    "TIL:leavingCH3": 26,
+    "ACE:CH3H1": 27,
+    "ACE:CH3H2": 28,
+    "ACE:CH3H3": 29,
+    "TIL:acylCH3H1": 30,
+    "TIL:acylCH3H2": 31,
+    "TIL:acylCH3H3": 32,
+    "TIL:leavingCH3H1": 33,
+    "TIL:leavingCH3H2": 34,
+    "TIL:leavingCH3H3": 35,
+    "TIL:HN": 36
+  },
+  "atoms": [
+    {
+      "index": 0,
+      "origin_id": "THR:N",
+      "residue_id": "THR",
+      "atom_name": "N",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 1,
+      "origin_id": "THR:CA",
+      "residue_id": "THR",
+      "atom_name": "CA",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 2,
+      "origin_id": "THR:CB",
+      "residue_id": "THR",
+      "atom_name": "CB",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 3,
+      "origin_id": "THR:OG1",
+      "residue_id": "THR",
+      "atom_name": "OG1",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 4,
+      "origin_id": "THR:CG2",
+      "residue_id": "THR",
+      "atom_name": "CG2",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 5,
+      "origin_id": "THR:C",
+      "residue_id": "THR",
+      "atom_name": "C",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 6,
+      "origin_id": "THR:O",
+      "residue_id": "THR",
+      "atom_name": "O",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 7,
+      "origin_id": "NME:N",
+      "residue_id": "NME",
+      "atom_name": "N",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 8,
+      "origin_id": "NME:CH3",
+      "residue_id": "NME",
+      "atom_name": "CH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 9,
+      "origin_id": "THR:H",
+      "residue_id": "THR",
+      "atom_name": "H",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 10,
+      "origin_id": "THR:HA",
+      "residue_id": "THR",
+      "atom_name": "HA",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 11,
+      "origin_id": "THR:HB",
+      "residue_id": "THR",
+      "atom_name": "HB",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 12,
+      "origin_id": "THR:HG21",
+      "residue_id": "THR",
+      "atom_name": "HG21",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 13,
+      "origin_id": "THR:HG22",
+      "residue_id": "THR",
+      "atom_name": "HG22",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 14,
+      "origin_id": "THR:HG23",
+      "residue_id": "THR",
+      "atom_name": "HG23",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 15,
+      "origin_id": "NME:H",
+      "residue_id": "NME",
+      "atom_name": "H",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 16,
+      "origin_id": "NME:HH31",
+      "residue_id": "NME",
+      "atom_name": "HH31",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 17,
+      "origin_id": "NME:HH32",
+      "residue_id": "NME",
+      "atom_name": "HH32",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 18,
+      "origin_id": "NME:HH33",
+      "residue_id": "NME",
+      "atom_name": "HH33",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 19,
+      "origin_id": "ACE:C",
+      "residue_id": "ACE",
+      "atom_name": "C",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 20,
+      "origin_id": "ACE:O",
+      "residue_id": "ACE",
+      "atom_name": "O",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 21,
+      "origin_id": "ACE:CH3",
+      "residue_id": "ACE",
+      "atom_name": "CH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 22,
+      "origin_id": "TIL:C*",
+      "residue_id": "TIL",
+      "atom_name": "C*",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 23,
+      "origin_id": "TIL:O",
+      "residue_id": "TIL",
+      "atom_name": "O",
+      "element": "O",
+      "formal_charge": -1
+    },
+    {
+      "index": 24,
+      "origin_id": "TIL:N",
+      "residue_id": "TIL",
+      "atom_name": "N",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 25,
+      "origin_id": "TIL:acylCH3",
+      "residue_id": "TIL",
+      "atom_name": "acylCH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 26,
+      "origin_id": "TIL:leavingCH3",
+      "residue_id": "TIL",
+      "atom_name": "leavingCH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 27,
+      "origin_id": "ACE:CH3H1",
+      "residue_id": "ACE",
+      "atom_name": "CH3H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 28,
+      "origin_id": "ACE:CH3H2",
+      "residue_id": "ACE",
+      "atom_name": "CH3H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 29,
+      "origin_id": "ACE:CH3H3",
+      "residue_id": "ACE",
+      "atom_name": "CH3H3",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 30,
+      "origin_id": "TIL:acylCH3H1",
+      "residue_id": "TIL",
+      "atom_name": "acylCH3H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 31,
+      "origin_id": "TIL:acylCH3H2",
+      "residue_id": "TIL",
+      "atom_name": "acylCH3H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 32,
+      "origin_id": "TIL:acylCH3H3",
+      "residue_id": "TIL",
+      "atom_name": "acylCH3H3",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 33,
+      "origin_id": "TIL:leavingCH3H1",
+      "residue_id": "TIL",
+      "atom_name": "leavingCH3H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 34,
+      "origin_id": "TIL:leavingCH3H2",
+      "residue_id": "TIL",
+      "atom_name": "leavingCH3H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 35,
+      "origin_id": "TIL:leavingCH3H3",
+      "residue_id": "TIL",
+      "atom_name": "leavingCH3H3",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 36,
+      "origin_id": "TIL:HN",
+      "residue_id": "TIL",
+      "atom_name": "HN",
+      "element": "H",
+      "formal_charge": 0
+    }
+  ],
+  "proton_reservoir": {
+    "omitted_origin_id": "THR:HG1",
+    "note": "This truncation omits the hydroxyl proton into an external reservoir; it does not specify a relay identity."
+  },
+  "coordinate_reference": {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/source/cif/n12c.cif",
+    "sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c",
+    "chain": "A",
+    "residue_number": 233,
+    "phi_degrees": null,
+    "phi_scope": "undefined",
+    "psi_degrees": 134.11027642801542,
+    "chi1_degrees": -58.964417877702274,
+    "previous_C_to_N_A": null,
+    "C_to_next_N_A": 1.3217386277172958,
+    "thr_coordinates_A": {
+      "C": [
+        -50.782,
+        -4.706,
+        12.842
+      ],
+      "CA": [
+        -51.829,
+        -4.69,
+        13.96
+      ],
+      "CB": [
+        -51.656,
+        -5.953,
+        14.786
+      ],
+      "CG2": [
+        -50.291,
+        -6.054,
+        15.435
+      ],
+      "N": [
+        -53.197,
+        -4.671,
+        13.394
+      ],
+      "O": [
+        -50.82,
+        -5.579,
+        11.941
+      ],
+      "OG1": [
+        -52.632,
+        -5.96,
+        15.815
+      ]
+    }
+  },
+  "constraints": [
+    {
+      "name": "phi",
+      "atoms_one_based": [
+        20,
+        1,
+        2,
+        6
+      ],
+      "degrees": -119.99999999999999
+    },
+    {
+      "name": "psi",
+      "atoms_one_based": [
+        1,
+        2,
+        6,
+        8
+      ],
+      "degrees": 134.11027642801542
+    },
+    {
+      "name": "chi1",
+      "atoms_one_based": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "degrees": -58.964417877702274
+    }
+  ],
+  "cap_phi_override_degrees": -120.0,
+  "seed": 20261022,
+  "geometry_method": "wB97XD/def2TZVP",
+  "solvent": "gas phase",
+  "cores": 8,
+  "memory_gb": 16,
+  "full_stationary_minimum_claimed": false,
+  "forcefield_validated": false
+}

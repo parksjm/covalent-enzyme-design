@@ -1,0 +1,227 @@
+{
+  "source_checkpoint_sha256": "c98251ecd249a742dfd1b8d9b9949bb101d57ce78574abb1af29d9fdac5a204b",
+  "optimization_accepted": true,
+  "frequency_accepted": true,
+  "conditional_curvature_accepted": true,
+  "atom_count": 37,
+  "formula": "C10H20N3O4-",
+  "formal_charge": -1,
+  "electron_count": 134,
+  "multiplicity": 1,
+  "attacked_carbon_cip": "R",
+  "reference_coordinates_angstrom": [
+    [
+      -1.076408,
+      -1.224279,
+      -0.532178
+    ],
+    [
+      -1.379266,
+      -0.095433,
+      0.315279
+    ],
+    [
+      -0.465563,
+      -0.167157,
+      1.577472
+    ],
+    [
+      -0.674798,
+      -1.357518,
+      2.267205
+    ],
+    [
+      -0.744087,
+      0.986662,
+      2.531285
+    ],
+    [
+      -1.08516,
+      1.219218,
+      -0.399033
+    ],
+    [
+      -0.040531,
+      1.462568,
+      -0.968593
+    ],
+    [
+      -2.069208,
+      2.156985,
+      -0.280086
+    ],
+    [
+      -1.957412,
+      3.449297,
+      -0.903542
+    ],
+    [
+      -0.186023,
+      -1.694203,
+      -0.2328
+    ],
+    [
+      -2.42664,
+      -0.149852,
+      0.620606
+    ],
+    [
+      0.562818,
+      -0.108221,
+      1.209086
+    ],
+    [
+      -0.11526,
+      0.879239,
+      3.415374
+    ],
+    [
+      -0.540907,
+      1.956433,
+      2.07242
+    ],
+    [
+      -1.787712,
+      0.966102,
+      2.857651
+    ],
+    [
+      -2.965455,
+      1.848021,
+      0.047846
+    ],
+    [
+      -2.688464,
+      4.128559,
+      -0.464042
+    ],
+    [
+      -0.956383,
+      3.845055,
+      -0.734161
+    ],
+    [
+      -2.118435,
+      3.405382,
+      -1.985806
+    ],
+    [
+      -2.065714,
+      -2.089303,
+      -0.851083
+    ],
+    [
+      -3.262465,
+      -1.82967,
+      -0.798112
+    ],
+    [
+      -1.571132,
+      -3.422744,
+      -1.373914
+    ],
+    [
+      0.28234,
+      -2.48845,
+      1.996272
+    ],
+    [
+      0.875063,
+      -2.400984,
+      0.834953
+    ],
+    [
+      1.210047,
+      -2.480874,
+      3.170587
+    ],
+    [
+      -0.61939,
+      -3.71889,
+      2.177143
+    ],
+    [
+      2.179074,
+      -1.401061,
+      3.124013
+    ],
+    [
+      -2.299548,
+      -4.191488,
+      -1.12027
+    ],
+    [
+      -1.495891,
+      -3.366289,
+      -2.462423
+    ],
+    [
+      -0.59282,
+      -3.671851,
+      -0.960986
+    ],
+    [
+      -0.018503,
+      -4.625603,
+      2.065623
+    ],
+    [
+      -1.099496,
+      -3.717834,
+      3.156838
+    ],
+    [
+      -1.386367,
+      -3.714591,
+      1.403307
+    ],
+    [
+      2.965755,
+      -1.5868,
+      3.861015
+    ],
+    [
+      1.697069,
+      -0.459609,
+      3.397862
+    ],
+    [
+      2.636697,
+      -1.277161,
+      2.133626
+    ],
+    [
+      1.723442,
+      -3.350763,
+      3.081676
+    ]
+  ],
+  "case_name": "attack_R_cap_phi_minus120",
+  "model_scope": "capped TI1 bonded-parameter surrogate diagnostic only",
+  "cap_sensitivity_gate": "R reference already exceeds the 0.03 A sensitivity criterion; do not fit or transfer charges",
+  "native_charge_transfer_eligible": false,
+  "forcefield_validated": false,
+  "charge_fit_performed": false,
+  "gaussian_route": "#p HF/6-31G(d) Pop=MK IOp(6/33=2,6/42=6) Geom=AllCheck Guess=Read SCF=(Tight,XQC) NoSymm",
+  "old_checkpoint": "completed optimization reference.chk copied byte-for-byte to source_reference.chk",
+  "new_checkpoint": "esp.chk",
+  "source_manifest_sha256": "dad65f3972da0c4f934c3b8b8276d9e67407181c0b80a0c46eea4043852af31e",
+  "atom_map_sha256": "d57f6073ed967758f27da2f91913a45253b861c1ea4d17899de4ba289fb7a6eb",
+  "molecule_sdf_sha256": "2650d215d283984392866588790494d2a24562ed72e20440f89ba9a651b409a0",
+  "input_sha256": "b67a48c5650a3fb6cde34fe190d76ce1b5d8ede4bb16a2640c5bd2d4d687a75a",
+  "wrapper_sha256": "741e4ea508e3e6eef968c2c57925eef277e41f5bb1ae905d0aa224d1967d0606",
+  "job_command_sha256": "ded8d83afc36dcd11c709681a8d38b57bdfdc4225e1a887a25e8fff1cf227797",
+  "software_identities": {
+    "gaussian": "Gaussian 16 ES64L Revision C.02 (7-Dec-2021)",
+    "ambertools": "AmberTools26 espgen",
+    "engine_sha256": {
+      "/usr/local/g16/g16": "9dd1b1a7495c313954b5243ea427389adac55e55829ab4934f89b8e46fb0c8d5",
+      "/usr/local/g16/bsd/g16.profile": "3c657a7d07ab22be53afcdd70e4a4456a6ddcd398d8be341d9625c5b4da670ed",
+      "/data/jpc/code/ambertools26/venv/bin/espgen": "84ef419a4adbcefb2c9131a7761527b841a1a789783f36c0fc0eb6f4064fb8f1",
+      "/usr/bin/sg": "572ab15948df3969e929b902641c3a42e76dce7d71a22fbc58011ca89d8d965e",
+      "/usr/bin/tmux": "034b15c64035f783d43862f2775eb4828f61571ca62c8199796000b97d556ecd"
+    }
+  },
+  "reference_coordinates_sha256": "db25e18c4e35ea97543f4e638c12f4f77c40a623b2df49302b6f754ade09461d",
+  "scratch_path": "/data/scratch/gaussian_scratch/jpc/ti1_20261023_attack_R_cap_phi_minus120_esp01"
+}

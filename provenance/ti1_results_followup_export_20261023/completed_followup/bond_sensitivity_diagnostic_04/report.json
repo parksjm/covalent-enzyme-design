@@ -1,0 +1,144 @@
+{
+  "atom_origins": [
+    "THR:OG1",
+    "TIL:C*"
+  ],
+  "bond": "OG1-C*",
+  "branch": "attack_R_cap_phi_minus60",
+  "constants": {
+    "bohr_to_angstrom": 0.529177249,
+    "hartree_per_bohr2_to_kcal_per_mol_angstrom2": 2240.876780834858
+  },
+  "cross_block_eigenvalues": {
+    "minus_H_ij": [
+      "np.float64(-0.024094506769154776)",
+      "np.float64(0.05808202238034472)",
+      "np.float64(0.08153103326881017)"
+    ],
+    "minus_H_ji": [
+      "np.float64(-0.02409450676915477)",
+      "np.float64(0.058082022380344656)",
+      "np.float64(0.08153103326881005)"
+    ]
+  },
+  "energy_convention": "K*(r-r0)^2",
+  "frequency_scaling": 1.0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/conditional_curvature_01/assessment.json": "9bcce1f929e7b7dede83efb34844c0ee429a0c442ede68483a090d59b4a769ff",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_01/atom_map.json": "3487344e66fa7937532df7ef0afdee182f659f1f2c683033dd2ef6842dd2989d",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_01/hessian.fchk": "5e05ebab4d1e9eb77beb4acf4285f05180e19b8e5b0ba3ecc127ca7f28dd0b98",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_01/input_identity.json": "7e7b87e8804371e72371158e735b275e1a1d864927d57e90c805062b75d86458",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_01/process_result.json": "fa7224a25b9ffd88ebcbf05653d7eedf60fe4c332a93cd92a1c01fed4d4f9beb",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/frequency_01/scientific_acceptance.json": "009e2b62194c6b842fc658bc9fc98d5a492de87ea7667f169e7fd8c341e340dd",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/optimization_01/scientific_acceptance.json": "efe0517493ac0a7cd00f7774f554a7c9d0b59ced736e5a75cccdb91fd771f616"
+  },
+  "one_based_atom_indices": [
+    4,
+    23
+  ],
+  "raw_results": {
+    "average_blocks_1": {
+      "distance_angstrom": {
+        "finite": true,
+        "repr": "1.5594343965151836",
+        "value": 1.5594343965151836
+      },
+      "force_constant_finite": true,
+      "force_constant_imaginary": {
+        "finite": true,
+        "repr": "0.0",
+        "value": 0.0
+      },
+      "force_constant_real": {
+        "finite": true,
+        "repr": "-5.889654257673945",
+        "value": -5.889654257673945
+      },
+      "force_constant_real_sign": "negative",
+      "force_constant_repr": "np.float64(-5.889654257673945)",
+      "force_constant_type": "float64",
+      "raw_tuple_repr": "(1.5594343965151836, np.float64(-5.889654257673945), np.float64(1.7146156414811826))",
+      "standard_deviation_imaginary": {
+        "finite": true,
+        "repr": "0.0",
+        "value": 0.0
+      },
+      "standard_deviation_real": {
+        "finite": true,
+        "repr": "1.7146156414811826",
+        "value": 1.7146156414811826
+      },
+      "standard_deviation_repr": "np.float64(1.7146156414811826)",
+      "tuple_length": 3,
+      "tuple_types": [
+        "float",
+        "float64",
+        "float64"
+      ]
+    },
+    "directed_H_ij": {
+      "distance_angstrom": {
+        "finite": true,
+        "repr": "1.5594343965151836",
+        "value": 1.5594343965151836
+      },
+      "force_constant_finite": true,
+      "force_constant_imaginary": {
+        "finite": true,
+        "repr": "0.0",
+        "value": 0.0
+      },
+      "force_constant_real": {
+        "finite": true,
+        "repr": "-7.604269899155128",
+        "value": -7.604269899155128
+      },
+      "force_constant_real_sign": "negative",
+      "force_constant_repr": "np.float64(-7.604269899155128)",
+      "force_constant_type": "float64",
+      "raw_tuple_repr": "(1.5594343965151836, np.float64(-7.604269899155128))",
+      "tuple_length": 2,
+      "tuple_types": [
+        "float",
+        "float64"
+      ]
+    },
+    "directed_H_ji": {
+      "distance_angstrom": {
+        "finite": true,
+        "repr": "1.5594343965151836",
+        "value": 1.5594343965151836
+      },
+      "force_constant_finite": true,
+      "force_constant_imaginary": {
+        "finite": true,
+        "repr": "0.0",
+        "value": 0.0
+      },
+      "force_constant_real": {
+        "finite": true,
+        "repr": "-4.175038616192762",
+        "value": -4.175038616192762
+      },
+      "force_constant_real_sign": "negative",
+      "force_constant_repr": "np.float64(-4.175038616192762)",
+      "force_constant_type": "float64",
+      "raw_tuple_repr": "(1.5594343965151836, np.float64(-4.175038616192762))",
+      "tuple_length": 2,
+      "tuple_types": [
+        "float",
+        "float64"
+      ]
+    }
+  },
+  "routine_average_blocks_argument": 1,
+  "routine_tuple_convention": "(distance_A, force_constant, standard_deviation) when average_blocks=1",
+  "scope": "Raw API behavior probe only; no parameter fitting, replacement, or scientific acceptance",
+  "source_sha256": {
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py": "418d2b907afdfcc6004cd1621ed7d852dd2ef3c9439474af40ab05a17e79c2c7",
+    "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mol/constants.py": "f393ec014df4a093e91d91164ff5e91682e431c32f198225a2720d321ad73a5f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_03/source/diagnose_ti1_bond_sensitivity_20261023.py": "7c1294beca2bef00a667ddf53a30a282f83a1fcf085cdcae0087d4d481409ac9",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_04/source/probe_raw_og1_cstar_force_constant_20261023.py": "ebeb09aa09ca6b4ff38d466a04c4b891bf48db6426dba15a164458deab3953d3",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_fchk.py": "31cd559549d0b472e3bd586922cd55119fb27d620f84bf93e6ffd66d5fa6e553"
+  }
+}

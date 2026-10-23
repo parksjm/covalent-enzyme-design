@@ -1,0 +1,71 @@
+{
+  "accepted": false,
+  "individual_references_accepted": true,
+  "cap_sensitivity_gate_passed": false,
+  "cap_sensitivity_by_attack_hand": {
+    "R": {
+      "gate_A": 0.03,
+      "bonds": {
+        "THR:OG1": {
+          "phi_minus120_A": 1.5061623518588556,
+          "phi_minus60_A": 1.559434662673303,
+          "delta_A": 0.0532723108144475,
+          "passed": false
+        },
+        "TIL:O": {
+          "phi_minus120_A": 1.3067642004761229,
+          "phi_minus60_A": 1.2751020069539536,
+          "delta_A": 0.03166219352216926,
+          "passed": false
+        },
+        "TIL:N": {
+          "phi_minus120_A": 1.4965672029180646,
+          "phi_minus60_A": 1.4974894427250567,
+          "delta_A": 0.0009222398069921312,
+          "passed": true
+        },
+        "TIL:acylCH3": {
+          "phi_minus120_A": 1.536168579662076,
+          "phi_minus60_A": 1.5461408179160137,
+          "delta_A": 0.00997223825393756,
+          "passed": true
+        }
+      },
+      "passed": false
+    },
+    "S": {
+      "gate_A": 0.03,
+      "bonds": {
+        "THR:OG1": {
+          "phi_minus120_A": 1.5225629544508168,
+          "phi_minus60_A": 1.5085772195883775,
+          "delta_A": 0.013985734862439259,
+          "passed": true
+        },
+        "TIL:O": {
+          "phi_minus120_A": 1.295531419078287,
+          "phi_minus60_A": 1.3029460987262673,
+          "delta_A": 0.007414679647980371,
+          "passed": true
+        },
+        "TIL:N": {
+          "phi_minus120_A": 1.480338634443822,
+          "phi_minus60_A": 1.4728654683727909,
+          "delta_A": 0.007473166071031212,
+          "passed": true
+        },
+        "TIL:acylCH3": {
+          "phi_minus120_A": 1.5469228039000527,
+          "phi_minus60_A": 1.5471960076861624,
+          "delta_A": 0.0002732037861097325,
+          "passed": true
+        }
+      },
+      "passed": true
+    }
+  },
+  "scope": "Four completed constrained TI1 surrogate references; R and S cap sensitivity assessed separately",
+  "forcefield_validated": false,
+  "native_esp_resp_transfer_eligible": false,
+  "unconstrained_minimum_claimed": false
+}

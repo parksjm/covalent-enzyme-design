@@ -1,6 +1,6 @@
 # Methods — working draft
 
-Status: 2026-10-22. Sections explicitly distinguish completed preparation from
+Status: 2026-10-23. Sections explicitly distinguish completed preparation from
 planned methods. Unresolved numerical settings must be filled from accepted
 run manifests, not inferred from a generic protocol. References are in
 [REFERENCES.md](REFERENCES.md); local evidence is in [SOURCE_LEDGER.md](SOURCE_LEDGER.md).
@@ -210,6 +210,19 @@ and CIF hashes, preparation screens and optimization process records are under
 `output_nyl12_ti1_parameters_20261022/pa6_local_bonded/`; prospective acceptance
 criteria are in `docs/ti1_parameter_protocol_20261022.md`.
 
+By 2026-10-23 all four optimization/frequency references passed their
+predeclared geometry and constrained-stability assessments. Each raw report
+contained105 positive frequencies; the corrected constrained Lagrangian
+Hessian was positive in all102 internal directions at both derivative steps.
+However, the R cap pair changed OG1–C* and C*–O− lengths by0.05327 and0.03166
+angstrom, exceeding the prospective0.03angstrom cap-sensitivity limit. The S
+pair passed the bond-length comparison. Short backbone N–H/oxyanion contacts
+persisted. Consequently, these results do not qualify parameters for native
+transfer; larger/native references and independent validation remain required.
+Separate capped-surrogate HF/MK ESP and raw-Hessian bond-stiffness diagnostics
+are preparation for surrogate evaluation, not a native charge fit. Full
+results and source paths are in `docs/ti1_qm_results_20261023.md`.
+
 An interim audit froze complete prefixes of the four active optimization logs
 at approximately 19:45 UTC on 2026-10-22. All complete Input-orientation tables
 were retained, yielding 7/7/7/8 snapshots of 37 atoms with 20 explicit hydrogens.
@@ -222,7 +235,7 @@ PyMOL checks verified atom/hydrogen inventories and coordinate fidelity in all
 exported states. These observations are interim model diagnostics, not accepted
 parameters or mechanistic results.
 
-### Exploratory local relay-water refinement — in progress
+### Exploratory local relay-water refinement — failed diagnostic retained
 
 The minimal alpha/beta PA6 L4 covalent AF3 model used explicit HOH and two
 Thr233 N/OG1–water-O bounds(2.6–3.2 A). Both distances were satisfied but an

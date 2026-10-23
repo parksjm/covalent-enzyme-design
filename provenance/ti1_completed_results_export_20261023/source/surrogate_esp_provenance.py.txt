@@ -1,0 +1,202 @@
+"""Validate accepted TI1 source data and locate exact ESP cache candidates."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+from typing import Any
+
+REPOSITORY = Path("/data/jpc/covalent-enzyme-design")
+SOURCE_ROOT = REPOSITORY / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+EXPECTED_ROUTE = (
+    "#p HF/6-31G(d) Pop=MK IOp(6/33=2,6/42=6) "
+    "Geom=AllCheck Guess=Read SCF=(Tight,XQC) NoSymm"
+)
+
+
+def sha256(path: Path) -> str:
+    """Return a file's SHA-256 digest."""
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def read_json(path: Path) -> dict[str, Any]:
+    """Read a JSON object, rejecting any other JSON root type."""
+    value = json.loads(path.read_text())
+    if not isinstance(value, dict):
+        raise ValueError(f"Expected JSON object in {path}")
+    return value
+
+
+def source_files(case_root: Path) -> dict[str, Path]:
+    """Return the complete set of accepted per-case source files."""
+    optimization = case_root / "optimization_01"
+    frequency = case_root / "frequency_01"
+    curvature = case_root / "conditional_curvature_01"
+    return {
+        "optimization_acceptance": optimization / "scientific_acceptance.json",
+        "optimization_process": optimization / "job/status.json",
+        "optimization_input_identity": optimization / "input_identity.json",
+        "optimized_reference_checkpoint": optimization / "reference.chk",
+        "frequency_acceptance": frequency / "scientific_acceptance.json",
+        "frequency_process": frequency / "process_result.json",
+        "frequency_input_identity": frequency / "input_identity.json",
+        "frequency_reference_checkpoint": frequency / "reference.chk",
+        "frequency_hessian_checkpoint": frequency / "hessian.chk",
+        "conditional_curvature_assessment": curvature / "assessment.json",
+        "source_identity": SOURCE_ROOT / "source_identity.json",
+        "atom_map": optimization / "atom_map.json",
+        "molecule_sdf": optimization / "molecule.sdf",
+        "coordinates_xyz": optimization / "coordinates.xyz",
+        "approved_esp_template": optimization / "esp.gjf",
+    }
+
+
+def validate_case(case_root: Path) -> tuple[dict[str, Path], dict[str, Any]]:
+    """Validate accepted stages, charge state, and checkpoint provenance."""
+    files = source_files(case_root)
+    missing = [str(path) for path in files.values() if not path.is_file()]
+    if missing:
+        raise FileNotFoundError(f"Missing required source files: {missing}")
+
+    opt_accept = read_json(files["optimization_acceptance"])
+    opt_status = read_json(files["optimization_process"])
+    freq_accept = read_json(files["frequency_acceptance"])
+    freq_status = read_json(files["frequency_process"])
+    curvature = read_json(files["conditional_curvature_assessment"])
+    opt_identity = read_json(files["optimization_input_identity"])
+    freq_identity = read_json(files["frequency_input_identity"])
+    if not (
+        opt_accept.get("accepted")
+        and freq_accept.get("accepted")
+        and curvature.get("accepted")
+    ):
+        raise ValueError(f"A scientific prerequisite is not accepted: {case_root}")
+    if opt_status.get("exit_status") != 0 or freq_status.get("exit_status") != 0:
+        raise ValueError(
+            f"A Gaussian source process did not exit successfully: {case_root}"
+        )
+    if not freq_accept.get("checkpoint_geometry_match", {}).get("accepted"):
+        raise ValueError(
+            f"Frequency geometry did not match the accepted reference: {case_root}"
+        )
+
+    checkpoint_digest = sha256(files["optimized_reference_checkpoint"])
+    if checkpoint_digest != sha256(files["frequency_reference_checkpoint"]):
+        raise ValueError(
+            f"Optimization/frequency reference checkpoints differ: {case_root}"
+        )
+    if freq_identity.get("reference.chk") != checkpoint_digest:
+        raise ValueError(
+            f"Frequency identity does not authenticate the source checkpoint: {case_root}"
+        )
+    if opt_identity.get("inputs_sha256", {}).get("esp.gjf") != sha256(
+        files["approved_esp_template"]
+    ):
+        raise ValueError(f"Approved ESP template hash mismatch: {case_root}")
+
+    atom_map = read_json(files["atom_map"])
+    atoms = atom_map.get("atoms", [])
+    element_counts = {
+        element: sum(atom.get("element") == element for atom in atoms)
+        for element in ("C", "H", "N", "O")
+    }
+    expected_inventory = (
+        "C10H20N3O4-",
+        -1,
+        134,
+        1,
+        37,
+        {"C": 10, "H": 20, "N": 3, "O": 4},
+    )
+    observed_inventory = (
+        atom_map.get("formula"),
+        atom_map.get("formal_charge"),
+        atom_map.get("electron_count"),
+        atom_map.get("multiplicity"),
+        len(atoms),
+        element_counts,
+    )
+    if observed_inventory != expected_inventory:
+        raise ValueError(
+            f"Unexpected capped TI1 charge state or atom inventory: {case_root}"
+        )
+    if atom_map.get("native_esp_resp_transfer_eligible") is not False:
+        raise ValueError(f"Surrogate transfer restriction is missing: {case_root}")
+    coordinates = opt_accept["assessment"]["final_coordinates_A"]
+    if len(coordinates) != 37 or any(len(row) != 3 for row in coordinates):
+        raise ValueError(f"Accepted optimized coordinates are incomplete: {case_root}")
+
+    template = files["approved_esp_template"].read_text()
+    route = next(
+        (
+            line.strip()
+            for line in template.splitlines()
+            if line.lstrip().startswith("#")
+        ),
+        None,
+    )
+    if route != EXPECTED_ROUTE:
+        raise ValueError(f"Approved ESP route changed unexpectedly: {case_root}")
+    details = {
+        "source_checkpoint_sha256": checkpoint_digest,
+        "optimization_accepted": True,
+        "frequency_accepted": True,
+        "conditional_curvature_accepted": True,
+        "atom_count": len(atoms),
+        "formula": atom_map["formula"],
+        "formal_charge": atom_map["formal_charge"],
+        "electron_count": atom_map["electron_count"],
+        "multiplicity": atom_map["multiplicity"],
+        "attacked_carbon_cip": atom_map.get("attacked_carbon_cip"),
+        "reference_coordinates_angstrom": coordinates,
+    }
+    return files, details
+
+
+def matching_cache_records(
+    atom_map_digest: str,
+    molecule_digest: str,
+    checkpoint_digest: str,
+    gaussian_digest: str,
+) -> list[dict[str, Any]]:
+    """Find same-state cache candidates and reject corrupt or incomplete exact matches."""
+    matches: list[dict[str, Any]] = []
+    for manifest_path in sorted(
+        (REPOSITORY / "output_parameter_cache").glob("*/manifest.json")
+    ):
+        directory = manifest_path.parent
+        manifest = read_json(manifest_path)
+        identity = manifest.get("identity", {})
+        input_hashes = identity.get("input_sha256", {})
+        if input_hashes.get("atom_map.json") != atom_map_digest:
+            continue
+        for relative, expected_digest in manifest.get("files", {}).items():
+            artifact = directory / relative
+            if not artifact.is_file() or sha256(artifact) != expected_digest:
+                raise ValueError(f"Corrupt same-state cache artifact: {artifact}")
+        acceptance = directory / "acceptance.json"
+        if not acceptance.is_file() or not read_json(acceptance).get("accepted"):
+            raise ValueError(f"Same-state cache candidate is not accepted: {directory}")
+        exact_geometry = input_hashes.get("molecule.sdf") == molecule_digest
+        if exact_geometry and (
+            identity.get("source_checkpoint_sha256") != checkpoint_digest
+            or identity.get("route") != EXPECTED_ROUTE
+            or identity.get("engine_sha256", {}).get("g16") != gaussian_digest
+        ):
+            raise ValueError(
+                f"Exact-geometry cache lacks full validated identity: {directory}"
+            )
+        matches.append(
+            {
+                "path": str(directory),
+                "key": manifest.get("key"),
+                "exact_geometry": exact_geometry,
+                "reusable": False,
+            }
+        )
+    return matches

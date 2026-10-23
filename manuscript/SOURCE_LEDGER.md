@@ -1,5 +1,22 @@
 # Manuscript source and claim ledger — 2026-10-20
 
+## Completed constrained TI1 references — 2026-10-23
+
+The four original optimization/frequency/conditional-curvature records under
+`../output_nyl12_ti1_parameters_20261022/pa6_local_bonded/` all pass their
+declared constrained-reference checks. R cap length sensitivity fails0.03A;
+S length sensitivity passes. This is a failed native-transfer prerequisite,
+not a failed Gaussian calculation. Data and model-scope interpretation:
+`../docs/ti1_qm_results_20261023.md`.
+
+The user's AF3-water concern and our recommendation are preserved in
+`../docs/af3_water_placement_decision_20261023.md`. Earlier failed water
+diagnostics do not establish a requirement for improved AF3 guidance; the
+validated-TI1-MM-first route remains to be tested. No fork modification occurred.
+The final strict standalone HF ESP checker has27 passing tests and100%line
+coverage; full regression has447 passes/13 optional workstation-fixture skips. Prospective
+surrogate-only ESP and bond-constant diagnostics do not certify a native fit.
+
 ## Ranking interpretation and symmetry verification — 2026-10-22
 
 The user reports lower confidence and increased effective strain for many

@@ -1,0 +1,70 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.11, pytest-9.0.2, pluggy-1.7.0
+rootdir: /data/jpc/covalent-enzyme-design
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0
+collected 460 items
+
+tests/test_active_site_geometry.py ...............                       [  3%]
+tests/test_af3_water_audit.py .............                              [  6%]
+tests/test_af3_water_input.py ..........                                 [  8%]
+tests/test_analyze_ti1_curvature.py ..........                           [ 10%]
+tests/test_audit_nyl12_ligand_confidence.py .......                      [ 11%]
+tests/test_constrained_curvature.py ..............                       [ 15%]
+tests/test_diagnose_nyl12_relay_water_contacts.py ......                 [ 16%]
+tests/test_dihedral_constraints.py .............                         [ 19%]
+tests/test_gaussian_checks.py .................                          [ 22%]
+tests/test_gaussian_conformer_provenance.py ..........                   [ 25%]
+tests/test_gaussian_esp.py ...........................                   [ 30%]
+tests/test_gaussian_fchk.py ........                                     [ 32%]
+tests/test_gaussian_fchk_gradient.py .......                             [ 34%]
+tests/test_gaussian_log_to_xyz.py ...........                            [ 36%]
+tests/test_gaussian_template_job.py .........                            [ 38%]
+tests/test_inventory_covalent_pipeline.py ..                             [ 38%]
+tests/test_launch_nyl12_relay_repair.py .......                          [ 40%]
+tests/test_local_hydrogens.py .........                                  [ 42%]
+tests/test_local_repair_engine.py ..                                     [ 42%]
+tests/test_local_repair_workstation.py sssssssssssss                     [ 45%]
+tests/test_local_water_seed.py ...........                               [ 48%]
+tests/test_measure_nyl12_active_site.py .....                            [ 49%]
+tests/test_minimization_trajectory.py ..........                         [ 51%]
+tests/test_nyl12_gaussian_conformer_audit.py ........                    [ 53%]
+tests/test_nyl12_inspection.py ..                                        [ 53%]
+tests/test_nyl12_inspection_download.py ....................             [ 57%]
+tests/test_nyl12_jobs.py ......                                          [ 59%]
+tests/test_nyl12_parameter_cache.py ..........                           [ 61%]
+tests/test_nyl12_qm_region.py ..........                                 [ 63%]
+tests/test_nyl12_relay_feasibility.py .....                              [ 64%]
+tests/test_nyl12_relay_water.py ......                                   [ 65%]
+tests/test_nyl12_ti1_attempt.py ...............                          [ 69%]
+tests/test_nyl12_ti1_checks.py ...................                       [ 73%]
+tests/test_nyl12_workflow_cli.py ........                                [ 75%]
+tests/test_preflight_gaussian16.py .....                                 [ 76%]
+tests/test_prepare_ti1_bonded_reference.py .......                       [ 77%]
+tests/test_record_agent_action.py ...........                            [ 80%]
+tests/test_relay_feasibility_cli.py .                                    [ 80%]
+tests/test_relay_inspection_package.py ....                              [ 81%]
+tests/test_relay_repair_cli.py ........                                  [ 82%]
+tests/test_relay_repair_geometry.py ...............                      [ 86%]
+tests/test_run_nyl12_ti1_qmmm_cli.py ....                                [ 86%]
+tests/test_terminal_template.py .......                                  [ 88%]
+tests/test_ti1_bonded_model.py ......                                    [ 89%]
+tests/test_ti1_inspection_inventory.py ...                               [ 90%]
+tests/test_ti1_model_crosswalk.py ....                                   [ 91%]
+tests/test_ti1_reference_coordinates.py .........                        [ 93%]
+tests/test_ti1_reference_graph.py ......                                 [ 94%]
+tests/test_ti1_reference_validation.py ...........                       [ 96%]
+tests/test_wait_ti1_curvature.py ..............                          [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                 Stmts   Miss  Cover   Missing
+------------------------------------------------------------------
+src/nyl12_covalent/gaussian_esp.py      55      0   100%
+------------------------------------------------------------------
+TOTAL                                   55      0   100%
+======================= 447 passed, 13 skipped in 9.87s ========================
+All checks passed!
+2 files already formatted

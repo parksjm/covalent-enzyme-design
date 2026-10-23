@@ -1,0 +1,13 @@
+{
+  "python_executable": "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+  "python_version": "3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]",
+  "numpy_version": "1.26.4",
+  "rdkit_version": "2025.03.6",
+  "environment_overrides": {},
+  "environment_lock_sha256": {
+    "/data/jpc/covalent-enzyme-design/pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+    "/data/jpc/covalent-enzyme-design/uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source/pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/conditional_curvature_source/uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07"
+  }
+}

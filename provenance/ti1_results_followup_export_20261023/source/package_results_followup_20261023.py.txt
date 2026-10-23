@@ -1,0 +1,239 @@
+"""Export completed constrained TI1 references with immutable small evidence."""
+
+from __future__ import annotations
+
+import fcntl
+import hashlib
+import json
+import logging
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+sys.path.insert(0, str(ROOT))
+from scripts.prepare_nyl12_inspection_download import build_package  # noqa: E402
+
+WORK = ROOT / "output_nyl12_parameter_validation_20261023"
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+ARCHIVE = ROOT / "provenance/ti1_results_followup_export_20261023"
+LOGGER = logging.getLogger(__name__)
+
+
+def digest(path: Path) -> str:
+    """Return a source/payload SHA-256 digest."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def event(phase: str, reason: str) -> None:
+    """Append a checked export event to the live action journal."""
+    subprocess.run(
+        [
+            str(ROOT / ".venv/bin/python"),
+            str(ROOT / "scripts/record_agent_action.py"),
+            "--log",
+            str(ROOT / "output_agent_actions/20261021.jsonl"),
+            "--agent",
+            "root",
+            "--phase",
+            phase,
+            "--action",
+            "completed_results_export",
+            "--permission-mode",
+            "escalated",
+            "--reason",
+            reason,
+            "--rollback",
+            "Retain package revision16 and all original outputs; reverse only this checkpoint if needed.",
+        ],
+        check=True,
+    )
+
+
+def verify_job(path: Path) -> None:
+    """Require completed process success and unchanged recorded source inputs."""
+    status = json.loads((path / "status.json").read_text())
+    if status["exit_status"] != 0 or not status["ended_utc"]:
+        raise ValueError(f"Prerequisite incomplete or failed: {path}")
+    for name, expected in status["input_sha256"].items():
+        if digest(Path(name)) != expected:
+            raise ValueError(f"Prerequisite source changed: {name}")
+
+
+def copy_record(source: Path, target: Path) -> None:
+    """Retain an exact small source/log copy and reject copy-time changes."""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists():
+        raise FileExistsError(target)
+    shutil.copy2(source, target)
+    if digest(source) != digest(target):
+        raise ValueError(f"Copy-time source change: {source}")
+
+
+def main() -> None:
+    """Verify, archive and promote a reversible curated inspection export."""
+    logging.basicConfig(level=logging.INFO)
+    event(
+        "intent",
+        "Freeze completed reference results and final447-test/100%coverage evidence; export final coordinates and current docs, retaining every prior structural payload.",
+    )
+    verify_job(WORK / "full_verification_02/job")
+    audit = WORK / "completed_reference_audit_01"
+    verify_job(audit / "job")
+    current = ROOT / "output_laptop_inspection_20261021"
+    staging = ROOT / "output_laptop_inspection_20261021_completed_ti1_staging"
+    backup = ROOT / "output_laptop_inspection_20261021_revision_16"
+    if staging.exists() or backup.exists() or ARCHIVE.exists():
+        raise FileExistsError("Fresh staging, provenance and backup paths required")
+    ARCHIVE.mkdir()
+    old = json.loads((current / "provenance.json").read_text())
+    files = {name: Path(row["source"]) for name, row in old["files"].items()}
+    updated = set()
+    for directory in ("docs", "manuscript"):
+        for source in sorted((ROOT / directory).glob("*.md")):
+            name = f"{directory}/{source.name}"
+            files[name] = source
+            updated.add(name)
+            copy_record(source, ARCHIVE / "source" / directory / source.name)
+    files["README.md"] = ROOT / "docs/laptop_inspection_20261021.md"
+    updated.add("README.md")
+    journal = ARCHIVE / "agent_actions_at_export.jsonl"
+    with (ROOT / "output_agent_actions/20261021.jsonl").open("rb") as source:
+        fcntl.flock(source, fcntl.LOCK_SH)
+        with journal.open("xb") as target:
+            shutil.copyfileobj(source, target)
+        fcntl.flock(source, fcntl.LOCK_UN)
+    journal_name = "provenance/agent_actions_at_export.jsonl"
+    files[journal_name] = journal
+    updated.add(journal_name)
+    for name in (
+        "summary.json",
+        "scientific_acceptance.json",
+        "runtime_environment.json",
+    ):
+        source = audit / "result" / name
+        target = ARCHIVE / "reference_audit" / name
+        copy_record(source, target)
+        files[f"reports/parameters/completed_ti1_{name}"] = target
+    for case in sorted((audit / "result").glob("attack_*")):
+        prefix = f"qm/ti1_bonded_reference_completed/{case.name}"
+        for name in (
+            "final_structure.xyz",
+            "final_structure.sdf",
+            "assessment.json",
+            "atom_order.json",
+        ):
+            target = ARCHIVE / "references" / case.name / name
+            copy_record(case / name, target)
+            files[f"{prefix}/{name}"] = target
+        for name in ("atom_map.json", "input.gjf"):
+            target = ARCHIVE / "references" / case.name / name
+            copy_record(BASE / case.name / "optimization_01" / name, target)
+            files[f"{prefix}/{name}"] = target
+        metadata = json.loads(
+            (BASE / case.name / "optimization_01/atom_map.json").read_text()
+        )
+        viewer = ARCHIVE / "references" / case.name / "view_final.pml"
+        commands = [
+            "delete ti1_final_reference",
+            "load final_structure.sdf, ti1_final_reference",
+            "hide everything, ti1_final_reference",
+            "show sticks, ti1_final_reference",
+            "set valence, 0",
+            "util.cnc",
+            "set sphere_scale, 0.25",
+            "show spheres, ti1_final_reference and elem O+N",
+        ]
+        for origin, label in (
+            ("THR:OG1", "OG1"),
+            ("TIL:C*", "C*"),
+            ("TIL:O", "O-"),
+            ("TIL:N", "leaving N"),
+        ):
+            index = metadata["atom_index_by_origin"][origin] + 1
+            commands.append(f'label ti1_final_reference and index {index}, "{label}"')
+        commands.extend(("orient ti1_final_reference", "zoom ti1_final_reference, 3"))
+        viewer.write_text("\n".join(commands) + "\n")
+        files[f"{prefix}/view_final.pml"] = viewer
+        for stage, filename in (
+            ("optimization_01", "scientific_acceptance.json"),
+            ("frequency_01", "scientific_acceptance.json"),
+            ("conditional_curvature_01", "assessment.json"),
+            ("surrogate_esp_01", "calculation_identity.json"),
+            ("surrogate_esp_01/job", "status.json"),
+        ):
+            copy_record(
+                BASE / case.name / stage / filename,
+                ARCHIVE / "source_records" / case.name / stage / filename,
+            )
+    for job_name in (
+        "full_verification_02",
+        "completed_reference_audit_01",
+        "bond_sensitivity_diagnostic_02",
+        "bond_sensitivity_diagnostic_03",
+    ):
+        job = WORK / job_name / "job"
+        for name, target_name in (
+            ("status.json", "status.json"),
+            ("run.sh", "run.sh"),
+            ("job.log", "stdout.txt"),
+        ):
+            copy_record(job / name, ARCHIVE / "jobs" / job_name / target_name)
+    for source in (
+        Path(__file__),
+        ROOT / "scripts/prepare_nyl12_inspection_download.py",
+        ROOT / "scripts/pull_nyl12_inspection.sh",
+        ROOT / "src/nyl12_covalent/gaussian_esp.py",
+        ROOT / "tests/test_gaussian_esp.py",
+        WORK / "audit_completed_references_20261023.py",
+        WORK / "surrogate_esp_preparation_01/prepare_surrogate_esp.py",
+        WORK / "surrogate_esp_preparation_01/surrogate_esp_provenance.py",
+    ):
+        copy_record(source, ARCHIVE / "source" / (source.name + ".txt"))
+    result = build_package(files, staging)
+    for line in (staging / "MANIFEST.sha256").read_text().splitlines():
+        expected, name = line.split("  ", 1)
+        if digest(staging / name) != expected:
+            raise ValueError(f"Package hash mismatch: {name}")
+    for name in old["files"]:
+        if (
+            name not in updated
+            and (current / name).read_bytes() != (staging / name).read_bytes()
+        ):
+            raise ValueError(f"Prior non-document payload changed: {name}")
+    for name in updated:
+        if (staging / name).read_bytes() != files[name].read_bytes():
+            raise ValueError(f"Current document missing: {name}")
+    report = {
+        "verified": True,
+        "payload_files": len(result["files"]),
+        "payload_bytes": result["payload_bytes"],
+        "prior_non_document_payload_unchanged": True,
+        "retained_backup": str(backup),
+        "forcefield_validated": False,
+        "native_charge_transfer_eligible": False,
+        "all_prerequisite_reference_cases_completed": True,
+        "cap_sensitivity_accepted": False,
+        "verification": "447 passed,13 optional fixture skips;100%new-checker coverage",
+    }
+    current.rename(backup)
+    staging.rename(current)
+    (ARCHIVE / "package_verification.json").write_text(
+        json.dumps(report, indent=2) + "\n"
+    )
+    hashes = {
+        str(p.relative_to(ARCHIVE)): digest(p)
+        for p in ARCHIVE.rglob("*")
+        if p.is_file()
+    }
+    (ARCHIVE / "source_manifest.json").write_text(json.dumps(hashes, indent=2) + "\n")
+    event(
+        "outcome",
+        f"Export verified {report['payload_files']} files/{report['payload_bytes']}bytes; all prior nondocument payload unchanged, revision16 retained. No forcefield certification.",
+    )
+    LOGGER.info("Verified completed-reference package: %s", report)
+
+
+if __name__ == "__main__":
+    main()

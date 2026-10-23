@@ -1,0 +1,147 @@
+"""Check completed capped-TI1 ESP processes and separate scientific acceptance."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import logging
+import subprocess
+import sys
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+sys.path.insert(0, str(ROOT / "src"))
+from nyl12_covalent.gaussian_esp import assess_hf_esp  # noqa: E402
+
+BASE = ROOT / "output_nyl12_ti1_parameters_20261022/pa6_local_bonded"
+OUT = ROOT / "output_nyl12_parameter_validation_20261023/surrogate_esp_acceptance_01"
+LOGGER = logging.getLogger(__name__)
+
+
+def digest(path: Path) -> str:
+    """Return an exact source digest."""
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def event(phase: str, reason: str) -> None:
+    """Append the checked scientific audit action."""
+    subprocess.run(
+        [
+            str(ROOT / ".venv/bin/python"),
+            str(ROOT / "scripts/record_agent_action.py"),
+            "--log",
+            str(ROOT / "output_agent_actions/20261021.jsonl"),
+            "--agent",
+            "root",
+            "--phase",
+            phase,
+            "--action",
+            "assess_surrogate_esp",
+            "--permission-mode",
+            "escalated",
+            "--reason",
+            reason,
+            "--rollback",
+            "Retain all raw Gaussian/espgen inputs and outputs; no fit or topology mutation.",
+        ],
+        check=True,
+    )
+
+
+def main() -> None:
+    """Verify fixed-source single-point data, never fit native charges."""
+    logging.basicConfig(level=logging.INFO)
+    event(
+        "intent",
+        "Assess allfour standalone surrogate HF/MK datasets with tested checker and immutable source/geometry identity; chemistry transfer gate remains failed.",
+    )
+    if (OUT / "report.json").exists():
+        raise FileExistsError(OUT / "report.json")
+    OUT.mkdir(exist_ok=True)
+    rows = []
+    for name in (
+        "attack_R_cap_phi_minus120",
+        "attack_R_cap_phi_minus60",
+        "attack_S_cap_phi_minus120",
+        "attack_S_cap_phi_minus60",
+    ):
+        case = BASE / name
+        stage = case / "surrogate_esp_01"
+        status = json.loads((stage / "job/status.json").read_text())
+        if status["exit_status"] != 0 or not status["ended_utc"]:
+            raise ValueError(f"Incomplete/failed HF/espgen process: {name}")
+        for source, expected in status["input_sha256"].items():
+            if digest(Path(source)) != expected:
+                raise ValueError(f"Changed launched input: {source}")
+        manifest = json.loads((stage / "source_manifest.json").read_text())
+        for record in manifest["source_files"].values():
+            if digest(Path(record["path"])) != record["sha256"]:
+                raise ValueError(f"Changed prerequisite source: {record['path']}")
+        reference = json.loads(
+            (case / "optimization_01/scientific_acceptance.json").read_text()
+        )
+        xyz = np.asarray(reference["assessment"]["final_coordinates_A"], dtype=float)
+        paths = [stage / "esp.log", stage / "esp.dat", stage / "molecule.sdf"]
+        before = {str(path): digest(path) for path in paths}
+        assessment = assess_hf_esp(
+            paths[0],
+            paths[2],
+            paths[1],
+            xyz,
+            multiplicity=1,
+            coordinate_tolerance_angstrom=2e-5,
+        )
+        for path in paths:
+            if digest(path) != before[str(path)]:
+                raise ValueError(f"Data changed during audit: {path}")
+        assessment["input_sha256"] = before
+        assessment["source_optimizer_acceptance_sha256"] = digest(
+            case / "optimization_01/scientific_acceptance.json"
+        )
+        assessment["checker_sha256"] = digest(
+            ROOT / "src/nyl12_covalent/gaussian_esp.py"
+        )
+        target = stage / "scientific_acceptance.json"
+        with target.open("x") as stream:
+            json.dump(assessment, stream, indent=2, allow_nan=False)
+            stream.write("\n")
+        rows.append(
+            {
+                "case": name,
+                "accepted": assessment["accepted"],
+                "esp_grid_points": assessment["esp_grid_points"],
+                "max_source_coordinate_delta_angstrom": assessment[
+                    "max_source_coordinate_delta_angstrom"
+                ],
+                "checks": assessment["checks"],
+                "assessment": str(target),
+            }
+        )
+        LOGGER.info(
+            "%s ESP accepted=%s points=%s",
+            name,
+            assessment["accepted"],
+            assessment["esp_grid_points"],
+        )
+    report = {
+        "accepted_for_capped_surrogate_esp": all(row["accepted"] for row in rows),
+        "scope": "Capped-surrogate HF/MK ESP prerequisites only",
+        "cases": rows,
+        "forcefield_validated": False,
+        "charges_fitted": False,
+        "native_charge_transfer_eligible": False,
+        "cap_transfer_gate_passed": False,
+    }
+    (OUT / "report.json").write_text(
+        json.dumps(report, indent=2, allow_nan=False) + "\n"
+    )
+    event(
+        "outcome",
+        f"Allfour standalone ESP datasets assessed: {report['accepted_for_capped_surrogate_esp']}; no charge fit or native transfer.",
+    )
+
+
+if __name__ == "__main__":
+    main()

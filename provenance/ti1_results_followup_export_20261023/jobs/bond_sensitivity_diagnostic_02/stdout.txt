@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/output_nyl12_parameter_validation_20261023/bond_sensitivity_diagnostic_02/source/diagnose_ti1_bond_sensitivity_20261023.py", line 12, in <module>
+    from pymsmt.mcpb import gene_final_frcmod_file as fitting
+  File "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/mcpb/gene_final_frcmod_file.py", line 28, in <module>
+    from pymsmt.lib import getfc, libadd
+  File "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/pymsmt/lib.py", line 55, in <module>
+    raise pymsmtError('Could not perform modeling without setting $AMBERHOME '
+pymsmt.exp.pymsmtError: Could not perform modeling without setting $AMBERHOME in the computer setting.

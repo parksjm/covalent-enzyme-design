@@ -1,0 +1,82 @@
+{
+  "accepted_for_capped_surrogate_esp": true,
+  "scope": "Capped-surrogate HF/MK ESP prerequisites only",
+  "cases": [
+    {
+      "case": "attack_R_cap_phi_minus120",
+      "accepted": true,
+      "esp_grid_points": 8606,
+      "max_source_coordinate_delta_angstrom": 0.0,
+      "checks": {
+        "standalone_normal_termination": true,
+        "method_and_basis": true,
+        "mk_output_requested": true,
+        "electronic_state": true,
+        "finite_restricted_hf_energy": true,
+        "esp_log_present": true,
+        "geometry": true,
+        "source_geometry_unchanged": true,
+        "esp_atom_centers_match_log": true
+      },
+      "assessment": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus120/surrogate_esp_01/scientific_acceptance.json"
+    },
+    {
+      "case": "attack_R_cap_phi_minus60",
+      "accepted": true,
+      "esp_grid_points": 8843,
+      "max_source_coordinate_delta_angstrom": 0.0,
+      "checks": {
+        "standalone_normal_termination": true,
+        "method_and_basis": true,
+        "mk_output_requested": true,
+        "electronic_state": true,
+        "finite_restricted_hf_energy": true,
+        "esp_log_present": true,
+        "geometry": true,
+        "source_geometry_unchanged": true,
+        "esp_atom_centers_match_log": true
+      },
+      "assessment": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_R_cap_phi_minus60/surrogate_esp_01/scientific_acceptance.json"
+    },
+    {
+      "case": "attack_S_cap_phi_minus120",
+      "accepted": true,
+      "esp_grid_points": 8712,
+      "max_source_coordinate_delta_angstrom": 0.0,
+      "checks": {
+        "standalone_normal_termination": true,
+        "method_and_basis": true,
+        "mk_output_requested": true,
+        "electronic_state": true,
+        "finite_restricted_hf_energy": true,
+        "esp_log_present": true,
+        "geometry": true,
+        "source_geometry_unchanged": true,
+        "esp_atom_centers_match_log": true
+      },
+      "assessment": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus120/surrogate_esp_01/scientific_acceptance.json"
+    },
+    {
+      "case": "attack_S_cap_phi_minus60",
+      "accepted": true,
+      "esp_grid_points": 8897,
+      "max_source_coordinate_delta_angstrom": 0.0,
+      "checks": {
+        "standalone_normal_termination": true,
+        "method_and_basis": true,
+        "mk_output_requested": true,
+        "electronic_state": true,
+        "finite_restricted_hf_energy": true,
+        "esp_log_present": true,
+        "geometry": true,
+        "source_geometry_unchanged": true,
+        "esp_atom_centers_match_log": true
+      },
+      "assessment": "/data/jpc/covalent-enzyme-design/output_nyl12_ti1_parameters_20261022/pa6_local_bonded/attack_S_cap_phi_minus60/surrogate_esp_01/scientific_acceptance.json"
+    }
+  ],
+  "forcefield_validated": false,
+  "charges_fitted": false,
+  "native_charge_transfer_eligible": false,
+  "cap_transfer_gate_passed": false
+}

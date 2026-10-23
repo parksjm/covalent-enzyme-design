@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "payload_files": 185,
+  "payload_bytes": 15586910,
+  "prior_non_document_payload_unchanged": true,
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_16",
+  "forcefield_validated": false,
+  "native_charge_transfer_eligible": false,
+  "all_prerequisite_reference_cases_completed": true,
+  "cap_sensitivity_accepted": false,
+  "verification": "447 passed,13 optional fixture skips;100%new-checker coverage"
+}
