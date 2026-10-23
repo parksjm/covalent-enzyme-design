@@ -283,3 +283,14 @@ Read atom_map.json, coordinate_provenance.json, preflight.json and input.gjf.
 The 103-atom Gaussian pilot was stopped at the user's request; its seed is
 historical. The 42-atom optimization is active on 16 physical cores. No final
 optimized 42-atom structure or trajectory is available at this checkpoint.
+
+## Current water-free TI1 starting candidate — 2026-10-23
+
+Run the usual zero-argument pull, then inspect
+`qm/waterfree_ti1_seed/native_seed.sdf` or run its `view_seed.pml`.
+This is the unoptimized 39-atom, water-free candidate (23 explicit H, net
+charge 0, Thr NH3+, oxyanion, C54 R), not an accepted final structure.
+Input, atom map, coordinate provenance and preflight are included. The prior
+42-atom Gaussian job failed imposing constraints; its starting model is
+historical. The current job uses explicit GIC constraints on 16 physical cores.
+No final water-free optimized structure or trajectory exists at this checkpoint.

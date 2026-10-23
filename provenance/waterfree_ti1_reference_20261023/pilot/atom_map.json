@@ -1,0 +1,282 @@
+{
+  "formula": "C10H23N3O3",
+  "formal_charge": 0,
+  "attacked_carbon_cip": "R",
+  "atom_index_by_origin": {
+    "THR:N": 0,
+    "THR:CA": 1,
+    "THR:CB": 2,
+    "THR:OG1": 3,
+    "THR:CG2": 4,
+    "THR:C": 5,
+    "THR:O": 6,
+    "NME:N": 7,
+    "NME:CH3": 8,
+    "THR:H1": 9,
+    "THR:H2": 10,
+    "THR:HA": 11,
+    "THR:HB": 12,
+    "THR:HG1": 13,
+    "THR:HG21": 14,
+    "THR:HG22": 15,
+    "THR:HG23": 16,
+    "NME:H": 17,
+    "NME:HH31": 18,
+    "NME:HH32": 19,
+    "NME:HH33": 20,
+    "PA6:C70": 21,
+    "PA6:C62": 22,
+    "PA6:C54": 23,
+    "PA6:O49": 24,
+    "PA6:N59": 25,
+    "PA6:C67": 26,
+    "PA6:C75": 27,
+    "PA6:H21": 28,
+    "PA6:H22": 29,
+    "PA6:H23": 30,
+    "PA6:H24": 31,
+    "PA6:H25": 32,
+    "PA6:H26": 33,
+    "PA6:H27": 34,
+    "PA6:H28": 35,
+    "PA6:H29": 36,
+    "PA6:HC70": 37,
+    "PA6:HC75": 38
+  },
+  "atoms": [
+    {
+      "index": 0,
+      "origin_id": "THR:N",
+      "element": "N",
+      "formal_charge": 1
+    },
+    {
+      "index": 1,
+      "origin_id": "THR:CA",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 2,
+      "origin_id": "THR:CB",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 3,
+      "origin_id": "THR:OG1",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 4,
+      "origin_id": "THR:CG2",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 5,
+      "origin_id": "THR:C",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 6,
+      "origin_id": "THR:O",
+      "element": "O",
+      "formal_charge": 0
+    },
+    {
+      "index": 7,
+      "origin_id": "NME:N",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 8,
+      "origin_id": "NME:CH3",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 9,
+      "origin_id": "THR:H1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 10,
+      "origin_id": "THR:H2",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 11,
+      "origin_id": "THR:HA",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 12,
+      "origin_id": "THR:HB",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 13,
+      "origin_id": "THR:HG1",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 14,
+      "origin_id": "THR:HG21",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 15,
+      "origin_id": "THR:HG22",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 16,
+      "origin_id": "THR:HG23",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 17,
+      "origin_id": "NME:H",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 18,
+      "origin_id": "NME:HH31",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 19,
+      "origin_id": "NME:HH32",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 20,
+      "origin_id": "NME:HH33",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 21,
+      "origin_id": "PA6:C70",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 22,
+      "origin_id": "PA6:C62",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 23,
+      "origin_id": "PA6:C54",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 24,
+      "origin_id": "PA6:O49",
+      "element": "O",
+      "formal_charge": -1
+    },
+    {
+      "index": 25,
+      "origin_id": "PA6:N59",
+      "element": "N",
+      "formal_charge": 0
+    },
+    {
+      "index": 26,
+      "origin_id": "PA6:C67",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 27,
+      "origin_id": "PA6:C75",
+      "element": "C",
+      "formal_charge": 0
+    },
+    {
+      "index": 28,
+      "origin_id": "PA6:H21",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 29,
+      "origin_id": "PA6:H22",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 30,
+      "origin_id": "PA6:H23",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 31,
+      "origin_id": "PA6:H24",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 32,
+      "origin_id": "PA6:H25",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 33,
+      "origin_id": "PA6:H26",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 34,
+      "origin_id": "PA6:H27",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 35,
+      "origin_id": "PA6:H28",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 36,
+      "origin_id": "PA6:H29",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 37,
+      "origin_id": "PA6:HC70",
+      "element": "H",
+      "formal_charge": 0
+    },
+    {
+      "index": 38,
+      "origin_id": "PA6:HC75",
+      "element": "H",
+      "formal_charge": 0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+%mem=256MB
+%nprocshared=1
+#p HF/STO-3G Opt=(ReadAllGIC,Tight,MaxCycles=40,MaxStep=2) SCF=Tight NoSymm
+
+GIC freeze syntax test only; not TI1 data
+
+0 1
+O 0.0 0.0 0.0
+O 1.4 0.0 0.0
+H -0.4 0.9 0.0
+H 1.8 0.5 0.8
+
+CX1(Frozen)=X(1)
+CY1(Frozen)=Y(1)
+CZ1(Frozen)=Z(1)
+CX2(Frozen)=X(2)
+CY2(Frozen)=Y(2)
+CZ2(Frozen)=Z(2)
+CX3(Frozen)=X(3)
+CY3(Frozen)=Y(3)
+CZ3(Frozen)=Z(3)
+CX4=X(4)
+CY4=Y(4)
+CZ4=Z(4)
+CHI(Frozen)=D(3,1,2,4)
+

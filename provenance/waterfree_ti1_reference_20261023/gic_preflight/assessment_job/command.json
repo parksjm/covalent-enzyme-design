@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_waterfree_reference_20261023/assess_gic_preflight.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/assess_gic_preflight.py": "bf53ff8c265411b420e5bce1a4bf53d753bfff997b1c009fc77a751e8cafbd36",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/optimization.log": "b98437a9e1c722714fe4217b722072c8e6ec64a9d3c38749dd0d8f22cab6ca42"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/assessment_job/job.log",
+  "session_name": "nyl12_gic_preflight_check_20261023",
+  "started_utc": null
+}

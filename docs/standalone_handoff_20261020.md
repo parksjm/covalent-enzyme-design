@@ -1,3 +1,33 @@
+## Water-free 39-atom candidate active — 2026-10-23
+
+The user authorized removal of water for the local parameter reference.
+The former 42-atom job FAILED at 13:49 EDT: five energy/gradient points,
+23 min 52 s, l103 “Error imposing constraints”, exit 1. Preserve its entire
+truncated_pilot_01 directory and failure_assessment_20261023.json. There is
+no accepted geometry; this is a numerical constraint failure, not a conclusion
+about TI1 stability. The old 103-atom job remains stopped by user request.
+
+ACTIVE tmux: `nyl12_waterfree39_gic_16core_20261023`.
+Directory: `output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/`.
+39 atoms, C10H23N3O3, 23 explicit H, net charge 0, singlet. Thr NH3+, O49-
+and C54 R retained. Remove exactly water O/H1/H2 from original 42-atom seed;
+all remaining coordinates unchanged. Do not restart from the failed endpoint.
+
+Same method/resources: wB97XD/def2TZVP, 16 physical cores, 32 GB. Numerical
+remedy: explicit Cartesian ReadAllGIC plus frozen chi1, MaxStep=2. Same 12
+frozen heavy atoms, 27 mobile atoms, no reactive-bond restraint. AF3-seed
+scaffold/torsions remain distinct from n12c reference values. GIC toy test
+preserved frozen XYZ and torsion; eight focused tests pass (87% focused-run
+coverage, preparer 94%, assessor 93%). Gaussian accepted the full GIC input.
+
+Next inspect actual convergence and chemistry; a separate exact Hessian plus
+gradient/constrained curvature follows only after geometry passes. No Hessian,
+RESP fit, accepted force field, protein refinement, MD or AF3 job was started.
+Water belongs to later enzyme/QM/MM validation with standard TIP3P in MM.
+See docs/native_ti1_reference_20261023.md. Action journal remains
+output_agent_actions/20261021.jsonl; unrelated cif/ preserved. Earlier active
+42/103-atom notes below are historical and superseded.
+
 ## Truncated 42-atom pilot replaces 103-atom pilot — 2026-10-23
 
 The user explicitly authorized truncation and more cores on violet. The old

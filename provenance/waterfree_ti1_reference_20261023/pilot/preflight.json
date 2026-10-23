@@ -1,0 +1,30 @@
+{
+  "accepted": true,
+  "geometry": {
+    "accepted": true,
+    "expected_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "observed_stereocenters": {
+      "1": "S",
+      "2": "R",
+      "23": "R"
+    },
+    "geometry_failures": []
+  },
+  "formula": "C10H23N3O3",
+  "atom_count": 39,
+  "explicit_H": 23,
+  "formal_charge": 0,
+  "removed_origins": [
+    "WAT:O",
+    "WAT:H1",
+    "WAT:H2"
+  ],
+  "retained_coordinate_max_displacement_A": 0.0,
+  "source": "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.xyz",
+  "source_is_unoptimized_start_not_failed_endpoint": true,
+  "forcefield_accepted": false
+}

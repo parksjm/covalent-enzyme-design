@@ -1,0 +1,14 @@
+{
+  "accepted": false,
+  "process_failure": true,
+  "geometry_converged": false,
+  "chemical_state_conclusion": "Not assessed as a converged state; optimizer failure does not establish chemical instability",
+  "stage": "Gaussian l103 constrained-coordinate backtransformation at optimization step5",
+  "error": "New curvilinear step not converged; Error imposing constraints",
+  "completed_energy_gradient_points": 5,
+  "ended_utc": "2026-10-23T17:49:03.405862Z",
+  "ended_local": "2026-10-23 13:49 EDT",
+  "elapsed_seconds": 1432.2,
+  "restart_source_for39": "Original42atom starting seed, not failed endpoint",
+  "new_numerical_representation": "Explicit Cartesian GIC and frozen chi1; same physical constraints; MaxStep2"
+}

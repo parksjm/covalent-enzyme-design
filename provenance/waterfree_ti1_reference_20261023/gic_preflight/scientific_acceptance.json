@@ -1,0 +1,19 @@
+{
+  "accepted": true,
+  "checks": {
+    "normal_termination": true,
+    "optimization_completed": true,
+    "atom_order": true,
+    "frozen_Cartesians": true,
+    "frozen_torsion": true,
+    "mobile_atom_relaxed": true
+  },
+  "atom_shifts_A": [
+    0.0,
+    0.0,
+    0.0,
+    0.16876934510745722
+  ],
+  "torsion_error_deg": 1.2430354416892442e-05,
+  "scope": "HF/STO-3G installation/optimizer test only; not TI1 reference data"
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "-q",
+    "output_nyl12_waterfree_reference_20261023/test_prepare_waterfree39.py",
+    "output_nyl12_waterfree_reference_20261023/test_assess_pilot.py",
+    "--cov=output_nyl12_waterfree_reference_20261023",
+    "--cov-report=term-missing",
+    "--cov-report=json:output_nyl12_waterfree_reference_20261023/coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/assess_pilot.py": "c72e897437be84724b6048b5e45e939e4eb3e005bb5d49e6e2ab0c72423ab32a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/prepare_waterfree39.py": "a8fe260befe30530e2c947a8b82b95191a71b07385473fc0c206b9728ef0b788",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/test_assess_pilot.py": "d0887f16e2fdec60105c94eeb1dae0c8bfa5214fc2122d4060087738b8e67e94",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/test_prepare_waterfree39.py": "6a770d982e55b98749661767c709dbb17ed889eb4a403c82515f05e00a455b32"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/verification_job/job.log",
+  "session_name": "nyl12_waterfree39_checks_20261023",
+  "started_utc": null
+}

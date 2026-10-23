@@ -1,0 +1,1 @@
+INFO Prepared39atoms23H net0 R;12frozen,27mobile,chi1 retained via GIC

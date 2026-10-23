@@ -11,3 +11,5 @@ provenance/ti1_results_followup_export_20261023/references/*/final_structure.sdf
 provenance/native_ti1_seed_20261023/**/native_seed.sdf whitespace=-blank-at-eol
 provenance/native_ti1_seed_20261023/freeze_flags_preflight_01/optimization.log.txt whitespace=-blank-at-eol
 provenance/truncated_ti1_pilot_20261023/**/native_seed.sdf whitespace=-blank-at-eol
+provenance/waterfree_ti1_reference_20261023/**/*.sdf whitespace=-blank-at-eol
+provenance/waterfree_ti1_reference_20261023/**/optimization.log.txt whitespace=-blank-at-eol

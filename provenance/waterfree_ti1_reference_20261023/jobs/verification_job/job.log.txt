@@ -1,0 +1,15 @@
+........                                                                 [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                                                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------------------------------
+output_nyl12_waterfree_reference_20261023/assess_gic_preflight.py          29     29     0%   3-56
+output_nyl12_waterfree_reference_20261023/assess_pilot.py                  59      4    93%   25, 35, 119-120
+output_nyl12_waterfree_reference_20261023/prepare_waterfree39.py           87      5    94%   47, 68, 77, 200-201
+output_nyl12_waterfree_reference_20261023/test_assess_pilot.py             65      0   100%
+output_nyl12_waterfree_reference_20261023/test_prepare_waterfree39.py      57      0   100%
+-----------------------------------------------------------------------------------------------------
+TOTAL                                                                     297     38    87%
+Coverage JSON written to file output_nyl12_waterfree_reference_20261023/coverage.json
+8 passed in 0.54s

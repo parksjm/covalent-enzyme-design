@@ -1,0 +1,9 @@
+{
+  "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/prepare_waterfree39.py": "a8fe260befe30530e2c947a8b82b95191a71b07385473fc0c206b9728ef0b788",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/assess_pilot.py": "c72e897437be84724b6048b5e45e939e4eb3e005bb5d49e6e2ab0c72423ab32a",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.sdf": "cbd934518532b88bb4c0650a1df322a73785ab11d2656401c5e3ddac367f0e6a",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.xyz": "13b6e03528d395ad16dbbba28b38925d1a73746eb12d51ab2bf6043b9e1b4bbe",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/atom_map.json": "fbf75568a43e638216b011a6a8298a00c487910d6b0c0c074313a66b41581131",
+  "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/pilot_policy.json": "4817deed029e2436c738dc697fa24c40d222dd63ad8fad204126d0c2c0a3f17f",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/gaussian_checks.py": "2cda05f3d8b01774166947f84c457289b41560d6f88567c304912b530dd7f547"
+}

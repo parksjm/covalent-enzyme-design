@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01",
+  "ended_utc": "2026-10-23T17:49:03.405862Z",
+  "env_overrides": {},
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/assess_pilot.py": "39b435f564f58ae7c5f9ddda5db2db40d033d94f1ee66941e11d06b2505d7c8b",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/atom_map.json": "fbf75568a43e638216b011a6a8298a00c487910d6b0c0c074313a66b41581131",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/input.gjf": "7ddc26f16f26548a8f9c9d8b94264733d6d301fcea9beb9fad6326fb80253da0",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.sdf": "cbd934518532b88bb4c0650a1df322a73785ab11d2656401c5e3ddac367f0e6a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.xyz": "13b6e03528d395ad16dbbba28b38925d1a73746eb12d51ab2bf6043b9e1b4bbe",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/pilot_policy.json": "4817deed029e2436c738dc697fa24c40d222dd63ad8fad204126d0c2c0a3f17f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/run_gaussian.sh": "55b499d1c726667b6fb4d232aa23af399a70bd18bce0c293c58afe583554c124",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/source_manifest.json": "8fa20cc7d0b0aea1fd88fc402c0b2c1f878cc58cc3473ba891941989944a0ecf"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/job/job.log",
+  "session_name": "nyl12_truncated_ti1_16core_20261023",
+  "started_utc": "2026-10-23T17:25:09.759872Z"
+}

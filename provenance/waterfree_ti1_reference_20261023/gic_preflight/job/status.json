@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/sg",
+    "g16",
+    "-c",
+    "bash /data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/run_gaussian.sh"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-23T19:02:25.501812Z",
+  "env_overrides": {},
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/input.gjf": "0235153a7d2eb7194993538599c3d219ec57b0fa63ece632454ad1ba66a0cd25",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/run_gaussian.sh": "fb475ec7b03d0b025effadcdabe33cae702cc10d5536ebc7873dce50e63cddea"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/gic_preflight_01/job/job.log",
+  "session_name": "nyl12_gic_freeze_preflight_20261023",
+  "started_utc": "2026-10-23T19:02:20.453462Z"
+}

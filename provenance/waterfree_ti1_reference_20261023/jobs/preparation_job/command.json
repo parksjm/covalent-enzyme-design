@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_waterfree_reference_20261023/prepare_waterfree39.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/atom_map.json": "fbf75568a43e638216b011a6a8298a00c487910d6b0c0c074313a66b41581131",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.sdf": "cbd934518532b88bb4c0650a1df322a73785ab11d2656401c5e3ddac367f0e6a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_truncated_reference_20261023/truncated_pilot_01/native_seed.xyz": "13b6e03528d395ad16dbbba28b38925d1a73746eb12d51ab2bf6043b9e1b4bbe",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/assess_pilot.py": "c72e897437be84724b6048b5e45e939e4eb3e005bb5d49e6e2ab0c72423ab32a",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/prepare_waterfree39.py": "a8fe260befe30530e2c947a8b82b95191a71b07385473fc0c206b9728ef0b788"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_waterfree_reference_20261023/preparation_job/job.log",
+  "session_name": "nyl12_waterfree39_prepare_20261023",
+  "started_utc": null
+}

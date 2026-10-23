@@ -1,3 +1,59 @@
+# Water-free 39-atom TI1 candidate — 2026-10-23
+
+The user approved a water-free local parameter reference. The 42-atom
+water-containing job failed at 13:49 EDT after 23 min 52 s and five energy/
+gradient points. Gaussian l103 reported “New curvilinear step not converged”
+and “Error imposing constraints”; the launcher exited 1. This was an optimizer
+constraint failure, not a converged geometry or evidence of chemical instability.
+The full log, checkpoint, process status and separate failure assessment remain.
+
+## Current model and numerical remedy
+
+Remove exactly WAT O/H1/H2 from the original 42-atom starting seed. Do not use
+the failed trajectory endpoint. The remaining 39 atoms retain exactly the same
+coordinates and graph: C10H23N3O3, 23 explicit H, net charge 0, singlet,
+Thr NH3+, substrate oxyanion and R at C54; Thr CA/CB remain S/R. The two
+ethyl substrate boundaries and NME cap are unchanged. No ACE or water is present.
+
+The primary purpose is local TI1 parameter development. Water is not a covalent
+part of this adduct and adds no new bonded terms. Its relay geometry belongs to
+subsequent enzyme/QM/MM validation; standard TIP3P parameters remain in MM.
+Water inclusion can be a separately defined environment-sensitivity comparison.
+Removing water does not restore the protein electrostatic environment or prove
+TI1 stability. Native charge-boundary/transfer checks remain necessary.
+
+Active tmux: `nyl12_waterfree39_gic_16core_20261023`.
+Directory: `output_nyl12_waterfree_reference_20261023/waterfree_pilot_01/`.
+Gaussian geometry optimization only: wB97XD/def2TZVP, Tight optimization/SCF,
+UltraFine, XQC, 16 physical cores (CPU affinity 0-15), 32 GB RAM. No CalcFC,
+Freq, added dispersion or solvent. No change of Hamiltonian or protonation.
+
+Use `Opt=(ReadAllGIC,Tight,MaxCycles=150,MaxStep=2)`: explicitly define all
+117 Cartesian GIC coordinates plus frozen chi1. The same 12 heavy atoms are
+frozen (36 Cartesian constraints), all 23 H and four reactive heavy atoms are
+mobile, and chi1 is fixed: 80 permitted coordinate directions. This replaces
+the failed legacy coordinate representation; it does not drop the constraints.
+The AF3-seed scaffold/torsions remain explicitly distinct from the user-selected
+n12c parameter-reference torsions. This candidate is not yet an accepted fit
+reference. Geometry acceptance alone will not certify parameters.
+
+A small H2O2 HF/STO-3G engine test completed normally with exactly this type of
+GIC Cartesian/torsion freezes: frozen displacement 0, chi1 error 0.00001243 deg,
+mobile H displacement 0.16877 A. This is installation/optimizer evidence only,
+not parameter data, and its coordinates are not used in the TI1 calculation.
+Eight preparation/corruption tests passed in tmux; focused-run coverage 87%,
+preparer 94%, assessor 93%. Ruff lint/format pass. No new dependency.
+
+Assess convergence, graph/stereo, proton transfer, reactive bonds, frozen
+coordinates and chi1 before requesting a separate exact Hessian and gradient.
+Analyze curvature on the constrained manifold; no Hessian is automatically
+chained. RESP/force-field/protein-relaxation gates remain closed. No MD or AF3
+prediction was started. Sources, hashes, logs and acceptance records are retained.
+
+GIC syntax reference: Gaussian vendor documentation,
+https://www.conflex.co.jp/gaussian_support/opt.php (ReadAllGIC and frozen GICs).
+The older water-containing records below are historical and superseded.
+
 # Truncated native-state TI1 pilot — 2026-10-23
 
 The user authorized replacing the 103-atom full-PA6-L4 pilot with a local
