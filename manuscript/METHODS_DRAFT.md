@@ -1,6 +1,6 @@
 # Methods — working draft
 
-Status: 2026-10-21. Sections explicitly distinguish completed preparation from
+Status: 2026-10-22. Sections explicitly distinguish completed preparation from
 planned methods. Unresolved numerical settings must be filled from accepted
 run manifests, not inferred from a generic protocol. References are in
 [REFERENCES.md](REFERENCES.md); local evidence is in [SOURCE_LEDGER.md](SOURCE_LEDGER.md).
@@ -64,9 +64,113 @@ Both original TI1 starts failed the relay-water contact gate after passing
 connectivity and QM-inventory checks. Sander did not run in these preflight
 attempts. No accepted TI1 minimum or TS1 is available at this checkpoint [S5].
 
+## Force-field parameterization — reference preparation executed; fitting planned
+
+### Force-field components and AmberTools preparation
+
+The candidate classical model will retain ff19SB for unmodified protein
+residues [R8] and use GAFF2 for ordinary substrate chemistry [R15,R18].
+Antechamber and parmchk2 in AmberTools26 will assign and audit substrate atom
+types and identify missing or estimated parameters before assembly in LEaP
+[R16,R17]. The installed GAFF2 parameter file identifies version 2.2.30
+(October 2025); its digest and the loaded leaprc/library files will accompany
+each generated topology. The original GAFF paper [R15] documents the parent
+force field; the specific GAFF2 release is identified by the Amber
+reference documentation and installed parameter file [R18]. Standard protein
+terms will be retained rather than assigning GAFF2 types to the entire enzyme.
+The modified catalytic Thr and its substrate linkage will be represented by
+explicit nonstandard residue definitions with audited atom correspondence.
+
+Relay water will retain TIP3P atom names, charges and Lennard-Jones parameters
+when represented classically [R19]. Its explicit hydrogens and correspondence
+to the water included in the proposed QM subsystem will be preserved. A water
+included in the QM region is treated by the QM/MM Hamiltonian rather than by
+adding a duplicate MM electrostatic contribution. Water/ion choices and the
+combined model will require validation; ff19SB/GAFF2 selection alone does not
+establish accuracy for this covalent active site.
+
+The existing development topology uses original GAFF and provisional
+AM1-BCC or Gasteiger charges. It has not undergone the coupled-state Gaussian
+RESP fit described below and is excluded from validated TI1 refinement.
+
+### Chemical-state-specific electrostatic parameters
+
+The native TI1 charge model will retain the catalytic Thr NH3+ group, the
+substrate oxyanion and intact scissile C–N bond, full PA6 L4 with its NH3+/COO−
+termini, the peptide-boundary cap and a separate neutral relay water. This
+scripted cluster has 103 atoms, total formal charge zero and singlet
+multiplicity. It represents the soluble L4 substrate hypothesis; it does not
+represent an indefinitely long polymer or establish experimental L4 turnover.
+The 37-atom, charge-minus-one ACE/Thr/NME bonded surrogate described below
+has different terminal chemistry and will not supply native-state charges.
+
+Gaussian 16 revision C.02 [R20] will provide HF/6-31G(d) Merz–Kollman ESP data
+at the separately obtained DFT reference geometries [R21,R22]. Native ESP calculations
+await accepted native conformers; completed neutral free-Thr ESP calculations
+are separate development references. AmberTools antechamber/espgen/respgen/resp
+utilities will be used for atom mapping, ESP preparation and RESP fitting
+[R7,R16,R17]. Explicit control files will implement a shared multi-conformer
+charge set, fixed boundary charges and declared equivalences; a default
+single-ligand antechamber invocation is insufficient to impose this model.
+
+The initial boundary proposal preserves the installed N-terminal Thr peptide
+C/O charges and the NME cap charges, while fitting the reactive Thr ammonium/
+side chain jointly with the substrate. TIP3P water charges are provisionally
+fixed; constrained and held-out ESP errors will determine whether that
+boundary treatment is acceptable. These source values were independently
+checked against clean LEaP exports. Exact total charge will be enforced,
+without arbitrary integer partial-charge constraints on the two covalently
+joined residues. Equivalences, conformer identities, RESP controls, fitted
+charges and fit/held-out residuals will be archived. ES and other intermediates
+will require their own proton inventories and parameter eligibility checks.
+
+### Bonded parameters and independent validation
+
+Standard ff19SB/GAFF2 assignments will be evaluated first. Missing or
+inadequate reactive-region bond, angle, torsion or improper terms will require
+targeted QM-based refinement; parmchk2 estimates will not be accepted solely
+because a complete topology can be written. If needed, modified-Seminario
+projection [R14] will provide candidate bond/angle constants from an accepted
+DFT Hessian. The implementation's Amber harmonic conventions,
+E_bond = K_b(r-r0)^2 and E_angle = K_a(theta-theta0)^2 with angles in radians,
+will be checked explicitly. Such projection does not by itself determine
+reliable proper-torsion or improper parameters or validate transfer to the
+native enzyme.
+
+Reference acceptance will require normal completion, retained atom order and
+stereochemistry, intended TI1 bonds/protons, agreement with frozen torsions,
+and local stability under those constraints. Nonlinear constraint-force terms
+will be included in the reduced Lagrangian-Hessian assessment; raw constrained
+frequency signs alone do not establish a free minimum. Cap hydrogen bonding
+and sensitivity to the two declared ACE orientations will be assessed before
+using the reference for parameter estimation.
+
+A prospective initial validation panel comprises 22 independent distortions
+per accepted reference: four reactive bonds at +/-0.02 angstrom, the six
+angles at the tetrahedral carbon at +/-3 degrees, and the CB–OG1–C* angle at
++/-3 degrees. These energy points are reserved for validation rather than
+Hessian-based fitting. DFT and full surrogate MM single-point relative
+energies will be evaluated at identical coordinates with the reference's
+frozen torsions preserved. The surrogate will use its own independently
+fitted charges; native charges will not be transplanted onto the capped
+anion. Distortions changing connectivity, protonation or stereochemistry will
+be reported as outside the declared TI1 basin rather than silently discarded.
+Separate torsional scans and native-state transfer tests remain necessary.
+
+Project acceptance criteria are bond errors <=0.03 angstrom, angle RMS error
+<=3 degrees and maximum angle error <=5 degrees, and held-out local relative
+energy RMSE <=1 kcal/mol. Cap comparisons require local bond targets within
+0.03 angstrom and candidate force constants within 20%; excessive sensitivity
+requires reconsidering the reference model. These are prospective project
+criteria, not universal literature bounds. Numerical errors by coordinate
+family, complete parameter coverage, topology identity and native-state charge
+validation must pass before AF3-model classical relaxation and subsequent
+DFTB3/MM optimization. At this checkpoint no new coupled TI1 RESP fit, GAFF2
+topology or complete force field has been accepted.
+
 ## Parameter-model quantum calculations — executed; RESP pending
 
-### Capped anionic TI1 bonded reference — prepared; optimization running
+### Capped anionic TI1 bonded reference — staged QM preparation and validation
 
 A local bonded-parameter surrogate was constructed as
 ACE-THR(-O-C*(O−)(CH3)(NHCH3))-NME, retaining the tetrahedral carbon and intact
@@ -239,15 +343,3 @@ fit/held-out ESP errors and transfer validation remain required. User visual
 approval of interim trajectories is recorded separately from computational
 acceptance. Neither this preparation nor test-suite success certifies the TI1
 force field.
-
-
-## Planned Amber baseline — not yet parameterized
-
-The legacy provisional topology uses original GAFF and preliminary charges.
-The new candidate workflow will retain ff19SB for unmodified protein, use
-GAFF2 for ordinary substrate terms, and use Gaussian HF/6-31G(d) MK ESP data
-with AmberTools RESP utilities and explicit coupled-state constraints.
-Standard assigned terms will be validated before targeted QM refitting of
-missing or inadequate reactive-region terms. Antechamber/parmchk2 assignments
-are a baseline, not a certification of the covalent intermediate. No new
-coupled TI1 RESP fit or GAFF2 topology is completed at this checkpoint.

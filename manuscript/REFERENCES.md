@@ -56,9 +56,63 @@ is cited as such, not represented as a peer-reviewed benchmark.
   2026-10-22; full-text retrieval timed out. This is the modified-Seminario
   candidate method, not evidence that the present TI1 parameters are validated.
 
-Before submission add the exact Gaussian 16 revision citation, AmberTools 26
-release citation, software versions for production design/prediction, the
-original Bürgi–Dunitz/Herschlag metric references and original Nyl12 discovery/
-structure/maturation references. The present projected-phi implementation is
+Before submission finalize software versions for production design/prediction,
+the original Bürgi–Dunitz/Herschlag metric references and original Nyl12
+discovery/structure/maturation references. The present projected-phi implementation is
 identified by its actual local source rather than an unverified literature
 attribution. These open bibliographic tasks do not justify inventing references.
+
+
+## Force-field parameterization references added 2026-10-22
+
+- **R15.** Wang, J.; Wolf, R. M.; Caldwell, J. W.; Kollman, P. A.; Case, D. A.
+  *Development and testing of a general amber force field*. J. Comput. Chem.
+  **2004**, 25 (9), 1157–1174. https://doi.org/10.1002/jcc.20035
+  Original GAFF reference; do not identify this as a GAFF2 development paper.
+- **R16.** Wang, J.; Wang, W.; Kollman, P. A.; Case, D. A.
+  *Automatic atom type and bond type perception in molecular mechanical
+  calculations*. J. Mol. Graph. Model. **2006**, 25 (2), 247–260.
+  https://doi.org/10.1016/j.jmgm.2005.12.005
+  Antechamber atom/bond-perception reference. The journal component is `j.jmgm`,
+  not `j.theochem`; the latter DOI was rejected during bibliography checking.
+- **R17.** Case, D. A.; Aktulga, H. M.; Belfon, K.; et al. *AmberTools*.
+  J. Chem. Inf. Model. **2023**, 63 (20), 6183–6191.
+  https://doi.org/10.1021/acs.jcim.3c01153
+  Software citation recommended by https://ambermd.org/CiteAmber.php.
+  This paper is the software citation, not a claim that its publication year
+  identifies the installed AmberTools26 parameter-file revision.
+- **R18.** Amber development team. *Ligand Force Fields* and *The Amber Force
+  Fields*, official Amber documentation, accessed 2026-10-22.
+  https://ambermd.org/AmberModels_organic.php and
+  https://ambermd.org/AmberModels.php; linked *Amber 2026 Reference Manual*.
+  GAFF2 implementation identifier: installed `gaff2.dat`, version 2.2.30,
+  October 2025, distributed in the present AmberTools26 environment. The exact
+  file hash is retained with manuscript-source evidence. The official page
+  describes GAFF2 as an Amber/AmberTools distribution; no standalone GAFF2
+  development paper was verified in this check.
+- **R19.** Jorgensen, W. L.; Chandrasekhar, J.; Madura, J. D.; Impey, R. W.;
+  Klein, M. L. *Comparison of simple potential functions for simulating liquid
+  water*. J. Chem. Phys. **1983**, 79 (2), 926–935.
+  https://doi.org/10.1063/1.445869
+  TIP3P reference. Publisher full-text retrieval was unavailable during this
+  check; the implemented TIP3P values are independently traced to local Amber
+  source units, rather than inferred from an inaccessible article.
+- **R20.** Frisch, M. J.; Trucks, G. W.; Schlegel, H. B.; et al.
+  *Gaussian 16, Revision C.02*; Gaussian, Inc.: Wallingford, CT, **2019**.
+  Revision, year and author-citation block were read directly from the actual
+  calculation's "Cite this work as" header; build identifier
+  ES64L-G16RevC.02, 7-Dec-2021. Official citation page:
+  https://gaussian.com/citation/ (retrieval unavailable at this checkpoint).
+- **R21.** Singh, U. C.; Kollman, P. A. *An approach to computing electrostatic
+  charges for molecules*. J. Comput. Chem. **1984**, 5 (2), 129–145.
+  https://doi.org/10.1002/jcc.540050204
+- **R22.** Besler, B. H.; Merz, K. M., Jr.; Kollman, P. A. *Atomic charges
+  derived from semiempirical methods*. J. Comput. Chem. **1990**, 11 (4),
+  431–439. https://doi.org/10.1002/jcc.540110404
+  R21/R22 document the ESP charge-fitting lineage; citing R22 does not mean
+  semiempirical ESP replaces the specified HF/6-31G(d) calculation here.
+
+R15–R18 and R21/R22 bibliographic/method identifiers were checked against
+publisher or official software sources. This is not a claim that all cited
+full texts were obtained. Full author-list and journal-style formatting can be
+completed when the final manuscript and accepted software manifests are frozen.

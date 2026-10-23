@@ -222,3 +222,12 @@ Amber source-unit verification. These are preparation reports, not fitted
 parameters or optimized native structures. Updated handoff, protocol and
 Methods remain under `docs/` and `manuscript/`. Existing inspectable models
 and trajectories are unchanged by this report-only update.
+
+
+### Force-field parameterization Methods draft
+
+After running `./pull_nyl12_inspection.sh`, open
+`manuscript/METHODS_DRAFT.md`, section "Force-field parameterization".
+Its bibliography is `manuscript/REFERENCES.md`; the implementation/status
+record is `manuscript/SOURCE_LEDGER.md`. The draft distinguishes completed
+reference preparation from planned GAFF2/RESP fitting and validation.

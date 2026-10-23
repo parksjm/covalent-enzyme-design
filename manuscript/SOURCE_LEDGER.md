@@ -226,3 +226,26 @@ https://ambermd.org/tutorials/basic/tutorial4b/index.php; installed CLI was
 checked for current GAFF2 support. MCPB manufactured angle checks passed
 96 cases and three shared-angle examples; neither they nor the prospective
 22-point local validation plan supplies or certifies TI1 parameters.
+
+
+## Force-field Methods drafting and export — 2026-10-22
+
+The user requested a force-field parameterization Methods section with references
+and inclusion in the rsync pull. The integrated Methods section distinguishes
+executed graph/QM preparation from pending ff19SB/GAFF2 typing, state-specific
+HF ESP/RESP, targeted refitting and independent validation. It preserves the
+native/surrogate charge distinction and labels water/boundary RESP constraints
+as proposals. No new fitting, topology migration or model refinement occurred.
+
+References R15–R22 cover original GAFF, Antechamber, AmberTools, the exact GAFF2
+distribution, TIP3P, Gaussian C.02 and ESP-fitting lineage. The Antechamber DOI
+was corrected to 10.1016/j.jmgm.2005.12.005 during primary-source checking.
+The GAFF2 version comes from the installed file header, not the 2004 GAFF paper.
+Gaussian's 2019 software citation was recovered from the actual C.02 output.
+Publisher-access failures and unresolved full-text review are explicit in the
+bibliography; no missing software citation year was guessed.
+
+The inspection exporter selects every manuscript/*.md and docs/*.md. A fresh
+package will preserve existing structures, include updated Methods/References/
+Source ledger and verify every packaged digest before promotion. Exact package
+job, source inventory and verification records accompany this checkpoint.

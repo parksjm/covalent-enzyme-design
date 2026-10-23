@@ -6,6 +6,9 @@ when converting planned methods to past tense.
 
 - [Introduction](INTRODUCTION_DRAFT.md)
 - [Methods: completed work and planned extensions](METHODS_DRAFT.md)
+- The force-field parameterization section in the Methods draft covers the
+  planned ff19SB/GAFF2/RESP workflow, state definitions and validation gates.
+  It is included with the bibliography in the zero-argument laptop pull.
 - [References and verification status](REFERENCES.md)
 - [Local source and claim ledger](SOURCE_LEDGER.md)
 - Machine-readable source hashes: `../provenance/manuscript_sources_20261020.json`.
