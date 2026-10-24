@@ -349,3 +349,15 @@ Approval-review timeouts occurred before two root/agent read commands; no
 scientific input changed. A competing-literature subagent terminated with a
 model content-access error; its partial suggestions were not treated as verified
 method facts. Root independently checked benign native-fold/PET primary sources.
+
+## Proposed PA6 mechanistic project and prior MD — 2026-10-24
+
+The user's three 100 ns WT PA6 L4 persistence report and AM1-BCC provenance are
+retained in ../docs/nyl12_mechanistic_project_scope_20261024.md with the
+corroborating October 9 original-project synthesis. That source distinguishes
+local PA66 geometry loss from global dissociation and preserves corrected versus
+invalidated histories. Exact MD topology/protonation hashes await a reuse audit.
+DFTB sampling with sparse hybrid DFT PES checks is a proposal only; no new MD
+or QM/MM simulation was started. No NylB pivot is authorized. Primary references
+R34/R35 document existing NylB QM/MM work and approximate-QM proton-transfer
+benchmarking. Source access limits are recorded in REFERENCES.md.

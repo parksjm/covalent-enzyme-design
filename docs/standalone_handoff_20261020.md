@@ -1,3 +1,21 @@
+## Proposed separate WT PA6 mechanistic project — 2026-10-24
+
+User supports considering a full chemical-cycle DFTB QM/MM free-energy study
+as a standalone paper. Focus PA6, optionally poly(MAXA), without expanding PA66.
+Use hybrid DFT only for selected PES optimizations/checks, not free-energy
+sampling. QM/MM validation and convergence are substantive research tasks.
+Prior antechamber/AM1-BCC WT noncovalent PA6 L4 MD (3 × 100 ns) already exists;
+corrected records show PA66 mainly loses local geometry/register, without
+necessarily dissociating. Pin valid topologies/trajectories before reuse;
+do not repeat simulations or change charges without an explicit rationale.
+NylB is a comparator, not an authorized pivot; its published 2014 reactive
+QM/MM study is DOI 10.1021/jz500323y. Scope and validation gates, including the
+distinction between a reactive QM core and state-specific MM parameters, are
+in docs/nyl12_mechanistic_project_scope_20261024.md. No new simulation started.
+A full-cycle mechanism would support a paper; it is not required for every
+exploratory sequence. A PMF maximum is not automatically a PES saddle point.
+Updated scope and references are included in the existing laptop pull package.
+
 ## Literature/manuscript checkpoint — 2026-10-24
 
 User requested preserving relayrefs and recent2025/2026 Baker/othergroup

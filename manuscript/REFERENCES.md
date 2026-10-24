@@ -172,3 +172,18 @@ Additional preserved relay structural reference (full bibliographic details
 pending): *Crystal structures of penicillin acylase enzyme-substrate complexes:
 structural insights into the catalytic mechanism* (2001), publisher record
 https://www.sciencedirect.com/science/article/pii/S0022283601950430 .
+
+## Proposed mechanistic-project references — 2026-10-24
+
+- **R34.** Kamiya, K.; Baba, T.; Boero, M.; Matsui, T.; Negoro, S.; Shigeta, Y.
+  *Nylon-Oligomer Hydrolase Promoting Cleavage Reactions in Unnatural Amide
+  Compounds*. J Phys Chem Lett (2014),5,1210–1216.
+  https://doi.org/10.1021/jz500323y ; primary metadata/abstract:
+  https://pubmed.ncbi.nlm.nih.gov/26274473/ . This is NylB, not Nyl12, and
+  is not evidence for a DFTB Hamiltonian until its actual methods are checked.
+- **R35.** *Benchmark of Approximate Quantum Chemical and Machine Learning
+  Potentials for Biochemical Proton Transfer Reactions*. JCTC (2025).
+  https://doi.org/10.1021/acs.jctc.5c00690 . Primary indexed abstract verified;
+  full PMC text retrieval returned CAPTCHA. Author-list formatting pending.
+  Chemical-group-dependent proton-transfer benchmarking does not by itself
+  validate a polyamide-cleavage free-energy surface.

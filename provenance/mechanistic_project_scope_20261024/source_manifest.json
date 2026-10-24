@@ -1,0 +1,15 @@
+{
+  "package_verification.json": "200c55a9788dd1834bd96b8d7dd2bb9c65a7c501c5fb25f84fbc74e71f8c547c",
+  "download_README.md": "59f48429a840dc49befcc437442f27f279978e0b26d295e0600ca705ac3d3c95",
+  "agent_actions_at_checkpoint.jsonl": "7952d9bdd7118c855db225c613df16b1e3bcff582aee43ea3e57b95d30f4e787",
+  "source/checkpoint.py": "244d8aff6528358f265f438aea49c8b4686c6ee838c37e844e65413ad50a0f89",
+  "source/finalize_mechanistic_scope.py": "1d806f5ae8e3b0023d25e736639f65c61d26574e13e06d59af047fe21b6ce183",
+  "docs/standalone_handoff_20261020.md": "b6dae660b95ef56afeca80317e810fdb3fbc7a3755a58aac3a2e659f573c109a",
+  "docs/nyl12_mechanistic_project_scope_20261024.md": "fd820fef0d49b9b477874360f0404f45e3a31dc7555fc52a82fdfc00a1e488b6",
+  "manuscript/INTRODUCTION_DRAFT.md": "263e3c4831f8f2a0160558e8a7703bb4fb7aa2108773051b74a57044c4d63756",
+  "manuscript/recent_design_and_relay_references.bib": "f92d2a6d5061d65398952329dde0073bd1397e0d790bff55f91dfda1c5e232b7",
+  "manuscript/README.md": "816b7e47aae8bf0768cadaa5aeddef5d4d2fd07206f789a60d7d907eb97a7163",
+  "manuscript/SOURCE_LEDGER.md": "36fe543c37228b2729aa6e1dafea35cc7ae55eb1ad2b2fe0302fdfd23294d659",
+  "manuscript/METHODS_DRAFT.md": "b8ded9d9efbfa305ee52f8dfbfbcf0c1cef9fa4cd05fbec404fabb4fd087cca2",
+  "manuscript/REFERENCES.md": "f3c015ceb882af2b43e1bdfb33a11a65d7ee057a283a22603555954df8c90da2"
+}
