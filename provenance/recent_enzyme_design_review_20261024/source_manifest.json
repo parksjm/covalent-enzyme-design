@@ -1,0 +1,16 @@
+{
+  "package_verification.json": "1c5e6e95014f5146b7fc15075f6f6f0d34db3d90aa9359739382a99f21ede8c9",
+  "download_README.md": "c51eb10d54f89d0a585234112a6c0bc0c56aa0e93e195521fbdce6c7dcf484c4",
+  "agent_actions_at_checkpoint.jsonl": "1c2887efd3e9f6149bf316d4a917e22e3fefe4d913b0b4d8fa942b58f1b69fad",
+  "source/checkpoint.py": "64be29c526450f07cbdf4e45cebcfc5347b42b57e58fe32d73a37768e1b71cec",
+  "source/update_recent_design_docs.py": "e0e72e84b4fdc19afad572759cb9ad9dbf49b3db784fe0b7ab58f6333541672f",
+  "docs/standalone_handoff_20261020.md": "9a54effa9722dfc8bb31bbdbd994afcb9e44d4671c4c1c13c9f64019976b19f5",
+  "docs/recent_enzyme_design_lessons_20261024.md": "b6499a9103fe50016e96dc9649ab91af457c3302846034ee804ec3513ec0141f",
+  "docs/water_relay_mechanism_evidence_20261024.md": "5ade0345b91eaaff47cb28ad7b909370c7e421602a317bbfcce89658cd7ce34e",
+  "manuscript/INTRODUCTION_DRAFT.md": "263e3c4831f8f2a0160558e8a7703bb4fb7aa2108773051b74a57044c4d63756",
+  "manuscript/recent_design_and_relay_references.bib": "c1169aa63f77d1ed047294eb5b9d64dac90fd87f8d76b4a30807bdf95afbba02",
+  "manuscript/README.md": "816b7e47aae8bf0768cadaa5aeddef5d4d2fd07206f789a60d7d907eb97a7163",
+  "manuscript/SOURCE_LEDGER.md": "e87887d7e4b79ef50c04075dc2ffb3e21481bd7f0a37532eb4306be20306b43b",
+  "manuscript/METHODS_DRAFT.md": "b8ded9d9efbfa305ee52f8dfbfbcf0c1cef9fa4cd05fbec404fabb4fd087cca2",
+  "manuscript/REFERENCES.md": "1ea1838223c28b651b757418c81b2028a412f4010d4735b9a2d0c1aa83ce9323"
+}

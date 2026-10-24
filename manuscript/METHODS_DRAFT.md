@@ -420,3 +420,35 @@ fit/held-out ESP errors and transfer validation remain required. User visual
 approval of interim trajectories is recorded separately from computational
 acceptance. Neither this preparation nor test-suite success certifies the TI1
 force field.
+
+## Relay-water feasibility and staged design scope — evidence and proposal, 2026-10-24
+
+A deterministic front-side oxygen search was performed in the original full
+alpha/beta protein/substrate context. The user-specified oxygen defined the
+front hemisphere in a camera-independent frame perpendicular to the terminal
+N-to-OG1 axis. At 0.025 A distance and 0.5-degree azimuth sampling, none of
+225,000 positions at 2.6–3.2 A from both atoms passed the declared steric
+screen; heavy-only and opposite-side diagnostics also failed. These finite
+fixed-conformation screens concern spatial compatibility, not activation
+energies or mechanistic exclusion. Thresholds, atom maps, source hashes,
+sensitivity analyses and failed placements are retained in the source ledger.
+
+The subsequent design strategy is proposed, not executed. We will prioritize
+a small set of chemically justified local-state models and explicit alternative
+protonation/relay hypotheses, using the native structure and mapped catalytic
+residues as constraints. Exploratory motif screening may use an intermediate
+or transition-state-like template labelled with its actual provenance. A claim
+of TS1 optimization or a quantitative barrier comparison will still require
+the saddle, reaction-mode and endpoint tests specified above.
+
+Multistate structural evaluation will cover independent noncovalent ES, TI1,
+acyl enzyme and deacylation-compatible states, with matched WT controls and
+apo/product access checks [R27–R33]. An initial focused LigandMPNN arm will
+preserve WT mature lengths and explicit alpha/beta symmetry ties; local RFD3
+backbone sampling is an optional arm rather than a replacement of the native
+fold. Repeated structural predictions will be interpreted as model ensembles,
+not equilibrium populations. For large polyamides, local QM truncation will
+be separated from full oligomer specificity testing: distal conformers,
+cleavage registers, chain ends and open-pocket geometry will be varied.
+Neither activated-ester activity in a published design nor a predicted
+polymer-bound pose establishes nylon turnover, L2 selectivity or processivity.

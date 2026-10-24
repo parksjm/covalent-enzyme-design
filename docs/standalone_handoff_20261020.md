@@ -1,3 +1,18 @@
+## Literature/manuscript checkpoint — 2026-10-24
+
+User requested preserving relayrefs and recent2025/2026 Baker/othergroup
+lessons for Nyl12 redesign. R23--R33 and new BibTeX records now retained in
+manuscript/. Introduction/Methods/sourceledger updated; proposals remain
+labelled. New docs/recent_enzyme_design_lessons_20261024.md compares final
+2025serine/2026metal, Oct14proteases, Oct15RFD3, nativefold/PET alternatives.
+Primary-access/preprint limits explicit. Pseudo-ring excluded only in tested
+fixedmodel, not a universal/transientrelay. No new QM/design/MD campaign.
+Recommended boundedchemistry models and multistatescreening with fulloligomer
+conformers/registers/termini; trueTS1 validation remains required for saddle/
+barrier claims, not a prerequisite to every exploratory structural screen.
+No new dependencies/software adopted. Laptop export includes updated drafts,
+references, machine-readable BibTeX and both research documents.
+
 ## Mechanistic interpretation extended — 2026-10-24
 
 User reconsiders frontwater and requests literature beyondNylC. Found positive

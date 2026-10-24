@@ -324,3 +324,28 @@ is shared by the reactive junction and ordinary CB-OG1; targeted corrections
 must avoid global collateral changes. This is not an accepted hybrid force
 field. Exact successful/failed attempts and source snapshots are retained in
 provenance/redesign_symmetry_and_gaff2_20261022/.
+
+## Relay references and latest design-method review — 2026-10-24
+
+Primary relay source summaries: ../docs/water_relay_mechanism_evidence_20261024.md.
+Finite packing evidence and exact screening limits:
+../docs/front_water_feasibility_20261024.md. Recent-paper comparisons and
+project-specific proposals: ../docs/recent_enzyme_design_lessons_20261024.md.
+Stable reference keys R23–R33 and DOI-only BibTeX records are now retained;
+complete author lists remain pending editorial formatting. No new QM or design
+campaign was launched by this review. Do not turn proposals into executed methods.
+
+Retrieval distinctions: Science2025 final PMC12288761 vs preprintPMC11384011;
+Nature metallohydrolase onlineDec2025 vs issue2026; Oct2026 cysteine/protease
+final abstract/extended data and official code vs metalloprotease detailed
+motif provenance verified only in primary preprint. Final RFD3 bibliographic
+record/abstract and official tutorial verified; final full Methods/SI could
+not be retrieved. RFD3 hydrogen stripping means heavy-atom donor/acceptor
+conditioning is not a calculation of proton locations or reaction barriers.
+Primary Nature source for Listov2025 was indexed/searchable; direct full-page
+retrieval redirected to authentication. PET2025 full Methods were available.
+
+Approval-review timeouts occurred before two root/agent read commands; no
+scientific input changed. A competing-literature subagent terminated with a
+model content-access error; its partial suggestions were not treated as verified
+method facts. Root independently checked benign native-fold/PET primary sources.

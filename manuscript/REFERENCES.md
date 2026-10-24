@@ -44,8 +44,8 @@ is cited as such, not represented as a peer-reviewed benchmark.
   Additional official input/symmetry documentation:
   https://github.com/RosettaCommons/foundry/blob/production/models/rfd3/docs/input.md
   and the sibling docs/examples/symmetry.md.
-  Add the final RFD3 primary-paper citation after reconciling the project's
-  stored Science 2026 citation with the exact release used for design.
+  See R31 for the verified final 2026 primary-paper record. Any production
+  design must additionally pin its actual software release/commit.
 - **R12.** Hermes, Sargsyan, Najm and Zádor. *Sella, an Open-Source
   Automation-Friendly Molecular Saddle Point Optimizer*. JCTC (2022), 18,
   6974–6988. https://doi.org/10.1021/acs.jctc.2c00395
@@ -119,3 +119,56 @@ R15–R18 and R21/R22 bibliographic/method identifiers were checked against
 publisher or official software sources. This is not a claim that all cited
 full texts were obtained. Full author-list and journal-style formatting can be
 completed when the final manuscript and accepted software manifests are frozen.
+
+## Mechanistic alternatives and recent enzyme design — added 2026-10-24
+
+- **R23.** Wei et al.. *Fundamental reaction pathway for peptide metabolism by proteasome: insights from first-principles quantum mechanical/molecular mechanical free energy calculations*. J. Phys. Chem. B (2013).
+  https://doi.org/10.1021/jp405337v
+  Primary access record: https://pubmed.ncbi.nlm.nih.gov/24111489/
+- **R24.** Chilov, Sidorova and Svedas. *Quantum chemical studies of the catalytic mechanism of N-terminal nucleophile hydrolase*. Biochemistry (Moscow) (2007).
+  https://doi.org/10.1134/S0006297907050057
+  Primary access record: https://pubmed.ncbi.nlm.nih.gov/17573703/
+- **R25.** Negoro et al.. *X-ray crystallographic and mutational analysis of the NylC precursor: catalytic mechanism of autocleavage and substrate hydrolysis of nylon hydrolase*. FEBS Journal (2023).
+  https://doi.org/10.1111/febs.16755
+  Primary access record: https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.16755
+- **R26.** *A unified mechanism for proteolysis and autocatalytic activation in the 20S proteasome*. Nature Communications (2016).
+  https://doi.org/10.1038/ncomms10900
+  Primary access record: https://pmc.ncbi.nlm.nih.gov/articles/PMC4792962/
+- **R27.** Lauko et al.. *Computational design of serine hydrolases*. Science (2025).
+  https://doi.org/10.1126/science.adu2454
+  Primary access record: https://pmc.ncbi.nlm.nih.gov/articles/PMC12288761/
+- **R28.** Kim et al.. *Computational design of metallohydrolases*. Nature (2026).
+  https://doi.org/10.1038/s41586-025-09746-w
+  Primary access record: https://www.nature.com/articles/s41586-025-09746-w
+- **R29.** Choi et al.. *De novo design of cysteine proteases*. Nature (2026).
+  https://doi.org/10.1038/s41586-026-11143-w
+  Primary access record: https://www.nature.com/articles/s41586-026-11143-w
+- **R30.** Chen et al.. *Computational design of metalloproteases*. Nature (2026).
+  https://doi.org/10.1038/s41586-026-11167-2
+  Primary access record: https://www.nature.com/articles/s41586-026-11167-2
+- **R31.** Butcher et al.. *Atomic functional site scaffolding in biopolymers with RFdiffusion3*. Science (2026).
+  https://doi.org/10.1126/science.aeh2982
+  Primary access record: https://pubmed.ncbi.nlm.nih.gov/42879533/
+- **R32.** Wang et al.. *Computational loop reconstruction based design of efficient PET hydrolases*. Communications Biology (2025).
+  https://doi.org/10.1038/s42003-025-08364-6
+  Primary access record: https://pmc.ncbi.nlm.nih.gov/articles/PMC12174350/
+- **R33.** Listov et al.. *Complete computational design of high-efficiency Kemp elimination enzymes*. Nature (2025).
+  https://doi.org/10.1038/s41586-025-09136-2
+  Primary access record: https://www.nature.com/articles/s41586-025-09136-2
+
+R23/R24 support alternative relay/direct-transfer models in other enzymes,
+not an assigned Nyl12 mechanism. R25 separates precursor autocleavage from
+mature substrate hydrolysis. R26 discusses competing proteasome general-base
+models. Full author lists and publication formatting remain editorial tasks.
+R27 is the final Science article, not the 2024 ChemNet preprint. R28 appeared
+online 2025-12-03 and in the January 2026 issue. R29/R30 appeared online
+2026-10-14; R31's primary PubMed record gives online 2026-10-15. R30 detailed
+motif provenance was checked in the authors' preprint, not final SI. Final
+R31 full Methods/SI were inaccessible; final abstract and official code/docs
+are distinguished from the older preprint. Do not transplant preprint metrics.
+Official implementation sources: https://github.com/hojaec/RFD2_MI_cysteine_protease_pipeline
+and https://rosettacommons.github.io/foundry/models/rfd3/tutorials/advanced_enzyme_design_tutorial.html .
+Additional preserved relay structural reference (full bibliographic details
+pending): *Crystal structures of penicillin acylase enzyme-substrate complexes:
+structural insights into the catalytic mechanism* (2001), publisher record
+https://www.sciencedirect.com/science/article/pii/S0022283601950430 .

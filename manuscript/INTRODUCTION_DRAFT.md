@@ -47,3 +47,23 @@ accessibility will test whether improvement around the first transition state
 creates an unfavorable later step. The objective is a reproducible route to
 experimentally testable designs, with explicit separation between structural
 plausibility, electronic-energy barriers and catalytic performance.
+
+Mechanistic models for N-terminal nucleophile hydrolases do not establish a
+universal requirement for a water bridge: water-assisted and direct-transfer
+models have been reported in other family members, and a carboxylate-containing
+network has been proposed for NylC [R23–R26]. We therefore treat relay geometry
+and protonation as hypotheses requiring structural and chemical validation.
+An unsuccessful placement search in one fixed conformation does not exclude
+transient solvation or establish an alternative mechanism.
+
+Recent generative enzyme-design studies motivate complementing local chemical
+models with structural assessment across reaction states [R27–R31]. These
+approaches do not convert a predicted intermediate or transition-state analogue
+into a verified electronic saddle point. Native-fold and polymer-hydrolase
+engineering provide additional precedents for focused redesign and conformer-
+aware evaluation [R32,R33]. For Nyl12, this distinction is essential: local
+amide chemistry must be organized while long substrate segments retain access,
+conformational diversity and product-specific cleavage registers. We propose
+separating economical catalytic-state screening from detailed reference and
+shortlist reaction-path calculations, while retaining the maturation and
+oligomeric architecture of the existing enzyme.
