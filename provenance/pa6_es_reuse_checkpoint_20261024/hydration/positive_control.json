@@ -1,0 +1,66 @@
+{
+  "accepted": true,
+  "process_exit_status": 0,
+  "elapsed_seconds": 3.089233160018921,
+  "solute_mask": ":1528@O",
+  "solvent_mask": ":WAT@O",
+  "periodic_imaging": true,
+  "box_lengths_angles": [
+    109.87032919522188,
+    109.87032919522626,
+    109.87032919523458,
+    109.471219,
+    109.471219,
+    109.471219
+  ],
+  "independent_image_search": "Triclinic lattice; 27 and125 nearest-image searches agree",
+  "known_water_residue": 1528,
+  "known_oxygen_index": 20182,
+  "water_oxygen_count": 27690,
+  "comparison": {
+    "lower35": {
+      "frame": 1,
+      "lower": 8,
+      "upper": 17,
+      "independent_numpy_lower": 8,
+      "independent_numpy_upper": 17,
+      "passed": true
+    },
+    "lower4": {
+      "frame": 1,
+      "lower": 11,
+      "upper": 17,
+      "independent_numpy_lower": 11,
+      "independent_numpy_upper": 17,
+      "passed": true
+    }
+  },
+  "sources": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/source/positive_control_triclinic.py",
+      "bytes": 6991,
+      "mtime_ns": 1792858629175303725,
+      "sha256": "b30572d0ec85c162caeaa93c47cdb84663b7909af36c61b4533f0345570cf7f4"
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+      "bytes": 12067512,
+      "mtime_ns": 1778808954000000000,
+      "sha256": "d158c9d2f0cbf1f18d548f235c9a15d8e0caf6b98c0187ceff81054d7691f7ca"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc",
+      "bytes": 1239892,
+      "mtime_ns": 1792854112874437300,
+      "sha256": "8cd4e41ae8848213896ef93c9e04d4b287c52f327bbc7d53d7c84cd39a713433"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+      "bytes": 22003531,
+      "mtime_ns": 1787096975572272225,
+      "sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+      "integrity_policy": "Inherited SHA256; current size and mtime checked"
+    }
+  ],
+  "scope": "One-frame positive functional control of water counting; self-distance included; no new dynamics or mechanism claim."
+}

@@ -1,0 +1,24 @@
+10 steps NVE pure QM MD (dt=0.5fs, no shake)
+ &cntrl
+  imin   = 0,           !no minimization
+  irest  = 1,           !restart
+  ntx    = 5,           !read coordinates and velocities
+  cut    = 8.0,         !non-bonded interactions cutoff
+  dt     = 0.0005,      !0.5fs time step
+  ntb    = 1,           !PBC
+  ntc=1,      ! no SHAKE
+  ntpr   = 1,           !print details to log every step
+  ntwx   = 1,           !write coordinates to mdcrd every step
+  ntwr   = 10,          !write restart file at last step
+  nstlim = 10,          !run for 10 steps (5 fs at dt=0.5fs)
+  jfastw   = 4,         ! do not use routines for fast triangulated water
+  ioutfm = 1,           !NetCDF MDCRD.
+  ntxo   = 1,           !Formatted restart file
+  ifqnt  = 1,
+ /
+ &qmmm
+  qmmask    = ':1-2',
+  qmcharge  = 0,
+  qm_theory = 'dftb3',
+  verbosity = 0,
+ /

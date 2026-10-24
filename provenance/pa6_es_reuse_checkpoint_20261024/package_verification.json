@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "payload_files": 306,
+  "payload_bytes": 20160710,
+  "complete_package_bytes": 20291808,
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_30",
+  "inspection_source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/seed_inspection_attempt4",
+  "checkpoint_script_sha256": "226aeefda486f0e354e859ce04937b528a951aeb3a1e32ed0be78ccf21e9191f",
+  "prior_artifacts_verified": 265
+}

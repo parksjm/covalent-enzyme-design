@@ -1,0 +1,166 @@
+{
+  "scientific_acceptance": {
+    "all_6000_frames_counted": true,
+    "selected_nine_seed_counts_match": true,
+    "original_source_metadata_unchanged": true
+  },
+  "replicas": {
+    "replica_01": {
+      "saved_frames": 2000,
+      "physical_time_ns": [
+        0.05,
+        100.0
+      ],
+      "any_water_within4_frame_count": 0,
+      "any_water_within4_frame_fraction": 0.0,
+      "same_water_within35_of_both_frame_count": 0,
+      "same_water_within35_of_both_frame_fraction": 0.0,
+      "maximum_union4_water_count": 0,
+      "process_status": {
+        "exit_status": 0,
+        "elapsed_seconds": 29.27912712097168,
+        "command": [
+          "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/watershell.cpptraj"
+        ]
+      },
+      "derived_counts": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/hydration_counts.csv",
+        "bytes": 51062,
+        "mtime_ns": 1792858298908036481,
+        "sha256": "26ae3eb54283b5013e45fbd6389951ed2ccd43d6b7adc192b213f438572b3be2"
+      }
+    },
+    "replica_02": {
+      "saved_frames": 2000,
+      "physical_time_ns": [
+        0.05,
+        100.0
+      ],
+      "any_water_within4_frame_count": 0,
+      "any_water_within4_frame_fraction": 0.0,
+      "same_water_within35_of_both_frame_count": 0,
+      "same_water_within35_of_both_frame_fraction": 0.0,
+      "maximum_union4_water_count": 0,
+      "process_status": {
+        "exit_status": 0,
+        "elapsed_seconds": 28.620231866836548,
+        "command": [
+          "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_02/watershell.cpptraj"
+        ]
+      },
+      "derived_counts": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_02/hydration_counts.csv",
+        "bytes": 51062,
+        "mtime_ns": 1792858327544095441,
+        "sha256": "26ae3eb54283b5013e45fbd6389951ed2ccd43d6b7adc192b213f438572b3be2"
+      }
+    },
+    "replica_03": {
+      "saved_frames": 2000,
+      "physical_time_ns": [
+        0.05,
+        100.0
+      ],
+      "any_water_within4_frame_count": 0,
+      "any_water_within4_frame_fraction": 0.0,
+      "same_water_within35_of_both_frame_count": 0,
+      "same_water_within35_of_both_frame_fraction": 0.0,
+      "maximum_union4_water_count": 0,
+      "process_status": {
+        "exit_status": 0,
+        "elapsed_seconds": 29.200071096420288,
+        "command": [
+          "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_03/watershell.cpptraj"
+        ]
+      },
+      "derived_counts": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_03/hydration_counts.csv",
+        "bytes": 51062,
+        "mtime_ns": 1792858356758155592,
+        "sha256": "26ae3eb54283b5013e45fbd6389951ed2ccd43d6b7adc192b213f438572b3be2"
+      }
+    }
+  },
+  "selected_seed_checks": [
+    {
+      "replica": "replica_01",
+      "full_frame": 651,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_01",
+      "full_frame": 1161,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_01",
+      "full_frame": 1701,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_02",
+      "full_frame": 651,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_02",
+      "full_frame": 1151,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_02",
+      "full_frame": 1711,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_03",
+      "full_frame": 651,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_03",
+      "full_frame": 1151,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    },
+    {
+      "replica": "replica_03",
+      "full_frame": 1681,
+      "periodic_union4_count": 0,
+      "accepted_inspection_local_count": 0,
+      "passed": true
+    }
+  ],
+  "definitions": {
+    "water": "WAT oxygen atoms only; default periodic minimum-image distances retained",
+    "lower_counts_only": true,
+    "both35": "N(lower3.5)+OG1(lower3.5)-union(lower3.5); same water oxygen within 3.5A of both",
+    "time": "full_frame*0.05 ns; historical stride10 CSV starts 0.05ns earlier"
+  },
+  "limitations": [
+    "Descriptive saved-frame fractions; no independence or confidence intervals asserted.",
+    "Distance contacts do not establish hydrogen bonding, relay orientation, or mechanism.",
+    "No new molecular dynamics was run."
+  ]
+}

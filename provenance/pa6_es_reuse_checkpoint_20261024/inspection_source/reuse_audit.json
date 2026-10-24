@@ -1,0 +1,3994 @@
+{
+  "sources": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/configs/pa6_wt_es_reuse_20261024.json",
+      "bytes": 1956,
+      "mtime_ns": 1792854013216690650,
+      "sha256": "3dba04b55deb7cebb5aefb855d621c5d2f78be0779a96e5dc76a9577e0a14239"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/scripts/audit_nyl12_pa6_md_reuse.py",
+      "bytes": 9664,
+      "mtime_ns": 1792854029264264886,
+      "sha256": "a0df72ce5d2a99d88528de494a808629ce2637ab6af8d84dd35d304accb9599a"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/active_site_monitor/full_stride10/active_site_geometry_timeseries.csv",
+      "bytes": 1383941,
+      "mtime_ns": 1788190763039069954,
+      "sha256": "1db75e056ad6e8008bdde57c1579f044be438741dd5516498b56555be138f321"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+      "bytes": 994057,
+      "mtime_ns": 1792682799894805998,
+      "sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_topology_audit.py",
+      "bytes": 7795,
+      "mtime_ns": 1792853193281542705,
+      "sha256": "571ac16d5da4183c699cb9e34ddbdfe1c3cac94e7c58bd97b65d8e2f36679ac1"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_snapshot_selection.py",
+      "bytes": 6119,
+      "mtime_ns": 1792853511516193310,
+      "sha256": "b222e8bf08f2395e6a0465054421aca70b005679199df4a3565b00b075ff485f"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_dry.prmtop",
+      "bytes": 8735718,
+      "mtime_ns": 1787099111328269136,
+      "sha256": "366f4c091bb630ec197cabfcfd3fbdd29e22f5279190e4c2506ba0ce5c6c4283"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+      "bytes": 22003531,
+      "mtime_ns": 1787096975572272225,
+      "sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.inpcrd",
+      "bytes": 3768755,
+      "mtime_ns": 1787096975570272222,
+      "sha256": "1e1570d8e6f1468cb42d4109a6112b778370615329cf772988b0ea8c3e52de87"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/leap_solvate_150mM.in",
+      "bytes": 1000,
+      "mtime_ns": 1787099133883895267,
+      "sha256": "7b59dcb329cb575cbc7724540d0f312256456fe8909fd7efb02cb35f40bcb320"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/lig.lib",
+      "bytes": 10859,
+      "mtime_ns": 1787096901336935608,
+      "sha256": "cb58d534ccc06f7e0aee4cb7313752990754ef6ef583cd60625ac7f5d5a3b472"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/lig.frcmod",
+      "bytes": 333,
+      "mtime_ns": 1787096901336786816,
+      "sha256": "0182c656bd51d3167942155c65baf82be383555073374c0885e54110ca4bc5c8"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.in",
+      "bytes": 256,
+      "mtime_ns": 1787097596561198915,
+      "sha256": "519d260d888346c5957c94c0f4b264a7e72a15eb08f432178d42aafebe3c6004"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.out",
+      "bytes": 7232599,
+      "mtime_ns": 1787137509782001725,
+      "sha256": "fe464bc511ee4499e1cc580d8c58e0b2f81ab7ba6d89d9a5d9072cb34ed7a6b6"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787137509761001687,
+      "sha256": "0c260f62ffb9e48d094a45b05bcd28f3dccce5dddc311a5cbc4382c1918a0d7b"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.rst7",
+      "bytes": 4957016,
+      "mtime_ns": 1787137509756001678,
+      "sha256": "145bac5d35d6a3f0ebe1bf3280647ac86bb8d7506b6fb3667317796b402625dd"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/make_compact_stride10.cpptraj",
+      "bytes": 575,
+      "mtime_ns": 1787757094597501894,
+      "sha256": "6fd9aafd02c911e9811e744610adfb923298e8b421b6053404d5e74a1b5d064f"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/run_replica.sh",
+      "bytes": 1622,
+      "mtime_ns": 1787097596561324702,
+      "sha256": "396fb3ff37906c49ab6a70aab051c973da7e2a88d3fc8cde7237d736e1a15f70"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.in",
+      "bytes": 256,
+      "mtime_ns": 1787097596562358477,
+      "sha256": "7b140ea504fc8a91241cbb7f2094cca3ce3c70db25ffab536b7a3e73e636a2bb"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.out",
+      "bytes": 7232599,
+      "mtime_ns": 1787138408875616905,
+      "sha256": "d84e73301df2b3925ed02d920c6208d8f83ea4804961b7055164f5d8aca24d5d"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787138408854616867,
+      "sha256": "2bf0f597dd3bcc7091d91c4599cbbbc2b216d18189277cd0c962835aecd6826c"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.rst7",
+      "bytes": 4957016,
+      "mtime_ns": 1787138408849616858,
+      "sha256": "15cabf46dd15b3bd0ec353cf5558ff0c9ca9a1531725f3b7dca041b777ef01f6"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/make_compact_stride10.cpptraj",
+      "bytes": 575,
+      "mtime_ns": 1787757097114940364,
+      "sha256": "8170ba2b1136344a18931dc7862b2e3dee5e4311be208e217fe969462d8852f9"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/run_replica.sh",
+      "bytes": 1622,
+      "mtime_ns": 1787097596562414265,
+      "sha256": "396fb3ff37906c49ab6a70aab051c973da7e2a88d3fc8cde7237d736e1a15f70"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.in",
+      "bytes": 256,
+      "mtime_ns": 1787097596562827042,
+      "sha256": "0ad18185093a08943b98028d326c291bf97e480502c80bb950c967f90ecbd04e"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.out",
+      "bytes": 7232599,
+      "mtime_ns": 1787177441434708346,
+      "sha256": "7304bb696fc176a8cba741045e0eb9be9279cdeb942e216324c6331c82e26f06"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787177441412708298,
+      "sha256": "92397db11ee8b65842f25aeb29757c2a417d262cabaecb52511343763187de60"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.rst7",
+      "bytes": 4957016,
+      "mtime_ns": 1787177441407708287,
+      "sha256": "d6c187d61a8889cabbe8034c5eb70def98e6fb06b5a0f5b448ca39cf95e7ac04"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/make_compact_stride10.cpptraj",
+      "bytes": 575,
+      "mtime_ns": 1787757099437250046,
+      "sha256": "718881352b00db53162c8321f3115ce07bd884e831934d7383d85ec988c84cfd"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/run_replica.sh",
+      "bytes": 1622,
+      "mtime_ns": 1787097596562865719,
+      "sha256": "396fb3ff37906c49ab6a70aab051c973da7e2a88d3fc8cde7237d736e1a15f70"
+    }
+  ],
+  "production": [
+    {
+      "directory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01",
+      "last_step": 50000000,
+      "declared": {
+        "nstlim": 50000000,
+        "dt": 0.002,
+        "ntwx": 25000,
+        "ig": 820117,
+        "ntr": 0,
+        "ntc": 2,
+        "ntf": 2,
+        "ntb": 2
+      },
+      "duration_ns": 100.0,
+      "frame_dt_ns": 0.05,
+      "normal_completion": true
+    },
+    {
+      "directory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02",
+      "last_step": 50000000,
+      "declared": {
+        "nstlim": 50000000,
+        "dt": 0.002,
+        "ntwx": 25000,
+        "ig": 820134,
+        "ntr": 0,
+        "ntc": 2,
+        "ntf": 2,
+        "ntb": 2
+      },
+      "duration_ns": 100.0,
+      "frame_dt_ns": 0.05,
+      "normal_completion": true
+    },
+    {
+      "directory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03",
+      "last_step": 50000000,
+      "declared": {
+        "nstlim": 50000000,
+        "dt": 0.002,
+        "ntwx": 25000,
+        "ig": 820151,
+        "ntr": 0,
+        "ntc": 2,
+        "ntf": 2,
+        "ntb": 2
+      },
+      "duration_ns": 100.0,
+      "frame_dt_ns": 0.05,
+      "normal_completion": true
+    }
+  ],
+  "topology": {
+    "topology_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_dry.prmtop",
+    "selected_atoms": {
+      "nucleophile": {
+        "index": 13916,
+        "name": "OG1",
+        "element": "O",
+        "atomic_number": 8,
+        "residue": 929,
+        "resname": "THR",
+        "type": "OH",
+        "charge": -0.6763999989024437,
+        "lj": {
+          "rmin_angstrom": 1.7209999997862238,
+          "epsilon_kcal_per_mol": 0.2104000002486992
+        },
+        "bonded_neighbors": [
+          {
+            "index": 13910,
+            "name": "CB",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 929,
+            "resname": "THR"
+          },
+          {
+            "index": 13917,
+            "name": "HG1",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 929,
+            "resname": "THR"
+          }
+        ],
+        "explicit_hydrogen_neighbors": [
+          13917
+        ]
+      },
+      "thr_n_terminus": {
+        "index": 13905,
+        "name": "N",
+        "element": "N",
+        "atomic_number": 7,
+        "residue": 929,
+        "resname": "THR",
+        "type": "N3",
+        "charge": -0.4844,
+        "lj": {
+          "rmin_angstrom": 1.8240000001431578,
+          "epsilon_kcal_per_mol": 0.16999999991766696
+        },
+        "bonded_neighbors": [
+          {
+            "index": 13906,
+            "name": "H1",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 929,
+            "resname": "THR"
+          },
+          {
+            "index": 13907,
+            "name": "H2",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 929,
+            "resname": "THR"
+          },
+          {
+            "index": 13908,
+            "name": "CA",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 929,
+            "resname": "THR"
+          }
+        ],
+        "explicit_hydrogen_neighbors": [
+          13906,
+          13907
+        ]
+      },
+      "scissile_carbon": {
+        "index": 19903,
+        "name": "C54",
+        "element": "C",
+        "atomic_number": 6,
+        "residue": 1313,
+        "resname": "LIG",
+        "type": "c",
+        "charge": 0.5351,
+        "lj": {
+          "rmin_angstrom": 1.9079999997313366,
+          "epsilon_kcal_per_mol": 0.08600000012835884
+        },
+        "bonded_neighbors": [
+          {
+            "index": 19902,
+            "name": "C62",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 1313,
+            "resname": "LIG"
+          },
+          {
+            "index": 19904,
+            "name": "O49",
+            "element": "O",
+            "atomic_number": 8,
+            "residue": 1313,
+            "resname": "LIG"
+          },
+          {
+            "index": 19905,
+            "name": "N59",
+            "element": "N",
+            "atomic_number": 7,
+            "residue": 1313,
+            "resname": "LIG"
+          }
+        ],
+        "explicit_hydrogen_neighbors": []
+      },
+      "scissile_oxygen": {
+        "index": 19904,
+        "name": "O49",
+        "element": "O",
+        "atomic_number": 8,
+        "residue": 1313,
+        "resname": "LIG",
+        "type": "o",
+        "charge": -0.6620999983536655,
+        "lj": {
+          "rmin_angstrom": 1.661200000277935,
+          "epsilon_kcal_per_mol": 0.20999999984182244
+        },
+        "bonded_neighbors": [
+          {
+            "index": 19903,
+            "name": "C54",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 1313,
+            "resname": "LIG"
+          }
+        ],
+        "explicit_hydrogen_neighbors": []
+      },
+      "leaving_nitrogen": {
+        "index": 19905,
+        "name": "N59",
+        "element": "N",
+        "atomic_number": 7,
+        "residue": 1313,
+        "resname": "LIG",
+        "type": "n",
+        "charge": -0.1809,
+        "lj": {
+          "rmin_angstrom": 1.8240000001431578,
+          "epsilon_kcal_per_mol": 0.16999999991766696
+        },
+        "bonded_neighbors": [
+          {
+            "index": 19903,
+            "name": "C54",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 1313,
+            "resname": "LIG"
+          },
+          {
+            "index": 19906,
+            "name": "C67",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 1313,
+            "resname": "LIG"
+          },
+          {
+            "index": 19946,
+            "name": "H25",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 1313,
+            "resname": "LIG"
+          }
+        ],
+        "explicit_hydrogen_neighbors": [
+          19946
+        ]
+      },
+      "oxyanion_donor_backbone": {
+        "index": 1638,
+        "name": "N",
+        "element": "N",
+        "atomic_number": 7,
+        "residue": 113,
+        "resname": "PHE",
+        "type": "N",
+        "charge": -0.4157,
+        "lj": {
+          "rmin_angstrom": 1.8240000001431578,
+          "epsilon_kcal_per_mol": 0.16999999991766696
+        },
+        "bonded_neighbors": [
+          {
+            "index": 1636,
+            "name": "C",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 112,
+            "resname": "ILE"
+          },
+          {
+            "index": 1639,
+            "name": "H",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 113,
+            "resname": "PHE"
+          },
+          {
+            "index": 1640,
+            "name": "CA",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 113,
+            "resname": "PHE"
+          }
+        ],
+        "explicit_hydrogen_neighbors": [
+          1639
+        ]
+      },
+      "oxyanion_donor_sidechain": {
+        "index": 2732,
+        "name": "ND2",
+        "element": "N",
+        "atomic_number": 7,
+        "residue": 186,
+        "resname": "ASN",
+        "type": "N",
+        "charge": -0.9190999983536654,
+        "lj": {
+          "rmin_angstrom": 1.8240000001431578,
+          "epsilon_kcal_per_mol": 0.16999999991766696
+        },
+        "bonded_neighbors": [
+          {
+            "index": 2730,
+            "name": "CG",
+            "element": "C",
+            "atomic_number": 6,
+            "residue": 186,
+            "resname": "ASN"
+          },
+          {
+            "index": 2733,
+            "name": "HD21",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 186,
+            "resname": "ASN"
+          },
+          {
+            "index": 2734,
+            "name": "HD22",
+            "element": "H",
+            "atomic_number": 1,
+            "residue": 186,
+            "resname": "ASN"
+          }
+        ],
+        "explicit_hydrogen_neighbors": [
+          2733,
+          2734
+        ]
+      }
+    },
+    "ligand": {
+      "residue": 1313,
+      "resname": "LIG",
+      "atoms": [
+        {
+          "index": 19889,
+          "name": "N56",
+          "element": "N",
+          "atomic_number": 7,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "n4",
+          "charge": 0.052399999999999995,
+          "lj": {
+            "rmin_angstrom": 1.8240000001431578,
+            "epsilon_kcal_per_mol": 0.16999999991766696
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19890,
+              "name": "C64",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19922,
+              "name": "H1",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19923,
+              "name": "H2",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19924,
+              "name": "H3",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19922,
+            19923,
+            19924
+          ]
+        },
+        {
+          "index": 19890,
+          "name": "C64",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.036199999999999996,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19889,
+              "name": "N56",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19891,
+              "name": "C72",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19925,
+              "name": "H4",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19926,
+              "name": "H5",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19925,
+            19926
+          ]
+        },
+        {
+          "index": 19891,
+          "name": "C72",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.0684,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19890,
+              "name": "C64",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19892,
+              "name": "C76",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19927,
+              "name": "H6",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19928,
+              "name": "H7",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19927,
+            19928
+          ]
+        },
+        {
+          "index": 19892,
+          "name": "C76",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": 0.0086,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19891,
+              "name": "C72",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19893,
+              "name": "C68",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19929,
+              "name": "H8",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19930,
+              "name": "H9",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19929,
+            19930
+          ]
+        },
+        {
+          "index": 19893,
+          "name": "C68",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.05740000000000001,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19892,
+              "name": "C76",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19894,
+              "name": "C60",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19931,
+              "name": "H10",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19932,
+              "name": "H11",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19931,
+            19932
+          ]
+        },
+        {
+          "index": 19894,
+          "name": "C60",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.1084,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19893,
+              "name": "C68",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19895,
+              "name": "C52",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19933,
+              "name": "H12",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19934,
+              "name": "H13",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19933,
+            19934
+          ]
+        },
+        {
+          "index": 19895,
+          "name": "C52",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c",
+          "charge": 0.5980999983536656,
+          "lj": {
+            "rmin_angstrom": 1.9079999997313366,
+            "epsilon_kcal_per_mol": 0.08600000012835884
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19894,
+              "name": "C60",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19896,
+              "name": "O47",
+              "element": "O",
+              "atomic_number": 8,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19897,
+              "name": "N58",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19896,
+          "name": "O47",
+          "element": "O",
+          "atomic_number": 8,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "o",
+          "charge": -0.6220999983536655,
+          "lj": {
+            "rmin_angstrom": 1.661200000277935,
+            "epsilon_kcal_per_mol": 0.20999999984182244
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19895,
+              "name": "C52",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19897,
+          "name": "N58",
+          "element": "N",
+          "atomic_number": 7,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "n",
+          "charge": -0.2359,
+          "lj": {
+            "rmin_angstrom": 1.8240000001431578,
+            "epsilon_kcal_per_mol": 0.16999999991766696
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19895,
+              "name": "C52",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19898,
+              "name": "C66",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19935,
+              "name": "H14",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19935
+          ]
+        },
+        {
+          "index": 19898,
+          "name": "C66",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": 0.039,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19897,
+              "name": "N58",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19899,
+              "name": "C74",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19936,
+              "name": "H15",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19937,
+              "name": "H16",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19936,
+            19937
+          ]
+        },
+        {
+          "index": 19899,
+          "name": "C74",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.04239999999999999,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19898,
+              "name": "C66",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19900,
+              "name": "C78",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19938,
+              "name": "H17",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19939,
+              "name": "H18",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19938,
+            19939
+          ]
+        },
+        {
+          "index": 19900,
+          "name": "C78",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.016399999999999998,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19899,
+              "name": "C74",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19901,
+              "name": "C70",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19940,
+              "name": "H19",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19941,
+              "name": "H20",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19940,
+            19941
+          ]
+        },
+        {
+          "index": 19901,
+          "name": "C70",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.0544,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19900,
+              "name": "C78",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19902,
+              "name": "C62",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19942,
+              "name": "H21",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19943,
+              "name": "H22",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19942,
+            19943
+          ]
+        },
+        {
+          "index": 19902,
+          "name": "C62",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.0504,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19901,
+              "name": "C70",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19903,
+              "name": "C54",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19944,
+              "name": "H23",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19945,
+              "name": "H24",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19944,
+            19945
+          ]
+        },
+        {
+          "index": 19903,
+          "name": "C54",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c",
+          "charge": 0.5351,
+          "lj": {
+            "rmin_angstrom": 1.9079999997313366,
+            "epsilon_kcal_per_mol": 0.08600000012835884
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19902,
+              "name": "C62",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19904,
+              "name": "O49",
+              "element": "O",
+              "atomic_number": 8,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19905,
+              "name": "N59",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19904,
+          "name": "O49",
+          "element": "O",
+          "atomic_number": 8,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "o",
+          "charge": -0.6620999983536655,
+          "lj": {
+            "rmin_angstrom": 1.661200000277935,
+            "epsilon_kcal_per_mol": 0.20999999984182244
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19903,
+              "name": "C54",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19905,
+          "name": "N59",
+          "element": "N",
+          "atomic_number": 7,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "n",
+          "charge": -0.1809,
+          "lj": {
+            "rmin_angstrom": 1.8240000001431578,
+            "epsilon_kcal_per_mol": 0.16999999991766696
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19903,
+              "name": "C54",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19906,
+              "name": "C67",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19946,
+              "name": "H25",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19946
+          ]
+        },
+        {
+          "index": 19906,
+          "name": "C67",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": 0.047999999999999994,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19905,
+              "name": "N59",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19907,
+              "name": "C75",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19947,
+              "name": "H26",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19948,
+              "name": "H27",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19947,
+            19948
+          ]
+        },
+        {
+          "index": 19907,
+          "name": "C75",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.053399999999999996,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19906,
+              "name": "C67",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19908,
+              "name": "C79",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19949,
+              "name": "H28",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19950,
+              "name": "H29",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19949,
+            19950
+          ]
+        },
+        {
+          "index": 19908,
+          "name": "C79",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.011399999999999999,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19907,
+              "name": "C75",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19909,
+              "name": "C71",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19951,
+              "name": "H30",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19952,
+              "name": "H31",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19951,
+            19952
+          ]
+        },
+        {
+          "index": 19909,
+          "name": "C71",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.1574,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19908,
+              "name": "C79",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19910,
+              "name": "C63",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19953,
+              "name": "H32",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19954,
+              "name": "H33",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19953,
+            19954
+          ]
+        },
+        {
+          "index": 19910,
+          "name": "C63",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.1254,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19909,
+              "name": "C71",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19911,
+              "name": "C55",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19955,
+              "name": "H34",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19956,
+              "name": "H35",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19955,
+            19956
+          ]
+        },
+        {
+          "index": 19911,
+          "name": "C55",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c",
+          "charge": 0.5451,
+          "lj": {
+            "rmin_angstrom": 1.9079999997313366,
+            "epsilon_kcal_per_mol": 0.08600000012835884
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19910,
+              "name": "C63",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19912,
+              "name": "O50",
+              "element": "O",
+              "atomic_number": 8,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19913,
+              "name": "N57",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19912,
+          "name": "O50",
+          "element": "O",
+          "atomic_number": 8,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "o",
+          "charge": -0.6370999983536656,
+          "lj": {
+            "rmin_angstrom": 1.661200000277935,
+            "epsilon_kcal_per_mol": 0.20999999984182244
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19911,
+              "name": "C55",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19913,
+          "name": "N57",
+          "element": "N",
+          "atomic_number": 7,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "n",
+          "charge": -0.1439,
+          "lj": {
+            "rmin_angstrom": 1.8240000001431578,
+            "epsilon_kcal_per_mol": 0.16999999991766696
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19911,
+              "name": "C55",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19914,
+              "name": "C65",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19957,
+              "name": "H36",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19957
+          ]
+        },
+        {
+          "index": 19914,
+          "name": "C65",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": 0.02,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19913,
+              "name": "N57",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19915,
+              "name": "C73",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19958,
+              "name": "H37",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19959,
+              "name": "H38",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19958,
+            19959
+          ]
+        },
+        {
+          "index": 19915,
+          "name": "C73",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.052399999999999995,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19914,
+              "name": "C65",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19916,
+              "name": "C77",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19960,
+              "name": "H39",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19961,
+              "name": "H40",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19960,
+            19961
+          ]
+        },
+        {
+          "index": 19916,
+          "name": "C77",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.08239999999999999,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19915,
+              "name": "C73",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19917,
+              "name": "C69",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19962,
+              "name": "H41",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19963,
+              "name": "H42",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19962,
+            19963
+          ]
+        },
+        {
+          "index": 19917,
+          "name": "C69",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": 0.0376,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19916,
+              "name": "C77",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19918,
+              "name": "C61",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19964,
+              "name": "H43",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19965,
+              "name": "H44",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19964,
+            19965
+          ]
+        },
+        {
+          "index": 19918,
+          "name": "C61",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c3",
+          "charge": -0.1674,
+          "lj": {
+            "rmin_angstrom": 1.9080000000152688,
+            "epsilon_kcal_per_mol": 0.10939999991572774
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19917,
+              "name": "C69",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19919,
+              "name": "C53",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19966,
+              "name": "H45",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19967,
+              "name": "H46",
+              "element": "H",
+              "atomic_number": 1,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": [
+            19966,
+            19967
+          ]
+        },
+        {
+          "index": 19919,
+          "name": "C53",
+          "element": "C",
+          "atomic_number": 6,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "c",
+          "charge": 0.9896000010975563,
+          "lj": {
+            "rmin_angstrom": 1.9079999997313366,
+            "epsilon_kcal_per_mol": 0.08600000012835884
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19918,
+              "name": "C61",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19920,
+              "name": "O48",
+              "element": "O",
+              "atomic_number": 8,
+              "residue": 1313,
+              "resname": "LIG"
+            },
+            {
+              "index": 19921,
+              "name": "O51",
+              "element": "O",
+              "atomic_number": 8,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19920,
+          "name": "O48",
+          "element": "O",
+          "atomic_number": 8,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "o",
+          "charge": -0.8997999978048874,
+          "lj": {
+            "rmin_angstrom": 1.661200000277935,
+            "epsilon_kcal_per_mol": 0.20999999984182244
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19919,
+              "name": "C53",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19921,
+          "name": "O51",
+          "element": "O",
+          "atomic_number": 8,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "o",
+          "charge": -0.8997999978048874,
+          "lj": {
+            "rmin_angstrom": 1.661200000277935,
+            "epsilon_kcal_per_mol": 0.20999999984182244
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19919,
+              "name": "C53",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19922,
+          "name": "H1",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.23213300022499903,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19889,
+              "name": "N56",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19923,
+          "name": "H2",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.23213300022499903,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19889,
+              "name": "N56",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19924,
+          "name": "H3",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.23213300022499903,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19889,
+              "name": "N56",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19925,
+          "name": "H4",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hx",
+          "charge": 0.0872,
+          "lj": {
+            "rmin_angstrom": 1.099999999494113,
+            "epsilon_kcal_per_mol": 0.015700000062726108
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19890,
+              "name": "C64",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19926,
+          "name": "H5",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hx",
+          "charge": 0.0872,
+          "lj": {
+            "rmin_angstrom": 1.099999999494113,
+            "epsilon_kcal_per_mol": 0.015700000062726108
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19890,
+              "name": "C64",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19927,
+          "name": "H6",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0532,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19891,
+              "name": "C72",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19928,
+          "name": "H7",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0532,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19891,
+              "name": "C72",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19929,
+          "name": "H8",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0132,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19892,
+              "name": "C76",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19930,
+          "name": "H9",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0132,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19892,
+              "name": "C76",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19931,
+          "name": "H10",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.041199999999999994,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19893,
+              "name": "C68",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19932,
+          "name": "H11",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.041199999999999994,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19893,
+              "name": "C68",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19933,
+          "name": "H12",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0322,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19894,
+              "name": "C60",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19934,
+          "name": "H13",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0322,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19894,
+              "name": "C60",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19935,
+          "name": "H14",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.1805,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19897,
+              "name": "N58",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19936,
+          "name": "H15",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.0392,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19898,
+              "name": "C66",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19937,
+          "name": "H16",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.0392,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19898,
+              "name": "C66",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19938,
+          "name": "H17",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0282,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19899,
+              "name": "C74",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19939,
+          "name": "H18",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0282,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19899,
+              "name": "C74",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19940,
+          "name": "H19",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0031999999999999997,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19900,
+              "name": "C78",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19941,
+          "name": "H20",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0031999999999999997,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19900,
+              "name": "C78",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19942,
+          "name": "H21",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0417,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19901,
+              "name": "C70",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19943,
+          "name": "H22",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0417,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19901,
+              "name": "C70",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19944,
+          "name": "H23",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0187,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19902,
+              "name": "C62",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19945,
+          "name": "H24",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0187,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19902,
+              "name": "C62",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19946,
+          "name": "H25",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.18349999999999997,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19905,
+              "name": "N59",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19947,
+          "name": "H26",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.028700000000000003,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19906,
+              "name": "C67",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19948,
+          "name": "H27",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.028700000000000003,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19906,
+              "name": "C67",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19949,
+          "name": "H28",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.026199999999999998,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19907,
+              "name": "C75",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19950,
+          "name": "H29",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.026199999999999998,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19907,
+              "name": "C75",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19951,
+          "name": "H30",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0017,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19908,
+              "name": "C79",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19952,
+          "name": "H31",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0017,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19908,
+              "name": "C79",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19953,
+          "name": "H32",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.06420000000000001,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19909,
+              "name": "C71",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19954,
+          "name": "H33",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.06420000000000001,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19909,
+              "name": "C71",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19955,
+          "name": "H34",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0692,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19910,
+              "name": "C63",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19956,
+          "name": "H35",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0692,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19910,
+              "name": "C63",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19957,
+          "name": "H36",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hn",
+          "charge": 0.1695,
+          "lj": {
+            "rmin_angstrom": 0.5999999999731258,
+            "epsilon_kcal_per_mol": 0.015700000004219245
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19913,
+              "name": "N57",
+              "element": "N",
+              "atomic_number": 7,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19958,
+          "name": "H37",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.0247,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19914,
+              "name": "C65",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19959,
+          "name": "H38",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "h1",
+          "charge": 0.0247,
+          "lj": {
+            "rmin_angstrom": 1.3869999991698632,
+            "epsilon_kcal_per_mol": 0.01570000009846142
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19914,
+              "name": "C65",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19960,
+          "name": "H39",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0367,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19915,
+              "name": "C73",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19961,
+          "name": "H40",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0367,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19915,
+              "name": "C73",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19962,
+          "name": "H41",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.005699999999999999,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19916,
+              "name": "C77",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19963,
+          "name": "H42",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.005699999999999999,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19916,
+              "name": "C77",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19964,
+          "name": "H43",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0142,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19917,
+              "name": "C69",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19965,
+          "name": "H44",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0142,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19917,
+              "name": "C69",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19966,
+          "name": "H45",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0012,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19918,
+              "name": "C61",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        },
+        {
+          "index": 19967,
+          "name": "H46",
+          "element": "H",
+          "atomic_number": 1,
+          "residue": 1313,
+          "resname": "LIG",
+          "type": "hc",
+          "charge": 0.0012,
+          "lj": {
+            "rmin_angstrom": 1.4869999997254757,
+            "epsilon_kcal_per_mol": 0.01570000002623629
+          },
+          "bonded_neighbors": [
+            {
+              "index": 19918,
+              "name": "C61",
+              "element": "C",
+              "atomic_number": 6,
+              "residue": 1313,
+              "resname": "LIG"
+            }
+          ],
+          "explicit_hydrogen_neighbors": []
+        }
+      ],
+      "net_charge": -0.0010009905445524069,
+      "connected_components": [
+        [
+          19889,
+          19890,
+          19891,
+          19892,
+          19893,
+          19894,
+          19895,
+          19896,
+          19897,
+          19898,
+          19899,
+          19900,
+          19901,
+          19902,
+          19903,
+          19904,
+          19905,
+          19906,
+          19907,
+          19908,
+          19909,
+          19910,
+          19911,
+          19912,
+          19913,
+          19914,
+          19915,
+          19916,
+          19917,
+          19918,
+          19919,
+          19920,
+          19921,
+          19922,
+          19923,
+          19924,
+          19925,
+          19926,
+          19927,
+          19928,
+          19929,
+          19930,
+          19931,
+          19932,
+          19933,
+          19934,
+          19935,
+          19936,
+          19937,
+          19938,
+          19939,
+          19940,
+          19941,
+          19942,
+          19943,
+          19944,
+          19945,
+          19946,
+          19947,
+          19948,
+          19949,
+          19950,
+          19951,
+          19952,
+          19953,
+          19954,
+          19955,
+          19956,
+          19957,
+          19958,
+          19959,
+          19960,
+          19961,
+          19962,
+          19963,
+          19964,
+          19965,
+          19966,
+          19967
+        ]
+      ],
+      "bonds": [
+        [
+          19889,
+          19890
+        ],
+        [
+          19889,
+          19922
+        ],
+        [
+          19889,
+          19923
+        ],
+        [
+          19889,
+          19924
+        ],
+        [
+          19890,
+          19891
+        ],
+        [
+          19890,
+          19925
+        ],
+        [
+          19890,
+          19926
+        ],
+        [
+          19891,
+          19892
+        ],
+        [
+          19891,
+          19927
+        ],
+        [
+          19891,
+          19928
+        ],
+        [
+          19892,
+          19893
+        ],
+        [
+          19892,
+          19929
+        ],
+        [
+          19892,
+          19930
+        ],
+        [
+          19893,
+          19894
+        ],
+        [
+          19893,
+          19931
+        ],
+        [
+          19893,
+          19932
+        ],
+        [
+          19894,
+          19895
+        ],
+        [
+          19894,
+          19933
+        ],
+        [
+          19894,
+          19934
+        ],
+        [
+          19895,
+          19896
+        ],
+        [
+          19895,
+          19897
+        ],
+        [
+          19897,
+          19898
+        ],
+        [
+          19897,
+          19935
+        ],
+        [
+          19898,
+          19899
+        ],
+        [
+          19898,
+          19936
+        ],
+        [
+          19898,
+          19937
+        ],
+        [
+          19899,
+          19900
+        ],
+        [
+          19899,
+          19938
+        ],
+        [
+          19899,
+          19939
+        ],
+        [
+          19900,
+          19901
+        ],
+        [
+          19900,
+          19940
+        ],
+        [
+          19900,
+          19941
+        ],
+        [
+          19901,
+          19902
+        ],
+        [
+          19901,
+          19942
+        ],
+        [
+          19901,
+          19943
+        ],
+        [
+          19902,
+          19903
+        ],
+        [
+          19902,
+          19944
+        ],
+        [
+          19902,
+          19945
+        ],
+        [
+          19903,
+          19904
+        ],
+        [
+          19903,
+          19905
+        ],
+        [
+          19905,
+          19906
+        ],
+        [
+          19905,
+          19946
+        ],
+        [
+          19906,
+          19907
+        ],
+        [
+          19906,
+          19947
+        ],
+        [
+          19906,
+          19948
+        ],
+        [
+          19907,
+          19908
+        ],
+        [
+          19907,
+          19949
+        ],
+        [
+          19907,
+          19950
+        ],
+        [
+          19908,
+          19909
+        ],
+        [
+          19908,
+          19951
+        ],
+        [
+          19908,
+          19952
+        ],
+        [
+          19909,
+          19910
+        ],
+        [
+          19909,
+          19953
+        ],
+        [
+          19909,
+          19954
+        ],
+        [
+          19910,
+          19911
+        ],
+        [
+          19910,
+          19955
+        ],
+        [
+          19910,
+          19956
+        ],
+        [
+          19911,
+          19912
+        ],
+        [
+          19911,
+          19913
+        ],
+        [
+          19913,
+          19914
+        ],
+        [
+          19913,
+          19957
+        ],
+        [
+          19914,
+          19915
+        ],
+        [
+          19914,
+          19958
+        ],
+        [
+          19914,
+          19959
+        ],
+        [
+          19915,
+          19916
+        ],
+        [
+          19915,
+          19960
+        ],
+        [
+          19915,
+          19961
+        ],
+        [
+          19916,
+          19917
+        ],
+        [
+          19916,
+          19962
+        ],
+        [
+          19916,
+          19963
+        ],
+        [
+          19917,
+          19918
+        ],
+        [
+          19917,
+          19964
+        ],
+        [
+          19917,
+          19965
+        ],
+        [
+          19918,
+          19919
+        ],
+        [
+          19918,
+          19966
+        ],
+        [
+          19918,
+          19967
+        ],
+        [
+          19919,
+          19920
+        ],
+        [
+          19919,
+          19921
+        ]
+      ]
+    },
+    "mapped_residues": [
+      {
+        "residue": 113,
+        "resname": "PHE",
+        "net_charge": -1.0975563361804996e-09,
+        "atom_count": 20,
+        "explicit_hydrogen_count": 9
+      },
+      {
+        "residue": 186,
+        "resname": "ASN",
+        "net_charge": 2.195112792924281e-09,
+        "atom_count": 14,
+        "explicit_hydrogen_count": 6
+      },
+      {
+        "residue": 929,
+        "resname": "THR",
+        "net_charge": -0.0010000005487783227,
+        "atom_count": 15,
+        "explicit_hydrogen_count": 8
+      },
+      {
+        "residue": 1313,
+        "resname": "LIG",
+        "net_charge": -0.0010009905445524069,
+        "atom_count": 79,
+        "explicit_hydrogen_count": 46
+      }
+    ],
+    "protonation_observations": {
+      "nucleophile": {
+        "explicit_hydrogen_count": 1
+      },
+      "thr_n_terminus": {
+        "explicit_hydrogen_count": 2
+      },
+      "scissile_carbon": {
+        "explicit_hydrogen_count": 0
+      },
+      "scissile_oxygen": {
+        "explicit_hydrogen_count": 0
+      },
+      "leaving_nitrogen": {
+        "explicit_hydrogen_count": 1
+      },
+      "oxyanion_donor_backbone": {
+        "explicit_hydrogen_count": 1
+      },
+      "oxyanion_donor_sidechain": {
+        "explicit_hydrogen_count": 2
+      }
+    },
+    "limitations": [
+      "Hydrogen counts describe observed topology bonds only.",
+      "Bond orders, charge method, and mechanistic state are not inferred."
+    ]
+  },
+  "native_mapping": {
+    "rows": [
+      {
+        "label": "phe113",
+        "chain": "A",
+        "number": 113,
+        "resname": "PHE",
+        "topology_residue": 113,
+        "native_identity_verified": true
+      },
+      {
+        "label": "asn186",
+        "chain": "A",
+        "number": 186,
+        "resname": "ASN",
+        "topology_residue": 186,
+        "native_identity_verified": true
+      },
+      {
+        "label": "thr233",
+        "chain": "A",
+        "number": 233,
+        "resname": "THR",
+        "topology_residue": 929,
+        "native_identity_verified": true
+      },
+      {
+        "label": "asp272",
+        "chain": "A",
+        "number": 272,
+        "resname": "ASP",
+        "topology_residue": 968,
+        "native_identity_verified": true
+      },
+      {
+        "label": "asp274",
+        "chain": "A",
+        "number": 274,
+        "resname": "ASP",
+        "topology_residue": 970,
+        "native_identity_verified": true
+      }
+    ],
+    "distances_angstrom": {
+      "asp272:OD1-thr233:N": 2.830482997652519,
+      "asp272:OD1-thr233:OG1": 4.920350902120702,
+      "asp272:OD2-thr233:N": 4.958306565754077,
+      "asp272:OD2-thr233:OG1": 6.683734509987661,
+      "asp274:OD1-thr233:N": 3.9997901194937744,
+      "asp274:OD1-thr233:OG1": 4.940148378338447,
+      "asp274:OD2-thr233:N": 5.719335800597828,
+      "asp274:OD2-thr233:OG1": 6.646108410190131
+    },
+    "literature_residue_correspondence": "Not established by this identity check"
+  },
+  "selected_frames": [
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_01",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc",
+      "frame": 66,
+      "time_ns_estimate": "32.500",
+      "d1_d_OG1_scissile_C": 3.1887,
+      "d2_d_Phe113N_scissile_O": 3.0149,
+      "d3_d_Asn186ND2_scissile_O": 2.656,
+      "a1_alpha_Burgi_Dunitz": 106.0426,
+      "Herschlag_phi": -88.628236,
+      "ordinal_frame": 66,
+      "full_frame": 651,
+      "physical_time_ns": 32.550000000000004,
+      "logged_time_ns": 32.5,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 20.0,
+      "window_end_ns": 45.0,
+      "eligible_count": 39,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854112874437300,
+        "sha256": "8cd4e41ae8848213896ef93c9e04d4b287c52f327bbc7d53d7c84cd39a713433"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_01",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc",
+      "frame": 117,
+      "time_ns_estimate": "58.000",
+      "d1_d_OG1_scissile_C": 3.4064,
+      "d2_d_Phe113N_scissile_O": 3.0147,
+      "d3_d_Asn186ND2_scissile_O": 2.8978,
+      "a1_alpha_Burgi_Dunitz": 107.5684,
+      "Herschlag_phi": -84.44598,
+      "ordinal_frame": 117,
+      "full_frame": 1161,
+      "physical_time_ns": 58.050000000000004,
+      "logged_time_ns": 58.0,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 45.0,
+      "window_end_ns": 70.0,
+      "eligible_count": 30,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_1161",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_1161/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854117737447329,
+        "sha256": "768026faad1d523a68737d6d046a9713661ac06aa39f82b69a6f097d65cebf20"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_01",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc",
+      "frame": 171,
+      "time_ns_estimate": "85.000",
+      "d1_d_OG1_scissile_C": 3.3582,
+      "d2_d_Phe113N_scissile_O": 2.9754,
+      "d3_d_Asn186ND2_scissile_O": 2.9216,
+      "a1_alpha_Burgi_Dunitz": 108.0031,
+      "Herschlag_phi": -86.353182,
+      "ordinal_frame": 171,
+      "full_frame": 1701,
+      "physical_time_ns": 85.05000000000001,
+      "logged_time_ns": 85.0,
+      "time_offset_ns": 0.05000000000001137,
+      "window_start_ns": 70.0,
+      "window_end_ns": 100.0,
+      "eligible_count": 31,
+      "total_count": 60,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_1701",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_1701/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854123485459182,
+        "sha256": "38c1e24aab03e9195c41e4863df0bdbdbc05cc8b78019f9326d5bf7bf20a1b09"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_02",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.nc",
+      "frame": 66,
+      "time_ns_estimate": "32.500",
+      "d1_d_OG1_scissile_C": 3.0846,
+      "d2_d_Phe113N_scissile_O": 3.1772,
+      "d3_d_Asn186ND2_scissile_O": 2.7104,
+      "a1_alpha_Burgi_Dunitz": 88.8479,
+      "Herschlag_phi": -81.253042,
+      "ordinal_frame": 66,
+      "full_frame": 651,
+      "physical_time_ns": 32.550000000000004,
+      "logged_time_ns": 32.5,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 20.0,
+      "window_end_ns": 45.0,
+      "eligible_count": 33,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_0651",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_0651/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854128877470301,
+        "sha256": "fa91a998551e75289a7acdf0a75458d3940ce07c1bd340f4b4c59baf9f850dad"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_02",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.nc",
+      "frame": 116,
+      "time_ns_estimate": "57.500",
+      "d1_d_OG1_scissile_C": 3.311,
+      "d2_d_Phe113N_scissile_O": 3.0627,
+      "d3_d_Asn186ND2_scissile_O": 2.9319,
+      "a1_alpha_Burgi_Dunitz": 102.7068,
+      "Herschlag_phi": -102.304747,
+      "ordinal_frame": 116,
+      "full_frame": 1151,
+      "physical_time_ns": 57.550000000000004,
+      "logged_time_ns": 57.5,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 45.0,
+      "window_end_ns": 70.0,
+      "eligible_count": 18,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_1151",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_1151/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854134583482067,
+        "sha256": "0e05a6d24d77417cc181ace79cbbf827cfad6b12cffae93338d309578b8e3634"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_02",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.nc",
+      "frame": 172,
+      "time_ns_estimate": "85.500",
+      "d1_d_OG1_scissile_C": 3.1285,
+      "d2_d_Phe113N_scissile_O": 3.0592,
+      "d3_d_Asn186ND2_scissile_O": 2.8257,
+      "a1_alpha_Burgi_Dunitz": 113.5525,
+      "Herschlag_phi": -93.895069,
+      "ordinal_frame": 172,
+      "full_frame": 1711,
+      "physical_time_ns": 85.55000000000001,
+      "logged_time_ns": 85.5,
+      "time_offset_ns": 0.05000000000001137,
+      "window_start_ns": 70.0,
+      "window_end_ns": 100.0,
+      "eligible_count": 23,
+      "total_count": 60,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_1711",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_02_frame_1711/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854140130493506,
+        "sha256": "1362667d103cc5cbf74c6de94c6ec2ef45fbb1ac7689c903efd9e69cf9763daf"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_03",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.nc",
+      "frame": 66,
+      "time_ns_estimate": "32.500",
+      "d1_d_OG1_scissile_C": 3.4577,
+      "d2_d_Phe113N_scissile_O": 2.9727,
+      "d3_d_Asn186ND2_scissile_O": 2.8244,
+      "a1_alpha_Burgi_Dunitz": 109.046,
+      "Herschlag_phi": -95.403154,
+      "ordinal_frame": 66,
+      "full_frame": 651,
+      "physical_time_ns": 32.550000000000004,
+      "logged_time_ns": 32.5,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 20.0,
+      "window_end_ns": 45.0,
+      "eligible_count": 23,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_0651",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_0651/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854145960505528,
+        "sha256": "e0e077dc908d4eaac107d6b7b859404d9fbca16c1fe729de774bd6d4f0afbf51"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_03",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.nc",
+      "frame": 116,
+      "time_ns_estimate": "57.500",
+      "d1_d_OG1_scissile_C": 3.2462,
+      "d2_d_Phe113N_scissile_O": 3.299,
+      "d3_d_Asn186ND2_scissile_O": 2.8356,
+      "a1_alpha_Burgi_Dunitz": 96.9266,
+      "Herschlag_phi": -98.022829,
+      "ordinal_frame": 116,
+      "full_frame": 1151,
+      "physical_time_ns": 57.550000000000004,
+      "logged_time_ns": 57.5,
+      "time_offset_ns": 0.05000000000000426,
+      "window_start_ns": 45.0,
+      "window_end_ns": 70.0,
+      "eligible_count": 15,
+      "total_count": 50,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_1151",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_1151/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854151368516680,
+        "sha256": "70b026da22180b2697b8c9b111eae1ea55984d401b31fc6cdd01e0e7b841e77a"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    },
+    {
+      "variant": "WT",
+      "model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "replica": "replica_03",
+      "trajectory_kind": "full",
+      "trajectory": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.nc",
+      "frame": 169,
+      "time_ns_estimate": "84.000",
+      "d1_d_OG1_scissile_C": 3.4051,
+      "d2_d_Phe113N_scissile_O": 2.8501,
+      "d3_d_Asn186ND2_scissile_O": 2.8934,
+      "a1_alpha_Burgi_Dunitz": 124.8143,
+      "Herschlag_phi": -87.360574,
+      "ordinal_frame": 169,
+      "full_frame": 1681,
+      "physical_time_ns": 84.05000000000001,
+      "logged_time_ns": 84.0,
+      "time_offset_ns": 0.05000000000001137,
+      "window_start_ns": 70.0,
+      "window_end_ns": 100.0,
+      "eligible_count": 26,
+      "total_count": 60,
+      "directory": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_1681",
+      "solvated_coordinates": {
+        "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_03_frame_1681/solvated.nc",
+        "bytes": 1239892,
+        "mtime_ns": 1792854157238528784,
+        "sha256": "619391a6d6fa41fd5b93693037ab0cc05c733bc411cfb7221bf84e30f10558be"
+      },
+      "atom_count": 103251,
+      "water_count": 27690
+    }
+  ],
+  "acceptance": {
+    "reuse_audit_complete": true,
+    "qmmm_hamiltonian_validated": false,
+    "production_free_energy_authorized_by_audit": false
+  },
+  "limitations": [
+    "Independent seeds do not prove ensemble independence.",
+    "Selected frames are conditional seeds, not occupancy estimates.",
+    "AM1-BCC provenance requires the original charge-generation record."
+  ]
+}

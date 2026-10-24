@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/source/positive_control.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "OMP_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/configs/pa6_wt_es_reuse_20261024.json": "3dba04b55deb7cebb5aefb855d621c5d2f78be0779a96e5dc76a9577e0a14239",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/reuse_audit.json": "38e339a6406708f7c91ce98879701a21d9e762e15f666b8669127c958e6eb69f",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/source/positive_control.py": "dd569263de46d8fc5eb276e7fbc52dcd7b7371120dcfa15377d8d712a4542b38"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/jobs/positive_control_attempt1/job.log",
+  "session_name": "pa6_hydration_positive_20261024_r1",
+  "started_utc": null
+}

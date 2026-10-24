@@ -1,3 +1,29 @@
+## WT PA6 ES recovery and hydration completed — 2026-10-24
+
+User accepted the staged project and authorized progress today. Audited three
+normally completed 100 ns WT runs with distinct seeds, ff19SB/GAFF1/TIP3P and
+Thr OH/NH2. Nine full-solvent seeds extracted in tmux with source hashes;
+native CIF residue identities checked. Native Asp272 OD1–Thr233 N = 2.83048 Å;
+no catalytic role or literature homology assigned. See
+docs/pa6_es_reuse_audit_20261024.md and
+output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/reuse_audit.json.
+Installed DFTB3 water/NMA regression energies match references: engine QA only.
+All nine seeds passed independent geometry/source checks. Full saved-frame
+hydration analysis found no water O within 4 Å of occupied-site Thr N/OG1 in
+any of 6000 frames (3 × 100 ns, 50 ps cadence); no simultaneous 3.5 Å contacts.
+Water-centered positive control matches independent periodic counts. This is
+conditional ES-model evidence, not a universal no-relay claim or deacylation
+model. See docs/pa6_es_hydration_20261024.md and the portable PyMOL export in
+output_nyl12_pa6_es_audit_20261024/seed_inspection_attempt4/.
+559 tests passed, 13 skipped; new-code coverage 95.12%. Exact old-PDB phi and
+raw-NetCDF values both retained after identifying precision tie rounding.
+User clarified that n12c.cif comes from a coauthored manuscript in revision;
+the formal citation will be provided after publication. Record it as the
+supplied structural reference; do not invent a public accession/citation.
+No new production MD/PMF, TI1 fit or TS accepted. Next define the locally
+truncated QM core, boundaries and charge inventory, then bounded DFTB3/MM and
+selected hybrid-DFT PES checks. See docs/pa6_dftb_validation_pilot_20261024.md.
+
 ## Proposed separate WT PA6 mechanistic project — 2026-10-24
 
 User supports considering a full chemical-cycle DFTB QM/MM free-energy study

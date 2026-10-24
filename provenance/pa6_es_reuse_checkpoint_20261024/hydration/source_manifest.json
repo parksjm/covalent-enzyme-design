@@ -1,0 +1,64 @@
+{
+  "hashed_sources": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/configs/pa6_wt_es_reuse_20261024.json",
+      "bytes": 1956,
+      "mtime_ns": 1792854013216690650,
+      "sha256": "3dba04b55deb7cebb5aefb855d621c5d2f78be0779a96e5dc76a9577e0a14239"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/reuse_audit.json",
+      "bytes": 110308,
+      "mtime_ns": 1792854163180039907,
+      "sha256": "38e339a6406708f7c91ce98879701a21d9e762e15f666b8669127c958e6eb69f"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/seed_inspection_attempt4/inspection.json",
+      "bytes": 299101,
+      "mtime_ns": 1792857990584401585,
+      "sha256": "14f5eb0536395259434c206065f1ac3f599851a460a69c970bcf2c0e918de8dc"
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+      "bytes": 12067512,
+      "mtime_ns": 1778808954000000000,
+      "sha256": "d158c9d2f0cbf1f18d548f235c9a15d8e0caf6b98c0187ceff81054d7691f7ca"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/source/hydration_audit.py",
+      "bytes": 11084,
+      "mtime_ns": 1792858252719941381,
+      "sha256": "291b2ee2bd2c43839a9a8421ca68e11f912a89946b1ccf144613112256908577"
+    }
+  ],
+  "inherited_sources": [
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+      "bytes": 22003531,
+      "mtime_ns": 1787096975572272225,
+      "sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+      "integrity_policy": "Inherited SHA256 from original audit; current size and mtime verified; not rehashed"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787137509761001687,
+      "sha256": "0c260f62ffb9e48d094a45b05bcd28f3dccce5dddc311a5cbc4382c1918a0d7b",
+      "integrity_policy": "Inherited SHA256 from original audit; current size and mtime verified; not rehashed"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787138408854616867,
+      "sha256": "2bf0f597dd3bcc7091d91c4599cbbbc2b216d18189277cd0c962835aecd6826c",
+      "integrity_policy": "Inherited SHA256 from original audit; current size and mtime verified; not rehashed"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.nc",
+      "bytes": 2478128816,
+      "mtime_ns": 1787177441412708298,
+      "sha256": "92397db11ee8b65842f25aeb29757c2a417d262cabaecb52511343763187de60",
+      "integrity_policy": "Inherited SHA256 from original audit; current size and mtime verified; not rehashed"
+    }
+  ]
+}

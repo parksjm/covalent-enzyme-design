@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+export STATUS_PATH=/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/jobs/full_checks_complete/status.json
+exec >>/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/jobs/full_checks_complete/job.log 2>&1
+cd -- /data/jpc/covalent-enzyme-design || exit $?
+export OMP_NUM_THREADS=1
+export UV_CACHE_DIR=/tmp/nyl12_uv_cache
+/data/jpc/covalent-enzyme-design/.venv/bin/python -c 'import datetime,json,os; p=os.environ['"'"'STATUS_PATH'"'"']; d=json.load(open(p)); d['"'"'started_utc'"'"']=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('"'"'+00:00'"'"','"'"'Z'"'"'); json.dump(d,open(p,'"'"'w'"'"'),indent=2,sort_keys=True); open(p,'"'"'a'"'"').write('"'"'\n'"'"')' || exit $?
+finish_job() { JOB_EXIT=$?; export JOB_EXIT; trap - EXIT HUP INT TERM; /data/jpc/covalent-enzyme-design/.venv/bin/python -c 'import datetime,json,os,tempfile; p=os.environ['"'"'STATUS_PATH'"'"']; d=json.load(open(p)); d['"'"'ended_utc'"'"']=datetime.datetime.now(datetime.timezone.utc).isoformat().replace('"'"'+00:00'"'"','"'"'Z'"'"'); d['"'"'exit_status'"'"']=int(os.environ['"'"'JOB_EXIT'"'"']); fd,tmp=tempfile.mkstemp(dir=os.path.dirname(p)); f=os.fdopen(fd,'"'"'w'"'"'); json.dump(d,f,indent=2,sort_keys=True); f.write('"'"'\n'"'"'); f.close(); os.replace(tmp,p)' || exit 125; exit "$JOB_EXIT"; }
+trap finish_job EXIT
+trap 'exit 129' HUP
+trap 'exit 130' INT
+trap 'exit 143' TERM
+/home/jpc/.local/bin/uv run --offline pytest --cov=nyl12_covalent.es_seed_display --cov=nyl12_covalent.es_seed_legacy_geometry --cov=nyl12_covalent.es_snapshot_selection --cov=nyl12_covalent.es_topology_audit --cov=nyl12_covalent.es_water_inventory --cov=scripts.audit_nyl12_pa6_md_reuse --cov=scripts.inspect_nyl12_pa6_es_seeds --cov-report=term-missing --cov-fail-under=80

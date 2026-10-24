@@ -361,3 +361,47 @@ DFTB sampling with sparse hybrid DFT PES checks is a proposal only; no new MD
 or QM/MM simulation was started. No NylB pivot is authorized. Primary references
 R34/R35 document existing NylB QM/MM work and approximate-QM proton-transfer
 benchmarking. Source access limits are recorded in REFERENCES.md.
+
+## Recovered WT PA6 ES data and DFTB3 installation QA — 2026-10-24
+
+The source system is the August 18 PA6 pilot, WT Boltz model41, replicas01–03.
+`output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/reuse_audit.json`
+records original file SHA256, all three completed production logs, actual
+protonation/connectivity, native CIF identity checks and nine extracted seeds.
+Original ligand lib/frcmod match the preparation-cache copies exactly. GAFF1,
+ff19SB and TIP3P are directly supported by LEaP input. AM1BCC intermediates
+support the charge workflow; exact historical invocation/version is a gap.
+Original small charge residuals remain unchanged. Nine selected near-reactive
+seeds are not independent population samples or optimized TI1/TS structures.
+
+`output_nyl12_dftb_engine_checks_20261024/` retains copied shipped inputs,
+references, executable/CHNO parameter hashes, process logs and numerical energy
+comparisons. Water minimization and NMA/water regression series match at printed
+precision. The supplied NMA regression solvent differs from the enzyme dataset;
+it is an installation test, not an adopted water model or chemical benchmark.
+
+Additional primary implementation reading: Rutgers/Amber QM/MM PMF tutorial,
+https://ambertutorials-rutgerslbsr-c744272d5a9c1169e0dc9e19b8d800019105.gitlab.io/workshop/04_qmmmMTR1/QMMM_PMF.html .
+It illustrates DFTB3, multidimensional sampling and unrestrained QM hydrogen
+motion; its ribozyme settings are not automatically Nyl12 settings. FEBS R25
+mature-substrate section was reread separately from precursor autocleavage.
+Native Asp272 proximity to Thr N is measured; NylC literature correspondence
+remains unverified, and no catalytic mechanism is assigned by that distance.
+
+Full saved-frame hydration analysis completed under
+output_nyl12_pa6_hydration_20261024/: three 2,000-frame records, no water O
+within 4 Å of occupied-site Thr N/OG1 and no simultaneous 3.5 Å contacts.
+Independent geometry/water checks of all nine seeds agree. The assay is descriptive and
+conditional on the old ES/protonation model, 50 ps sampling and bound starts;
+it cannot rule out a water relay or determine deacylation hydration.
+Source hashes are inherited from the preceding full-file audit, with size/mtime
+checks during this read-only analysis. Passed full project checks: 559 tests,
+13 skipped, 95.12% coverage of all new code. Ruff lint/format passed before
+coverage-import cleanup; the final formatting check is retained separately.
+
+Reference-origin clarification (user communication, 24 October 2026):
+`cif/n12c.cif` was supplied from a Nyl12 manuscript currently in revision,
+with the user as a coauthor. The formal citation will be updated after
+publication. No public accession, experimental method or editing history was
+provided by this clarification. Describe it as the supplied structural
+reference; do not infer those missing details from its filename/header.

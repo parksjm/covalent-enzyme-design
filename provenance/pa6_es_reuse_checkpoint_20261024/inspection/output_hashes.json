@@ -1,0 +1,166 @@
+[
+  {
+    "path": "README.txt",
+    "sha256": "f4786bbf37458d6e01ab771d30eda6c5f936d887e05daffdb59be40f073c17c3"
+  },
+  {
+    "path": "context_mapping.json",
+    "sha256": "4e45486253713b498912953eada79950366ef0454b8e8b1a99e9bf4eeb6541d4"
+  },
+  {
+    "path": "fullprotein_substrate.pdb",
+    "sha256": "c4e8d89a1c3e26e9efabd109d73b5e83c086d4e95046f25df76be73987cbd3a9"
+  },
+  {
+    "path": "inspection.json",
+    "sha256": "14f5eb0536395259434c206065f1ac3f599851a460a69c970bcf2c0e918de8dc"
+  },
+  {
+    "path": "replica_01_frame_0651.pdb",
+    "sha256": "51cf04dcf4beae008cd7ec4f4e7b501aa8a6ab9526b55c6e3a41cd7930731f5a"
+  },
+  {
+    "path": "replica_01_frame_0651_mapping.json",
+    "sha256": "6458a0e7aa6182205084151eae2372d9a5bc2d3a23c09c00c6c0bf7336e24406"
+  },
+  {
+    "path": "replica_01_frame_1161.pdb",
+    "sha256": "eb5d4d8305406dab43beafbf81c6b1bd84b668437423b9037513be807aa915de"
+  },
+  {
+    "path": "replica_01_frame_1161_mapping.json",
+    "sha256": "d02eab35a042bfd6b9f67fa032baec868d53140ab00c048bd1045502240bd439"
+  },
+  {
+    "path": "replica_01_frame_1701.pdb",
+    "sha256": "286bf7cf76dd646737bf4754c1834432d8fba39336259c6a9d30da0dff9faa59"
+  },
+  {
+    "path": "replica_01_frame_1701_mapping.json",
+    "sha256": "8a279f73c06d46f02bb6849995114ba49bc43862614e7ab9b41c6d87d09bec8d"
+  },
+  {
+    "path": "replica_02_frame_0651.pdb",
+    "sha256": "577a1849a8d8f1e29e099a18150ea19ea1db59693435638386cf098518fdf2ea"
+  },
+  {
+    "path": "replica_02_frame_0651_mapping.json",
+    "sha256": "f63b9809bfd142d8d64154d5711292fa8e17a7284656b5ad53a73d29318a1e5b"
+  },
+  {
+    "path": "replica_02_frame_1151.pdb",
+    "sha256": "e5cc7fd51b7c6eb2ba6ac84f96256666c2d52fab058476c82f3e0f16f4e75ca4"
+  },
+  {
+    "path": "replica_02_frame_1151_mapping.json",
+    "sha256": "034de3aa37fc7019ea70b2dbf9d3d5f674a0832bdcbf0cb2dc520dd3913c620f"
+  },
+  {
+    "path": "replica_02_frame_1711.pdb",
+    "sha256": "a5247a97a31064b980c4667aa24baeaa4abec7b5715a4c0540e32296e3020704"
+  },
+  {
+    "path": "replica_02_frame_1711_mapping.json",
+    "sha256": "5e90df07710f1a0a67fd641c1da6fdfd505871dad48bda791530663deb9d84af"
+  },
+  {
+    "path": "replica_03_frame_0651.pdb",
+    "sha256": "3dfa4303ac78bb03c1ee363075e4ac919a20707a0efcb6bfb84dd144c7a12f01"
+  },
+  {
+    "path": "replica_03_frame_0651_mapping.json",
+    "sha256": "cb383dfffc7d79542fd71c7a5f9703366c0888796a7dd9ad29b93ea802e088c8"
+  },
+  {
+    "path": "replica_03_frame_1151.pdb",
+    "sha256": "33064abfc783682f2a82955d7ef830c3ba9dda2bb35e622055e2a19e123a2b46"
+  },
+  {
+    "path": "replica_03_frame_1151_mapping.json",
+    "sha256": "266021c6880f5033a211c1fd29fb59467aaa04d1cf1ffa50c5a2362a9ca76778"
+  },
+  {
+    "path": "replica_03_frame_1681.pdb",
+    "sha256": "bac1969ef9571fc0dd0e101237407326f957d8b25f86cdf2be6abcb0a5121158"
+  },
+  {
+    "path": "replica_03_frame_1681_mapping.json",
+    "sha256": "9add887ff2996fc8ae97b85470fd2a9c14f83cb00c0935acad799979d9d8ae0f"
+  },
+  {
+    "path": "source/active_site_geometry.py",
+    "sha256": "834b5782f41e2e71033de8fd74befc91b9fffa08d4802105bc597ebfa0bbd455"
+  },
+  {
+    "path": "source/es_seed_display.py",
+    "sha256": "3dee8ee38abaa6de9abd4d2f7071b7e870fd53197ff0ee6f9f5d605e304a7712"
+  },
+  {
+    "path": "source/es_seed_legacy_geometry.py",
+    "sha256": "4e8ff6a411441d4ba482e6c55f967e1f9a97f7addc492ff3fde634ae98112ab6"
+  },
+  {
+    "path": "source/es_water_inventory.py",
+    "sha256": "a25eb786ceedadb139f58b990bc6ca65618813dbe0c57f65e58bd7750cdc30dd"
+  },
+  {
+    "path": "source/inspect_nyl12_pa6_es_seeds.py",
+    "sha256": "c949c879c66404785f60e6637b143b1b3a23b74f97184c10acc331366c343c68"
+  },
+  {
+    "path": "source/monitor_active_site_geometry.py",
+    "sha256": "c371c556518c2280ad594f8838aba3ac409af38ec4eee953f76ef2096c2f1252"
+  },
+  {
+    "path": "source/pa6_wt_es_reuse_20261024.json",
+    "sha256": "3dba04b55deb7cebb5aefb855d621c5d2f78be0779a96e5dc76a9577e0a14239"
+  },
+  {
+    "path": "source/replica_01_herschlag_phi_atoms.pdb.117",
+    "sha256": "b1c8b1a07ca1dab4b296a2bb89e3ae161293b181c76f98409144a7e35df593b2"
+  },
+  {
+    "path": "source/replica_01_herschlag_phi_atoms.pdb.171",
+    "sha256": "9cf449b56718d530ce450048b9dd19eac64f4ad3b3ce72e2e8864cc9e2b04920"
+  },
+  {
+    "path": "source/replica_01_herschlag_phi_atoms.pdb.66",
+    "sha256": "595fa249d1e9a4ee59430e7cd07870c93a615a6e09abe6b2a40f2594f959c716"
+  },
+  {
+    "path": "source/replica_02_herschlag_phi_atoms.pdb.116",
+    "sha256": "58b6f669cbe63b5d77dbb1a784aa4319b737883863056b49e040e16b1eb3f018"
+  },
+  {
+    "path": "source/replica_02_herschlag_phi_atoms.pdb.172",
+    "sha256": "fe80d8937757f53dd74d36e91494468093456665344d554d3c4c415afb5a3611"
+  },
+  {
+    "path": "source/replica_02_herschlag_phi_atoms.pdb.66",
+    "sha256": "ed6b92fae2d798ffdd0db4243f60d64e6e7372e71b26d3a0340a5450050fa617"
+  },
+  {
+    "path": "source/replica_03_herschlag_phi_atoms.pdb.116",
+    "sha256": "017d4a9e854aa8f88a5b2c252ff67041824185d09aefde0e0573ee1eaaec6f91"
+  },
+  {
+    "path": "source/replica_03_herschlag_phi_atoms.pdb.169",
+    "sha256": "2c4f89aa1cbd33a45baf3d411d113b960915a423b10ee3fd43514d9010c8d4dd"
+  },
+  {
+    "path": "source/replica_03_herschlag_phi_atoms.pdb.66",
+    "sha256": "a517afc52f890c0afaf5226c5085df3c4abab9a933fafaa723690c1526d45c77"
+  },
+  {
+    "path": "source/reuse_audit.json",
+    "sha256": "38e339a6406708f7c91ce98879701a21d9e762e15f666b8669127c958e6eb69f"
+  },
+  {
+    "path": "view_es_seeds.pml",
+    "sha256": "0be00005101e37ed04ed8e855c9a983af18867693ce84bf1e8331fb67d2161b6"
+  },
+  {
+    "path": "view_es_seeds.py",
+    "sha256": "29a87809c77f8ed22f0139ff4ec7e6a09424963f0507f8e7485a303fff195473"
+  }
+]

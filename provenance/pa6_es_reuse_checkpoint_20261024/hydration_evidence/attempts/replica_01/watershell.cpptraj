@@ -1,0 +1,7 @@
+parm /data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop
+trajin /data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.nc 1 last
+watershell :929@N out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/n35.dat lower 3.5 upper 5.0 :WAT@O
+watershell :929@OG1 out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/og35.dat lower 3.5 upper 5.0 :WAT@O
+watershell :929@N,OG1 out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/union35.dat lower 3.5 upper 5.0 :WAT@O
+watershell :929@N,OG1 out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_01/union4.dat lower 4.0 upper 5.0 :WAT@O
+run

@@ -1,0 +1,28 @@
+{
+  "model": "pa6_l4z_l2_nyl12_wt_model_41",
+  "system": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41",
+  "amberhome": "/data/jpc/code/ambertools26/venv",
+  "native_reference": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "geometry_csv": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/active_site_monitor/full_stride10/active_site_geometry_timeseries.csv",
+  "replicas": ["replica_01", "replica_02", "replica_03"],
+  "geometry_stride": 10,
+  "windows_ns": [[20.0, 45.0], [45.0, 70.0], [70.0, 100.0]],
+  "atom_map": {
+    "nucleophile": {"residue": 929, "resname": "THR", "atom": "OG1"},
+    "thr_n_terminus": {"residue": 929, "resname": "THR", "atom": "N"},
+    "scissile_carbon": {"residue": 1313, "resname": "LIG", "atom": "C54"},
+    "scissile_oxygen": {"residue": 1313, "resname": "LIG", "atom": "O49"},
+    "leaving_nitrogen": {"residue": 1313, "resname": "LIG", "atom": "N59"},
+    "oxyanion_donor_backbone": {"residue": 113, "resname": "PHE", "atom": "N"},
+    "oxyanion_donor_sidechain": {"residue": 186, "resname": "ASN", "atom": "ND2"}
+  },
+  "native_mapping": [
+    {"label": "phe113", "chain": "A", "number": 113, "resname": "PHE", "topology_residue": 113},
+    {"label": "asn186", "chain": "A", "number": 186, "resname": "ASN", "topology_residue": 186},
+    {"label": "thr233", "chain": "A", "number": 233, "resname": "THR", "topology_residue": 929},
+    {"label": "asp272", "chain": "A", "number": 272, "resname": "ASP", "topology_residue": 968},
+    {"label": "asp274", "chain": "A", "number": 274, "resname": "ASP", "topology_residue": 970}
+  ],
+  "source_files": ["md_dry.prmtop", "md_solvated.prmtop", "md_solvated.inpcrd", "leap_solvate_150mM.in", "lig.lib", "lig.frcmod"],
+  "replica_files": ["07_prod_100ns.in", "07_prod_100ns.out", "07_prod_100ns.nc", "07_prod_100ns.rst7", "make_compact_stride10.cpptraj", "run_replica.sh"]
+}

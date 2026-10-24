@@ -1,0 +1,43 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "--offline",
+    "pytest",
+    "--cov=nyl12_covalent.es_seed_display",
+    "--cov=nyl12_covalent.es_seed_legacy_geometry",
+    "--cov=nyl12_covalent.es_snapshot_selection",
+    "--cov=nyl12_covalent.es_topology_audit",
+    "--cov=nyl12_covalent.es_water_inventory",
+    "--cov=scripts.audit_nyl12_pa6_md_reuse",
+    "--cov=scripts.inspect_nyl12_pa6_es_seeds",
+    "--cov-report=term-missing",
+    "--cov-fail-under=80"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-24T16:12:07.660839Z",
+  "env_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "UV_CACHE_DIR": "/tmp/nyl12_uv_cache"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/pyproject.toml": "33fb313281b194f7dfc2845b5db3c13d0a84f832103facee1ba837ca566ea28a",
+    "/data/jpc/covalent-enzyme-design/scripts/audit_nyl12_pa6_md_reuse.py": "2d389e93f5d3664c03d2309600e390bdd55c47cf5e54d67896ddf3699f513bec",
+    "/data/jpc/covalent-enzyme-design/scripts/inspect_nyl12_pa6_es_seeds.py": "c949c879c66404785f60e6637b143b1b3a23b74f97184c10acc331366c343c68",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_seed_display.py": "3dee8ee38abaa6de9abd4d2f7071b7e870fd53197ff0ee6f9f5d605e304a7712",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_seed_legacy_geometry.py": "4e8ff6a411441d4ba482e6c55f967e1f9a97f7addc492ff3fde634ae98112ab6",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_snapshot_selection.py": "b222e8bf08f2395e6a0465054421aca70b005679199df4a3565b00b075ff485f",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_topology_audit.py": "86733eb2480f3c49958486a245f35a3aa51d65109a641082ddf760527967ee0a",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_water_inventory.py": "a25eb786ceedadb139f58b990bc6ca65618813dbe0c57f65e58bd7750cdc30dd",
+    "/data/jpc/covalent-enzyme-design/tests/test_audit_nyl12_pa6_md_reuse.py": "5b9a813b2ad043379398c8b864e32ea06fae540e9655cfffba3e2d012738ff02",
+    "/data/jpc/covalent-enzyme-design/tests/test_es_snapshot_selection.py": "a0e1fddf50f1542ccfa880d748249094e7e9f581e0a50dfe802386b0acd1cbdd",
+    "/data/jpc/covalent-enzyme-design/tests/test_es_topology_audit.py": "01a7943f290f84d9728a6f39a528d590cfd7db6e1f3acbc81f3d6e17def3dd95",
+    "/data/jpc/covalent-enzyme-design/tests/test_es_water_inventory.py": "052570fd7d3d35f8705e76f90031374589407404f01ea6d510d2537f583efecc",
+    "/data/jpc/covalent-enzyme-design/tests/test_inspect_nyl12_pa6_es_seeds.py": "8fe478a5b1d9bb46c7559e5cdaf75a3fba32f938e7c8440dc872562173fef724",
+    "/data/jpc/covalent-enzyme-design/uv.lock": "3f7287ba99572d14e72cb8ca8e21fbbdb3527a4e22f9be87e7062a7dda1a3e07"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/jobs/full_checks_complete/job.log",
+  "session_name": "nyl12_pa6_full_checks_complete_20261024",
+  "started_utc": "2026-10-24T16:11:52.743471Z"
+}

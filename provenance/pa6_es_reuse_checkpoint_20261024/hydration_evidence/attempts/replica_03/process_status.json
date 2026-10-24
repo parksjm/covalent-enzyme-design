@@ -1,0 +1,9 @@
+{
+  "exit_status": 0,
+  "elapsed_seconds": 29.200071096420288,
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+    "-i",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/attempts/replica_03/watershell.cpptraj"
+  ]
+}

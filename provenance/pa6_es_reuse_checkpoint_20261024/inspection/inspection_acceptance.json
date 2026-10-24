@@ -1,0 +1,19 @@
+{
+  "process_exit_status": 0,
+  "nine_seed_geometry_source_precision_checks_passed": true,
+  "source_output_hashes_verified": true,
+  "state": "classical ES seeds, not optimized TI/TS",
+  "qmmm_method_validated": false,
+  "all_local_water_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "inspection_sha256": "14f5eb0536395259434c206065f1ac3f599851a460a69c970bcf2c0e918de8dc"
+}

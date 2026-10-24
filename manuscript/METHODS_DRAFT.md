@@ -181,7 +181,9 @@ has neutral peptide caps and does not represent the native catalytic NH3+
 group, full substrate termini or relay water. Its charges cannot be transferred
 directly to the native TI1 model.
 
-The user-selected protein reference `cif/n12c.cif` was parsed with an
+The user-selected protein reference `cif/n12c.cif` comes from a coauthored Nyl12
+manuscript currently in revision (user communication, 24 October 2026;
+formal citation pending publication). It was parsed with an
 explicit author-chain-A, Thr233 selection. Measured psi and chi1 were
 134.110276428 and -58.964417878 degrees. Because native phi is undefined at
 this chain terminus, ACE-cap phi values -120 and -60 degrees were declared
@@ -452,3 +454,43 @@ be separated from full oligomer specificity testing: distal conformers,
 cleavage registers, chain ends and open-pocket geometry will be varied.
 Neither activated-ester activity in a published design nor a predicted
 polymer-bound pose establishes nylon turnover, L2 selectivity or processivity.
+
+### Recovery of the WT PA6 ES ensemble and installation checks
+
+On 24 October 2026, a scripted audit recovered the existing WT PA6 L4
+noncovalent simulations (Boltz model 41). All three production logs reached
+50,000,000 steps at 2 fs and reported normal completion; the declared thermostat
+seeds were distinct. Original LEaP input specifies ff19SB, GAFF (first version)
+and TIP3P. Retained AM1BCC intermediates and exact ligand-library/frcmod hash
+matches support the reported charge provenance; the exact historical command
+and software version remain to be recovered. The original catalytic Thr has
+OH/NH2 connectivity after manual terminal neutralization. Small original
+residue/ligand charge residuals were recorded without correction.
+
+One geometry-eligible ES seed per replica was selected in each predeclared
+20–45, 45–70 and 70–100 ns interval. Selection minimizes time from the interval
+midpoint among historical Tier B candidates, rather than optimizing geometry.
+Full-solvent coordinates, hydrogens and boxes were retained. The legacy CSV
+uses a zero-origin time estimate; physical production-relative saved-frame
+times have a 0.05 ns offset, preserved explicitly in the new records. Original
+trajectories, inputs, parameters and source code were fingerprinted with SHA256.
+Native residue identities were checked directly against the supplied n12c CIF.
+These selected seeds do not constitute an unbiased population estimate.
+
+Separate installation checks reproduced the shipped Amber DFTB3 water
+minimization and short periodic N-methylacetamide/water energy series at printed
+precision. These are engine regression tests, not validation of nylon reaction
+energetics. No new enzyme QM/MM pathway, TI1 force field or production
+free-energy profile resulted from these recovery and installation checks.
+
+For a complementary hydration diagnostic, CPPTRAJ watershell analyzed all 2,000
+saved frames per WT replica with periodic imaging and explicit WAT oxygen masks.
+First-shell counts at 3.5 Å around Thr N, OG1 and their union were combined by
+inclusion–exclusion to identify simultaneous contacts. A separate 4 Å union
+shell measured local water availability. This analysis found no qualifying
+contacts in the 6,000 saved frames. Results are conditional on the existing
+classical ES/protonation model and 50 ps output interval, and do not exclude
+short water visits, slow buried hydration or hydration following chemical change.
+Independent seed geometry validation retained full-precision NetCDF metrics;
+historical phi was reproduced from its actual rounded PDB source, with explicit
+coordinate-precision bounds and hashes, rather than changing an angle tolerance.
