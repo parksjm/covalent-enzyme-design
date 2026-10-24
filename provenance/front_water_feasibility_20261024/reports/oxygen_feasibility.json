@@ -1,0 +1,285 @@
+{
+  "scientific_status": "no_oxygen_grid_position_clears_fixed_pocket",
+  "not_a_continuous_impossibility_proof": true,
+  "grid_count": 225000,
+  "oxygen_pass_count": 0,
+  "distance_step_A": 0.025,
+  "azimuth_step_degrees": 0.5,
+  "front_definition": "positive dot of O projection perpendicular to N-OG with user O projection; normalized radial projection cos(phi)",
+  "front_frame": [
+    [
+      0.8652626772303192,
+      0.4720684810467453,
+      -0.16873603229434794
+    ],
+    [
+      -0.33265138838160063,
+      0.28883906424987804,
+      -0.8977277141600611
+    ],
+    [
+      -0.3750514007439702,
+      0.8329005607907067,
+      0.4069558976529428
+    ]
+  ],
+  "screen": {
+    "radii_A": {
+      "1": 1.2,
+      "6": 1.7,
+      "7": 1.55,
+      "8": 1.52,
+      "16": 1.8
+    },
+    "allowed_vdw_overlap_A": 0.4,
+    "intended_N_OG_minimum_A": 2.6,
+    "genuine_N/O-H_to_waterO_minimum_A": 1.5,
+    "hbond_angle_minimum_degrees": 140,
+    "donor_O_distance_A": [
+      2.6,
+      3.3
+    ]
+  },
+  "environment_count": 5057,
+  "local_count": 135,
+  "local_selection_proof": "N-distance <=3.2+1.52+max(radius)=6.52A; omitted atoms cannot clash by triangle inequality",
+  "unchanged_nonwater_heavy_coordinates": true,
+  "front_sensitivity": {
+    "0.0": 0,
+    "0.25": 0,
+    "0.5": 0,
+    "0.75": 0
+  },
+  "best_clearance_positions": [
+    {
+      "oxygen_A": [
+        -4.6516055610417855,
+        10.095642949405732,
+        -0.4542111487489337
+      ],
+      "margin_A": -0.684162430867558,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.7040147244559684,
+      "distance_from_user_O_A": 1.972004463988558
+    },
+    {
+      "oxygen_A": [
+        -4.652171472555795,
+        10.103989651560465,
+        -0.43376173525183787
+      ],
+      "margin_A": -0.6948393173271048,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6977904598416802,
+      "distance_from_user_O_A": 1.991633663834797
+    },
+    {
+      "oxygen_A": [
+        -4.639242415589284,
+        10.123324383564821,
+        -0.4652599835950987
+      ],
+      "margin_A": -0.7011257298574214,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.7040147244559684,
+      "distance_from_user_O_A": 1.974569889656672
+    },
+    {
+      "oxygen_A": [
+        -4.65094313889972,
+        10.087142990045487,
+        -0.47459442848642036
+      ],
+      "margin_A": -0.7034287250339155,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.9523495401401607
+    },
+    {
+      "oxygen_A": [
+        -4.652640830345398,
+        10.112182460876001,
+        -0.4132477452971433
+      ],
+      "margin_A": -0.7053277251346461,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6915130557822694,
+      "distance_from_user_O_A": 2.0112364198845576
+    },
+    {
+      "oxygen_A": [
+        -4.638574864265929,
+        10.114758608420743,
+        -0.48580109250283776
+      ],
+      "margin_A": -0.7118470257385412,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.9547879999425506
+    },
+    {
+      "oxygen_A": [
+        -4.639812708995994,
+        10.131735714822053,
+        -0.44465222884939315
+      ],
+      "margin_A": -0.7119990666724367,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6977904598416802,
+      "distance_from_user_O_A": 1.9943248803851392
+    },
+    {
+      "oxygen_A": [
+        -4.620790437747093,
+        10.104436546931984,
+        -0.4569122076120137
+      ],
+      "margin_A": -0.7121563816437708,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.7040147244559684,
+      "distance_from_user_O_A": 1.962400157975165
+    },
+    {
+      "oxygen_A": [
+        -4.620129980040498,
+        10.09596179449132,
+        -0.47723504003776995
+      ],
+      "margin_A": -0.7137768823184845,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.9427069364938017
+    },
+    {
+      "oxygen_A": [
+        -4.653013598667179,
+        10.120220753438193,
+        -0.39267074110460826
+      ],
+      "margin_A": -0.7156231513496387,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6851829903263592,
+      "distance_from_user_O_A": 2.0308120266665006
+    },
+    {
+      "oxygen_A": [
+        -4.6265553384795135,
+        10.150944184408782,
+        -0.4762736453571219
+      ],
+      "margin_A": -0.7178789812520958,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.7040147244559684,
+      "distance_from_user_O_A": 1.977517540685922
+    },
+    {
+      "oxygen_A": [
+        -4.625882716371282,
+        10.142313342802343,
+        -0.4969707865289742
+      ],
+      "margin_A": -0.7197407169442911,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.957614633605035
+    },
+    {
+      "oxygen_A": [
+        -4.607633038742517,
+        10.12337384900811,
+        -0.4883514187685867
+      ],
+      "margin_A": -0.7218421909697783,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.945389266288583
+    },
+    {
+      "oxygen_A": [
+        -4.64028570105601,
+        10.139991961636998,
+        -0.42397939762603065
+      ],
+      "margin_A": -0.72268249949313,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6915130557822694,
+      "distance_from_user_O_A": 2.014052281345224
+    },
+    {
+      "oxygen_A": [
+        -4.621354671031194,
+        10.112758496656609,
+        -0.4365234375485695
+      ],
+      "margin_A": -0.7229880886715503,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6977904598416802,
+      "distance_from_user_O_A": 1.9820662696703817
+    },
+    {
+      "oxygen_A": [
+        -4.65018425657561,
+        10.078490420784547,
+        -0.4949100221986276
+      ],
+      "margin_A": -0.7241881080948096,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7163019434246543,
+      "distance_from_user_O_A": 1.9326696271146526
+    },
+    {
+      "oxygen_A": [
+        -4.653289749133387,
+        10.12810391709994,
+        -0.37203228969276864
+      ],
+      "margin_A": -0.7257210657613025,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6788007455329418,
+      "distance_from_user_O_A": 2.0503597923663794
+    },
+    {
+      "oxygen_A": [
+        -4.612865524623221,
+        10.169805341192808,
+        -0.5081026891610565
+      ],
+      "margin_A": -0.7270982801680028,
+      "worst_collider": "ASP:272:HA",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.9608298544040115
+    },
+    {
+      "oxygen_A": [
+        -4.589355320474402,
+        10.104389992046654,
+        -0.4797123749161214
+      ],
+      "margin_A": -0.7286919400958474,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.7101853756232854,
+      "distance_from_user_O_A": 1.9334606961333758
+    },
+    {
+      "oxygen_A": [
+        -4.627129963890492,
+        10.159419408957568,
+        -0.455509352099026
+      ],
+      "margin_A": -0.7289505556868572,
+      "worst_collider": "LIG:329:H23",
+      "front_projection": 0.6977904598416802,
+      "distance_from_user_O_A": 1.9973924698875762
+    }
+  ],
+  "source_sha256": {
+    "output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/model.prmtop": "bb0f1eeed62af7afac5bf4a361e2acd1c7604edcf58416190fa416f714754aa2",
+    "output_nyl12_local_repair_20261021/pa6_l4_alpha_beta/attempt_05_tip3p_preconditioned/calculation/prepared.rst7": "cb79558a0ec0496bf9b79902510c1560ae9be0a608094deaab0ee09dab77570e",
+    "output_nyl12_oxyanion_cluster_20261023/seed_01/native_seed.xyz": "408360cdc7a711b0940a625a09ace25d0ecbea8cd86a78e240c2308136023656",
+    "output_nyl12_oxyanion_cluster_20261023/seed_01/native_seed.sdf": "39fecc0811d7fdbd3969bad9842e4f6372f8a0c4ea2d80432a6bb56806479232",
+    "output_nyl12_oxyanion_cluster_20261023/seed_01/atom_map.json": "f86b7d1e09f1d6f8473c89be64bfe78be21ddfcccc39f08eff6cef0a091eeda1",
+    "output_nyl12_oxyanion_cluster_20261023/seed_01/coordinate_provenance.json": "ffe8174c2322353f0035a06685229edb99abc6f5019cef87ec88b4a344795f04",
+    "output_nyl12_user_water_seed_20261023/native_seed_jmp.xyz": "5a8bd98e04cec386f927b4bcac00053a74d7b2bc269d24eed8d92f0d80ab1781",
+    "output_nyl12_front_water_20261024/search_oxygen.py": "af711f2b5f0733ecb3c7e4feb69ee12bd0fdf77ba1a2098c9019fa0e1b7bfb29"
+  }
+}

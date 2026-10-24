@@ -1,0 +1,11 @@
+..                                                                       [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.11-final-0 _______________
+
+Name                                                   Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------------
+output_nyl12_front_water_20261024/opposite_oxygen.py      33      1    97%   111
+------------------------------------------------------------------------------------
+TOTAL                                                     33      1    97%
+Coverage JSON written to file /data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/opposite_coverage.json
+2 passed in 19.63s

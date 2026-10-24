@@ -1,0 +1,30 @@
+{
+  "scientific_acceptance": false,
+  "candidate_emitted": false,
+  "reason": "No fixed-pocket front oxygen grid position passes necessary steric screen; water and NH3 orientation cannot rescue the oxygen barrier.",
+  "required_search_range_A": [
+    2.6,
+    3.2
+  ],
+  "allatom_points": 225000,
+  "allatom_passes": 0,
+  "best_allatom_margin_A": -0.684162430867558,
+  "heavy_only_passes": 0,
+  "best_heavy_margin_A": -0.21741048696388443,
+  "potential_second_water_H_bond_robustness": {
+    "permissive_test": "Allow every Owater-to-any-N/O heavy contact down to2.60A without requiring its Hbond angle. This is more permissive than true final acceptance.",
+    "maximum_margin_improvement_A": 0.07,
+    "best_possible_upper_bound_margin_A": -0.14741048696388442,
+    "derivation": "All other pair thresholds unchanged; N threshold2.67A lowers at most0.07A, O threshold2.64A lowers0.04A. Pointwise min clearance improves at most0.07A. Even this permissive heavy-only grid still necessarily has0passes."
+  },
+  "widened_3p3A_diagnostic_passes": 0,
+  "heavy_coordinates_modified": false,
+  "nh3_rotation_attempted": false,
+  "water_orientation_attempted": false,
+  "qm_launched": false,
+  "limitation": "Finite dense geometric search, not a proof for every continuous position or a physically relaxed enzyme model. Under these screened requirements no feasible seed was found. Heavy geometry must be reconsidered before restarting QM; rotating hydrogens alone cannot resolve this sampled barrier.",
+  "source_records": {
+    "oxygen_feasibility.json": "9221dcb2cec217bfe8cb8f6f6c7efb4e99bcb15a4bdda4373e88850b92d02512",
+    "oxygen_diagnostics.json": "cafd09a340716fa11d5f0d38bffdf7de34b2e5b0a78a30d4595f9875d44d6d8b"
+  }
+}

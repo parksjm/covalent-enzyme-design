@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "-q",
+    "output_nyl12_front_water_20261024/test_smd_assessor.py",
+    "--cov=output_nyl12_smd_water_bridge_20261023/svp_pilot_01",
+    "--cov-report=json:output_nyl12_front_water_20261024/smd_assessor_coverage.json"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/test_smd_assessor.py": "16410c993ad595a7fd33ddcf273d10ce34cf5e932bed776e2ce84762abb772f1",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_smd_water_bridge_20261023/svp_pilot_01/assess_pilot.py": "a9c45da5fcce879b971daaa9d3414614e1108d1f680ffec63d6c35fcc0f68f9c"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/smd_gate_tests_job/job.log",
+  "session_name": "nyl12_smd_gate_tests_20261024",
+  "started_utc": null
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "output_nyl12_front_water_20261024/test_search_oxygen.py",
+    "--cov=search_oxygen",
+    "--cov=diagnose_oxygen",
+    "--cov-report=json:/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/geometry_coverage.json",
+    "--cov-report=term-missing",
+    "-q"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OMP_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/diagnose_oxygen.py": "0b8e1eb2187b3eaf4c42b74ce388b31519989b7926c85e5f0ed6cbe49e2f8583",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/search_oxygen.py": "c268afa134b58f6063541f7ac3f41406e4db709b04a750e8b08b77eb87e821ae",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/test_search_oxygen.py": "a18b5ed8b0388bd37665319646ac37e4b2dad44e569f771a03e66e678865ccbe"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/geometry_test_job/job.log",
+  "session_name": "nyl12_front_tests_20261024",
+  "started_utc": null
+}

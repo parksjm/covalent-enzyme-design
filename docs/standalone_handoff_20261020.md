@@ -1,3 +1,32 @@
+## Mechanistic interpretation extended — 2026-10-24
+
+User reconsiders frontwater and requests literature beyondNylC. Found positive
+primaryproteasome QM/MM example Wei2013 DOI10.1021/jp405337v and competing
+water-free protontransfer model in penicillinacylase Chilov2007. NylC2023
+FEBS DOI10.1111/febs.16755 proposes Asp-Asp-Thr network for maturehydrolysis;
+its precursorwater/autocleavage figures must not be conflated with catalysis.
+No definitiveNyl12 mechanism assigned. See newmechanism evidence doc.
+Oppositehemisphere diagnostic also0/225000 full andheavy-only. No newseed
+orGaussian. Assess currentAF3-derivedconformation andmapliteraturecatalytic
+residues before forcingwater orfittingassumedNH3+/oxyanion state.
+
+## Resumed feasibility search completed — 2026-10-24
+
+User resumed frontwater placement and parameterization/testing if feasible.
+No acceptable front oxygen in fixed complete protein/substrate pocket:
+0/225000 samples at2.6--3.2A N/OG1 contacts; heavy-only0/225000 as well;
+expanded3.3A diagnostic0/302760. Best fullmargin−0.684A (LIGH23), heavy-only
+−0.217A (substrateC70 plusAsp272 contacts). No new Gaussian or parameterfit.
+RotatingNH3 or waterH cannot rescue an oxygen-heavyatom clash. This is a
+finite fixed-conformer search, not an impossibility proof for the enzyme.
+See docs/front_water_feasibility_20261024.md and
+output_nyl12_front_water_20261024/. Full-pocket viewer uses two rejected
+oxygen probes, not seeds. Next resolve protein/substrate geometry or choose
+another validated conformation without bypassing TI1-FF validation requirement.
+Eight SMDacceptance corruption tests nowpass, including lostbridge and reverse
+protontransfer, with93.94% assessor linecoverage. Source hashes, journal and
+all failed attempts retained. Earlier PAUSED/ACTIVE notes below are history.
+
 ## PAUSED at user request — evening 2026-10-23
 
 No Gaussian process or tmux calculation from this effort remains running.

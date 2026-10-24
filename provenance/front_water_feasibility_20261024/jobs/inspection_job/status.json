@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "output_nyl12_front_water_20261024/export_inspection.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-10-24T12:43:40.771474Z",
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/export_inspection.py": "7d41aace306ca194bb12f8c0ec96de3730450f3229790496891080b79b2e8945",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/oxygen_feasibility.json": "9221dcb2cec217bfe8cb8f6f6c7efb4e99bcb15a4bdda4373e88850b92d02512"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/inspection_job/job.log",
+  "session_name": "nyl12_front_inspection_20261024",
+  "started_utc": "2026-10-24T12:43:39.956184Z"
+}

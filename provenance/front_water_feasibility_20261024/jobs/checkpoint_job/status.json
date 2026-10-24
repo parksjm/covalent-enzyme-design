@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/tmp/checkpoint_front_water.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/docs/front_water_feasibility_20261024.md": "fec3fb7ed8c1f92f61b67fcf247dfc3ce28712540231e7898a1a9003dd6c3572",
+    "/data/jpc/covalent-enzyme-design/docs/water_relay_mechanism_evidence_20261024.md": "5ade0345b91eaaff47cb28ad7b909370c7e421602a317bbfcce89658cd7ce34e",
+    "/tmp/checkpoint_front_water.py": "e510869278adb2ddabcfc138b98b147fb5df07d9768e00a133a3e17298b0144f"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/checkpoint_job/job.log",
+  "session_name": "nyl12_front_checkpoint_20261024",
+  "started_utc": "2026-10-24T12:51:22.658078Z"
+}

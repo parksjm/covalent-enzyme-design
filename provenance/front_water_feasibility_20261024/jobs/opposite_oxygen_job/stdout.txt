@@ -1,0 +1,1 @@
+WARNING:root:Opposite full clear 0/225000; heavy clear 0/225000

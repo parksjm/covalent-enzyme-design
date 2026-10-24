@@ -1,0 +1,1451 @@
+{
+  "heavy_only_acceptance": false,
+  "reason": "Diagnostic only; every H contact remains required for acceptance",
+  "heavy_only_pass_count": 0,
+  "heavy_only_front_sensitivity": {
+    "0": 0,
+    "0.25": 0,
+    "0.5": 0,
+    "0.75": 0
+  },
+  "heavy_best": [
+    {
+      "oxygen_A": [
+        -4.627129963890492,
+        10.159419408957568,
+        -0.455509352099026
+      ],
+      "heavy_margin_A": -0.21741048696388443,
+      "heavy_collider": "LIG:329:C70",
+      "front_projection": 0.6977904598416802,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5910494443131427,
+          "unexceptioned_margin_A": -0.7289505556868572
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6429323365327784,
+          "unexceptioned_margin_A": -0.6770676634672215
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.6025895130361154,
+          "unexceptioned_margin_A": -0.21741048696388443
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.4279791632326164,
+          "unexceptioned_margin_A": -0.2120208367673837
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.6153163233797447,
+          "unexceptioned_margin_A": -0.2046836766202551
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.687561906583566,
+          "unexceptioned_margin_A": -0.13243809341643376
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.261063341528045,
+          "unexceptioned_margin_A": -0.05893665847195484
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6500000000000004,
+          "unexceptioned_margin_A": -0.020000000000000018
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.304472567218281,
+          "unexceptioned_margin_A": -0.015527432781718975
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.6806999741015485,
+          "unexceptioned_margin_A": 0.04069997410154835
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.018801646450449,
+          "unexceptioned_margin_A": 0.19880164645044918
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.116572280114955,
+          "unexceptioned_margin_A": 0.29657228011495507
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.1833091084449583,
+          "unexceptioned_margin_A": 0.36330910844495845
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.2572732346769384,
+          "unexceptioned_margin_A": 0.43727323467693857
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.2574131323613478,
+          "unexceptioned_margin_A": 0.43741313236134793
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.137601624085263,
+          "unexceptioned_margin_A": 0.46760162408526273
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8513127678330927,
+          "unexceptioned_margin_A": 0.5313127678330929
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.2000000000000006,
+          "unexceptioned_margin_A": 0.5600000000000005
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.400935079774265,
+          "unexceptioned_margin_A": 0.5809350797742652
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9024241858976336,
+          "unexceptioned_margin_A": 0.5824241858976338
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.590013722899237,
+        10.112838371861272,
+        -0.45945278521792365
+      ],
+      "heavy_margin_A": -0.21971791372610694,
+      "heavy_collider": "ASP:272:CA",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5801349327109155,
+          "unexceptioned_margin_A": -0.7398650672890843
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6174590253615122,
+          "unexceptioned_margin_A": -0.7025409746384876
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.600282086273893,
+          "unexceptioned_margin_A": -0.21971791372610694
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.4232648784222546,
+          "unexceptioned_margin_A": -0.21673512157774555
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.608032753746722,
+          "unexceptioned_margin_A": -0.21196724625327779
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.679531319127808,
+          "unexceptioned_margin_A": -0.14046868087219178
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6000000000000005,
+          "unexceptioned_margin_A": -0.06999999999999984
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.3022094016965897,
+          "unexceptioned_margin_A": -0.01779059830341012
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.309502561156466,
+          "unexceptioned_margin_A": -0.010497438843533935
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.7060500489080215,
+          "unexceptioned_margin_A": 0.06605004890802135
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.0174607646979545,
+          "unexceptioned_margin_A": 0.1974607646979547
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.149967869519718,
+          "unexceptioned_margin_A": 0.32996786951971835
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.2101270236118618,
+          "unexceptioned_margin_A": 0.3901270236118619
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.239298225344344,
+          "unexceptioned_margin_A": 0.419298225344344
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.150183907768771,
+          "unexceptioned_margin_A": 0.4801839077687706
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.3104242859395274,
+          "unexceptioned_margin_A": 0.4904242859395276
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.1500000000000012,
+          "unexceptioned_margin_A": 0.5100000000000011
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.367774912175996,
+          "unexceptioned_margin_A": 0.547774912175996
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8963922927492742,
+          "unexceptioned_margin_A": 0.5763922927492744
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9295994097836737,
+          "unexceptioned_margin_A": 0.6095994097836739
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.608298558341289,
+        10.131913553803269,
+        -0.4678728277144467
+      ],
+      "heavy_margin_A": -0.22333209647700736,
+      "heavy_collider": "ASP:272:CA",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5909314461799762,
+          "unexceptioned_margin_A": -0.7290685538200237
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6192863386566958,
+          "unexceptioned_margin_A": -0.700713661343304
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.5966679035229925,
+          "unexceptioned_margin_A": -0.22333209647700736
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.420717507287624,
+          "unexceptioned_margin_A": -0.219282492712376
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.6149563705285037,
+          "unexceptioned_margin_A": -0.20504362947149612
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6888502074924547,
+          "unexceptioned_margin_A": -0.1311497925075451
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6250000000000013,
+          "unexceptioned_margin_A": -0.04499999999999904
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.2884680252939673,
+          "unexceptioned_margin_A": -0.03153197470603253
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.313410701494631,
+          "unexceptioned_margin_A": -0.0065892985053688236
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.6904474936774934,
+          "unexceptioned_margin_A": 0.05044749367749324
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.010101271419861,
+          "unexceptioned_margin_A": 0.1901012714198611
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.143335747090836,
+          "unexceptioned_margin_A": 0.323335747090836
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.1909911027056985,
+          "unexceptioned_margin_A": 0.3709911027056987
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.237554157473907,
+          "unexceptioned_margin_A": 0.41755415747390723
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.1348426617424483,
+          "unexceptioned_margin_A": 0.4648426617424479
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.2869630002293078,
+          "unexceptioned_margin_A": 0.4669630002293079
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.1750000000000007,
+          "unexceptioned_margin_A": 0.5350000000000006
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.881841147740428,
+          "unexceptioned_margin_A": 0.5618411477404281
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.386991188666362,
+          "unexceptioned_margin_A": 0.5669911886663623
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9262064062182476,
+          "unexceptioned_margin_A": 0.6062064062182477
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.6088671160325685,
+        10.140299284768984,
+        -0.4473277936621557
+      ],
+      "heavy_margin_A": -0.2244454191520231,
+      "heavy_collider": "LIG:329:C70",
+      "front_projection": 0.6977904598416802,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5798996025598326,
+          "unexceptioned_margin_A": -0.7401003974401672
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6404401479541513,
+          "unexceptioned_margin_A": -0.6795598520458486
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.5955545808479767,
+          "unexceptioned_margin_A": -0.2244454191520231
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.430108170349095,
+          "unexceptioned_margin_A": -0.20989182965090514
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.6183723118844417,
+          "unexceptioned_margin_A": -0.2016276881155581
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6780771304371815,
+          "unexceptioned_margin_A": -0.1419228695628183
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.625000000000001,
+          "unexceptioned_margin_A": -0.044999999999999485
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.282047451328548,
+          "unexceptioned_margin_A": -0.037952548671452035
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.293132886697118,
+          "unexceptioned_margin_A": -0.02686711330288194
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.695976006772292,
+          "unexceptioned_margin_A": 0.055976006772291864
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.025713067307241,
+          "unexceptioned_margin_A": 0.20571306730724137
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.123214106050384,
+          "unexceptioned_margin_A": 0.3032141060503841
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.2020895481774607,
+          "unexceptioned_margin_A": 0.3820895481774609
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.2586863288633574,
+          "unexceptioned_margin_A": 0.43868632886335757
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.2807377777353297,
+          "unexceptioned_margin_A": 0.46073777773532987
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.152465439872062,
+          "unexceptioned_margin_A": 0.4824654398720618
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.1750000000000007,
+          "unexceptioned_margin_A": 0.5350000000000006
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8658880297123512,
+          "unexceptioned_margin_A": 0.5458880297123514
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.3816588847334343,
+          "unexceptioned_margin_A": 0.5616588847334345
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.90578888303484,
+          "unexceptioned_margin_A": 0.5857888830348403
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.614122065511546,
+        10.18703886640043,
+        -0.46633232133312263
+      ],
+      "heavy_margin_A": -0.2259007122928547,
+      "heavy_collider": "LIG:329:C70",
+      "front_projection": 0.6977904598416802,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.574316167513337,
+          "unexceptioned_margin_A": -0.7456838324866628
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6360819013339145,
+          "unexceptioned_margin_A": -0.6839180986660853
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.594099287707145,
+          "unexceptioned_margin_A": -0.2259007122928547
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.6090682776971668,
+          "unexceptioned_margin_A": -0.21093172230283308
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.4535478854731307,
+          "unexceptioned_margin_A": -0.18645211452686938
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6688213555151488,
+          "unexceptioned_margin_A": -0.15117864448485108
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.268253999687639,
+          "unexceptioned_margin_A": -0.051746000312360874
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.3102164635111437,
+          "unexceptioned_margin_A": -0.009783536488856104
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6750000000000003,
+          "unexceptioned_margin_A": 0.004999999999999893
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.6498535226593334,
+          "unexceptioned_margin_A": 0.009853522659333258
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.035029883954309,
+          "unexceptioned_margin_A": 0.21502988395430922
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.1031969370087933,
+          "unexceptioned_margin_A": 0.28319693700879345
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.1584802136786814,
+          "unexceptioned_margin_A": 0.33848021367868153
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.2591963047796013,
+          "unexceptioned_margin_A": 0.4391963047796015
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.2658317374345653,
+          "unexceptioned_margin_A": 0.4458317374345655
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.122516111099151,
+          "unexceptioned_margin_A": 0.45251611109915046
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.830771388491747,
+          "unexceptioned_margin_A": 0.5107713884917473
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.2,
+          "unexceptioned_margin_A": 0.56
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.889955542380146,
+          "unexceptioned_margin_A": 0.5699555423801463
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.3908354912220875,
+          "unexceptioned_margin_A": 0.5708354912220877
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.577394883464256,
+        10.140113768405538,
+        -0.47032640615540683
+      ],
+      "heavy_margin_A": -0.2263837113898366,
+      "heavy_collider": "ASP:272:CA",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5632738907537702,
+          "unexceptioned_margin_A": -0.7567261092462296
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6100074780708344,
+          "unexceptioned_margin_A": -0.7099925219291654
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.5936162886101632,
+          "unexceptioned_margin_A": -0.2263837113898366
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.5996228205688596,
+          "unexceptioned_margin_A": -0.2203771794311402
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.4480530813419756,
+          "unexceptioned_margin_A": -0.1919469186580245
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6609376344829307,
+          "unexceptioned_margin_A": -0.1590623655170691
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6250000000000013,
+          "unexceptioned_margin_A": -0.04499999999999904
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.3077920221017028,
+          "unexceptioned_margin_A": -0.012207977898297084
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.3159461444648084,
+          "unexceptioned_margin_A": -0.004053855535191442
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.6755385390941453,
+          "unexceptioned_margin_A": 0.03553853909414517
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.032990205611261,
+          "unexceptioned_margin_A": 0.21299020561126136
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.1368023028272107,
+          "unexceptioned_margin_A": 0.3168023028272109
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.1854193460624716,
+          "unexceptioned_margin_A": 0.36541934606247173
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.247216030769319,
+          "unexceptioned_margin_A": 0.42721603076931913
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.1348934469252367,
+          "unexceptioned_margin_A": 0.4648934469252364
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.3118791962730763,
+          "unexceptioned_margin_A": 0.4918791962730764
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.1500000000000012,
+          "unexceptioned_margin_A": 0.5100000000000011
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.357746753582002,
+          "unexceptioned_margin_A": 0.537746753582002
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8762297250175526,
+          "unexceptioned_margin_A": 0.5562297250175527
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9173146608781866,
+          "unexceptioned_margin_A": 0.5973146608781867
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.6265553384795135,
+        10.150944184408782,
+        -0.4762736453571219
+      ],
+      "heavy_margin_A": -0.22664654594358158,
+      "heavy_collider": "ASP:272:CA",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.602121018747904,
+          "unexceptioned_margin_A": -0.7178789812520958
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.621584141116748,
+          "unexceptioned_margin_A": -0.6984158588832519
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.5933534540564183,
+          "unexceptioned_margin_A": -0.22664654594358158
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.418479730297217,
+          "unexceptioned_margin_A": -0.22152026970278316
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.6221449789836706,
+          "unexceptioned_margin_A": -0.19785502101632924
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6984114526762286,
+          "unexceptioned_margin_A": -0.12158854732377122
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.267612388435724,
+          "unexceptioned_margin_A": -0.05238761156427563
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.650000000000001,
+          "unexceptioned_margin_A": -0.019999999999999574
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.3248658759071925,
+          "unexceptioned_margin_A": 0.004865875907192674
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.6750804911182837,
+          "unexceptioned_margin_A": 0.0350804911182836
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.0029864877646726,
+          "unexceptioned_margin_A": 0.18298648776467275
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.136951024036272,
+          "unexceptioned_margin_A": 0.31695102403627207
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.172025599007993,
+          "unexceptioned_margin_A": 0.35202559900799324
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.2360462885343524,
+          "unexceptioned_margin_A": 0.41604628853435255
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.263610065267047,
+          "unexceptioned_margin_A": 0.44361006526704694
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.119705378056355,
+          "unexceptioned_margin_A": 0.44970537805635447
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.867517615308996,
+          "unexceptioned_margin_A": 0.5475176153089962
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.2000000000000006,
+          "unexceptioned_margin_A": 0.5600000000000005
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.4062937483387468,
+          "unexceptioned_margin_A": 0.5862937483387469
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9230825914285683,
+          "unexceptioned_margin_A": 0.6030825914285685
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.559278338863092,
+        10.1208530648584,
+        -0.4618348841127053
+      ],
+      "heavy_margin_A": -0.227096817284675,
+      "heavy_collider": "LIG:329:C70",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5527186523349523,
+          "unexceptioned_margin_A": -0.7672813476650475
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.6084810514113446,
+          "unexceptioned_margin_A": -0.7115189485886553
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.592903182715325,
+          "unexceptioned_margin_A": -0.227096817284675
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.5974312724955175,
+          "unexceptioned_margin_A": -0.2225687275044823
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.4505012994123945,
+          "unexceptioned_margin_A": -0.18949870058760565
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.651861532711866,
+          "unexceptioned_margin_A": -0.16813846728813386
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.5999999999999996,
+          "unexceptioned_margin_A": -0.07000000000000073
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.29671495108254,
+          "unexceptioned_margin_A": -0.02328504891745986
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.336778005376584,
+          "unexceptioned_margin_A": 0.016778005376584026
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.691595195534468,
+          "unexceptioned_margin_A": 0.05159519553446801
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.0402606006648516,
+          "unexceptioned_margin_A": 0.22026060066485176
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.1436678846878974,
+          "unexceptioned_margin_A": 0.32366788468789753
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.204870528719188,
+          "unexceptioned_margin_A": 0.38487052871918825
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.2489974003582205,
+          "unexceptioned_margin_A": 0.42899740035822065
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.1504461441242855,
+          "unexceptioned_margin_A": 0.4804461441242851
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.1250000000000004,
+          "unexceptioned_margin_A": 0.4850000000000003
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.3351970251203924,
+          "unexceptioned_margin_A": 0.5151970251203926
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.338626644391976,
+          "unexceptioned_margin_A": 0.518626644391976
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8910776340053133,
+          "unexceptioned_margin_A": 0.5710776340053134
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.9209490837080736,
+          "unexceptioned_margin_A": 0.6009490837080738
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.64028570105601,
+        10.139991961636998,
+        -0.42397939762603065
+      ],
+      "heavy_margin_A": -0.2280276548495186,
+      "heavy_collider": "LIG:329:C70",
+      "front_projection": 0.6915130557822694,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5973175005068698,
+          "unexceptioned_margin_A": -0.72268249949313
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.671421296439141,
+          "unexceptioned_margin_A": -0.6485787035608588
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.5919723451504812,
+          "unexceptioned_margin_A": -0.2280276548495186
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.412448361362784,
+          "unexceptioned_margin_A": -0.22755163863721606
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.643721119960513,
+          "unexceptioned_margin_A": -0.176278880039487
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6957234011612097,
+          "unexceptioned_margin_A": -0.12427659883879016
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.248441868032898,
+          "unexceptioned_margin_A": -0.0715581319671017
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.624999999999999,
+          "unexceptioned_margin_A": -0.04500000000000126
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.278728307892511,
+          "unexceptioned_margin_A": -0.04127169210748871
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.7173918232222465,
+          "unexceptioned_margin_A": 0.07739182322224636
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.0189149517475764,
+          "unexceptioned_margin_A": 0.19891495174757656
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.1101701367054497,
+          "unexceptioned_margin_A": 0.2901701367054499
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.219723604039618,
+          "unexceptioned_margin_A": 0.39972360403961815
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.249982405992438,
+          "unexceptioned_margin_A": 0.4299824059924382
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.270634835240937,
+          "unexceptioned_margin_A": 0.4506348352409373
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.170880646906351,
+          "unexceptioned_margin_A": 0.5008806469063507
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.8563572454145563,
+          "unexceptioned_margin_A": 0.5363572454145564
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.2,
+          "unexceptioned_margin_A": 0.56
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.894807430551643,
+          "unexceptioned_margin_A": 0.5748074305516431
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.405720482829781,
+          "unexceptioned_margin_A": 0.5857204828297813
+        }
+      ]
+    },
+    {
+      "oxygen_A": [
+        -4.595482856251634,
+        10.159329100407327,
+        -0.4787983494066049
+      ],
+      "heavy_margin_A": -0.22989798639230896,
+      "heavy_collider": "ASP:272:CA",
+      "front_projection": 0.7040147244559684,
+      "full_contacts": [
+        {
+          "atom": "LIG:329:H23",
+          "distance_A": 1.5742338442488963,
+          "unexceptioned_margin_A": -0.7457661557511035
+        },
+        {
+          "atom": "ASP:272:HA",
+          "distance_A": 1.612009428111387,
+          "unexceptioned_margin_A": -0.7079905718886128
+        },
+        {
+          "atom": "ASP:272:CA",
+          "distance_A": 2.590102013607691,
+          "unexceptioned_margin_A": -0.22989798639230896
+        },
+        {
+          "atom": "LIG:329:C70",
+          "distance_A": 2.6066109289607837,
+          "unexceptioned_margin_A": -0.21338907103921612
+        },
+        {
+          "atom": "ASP:272:OD1",
+          "distance_A": 2.44591216727707,
+          "unexceptioned_margin_A": -0.1940878327229303
+        },
+        {
+          "atom": "LIG:329:C62",
+          "distance_A": 2.6702611193490142,
+          "unexceptioned_margin_A": -0.14973888065098562
+        },
+        {
+          "atom": "VAL:188:HG21",
+          "distance_A": 2.2952965114278627,
+          "unexceptioned_margin_A": -0.02470348857213711
+        },
+        {
+          "atom": "THR:233:N",
+          "distance_A": 2.6500000000000017,
+          "unexceptioned_margin_A": -0.019999999999998685
+        },
+        {
+          "atom": "LIG:329:H22",
+          "distance_A": 2.319125509516618,
+          "unexceptioned_margin_A": -0.0008744904833819511
+        },
+        {
+          "atom": "LEU:271:O",
+          "distance_A": 2.659715110996175,
+          "unexceptioned_margin_A": 0.019715110996175067
+        },
+        {
+          "atom": "ASP:272:CG",
+          "distance_A": 3.025964090470022,
+          "unexceptioned_margin_A": 0.20596409047002195
+        },
+        {
+          "atom": "LIG:329:C78",
+          "distance_A": 3.1301847955797983,
+          "unexceptioned_margin_A": 0.3101847955797985
+        },
+        {
+          "atom": "LEU:271:C",
+          "distance_A": 3.166136693489252,
+          "unexceptioned_margin_A": 0.34613669348925225
+        },
+        {
+          "atom": "ASP:272:CB",
+          "distance_A": 3.245670926714773,
+          "unexceptioned_margin_A": 0.42567092671477313
+        },
+        {
+          "atom": "ASP:272:N",
+          "distance_A": 3.1195440840489366,
+          "unexceptioned_margin_A": 0.4495440840489362
+        },
+        {
+          "atom": "VAL:188:CG2",
+          "distance_A": 3.288672495225133,
+          "unexceptioned_margin_A": 0.4686724952251331
+        },
+        {
+          "atom": "THR:233:OG1",
+          "distance_A": 3.175000000000001,
+          "unexceptioned_margin_A": 0.535000000000001
+        },
+        {
+          "atom": "LIG:329:H20",
+          "distance_A": 2.861608389863994,
+          "unexceptioned_margin_A": 0.5416083898639941
+        },
+        {
+          "atom": "LIG:329:C54",
+          "distance_A": 3.3769551954297663,
+          "unexceptioned_margin_A": 0.5569551954297665
+        },
+        {
+          "atom": "PA6:HC70",
+          "distance_A": 2.913950783470938,
+          "unexceptioned_margin_A": 0.5939507834709383
+        }
+      ]
+    }
+  ],
+  "accepted_range_best_allatom_contacts": [
+    {
+      "atom": "LIG:329:H23",
+      "distance_A": 1.6358375691324418,
+      "unexceptioned_margin_A": -0.684162430867558
+    },
+    {
+      "atom": "ASP:272:HA",
+      "distance_A": 1.637365615746589,
+      "unexceptioned_margin_A": -0.6826343842534108
+    },
+    {
+      "atom": "ASP:272:OD1",
+      "distance_A": 2.368384831299243,
+      "unexceptioned_margin_A": -0.2716151687007571
+    },
+    {
+      "atom": "ASP:272:CA",
+      "distance_A": 2.6074295785895725,
+      "unexceptioned_margin_A": -0.21257042141042737
+    },
+    {
+      "atom": "LIG:329:C70",
+      "distance_A": 2.639364048371143,
+      "unexceptioned_margin_A": -0.1806359516288567
+    },
+    {
+      "atom": "LIG:329:C62",
+      "distance_A": 2.735601707640513,
+      "unexceptioned_margin_A": -0.08439829235948704
+    },
+    {
+      "atom": "THR:233:N",
+      "distance_A": 2.600000000000001,
+      "unexceptioned_margin_A": -0.0699999999999994
+    },
+    {
+      "atom": "VAL:188:HG21",
+      "distance_A": 2.2554542528478656,
+      "unexceptioned_margin_A": -0.06454574715213424
+    },
+    {
+      "atom": "LIG:329:H22",
+      "distance_A": 2.314146768868139,
+      "unexceptioned_margin_A": -0.00585323113186087
+    },
+    {
+      "atom": "LEU:271:O",
+      "distance_A": 2.737058352845271,
+      "unexceptioned_margin_A": 0.09705835284527087
+    },
+    {
+      "atom": "ASP:272:CG",
+      "distance_A": 2.9719878259555292,
+      "unexceptioned_margin_A": 0.1519878259555294
+    },
+    {
+      "atom": "LIG:329:C78",
+      "distance_A": 3.1640285684088547,
+      "unexceptioned_margin_A": 0.3440285684088549
+    },
+    {
+      "atom": "ASP:272:CB",
+      "distance_A": 3.220545633549244,
+      "unexceptioned_margin_A": 0.40054563354924433
+    },
+    {
+      "atom": "LEU:271:C",
+      "distance_A": 3.2226521627531635,
+      "unexceptioned_margin_A": 0.4026521627531636
+    },
+    {
+      "atom": "VAL:188:CG2",
+      "distance_A": 3.2615823963713773,
+      "unexceptioned_margin_A": 0.4415823963713774
+    },
+    {
+      "atom": "ASP:272:N",
+      "distance_A": 3.1513653750750357,
+      "unexceptioned_margin_A": 0.4813653750750353
+    },
+    {
+      "atom": "THR:233:OG1",
+      "distance_A": 3.200000000000001,
+      "unexceptioned_margin_A": 0.5600000000000009
+    },
+    {
+      "atom": "LIG:329:H20",
+      "distance_A": 2.9089195052368924,
+      "unexceptioned_margin_A": 0.5889195052368925
+    },
+    {
+      "atom": "LIG:329:C54",
+      "distance_A": 3.42625309925083,
+      "unexceptioned_margin_A": 0.6062530992508304
+    },
+    {
+      "atom": "PA6:HC70",
+      "distance_A": 2.948315355202883,
+      "unexceptioned_margin_A": 0.6283153552028833
+    }
+  ],
+  "user_oxygen_contacts": [
+    {
+      "atom": "ASP:272:HA",
+      "distance_A": 0.8175140151733369,
+      "unexceptioned_margin_A": -1.502485984826663
+    },
+    {
+      "atom": "ASP:272:CA",
+      "distance_A": 1.4431447610912083,
+      "unexceptioned_margin_A": -1.3768552389087916
+    },
+    {
+      "atom": "GLY:273:H",
+      "distance_A": 1.5510997244970461,
+      "unexceptioned_margin_A": -0.7689002755029537
+    },
+    {
+      "atom": "ASP:272:CB",
+      "distance_A": 2.068005788063709,
+      "unexceptioned_margin_A": -0.751994211936291
+    },
+    {
+      "atom": "ASP:272:C",
+      "distance_A": 2.0748129220402016,
+      "unexceptioned_margin_A": -0.7451870779597982
+    },
+    {
+      "atom": "GLY:273:N",
+      "distance_A": 2.0799635817641136,
+      "unexceptioned_margin_A": -0.5900364182358868
+    },
+    {
+      "atom": "ASP:272:HB3",
+      "distance_A": 2.033363730374367,
+      "unexceptioned_margin_A": -0.28663626962563304
+    },
+    {
+      "atom": "ASP:272:CG",
+      "distance_A": 2.7781757049303053,
+      "unexceptioned_margin_A": -0.04182429506969454
+    },
+    {
+      "atom": "THR:233:N",
+      "distance_A": 2.6715446920208916,
+      "unexceptioned_margin_A": 0.0015446920208912474
+    },
+    {
+      "atom": "ASP:272:OD1",
+      "distance_A": 2.7268012929923953,
+      "unexceptioned_margin_A": 0.08680129299239514
+    },
+    {
+      "atom": "ASP:272:N",
+      "distance_A": 2.7617449700261965,
+      "unexceptioned_margin_A": 0.09174497002619608
+    },
+    {
+      "atom": "THR:233:CA",
+      "distance_A": 2.9855103412088524,
+      "unexceptioned_margin_A": 0.16551034120885255
+    },
+    {
+      "atom": "THR:233:OG1",
+      "distance_A": 2.902589570618795,
+      "unexceptioned_margin_A": 0.26258957061879507
+    },
+    {
+      "atom": "THR:233:HA",
+      "distance_A": 2.631105388750466,
+      "unexceptioned_margin_A": 0.311105388750466
+    },
+    {
+      "atom": "LIG:329:H23",
+      "distance_A": 2.754514926932243,
+      "unexceptioned_margin_A": 0.43451492693224303
+    },
+    {
+      "atom": "THR:233:CB",
+      "distance_A": 3.380557802710228,
+      "unexceptioned_margin_A": 0.5605578027102283
+    },
+    {
+      "atom": "LEU:271:C",
+      "distance_A": 3.405128588682812,
+      "unexceptioned_margin_A": 0.5851285886828124
+    },
+    {
+      "atom": "LEU:271:O",
+      "distance_A": 3.2434096755521034,
+      "unexceptioned_margin_A": 0.6034096755521032
+    },
+    {
+      "atom": "ASP:272:O",
+      "distance_A": 3.283989745030426,
+      "unexceptioned_margin_A": 0.6439897450304257
+    },
+    {
+      "atom": "GLY:273:CA",
+      "distance_A": 3.497239621396424,
+      "unexceptioned_margin_A": 0.6772396213964242
+    }
+  ],
+  "widened_3p3_diagnostic": {
+    "accepted": false,
+    "point_count": 302760,
+    "pass_count": 0,
+    "best_oxygen_A": [
+      -4.776235202773246,
+      10.073166167229267,
+      -0.40036912311209766
+    ],
+    "best_margin_A": -0.5941524078599432,
+    "best_collider": "ASP:272:HA",
+    "contacts": [
+      {
+        "atom": "ASP:272:HA",
+        "distance_A": 1.7258475921400567,
+        "unexceptioned_margin_A": -0.5941524078599432
+      },
+      {
+        "atom": "LIG:329:H23",
+        "distance_A": 1.7305712194202483,
+        "unexceptioned_margin_A": -0.5894287805797516
+      },
+      {
+        "atom": "ASP:272:OD1",
+        "distance_A": 2.2774361017914164,
+        "unexceptioned_margin_A": -0.3625638982085837
+      },
+      {
+        "atom": "VAL:188:HG21",
+        "distance_A": 2.1364474476237527,
+        "unexceptioned_margin_A": -0.18355255237624712
+      },
+      {
+        "atom": "LIG:329:C70",
+        "distance_A": 2.668590132800469,
+        "unexceptioned_margin_A": -0.15140986719953098
+      },
+      {
+        "atom": "ASP:272:CA",
+        "distance_A": 2.6708225797008582,
+        "unexceptioned_margin_A": -0.1491774202991416
+      },
+      {
+        "atom": "THR:233:N",
+        "distance_A": 2.6000000000000014,
+        "unexceptioned_margin_A": -0.06999999999999895
+      },
+      {
+        "atom": "LIG:329:H22",
+        "distance_A": 2.3015340275399168,
+        "unexceptioned_margin_A": -0.01846597246008308
+      },
+      {
+        "atom": "LIG:329:C62",
+        "distance_A": 2.8302554693240345,
+        "unexceptioned_margin_A": 0.01025546932403465
+      },
+      {
+        "atom": "ASP:272:CG",
+        "distance_A": 2.9146433871214805,
+        "unexceptioned_margin_A": 0.09464338712148068
+      },
+      {
+        "atom": "LEU:271:O",
+        "distance_A": 2.818354281774182,
+        "unexceptioned_margin_A": 0.1783542817741819
+      },
+      {
+        "atom": "VAL:188:CG2",
+        "distance_A": 3.154426726491399,
+        "unexceptioned_margin_A": 0.33442672649139915
+      },
+      {
+        "atom": "LIG:329:C78",
+        "distance_A": 3.1583949078623235,
+        "unexceptioned_margin_A": 0.3383949078623236
+      },
+      {
+        "atom": "ASP:272:CB",
+        "distance_A": 3.2290093135227487,
+        "unexceptioned_margin_A": 0.40900931352274883
+      },
+      {
+        "atom": "LEU:271:C",
+        "distance_A": 3.278036254016675,
+        "unexceptioned_margin_A": 0.45803625401667514
+      },
+      {
+        "atom": "ASP:272:N",
+        "distance_A": 3.1960997704960485,
+        "unexceptioned_margin_A": 0.5260997704960482
+      },
+      {
+        "atom": "LIG:329:H20",
+        "distance_A": 2.9104573562267486,
+        "unexceptioned_margin_A": 0.5904573562267488
+      },
+      {
+        "atom": "PA6:HC70",
+        "distance_A": 2.9513547529518065,
+        "unexceptioned_margin_A": 0.6313547529518067
+      },
+      {
+        "atom": "THR:233:OG1",
+        "distance_A": 3.3000000000000007,
+        "unexceptioned_margin_A": 0.6600000000000006
+      },
+      {
+        "atom": "LIG:329:C54",
+        "distance_A": 3.5337067566638694,
+        "unexceptioned_margin_A": 0.7137067566638695
+      }
+    ]
+  }
+}

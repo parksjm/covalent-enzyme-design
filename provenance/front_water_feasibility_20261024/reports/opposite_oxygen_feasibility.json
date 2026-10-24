@@ -1,0 +1,30 @@
+{
+  "diagnostic_only": true,
+  "candidate_seed_emitted": false,
+  "not_mechanism_evidence": true,
+  "grid_count": 225000,
+  "N_OG_distance_range_A": [
+    2.6,
+    3.2
+  ],
+  "front_projection": "negative of original normalized front radial projection",
+  "full_pass_count": 0,
+  "heavy_pass_count": 0,
+  "best_full_margin_A": -0.6720365682469038,
+  "best_full_collider": "ASN:186:HD22",
+  "best_heavy_margin_A": -0.41121197850563007,
+  "best_heavy_collider": "ASN:186:ND2",
+  "full_clear_front_sensitivity": {
+    "0": 0,
+    "0.25": 0,
+    "0.5": 0,
+    "0.75": 0
+  },
+  "clear_oxygen_positions": [],
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/opposite_oxygen.py": "6b5705f60cff8191433957dc8e660e21adefc4cd5981ecfe2f3a82f1b8474997",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/search_oxygen.py": "c268afa134b58f6063541f7ac3f41406e4db709b04a750e8b08b77eb87e821ae",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/diagnose_oxygen.py": "0b8e1eb2187b3eaf4c42b74ce388b31519989b7926c85e5f0ed6cbe49e2f8583",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/oxygen_grid.npz": "3abb455fa226f2e3789edb44ebcc6ed2fa612821a1ad57e6199458a9cb4be347"
+  }
+}

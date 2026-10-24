@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "pytest",
+    "output_nyl12_front_water_20261024/test_opposite_oxygen.py",
+    "--cov=opposite_oxygen",
+    "--cov-report=json:/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/opposite_coverage.json",
+    "--cov-report=term-missing",
+    "-q"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "OMP_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/diagnose_oxygen.py": "0b8e1eb2187b3eaf4c42b74ce388b31519989b7926c85e5f0ed6cbe49e2f8583",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/opposite_oxygen.py": "6b5705f60cff8191433957dc8e660e21adefc4cd5981ecfe2f3a82f1b8474997",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/search_oxygen.py": "c268afa134b58f6063541f7ac3f41406e4db709b04a750e8b08b77eb87e821ae",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/test_opposite_oxygen.py": "ba931095ada2792585db834e37b5c010f84ccac760fa60908866af8c3cd42bd6"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/output_nyl12_front_water_20261024/opposite_test_job/job.log",
+  "session_name": "nyl12_opposite_tests_20261024",
+  "started_utc": null
+}

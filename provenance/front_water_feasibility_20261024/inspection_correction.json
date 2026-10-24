@@ -1,0 +1,6 @@
+{
+  "reason": "Assign unique atom serials; coordinates unchanged, strip optional trailing padding; hide historical sourcewater byresname not assumed chain",
+  "atoms": 5054,
+  "corrected_pdb_sha256": "ff3afc0b4e5e0169c6dcbde7393b971bc68bf3a9cddba83bf8aa30677c2a0dc2",
+  "original_preserved": "inspection/full_pocket.pdb"
+}
