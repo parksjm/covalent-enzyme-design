@@ -1,0 +1,88 @@
+
+CPPTRAJ: Trajectory Analysis. V7.6.2 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 10/24/26 12:17:55
+| Available memory: 236.675 GB
+
+INPUT: Reading input from '/data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/positive_control.cpptraj'
+  [parm /data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop]
+	Reading '/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+  [trajin /data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc 1 1]
+	Reading '/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc' as Amber NetCDF
+  [watershell :1528@O out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower35.dat lower 3.5 upper 5.0 :WAT@O]
+    WATERSHELL: Output to /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower35.dat
+	The first shell will contain solvent < 3.500 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [:1528@O]
+	Solvent atoms will be specified by [:WAT@O]
+	# solvent molecules in 'lower' shell stored in set 'WS_00001[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00001[upper]'
+  [watershell :1528@O out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower4.dat lower 4.0 upper 5.0 :WAT@O]
+    WATERSHELL: Output to /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower4.dat
+	The first shell will contain solvent < 4.000 angstroms from
+	  the solute; the second shell < 5.000 angstroms...
+	Solute atoms will be specified by [:1528@O]
+	Solvent atoms will be specified by [:WAT@O]
+	# solvent molecules in 'lower' shell stored in set 'WS_00003[lower]'
+	# solvent molecules in 'upper' shell stored in set 'WS_00003[upper]'
+  [run]
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: md_solvated.prmtop, 103251 atoms, 29217 res, box: Truncated octahedron, 27913 mol, 27690 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'solvated.nc' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, time, box, Parm md_solvated.prmtop (Truncated octahedron box) (reading 1 of 1)
+  Coordinate processing will occur on 1 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'md_solvated.prmtop' (2 actions):
+  0: [watershell :1528@O out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower35.dat lower 3.5 upper 5.0 :WAT@O]
+	Mask [:1528@O] corresponds to 1 atoms.
+	Mask [:WAT@O] corresponds to 27690 atoms.
+	Imaging is on.
+  1: [watershell :1528@O out /data/jpc/covalent-enzyme-design/output_nyl12_pa6_hydration_20261024/positive_control_attempt2/lower4.dat lower 4.0 upper 5.0 :WAT@O]
+	Mask [:1528@O] corresponds to 1 atoms.
+	Mask [:WAT@O] corresponds to 27690 atoms.
+	Imaging is on.
+----- solvated.nc (1-1, 1) -----
+100% Complete.
+
+Read 1 frames and processed 1 frames.
+TIME: Avg. throughput= 67.4036 frames / second.
+
+ACTION OUTPUT:
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (4 total):
+	WS_00001[lower] "WS_00001[lower]" (integer), size is 1 (0.004 kB)
+	WS_00001[upper] "WS_00001[upper]" (integer), size is 1 (0.004 kB)
+	WS_00003[lower] "WS_00003[lower]" (integer), size is 1 (0.004 kB)
+	WS_00003[upper] "WS_00003[upper]" (integer), size is 1 (0.004 kB)
+    Total data set memory usage is at least 0.016 kB
+
+DATAFILES (2 total):
+  lower35.dat (Standard Data File):  WS_00001[lower] WS_00001[upper]
+  lower4.dat (Standard Data File):  WS_00003[lower] WS_00003[upper]
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.05%)
+TIME:		Trajectory Process : 0.0148 s ( 97.99%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.01%)
+TIME:		Data File Write    : 0.0002 s (  1.04%)
+TIME:		Other              : 0.0001 s (  0.01%)
+TIME:	Run Total 0.0151 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 0.1432 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
