@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/atom_mapping.json.gz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/atom_mapping.json.gz",
+    "sha256": "413c02e0ab38b2799782c3e247c068cb43664fcb3309d462d719dd81c1ab6123",
+    "bytes": 230498
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/export_report.json",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/export_report.json",
+    "sha256": "df7316d2c166f07dec679e79fd837225eb4ba1c82a00d7e27cd1011bab5b9393",
+    "bytes": 14321
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/initial_fullprotein_ligand.pdb.gz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/initial_fullprotein_ligand.pdb.gz",
+    "sha256": "fd6f8e8e6bdccad9fa241beb8447be9c8836bdbdd8dcae4e0aae12f86c4b2e30",
+    "bytes": 416063
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/optimization_evaluations.pdb.gz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/optimization_evaluations.pdb.gz",
+    "sha256": "04ee2edf938cb4550bf346b3a7ace69827d1440d80d12c0fe36cac649e34f9bb",
+    "bytes": 411722
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/pocket_endpoint.pdb",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/pocket_endpoint.pdb",
+    "sha256": "0cab505fe313ba109027f692f6fa9c7c076fb65e1ae9da9f4e05dff076f672ab",
+    "bytes": 94532
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/pocket_initial.pdb",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/pocket_initial.pdb",
+    "sha256": "af6913be74e2d6f259b11fd9b61e3213c76069135539383f01e12b7914f8cb68",
+    "bytes": 94532
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/source_manifest.json",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/source_manifest.json",
+    "sha256": "a0fa536a95fe2c079718d7be8f0d3b8905d8e23d7d9d2c9f45f804b488f974ae",
+    "bytes": 2404
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/view_analytic_pilot.py",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/view_analytic_pilot.py",
+    "sha256": "d01cd013705bc1c24a333aceb237d561cd0d5619e19339191724698277fe6bea",
+    "bytes": 995
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/full_enzyme_substrate_endpoint.pdb.gz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/full_enzyme_substrate_endpoint.pdb.gz",
+    "sha256": "184fdc1c1ffd5db34b963a818e7957dc5fdbb88b9be6a2f92879b0a905cabb57",
+    "bytes": 416118
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/view_full_enzyme_endpoint.py",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/view_full_enzyme_endpoint.py",
+    "sha256": "40945df5381017756af13837d695045da335a58680fa3f4ca17905e0ff33ab0d",
+    "bytes": 1089
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/qm_subsystem_initial.xyz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/qm_subsystem_initial.xyz",
+    "sha256": "bf618f63ea6f17ccd48ef1df41815d2796309d20b2b8a258a8f266c6dfdbe0fc",
+    "bytes": 6337
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/qm_subsystem_endpoint.xyz",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/qm_subsystem_endpoint.xyz",
+    "sha256": "54ca14874f7e51b9b4a6cf943d23ab21328e4b7089754aa421709e7abbbe794e",
+    "bytes": 6372
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/qm_export_manifest.json",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/qm_export_manifest.json",
+    "sha256": "55b707da1748644a0d538c8fe9e6f5c26f02a2137dcf3c75e09f0fb5c5906d09",
+    "bytes": 12845
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/qm_subsystem_atom_map.json",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/qm_subsystem_atom_map.json",
+    "sha256": "008a8e0a146804b1932ea1a1612ef820f669123789a9f53c5e763e5c5963df87",
+    "bytes": 39370
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/inspection/endpoint_review.json",
+    "retained_copy": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024/endpoint_review.json",
+    "sha256": "5214ea40a2298ec628b9a0129e38ecdd0f07b052a5d792ef6309139c5fb446bc",
+    "bytes": 22500
+  }
+]

@@ -1,0 +1,139 @@
+{
+  "python_executable": "/data/jpc/code/ambertools26/venv/bin/python",
+  "topology": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+  "coordinates": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc",
+  "environment": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "mm_options": {
+    "ntb": 1,
+    "igb": 0,
+    "ntc": 1,
+    "ntf": 1,
+    "ntr": 0,
+    "ifqnt": 1,
+    "cut": 10.0,
+    "jfastw": 4
+  },
+  "qm_options": {
+    "qm_theory": "DFTB3",
+    "qmcharge": -2,
+    "qmmask": "@1621,1622,1623,1624,1625,1626,1627,1628,1629,1630,1631,1632,1633,1634,1635,1636,1637,1638,1639,1640,1641,1642,1643,1644,1645,1646,1647,1648,1649,1650,1651,1652,1653,1654,1655,2727,2728,2729,2730,2731,2732,2733,2734,13905,13906,13907,13908,13909,13910,13911,13912,13913,13914,13915,13916,13917,13918,13919,13920,13921,13922,13923,13924,13925,13926,13927,13928,13929,13930,13931,14555,14556,14557,14558,14559,14560,14574,14575,14576,14577,14578,14579,19901,19902,19903,19904,19905,19906,19907,19942,19943,19944,19945,19946,19947,19948,19949,19950",
+    "adjust_q": 2,
+    "qm_ewald": 1,
+    "qm_pme": 1,
+    "qmmm_int": 1,
+    "qmcut": 10.0,
+    "lnk_dis": 1.09,
+    "lnk_atomic_no": 1,
+    "lnk_method": 1,
+    "scfconv": 1e-10
+  },
+  "expected_inventory": {
+    "real_atoms": 98,
+    "link_atoms": 8,
+    "electron_count": 368,
+    "boundary_pairs": [
+      [
+        1621,
+        1619
+      ],
+      [
+        1640,
+        1656
+      ],
+      [
+        2727,
+        2725
+      ],
+      [
+        13922,
+        13932
+      ],
+      [
+        14555,
+        14553
+      ],
+      [
+        14574,
+        14572
+      ],
+      [
+        19907,
+        19908
+      ],
+      [
+        19901,
+        19900
+      ]
+    ]
+  },
+  "components": [
+    {
+      "label": "Thr_OG1",
+      "atom": 13916,
+      "axis": 0
+    },
+    {
+      "label": "PA6_C54",
+      "atom": 19903,
+      "axis": 0
+    },
+    {
+      "label": "PA6_O49",
+      "atom": 19904,
+      "axis": 0
+    },
+    {
+      "label": "QM_link_parent",
+      "atom": 19901,
+      "axis": 0
+    },
+    {
+      "label": "MM_link_partner",
+      "atom": 19900,
+      "axis": 0
+    },
+    {
+      "label": "external_MM_water_O",
+      "atom": 20182,
+      "axis": 0
+    }
+  ],
+  "step_sizes_angstrom": [
+    0.001,
+    0.0005
+  ],
+  "force_absolute_tolerance": 0.02,
+  "force_relative_tolerance": 0.001,
+  "energy_reproducibility_tolerance": 1e-08,
+  "approved_inventory_source": {
+    "path": "/data/jpc/covalent-enzyme-design/configs/pa6_es_dftb_pilot_20261024.json",
+    "sha256": "1bb691fbf9febec084eb48fdbae84677639e159ca6309539bbcad0b029ef31c3"
+  },
+  "parameter_files": [
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-C.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-H.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-N.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-O.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-C.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-H.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-N.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-O.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-C.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-H.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-N.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-O.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-C.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-H.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-N.skf",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-O.skf",
+    "/data/jpc/code/ambertools26/venv/lib/libsander.so",
+    "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sqm/qm_zero_charges.F90",
+    "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sqm/qm_link_atoms.F90"
+  ]
+}

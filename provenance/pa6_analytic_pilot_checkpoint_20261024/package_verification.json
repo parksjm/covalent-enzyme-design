@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "payload_files": 326,
+  "complete_package_bytes": 22219552,
+  "prior_payload_count": 306,
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_32",
+  "local_coordinate_payload": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_checkpoint_payload_20261024",
+  "checkpoint_script_sha256": "2b63c8120b4229f29d8eec6aadf029bef8122348cab251908f5a38f2c81fdadb",
+  "declared_updated_prior_paths": [
+    "README.md",
+    "docs/pa6_dftb_validation_pilot_20261024.md",
+    "docs/standalone_handoff_20261020.md",
+    "manuscript/INTRODUCTION_DRAFT.md",
+    "manuscript/METHODS_DRAFT.md",
+    "manuscript/README.md",
+    "manuscript/REFERENCES.md",
+    "manuscript/SOURCE_LEDGER.md",
+    "manuscript/recent_design_and_relay_references.bib",
+    "provenance/agent_actions_at_export.jsonl"
+  ]
+}

@@ -494,3 +494,19 @@ short water visits, slow buried hydration or hydration following chemical change
 Independent seed geometry validation retained full-precision NetCDF metrics;
 historical phi was reproduced from its actual rounded PDB source, with explicit
 coordinate-precision bounds and hashes, rather than changing an angle tolerance.
+
+An exploratory ES relaxation retained the complete 103,251-atom periodic
+enzyme–PA6 L4–solvent system and its inherited ff19SB/GAFF1/AM1-BCC/TIP3P
+parameters. The DFTB3/3ob-3-1 region contained 98 original atoms and eight
+hydrogen link atoms (charge −2, singlet), including the catalytic N-terminal
+Thr233, adjacent Thr234, the Phe113 backbone donor, Asn186 side chain,
+Asp272/Asp274 carboxylates and the central substrate amide. No water was
+forced into the QM region. Sander analytic gradients were used with electronic
+embedding, QM Ewald/PME, 10 Å cutoffs and an SCC threshold of 10−10.
+All MM atoms were restrained to the original coordinates at
+10 kcal mol−1 Å−2; QM atoms were unrestrained. The initial 25-cycle run did
+not converge (RMS gradient 2.4646 versus a 0.05 kcal mol−1 Å−1 target).
+A continuation with a 500-cycle budget retained the same Hamiltonian and
+original restraint reference. Optimizer snapshots are coordinate evaluations,
+not a molecular-dynamics trajectory. This pilot does not establish TI1
+stability, reaction barriers or validated native TI1 force-field parameters.

@@ -3,6 +3,15 @@
 The WT ES reuse audit and installed-engine regressions have passed. This note
 specifies the next scientific gate; it is not a completed QM/MM calculation.
 
+Update after user review: Sander supplies analytic QM/MM gradients. The extra
+finite-difference sanity check found a small, step-dependent discrepancy and
+is retained as failed evidence; its cause has not been established. The user
+questioned making numerical derivatives a prerequisite. Root therefore permits
+only a separately declared, bounded exploratory ES relaxation using analytic
+gradients after source, inventory and realized-physics checks. This does not
+certify the DFTB reaction surface or waive subsequent chemical validation.
+No further numerical-force calculations are planned for this pilot.
+
 1. Use the recovered single-ligand PA6 L4/tetramer seeds, with their original
    full MM environment. Preserve full substrate graph, terminal charges and
    the central L2-producing register. Do not transplant AF3 atom names.
@@ -27,8 +36,10 @@ specifies the next scientific gate; it is not a completed QM/MM calculation.
    set once for a path; do not add/remove QM atoms dynamically by distance.
    A water contacting both N and OG1 does not by itself establish proton relay.
 5. Check finite energies/SCF, actual link atoms and charge redistribution, and
-   representative analytic forces against finite energy differences before
-   optimization. Test at least one boundary/embedding variant. The engine's
+   finite analytic forces before the bounded exploratory relaxation. The
+   finite-difference diagnostic and its limitation remain separately recorded.
+   Test at least one boundary/embedding variant before accepting the reactive
+   Hamiltonian. The engine's
    passed water/NMA examples do not replace these enzyme-specific checks.
 6. Start with bounded ES PES relaxations and proton-conserving local reaction
    models. Keep the total atom/proton inventory fixed when moving a proton

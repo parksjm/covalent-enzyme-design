@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-25T01:29:25.755975+00:00",
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/sander",
+    "-O",
+    "-i",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/relaxation.mdin",
+    "-p",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+    "-c",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+    "-ref",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+    "-o",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/minimized.mdout",
+    "-r",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/optimized.ncrst",
+    "-x",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/optimization.nc",
+    "-inf",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/relaxation.mdinfo"
+  ],
+  "exit_status": 0,
+  "ended_utc": "2026-10-25T01:30:12.186679+00:00"
+}

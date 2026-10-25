@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "coordinates_finite": true,
+  "fixed_box_preserved": true,
+  "box_absolute_tolerance_A_or_degree": 1e-10,
+  "status": "Scientific endpoint review required; exit does not certify convergence or ES state."
+}

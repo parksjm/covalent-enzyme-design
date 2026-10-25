@@ -1,0 +1,2229 @@
+{
+  "case": "Nyl12 WT PA6 L4z toL2 ES pilot",
+  "topology": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+  "coordinates": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc",
+  "forced_water": false,
+  "proposal_source": {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/preparation_mapping/qm_mapping_proposal.json",
+    "sha256": "dd52de39552ca84361aab531abcdb5479f8843f7a003dc9c1b3701a0a1d2a4e8"
+  },
+  "source_reuse_manifest": {
+    "path": "/data/jpc/covalent-enzyme-design/configs/pa6_wt_es_reuse_20261024.json",
+    "sha256": "3dba04b55deb7cebb5aefb855d621c5d2f78be0779a96e5dc76a9577e0a14239"
+  },
+  "variants": [
+    {
+      "name": "primary_106_nuclei",
+      "state": "ES",
+      "qmcharge": -2,
+      "multiplicity": 1,
+      "allow_multiple_link_parents": false,
+      "groups": [
+        {
+          "name": "native_thr233_with_Thr930_fragment",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 13905,
+              "residue": 929,
+              "resname": "THR",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N3",
+              "charge": -0.4844
+            },
+            {
+              "index": 13906,
+              "residue": 929,
+              "resname": "THR",
+              "name": "H1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.12239999999999998
+            },
+            {
+              "index": 13907,
+              "residue": 929,
+              "resname": "THR",
+              "name": "H2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.12239999999999998
+            },
+            {
+              "index": 13908,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CX",
+              "charge": 0.0034
+            },
+            {
+              "index": 13909,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HP",
+              "charge": 0.10869999999999999
+            },
+            {
+              "index": 13910,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.45139999999999997
+            },
+            {
+              "index": 13911,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": -0.0323
+            },
+            {
+              "index": 13912,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.2554
+            },
+            {
+              "index": 13913,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13914,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13915,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13916,
+              "residue": 929,
+              "resname": "THR",
+              "name": "OG1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "OH",
+              "charge": -0.6763999989024437
+            },
+            {
+              "index": 13917,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HO",
+              "charge": 0.407
+            },
+            {
+              "index": 13918,
+              "residue": 929,
+              "resname": "THR",
+              "name": "C",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.6163000005487781
+            },
+            {
+              "index": 13919,
+              "residue": 929,
+              "resname": "THR",
+              "name": "O",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5722000021951126
+            },
+            {
+              "index": 13920,
+              "residue": 930,
+              "resname": "THR",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.4157
+            },
+            {
+              "index": 13921,
+              "residue": 930,
+              "resname": "THR",
+              "name": "H",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.27190000000000003
+            },
+            {
+              "index": 13922,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.038900000000000004
+            },
+            {
+              "index": 13923,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.1007
+            },
+            {
+              "index": 13924,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.3654
+            },
+            {
+              "index": 13925,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.0043
+            },
+            {
+              "index": 13926,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.2438
+            },
+            {
+              "index": 13927,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13928,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13929,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13930,
+              "residue": 930,
+              "resname": "THR",
+              "name": "OG1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "OH",
+              "charge": -0.6760999983536655
+            },
+            {
+              "index": 13931,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HO",
+              "charge": 0.4102
+            }
+          ]
+        },
+        {
+          "name": "Phe113_peptide_donor",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 1621,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.059699999999999996
+            },
+            {
+              "index": 1622,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.0869
+            },
+            {
+              "index": 1623,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.1303
+            },
+            {
+              "index": 1624,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0187
+            },
+            {
+              "index": 1625,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.32039999999999996
+            },
+            {
+              "index": 1626,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1627,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1628,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1629,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CG1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.043
+            },
+            {
+              "index": 1630,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG12",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0236
+            },
+            {
+              "index": 1631,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG13",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0236
+            },
+            {
+              "index": 1632,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CD1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.066
+            },
+            {
+              "index": 1633,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD11",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1634,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD12",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1635,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD13",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1636,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "C",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.5973000005487781
+            },
+            {
+              "index": 1637,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "O",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5679000016463344
+            },
+            {
+              "index": 1638,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.4157
+            },
+            {
+              "index": 1639,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "H",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.27190000000000003
+            },
+            {
+              "index": 1640,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.0024
+            },
+            {
+              "index": 1641,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.09779999999999998
+            },
+            {
+              "index": 1642,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.034300000000000004
+            },
+            {
+              "index": 1643,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0295
+            },
+            {
+              "index": 1644,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0295
+            },
+            {
+              "index": 1645,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": 0.0118
+            },
+            {
+              "index": 1646,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CD1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1256
+            },
+            {
+              "index": 1647,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HD1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.13299999999999998
+            },
+            {
+              "index": 1648,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CE1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1704
+            },
+            {
+              "index": 1649,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HE1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.143
+            },
+            {
+              "index": 1650,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CZ",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.10719999999999999
+            },
+            {
+              "index": 1651,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HZ",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.12969999999999998
+            },
+            {
+              "index": 1652,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CE2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1704
+            },
+            {
+              "index": 1653,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HE2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.143
+            },
+            {
+              "index": 1654,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CD2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1256
+            },
+            {
+              "index": 1655,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HD2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.13299999999999998
+            }
+          ]
+        },
+        {
+          "name": "Asn186_sidechain_amide",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 2727,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.20409999999999998
+            },
+            {
+              "index": 2728,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0797
+            },
+            {
+              "index": 2729,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0797
+            },
+            {
+              "index": 2730,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.713
+            },
+            {
+              "index": 2731,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5930999983536656
+            },
+            {
+              "index": 2732,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "ND2",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.9190999983536654
+            },
+            {
+              "index": 2733,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HD21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.41960000000000003
+            },
+            {
+              "index": 2734,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HD22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.41960000000000003
+            }
+          ]
+        },
+        {
+          "name": "Asp272_carboxylate",
+          "formal_charge": -1,
+          "atoms": [
+            {
+              "index": 14555,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.030299999999999997
+            },
+            {
+              "index": 14556,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14557,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14558,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CO",
+              "charge": 0.7993999989024436
+            },
+            {
+              "index": 14559,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            },
+            {
+              "index": 14560,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "OD2",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            }
+          ]
+        },
+        {
+          "name": "Asp274_carboxylate",
+          "formal_charge": -1,
+          "atoms": [
+            {
+              "index": 14574,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.030299999999999997
+            },
+            {
+              "index": 14575,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14576,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14577,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CO",
+              "charge": 0.7993999989024436
+            },
+            {
+              "index": 14578,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            },
+            {
+              "index": 14579,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "OD2",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            }
+          ]
+        },
+        {
+          "name": "PA6_reacting_amide",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 19901,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C70",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.0544
+            },
+            {
+              "index": 19902,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C62",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.0504
+            },
+            {
+              "index": 19903,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C54",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c",
+              "charge": 0.5351
+            },
+            {
+              "index": 19904,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "O49",
+              "element": 8,
+              "mass": 16.0,
+              "type": "o",
+              "charge": -0.6620999983536655
+            },
+            {
+              "index": 19905,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "N59",
+              "element": 7,
+              "mass": 14.01,
+              "type": "n",
+              "charge": -0.1809
+            },
+            {
+              "index": 19906,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C67",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": 0.047999999999999994
+            },
+            {
+              "index": 19907,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C75",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.053399999999999996
+            },
+            {
+              "index": 19942,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0417
+            },
+            {
+              "index": 19943,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0417
+            },
+            {
+              "index": 19944,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0187
+            },
+            {
+              "index": 19945,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H24",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0187
+            },
+            {
+              "index": 19946,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H25",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hn",
+              "charge": 0.18349999999999997
+            },
+            {
+              "index": 19947,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H26",
+              "element": 1,
+              "mass": 1.008,
+              "type": "h1",
+              "charge": 0.028700000000000003
+            },
+            {
+              "index": 19948,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H27",
+              "element": 1,
+              "mass": 1.008,
+              "type": "h1",
+              "charge": 0.028700000000000003
+            },
+            {
+              "index": 19949,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H28",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.026199999999999998
+            },
+            {
+              "index": 19950,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H29",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.026199999999999998
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "nucleophile": 13916,
+        "thr_n_terminus": 13905,
+        "scissile_carbon": 19903,
+        "scissile_oxygen": 19904,
+        "leaving_nitrogen": 19905,
+        "oxyanion_donor_backbone": 1638,
+        "oxyanion_donor_sidechain": 2732,
+        "asp272_od1": 14559,
+        "asp272_od2": 14560,
+        "asp274_od1": 14578,
+        "asp274_od2": 14579,
+        "donor_carbonyl_c": 1636,
+        "donor_carbonyl_o": 1637
+      },
+      "boundaries": [
+        {
+          "qm_index": 1621,
+          "mm_index": 1619
+        },
+        {
+          "qm_index": 1640,
+          "mm_index": 1656
+        },
+        {
+          "qm_index": 2727,
+          "mm_index": 2725
+        },
+        {
+          "qm_index": 13922,
+          "mm_index": 13932
+        },
+        {
+          "qm_index": 14555,
+          "mm_index": 14553
+        },
+        {
+          "qm_index": 14574,
+          "mm_index": 14572
+        },
+        {
+          "qm_index": 19907,
+          "mm_index": 19908
+        },
+        {
+          "qm_index": 19901,
+          "mm_index": 19900
+        }
+      ],
+      "topology_sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+      "coordinates_sha256": "8cd4e41ae8848213896ef93c9e04d4b287c52f327bbc7d53d7c84cd39a713433"
+    },
+    {
+      "name": "boundary_112_nuclei",
+      "state": "ES",
+      "qmcharge": -2,
+      "multiplicity": 1,
+      "allow_multiple_link_parents": false,
+      "groups": [
+        {
+          "name": "native_thr233_with_Thr930_fragment",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 13905,
+              "residue": 929,
+              "resname": "THR",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N3",
+              "charge": -0.4844
+            },
+            {
+              "index": 13906,
+              "residue": 929,
+              "resname": "THR",
+              "name": "H1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.12239999999999998
+            },
+            {
+              "index": 13907,
+              "residue": 929,
+              "resname": "THR",
+              "name": "H2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.12239999999999998
+            },
+            {
+              "index": 13908,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CX",
+              "charge": 0.0034
+            },
+            {
+              "index": 13909,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HP",
+              "charge": 0.10869999999999999
+            },
+            {
+              "index": 13910,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.45139999999999997
+            },
+            {
+              "index": 13911,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": -0.0323
+            },
+            {
+              "index": 13912,
+              "residue": 929,
+              "resname": "THR",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.2554
+            },
+            {
+              "index": 13913,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13914,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13915,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0627
+            },
+            {
+              "index": 13916,
+              "residue": 929,
+              "resname": "THR",
+              "name": "OG1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "OH",
+              "charge": -0.6763999989024437
+            },
+            {
+              "index": 13917,
+              "residue": 929,
+              "resname": "THR",
+              "name": "HG1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HO",
+              "charge": 0.407
+            },
+            {
+              "index": 13918,
+              "residue": 929,
+              "resname": "THR",
+              "name": "C",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.6163000005487781
+            },
+            {
+              "index": 13919,
+              "residue": 929,
+              "resname": "THR",
+              "name": "O",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5722000021951126
+            },
+            {
+              "index": 13920,
+              "residue": 930,
+              "resname": "THR",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.4157
+            },
+            {
+              "index": 13921,
+              "residue": 930,
+              "resname": "THR",
+              "name": "H",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.27190000000000003
+            },
+            {
+              "index": 13922,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.038900000000000004
+            },
+            {
+              "index": 13923,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.1007
+            },
+            {
+              "index": 13924,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.3654
+            },
+            {
+              "index": 13925,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.0043
+            },
+            {
+              "index": 13926,
+              "residue": 930,
+              "resname": "THR",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.2438
+            },
+            {
+              "index": 13927,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13928,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13929,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.06420000000000001
+            },
+            {
+              "index": 13930,
+              "residue": 930,
+              "resname": "THR",
+              "name": "OG1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "OH",
+              "charge": -0.6760999983536655
+            },
+            {
+              "index": 13931,
+              "residue": 930,
+              "resname": "THR",
+              "name": "HG1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HO",
+              "charge": 0.4102
+            }
+          ]
+        },
+        {
+          "name": "Phe113_peptide_donor",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 1621,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.059699999999999996
+            },
+            {
+              "index": 1622,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.0869
+            },
+            {
+              "index": 1623,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "3C",
+              "charge": 0.1303
+            },
+            {
+              "index": 1624,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HB",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0187
+            },
+            {
+              "index": 1625,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CG2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.32039999999999996
+            },
+            {
+              "index": 1626,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1627,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1628,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0882
+            },
+            {
+              "index": 1629,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CG1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.043
+            },
+            {
+              "index": 1630,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG12",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0236
+            },
+            {
+              "index": 1631,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HG13",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0236
+            },
+            {
+              "index": 1632,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "CD1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.066
+            },
+            {
+              "index": 1633,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD11",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1634,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD12",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1635,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "HD13",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0186
+            },
+            {
+              "index": 1636,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "C",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.5973000005487781
+            },
+            {
+              "index": 1637,
+              "residue": 112,
+              "resname": "ILE",
+              "name": "O",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5679000016463344
+            },
+            {
+              "index": 1638,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "N",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.4157
+            },
+            {
+              "index": 1639,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "H",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.27190000000000003
+            },
+            {
+              "index": 1640,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CA",
+              "element": 6,
+              "mass": 12.01,
+              "type": "XC",
+              "charge": -0.0024
+            },
+            {
+              "index": 1641,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HA",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H1",
+              "charge": 0.09779999999999998
+            },
+            {
+              "index": 1642,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CT",
+              "charge": -0.034300000000000004
+            },
+            {
+              "index": 1643,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0295
+            },
+            {
+              "index": 1644,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0295
+            },
+            {
+              "index": 1645,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": 0.0118
+            },
+            {
+              "index": 1646,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CD1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1256
+            },
+            {
+              "index": 1647,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HD1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.13299999999999998
+            },
+            {
+              "index": 1648,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CE1",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1704
+            },
+            {
+              "index": 1649,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HE1",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.143
+            },
+            {
+              "index": 1650,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CZ",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.10719999999999999
+            },
+            {
+              "index": 1651,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HZ",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.12969999999999998
+            },
+            {
+              "index": 1652,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CE2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1704
+            },
+            {
+              "index": 1653,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HE2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.143
+            },
+            {
+              "index": 1654,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "CD2",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CA",
+              "charge": -0.1256
+            },
+            {
+              "index": 1655,
+              "residue": 113,
+              "resname": "PHE",
+              "name": "HD2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HA",
+              "charge": 0.13299999999999998
+            }
+          ]
+        },
+        {
+          "name": "Asn186_sidechain_amide",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 2727,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.20409999999999998
+            },
+            {
+              "index": 2728,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0797
+            },
+            {
+              "index": 2729,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": 0.0797
+            },
+            {
+              "index": 2730,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "C",
+              "charge": 0.713
+            },
+            {
+              "index": 2731,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O",
+              "charge": -0.5930999983536656
+            },
+            {
+              "index": 2732,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "ND2",
+              "element": 7,
+              "mass": 14.01,
+              "type": "N",
+              "charge": -0.9190999983536654
+            },
+            {
+              "index": 2733,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HD21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.41960000000000003
+            },
+            {
+              "index": 2734,
+              "residue": 186,
+              "resname": "ASN",
+              "name": "HD22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "H",
+              "charge": 0.41960000000000003
+            }
+          ]
+        },
+        {
+          "name": "Asp272_carboxylate",
+          "formal_charge": -1,
+          "atoms": [
+            {
+              "index": 14555,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.030299999999999997
+            },
+            {
+              "index": 14556,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14557,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14558,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CO",
+              "charge": 0.7993999989024436
+            },
+            {
+              "index": 14559,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            },
+            {
+              "index": 14560,
+              "residue": 968,
+              "resname": "ASP",
+              "name": "OD2",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            }
+          ]
+        },
+        {
+          "name": "Asp274_carboxylate",
+          "formal_charge": -1,
+          "atoms": [
+            {
+              "index": 14574,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "CB",
+              "element": 6,
+              "mass": 12.01,
+              "type": "2C",
+              "charge": -0.030299999999999997
+            },
+            {
+              "index": 14575,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "HB2",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14576,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "HB3",
+              "element": 1,
+              "mass": 1.008,
+              "type": "HC",
+              "charge": -0.0122
+            },
+            {
+              "index": 14577,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "CG",
+              "element": 6,
+              "mass": 12.01,
+              "type": "CO",
+              "charge": 0.7993999989024436
+            },
+            {
+              "index": 14578,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "OD1",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            },
+            {
+              "index": 14579,
+              "residue": 970,
+              "resname": "ASP",
+              "name": "OD2",
+              "element": 8,
+              "mass": 16.0,
+              "type": "O2",
+              "charge": -0.8013999989024437
+            }
+          ]
+        },
+        {
+          "name": "PA6_reacting_amide",
+          "formal_charge": 0,
+          "atoms": [
+            {
+              "index": 19900,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C78",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.016399999999999998
+            },
+            {
+              "index": 19901,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C70",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.0544
+            },
+            {
+              "index": 19902,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C62",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.0504
+            },
+            {
+              "index": 19903,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C54",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c",
+              "charge": 0.5351
+            },
+            {
+              "index": 19904,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "O49",
+              "element": 8,
+              "mass": 16.0,
+              "type": "o",
+              "charge": -0.6620999983536655
+            },
+            {
+              "index": 19905,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "N59",
+              "element": 7,
+              "mass": 14.01,
+              "type": "n",
+              "charge": -0.1809
+            },
+            {
+              "index": 19906,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C67",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": 0.047999999999999994
+            },
+            {
+              "index": 19907,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C75",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.053399999999999996
+            },
+            {
+              "index": 19908,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "C79",
+              "element": 6,
+              "mass": 12.01,
+              "type": "c3",
+              "charge": -0.011399999999999999
+            },
+            {
+              "index": 19940,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H19",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0031999999999999997
+            },
+            {
+              "index": 19941,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H20",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0031999999999999997
+            },
+            {
+              "index": 19942,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H21",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0417
+            },
+            {
+              "index": 19943,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H22",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0417
+            },
+            {
+              "index": 19944,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H23",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0187
+            },
+            {
+              "index": 19945,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H24",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0187
+            },
+            {
+              "index": 19946,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H25",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hn",
+              "charge": 0.18349999999999997
+            },
+            {
+              "index": 19947,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H26",
+              "element": 1,
+              "mass": 1.008,
+              "type": "h1",
+              "charge": 0.028700000000000003
+            },
+            {
+              "index": 19948,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H27",
+              "element": 1,
+              "mass": 1.008,
+              "type": "h1",
+              "charge": 0.028700000000000003
+            },
+            {
+              "index": 19949,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H28",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.026199999999999998
+            },
+            {
+              "index": 19950,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H29",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.026199999999999998
+            },
+            {
+              "index": 19951,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H30",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0017
+            },
+            {
+              "index": 19952,
+              "residue": 1313,
+              "resname": "LIG",
+              "name": "H31",
+              "element": 1,
+              "mass": 1.008,
+              "type": "hc",
+              "charge": 0.0017
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "nucleophile": 13916,
+        "thr_n_terminus": 13905,
+        "scissile_carbon": 19903,
+        "scissile_oxygen": 19904,
+        "leaving_nitrogen": 19905,
+        "oxyanion_donor_backbone": 1638,
+        "oxyanion_donor_sidechain": 2732,
+        "asp272_od1": 14559,
+        "asp272_od2": 14560,
+        "asp274_od1": 14578,
+        "asp274_od2": 14579,
+        "donor_carbonyl_c": 1636,
+        "donor_carbonyl_o": 1637
+      },
+      "boundaries": [
+        {
+          "qm_index": 1621,
+          "mm_index": 1619
+        },
+        {
+          "qm_index": 1640,
+          "mm_index": 1656
+        },
+        {
+          "qm_index": 2727,
+          "mm_index": 2725
+        },
+        {
+          "qm_index": 13922,
+          "mm_index": 13932
+        },
+        {
+          "qm_index": 14555,
+          "mm_index": 14553
+        },
+        {
+          "qm_index": 14574,
+          "mm_index": 14572
+        },
+        {
+          "qm_index": 19908,
+          "mm_index": 19909
+        },
+        {
+          "qm_index": 19900,
+          "mm_index": 19899
+        }
+      ],
+      "topology_sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+      "coordinates_sha256": "8cd4e41ae8848213896ef93c9e04d4b287c52f327bbc7d53d7c84cd39a713433"
+    }
+  ],
+  "embedding_and_engine_settings": "Separate engine audit required; no engine launch from this preparation"
+}

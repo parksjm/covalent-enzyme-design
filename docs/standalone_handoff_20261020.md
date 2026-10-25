@@ -1,3 +1,117 @@
+## CURRENT CHECKPOINT — focused ES optimization, 2026-10-24
+
+User inspected the 98-real-atom + 8-link-H QM XYZ and approved the region,
+including Asp272/Asp274 and the following Thr234. Keep that region unchanged.
+The full 103251-atom solvated tetramer and full PA6 L4 remain in the calculation.
+The 25-cycle analytic-gradient pilot completed but did not converge: RMS
+2.4646 versus target 0.05 kcal/mol/Å. Thr retained OH/NH2 and the substrate
+retained an amide-like geometry; this is ES, not TI1.
+
+A 500-cycle continuation is running in tmux `nyl12_es_continuation_20261024`.
+Directory: output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/.
+It starts from attempt2/optimized.ncrst and retains attempt2/starting.ncrst as
+the original restraint reference. Only cycle budget and output cadence change;
+QM atoms remain free, all MM atoms retain the same positional restraints.
+Check process.json and scientific_acceptance.json separately before claiming
+completion or convergence. No MD, reaction path or new parameter fit was run.
+
+The attempt2/inspection/ directory now contains qm_subsystem_endpoint.xyz,
+qm_subsystem_initial.xyz, an explicit link-atom map, endpoint_review.json,
+full_enzyme_substrate_endpoint.pdb.gz and portable viewers. Pocket PDBs are
+display extracts only. Native TI1 parameters remain unvalidated and paused.
+Own-code verification: 656 passed/13 skipped in the standard run, then all
+13 workstation-fixture cases passed separately; new-code coverage 91.76%.
+
+Keep one active scientific milestone: finish ES minimization and review
+geometry, then establish an enzyme-supported TI1 model before a small
+symmetry-aware fixed-backbone LigandMPNN pilot. Full pathway/free-energy work,
+local LLM agents, NylB and variable-length RFD3 work remain deferred.
+Use bounded cheaper delegation for routine tasks and short progress reports.
+Active append-only journal: output_agent_actions/20261021.jsonl.
+Older sections below are historical and do not override this checkpoint.
+
+## RESUMED: analytic-gradient bounded ES pilot — 2026-10-24
+
+User explicitly resumed next steps, then questioned the numerical-force gate
+and asked whether analytic derivatives are available. Sander already supplies
+analytic QM/MM gradients; its force implementation was not modified here.
+Stop further finite-difference calculations. The earlier failed numerical
+check remains failed and its cutoff explanation remains unconfirmed. It is
+not a chemically meaningful reaction-energy error or evidence against TI1.
+Root narrowed the next calculation to an explicitly declared, exploratory
+25-cycle restrained ES relaxation with analytic gradients, retaining the
+existing finite analytic baseline, source/atom/proton/charge/embedding checks.
+No force tolerance is changed, and no chemical-model validation is claimed.
+An explicit pilot-decision record and separately tested driver mode are being
+prepared; do not silently substitute this for the old strict gate. All MM
+atoms remain restrained at 10 kcal/mol/Å² to the original coordinates; QM
+atoms are free and no reaction-coordinate restraint or MD is introduced.
+Actual new job status must be recorded below before the next checkpoint.
+The older 15:00 stopping time was superseded by this explicit user resume.
+
+## PAUSED after enzyme force validation — 2026-10-24
+
+User requested work until 15:00 America/New_York, then a break. A connection
+disruption was followed by a clock check at 19:07:54 UTC (15:07:54 EDT); root
+immediately paused scientific work. No new scientific jobs were launched after
+that check. All delegates stopped. Only the two unrelated original tmux
+sessions remain. Resume only when the user authorizes more work.
+
+The approved 12 archived regression inputs/logs were committed and pushed as
+3b1cd4f. New pilot code/config/tests/docs remain uncommitted pending complete
+verification; unrelated untracked cif/ remains untouched.
+
+Independent chemical audits passed for the primary 98 original QM atoms plus
+8 link hydrogens (106 nuclei, 368 electrons) and a 104+8 boundary variant
+(112 nuclei, 384 electrons). Both are charge −2 singlets. Config:
+configs/pa6_es_dftb_pilot_20261024.json. The full original PA6 L4/tetramer/
+solvent MM environment is retained; no forced water or TI1 classical parameters.
+
+Periodic SANDER API NMA/water smoke passed after explicit setup corrections.
+Its evidence and failed attempts remain in output_nyl12_es_dftb_api_20261024/.
+The actual enzyme baseline produced finite energy/forces for all 103251 atoms,
+correct 98+8 inventory and unchanged box; energy −332062.9867349793 kcal/mol.
+This absolute energy is not a reaction barrier or chemistry validation.
+Baseline: output_nyl12_pa6_dftb_pilot_20261024/api_primary_baseline_attempt1/.
+Explicit controls: DFTB3/3ob-3-1, cut/qmcut 10 Å, electronic embedding,
+adjust_q=2, QM Ewald/PME, SCF 1e-10, C–H links 1.09 Å, fixed box, no SHAKE.
+The engine zeros MM link-partner charges and distributes the charge correction
+uniformly over the remaining MM atoms, preserving the original −0.005001934 e
+system charge residual. Original topology and protonation were not modified.
+
+**Force gate FAILED overall.** All 26 isolated single-point evaluations
+completed; 11/12 comparisons passed. C54 x at h=0.001 Å: analytic force
+29.3573104, finite difference 29.0911276 kcal/mol/Å, error 0.2661828 above
+tolerance 0.0493573. At h=0.0005 Å the error is 0.0005500 and passes.
+Baseline energy repeats exactly; source hashes are unchanged. Do not loosen
+the threshold or call the model validated. Next diagnose the discrepant endpoint
+(cutoff/neighbor-list crossing versus SCC or another cause) with targeted
+repeats and displacement convergence. These causes are hypotheses, not findings.
+Evidence: output_nyl12_pa6_dftb_pilot_20261024/api_primary_force_check_attempt1/
+force_check.json and scientific_acceptance.json; frozen source is retained.
+No minimization, dynamics, TS search, PMF or hybrid-DFT chemical check ran.
+The boundary variant has passed only the input audit, not an engine calculation.
+
+Prepared restrained-relaxation driver remains review-only and fails closed on
+the rejected force evidence. Its tests are unexecuted and additional gate
+tightening was discussed but not implemented. Do not run it before review and
+passing force validation. New QM-region tests initially passed 13 cases/87%
+coverage; final whitelist changes have actual-input validation but no final
+test rerun. Engine/controller mocked tests completed 44 passed, 97.06% combined
+coverage, at 19:08:15 UTC before the stop message reached that delegate. No
+full-project regression was run for these new files. Actual tests/job sources:
+output_nyl12_pa6_es_audit_20261024/jobs/engine_mock_tests_attempt1/.
+
+Native TI1 parameterization remains paused at scientific validation. See
+docs/ti1_parameterization_status_20261024.md. No native RESP fit, validated
+TI1 classical force field or TI1 protein refinement is accepted.
+
+The local-agent mechanism project is deferred for later at the user's request.
+Chinese-origin LLMs and their derivatives are prohibited. No model/runtime was
+installed or downloaded. Notes: docs/local_agent_mechanism_project_20261024.md.
+The two new status/agentic notes are saved locally but the laptop export has not
+yet been refreshed for this pilot. Active journal: output_agent_actions/20261021.jsonl.
+
 ## WT PA6 ES recovery and hydration completed — 2026-10-24
 
 User accepted the staged project and authorized progress today. Audited three

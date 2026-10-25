@@ -1,0 +1,174 @@
+[
+  {
+    "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_qm_region.py",
+    "sha256": "3801cded758e830543c2c1fde3f605731aa55ba1c92f19d0e7fbaeaa5cc7c977"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_dftb_relaxation_gate.py",
+    "sha256": "3cb12e95f3f47895d534b5e14d851b2bcb1fab621d34247119653378e103094a"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_dftb_analytic_pilot.py",
+    "sha256": "7288a629e0a78a91ff083d89d7d97272ebf921c94ca2a9c60346b1bc62c6098a"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_dftb_force_evidence.py",
+    "sha256": "68439c8b30568fb69392023e7e9ccd57e2307dfbbce1e069fa6481cc54ae4ae1"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/scripts/run_nyl12_es_dftb_relaxation.py",
+    "sha256": "98f8036c284e4698dc47da33f3f7f493d0aebafa1ead21f82292ffc8b0571bb9"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_baseline_attempt1/engine_config.json",
+    "sha256": "3a674e5985fe3d8158c18b1f45ddb2fced42322c48af224c63a552520a374a62"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_force_check_attempt1/force_check.json",
+    "sha256": "285c51e2e198350d36316d7104502ef6636f84225d266d51c312ea9405811f35"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/configs/pa6_es_dftb_pilot_20261024.json",
+    "sha256": "1bb691fbf9febec084eb48fdbae84677639e159ca6309539bbcad0b029ef31c3"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/configs/pa6_es_analytic_pilot_20261024.json",
+    "sha256": "8de6fd62313b199c91f1c5b301c88066a8cfa9abe189e8e40dc688e4e42906d1"
+  },
+  {
+    "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+    "sha256": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_es_audit_20261024/reuse_audit_attempt1/replica_01_frame_0651/solvated.nc",
+    "sha256": "8cd4e41ae8848213896ef93c9e04d4b287c52f327bbc7d53d7c84cd39a713433"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/bin/sander",
+    "sha256": "66323629c6d540a8038f8f8fe7557acf391f6797d88898844da708989de6a97e"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/es_dftb_relaxation.py",
+    "sha256": "88320da56c82a21a8757edb305f12ea5f76191a78097bfaa3771b22e60ec2e71"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+    "sha256": "518c66bd8c4bf0ab4fec66fbffc3b2aa8be49d2f0625e8a5d396daabce822791"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/relaxation.mdin",
+    "sha256": "0974ca16b3c7a8bbd8f747eea3a58d3c5ac5ddc4a91fb3f1a4ab39e26de7de28"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_force_check_attempt1/source_manifest.json",
+    "sha256": "eeb23f34a67e49ecbc165372c380da99a30fbcaca494f8040562e1539b759e81"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_force_check_attempt1/source/declared_config.json",
+    "sha256": "3a674e5985fe3d8158c18b1f45ddb2fced42322c48af224c63a552520a374a62"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/force_check_source/es_dftb_engine.py",
+    "sha256": "920247b2ced3ae5d7e248d068011964fb11cfbe92521fbd44d0205f18048aca4"
+  },
+  {
+    "path": "/data/jpc/code/miniforge3/bin/python3.12",
+    "sha256": "5ed67a71dd6835ae971d547a628b0d676f14b7bd524403be257a8617a30e647c"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-C.skf",
+    "sha256": "dfda7b773cb7891e2275ff284c87daac11167a105ba90bafd783b289715cda0f"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-H.skf",
+    "sha256": "8d5c6aabecfc72271e7a3f56a238cb8cc77fb552685c79b9381412d32e5609f1"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-N.skf",
+    "sha256": "3455aea77ce55e836db4165397871726080d52e813a268432f999f4de4ee07cd"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-O.skf",
+    "sha256": "f95f3af65b0f9b7daff8073df90326e795e746e72c91ee7c88792f8b1b684ccc"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-C.skf",
+    "sha256": "950f61115cf701988b752960b9a56929b090ca66fe4bbdcea46b3272d20027e0"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-H.skf",
+    "sha256": "acdc130b5ac73a9d51c5091b61e448f1de0723648dfb66d4b5cf1ab71bea0b66"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-N.skf",
+    "sha256": "4782c582e5a39d5f8ef56c3b5bd7b47aee78b43ec421608db8d2cbf930b1d15c"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-O.skf",
+    "sha256": "b77a51b690caccfa00bbbb2c3d83073d04dab59a7853ac96586d13138ebd4891"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-C.skf",
+    "sha256": "f0b04e6bcee02be99d4f1b2068488f5e62157d8cd41c8424813b6ce21a6f1257"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-H.skf",
+    "sha256": "c25aa3eaf8d05f4ee3b97d750b4c37c74b00d44f427750162bee58031f104e03"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-N.skf",
+    "sha256": "f96f6a07430f4d472cc21e0614cda8478c82a25d3d7734331cd65149f0d58906"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-O.skf",
+    "sha256": "31ab322d2dc25ae28f1e567d1e25c7485c2d38732327c754db33208022b05bec"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-C.skf",
+    "sha256": "cbfbf6f0058ca42c9fd8b2ba6db0a3a0e694260abe3f3ea032608d3714212ba0"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-H.skf",
+    "sha256": "911b8644b0a0d6bbd193064ffb962a658c2dc77e911a563194476e5dddf96f45"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-N.skf",
+    "sha256": "785a2dcab1575282eb6d5d85eaa65a4157c55edf2e7cd6771340dae4176e72dc"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-O.skf",
+    "sha256": "3b377938f48ebf8b5a1b79da5befcfe42074ec5b4908cc2e6eb1193f9d748a91"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/lib/libsander.so",
+    "sha256": "50c910d8465481a1b904403b81fa8e17455c6ff43f233219af66e9957e028af5"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sqm/qm_zero_charges.F90",
+    "sha256": "8983060efe2ae76e8e92a5a2494bf7a22add64f6609c55da46e6fea9ba723c46"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sqm/qm_link_atoms.F90",
+    "sha256": "f97506014aeb590fd4487ef3ee055f87885adf76c6331485676c2aceb9bc0716"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/sander/__init__.py",
+    "sha256": "144fd9999dc5b87abed0cbd79c21f5512f3e9681dff2dc69404b759ed9259fc7"
+  },
+  {
+    "path": "/data/jpc/code/ambertools26/venv/lib/python3.12/site-packages/sander/pysander.cpython-312-x86_64-linux-gnu.so",
+    "sha256": "2db03801352199366c323602c3b0e31df7ee7682aa84d3969151013399e8239c"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_baseline_attempt1/result.json",
+    "sha256": "d2a41866cf38f9d6053e52a5d3d3c59818f73a37feff504c8e81d017a7cc90f6"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_baseline_attempt1/analytic_forces.npy",
+    "sha256": "8122044660c8232d9918aa393b6727250668f0681f4bd5cfebbbaef847675249"
+  },
+  {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/api_primary_baseline_attempt1/request.json",
+    "sha256": "b511fe48da16eff54012e94dc03e3b244fe5a5c733ee267cf380b95ef95dbf52"
+  }
+]
