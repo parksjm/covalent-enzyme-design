@@ -507,6 +507,8 @@ All MM atoms were restrained to the original coordinates at
 10 kcal mol−1 Å−2; QM atoms were unrestrained. The initial 25-cycle run did
 not converge (RMS gradient 2.4646 versus a 0.05 kcal mol−1 Å−1 target).
 A continuation with a 500-cycle budget retained the same Hamiltonian and
-original restraint reference. Optimizer snapshots are coordinate evaluations,
+original restraint reference and reached the declared RMS threshold after
+107 additional cycles (0.042903 kcal mol−1 Å−1). This is gradient convergence;
+no Hessian classification was performed. Optimizer snapshots are coordinate evaluations,
 not a molecular-dynamics trajectory. This pilot does not establish TI1
 stability, reaction barriers or validated native TI1 force-field parameters.

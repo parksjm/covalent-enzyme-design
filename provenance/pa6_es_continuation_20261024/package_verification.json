@@ -1,0 +1,33 @@
+{
+  "verified": true,
+  "payload_files": 342,
+  "complete_package_bytes": 23957299,
+  "prior_payload_count": 326,
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021_revision_33",
+  "inspection": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/inspection",
+  "new_payload_sha256": {
+    "atom_mapping.json.gz": "7cab94b49bf5c774d05c43bf21fdfd124e32f7d0ee5a1c95bd169585d1e8a892",
+    "export_report.json": "a2adc3cb2cd6c535f5d70681c5d3a639d831043655f23e54a906554ea1484fe0",
+    "initial_fullprotein_ligand.pdb.gz": "54aa1f419503a96a73aa1f29ce0ed1945ad6c3b08bc6242237b3063ce5f1b19e",
+    "optimization_evaluations.pdb.gz": "331074aa566e18b45a9e3c92e291657b504e47e311fb25b2c11856f62516f27a",
+    "pocket_endpoint.pdb": "7f8f5b257e923aa3e934847cd289fed71ef21d499e81bcadd15702da1cf40084",
+    "pocket_initial.pdb": "0e97d4542036fd79b5e9c4219b9c514f307fbada8d632ec3780659bef0faa002",
+    "source_manifest.json": "30cb6128ea33b6012d31991e291b361bee5bb6a6f6f8eab8ad825c963c61a38a",
+    "view_analytic_pilot.py": "d01cd013705bc1c24a333aceb237d561cd0d5619e19339191724698277fe6bea",
+    "qm_subsystem_initial.xyz": "e97a3d8b6bc35f15f7f1cb5900fb2fdbb52a9a5d84ef4b9f9011b6bbf8eeeda5",
+    "qm_subsystem_endpoint.xyz": "d74ad5a28c852008b83cd77d02e0e1258bcae9699917ab106f0795fbabda394d",
+    "qm_subsystem_atom_map.json": "954dbd8fa8010330d1ddc76a18feda9ffb65bdbe09a87d3d5d5bc373a11acd57",
+    "qm_export_manifest.json": "cdbf0a17de4e74f2cd98944027ad91bd0ec257ffcffc043b3680b7ccfc70e1ee",
+    "endpoint_review.json": "595b5c4a2caa07a78af883bb99a0a8e62433c8de43a5c71edd9e30b7b6231365",
+    "full_enzyme_substrate_endpoint.pdb.gz": "ea1b7954de6dcbad9a36331ad75f3da93c91dbf7fbf29249eefa112f19f6a88b",
+    "view_full_enzyme_endpoint.py": "e0b69f51fb48740c0503966b3169b9c88215e2206394e805e5f933ca98ecfb13",
+    "quick_endpoint_review.json": "2b7f07def319d0ea9158509eca4a509a358d49adc565289d3ddcde3e11a4bdff"
+  },
+  "updated_doc_sha256": {
+    "docs/standalone_handoff_20261020.md": "3c8ace5d97085095828b267e8a911bbad36cb16cae99c9dd545eccad18ee36ef",
+    "docs/pa6_analytic_pilot_results_20261024.md": "0b37440f5a2660d3517ee401ff4068e9befa19d2ae9b7252e92aaabf58742353",
+    "manuscript/METHODS_DRAFT.md": "e9278c0e9d873ce7b2984804e68e944b5156ecb655edbd2dad947900c563ed9a"
+  },
+  "script_sha256": "353c7dd23131de07211df974f8ee7fdfa00de7495ecf9d505a85a47d723880ed",
+  "prior_unrelated_bytes_preserved": true
+}

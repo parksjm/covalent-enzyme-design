@@ -1,0 +1,89 @@
+{
+  "reference_coordinate_file": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+  "endpoint_coordinate_file": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst",
+  "distances": {
+    "C54_O49": {
+      "initial_A": 1.2242755944375687,
+      "endpoint_A": 1.2597416421445196
+    },
+    "C54_N59": {
+      "initial_A": 1.343202076668441,
+      "endpoint_A": 1.3587709630840183
+    },
+    "N_H1": {
+      "initial_A": 1.0099959892652466,
+      "endpoint_A": 1.021179931416142
+    },
+    "N_H2": {
+      "initial_A": 1.010002416116477,
+      "endpoint_A": 1.0170582007240516
+    },
+    "OG1_HG1": {
+      "initial_A": 0.9600018295385748,
+      "endpoint_A": 0.9849324878436161
+    },
+    "N_HG1": {
+      "initial_A": 2.218708368611487,
+      "endpoint_A": 2.569794921933203
+    },
+    "asp272_od1_N": {
+      "initial_A": 3.011918317531642,
+      "endpoint_A": 3.163576349180073
+    },
+    "asp272_od1_OG1": {
+      "initial_A": 2.9504038392137177,
+      "endpoint_A": 2.9171278148863005
+    },
+    "asp272_od2_N": {
+      "initial_A": 4.187079165877454,
+      "endpoint_A": 4.519075103468955
+    },
+    "asp272_od2_OG1": {
+      "initial_A": 4.724528228954941,
+      "endpoint_A": 4.873367122216027
+    },
+    "asp274_od1_N": {
+      "initial_A": 4.617890075089064,
+      "endpoint_A": 4.630152612810631
+    },
+    "asp274_od1_OG1": {
+      "initial_A": 6.170241659477793,
+      "endpoint_A": 6.433708170861093
+    },
+    "asp274_od2_N": {
+      "initial_A": 3.888030166626934,
+      "endpoint_A": 3.5348427470758224
+    },
+    "asp274_od2_OG1": {
+      "initial_A": 5.486690447504515,
+      "endpoint_A": 5.493497414212531
+    }
+  },
+  "displacements": {
+    "QM_heavy": {
+      "atoms": 47,
+      "maximum_A": 0.28286204950013644,
+      "maximum_original_atom_index": 13905,
+      "RMS_A": 0.125935315358066
+    },
+    "QM_H": {
+      "atoms": 51,
+      "maximum_A": 0.3600883634860254,
+      "maximum_original_atom_index": 13907,
+      "RMS_A": 0.1781356039031019
+    },
+    "MM_heavy": {
+      "atoms": 37818,
+      "maximum_A": 0.32613266623412757,
+      "maximum_original_atom_index": 96814,
+      "RMS_A": 0.09665347785168611
+    },
+    "MM_H": {
+      "atoms": 65335,
+      "maximum_A": 0.37495157081278463,
+      "maximum_original_atom_index": 87299,
+      "RMS_A": 0.11307806507983634
+    }
+  },
+  "interpretation": "RMS-target-met continuation; distances/displacements from ORIGINAL restraint reference; no chemical state assigned."
+}

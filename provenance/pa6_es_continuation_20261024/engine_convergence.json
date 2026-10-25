@@ -1,0 +1,13 @@
+{
+  "process_completed": true,
+  "optimization_converged": true,
+  "final_reported_cycle": 107,
+  "final_energy": -385810.0,
+  "final_RMS_gradient": 0.042903,
+  "target_RMS_gradient": 0.05,
+  "fixed_box_preserved": true,
+  "trajectory_force_evaluation_frames": 21,
+  "geometry_accepted": false,
+  "geometry_status": "Separate endpoint/proton-state review required",
+  "convergence_scope": "ReportedRMS only; no minimum, ES/TI/TS state or chemical-model validation established"
+}

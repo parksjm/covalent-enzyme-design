@@ -7,13 +7,27 @@ The 25-cycle analytic-gradient pilot completed but did not converge: RMS
 2.4646 versus target 0.05 kcal/mol/Å. Thr retained OH/NH2 and the substrate
 retained an amide-like geometry; this is ES, not TI1.
 
-A 500-cycle continuation is running in tmux `nyl12_es_continuation_20261024`.
+A continuation with a 500-cycle budget completed in tmux
+`nyl12_es_continuation_20261024` after 107 cycles, exit 0. Its final RMS
+gradient is 0.042903 kcal/mol/Å, below the 0.05 target. The fixed box and
+finite full-system coordinates were preserved; 21 optimizer snapshots saved.
 Directory: output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/.
 It starts from attempt2/optimized.ncrst and retains attempt2/starting.ncrst as
 the original restraint reference. Only cycle budget and output cadence change;
 QM atoms remain free, all MM atoms retain the same positional restraints.
-Check process.json and scientific_acceptance.json separately before claiming
-completion or convergence. No MD, reaction path or new parameter fit was run.
+Endpoint review retains Thr OH/NH2: OG1–HG1 0.98493 Å, N–H distances
+1.02118/1.01706 Å, substrate C–O/C–N 1.25974/1.35877 Å. No TI bond
+formed. Maximum QM/MM heavy-atom shifts from the original restraint reference
+are 0.28286/0.32613 Å. Accept as a restrained ES reference for subsequent
+model construction, not as evidence of a reaction mechanism. Final inspection
+export is complete in the continuation directory: inspection/ contains the
+QM XYZ, full enzyme/substrate endpoint and 21 saved optimizer states; the
+final cycle-107 endpoint is separate from the last saved trajectory frame.
+Final d1/d2/d3 = 3.14104/3.02079/2.84060 Å, a_BD = 102.19064°,
+herschlag_phi = −89.60256°. Next: construct an enzyme-supported TI1 seed
+from this restrained ES reference; native TI1 parameters remain unaccepted.
+This reported-gradient convergence does not establish a Hessian minimum or
+validate reaction energetics. No MD, reaction path or new parameter fit ran.
 
 The attempt2/inspection/ directory now contains qm_subsystem_endpoint.xyz,
 qm_subsystem_initial.xyz, an explicit link-atom map, endpoint_review.json,

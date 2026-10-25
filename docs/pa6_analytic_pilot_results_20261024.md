@@ -11,10 +11,17 @@ Retained attempt:
 The original inputs, executed sources, analytic-gradient outputs, 25 saved
 coordinate states and endpoint review remain there. This pilot used analytic
 Sander gradients; the user stopped further finite-difference calculations.
-At this checkpoint, a separately authorized 500-cycle continuation is running
-in tmux `nyl12_es_continuation_20261024`, retaining the original positional
-reference. Its outcome is pending; the exported endpoint remains the 25-cycle
-unconverged pilot.
+A separately authorized continuation with a 500-cycle budget completed in
+tmux `nyl12_es_continuation_20261024`, retaining the original positional
+reference. It exited zero after 107 cycles with RMS gradient 0.042903,
+below the 0.05 target, and saved 21 optimizer snapshots. The periodic box
+was unchanged and coordinates remained finite. Its artifacts are in
+`analytic_relaxation_continuation_attempt1/`; the original attempt2 exports
+remain the earlier unconverged pilot. Final endpoint review retains Thr OH/NH2:
+OG1–HG1 = 0.98493 Å, N–H = 1.02118/1.01706 Å. Substrate C–O/C–N
+distances are 1.25974/1.35877 Å. Maximum QM/MM heavy-atom shifts from the
+original reference are 0.28286/0.32613 Å. This is a usable restrained ES
+reference; no TI bond formation or mechanism validation is established.
 
 | Measurement | Initial | Endpoint |
 |---|---:|---:|
