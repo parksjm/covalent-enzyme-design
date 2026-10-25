@@ -1,0 +1,58 @@
+{
+  "command": [
+    "/data/jpc/code/ambertools26/venv/bin/sander",
+    "-O",
+    "-i",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/continuation.mdin",
+    "-p",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+    "-c",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/optimized.ncrst",
+    "-ref",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+    "-o",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/minimized.mdout",
+    "-r",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst",
+    "-x",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimization.nc",
+    "-inf",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/relaxation.mdinfo"
+  ],
+  "environment": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "topology": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop",
+  "reference": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+  "initial": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst",
+  "box": [
+    109.87032919522188,
+    109.87032919522626,
+    109.87032919523458,
+    109.471219,
+    109.471219,
+    109.471219
+  ],
+  "sha256": {
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst": "518c66bd8c4bf0ab4fec66fbffc3b2aa8be49d2f0625e8a5d396daabce822791",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst": "7cd88ea44f69f0f56ec42e868bf0a4449676727bc59c45d2d13d25f92fe8d1d2",
+    "/data/jpc/covalent-enzyme-design/configs/asp272_relay_pilot_20261025.json": "27f1dea0fd25b19c9656bc90703a3114ecb6bfc4dba3d3582a92d63bb7ff3ce2",
+    "/data/jpc/covalent-enzyme-design/provenance/pa6_ti1_driving_20261024/run_path.py": "f57eee1eed59a000ee94521028ca3114efeee11bc36431fb2a8bcc322e663c7d",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp_relay_tools/run_relay.py": "3264b29004f2e8e97bee00708c2e4a69ccc12257e10f0910c44468312b3ec681"
+  },
+  "initial_distances": {
+    "attack": 3.1410380092912757,
+    "OG_H": 0.9849324878436161,
+    "Asp_H": 1.9837999359060465,
+    "N_HG": 2.569794921933203,
+    "N_H1": 1.021179931416142,
+    "N_H2": 1.0170582007240516,
+    "C_O": 1.2597416421445196,
+    "C_N": 1.3587709630840183
+  }
+}

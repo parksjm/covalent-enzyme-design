@@ -1,0 +1,18 @@
+Bounded ES pilot: no guarantee of convergence or retained ES
+&cntrl
+ nmropt=1,
+ imin=1, maxcyc=500, ntmin=5, ncyc=10, dx0=0.02, drms=0.05,
+ ntb=1, igb=0, ntc=1, ntf=1, cut=10.0, ifqnt=1, jfastw=4,
+ ntr=1, restraint_wt=10.0, restraintmask='!(@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19901-19907,19942-19950)',
+ ntpr=25, ntwx=5, ntwr=100, ioutfm=1, ntxo=2,
+/
+&qmmm
+ qmmask='@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19901-19907,19942-19950', qmcharge=-2, qm_theory='DFTB3',
+ qmmm_int=1, adjust_q=2, qm_ewald=1, qm_pme=1, qmcut=10.0,
+ scfconv=1.0d-10, lnk_dis=1.09, lnk_atomic_no=1, lnk_method=1,
+/
+
+&wt type='END' /
+DISANG=restraints.RST
+DUMPAVE=restraint_values.dat
+&dlfind optalg='LBFGS', crdrep='CART', active='@*', tol=1.d-4, tole=1.d-7, maxcycle=1000, maxstep=0.5, verbosity=2, /

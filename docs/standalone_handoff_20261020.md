@@ -1,4 +1,20 @@
-## CURRENT — overnight forward pilot stopped before reverse, 2026-10-25
+## CURRENT — Asp272-mediated relay running, 2026-10-25
+
+User authorized an Asp272 two-stage HG1 shuttle. tmux:
+`nyl12_asp272_relay2_20261025`. Run:
+`output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/`.
+First native L-BFGS energy/gradient evaluations and trajectory writes verified;
+no window convergence is claimed at launch. Stage 1 couples OG1–C attack
+to HG1 transfer onto Asp272 OD1. Stage 2, conditional on the intermediate
+gate, transfers that same proton from Asp272 to terminal N while retaining
+the attack geometry. Native maximum-component convergence plus target tracking
+replace the earlier permissive global RMS acceptance. Read status.json for
+actual progress. No new water, TI1 parameters, reverse scan or MD are queued.
+Controls/provenance/acceptance: docs/asp272_relay_pilot_20261025.md and
+configs/asp272_relay_pilot_20261025.json. Failed namelist-order attempt 1 is
+preserved; use attempt 2. Earlier stopped/running statements below are history.
+
+## PREVIOUS — direct-N forward pilot stopped before reverse, 2026-10-25
 
 Latest: stricter ES stopped at cycle 223 with REPEATED LINMIN FAILURE;
 RMS 0.016484 remains above 0.0005. No scientific job is currently active

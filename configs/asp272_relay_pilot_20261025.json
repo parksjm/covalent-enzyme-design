@@ -1,0 +1,22 @@
+{
+  "purpose": "Two-stage Asp272-mediated HG1 shuttle, construction pilot, not a barrier",
+  "stage1": "Couple OG1-C attack to HG1 transfer OG1 -> Asp272 OD1",
+  "stage2": "Hold attack coordinate and transfer the same HG1 Asp272 OD1 -> N-terminal N",
+  "windows_per_stage": 17,
+  "stage_transition": "Only after converged, target-tracking stage1 and Asp-H/covalent TI1 gate",
+  "initial_source": "analytic_relaxation_continuation_attempt1/optimized.ncrst",
+  "QM_region_and_charge": "Unchanged 98 real atoms + 8 links, charge -2 singlet",
+  "water": "No new water; original full solvent retained",
+  "optimizer": "Native Sander DL-FIND Cartesian LBFGS, full active system, analytic gradients",
+  "max_gradient_component_Hartree_per_Bohr": 0.0001,
+  "tole_Hartree": 0.0000001,
+  "maxcycle": 1000,
+  "driving_rk2_rk3_kcal_mol_A2": 100,
+  "target_tracking_tolerance_A": 0.15,
+  "attack_final_target_A": 1.55,
+  "each_stage_proton_difference_final_target_A": 0.8,
+  "trajectory": "ntwx=5 DL-FIND evaluation callbacks plus exact endpoints; trial evaluations are included",
+  "MM_restraints": "Retain original reference and force constant 10 kcal/mol/A2",
+  "DLFIND_hard_constraint_disang": "Omitted; use ordinary NMR harmonic DISANG only",
+  "failure_policy": "Stop, preserve evidence, do not relax acceptance silently"
+}
