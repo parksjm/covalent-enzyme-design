@@ -54,3 +54,165 @@ Specification: configs/asp272_relay_pilot_20261025.json. Source, input hashes,
 environments, logs and process/scientific records are retained per attempt.
 Ruff passed and the first real native optimizer evaluations were checked;
 test coverage was not measured for this one-off experimental controller.
+
+## Asp274 and runtime assessment (2026-10-25)
+
+In the original ES, Asp274 OD2 is 3.535 Å from terminal N; its H2 contact
+is long (H···O 2.752 Å, angle 133.9°). Asp274 is 5.493 Å from OG1.
+Its closest carboxylate O–O separation from Asp272 is 5.854 Å. Thus this
+starting conformation does not show a direct Asp–Asp hydrogen bond or a
+well-positioned Asp274 acceptor for HG1. A working hypothesis is electrostatic
+and conformational modulation of the terminal amine/active-site network;
+a specific proton-transfer role or pKa shift has not been established.
+The NylC substrate-hydrolysis proposal assigns an Asp308–Asp306–Thr267 network,
+including terminal N (paper numbering; Nyl12 sequence mapping still required):
+https://febs.onlinelibrary.wiley.com/doi/10.1111/febs.16755 .
+
+At 17:03 EDT, the first native window was around 148 energy evaluations after
+approximately five minutes, still unconverged. A planning estimate of 2–5 h
+for phase 1 assumes roughly 200–500 evaluations per window at about 2 s per
+evaluation. This is provisional, not a completion prediction: convergence and
+target tracking remain untested at a completed window, and either can stop
+the run. Subsequent warm starts may reduce the time; difficult windows may
+increase it. Do not present this estimate as measured full-phase throughput.
+
+## Energy convention and VMD progress snapshot (2026-10-25)
+
+The optimizer minimizes E_QMMM + V_position + V_drive. Preserve and report
+that total for diagnostics. The underlying restrained-environment potential at
+the same coordinates is E_total - V_drive; subtracting the artificial driving
+spring does not remove physical bond distortion, electrostatics, or protein
+strain. Remaining MM positional restraint energy is still included and must be
+identified. Neither curve is currently a converged barrier or free energy.
+
+An explicit primary example of restrained scans subtracting the spring energy
+is Likhitsup et al., *Apparent non-statistical binding in a ditopic receptor for
+guanosine* (2009), DOI https://doi.org/10.1039/b812969j, computational methods
+(author manuscript https://wrap.warwick.ac.uk/id/eprint/27963/23/WRAP_Marsh_OBCb812969J_postprint.pdf).
+This is a torsional scan, not an enzymatic QM/MM study. Developer documentation
+also explicitly separates bias during minimization from reported scan energy:
+https://t-0hmura.github.io/pdb2reaction/scan.html (accessed 2026-10-25).
+Thus keep both curves, labeled, rather than interpret the artificial spring
+penalty as part of a physical reaction barrier.
+
+A reproducible tmux export now provides 239 actual optimization evaluation
+frames across the first 10 completed Asp272-relay windows (stage1_00–09),
+19976 atoms, 57.3 MB. Every exact endpoint is retained; evaluation frames are
+sampled with a declared stride and include optimizer trial points, not physical
+time. No interpolation or alignment. Source script/hashes/frame mappings:
+provenance/asp272_relay_movie_20261025/build_movie.py and
+output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/.
+Curated laptop files: output_vmd_inspection_20261024/asp272_relay_progress.vmd,
+matching .dcd and asp272_relay_frames.json. Existing no-argument rsync script
+includes these files; checksum verification passed for every package entry.
+QM Licorice, orange non-QM substrate carbons, cartoon off by default.
+VMD itself is absent on violet, so no graphical VMD test is claimed.
+
+## Tracking stop, continuation policy and automatic inspection
+
+Window stage1_10 converged natively and retained valid coordinates/box, but
+OG1–C=2.300403 Å missed its 2.146639 Å harmonic target by 0.153764 Å.
+The proton difference was 0.007425 Å vs target 0.125425 Å (miss 0.117999 Å).
+Thus an arbitrary 0.150 Å tracking gate stopped a converged construction window;
+this is not evidence of an inaccessible TS or failed mechanism. User authorized
+continuation with a 0.150 Å warning and 0.200 Å hard tracking limit, retaining
+all optimizer convergence and stage-end chemical gates. No force constant,
+Hamiltonian, reference, target schedule or existing geometry was changed.
+
+User explicitly requests staying in the same run directory. Continue there
+from stage1_10/optimized.ncrst, skipping all existing windows and proceeding to
+stage1_11. Preserve status_before_continuation_20261025.json, the original
+acceptance records and inputs.json. continuation_tracking_policy.json records
+window10 reassessment, policy and source hashes; its original 0.15 Å acceptance
+remains false as historical evidence. New records use the declared 0.20 Å field.
+Controller: provenance/asp272_relay_20261025/run_relay_continuation.py.
+
+Every future reaction-path controller must either call publish_inspection after
+each finalized window and at termination, as this continuation does, or use
+scripts/run_nyl12_path_inspection.py --watch to supervise its prepared run.
+The latter accepts a controller command after --. Use the tmux job launcher
+for either approach. Inspection errors fail visibly; do not silently skip them.
+Do not modify frozen running controllers just to add inspection.
+
+Stable workstation viewer/plot paths are:
+output_vmd_inspection_20261024/reaction_path.vmd,
+reaction_path.dcd, reaction_distances.png, reaction_distances.csv and
+reaction_distances.json. Re-run the ordinary no-argument laptop pull and reload
+the viewer to see new frames. A loaded VMD molecule does not automatically
+reread an updated DCD. The script rebuilds the small endpoint DCD with one exact
+frame per finalized window, publishes files atomically and updates package
+checksums last. Detailed evaluation-frame movies remain available separately.
+No coordinate interpolation, fitting or alignment is applied.
+
+Sixteen explicitly mapped distances include the forming OG1–C bond, substrate
+C–O and C–N, original HG1 distances to OG1/Asp272 OD1/OD2/Thr N, original
+N–H bonds, donor–acceptor distances and contacts to both nearby Asp residues.
+Explicit atom names/residue IDs are checked against topology. CSV/JSON and
+plots distinguish rejected endpoints, and stage boundaries are marked.
+A configurable 0.25 Å adjacent-window change is a review flag, not a scientific
+acceptance limit or proof of discontinuity. Smooth endpoints do not prove
+there is no hidden conformational jump. At window10 no monitored jump exceeds
+0.25 Å. Examine geometry and consider finer windows/alternative coordinates
+before adding constraints; never add them automatically.
+
+Immutable internal inspection updates retain input hashes and frame provenance;
+latest selects the newest successful update. The scientific run stays in the
+same directory. Existing ff19SB/GAFF1/AM1-BCC/TIP3P model is unchanged.
+
+### Expert enzyme QM/MM references replacing the earlier scan example
+
+- van der Kamp, Chaudret and Mulholland (2013), *QM/MM modelling of ketosteroid
+  isomerase reactivity indicates that active site closure is integral to
+  catalysis*, FEBS J 280, 3120–3131. DOI https://doi.org/10.1111/febs.12158.
+  Restrained adiabatic profiles and higher-level single points; continuity is
+  investigated by forward/backward scans. This does not provide an explicit
+  sentence about subtracting the driving spring.
+- Lonsdale et al. (2014), *A Multiscale Approach to Modelling Drug Metabolism
+  by Membrane-Bound Cytochrome P450 Enzymes*, PLoS Comput Biol 10:e1003714.
+  DOI https://doi.org/10.1371/journal.pcbi.1003714. Enzyme QM/MM minimizations
+  use harmonic coordinate restraints (1000 kcal/mol/Å², 0.1 Å increments).
+  Again, do not claim an explicit subtraction instruction from these methods.
+- Lonsdale, Harvey and Mulholland (2012), *A practical guide to modelling
+  enzyme-catalysed reactions*, Chem Soc Rev, DOI https://doi.org/10.1039/C2CS15297E.
+  Defines adiabatic mapping and cautions that local-minimum changes can cause
+  discontinuities. This is a methodological review, not primary research.
+- Explicit implementation evidence: CHARMM documentation, “Create a reaction
+  coordinate for QM/MM”: minimize with RESDistance, write the minimized frame,
+  then SKIP RESD and ENERGY to recompute without the driving restraint before
+  writing the energy profile. https://charmm-gui.org/charmmdoc/cons.html
+  (lines 558–587, accessed 2026-10-25).
+
+Conclusion: report optimizer total and artificial-bias-removed potential
+separately. The latter still contains actual molecular distortion and, in our
+model, declared MM positional restraints. Neither is a free-energy barrier.
+
+## Human-readable QM/MM layout
+
+User-facing current results now live at `qmmm/pa6_asp272/` on violet and at
+`nyl12-inspection-20261021/qmmm/pa6_asp272/` after the updated laptop pull.
+Open plots/distances.png, vmd/view_path.vmd or scripts/run_path.py. The script
+is the exact executed continuation source; initial_driver.py is historical.
+
+The two elementary-step hypotheses are numbered01_og1_to_asp272 and
+02_asp272_to_nterm. Within each, window_00, window_01, ... preserve scan order;
+the original stage1_XX/stage2_XX names remain in the unchanged computational
+run. window_order.json maps every movie frame and readable directory to its
+original window. Each readable window includes inputs, targets and the original
+geometry/acceptance record; large raw engine outputs and full solvent restarts
+are not duplicated. Each window is a scan point, not a separate elementary
+chemical reaction.
+
+The curated package is generated by scripts/publish_nyl12_qmmm.py using
+configs/qmmm_inspection_layout_20261025.json. A persistent tmux publisher
+follows finalized inspection updates and refreshes this layout. Calculation
+files and the active controller are not moved or modified. The root qmmm guide,
+builder and configuration are versioned; generated payloads are excluded from
+Git. The updated pull script transfers this curated tree and verifies checksums.
+
+Verification at this checkpoint: final full `uv run pytest -q` in tmux passed
+681 tests with13 skips. Focused helper coverage: distances100%, path inspection90%,
+download publisher100%, structured QM/MM package98%. Ruff, shell syntax and
+package SHA-256 checks passed. The first resumed window(stage1_11) converged
+with a0.170179 Å tracking miss, correctly warning rather than stopping; stage1_12
+started. The movie and structured package automatically increased from11 to12
+frames. VMD GUI validation remains for the laptop; VMD is absent on violet.

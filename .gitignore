@@ -17,3 +17,6 @@ scratch/
 *.chk
 *.fchk
 *.log
+
+# Generated human-readable QM/MM inspection package
+qmmm/pa6_asp272/

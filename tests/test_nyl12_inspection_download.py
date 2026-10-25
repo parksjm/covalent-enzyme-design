@@ -346,7 +346,7 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
             str(destination),
         ]
         subprocess.run(argv, env=environment, check=True, capture_output=True)
-        assert captured.read_text().count("CALL\n") == 2
+        assert captured.read_text().count("CALL\n") == 3
         arguments = Path(str(captured) + ".details").read_text().splitlines()
         assert ("--dry-run" in arguments) == dry_run
         assert "--delete" not in arguments
@@ -354,8 +354,14 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
         assert any(
             arg.endswith("output_laptop_inspection_20261021/") for arg in arguments
         )
-        assert arguments[-1] == f"{destination}/vmd_initial_final/"
-        assert arguments[-2].endswith("output_vmd_inspection_20261024/")
+        assert arguments[-1] == f"{destination}/qmmm/pa6_asp272/"
+        assert arguments[-2].endswith("qmmm/pa6_asp272/")
+        vmd_source_index = next(
+            index
+            for index, arg in enumerate(arguments)
+            if arg.endswith("output_vmd_inspection_20261024/")
+        )
+        assert arguments[vmd_source_index + 1] == f"{destination}/vmd_initial_final/"
         assert destination.exists() is not dry_run
 
 
@@ -395,11 +401,16 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
         "output_laptop_inspection_20261021/"
     ) in arguments
     assert "./nyl12-inspection-20261021/" in arguments
-    assert arguments[-2] == (
+    vmd_source = (
         f"{current_user}@violet:/data/jpc/covalent-enzyme-design/"
         "output_vmd_inspection_20261024/"
     )
-    assert arguments[-1] == "./nyl12-inspection-20261021/vmd_initial_final/"
+    vmd_source_index = arguments.index(vmd_source)
+    assert arguments[vmd_source_index + 1] == "./nyl12-inspection-20261021/vmd_initial_final/"
+    assert arguments[-2] == (
+        f"{current_user}@violet:/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272/"
+    )
+    assert arguments[-1] == "./nyl12-inspection-20261021/qmmm/pa6_asp272/"
     assert "--dry-run" not in arguments
     assert "-rtpvz" in arguments
     assert (tmp_path / "nyl12-inspection-20261021").is_dir()

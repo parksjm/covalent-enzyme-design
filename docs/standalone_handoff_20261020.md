@@ -1,3 +1,31 @@
+## CURRENT — same-directory Asp272 continuation, 2026-10-25
+
+Preferred inspection entry: `qmmm/pa6_asp272/README.md`. Plots are in
+`plots/distances.png`, VMD in `vmd/view_path.vmd`, and the executed source in
+`scripts/run_path.py`. Laptop: `nyl12-inspection-20261021/qmmm/pa6_asp272/`.
+Numbered elementary stages contain sequential `window_00`, `window_01`, ...
+The active calculation stays in its original directory.
+
+Window10 converged but missed the 0.150 Å tracking gate by 0.003764 Å.
+User authorized warning at 0.150 Å and stop at 0.200 Å, explicitly keeping the
+same run directory. Continuation began 18:37 EDT at stage1_11 in tmux
+`nyl12_asp272_continue_20261025`. Run remains
+`output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/`.
+Original window10 acceptance and inputs are preserved; reassessment and source
+hashes are in continuation_tracking_policy.json; prior status is preserved.
+No force constant, Hamiltonian, target schedule, optimizer tolerance or stage-end
+chemical gate changed. This is not a TS/barrier claim.
+
+Each new finalized window now synchronously regenerates a verified endpoint
+VMD trajectory and 16 reaction-distance traces, with CSV/JSON and jump flags.
+Stable files in `output_vmd_inspection_20261024/`: reaction_path.vmd,
+reaction_path.dcd and reaction_distances.png/.csv/.json. All are included in
+the no-argument laptop pull. Reload the VMD viewer to see newly added frames.
+A 0.25 Å adjacent-window jump is a review warning, not automatic rejection or
+an instruction to add constraints. No such jump occurred through window10.
+Detailed notes, expert references and execution protocol:
+`docs/asp272_relay_pilot_20261025.md`. Read live status for actual progress.
+
 ## CURRENT — Asp272-mediated relay running, 2026-10-25
 
 User authorized an Asp272 two-stage HG1 shuttle. tmux:

@@ -75,9 +75,29 @@ fi
 rsync "${vmd_rsync_args[@]}" \
     --include='*.gz' --include='*.dcd' --include='*.vmd' \
     --include='*.tcl' --include='*.json' --include='*.md' \
+    --include='*.png' --include='*.csv' \
     --include='MANIFEST.sha256' --exclude='*' \
     "$remote:$vmd_source/" "$vmd_destination/"
 if [[ $dry_run -eq 0 ]]; then
     (cd "$vmd_destination" && "${checksum[@]}" MANIFEST.sha256)
     echo "Download verified. Read $vmd_destination/README.md for VMD instructions."
+fi
+
+# Current QM/MM work: a small curated tree, organized by stage and window.
+qmmm_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272
+qmmm_destination="$destination/qmmm/pa6_asp272"
+if [[ $dry_run -eq 0 ]]; then
+    mkdir -p "$qmmm_destination"
+fi
+rsync "${vmd_rsync_args[@]}" \
+    --include='*/' --include='*.gz' --include='*.dcd' --include='*.vmd' \
+    --include='*.tcl' --include='*.json' --include='*.md' --include='*.png' \
+    --include='*.csv' --include='*.py' --include='*.mdin' --include='*.RST' \
+    --include='MANIFEST.sha256' --exclude='*' \
+    "$remote:$qmmm_source/" "$qmmm_destination/"
+if [[ $dry_run -eq 0 ]]; then
+    (cd "$qmmm_destination" && "${checksum[@]}" MANIFEST.sha256)
+    echo "QM/MM: $qmmm_destination/plots/distances.png"
+    echo "VMD: $qmmm_destination/vmd/view_path.vmd"
+    echo "Run scripts: $qmmm_destination/scripts/"
 fi

@@ -1,0 +1,11 @@
+{
+  "previous_export_record": {
+    "source": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021/pull_nyl12_inspection.sh",
+    "bytes": 2823,
+    "sha256": "01249081c341f6d7a5b065572b5f896e5930d8e85c4a836bab463efeb8f048fc"
+  },
+  "previous_script_matches_git_HEAD": true,
+  "previous_git_commit": "9c83141dd4fce6d7c14f4f9564fd93be050f5404",
+  "updated_script_sha256": "c422e0352e5d87be83fa81bb973cfba76b75643f9a13391065f13b1c1b24a042",
+  "rollback": "Restore exact prior script from recorded Git revision and rebuild manifest; generated qmmm files do not alter calculations."
+}

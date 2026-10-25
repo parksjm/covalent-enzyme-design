@@ -1,0 +1,20 @@
+{
+  "run": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2",
+  "destination": "/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272",
+  "stage_names": {
+    "1": "01_og1_to_asp272",
+    "2": "02_asp272_to_nterm"
+  },
+  "source_files": {
+    "scripts/run_path.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/run_relay_continuation.py",
+    "scripts/initial_driver.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/run_relay.py",
+    "scripts/previous_driver.py": "/data/jpc/covalent-enzyme-design/provenance/pa6_ti1_driving_20261024/run_path.py",
+    "scripts/plot_reaction_distances.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/plot_reaction_distances.py",
+    "scripts/path_inspection.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/path_inspection.py",
+    "scripts/path_distances.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/path_distances.py",
+    "scripts/path_publish.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/path_publish.py",
+    "inputs/run_inventory.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/inputs.json",
+    "inputs/continuation_policy.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/continuation_tracking_policy.json",
+    "docs/path_notes.md": "/data/jpc/covalent-enzyme-design/docs/asp272_relay_pilot_20261025.md"
+  }
+}
