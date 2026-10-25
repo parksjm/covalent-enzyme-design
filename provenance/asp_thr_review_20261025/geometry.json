@@ -1,0 +1,690 @@
+{
+  "units": "Angstrom and degrees; donor-H-acceptor angle; Amber one-based atom/residue IDs",
+  "method": "Nearest periodic image via fractional centering and 27 triclinic images; waters selected by topology WAT/HOH oxygen",
+  "hashes": {
+    "/data/jpc/covalent-enzyme-design/configs/pa6_es_dftb_pilot_20261024.json": "1bb691fbf9febec084eb48fdbae84677639e159ca6309539bbcad0b029ef31c3",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/md_solvated.prmtop": "ef49ad15041019b439fc20f51562192724a341b37bf3089aa18dd5a31852eb55",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst": "7cd88ea44f69f0f56ec42e868bf0a4449676727bc59c45d2d13d25f92fe8d1d2",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/coordinate_driving_forward_reverse_attempt3/forward_17/optimized.ncrst": "cb22395ff538246282f91eb105839a00605a2e38795be07a3ffd6f3ba2a50d96",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/es_tight_convergence_attempt1/optimized.ncrst": "0c97c48cc36442a68f0705b9a33172ce46ebd968513cc32a65d38e3d06168add",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp_thr_review_20261025/analyze_attempt2.py": "581a2c654f6ab169b1c951dc8220d1b53c3102d5d9f8e030062ecdae93d37b77"
+  },
+  "states": {
+    "baseline_ES": {
+      "box": [
+        109.87032919522188,
+        109.87032919522626,
+        109.87032919523458,
+        109.471219,
+        109.471219,
+        109.471219
+      ],
+      "contacts": [
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 3.163576349180073,
+          "H_A": 2.1526758518725124,
+          "D_H_A_angle": 170.12445292923152
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 3.163576349180073,
+          "H_A": 3.615645468797324,
+          "D_H_A_angle": 56.1275184065441
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.519075103468955,
+          "H_A": 3.666438307459925,
+          "D_H_A_angle": 142.44578273720577
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.519075103468955,
+          "H_A": 4.466630580245419,
+          "D_H_A_angle": 86.44635331138075
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.630152612810631,
+          "H_A": 4.966906808114168,
+          "D_H_A_angle": 65.07769114669213
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.630152612810631,
+          "H_A": 3.672061912472518,
+          "D_H_A_angle": 157.88477311100687
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 3.534842747075823,
+          "H_A": 4.246562772040466,
+          "D_H_A_angle": 40.64237944389158
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 3.534842747075823,
+          "H_A": 2.752395786321106,
+          "D_H_A_angle": 133.9409043653301
+        },
+        {
+          "acceptor": "ThrN",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 2.85123585566831,
+          "H_A": 2.5697949219332026,
+          "D_H_A_angle": 96.3013268863171
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 2.9171278148863005,
+          "H_A": 1.9837999359060465,
+          "D_H_A_angle": 157.26088113887434
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 4.873367122216027,
+          "H_A": 4.075908192349788,
+          "D_H_A_angle": 140.17824030398972
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 6.433708170861093,
+          "H_A": 6.352193396216973,
+          "D_H_A_angle": 90.33036074597776
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 5.493497414212531,
+          "H_A": 5.6042957575254055,
+          "D_H_A_angle": 78.50664287558844
+        }
+      ],
+      "nearest_water_oxygens": {
+        "ThrN": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.445160995218602
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 11.899265967662659
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 12.651867215518116
+          }
+        ],
+        "ThrOG": [
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 9.872981084959301
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.775431168319146
+          },
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 11.030972711471048
+          }
+        ],
+        "Asp272OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.70244095175788
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 9.697903970891332
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 10.093366921660547
+          }
+        ],
+        "Asp272OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 6.441251005213042
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.057961587617985
+          },
+          {
+            "amber_residue": 17469,
+            "oxygen_atom": 68005,
+            "distance": 10.525463669252066
+          }
+        ],
+        "Asp274OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.99618823780699
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 11.012683251550584
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 12.388519594998696
+          }
+        ],
+        "Asp274OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.874842873302658
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 11.81125766528798
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 13.040796858412305
+          }
+        ]
+      },
+      "covalent_distances": {
+        "OG_HG": 0.9849324878436161,
+        "N_H1": 1.021179931416142,
+        "N_H2": 1.0170582007240516
+      }
+    },
+    "failed_forward": {
+      "box": [
+        109.87032919522188,
+        109.87032919522626,
+        109.87032919523458,
+        109.471219,
+        109.471219,
+        109.471219
+      ],
+      "contacts": [
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 2.9211862319508226,
+          "H_A": 1.9318531223328805,
+          "D_H_A_angle": 164.86060808395962
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 2.9211862319508226,
+          "H_A": 3.403002164018297,
+          "D_H_A_angle": 54.027207327117715
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.399722513983227,
+          "H_A": 3.5294221574397677,
+          "D_H_A_angle": 145.29727674323075
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.399722513983227,
+          "H_A": 4.375637725525059,
+          "D_H_A_angle": 84.63166520860683
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.758825711900174,
+          "H_A": 5.042933084587098,
+          "D_H_A_angle": 68.09386918042127
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.758825711900174,
+          "H_A": 3.8574936145948233,
+          "D_H_A_angle": 148.13216354410545
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 3.7035070274705983,
+          "H_A": 4.380143805827256,
+          "D_H_A_angle": 42.92432713567655
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 3.7035070274705983,
+          "H_A": 2.9361135275494092,
+          "D_H_A_angle": 132.2220567381825
+        },
+        {
+          "acceptor": "ThrN",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 2.710888948523163,
+          "H_A": 1.8414517281281955,
+          "D_H_A_angle": 131.76817140532827
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 3.0272698309133927,
+          "H_A": 2.1457013972341232,
+          "D_H_A_angle": 134.27089650420507
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 5.040930752470774,
+          "H_A": 4.153872376768143,
+          "D_H_A_angle": 138.61878365579736
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 6.68825576983737,
+          "H_A": 5.991638756293014,
+          "D_H_A_angle": 124.82230646590926
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 5.705728439209989,
+          "H_A": 5.161782045063158,
+          "D_H_A_angle": 114.07979654845133
+        }
+      ],
+      "nearest_water_oxygens": {
+        "ThrN": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.383379989260291
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 11.653887818581955
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 12.376641213681262
+          }
+        ],
+        "ThrOG": [
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 9.635481437426947
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.652255038235083
+          },
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 11.204589144049717
+          }
+        ],
+        "Asp272OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.670714722200412
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 9.728223231882566
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 10.136471903268523
+          }
+        ],
+        "Asp272OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 6.412212607591792
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.069350234568667
+          },
+          {
+            "amber_residue": 17469,
+            "oxygen_atom": 68005,
+            "distance": 10.511726257701328
+          }
+        ],
+        "Asp274OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.993040759504307
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 11.008490612353599
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 12.39102595431698
+          }
+        ],
+        "Asp274OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.864558585992869
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 11.816361031742765
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 13.050268789430097
+          }
+        ]
+      },
+      "covalent_distances": {
+        "OG_HG": 1.110592195082226,
+        "N_H1": 1.0124802572367755,
+        "N_H2": 1.0249586768915377
+      }
+    },
+    "strict_ES": {
+      "box": [
+        109.87032919522188,
+        109.87032919522626,
+        109.87032919523458,
+        109.471219,
+        109.471219,
+        109.471219
+      ],
+      "contacts": [
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 3.173477690340455,
+          "H_A": 2.168080630346425,
+          "D_H_A_angle": 167.94893520484104
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 3.173477690340455,
+          "H_A": 3.6524589926323685,
+          "D_H_A_angle": 54.64725149182379
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.506978005277398,
+          "H_A": 3.653968612819256,
+          "D_H_A_angle": 142.51922909166666
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.506978005277398,
+          "H_A": 4.486332667875631,
+          "D_H_A_angle": 84.64583862554458
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 4.516757380724326,
+          "H_A": 4.8657253574093335,
+          "D_H_A_angle": 64.24580525664575
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 4.516757380724326,
+          "H_A": 3.5297182133365026,
+          "D_H_A_angle": 163.5851396484465
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH1",
+          "D_A": 3.3667255639898457,
+          "H_A": 4.094720125108702,
+          "D_H_A_angle": 39.24479546265213
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrN",
+          "hydrogen": "ThrH2",
+          "D_A": 3.3667255639898457,
+          "H_A": 2.553114757283392,
+          "D_H_A_angle": 136.52438028960162
+        },
+        {
+          "acceptor": "ThrN",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 2.843398543336279,
+          "H_A": 2.5731742781901126,
+          "D_H_A_angle": 95.5811565792937
+        },
+        {
+          "acceptor": "Asp272OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 2.917176674772265,
+          "H_A": 1.9810109198689092,
+          "D_H_A_angle": 157.83669685866252
+        },
+        {
+          "acceptor": "Asp272OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 4.8834400976804835,
+          "H_A": 4.077645363163903,
+          "D_H_A_angle": 141.0707296444461
+        },
+        {
+          "acceptor": "Asp274OD1",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 6.409839703917166,
+          "H_A": 6.320064687510241,
+          "D_H_A_angle": 90.79247836476921
+        },
+        {
+          "acceptor": "Asp274OD2",
+          "donor": "ThrOG",
+          "hydrogen": "ThrHG",
+          "D_A": 5.407415593515383,
+          "H_A": 5.508079942138669,
+          "D_H_A_angle": 79.0078035174941
+        }
+      ],
+      "nearest_water_oxygens": {
+        "ThrN": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.389353827570133
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 11.990537886429049
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 12.699436953960324
+          }
+        ],
+        "ThrOG": [
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 9.908292813495652
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.803485301875137
+          },
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 11.02341326017368
+          }
+        ],
+        "Asp272OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.694316445779048
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 9.719691632009363
+          },
+          {
+            "amber_residue": 10325,
+            "oxygen_atom": 46573,
+            "distance": 10.117943348406547
+          }
+        ],
+        "Asp272OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 6.43403305903911
+          },
+          {
+            "amber_residue": 16390,
+            "oxygen_atom": 64768,
+            "distance": 10.062851128835002
+          },
+          {
+            "amber_residue": 17469,
+            "oxygen_atom": 68005,
+            "distance": 10.525032772844131
+          }
+        ],
+        "Asp274OD1": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 8.986834888236727
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 10.995982559841728
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 12.393496845085423
+          }
+        ],
+        "Asp274OD2": [
+          {
+            "amber_residue": 20545,
+            "oxygen_atom": 77233,
+            "distance": 10.832827326476451
+          },
+          {
+            "amber_residue": 15409,
+            "oxygen_atom": 61825,
+            "distance": 11.835626580545219
+          },
+          {
+            "amber_residue": 21414,
+            "oxygen_atom": 79840,
+            "distance": 13.084191567707986
+          }
+        ]
+      },
+      "covalent_distances": {
+        "OG_HG": 0.9851865631525062,
+        "N_H1": 1.0207282641232567,
+        "N_H2": 1.0193932373509462
+      }
+    }
+  },
+  "scientific_acceptance": "Geometry diagnostic only; no endpoint convergence or mechanism inferred"
+}

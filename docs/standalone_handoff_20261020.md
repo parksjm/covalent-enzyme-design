@@ -1,5 +1,16 @@
 ## CURRENT — overnight forward pilot stopped before reverse, 2026-10-25
 
+Latest: stricter ES stopped at cycle 223 with REPEATED LINMIN FAILURE;
+RMS 0.016484 remains above 0.0005. No scientific job is currently active
+from this work. User-observed Asp272 contact confirmed: OD1 accepts both
+N–H1 and OG1–HG1 hydrogen bonds, whereas initial OG1–HG1···N alignment is
+poor (96.3°). Do not assume a blocked amine, a necessary relay water or a
+verified mechanism. Compare direct-N and Asp-assisted hypotheses after
+repairing optimizer convergence. Notes: docs/asp_thr_proton_network_20261025.md.
+VMD non-QM substrate carbons are orange; protein NewCartoon remains available
+but is hidden by default. Shared viewer and package checksum were updated.
+Running language below is historical; check final process/acceptance records.
+
 User requested an actual barrier and then a movie of the failed scan.
 The concatenated forward movie is now in the curated VMD download:
 `output_vmd_inspection_20261024/forward_driven_path.vmd` and matching DCD.

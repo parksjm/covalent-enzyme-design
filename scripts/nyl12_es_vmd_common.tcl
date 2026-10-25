@@ -25,6 +25,13 @@ proc nyl12_load {topology filename expected_frames indices expected_atoms} {
         mol material Opaque
         mol addrep $::nyl12_mol
     }
+    # Keep complete ligand bonds underneath a slightly wider carbon overlay.
+    mol representation Licorice 0.31 12.0 12.0
+    mol color ColorID 3
+    mol selection "resname LIG and element C and not ($qm)"
+    mol material Opaque
+    mol addrep $::nyl12_mol
+    mol showrep $::nyl12_mol 0 off
     mol selupdate 3 $::nyl12_mol on
     mol showrep $::nyl12_mol 4 off
     mol rename $::nyl12_mol "Nyl12 PA6: $filename"
