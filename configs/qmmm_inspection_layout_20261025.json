@@ -16,7 +16,9 @@
     "inputs/run_inventory.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/inputs.json",
     "inputs/continuation_policy.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/continuation_tracking_policy.json",
     "docs/path_notes.md": "/data/jpc/covalent-enzyme-design/docs/asp272_relay_pilot_20261025.md",
-    "vmd/nyl12_reactive_distances.tcl": "/data/jpc/covalent-enzyme-design/scripts/nyl12_reactive_distances.tcl"
+    "vmd/nyl12_reactive_distances.tcl": "/data/jpc/covalent-enzyme-design/scripts/nyl12_reactive_distances.tcl",
+    "scripts/plot_reaction_energies.py": "/data/jpc/covalent-enzyme-design/scripts/plot_reaction_energies.py",
+    "scripts/path_energies.py": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/path_energies.py"
   },
   "measurement_atoms": {
     "OG1": {
@@ -69,5 +71,9 @@
         "substrate_C"
       ]
     ]
+  },
+  "energy_plot": {
+    "python": "/data/jpc/code/miniforge3/bin/python",
+    "script": "/data/jpc/covalent-enzyme-design/scripts/plot_reaction_energies.py"
   }
 }

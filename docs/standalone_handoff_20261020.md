@@ -1,3 +1,13 @@
+## LATEST — energy plot published; relay stopped at window13
+
+Energy plot: `qmmm/pa6_asp272/plots/energies.png`; numerical data:
+`data/energies.csv` and `.json`. Includes all14 displayed endpoints, with
+window13 explicitly marked rejected. The optimizer converged there, but
+tracking exceeded0.20 Å. No further scientific continuation is queued.
+The package publisher now regenerates energy plots whenever a new finalized
+inspection snapshot appears. Original calculation files remain unchanged.
+Earlier running statements below are historical; read live status.json.
+
 ## CURRENT — same-directory Asp272 continuation, 2026-10-25
 
 Preferred inspection entry: `qmmm/pa6_asp272/README.md`. Plots are in

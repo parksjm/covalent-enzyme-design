@@ -5,6 +5,8 @@ from __future__ import annotations
 import hashlib
 import json
 import shutil
+import csv
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -70,6 +72,26 @@ def build_qmmm_package(config_path: Path) -> Path:
         sources["vmd/view_path.vmd"]["sha256"] = hashlib.sha256(
             (destination / "vmd/view_path.vmd").read_bytes()
         ).hexdigest()
+    if "energy_plot" in config:
+        from nyl12_covalent.path_energies import relay_endpoint_energies
+
+        energies = relay_endpoint_energies(run, data["rows"])
+        energy_data = destination / "data/energies.json"
+        energy_data.write_text(json.dumps(energies, indent=2) + "\n")
+        columns = [key for key in energies[0] if key != "source_sha256"]
+        with (destination / "data/energies.csv").open("w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=columns, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(energies)
+        subprocess.run(
+            [
+                config["energy_plot"]["python"],
+                config["energy_plot"]["script"],
+                str(energy_data),
+                str(destination / "plots/energies.png"),
+            ],
+            check=True,
+        )
     mapping = []
     for index, row in enumerate(data["rows"]):
         label = row["window"]
@@ -102,6 +124,8 @@ def build_qmmm_package(config_path: Path) -> Path:
 
 Start here:
 - `plots/distances.png`: all declared reaction distances versus window.
+- `plots/energies.png`: relative energies in kcal/mol, including driving bias
+  and a separately labeled bias-removed curve; data in `data/energies.*`.
 - `vmd/view_path.vmd`: open in VMD, with matching topology and endpoint DCD.
   Forming/breaking bond distances are labeled in Å and switch by elementary stage.
 - `data/distances.csv` and `.json`: measurements, jump flags and source hashes.

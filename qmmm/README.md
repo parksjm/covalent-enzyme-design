@@ -2,7 +2,7 @@
 
 Current path: [PA6 / Asp272-assisted relay](pa6_asp272/README.md).
 
-Start with `pa6_asp272/plots/distances.png` or
+Start with `pa6_asp272/plots/energies.png`, `pa6_asp272/plots/distances.png` or
 `pa6_asp272/vmd/view_path.vmd`. The exact executed controller is exposed as
 `pa6_asp272/scripts/run_path.py`; it is a provenance copy for inspection.
 

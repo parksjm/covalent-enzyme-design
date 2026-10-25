@@ -160,3 +160,30 @@ def test_changed_label_configuration_refreshes_existing_package(tmp_path: Path) 
     ]
     assert source["source_sha256"] == _hash((latest / "reaction_path.vmd").read_bytes())
     assert source["sha256"] == _hash(viewer.read_bytes())
+
+
+def test_energy_plot_is_in_plots_and_data_are_downloadable(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from nyl12_covalent import path_energies, qmmm_inspection_package
+
+    config_path, destination, _ = _fixture(tmp_path)
+    config = json.loads(config_path.read_text())
+    config["energy_plot"] = {"python": "explicit-python", "script": "energy_plot.py"}
+    config_path.write_text(json.dumps(config))
+    rows = [{"window": "stage1_1", "relative_total_kcal_mol": 0.0, "source_sha256": {}}]
+    monkeypatch.setattr(
+        path_energies, "relay_endpoint_energies", lambda run, endpoints: rows
+    )
+
+    def render(command: list[str], **kwargs: object) -> None:
+        assert command[:2] == ["explicit-python", "energy_plot.py"]
+        assert kwargs["check"] is True
+        Path(command[-1]).write_bytes(b"energy image")
+
+    monkeypatch.setattr(qmmm_inspection_package.subprocess, "run", render)
+    build_qmmm_package(config_path)
+    assert (destination / "plots/energies.png").read_bytes() == b"energy image"
+    assert json.loads((destination / "data/energies.json").read_text()) == rows
+    assert "relative_total_kcal_mol" in (destination / "data/energies.csv").read_text()
+    assert "plots/energies.png" in (destination / "MANIFEST.sha256").read_text()

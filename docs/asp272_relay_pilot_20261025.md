@@ -239,3 +239,20 @@ API reference: https://www.ks.uiuc.edu/Research/vmd/current/ug/node133.html
 (accessed2026-10-25). VMD is absent on violet; Tcl tests mock the VMD commands
 to verify atom checks, stage switching and label ownership, rather than claim
 a graphical VMD test.
+
+## Energy plot in the preferred inspection layout
+
+`qmmm/pa6_asp272/plots/energies.png` now accompanies distances.png and updates
+from the same finalized endpoint sequence. Numeric values and native source
+hashes are in data/energies.csv/.json; scripts/plot_reaction_energies.py and
+scripts/path_energies.py expose the implementation. Both total energy and
+explicit driving-bias-removed potential energy are shown, relative to the first
+window in kcal/mol. The implemented extraction explicitly checks the existing
+100 kcal/mol/Å² springs, targets and harmonic-region bounds; it rejects changed
+restraint parameters rather than silently applying the old formula. The MM
+positional restraints remain included in both curves.
+
+The current plot has14 endpoints: windows00–12 accepted by their documented
+tracking policy and converged window13 rejected by the0.20 Å gate. Native
+DL-FIND Etot is used, not the coarse legacy NSTEP value. This rising incomplete
+scan is not a validated barrier. Only derived inspection publication changed.
