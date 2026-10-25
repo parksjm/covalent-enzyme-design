@@ -1,3 +1,23 @@
+## CURRENT — phase1 resumed with tracking warnings only
+
+User challenged repeated arbitrary tracking cutoffs. Same run directory,
+new frozen controller run_relay_warning_only.py, tmux
+`nyl12_phase1_warning_only_20261025`: resume from convergedwindow13 and finish
+windows14–16. Tracking warns above0.15 Å and has no hard stop. Convergence,
+finite/box and chemical endpoint checks remain unchanged. Phase2 is held for
+amine/Asp-OH orientation review. Status/policy history is preserved; active
+policy is warning_only_tracking_policy.json. Read status.json for live progress.
+
+Window13 energy rise:+49.67 kcal/mol, comprising+4.46 driving bias,+2.03 MM
+position restraints,+46.53 printed DFTB term and−3.35 other terms. Not a barrier.
+Both amine H-bonds to Asp residues were confirmed; Asp-OH···N angle95.6° is
+poor. Proton transfer is ahead of covalent attack(Asp-H1.094 Å, OG1-C2.053 Å).
+Current hypotheses include unfavorable coupling/orientation and proton affinity;
+do not attribute the rise solely to one hydrogen bond or infer a Nyl12 pKa.
+See latest section of docs/asp272_relay_pilot_20261025.md. Analyses are exposed
+in qmmm/pa6_asp272/data/amine_orientation.json and relay_energy_component_audit.json.
+Earlier stopped/running statements below are history.
+
 ## LATEST — energy plot published; relay stopped at window13
 
 Energy plot: `qmmm/pa6_asp272/plots/energies.png`; numerical data:

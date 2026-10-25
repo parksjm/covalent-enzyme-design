@@ -256,3 +256,70 @@ The current plot has14 endpoints: windows00–12 accepted by their documented
 tracking policy and converged window13 rejected by the0.20 Å gate. Native
 DL-FIND Etot is used, not the coarse legacy NSTEP value. This rising incomplete
 scan is not a validated barrier. Only derived inspection publication changed.
+
+## Warning-only continuation and mechanistic diagnosis
+
+User questioned repeated tracking-limit stops and requested progress. Window13
+converged but missed its target by0.204562 Å, barely exceeding the previous
+0.200 Å gate. The current in-place continuation treats tracking as a diagnostic
+warning above0.15 Å with no tracking hard stop. Native optimizer convergence,
+finite coordinates/fixed box and intended chemical endpoint gates remain.
+No spring strength, targets, Hamiltonian or coordinate reference changed.
+Controller: provenance/asp272_relay_20261025/run_relay_warning_only.py, frozen
+in the run/source directory. Session: nyl12_phase1_warning_only_20261025.
+It resumes window13 without rerunning it, then runs windows14–16 of phase1.
+It holds phase2 for donor/amine orientation review, even if phase1 chemistry
+passes, rather than treating poor proton-transfer alignment as resolved.
+Original acceptance/status/policy records are preserved alongside the active
+warning_only_tracking_policy.json. Three targeted continuation tests pass;
+full-suite check:701 passed,13 skipped. Orchestration coverage is not quantified.
+
+A scripted exact-coordinate review at window13 confirms N–H1···Asp272 OD1
+H···O2.150 Å /149.6°, N–H2···Asp274 OD2 H···O2.278 Å /147.5°.
+The donor angle Asp272 OD1–HG1···N is95.6°, N···Asp272 OD1 is3.064 Å.
+Thus both amine and protonated Asp-OH orientation need attention before
+assuming the second transfer will proceed. The terminal N remains NH2.
+The negative sum of N–CA/N–H unit vectors was also recorded as a geometrical
+lone-pair proxy, explicitly not an electronic-orbital calculation.
+Script: analyze_amine_orientation.py; output: data/amine_orientation.json.
+Hydrogen bonds can favor the current local minimum; local minimization alone
+does not establish whether an alternative rotated/inverted geometry is accessible.
+
+### Why the energies rise
+
+An exact printed-energy comparison of window00 to window13 yields(kcal/mol):
+- Total:+49.670900.
+- Artificial driving bias:+4.455684.
+- MM positional restraints:+2.030016.
+- Printed DFTBESCF term:+46.532200.
+- Remaining printed terms:−3.347000.
+
+This partition rules out the applied springs as the main accounting cause of
+the rise. DFTBESCF is a printed QM term, not an Asp-specific or hydrogen-bond
+energy, and cannot be assigned to a particular interaction or pKa shift.
+N–H donation can stabilize carboxylate relative to neutral carboxylic acid,
+making proton acceptance less favorable; the user's proposal is plausible.
+A primary example of an enzyme hydrogen-bond network lowering an Asp pKa is
+*Direct evidence that an extended hydrogen-bonding network influences activation
+of pyridoxal 5′-phosphate in aspartate aminotransferase*(2017):
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5392587/.
+That is supporting chemical precedent, not a measured Nyl12 pKa or proof of
+this pathway. The opposing effects of other charges, solvation, geometry and
+method error have not been separated.
+
+At window13, Asp272–HG1=1.094 Å and OG1–HG1=1.504 Å, while OG1–C=2.053 Å
+and substrate C–O=1.279 Å. Proton transfer has progressed strongly before
+formation of the tetrahedral linkage. A costly alkoxide-like configuration
+along an unfavorable imposed route is therefore another supported hypothesis.
+The current linear target schedule need not follow the lowest-energy valley.
+This is an inference from the geometry, not proof of the correct mechanism.
+
+Next scientific decision: review the bounded phase1 endpoint, then compare
+attack/proton-transfer coupling with a small local two-coordinate map and
+prepare amine/Asp-OH orientations before phase2. Do not assign a real barrier,
+remove an Asp hydrogen bond artificially, change protonation silently or claim
+that increasing a tracking allowance fixes the energetic problem. Relative
+DFTB proton affinities may also require matched higher-level spot checks before
+relying on a barrier; none are launched by this diagnostic.
+The analysis is scripted in audit_relay_energy_components.py; numeric results
+and native source hashes are in data/relay_energy_component_audit.json.

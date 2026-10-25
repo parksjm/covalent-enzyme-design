@@ -144,8 +144,9 @@ The current package contains {len(mapping)} finalized endpoint frames.
 Original scientific run (unchanged): `{run}`.
 Stage/window directories contain small inputs and original acceptance records;
 full solvated restarts, scratch and engine trajectories stay on violet.
-Window10 was subsequently accepted under the documented 0.20 Å tracking policy;
-its original 0.15 Å failure record remains intact. See `inputs/continuation_policy.json`.
+Original acceptance records remain intact, including earlier tracking stops.
+The active policy is in `inputs/continuation_policy.json`; previous tracking
+policy records remain in `inputs/previous_tracking_policy.json`.
 
 Scripts are provenance copies with workstation-specific paths, not a portable
 calculation environment. Do not rerun them on the laptop or overwrite an existing
