@@ -15,6 +15,59 @@
     "scripts/path_publish.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/path_publish.py",
     "inputs/run_inventory.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/inputs.json",
     "inputs/continuation_policy.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/continuation_tracking_policy.json",
-    "docs/path_notes.md": "/data/jpc/covalent-enzyme-design/docs/asp272_relay_pilot_20261025.md"
+    "docs/path_notes.md": "/data/jpc/covalent-enzyme-design/docs/asp272_relay_pilot_20261025.md",
+    "vmd/nyl12_reactive_distances.tcl": "/data/jpc/covalent-enzyme-design/scripts/nyl12_reactive_distances.tcl"
+  },
+  "measurement_atoms": {
+    "OG1": {
+      "index": 13915,
+      "name": "OG1"
+    },
+    "HG1": {
+      "index": 13916,
+      "name": "HG1"
+    },
+    "Asp272_OD1": {
+      "index": 14558,
+      "name": "OD1"
+    },
+    "substrate_C": {
+      "index": 19902,
+      "name": "C54"
+    },
+    "terminal_N": {
+      "index": 13904,
+      "name": "N"
+    }
+  },
+  "stage_measurements": {
+    "1": [
+      [
+        "OG1",
+        "HG1"
+      ],
+      [
+        "HG1",
+        "Asp272_OD1"
+      ],
+      [
+        "OG1",
+        "substrate_C"
+      ]
+    ],
+    "2": [
+      [
+        "Asp272_OD1",
+        "HG1"
+      ],
+      [
+        "HG1",
+        "terminal_N"
+      ],
+      [
+        "OG1",
+        "substrate_C"
+      ]
+    ]
   }
 }

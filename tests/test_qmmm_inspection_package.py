@@ -72,8 +72,12 @@ def test_build_qmmm_package_maps_files_hashes_and_is_idempotent(
     assert (window / "run.json").read_text() == "window process.json"
     assert (window / "optimize.mdin").read_text() == "window minimize.mdin"
     assert (window / "restraints.RST").read_text() == "window restraints.RST"
-    assert (destination / "vmd/view_path.vmd").read_bytes() == (latest / "reaction_path.vmd").read_bytes()
-    assert (destination / "plots/distances.png").read_bytes() == (latest / "reaction_distances.png").read_bytes()
+    assert (destination / "vmd/view_path.vmd").read_bytes() == (
+        latest / "reaction_path.vmd"
+    ).read_bytes()
+    assert (destination / "plots/distances.png").read_bytes() == (
+        latest / "reaction_distances.png"
+    ).read_bytes()
     assert (destination / "scripts/run_path.py").is_file()
     order = json.loads((destination / "window_order.json").read_text())
     assert order == [
@@ -129,3 +133,30 @@ def test_build_qmmm_package_rejects_unmapped_stage(tmp_path: Path) -> None:
 
     with pytest.raises(KeyError, match="stage2"):
         build_qmmm_package(config_path)
+
+
+def test_changed_label_configuration_refreshes_existing_package(tmp_path: Path) -> None:
+    config_path, destination, latest = _fixture(tmp_path)
+    build_qmmm_package(config_path)
+    config = json.loads(config_path.read_text())
+    config["measurement_atoms"] = {
+        "O": {"index": 1, "name": "OG1"},
+        "H": {"index": 2, "name": "HG1"},
+    }
+    config["stage_measurements"] = {"stage1": [["O", "H"]]}
+    helper = tmp_path / "labels.tcl"
+    helper.write_text("# native reactive labels")
+    config["source_files"]["vmd/nyl12_reactive_distances.tcl"] = str(helper)
+    config_path.write_text(json.dumps(config))
+    build_qmmm_package(config_path)
+    viewer = destination / "vmd/view_path.vmd"
+    assert "::nyl12_reactive::install" in viewer.read_text()
+    assert "{1 OG1 2 HG1}" in viewer.read_text()
+    assert (
+        destination / "vmd/nyl12_reactive_distances.tcl"
+    ).read_bytes() == helper.read_bytes()
+    source = json.loads((destination / "package_sources.json").read_text())["sources"][
+        "vmd/view_path.vmd"
+    ]
+    assert source["source_sha256"] == _hash((latest / "reaction_path.vmd").read_bytes())
+    assert source["sha256"] == _hash(viewer.read_bytes())

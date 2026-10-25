@@ -39,6 +39,8 @@ def build_qmmm_package(config_path: Path) -> Path:
     if (
         previous.exists()
         and json.loads(previous.read_text())["identity"] == data["identity"]
+        and json.loads(previous.read_text())["layout_config_sha256"]
+        == hashlib.sha256(config_path.read_bytes()).hexdigest()
     ):
         return destination
     sources: dict[str, Any] = {}
@@ -55,6 +57,19 @@ def build_qmmm_package(config_path: Path) -> Path:
         _copy(latest / name, destination / target, sources, destination)
     for target, source in config["source_files"].items():
         _copy(Path(source), destination / target, sources, destination)
+    if "stage_measurements" in config:
+        from nyl12_covalent.vmd_reactive_distances import append_reactive_labels
+
+        append_reactive_labels(destination / "vmd/view_path.vmd", data["rows"], config)
+        sources["vmd/view_path.vmd"]["source_sha256"] = sources["vmd/view_path.vmd"][
+            "sha256"
+        ]
+        sources["vmd/view_path.vmd"]["transform"] = (
+            "Append declared reactive distance labels"
+        )
+        sources["vmd/view_path.vmd"]["sha256"] = hashlib.sha256(
+            (destination / "vmd/view_path.vmd").read_bytes()
+        ).hexdigest()
     mapping = []
     for index, row in enumerate(data["rows"]):
         label = row["window"]
@@ -88,6 +103,7 @@ def build_qmmm_package(config_path: Path) -> Path:
 Start here:
 - `plots/distances.png`: all declared reaction distances versus window.
 - `vmd/view_path.vmd`: open in VMD, with matching topology and endpoint DCD.
+  Forming/breaking bond distances are labeled in Å and switch by elementary stage.
 - `data/distances.csv` and `.json`: measurements, jump flags and source hashes.
 - `scripts/run_path.py`: exact current continuation controller used on violet.
 - `scripts/initial_driver.py`: original controller, retained as history.

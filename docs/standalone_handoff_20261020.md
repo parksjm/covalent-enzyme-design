@@ -5,6 +5,9 @@ Preferred inspection entry: `qmmm/pa6_asp272/README.md`. Plots are in
 `scripts/run_path.py`. Laptop: `nyl12-inspection-20261021/qmmm/pa6_asp272/`.
 Numbered elementary stages contain sequential `window_00`, `window_01`, ...
 The active calculation stays in its original directory.
+The preferred VMD viewer now labels the three reactive distances per stage;
+values update with animation and labels switch at the stage boundary.
+Publisher session: `nyl12_qmmm_labels_20261025`.
 
 Window10 converged but missed the 0.150 Å tracking gate by 0.003764 Å.
 User authorized warning at 0.150 Å and stop at 0.200 Å, explicitly keeping the

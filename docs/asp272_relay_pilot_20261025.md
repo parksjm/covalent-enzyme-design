@@ -216,3 +216,26 @@ package SHA-256 checks passed. The first resumed window(stage1_11) converged
 with a0.170179 Å tracking miss, correctly warning rather than stopping; stage1_12
 started. The movie and structured package automatically increased from11 to12
 frames. VMD GUI validation remains for the laptop; VMD is absent on violet.
+
+## Reactive distance labels in the VMD viewer
+
+The preferred `qmmm/pa6_asp272/vmd/view_path.vmd` viewer now creates native VMD
+bond-distance labels in Å, checking atom index/name identity before labeling.
+They update with animation and select the appropriate three bonds per stage:
+
+- Stage1: OG1–HG1, HG1–Asp272 OD1, OG1–substrate C54.
+- Stage2: Asp272 OD1–HG1, HG1–terminal N, OG1–substrate C54.
+
+The actual stripped zero-based atom indices are declared in
+configs/qmmm_inspection_layout_20261025.json; they are not inferred by nearest
+atom or display position. scripts/nyl12_reactive_distances.tcl installs native
+labels and switches visibility on frame changes. Reversed-order bonds share one
+label, and unrelated labels are preserved. Existing Licorice and carbon colors
+are unchanged. Re-run the usual pull and reload view_path.vmd to use the labels.
+Only the inspection publisher was restarted as nyl12_qmmm_labels_20261025;
+the scientific calculation and frozen controller were not changed.
+
+API reference: https://www.ks.uiuc.edu/Research/vmd/current/ug/node133.html
+(accessed2026-10-25). VMD is absent on violet; Tcl tests mock the VMD commands
+to verify atom checks, stage switching and label ownership, rather than claim
+a graphical VMD test.
