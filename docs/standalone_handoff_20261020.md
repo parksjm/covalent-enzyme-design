@@ -1,5 +1,22 @@
 ## CURRENT — overnight forward pilot stopped before reverse, 2026-10-25
 
+User requested an actual barrier and then a movie of the failed scan.
+The concatenated forward movie is now in the curated VMD download:
+`output_vmd_inspection_20261024/forward_driven_path.vmd` and matching DCD.
+It contains 18 actual minimized window endpoints (19976 atoms, three waters,
+98 real QM atoms in Licorice), without interpolation or alignment. All windows
+finished before their first ntwx=10 snapshot; no within-window intermediate
+frames were saved. The frame manifest records target and achieved coordinates.
+
+A separate tighter ES reference is running in tmux
+`nyl12_es_barrier_reference_20261025`, directory
+`output_nyl12_pa6_dftb_pilot_20261024/es_tight_convergence_attempt1/`.
+It starts from the original ES endpoint, retains the same QM/MM model and
+original MM restraint reference, and changes drms to 0.0005 with a 3000-cycle
+budget. No new driven path or TS search has started. Check its process and
+scientific acceptance records, then review chemistry before using its energy.
+This stricter minimization is not itself a barrier calculation.
+
 All 18 forward windows completed, but the endpoint failed the TI1 geometry
 gate; reverse did not run. No path job remains active. Final OG1–C 2.60843 Å
 (target 1.55), proton difference −0.73086 Å (target +0.50). The seven-cycle
