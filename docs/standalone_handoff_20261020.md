@@ -1,4 +1,39 @@
-## CURRENT CHECKPOINT — focused ES optimization, 2026-10-24
+## OVERNIGHT RUNNING — forward/reverse TI1 construction, 2026-10-24
+
+User authorized a sequential overnight coordinate-driving pilot and then
+disconnecting. tmux: `nyl12_ti1_forward_reverse3_20261024`.
+Run directory:
+`output_nyl12_pa6_dftb_pilot_20261024/coordinate_driving_forward_reverse_attempt3/`.
+First three forward windows completed and exported; forward_03 was running at
+the checkpoint. Read status.json and the job log for current progress.
+There are 18 forward targets, followed by 17 reverse targets only if the
+forward endpoint passes a candidate TI1 geometry gate. Each window inherits
+the preceding converged restart and retains the original MM positional
+reference, full system, QM region and Hamiltonian. Native NMR restraints drive
+OG1–C and OG1–HG1 minus N–HG1 independently. Stop on engine failure,
+nonconvergence, invalid coordinates/box or display-export failure. No MD or
+new parameter fit runs tonight. This is a biased construction pilot, not a
+validated reaction pathway or barrier calculation. Global RMS convergence
+alone does not establish QM stationarity or a TS. Review actual coordinates.
+
+Every completed window retains full optimizer snapshots (ntwx=10), its exact
+endpoint, restraint targets, process/geometry records and
+optimization_stripped.dcd. A window converging before the first snapshot
+contains only its exact endpoint in that display file, explicitly recorded.
+The fixed 19976-atom display selection matches the VMD bundle topology.
+Attempts 1/2 are retained: DISANG's 80-character filename field required
+relative paths; a zero-snapshot immediately converged window required an
+explicit endpoint-only display export. Neither changed the chemistry.
+
+VMD bundle: `output_vmd_inspection_20261024/` (17.1 MB, 12 checked payloads).
+Default `nyl12_es_optimization.vmd`: 48 ES frames, protein/full substrate,
+three fixed waters and QM Licorice. `nyl12_es_initial_final.vmd`: full-solvent
+two-frame comparison. Updated `scripts/pull_nyl12_inspection.sh` downloads
+both curated packages. Next session: inspect overnight progress and endpoint
+chemistry; package forward/reverse path movies for the laptop before expanding
+scope. Details: docs/pa6_ti1_coordinate_driving_plan_20261024.md.
+
+## ES REFERENCE CHECKPOINT — 2026-10-24
 
 User inspected the 98-real-atom + 8-link-H QM XYZ and approved the region,
 including Asp272/Asp274 and the following Thr234. Keep that region unchanged.
@@ -42,6 +77,12 @@ symmetry-aware fixed-backbone LigandMPNN pilot. Full pathway/free-energy work,
 local LLM agents, NylB and variable-length RFD3 work remain deferred.
 Use bounded cheaper delegation for routine tasks and short progress reports.
 Active append-only journal: output_agent_actions/20261021.jsonl.
+Visualization policy: retain actual optimizer coordinate snapshots, original
+starting coordinates and exact final endpoints for each future reactant,
+intermediate, TS and product optimization. Set Sander trajectory output
+explicitly before launch; preserve frame/source mapping and periodic boxes.
+Optimizer frames are not a physical-time reaction trajectory. Current ES
+already has 25 + 21 saved snapshots, so no rerun is needed for visualization.
 Older sections below are historical and do not override this checkpoint.
 
 ## RESUMED: analytic-gradient bounded ES pilot — 2026-10-24

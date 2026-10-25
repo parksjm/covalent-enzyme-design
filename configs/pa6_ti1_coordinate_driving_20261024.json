@@ -1,0 +1,52 @@
+{
+  "status": "prepared_specification_not_executed",
+  "purpose": "Construct one enzyme-supported TI1 candidate; not a barrier calculation",
+  "source_restart": "output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/optimized.ncrst",
+  "restraint_reference": "output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_attempt2/starting.ncrst",
+  "inherit_hamiltonian_from": "output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/continuation.mdin",
+  "qm_region": "configs/pa6_es_dftb_pilot_20261024.json",
+  "coordinates": [
+    {
+      "name": "attack",
+      "definition": "distance(Thr233.OG1, substrate.C54)",
+      "atom_pairs_1based": [[13916, 19903]],
+      "weights": [1.0],
+      "initial_target_A": 3.141038,
+      "candidate_final_target_A": 1.55
+    },
+    {
+      "name": "direct_proton_transfer_hypothesis",
+      "definition": "distance(OG1, original_HG1) - distance(N_terminus, original_HG1)",
+      "atom_pairs_1based": [[13916, 13917], [13905, 13917]],
+      "weights": [1.0, -1.0],
+      "initial_target_A": -1.584863,
+      "candidate_final_target_A": 0.5
+    }
+  ],
+  "proposed_schedule": {
+    "windows_including_start": 18,
+    "interpolation": "linear in each separately restrained coordinate",
+    "rk2_rk3_kcal_mol_A2": 25.0,
+    "potential_convention": "Amber k*(q-target)^2 near target, no one-half prefactor",
+    "maxcyc_per_window": 1000,
+    "drms_kcal_mol_A": 0.05,
+    "ntwx": 10,
+    "ntpr": 10,
+    "original_MM_restraint_kcal_mol_A2": 10.0,
+    "continuation": "Each window starts from the previous converged restart; original positional reference never advances",
+    "abort_on": ["engine failure", "nonfinite coordinates", "nonconvergence", "changed atom inventory or box", "unintended chemistry requiring review"]
+  },
+  "execution_prerequisites": [
+    "Verify native static generalized-distance restraint parsing and analytic forces during minimization",
+    "Review generated mdin/DISANG and exact reactive atom identities against topology",
+    "Record input/source hashes and explicit Amber environment in a fresh tmux job",
+    "Inspect first short driven segment before continuing the full schedule"
+  ],
+  "endpoint_tests": [
+    "Tetrahedral geometry, oxyanion contacts, proton connectivity and both Asp residues",
+    "Reduce and release reaction-coordinate restraints while retaining original environmental reference",
+    "Compare reverse driving and two additional MD seeds after the first pilot"
+  ],
+  "classical_TI1_MD": "Blocked until native TI1 parameters are validated; short QM/MM equilibration is a separate possible next step",
+  "AF3_TI1": "Not required for this WT construction; retain AF3 for redesign sequence and pose evaluation"
+}

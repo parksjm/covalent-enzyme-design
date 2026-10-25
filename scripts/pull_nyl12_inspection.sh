@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run on the laptop. This downloads only the curated inspection package.
+# Run on the laptop. Download the curated inspection and VMD packages.
 set -euo pipefail
 
 usage() {
@@ -59,5 +59,25 @@ rsync "${rsync_args[@]}" \
     "$remote:$source_dir/" "$destination/"
 if [[ $dry_run -eq 0 ]]; then
     (cd "$destination" && "${checksum[@]}" MANIFEST.sha256)
-    echo "Download verified. Read $destination/README.md for PyMOL instructions."
+fi
+
+# This separately curated package contains only selected VMD inspection frames.
+# Its DCD files are intentional; exclusions above apply to the older package.
+vmd_source=/data/jpc/covalent-enzyme-design/output_vmd_inspection_20261024
+vmd_destination="$destination/vmd_initial_final"
+if [[ $dry_run -eq 0 ]]; then
+    mkdir -p "$vmd_destination"
+fi
+vmd_rsync_args=(-rtpvz --safe-links --max-size=100m)
+if [[ $dry_run -eq 1 ]]; then
+    vmd_rsync_args+=(--dry-run)
+fi
+rsync "${vmd_rsync_args[@]}" \
+    --include='*.gz' --include='*.dcd' --include='*.vmd' \
+    --include='*.tcl' --include='*.json' --include='*.md' \
+    --include='MANIFEST.sha256' --exclude='*' \
+    "$remote:$vmd_source/" "$vmd_destination/"
+if [[ $dry_run -eq 0 ]]; then
+    (cd "$vmd_destination" && "${checksum[@]}" MANIFEST.sha256)
+    echo "Download verified. Read $vmd_destination/README.md for VMD instructions."
 fi

@@ -1,0 +1,8 @@
+# Optional full-solvent initial/final comparison.
+set ::nyl12_dir [file dirname [file normalize [info script]]]
+foreach name {qm_indices.tcl nyl12_es_vmd_common.tcl} {
+    if {![file isfile [file join $::nyl12_dir $name]]} {error "Missing viewer input: $name"}
+    source [file join $::nyl12_dir $name]
+}
+full
+puts "Full103251-atom comparison: initial, final, pocket, system. optimization loads stripped48states."

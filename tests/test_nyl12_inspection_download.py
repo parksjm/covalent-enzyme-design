@@ -322,7 +322,7 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
     binary.mkdir()
     captured = tmp_path / "args"
     for name, body in {
-        "rsync": '#!/bin/sh\nprintf "%s\\n" "$@" > "$CAPTURE_ARGS"\n',
+        "rsync": '#!/bin/sh\nprintf "CALL\\n%s\\n" "$*" >> "$CAPTURE_ARGS"\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS.details"\n',
         "ssh": "#!/bin/sh\nexit 0\n",
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
@@ -336,6 +336,8 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
     }
     destination = tmp_path / "laptop files"
     for dry_run in (True, False):
+        captured.unlink(missing_ok=True)
+        Path(str(captured) + ".details").unlink(missing_ok=True)
         argv = [
             "bash",
             str(PULL),
@@ -344,11 +346,16 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
             str(destination),
         ]
         subprocess.run(argv, env=environment, check=True, capture_output=True)
-        arguments = captured.read_text().splitlines()
+        assert captured.read_text().count("CALL\n") == 2
+        arguments = Path(str(captured) + ".details").read_text().splitlines()
         assert ("--dry-run" in arguments) == dry_run
         assert "--delete" not in arguments
-        assert arguments[-1] == f"{destination}/"
-        assert arguments[-2].endswith("output_laptop_inspection_20261021/")
+        assert f"{destination}/" in arguments
+        assert any(
+            arg.endswith("output_laptop_inspection_20261021/") for arg in arguments
+        )
+        assert arguments[-1] == f"{destination}/vmd_initial_final/"
+        assert arguments[-2].endswith("output_vmd_inspection_20261024/")
         assert destination.exists() is not dry_run
 
 
@@ -360,7 +367,7 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
     binary.mkdir()
     captured = tmp_path / "args"
     for name, body in {
-        "rsync": '#!/bin/sh\nprintf "%s\\n" "$@" > "$CAPTURE_ARGS"\n',
+        "rsync": '#!/bin/sh\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS"\n',
         "ssh": "#!/bin/sh\nexit 0\n",
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
@@ -383,11 +390,16 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
         capture_output=True,
     )
     arguments = captured.read_text().splitlines()
-    assert arguments[-2] == (
+    assert (
         f"{current_user}@violet:/data/jpc/covalent-enzyme-design/"
         "output_laptop_inspection_20261021/"
+    ) in arguments
+    assert "./nyl12-inspection-20261021/" in arguments
+    assert arguments[-2] == (
+        f"{current_user}@violet:/data/jpc/covalent-enzyme-design/"
+        "output_vmd_inspection_20261024/"
     )
-    assert arguments[-1] == "./nyl12-inspection-20261021/"
+    assert arguments[-1] == "./nyl12-inspection-20261021/vmd_initial_final/"
     assert "--dry-run" not in arguments
     assert "-rtpvz" in arguments
     assert (tmp_path / "nyl12-inspection-20261021").is_dir()
