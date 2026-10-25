@@ -1,0 +1,149 @@
+{
+  "all18_verified": true,
+  "rows": [
+    {
+      "window": "forward_00",
+      "driving_kcal_mol": 8.00852308296881e-12,
+      "position_kcal_mol": 11887.074763130098,
+      "printed_RESTRAINT": 11887.0748,
+      "printed_minus_computed_kcal_mol": 3.686989402425365e-05,
+      "RMS": 0.042903
+    },
+    {
+      "window": "forward_01",
+      "driving_kcal_mol": 0.4275687997858882,
+      "position_kcal_mol": 11888.574329912113,
+      "printed_RESTRAINT": 11889.0019,
+      "printed_minus_computed_kcal_mol": 1.28810023619641e-06,
+      "RMS": 0.027953
+    },
+    {
+      "window": "forward_02",
+      "driving_kcal_mol": 2.0313141005855293,
+      "position_kcal_mol": 11888.574329912113,
+      "printed_RESTRAINT": 11890.6056,
+      "printed_minus_computed_kcal_mol": -4.401269792353446e-05,
+      "RMS": 0.046752
+    },
+    {
+      "window": "forward_03",
+      "driving_kcal_mol": 3.9177753895829337,
+      "position_kcal_mol": 11889.148646361002,
+      "printed_RESTRAINT": 11893.0664,
+      "printed_minus_computed_kcal_mol": -2.175058496867166e-05,
+      "RMS": 0.045219
+    },
+    {
+      "window": "forward_04",
+      "driving_kcal_mol": 5.585894538427304,
+      "position_kcal_mol": 11892.147755393828,
+      "printed_RESTRAINT": 11897.7336,
+      "printed_minus_computed_kcal_mol": -4.993225527272216e-05,
+      "RMS": 0.039616
+    },
+    {
+      "window": "forward_05",
+      "driving_kcal_mol": 7.8430864312551645,
+      "position_kcal_mol": 11895.37893218772,
+      "printed_RESTRAINT": 11903.222,
+      "printed_minus_computed_kcal_mol": -1.861897474064733e-05,
+      "RMS": 0.036783
+    },
+    {
+      "window": "forward_06",
+      "driving_kcal_mol": 11.503093837862496,
+      "position_kcal_mol": 11896.343616443162,
+      "printed_RESTRAINT": 11907.8467,
+      "printed_minus_computed_kcal_mol": -1.0281024758640456e-05,
+      "RMS": 0.049975
+    },
+    {
+      "window": "forward_07",
+      "driving_kcal_mol": 13.89274555112301,
+      "position_kcal_mol": 11901.095412160032,
+      "printed_RESTRAINT": 11914.9882,
+      "printed_minus_computed_kcal_mol": 4.228884514034803e-05,
+      "RMS": 0.039948
+    },
+    {
+      "window": "forward_08",
+      "driving_kcal_mol": 17.384162965381687,
+      "position_kcal_mol": 11904.466642222884,
+      "printed_RESTRAINT": 11921.8508,
+      "printed_minus_computed_kcal_mol": -5.188265344457932e-06,
+      "RMS": 0.040081
+    },
+    {
+      "window": "forward_09",
+      "driving_kcal_mol": 21.327177048725922,
+      "position_kcal_mol": 11907.873151124852,
+      "printed_RESTRAINT": 11929.2003,
+      "printed_minus_computed_kcal_mol": -2.817357707129986e-05,
+      "RMS": 0.040813
+    },
+    {
+      "window": "forward_10",
+      "driving_kcal_mol": 25.737331751701632,
+      "position_kcal_mol": 11911.042043200812,
+      "printed_RESTRAINT": 11936.7794,
+      "printed_minus_computed_kcal_mol": 2.504748555054448e-05,
+      "RMS": 0.041225
+    },
+    {
+      "window": "forward_11",
+      "driving_kcal_mol": 30.572393043384793,
+      "position_kcal_mol": 11914.178982146943,
+      "printed_RESTRAINT": 11944.7514,
+      "printed_minus_computed_kcal_mol": 2.480967152962421e-05,
+      "RMS": 0.042063
+    },
+    {
+      "window": "forward_12",
+      "driving_kcal_mol": 35.862043878137136,
+      "position_kcal_mol": 11917.068434116483,
+      "printed_RESTRAINT": 11952.9305,
+      "printed_minus_computed_kcal_mol": 2.2005379925360558e-05,
+      "RMS": 0.042665
+    },
+    {
+      "window": "forward_13",
+      "driving_kcal_mol": 41.5690219493572,
+      "position_kcal_mol": 11919.907518406098,
+      "printed_RESTRAINT": 11961.4765,
+      "printed_minus_computed_kcal_mol": -4.0355454991924944e-05,
+      "RMS": 0.043402
+    },
+    {
+      "window": "forward_14",
+      "driving_kcal_mol": 46.83806025955855,
+      "position_kcal_mol": 11923.65354263772,
+      "printed_RESTRAINT": 11970.4916,
+      "printed_minus_computed_kcal_mol": -2.8972786836334308e-06,
+      "RMS": 0.043462
+    },
+    {
+      "window": "forward_15",
+      "driving_kcal_mol": 52.76343333772208,
+      "position_kcal_mol": 11927.106290839583,
+      "printed_RESTRAINT": 11979.8697,
+      "printed_minus_computed_kcal_mol": -2.4177306173100988e-05,
+      "RMS": 0.04265
+    },
+    {
+      "window": "forward_16",
+      "driving_kcal_mol": 59.11907882149515,
+      "position_kcal_mol": 11930.282192906183,
+      "printed_RESTRAINT": 11989.4013,
+      "printed_minus_computed_kcal_mol": 2.8272321486610963e-05,
+      "RMS": 0.042818
+    },
+    {
+      "window": "forward_17",
+      "driving_kcal_mol": 65.88241003399142,
+      "position_kcal_mol": 11933.258491643486,
+      "printed_RESTRAINT": 11999.1409,
+      "printed_minus_computed_kcal_mol": -1.6774772859662335e-06,
+      "RMS": 0.04279
+    }
+  ]
+}

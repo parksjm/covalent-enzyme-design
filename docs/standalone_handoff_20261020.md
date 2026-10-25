@@ -1,4 +1,18 @@
-## OVERNIGHT RUNNING — forward/reverse TI1 construction, 2026-10-24
+## CURRENT — overnight forward pilot stopped before reverse, 2026-10-25
+
+All 18 forward windows completed, but the endpoint failed the TI1 geometry
+gate; reverse did not run. No path job remains active. Final OG1–C 2.60843 Å
+(target 1.55), proton difference −0.73086 Å (target +0.50). The seven-cycle
+final minimization met global RMS 0.04279 but retained a 6.8292 kcal/mol/Å
+maximum force on QM atom O49. Global RMS acceptance was too permissive for
+the local chemistry. Do not claim a complete reaction path, barrier or unstable
+TI1. Review/plots: docs/pa6_overnight_path_review_20261025.md and
+output_nyl12_pa6_dftb_pilot_20261024/overnight_review_20261025/.
+Next: verify stricter local convergence and target tracking in a few windows
+before another full forward/reverse attempt. Older running status below is
+historical. Original outputs and all forward movies remain preserved.
+
+## OVERNIGHT LAUNCH — forward/reverse TI1 construction, 2026-10-24
 
 User authorized a sequential overnight coordinate-driving pilot and then
 disconnecting. tmux: `nyl12_ti1_forward_reverse3_20261024`.
