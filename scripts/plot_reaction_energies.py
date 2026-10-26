@@ -48,7 +48,7 @@ def main() -> None:
     ax.grid(alpha=0.2)
     ax.legend()
     fig.suptitle(
-        "First-window reference; MM positional restraints retained.\n"
+        "First-window reference; no MM positional restraints; driving biases shown.\n"
         "Construction scan, not a validated barrier.",
         fontsize=10,
     )

@@ -17,13 +17,30 @@ destination needs an initialized manifest. Both now have regression tests.
 Failed zero-step/interrupted artifacts were moved reversibly to
 `clutter/failed_coordinate_drive_resume_20261026/`.
 
-Current tmux session: `nyl12_coordinate_drive_resume3_20261026`. The path uses
+Current calculation tmux session: `nyl12_coordinate_drive_resume3_20261026`.
+The path uses
 the accepted E-S endpoint, no positional restraints, and only the two declared
-reaction-coordinate biases. `stage1_00` converged and passed acceptance with
-zero target error; `stage1_01` is active. The controller resumes from accepted
-windows without recomputing them. Live state:
+reaction-coordinate biases. Windows `stage1_00` through `stage1_15` converged
+and passed acceptance; `stage1_16` is active. At `stage1_15`, OG1-C is 2.10955
+A, OG1-HG1 is 1.42309 A, and Asp272 OD1-HG1 is 1.09954 A. No adjacent-window
+distance change exceeds the declared 0.25 A discontinuity threshold. Relative
+total energy has nevertheless risen monotonically to 35.27 kcal/mol (32.38
+kcal/mol after subtracting the declared driving bias), so this remains a
+construction scan and is not a validated barrier. The controller resumes from
+accepted windows without recomputing them. Live state:
 `qmmm/pa6_asp272/01_coordinate_drive_to_ti1/status.json`; active job provenance:
 `qmmm/pa6_asp272/01_coordinate_drive_to_ti1/resume_job_20261026_attempt3/`.
+
+The original live publisher omitted three VMD dependencies and had no live
+energy plot. The corrected publisher now atomically includes
+`stripped.parm7.gz`, `qm_indices.tcl`, `nyl12_es_vmd_common.tcl`, and the
+current `energies.*` and `distances.*` files. All focused publisher, inspection,
+energy, and package tests pass (42 tests). Because the active controller has a
+frozen source snapshot, a separate read-only tmux monitor,
+`nyl12_complete_path_inspection_20261026`, updates the corrected bundle after
+each accepted window without altering sander. Its provenance is under
+`01_coordinate_drive_to_ti1/inspection_monitor_job_20261026/`; the laptop-ready
+bundle is `01_coordinate_drive_to_ti1/vmd_progress/`.
 
 ## CURRENT — top-level output cleanup, 2026-10-25
 

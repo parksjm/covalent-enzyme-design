@@ -135,7 +135,9 @@ def build_qmmm_package(config_path: Path) -> Path:
     if "energy_plot" in config:
         from nyl12_covalent.path_energies import relay_endpoint_energies
 
-        energies = relay_endpoint_energies(run, data["rows"])
+        energies = relay_endpoint_energies(
+            run, data["rows"], config["energy_distance_keys"]
+        )
         energy_data = destination / "data/energies.json"
         energy_data.write_text(json.dumps(energies, indent=2) + "\n")
         columns = [key for key in energies[0] if key != "source_sha256"]

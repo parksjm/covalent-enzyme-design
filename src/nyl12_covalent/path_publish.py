@@ -22,21 +22,30 @@ def publish_download(generation: Path, destination: Path) -> None:
     for line in original.splitlines():
         digest, name = line.split(maxsplit=1)
         entries[name.strip()] = digest
-    names = (
-        "reaction_path.dcd",
-        "reaction_path.vmd",
-        "reaction_distances.png",
-        "reaction_distances.json",
-        "reaction_distances.csv",
-    )
-    for name in names:
-        source = generation / name
-        pending = destination / ("." + name + ".pending")
+    files = {
+        "reaction_path.dcd": "reaction_path.dcd",
+        "reaction_path.vmd": "reaction_path.vmd",
+        "stripped.parm7.gz": "stripped.parm7.gz",
+        "qm_indices.tcl": "qm_indices.tcl",
+        "nyl12_es_vmd_common.tcl": "nyl12_es_vmd_common.tcl",
+        "reaction_distances.png": "distances.png",
+        "reaction_distances.json": "distances.json",
+        "reaction_distances.csv": "distances.csv",
+        "reaction_energies.png": "energies.png",
+        "reaction_energies.json": "energies.json",
+        "reaction_energies.csv": "energies.csv",
+    }
+    for source_name, destination_name in files.items():
+        source = generation / source_name
+        pending = destination / ("." + destination_name + ".pending")
         shutil.copy2(source, pending)
-        entries[name] = hashlib.sha256(source.read_bytes()).hexdigest()
-        if hashlib.sha256(pending.read_bytes()).hexdigest() != entries[name]:
-            raise ValueError("Download copy digest mismatch: " + name)
-        pending.replace(destination / name)
+        entries[destination_name] = hashlib.sha256(source.read_bytes()).hexdigest()
+        if (
+            hashlib.sha256(pending.read_bytes()).hexdigest()
+            != entries[destination_name]
+        ):
+            raise ValueError("Download copy digest mismatch: " + destination_name)
+        pending.replace(destination / destination_name)
     pending_manifest = destination / ".MANIFEST.pending"
     pending_manifest.write_text(
         "".join(f"{digest}  {name}\n" for name, digest in entries.items())

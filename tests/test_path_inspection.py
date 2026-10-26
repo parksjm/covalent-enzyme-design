@@ -217,6 +217,8 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
     config_path = tmp_path / "config.json"
     plot_script = tmp_path / "plot.py"
     plot_script.write_text("# plot worker")
+    energy_plot_script = tmp_path / "energy_plot.py"
+    energy_plot_script.write_text("# energy plot worker")
     assets = tmp_path / "assets"
     assets.mkdir()
     for name in ("stripped.parm7.gz", "qm_indices.tcl", "nyl12_es_vmd_common.tcl"):
@@ -231,6 +233,13 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
                 "export_environment": {"OMP_NUM_THREADS": "1"},
                 "cpptraj": "cpptraj",
                 "plot_python": "python",
+                "energy_plot_script": str(energy_plot_script),
+                "energy_distance_keys": {
+                    "attack": "attack",
+                    "donor_h": "donor_h",
+                    "relay_h": "relay_h",
+                    "acceptor_h": "acceptor_h",
+                },
                 "strip_mask": ":WAT",
                 "expected_stripped_atoms": 3,
             }
@@ -258,6 +267,15 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
             "jumps": [],
         },
     )
+    monkeypatch.setattr(
+        inspection,
+        "write_energy_artifacts",
+        lambda _run, _rows, generation, *_args: (
+            (generation / "reaction_energies.json").write_text("[]"),
+            (generation / "reaction_energies.csv").write_text("window\n"),
+            (generation / "reaction_energies.png").write_bytes(b"ENERGY"),
+        ),
+    )
 
     def fake_run(command: list[str], **kwargs: object) -> None:
         cwd = Path(kwargs["cwd"]) if "cwd" in kwargs else None
@@ -274,4 +292,5 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
     assert inspection.dcd_counts(generation / "reaction_path.dcd") == (1, 3)
     assert (generation / "reaction_distances.csv").is_file()
     assert (generation / "reaction_distances.png").read_bytes() == b"PNG"
+    assert (generation / "reaction_energies.png").read_bytes() == b"ENERGY"
     assert (generation / "MANIFEST.sha256").is_file()

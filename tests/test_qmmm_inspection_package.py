@@ -249,10 +249,18 @@ def test_energy_plot_is_in_plots_and_data_are_downloadable(
     config_path, destination, _ = _fixture(tmp_path)
     config = json.loads(config_path.read_text())
     config["energy_plot"] = {"python": "explicit-python", "script": "energy_plot.py"}
+    config["energy_distance_keys"] = {
+        "attack": "attack",
+        "donor_h": "OG_H",
+        "relay_h": "Asp_H",
+        "acceptor_h": "N_HG",
+    }
     config_path.write_text(json.dumps(config))
     rows = [{"window": "stage1_1", "relative_total_kcal_mol": 0.0, "source_sha256": {}}]
     monkeypatch.setattr(
-        path_energies, "relay_endpoint_energies", lambda run, endpoints: rows
+        path_energies,
+        "relay_endpoint_energies",
+        lambda run, endpoints, distance_keys: rows,
     )
 
     def render(command: list[str], **kwargs: object) -> None:

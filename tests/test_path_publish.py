@@ -9,13 +9,19 @@ import pytest
 
 from nyl12_covalent.path_publish import publish_download
 
-ARTIFACTS = (
-    "reaction_path.dcd",
-    "reaction_path.vmd",
-    "reaction_distances.png",
-    "reaction_distances.json",
-    "reaction_distances.csv",
-)
+ARTIFACTS = {
+    "reaction_path.dcd": "reaction_path.dcd",
+    "reaction_path.vmd": "reaction_path.vmd",
+    "stripped.parm7.gz": "stripped.parm7.gz",
+    "qm_indices.tcl": "qm_indices.tcl",
+    "nyl12_es_vmd_common.tcl": "nyl12_es_vmd_common.tcl",
+    "reaction_distances.png": "distances.png",
+    "reaction_distances.json": "distances.json",
+    "reaction_distances.csv": "distances.csv",
+    "reaction_energies.png": "energies.png",
+    "reaction_energies.json": "energies.json",
+    "reaction_energies.csv": "energies.csv",
+}
 
 
 def _sha256(data: bytes) -> str:
@@ -27,13 +33,13 @@ def _package(tmp_path: Path) -> tuple[Path, Path, bytes]:
     destination = tmp_path / "download"
     generation.mkdir()
     destination.mkdir()
-    for name in ARTIFACTS:
-        (generation / name).write_bytes(f"new {name}".encode())
-        (destination / name).write_bytes(f"old {name}".encode())
+    for source_name, destination_name in ARTIFACTS.items():
+        (generation / source_name).write_bytes(f"new {source_name}".encode())
+        (destination / destination_name).write_bytes(f"old {destination_name}".encode())
     original_manifest = (
         "".join(
             f"{_sha256((destination / name).read_bytes())}  {name}\n"
-            for name in ARTIFACTS
+            for name in ARTIFACTS.values()
         )
         + f"{_sha256(b'keep me')}  unrelated.txt\n"
     ).encode()
@@ -52,9 +58,9 @@ def test_publish_download_preserves_other_entries_and_replaces_atomically(
     def observe_replace(source: Path, target: Path) -> Path:
         replacements.append(source.name)
         if source.name == ".MANIFEST.pending":
-            for name in ARTIFACTS:
-                assert (destination / name).read_bytes() == (
-                    generation / name
+            for source_name, destination_name in ARTIFACTS.items():
+                assert (destination / destination_name).read_bytes() == (
+                    generation / source_name
                 ).read_bytes()
         else:
             assert (
@@ -74,11 +80,11 @@ def test_publish_download_preserves_other_entries_and_replaces_atomically(
         line.split(maxsplit=1)[1]: line.split(maxsplit=1)[0] for line in manifest_lines
     }
     assert manifest["unrelated.txt"] == _sha256(b"keep me")
-    for name in ARTIFACTS:
-        expected = (generation / name).read_bytes()
-        assert (destination / name).read_bytes() == expected
-        assert manifest[name] == _sha256(expected)
-    assert replacements == [f".{name}.pending" for name in ARTIFACTS] + [
+    for source_name, destination_name in ARTIFACTS.items():
+        expected = (generation / source_name).read_bytes()
+        assert (destination / destination_name).read_bytes() == expected
+        assert manifest[destination_name] == _sha256(expected)
+    assert replacements == [f".{name}.pending" for name in ARTIFACTS.values()] + [
         ".MANIFEST.pending"
     ]
     assert not list(destination.glob(".*.pending"))
@@ -126,6 +132,8 @@ def test_publish_download_initializes_new_destination(tmp_path: Path) -> None:
 
     assert (generation / "previous_download_manifest.sha256").read_text() == ""
     manifest = (destination / "MANIFEST.sha256").read_text()
-    for name in ARTIFACTS:
-        assert (destination / name).read_bytes() == (generation / name).read_bytes()
-        assert name in manifest
+    for source_name, destination_name in ARTIFACTS.items():
+        assert (destination / destination_name).read_bytes() == (
+            generation / source_name
+        ).read_bytes()
+        assert destination_name in manifest

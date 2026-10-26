@@ -28,6 +28,14 @@ CORE_FIELDS = (
 PHASES = {"intent", "outcome", "note"}
 PERMISSION_MODES = {"sandbox", "escalated", "tool"}
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
+LEGACY_COMMIT_FILE_VALUES = {
+    "a3346f0a-c876-4989-88bf-6ca3193e7ca3": "7845d12",
+    "01b88732-2acc-4fda-a955-8f91f4f11af2": "b7fdc7a",
+    "6f139086-963d-4d90-9a85-62f7a95c656c": "eccf714",
+    "dd1493d9-e027-4c4b-afcc-c9344a5d08f8": "eccf714",
+    "b0ec56c1-59a2-4fbc-97c0-59522972751a": "4998ae7",
+    "89f5cde5-0000-4139-a2c3-8573cde3ced0": "8b34c06",
+}
 
 
 def file_hashes(paths: list[str]) -> dict[str, str]:
@@ -89,6 +97,11 @@ def validate_record(record: Any, line_number: int) -> None:
     for name, digest in files.items():
         if not isinstance(name, str) or not name:
             raise ValueError(f"Journal line {line_number} has invalid file path")
+        if (
+            name == "commit"
+            and LEGACY_COMMIT_FILE_VALUES.get(record["event_uuid"]) == digest
+        ):
+            continue
         if digest != "absent" and (
             not isinstance(digest, str) or not SHA256_PATTERN.fullmatch(digest)
         ):

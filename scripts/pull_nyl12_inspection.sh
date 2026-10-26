@@ -90,6 +90,8 @@ if [[ $dry_run -eq 0 ]]; then
     mkdir -p "$qmmm_destination"
 fi
 rsync "${vmd_rsync_args[@]}" \
+    --exclude='/01_coordinate_drive_to_ti1/live_inspection/' \
+    --exclude='/01_coordinate_drive_to_ti1/live_inspection_complete/' \
     --include='*/' --include='*.gz' --include='*.dcd' --include='*.vmd' \
     --include='*.tcl' --include='*.json' --include='*.md' --include='*.png' \
     --include='*.csv' --include='*.py' --include='*.mdin' --include='*.RST' \

@@ -15,6 +15,7 @@ from typing import Any
 from parmed.amber import AmberParm, Rst7
 
 from nyl12_covalent.path_distances import distance_jumps, measure_distances
+from nyl12_covalent.path_energies import write_energy_artifacts
 
 
 def digest(path: Path) -> str:
@@ -127,11 +128,14 @@ def publish_inspection(run: Path, config_path: Path, plot_script: Path) -> Path:
     """
     config = json.loads(config_path.read_text())
     data = collect_endpoints(run, config)
+    energy_plot_script = Path(config["energy_plot_script"])
     for path in (
         config_path,
         plot_script,
+        energy_plot_script,
         Path(__file__),
         Path(__file__).with_name("path_distances.py"),
+        Path(__file__).with_name("path_energies.py"),
     ):
         data["source_sha256"][str(path)] = digest(path)
     output = Path(config["output"])
@@ -140,7 +144,26 @@ def publish_inspection(run: Path, config_path: Path, plot_script: Path) -> Path:
     latest = output / "latest"
     if latest.exists():
         previous = json.loads((latest / "reaction_distances.json").read_text())
-        if previous["identity"] == identity:
+        required = {
+            "reaction_path.dcd",
+            "reaction_path.vmd",
+            "stripped.parm7.gz",
+            "qm_indices.tcl",
+            "nyl12_es_vmd_common.tcl",
+            "reaction_distances.png",
+            "reaction_distances.json",
+            "reaction_distances.csv",
+            "reaction_energies.png",
+            "reaction_energies.json",
+            "reaction_energies.csv",
+        }
+        if previous["identity"] == identity and all(
+            (latest / name).is_file() for name in required
+        ):
+            if config.get("download_directory"):
+                from nyl12_covalent.path_publish import publish_download
+
+                publish_download(latest.resolve(), Path(config["download_directory"]))
             return latest.resolve()
     generation = output / f"update_{len(list(output.glob('update_*'))) + 1:04d}"
     generation.mkdir()
@@ -197,7 +220,7 @@ foreach name {qm_indices.tcl nyl12_es_vmd_common.tcl} {
     source [file join $::nyl12_dir $name]
 }
 nyl12_load stripped.parm7 reaction_path.dcd FRAMES $::nyl12_qm_indices $::nyl12_stripped_atom_count
-puts "One endpoint per reaction window; inspect reaction_distances.json for acceptance."
+puts "One endpoint per reaction window; inspect distances.json for acceptance."
 """.replace("FRAMES", str(expected[0]))
     (generation / "reaction_path.vmd").write_text(loader)
     with (generation / "plot.log").open("w") as handle:
@@ -212,6 +235,15 @@ puts "One endpoint per reaction window; inspect reaction_distances.json for acce
             stderr=subprocess.STDOUT,
             check=True,
         )
+    write_energy_artifacts(
+        run,
+        data["rows"],
+        generation,
+        config["plot_python"],
+        energy_plot_script,
+        env,
+        config["energy_distance_keys"],
+    )
     (generation / "reaction_distances.json").write_text(
         json.dumps(data, indent=2) + "\n"
     )

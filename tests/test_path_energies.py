@@ -7,7 +7,15 @@ from pathlib import Path
 
 import pytest
 
+from nyl12_covalent import path_energies
 from nyl12_covalent.path_energies import relay_endpoint_energies
+
+DISTANCE_KEYS = {
+    "attack": "attack",
+    "donor_h": "OG_H",
+    "relay_h": "Asp_H",
+    "acceptor_h": "N_HG",
+}
 
 
 def _window(run: Path, label: str, stage: int, total: float) -> dict:
@@ -43,7 +51,7 @@ def test_native_total_bias_and_reference_are_separate(tmp_path: Path) -> None:
         _window(tmp_path, "stage1_00", 1, -100),
         _window(tmp_path, "stage2_00", 2, -95),
     ]
-    rows = relay_endpoint_energies(tmp_path, endpoints)
+    rows = relay_endpoint_energies(tmp_path, endpoints, DISTANCE_KEYS)
     assert rows[0]["total_kcal_mol"] == -100
     assert rows[0]["driving_bias_kcal_mol"] == pytest.approx(2)
     assert rows[1]["driving_bias_kcal_mol"] == pytest.approx(1)
@@ -79,9 +87,50 @@ def test_invalid_or_changed_energy_model_fails(tmp_path: Path, invalid: str) -> 
             text = text.replace("r2=1.5", "r2=1.4")
         p.write_text(text)
     with pytest.raises(ValueError):
-        relay_endpoint_energies(tmp_path, [endpoint])
+        relay_endpoint_energies(tmp_path, [endpoint], DISTANCE_KEYS)
 
 
 def test_no_endpoints_fails(tmp_path: Path) -> None:
     with pytest.raises(ValueError):
-        relay_endpoint_energies(tmp_path, [])
+        relay_endpoint_energies(tmp_path, [], DISTANCE_KEYS)
+
+
+def test_write_energy_artifacts_uses_explicit_plotter(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    endpoint = _window(tmp_path, "stage1_00", 1, -100)
+    output = tmp_path / "output"
+    output.mkdir()
+    commands: list[list[str]] = []
+
+    def fake_run(command: list[str], **kwargs: object) -> None:
+        commands.append(command)
+        assert kwargs == {"env": {"MPLBACKEND": "Agg"}, "check": True}
+        Path(command[-1]).write_bytes(b"PNG")
+
+    monkeypatch.setattr(path_energies.subprocess, "run", fake_run)
+    path_energies.write_energy_artifacts(
+        tmp_path,
+        [endpoint],
+        output,
+        "plot-python",
+        Path("plot.py"),
+        {"MPLBACKEND": "Agg"},
+        DISTANCE_KEYS,
+    )
+    assert commands == [
+        [
+            "plot-python",
+            "plot.py",
+            str(output / "reaction_energies.json"),
+            str(output / "reaction_energies.png"),
+        ]
+    ]
+    assert (output / "reaction_energies.csv").read_text().startswith("window,")
+    assert (output / "reaction_energies.png").read_bytes() == b"PNG"
+
+
+def test_incomplete_distance_mapping_fails(tmp_path: Path) -> None:
+    endpoint = _window(tmp_path, "stage1_00", 1, -100)
+    with pytest.raises(ValueError, match="mapping"):
+        relay_endpoint_energies(tmp_path, [endpoint], {"attack": "attack"})

@@ -144,6 +144,12 @@
     "python": "/data/jpc/code/miniforge3/bin/python",
     "script": "/data/jpc/covalent-enzyme-design/scripts/plot_reaction_energies.py"
   },
+  "energy_distance_keys": {
+    "attack": "attack",
+    "donor_h": "OG_H",
+    "relay_h": "Asp_H",
+    "acceptor_h": "N_HG"
+  },
   "independent_packages": [
     "phase1_unrestrained"
   ],
