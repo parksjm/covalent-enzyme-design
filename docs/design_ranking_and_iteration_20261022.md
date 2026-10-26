@@ -34,6 +34,25 @@ arm. Single-sequence AF3 performance for these designs remains untested here.
 
 ## Gates followed by a diverse Pareto shortlist
 
+### Reference states required for the first design round — clarified 2026-10-25
+
+LigandMPNN can technically condition on a supplied ES or covalent geometry;
+it does not require a complete computed reaction cycle. For the intended
+TS-guided first round, prepare a consistent WT reference set: (1) noncovalent
+ES with its declared protonation; (2) TI1 with tetrahedral connectivity,
+oxyanion and the intended terminal-NH3+ state; and (3) the connecting TS(s).
+If a protonated-Asp/attack intermediate is a separate minimum, retain it and
+the separate saddles rather than force the route into a single TS1 label.
+Bias-stabilized endpoints are templates, not certified minima. Saddle acceptance
+requires the intended unstable mode and downhill connection to adjacent states.
+
+Use the existing apo/WT assembly as a structural control. An acyl-enzyme and a
+product-bound/deacylation-water compatibility model should be included before
+final candidate selection; full free-energy pathways for all later steps are
+not prerequisites for exploratory LigandMPNN sampling. Preserve symmetry,
+residue/atom maps, maturation residues and substrate register across states.
+Distinguish early template-based sampling from validated TS-guided design.
+
 Do not compress the following into an arbitrary weighted activity score.
 An attractive secondary score cannot rescue a failed chemistry gate. Missing
 calculations remain incomplete; scientific failures remain in the denominator.

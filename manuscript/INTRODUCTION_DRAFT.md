@@ -67,3 +67,18 @@ conformational diversity and product-specific cleavage registers. We propose
 separating economical catalytic-state screening from detailed reference and
 shortlist reaction-path calculations, while retaining the maturation and
 oligomeric architecture of the existing enzyme.
+
+Efficient QM/MM models make it practical to explore coupled proton transfer and
+amide-bond chemistry within a solvated polymer-binding pocket, but their
+energetic accuracy requires reaction-specific assessment. DFTB3/3ob-3-1 provides
+a useful starting Hamiltonian: biochemical proton-transfer benchmarks show
+chemical-group-dependent errors [R35], and enzyme-model benchmarks identify
+non-negligible errors in both barriers and reaction energies [R36]. Successful
+DFTB3 sampling with higher-level energy corrections in PETase illustrates its
+potential for polymer-hydrolase studies, although ester chemistry does not
+validate nylon amide hydrolysis [R37]. Accordingly, we propose comparing DFTB3
+with omegaB97X-D for representative proton-transfer models and selected
+embedded pathway geometries. Numerical convergence, intermediate stability and
+biochemical plausibility will be assessed separately; an asynchronous or
+energetically unfavorable driven path is not by itself evidence of optimizer
+failure or of the native catalytic mechanism.

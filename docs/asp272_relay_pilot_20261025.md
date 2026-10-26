@@ -323,3 +323,136 @@ DFTB proton affinities may also require matched higher-level spot checks before
 relying on a barrier; none are launched by this diagnostic.
 The analysis is scripted in audit_relay_energy_components.py; numeric results
 and native source hashes are in data/relay_energy_component_audit.json.
+
+
+### Asynchrony and DFTB3 proton-transfer validation — 2026-10-25
+
+The user's correction is accepted: asynchronous proton transfer and attack are
+not intrinsically problematic. Our two harmonic targets allow different actual
+coordinates to advance at different rates; their linear schedule still samples
+one imposed route, rather than finding the lowest-energy route automatically.
+OG1–C has shortened from about 3.14 to 2.05 Å at window13, so approach has begun,
+but no tetrahedral minimum has been demonstrated. Deprotonation increases
+nucleophilicity without making attack necessarily downhill or barrierless.
+A high intermediate energy could reflect relative proton affinities, attack
+geometry, insufficient oxyanion stabilization, restrained environmental response,
+or an unsuitable route. The scan alone does not identify the biochemical cause.
+
+Primary literature reviewed:
+- Arantes and Rezac (2025), DOI 10.1021/acs.jctc.5c00690, uses our exact
+  DFTB3/3ob-3-1 set. Mean unsigned relative-energy errors are 3.63 kcal/mol
+  overall, 1.37 for carboxylic-acid/carboxylate and 3.44 for amine profiles.
+  These isolated proton-transfer benchmarks do not directly test coupled
+  aliphatic-alcohol deprotonation and amide attack in Nyl12.
+- Kromann et al. (2016), DOI 10.7717/peerj.1994, reports DFTB3 barrier and
+  reaction-energy mean absolute deviations of 5.8 and 6.3 kcal/mol across five
+  enzyme model reactions against its DFT reference. Individual errors can be
+  larger and are chemistry dependent; this is not a universal error bound.
+- Berselli et al. (2025), DOI 10.1021/acscatal.5c01263, obtains a PET4 acylation
+  barrier around 21 kcal/mol with DFTB3, versus about 24 after B3LYP/RI-MP2
+  single-point free-energy reweighting. Ester hydrolysis is useful precedent
+  for reaction-specific validation, not validation of nylon amide hydrolysis.
+
+These results justify checking DFTB3, but do not establish that our roughly
+50 kcal/mol rise is a method artifact. Gas-phase proton affinities, potential
+energy profiles and enzymatic pKas are different observables; pKas require
+free-energy and reference-state treatment.
+
+Recommended next diagnostic, NOT executed: matched higher-level single points
+on ES, proton-shared, Asp-protonated and advanced-attack geometries, using the
+same QM chemistry and protein electrostatic embedding. Compare relative method
+corrections, not absolute energies between Hamiltonians. Use the agreed
+omegaB97X-D without extra dispersion and include a diffuse-basis sensitivity
+check for the anionic region. A small unconstrained gas cluster would not be an
+equivalent test. Continue the already bounded phase1 run, but defer further
+path variants until this diagnostic and endpoint/orientation review are planned.
+
+### Phase1 completed; numerical completion versus TI1 — 2026-10-25
+
+All 17 stage1 windows converged with the unchanged native optimizer tolerance.
+Window16: OG1–C 1.795256 Å; OG1–HG1 1.793376 Å; Asp272 OD1–HG1
+1.021580 Å; terminal N–HG1 2.731658 Å; carbonyl C–O 1.302931 Å;
+substrate C–N 1.427586 Å. This passes the controller's stage1 geometric gate
+but is not the intended NH3+ TI1 or a demonstrated unbiased minimum.
+The per-window `chemical_state_validated:false` is intentional: convergence
+and the stage gate do not certify a stationary intermediate. Total relative
+energy is +66.1096 kcal/mol, including 6.0946 kcal/mol of driving bias;
+bias-removed rise is +60.0173 kcal/mol, with MM position restraints retained.
+These endpoint energies are not a measured activation barrier.
+
+The user emphasizes that a numerically converged driven path remains useful
+even if it is biochemically incorrect. Agreed: method accuracy must not be used
+to excuse numerical failure or arbitrary tracking cutoffs. A sequence of
+converged biased optimizations is attainable without asserting that the
+requested unbiased intermediate exists under every Hamiltonian. Smoothness,
+window convergence, endpoint identity, stationary-point character and native
+mechanistic relevance remain separate acceptance records.
+
+Next path work: review donor/amine orientation at window16; continue the
+Asp–HG1 to terminal-N transfer while retaining the forming OG1–C contact and
+allowing physical local reorientation. Add a declared orientation coordinate
+only if needed, preserving the unmodified reference. Complete the forward
+construction, reduce/remove driving bias to test TI1 stability, and reverse
+the route from an accepted endpoint. Do not wait for full method benchmarking
+to finish numerical path construction. Use continuous distance/energy plots
+and VMD updates. Refine candidate saddle regions with DL-FIND P-RFO, then
+check the unstable mode and downhill connections; a driven maximum is a seed,
+not a TS. Multiple genuine minima imply multiple connecting TSs.
+
+### Tight-binding alternatives and focused benchmark — planned, not executed
+
+R35 isolated proton-transfer mean unsigned errors (kcal/mol):
+
+| Method | All reactions | Carboxylate | Amine |
+|---|---:|---:|---:|
+| DFTB3/3ob-3-1 | 3.63 | 1.37 | 3.44 |
+| GFN2-xTB | 3.23 | 2.39 | 5.31 |
+
+GFN2-xTB is therefore a useful comparator, not a guaranteed upgrade for our
+alcohol/carboxylate/amine chemistry. R39 also finds it competitive with DFTB3
+for a ribozyme example, with both differing quantitatively from PBE0.
+
+R38 supporting Table3 reports full-GMTKN55 WTMAD-2 values of 24.612
+(DFTB3-D3(BJ)/3ob-3-1), 25.031 (spin-polarized GFN2-xTB), 9.254 (g-xTB),
+7.366 (r2SCAN-3c), 8.032 (B3LYP-D4/def2-TZVP), and 3.246
+(omegaB97M-V/aTZ), in kcal/mol. These weighted broad-set statistics are not
+mean enzyme-barrier errors, not all necessarily identical supported subsets,
+and not results for our exact DFTB setup or Gaussian omegaB97X-D. They refer
+to the 2025 preprint model, not the subsequently changed g-xTB development
+binary. No reaction-specific g-xTB advantage is established here.
+
+Compatibility observed 2026-10-25:
+- sander has a published direct GFN2-xTB library interface with electrostatic
+  embedding/QM-MM PME [R39]. Local AmberTools26 `xtb_module.F90` implements
+  GFN1/GFN2, but retained sander compile flags lack `-DXTB`; its disabled
+  branch explicitly raises `XTB is not enabled`. Do not claim the current
+  executable is ready for xTB or rebuild it silently.
+- Current Grimme g-xTB README documents analytic gradients, but explicitly
+  lists point-charge embedding as unsupported. It is not a drop-in sander
+  Hamiltonian. ASH can drive g-xTB cluster calculations and also documents
+  the lack of electrostatically embedded g-xTB QM/MM. Switching drivers does
+  not repair that backend limitation.
+- If a new driver becomes necessary, ASH/OpenMM with an appropriate QM backend,
+  or ChemShell with ORCA and DL-FIND, merits evaluation. ORCA itself supports
+  GFN2-xTB and QM/MM. Preserve boundary, force-field, electrostatic and periodic
+  conventions explicitly; these are alternatives, not installed/validated
+  replacements. Retaining sander is the least disruptive immediate choice.
+- No MLP fitting is planned. Pretrained corrections would still need charge,
+  element, reactive-chemistry and embedding validation; availability alone is
+  not a reason to substitute one.
+
+Small-model benchmark specification: use 2-propanol/acetate (Thr-to-Asp,
+charge -1), acetic acid/methylamine (Asp-to-terminal-N, charge 0), and
+2-propanol/methylamine (direct alternative, charge 0), all closed-shell.
+Construct matched constrained proton-transfer profiles at declared donor-
+acceptor separations. Preserve unstable ion-pair branches rather than allowing
+unconstrained optimization to erase them. Compare DFTB3 with omegaB97X-D on
+identical coordinates; separate geometry sensitivity from energy differences.
+Use the agreed def2-SVP for economical preparation and larger/diffuse-basis
+single-point checks for anions. Neither this DFT reference nor a gas-phase
+cluster alone is an experimental pKa standard. Include a small amide-attack
+test and a few matched embedded pathway points before transferring conclusions
+to the enzyme. GFN2 is optional after explicit software setup approval;
+g-xTB can first be evaluated only for clusters if installation is approved.
+Report signed profile errors, reaction energies, barriers when present,
+geometry/proton-state retention, convergence and model/version hashes.

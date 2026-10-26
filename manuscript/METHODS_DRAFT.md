@@ -1,6 +1,6 @@
 # Methods — working draft
 
-Status: 2026-10-23. Sections explicitly distinguish completed preparation from
+Status: 2026-10-25. Sections explicitly distinguish completed preparation from
 planned methods. Unresolved numerical settings must be filled from accepted
 run manifests, not inferred from a generic protocol. References are in
 [REFERENCES.md](REFERENCES.md); local evidence is in [SOURCE_LEDGER.md](SOURCE_LEDGER.md).
@@ -29,8 +29,10 @@ recorded independently of the polymer family label.
 The intended first tetrahedral intermediate (TI1) retains the substrate C–N
 bond and contains a new Thr OG1–scissile-carbon bond, an oxyanion, and a
 protonated catalytic beta-chain N terminus. Its precursor ES has a neutral
-beta-chain NH2 group and Thr OG1H. A neutral relay water is included in the
-working mechanism. These state definitions are audited hypotheses; predictor
+beta-chain NH2 group and Thr OG1H. A neutral relay water was included in the
+earlier working mechanism. The current coordinate-driving pilot instead tests
+an Asp272-mediated relay without a designated QM relay water; bulk MM solvent
+is retained. These state definitions are audited hypotheses; predictor
 coordinates alone do not establish proton transfers or intermediate stability.
 
 ## Structural preparation and confidence audit — executed

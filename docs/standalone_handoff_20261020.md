@@ -1,4 +1,27 @@
-## CURRENT — phase1 resumed with tracking warnings only
+## CURRENT — phase1 complete; TI1 construction and benchmark plan
+
+All17 stage1 windows converged; live status says stopped/phase1_complete.
+Window16 has OG1–C1.795 Å, Asp272–HG1 1.022 Å, OG1–HG1 1.793 Å,
+N–HG1 2.732 Å. It passes the biased stage1 gate, not an unbiased TI1 minimum;
+terminal N is still NH2. Relative energy +66.11 kcal/mol including driving
+bias (+60.02 after bias subtraction). Neither is a validated barrier.
+Phase2 remains held for donor/amine orientation review; no new job was launched
+by the literature/documentation update. Next: continue transfer to terminal N,
+test bias removal/TI1 retention, reverse path, and refine saddle seeds with
+DL-FIND and mode/endpoint checks. Numerical convergence and biological accuracy
+are separate; high energies alone do not justify abandoning path construction.
+
+Added manuscript introduction paragraph and R35–R40 references. Small matched
+DFTB3/omegaB97X-D proton-transfer benchmark is planned, not executed; see
+docs/asp272_relay_pilot_20261025.md. GFN2-xTB has a native sander interface,
+but local retained build flags lack XTB support. Current g-xTB has analytic
+gradients but no point-charge embedding, so cannot replace our embedded QM/MM
+backend unchanged. No new dependencies or MLP training authorized/introduced.
+Design references needed: ES, intended TI1 and connecting TS(s); apo control,
+then acyl-enzyme/product compatibility before final candidate selection.
+Latest plots/movie remain qmmm/pa6_asp272/ (17 endpoint frames).
+
+## HISTORY — phase1 resumed with tracking warnings only
 
 User challenged repeated arbitrary tracking cutoffs. Same run directory,
 new frozen controller run_relay_warning_only.py, tmux

@@ -183,7 +183,43 @@ https://www.sciencedirect.com/science/article/pii/S0022283601950430 .
   is not evidence for a DFTB Hamiltonian until its actual methods are checked.
 - **R35.** *Benchmark of Approximate Quantum Chemical and Machine Learning
   Potentials for Biochemical Proton Transfer Reactions*. JCTC (2025).
-  https://doi.org/10.1021/acs.jctc.5c00690 . Primary indexed abstract verified;
-  full PMC text retrieval returned CAPTCHA. Author-list formatting pending.
-  Chemical-group-dependent proton-transfer benchmarking does not by itself
-  validate a polyamide-cleavage free-energy surface.
+  Arantes, G. M.; Rezac, J. JCTC 21(14), 7149–7159.
+  https://doi.org/10.1021/acs.jctc.5c00690 . Full primary text read:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC12288007/ . Uses DFTB3/3ob-3-1;
+  chemistry-dependent errors do not certify coupled amide attack in Nyl12.
+- **R36.** Kromann et al. *Towards a barrier height benchmark set for
+  biologically relevant systems*. PeerJ (2016), 4, e1994.
+  https://doi.org/10.7717/peerj.1994 . DFTB3 enzyme-model barrier and reaction
+  energy benchmarking against DFT; not a direct Nyl12 benchmark.
+- **R37.** Berselli, A.; Menziani, M. C.; Piccini, G. M.; Muniz-Miranda, F.
+  *Molecular-Level Mechanistic Insights into PETase-Catalyzed Plastics Hydrolysis
+  from Accurate QM/MM Free Energy Calculations*. ACS Catalysis (2025), 15,
+  10702–10721. https://doi.org/10.1021/acscatal.5c01263 . Primary publisher
+  indexed methods/results checked; DFTB3 sampling with higher-level single-point
+  reweighting. Ester chemistry, not amide hydrolysis.
+
+- **R38.** Froitzheim, T.; Müller, M.; Hansen, A.; Grimme, S.
+  *g-xTB: A General-Purpose Extended Tight-Binding Electronic Structure Method
+  For the Elements H to Lr (Z=1–103)*. ChemRxiv (2025), version 1, June 24.
+  https://doi.org/10.26434/chemrxiv-2025-bjxvt . Preprint, not treated as
+  peer-reviewed validation. Primary indexed supporting Table 3 compares full
+  GMTKN55 WTMAD-2; current development software differs from that model.
+- **R39.** Giese, T. J.; Zeng, J.; Lerew, L.; McCarthy, E.; Tao, Y.; Ekesan, Ş.;
+  York, D. M. *Software Infrastructure for Next-Generation QM/MM–ΔMLP Force
+  Fields*. J Phys Chem B (2024), 128, 6257–6271.
+  https://doi.org/10.1021/acs.jpcb.4c01466 . Primary author-hosted full text
+  reviewed. Direct sander/GFN2-xTB interface with electrostatic embedding and
+  QM/MM PME; the uncorrected Hamiltonian does not require MLP training.
+- **R40.** Bannwarth, C.; Ehlert, S.; Grimme, S. *GFN2-xTB—An Accurate and
+  Broadly Parametrized Self-Consistent Tight-Binding Quantum Chemical Method
+  with Multipole Electrostatics and Density-Dependent Dispersion Contributions*.
+  JCTC (2019), 15, 1652–1671. https://doi.org/10.1021/acs.jctc.8b01176 .
+
+Implementation documentation checked 2026-10-25: g-xTB development README,
+https://github.com/grimme-lab/g-xtb ; ASH xTB interface,
+https://ash.readthedocs.io/en/latest/xTB-interface.html ; ORCA semiempirical
+methods, https://orca-manual.mpi-muelheim.mpg.de/contents/modelchemistries/semiempirical.html .
+The current g-xTB README explicitly excludes point-charge embedding; ASH
+likewise states that electrostatically embedded g-xTB QM/MM is unavailable.
+Analytic gradients are available in the current development binary, unlike
+the older implementation. Do not conflate the two releases.

@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "documents": [
+    "manuscript/INTRODUCTION_DRAFT.md",
+    "manuscript/METHODS_DRAFT.md",
+    "manuscript/REFERENCES.md",
+    "manuscript/recent_design_and_relay_references.bib",
+    "docs/asp272_relay_pilot_20261025.md",
+    "docs/design_ranking_and_iteration_20261022.md",
+    "docs/standalone_handoff_20261020.md"
+  ],
+  "retained_backup": "/data/jpc/covalent-enzyme-design/output_laptop_inspection_before_dftb_review_20261025",
+  "files": 352,
+  "payload_bytes": 24260869
+}
