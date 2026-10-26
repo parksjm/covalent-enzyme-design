@@ -369,6 +369,47 @@ path variants until this diagnostic and endpoint/orientation review are planned.
 
 ### Phase1 completed; numerical completion versus TI1 — 2026-10-25
 
+#### User-requested unrestrained endpoint diagnostic — launched
+
+The original stage1_16 endpoint is retained without amine rotation. A separate
+child calculation `phase1_unrestrained/` starts from a byte-identical copied
+restart and frozen topology. Both harmonic driving terms and all MM positional
+restraints are removed (`nmropt=0`, `ntr=0`, no DISANG or reference argument).
+All 103251 atoms are active, with no SHAKE (`ntc=1`, `ntf=1`). The periodic
+cell remains fixed; QM98/link8/charge−2, DFTB3, embedding and the inherited
+ff19SB/GAFF1/AM1-BCC/TIP3P Hamiltonian are unchanged. This is a geometry
+optimization, not MD or an amine-orientation intervention.
+
+Runner: `provenance/phase1_unrestrained_20261025/run_optimization.py`; the
+executed frozen copy and exact command/environment/input hashes accompany
+the child run. Session: `nyl12_phase1_unrestrained_20261025`; job metadata:
+`output_nyl12_pa6_dftb_pilot_20261024/jobs/phase1_unrestrained_20261025/`.
+Native LBFGS Cartesian criteria remain tol1e−4 Hartree/Bohr, tole1e−7;
+maxcycle is 2000. `ntwx=5` saves force-evaluation snapshots, including trial
+coordinates, rather than physical MD time. Engine convergence and endpoint
+chemistry are recorded separately. Seven focused input-transformation checks
+passed in tmux; the launch log already confirms RESTRAINT=0.
+
+Inspect this result before deciding whether to sample a different terminal
+amine/Asp-OH orientation. No manual rotation or further driving was launched
+with this diagnostic. The separate stripped trajectory will be published below
+`qmmm/pa6_asp272/phase1_unrestrained/`, preserving the original 17-window path.
+
+An intermediate restart inspected at 2026-10-26 00:42:50 UTC has OG1–C
+3.1500 Å, OG1–HG1 0.9921 Å, Asp272–HG1 1.8245 Å, N–HG1 2.5896 Å,
+substrate C–O 1.2650 Å and C–N 1.3561 Å. Thus this checkpoint has returned
+toward ES, with HG1 back on OG1. This is not the final optimized endpoint or
+a general conclusion about native enzyme chemistry. Scripted measurements and
+restart SHA-256 are in the child run's `checkpoint_geometry.json`.
+
+The VMD renderer uses pair-specific DynamicBonds with distance cutoffs 1.25 Å
+for the candidate proton bonds and 1.9 Å for OG1–C54. These are display cutoffs,
+not computed bond orders. Original candidate topology edges are removed only
+inside the VMD display molecule to prevent permanent ghost sticks; source
+topologies are unchanged. HG1 is shown as a small VDW sphere, with persistent
+O49–Phe113 backbone N and O49–Asn186 ND2 distance labels. Non-QM substrate
+carbons remain orange and the protein NewCartoon remains available but off.
+
 All 17 stage1 windows converged with the unchanged native optimizer tolerance.
 Window16: OG1–C 1.795256 Å; OG1–HG1 1.793376 Å; Asp272 OD1–HG1
 1.021580 Å; terminal N–HG1 2.731658 Å; carbonyl C–O 1.302931 Å;

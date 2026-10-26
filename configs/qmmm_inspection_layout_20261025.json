@@ -46,8 +46,68 @@
     "terminal_N": {
       "index": 13904,
       "name": "N"
+    },
+    "substrate_O49": {
+      "index": 19903,
+      "name": "O49"
+    },
+    "Phe113_N": {
+      "index": 1637,
+      "name": "N"
+    },
+    "Asn186_ND2": {
+      "index": 2731,
+      "name": "ND2"
     }
   },
+  "stage_dynamic_bonds": {
+    "1": [
+      [
+        "OG1",
+        "HG1"
+      ],
+      [
+        "HG1",
+        "Asp272_OD1"
+      ],
+      [
+        "OG1",
+        "substrate_C"
+      ]
+    ],
+    "2": [
+      [
+        "Asp272_OD1",
+        "HG1"
+      ],
+      [
+        "HG1",
+        "terminal_N"
+      ],
+      [
+        "OG1",
+        "substrate_C"
+      ]
+    ]
+  },
+  "dynamic_bond_cutoffs": {
+    "OG1-HG1": 1.25,
+    "OG1-substrate_C": 1.9,
+    "HG1-Asp272_OD1": 1.25,
+    "Asp272_OD1-HG1": 1.25,
+    "HG1-terminal_N": 1.25
+  },
+  "persistent_measurements": {
+    "O49_to_Phe113_N": [
+      "substrate_O49",
+      "Phe113_N"
+    ],
+    "O49_to_Asn186_ND2": [
+      "substrate_O49",
+      "Asn186_ND2"
+    ]
+  },
+  "proton_atom": "HG1",
   "stage_measurements": {
     "1": [
       [
@@ -81,5 +141,8 @@
   "energy_plot": {
     "python": "/data/jpc/code/miniforge3/bin/python",
     "script": "/data/jpc/covalent-enzyme-design/scripts/plot_reaction_energies.py"
-  }
+  },
+  "independent_packages": [
+    "phase1_unrestrained"
+  ]
 }

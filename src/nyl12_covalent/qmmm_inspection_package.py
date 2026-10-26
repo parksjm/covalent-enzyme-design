@@ -32,6 +32,9 @@ def build_qmmm_package(config_path: Path) -> Path:
         Human-readable package directory with a complete checksum manifest.
     """
     config = json.loads(config_path.read_text())
+    independent = set(config.get("independent_packages", []))
+    if any(Path(name).parts != (name,) or name in {".", ".."} for name in independent):
+        raise ValueError("Independent packages must be named child directories")
     run = Path(config["run"])
     latest = (run / "live_inspection/latest").resolve(strict=True)
     data = json.loads((latest / "reaction_distances.json").read_text())
@@ -170,6 +173,7 @@ mechanism or a measured barrier. No raw QM/MM calculation was relocated.
             path.is_file()
             and path.name != "MANIFEST.sha256"
             and not path.name.endswith(".pending")
+            and path.relative_to(destination).parts[0] not in independent
         ):
             lines.append(
                 hashlib.sha256(path.read_bytes()).hexdigest()

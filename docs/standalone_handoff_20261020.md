@@ -1,4 +1,23 @@
-## CURRENT — phase1 complete; TI1 construction and benchmark plan
+## CURRENT — fully unrestrained phase1 endpoint optimization running
+
+User requests observing unbiased rearrangement before considering amine rotation.
+tmux: `nyl12_phase1_unrestrained_20261025`; scientific child directory:
+`output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/`.
+Original stage1_16 unchanged; copied start/frozen topology, no ntr/nmropt/DISANG,
+all103251 atoms active, no SHAKE, same DFTB3/QM98/link8/charge−2/MM model and
+fixed cell. Native LBFGS tolerances unchanged, maxcycle2000, ntwx5 snapshots.
+No amine rotation or phase2 driving launched. Read process/acceptance records
+for live outcome; launch log confirms zero restraint energy.
+An intermediate restart (00:42:50 UTC Oct26) returned toward ES: OG1–C3.150 Å,
+OG1–HG1 0.992 Å, Asp272–HG1 1.824 Å. Not yet a converged final endpoint;
+script/source hash in `phase1_unrestrained/checkpoint_geometry.json`.
+Viewer requests: dynamic reactive bonds, small HG1 sphere, O49–Phe113 N and
+O49–Asn186 ND2 labels. Routine viewer/export implementation delegated to
+GPT-6 Luna; native inspection needs laptop VMD for visual verification.
+Stripped optimization viewer/trajectory destination:
+`qmmm/pa6_asp272/phase1_unrestrained/vmd/` (publisher status in job records).
+
+## HISTORY — phase1 complete; TI1 construction and benchmark plan
 
 All17 stage1 windows converged; live status says stopped/phase1_complete.
 Window16 has OG1–C1.795 Å, Asp272–HG1 1.022 Å, OG1–HG1 1.793 Å,

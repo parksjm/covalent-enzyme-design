@@ -128,6 +128,35 @@ def test_build_qmmm_package_fails_for_missing_live_inspection(
         build_qmmm_package(config_path)
 
 
+def test_live_child_has_its_own_checksum_boundary(tmp_path: Path) -> None:
+    """A separately published relaxation must not invalidate the parent manifest."""
+    config_path, destination, _latest = _fixture(tmp_path)
+    config = json.loads(config_path.read_text())
+    config["independent_packages"] = ["phase1_unrestrained"]
+    config_path.write_text(json.dumps(config))
+    child = destination / "phase1_unrestrained"
+    child.mkdir(parents=True)
+    movie = child / "optimization.dcd"
+    movie.write_bytes(b"first live snapshot")
+    build_qmmm_package(config_path)
+    manifest = (destination / "MANIFEST.sha256").read_text()
+    assert "phase1_unrestrained/" not in manifest
+    movie.write_bytes(b"new live snapshot")
+    for line in manifest.splitlines():
+        expected, relative = line.split("  ", 1)
+        assert _hash((destination / relative).read_bytes()) == expected
+
+
+def test_independent_package_cannot_escape_root(tmp_path: Path) -> None:
+    """Reject ambiguous or escaping checksum boundaries."""
+    config_path, _destination, _latest = _fixture(tmp_path)
+    config = json.loads(config_path.read_text())
+    config["independent_packages"] = ["../other"]
+    config_path.write_text(json.dumps(config))
+    with pytest.raises(ValueError, match="child directories"):
+        build_qmmm_package(config_path)
+
+
 def test_build_qmmm_package_rejects_unmapped_stage(tmp_path: Path) -> None:
     config_path, _destination, _latest = _fixture(tmp_path, stage="stage2")
 

@@ -40,6 +40,46 @@ def test_measurement_loader_maps_frames_and_checks_atoms(tmp_path: Path) -> None
     assert "{2 HG1 5 N}" in text
 
 
+def test_optional_dynamic_pairs_and_persistent_labels_are_exported(
+    tmp_path: Path,
+) -> None:
+    config = _config()
+    config["measurement_atoms"].update(
+        {
+            "O49": {"index": 10, "name": "O49"},
+            "PheN": {"index": 11, "name": "N"},
+            "AsnND2": {"index": 12, "name": "ND2"},
+        }
+    )
+    config["stage_dynamic_bonds"] = {
+        "1": [["O", "H"], ["O", "C"]],
+        "2": [["D", "H"], ["H", "N"]],
+    }
+    config["dynamic_bond_cutoffs"] = {
+        "O-H": 1.25,
+        "O-C": 1.9,
+        "D-H": 1.25,
+        "H-N": 1.25,
+    }
+    config["persistent_measurements"] = {
+        "O49_to_Phe113_N": ["O49", "PheN"],
+        "O49_to_Asn186_ND2": ["O49", "AsnND2"],
+    }
+    config["proton_atom"] = "H"
+    viewer = tmp_path / "view.vmd"
+    viewer.write_text("# existing viewer\n")
+    append_reactive_labels(viewer, [{"stage": 1}, {"stage": 2}], config)
+    text = viewer.read_text()
+    assert "{1 OG1 2 HG1 1.25}" in text
+    assert "{1 OG1 4 C54 1.9}" in text
+    assert "{O49_to_Phe113_N 10 O49 11 N}" in text
+    assert "{O49_to_Asn186_ND2 10 O49 12 ND2}" in text
+    assert text.rstrip().endswith("2 HG1")
+    tcl = (ROOT / "scripts/nyl12_reactive_distances.tcl").read_text()
+    assert "mol representation DynamicBonds $cutoff 0.12 12" in tcl
+    assert "$first getbonds" in tcl and "$first setbonds" in tcl
+
+
 @pytest.mark.parametrize("bad", ["stage", "empty", "same", "index", "name"])
 def test_invalid_labels_fail_before_viewer_changes(tmp_path: Path, bad: str) -> None:
     config = _config()
