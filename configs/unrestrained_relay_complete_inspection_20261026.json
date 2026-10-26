@@ -43,6 +43,37 @@
     "relay_h": "Asp272_OD1_HG1",
     "acceptor_h": "Thr_N_HG1"
   },
+  "reactive_vmd_helper": "/data/jpc/covalent-enzyme-design/scripts/nyl12_reactive_distances.tcl",
+  "measurement_atoms": {
+    "OG1": {"index": 13915, "name": "OG1"},
+    "HG1": {"index": 13916, "name": "HG1"},
+    "Asp272_OD1": {"index": 14558, "name": "OD1"},
+    "substrate_C": {"index": 19902, "name": "C54"},
+    "terminal_N": {"index": 13904, "name": "N"},
+    "substrate_O49": {"index": 19903, "name": "O49"},
+    "Phe113_N": {"index": 1637, "name": "N"},
+    "Asn186_ND2": {"index": 2731, "name": "ND2"}
+  },
+  "stage_measurements": {
+    "1": [["OG1", "HG1"], ["HG1", "Asp272_OD1"], ["OG1", "substrate_C"]],
+    "2": [["Asp272_OD1", "HG1"], ["HG1", "terminal_N"], ["OG1", "substrate_C"]]
+  },
+  "stage_dynamic_bonds": {
+    "1": [["OG1", "HG1"], ["HG1", "Asp272_OD1"], ["OG1", "substrate_C"]],
+    "2": [["Asp272_OD1", "HG1"], ["HG1", "terminal_N"], ["OG1", "substrate_C"]]
+  },
+  "dynamic_bond_cutoffs": {
+    "OG1-HG1": 1.25,
+    "HG1-Asp272_OD1": 1.25,
+    "Asp272_OD1-HG1": 1.25,
+    "HG1-terminal_N": 1.25,
+    "OG1-substrate_C": 1.9
+  },
+  "persistent_measurements": {
+    "O49_to_Phe113_N": ["substrate_O49", "Phe113_N"],
+    "O49_to_Asn186_ND2": ["substrate_O49", "Asn186_ND2"]
+  },
+  "proton_atom": "HG1",
   "export_environment": {
     "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
     "MPLBACKEND": "Agg"

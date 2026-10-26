@@ -20,8 +20,8 @@ Failed zero-step/interrupted artifacts were moved reversibly to
 Current calculation tmux session: `nyl12_coordinate_drive_resume3_20261026`.
 The path uses
 the accepted E-S endpoint, no positional restraints, and only the two declared
-reaction-coordinate biases. Windows `stage1_00` through `stage1_15` converged
-and passed acceptance; `stage1_16` is active. At `stage1_15`, OG1-C is 2.10955
+reaction-coordinate biases. Windows `stage1_00` through `stage1_16` converged
+and passed acceptance; `stage1_17` is active. At `stage1_15`, OG1-C is 2.10955
 A, OG1-HG1 is 1.42309 A, and Asp272 OD1-HG1 is 1.09954 A. No adjacent-window
 distance change exceeds the declared 0.25 A discontinuity threshold. Relative
 total energy has nevertheless risen monotonically to 35.27 kcal/mol (32.38
@@ -41,6 +41,25 @@ frozen source snapshot, a separate read-only tmux monitor,
 each accepted window without altering sander. Its provenance is under
 `01_coordinate_drive_to_ti1/inspection_monitor_job_20261026/`; the laptop-ready
 bundle is `01_coordinate_drive_to_ti1/vmd_progress/`.
+
+The complete construction schedule is 21 stage-I windows (`stage1_00` through
+`stage1_20`), then 21 stage-II windows (`stage2_00` through `stage2_20`), then
+a fully unrestrained TI1 minimization. Thus, with `stage1_17` active, 25 driven
+windows remain including the active one. The workflow does not stop after the
+first proton transfer. Stage II transfers Asp272-H toward the terminal Thr N
+while retaining the bounded 1.55-A attack target; the final release tests
+whether TI1 persists without either driving bias. If the energy has not turned
+downhill or TI1 is not retained after that release, adding extrapolated windows
+with shorter bond targets would not be justified; the reaction coordinate or
+mechanistic hypothesis must instead be revised.
+
+The live VMD publisher now also installs stage-aware native bond-distance
+labels, DynamicBonds representations for the forming/breaking bonds, persistent
+O49--Phe113 N and O49--Asn186 ND2 distances, and a small HG1 sphere. The helper
+is `scripts/nyl12_reactive_distances.tcl`; the replacement read-only monitor is
+`nyl12_reactive_path_inspection_20261026`. It waits 25 seconds after each status
+change so its complete annotated bundle is published after the frozen primary
+publisher, without modifying or interrupting sander.
 
 ## CURRENT — top-level output cleanup, 2026-10-25
 

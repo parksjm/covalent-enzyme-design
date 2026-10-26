@@ -219,6 +219,8 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
     plot_script.write_text("# plot worker")
     energy_plot_script = tmp_path / "energy_plot.py"
     energy_plot_script.write_text("# energy plot worker")
+    reactive_helper = tmp_path / "nyl12_reactive_distances.tcl"
+    reactive_helper.write_text("# reactive helper")
     assets = tmp_path / "assets"
     assets.mkdir()
     for name in ("stripped.parm7.gz", "qm_indices.tcl", "nyl12_es_vmd_common.tcl"):
@@ -240,6 +242,12 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
                     "relay_h": "relay_h",
                     "acceptor_h": "acceptor_h",
                 },
+                "reactive_vmd_helper": str(reactive_helper),
+                "measurement_atoms": {
+                    "O": {"index": 1, "name": "OG1"},
+                    "H": {"index": 2, "name": "HG1"},
+                },
+                "stage_measurements": {"direct": [["O", "H"]]},
                 "strip_mask": ":WAT",
                 "expected_stripped_atoms": 3,
             }
@@ -293,4 +301,6 @@ def test_publish_inspection_validates_and_publishes_mocked_exports(
     assert (generation / "reaction_distances.csv").is_file()
     assert (generation / "reaction_distances.png").read_bytes() == b"PNG"
     assert (generation / "reaction_energies.png").read_bytes() == b"ENERGY"
+    assert "::nyl12_reactive::install" in (generation / "reaction_path.vmd").read_text()
+    assert (generation / "nyl12_reactive_distances.tcl").is_file()
     assert (generation / "MANIFEST.sha256").is_file()

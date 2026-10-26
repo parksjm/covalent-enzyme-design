@@ -136,6 +136,7 @@ def publish_inspection(run: Path, config_path: Path, plot_script: Path) -> Path:
         Path(__file__),
         Path(__file__).with_name("path_distances.py"),
         Path(__file__).with_name("path_energies.py"),
+        Path(__file__).with_name("vmd_reactive_distances.py"),
     ):
         data["source_sha256"][str(path)] = digest(path)
     output = Path(config["output"])
@@ -150,6 +151,7 @@ def publish_inspection(run: Path, config_path: Path, plot_script: Path) -> Path:
             "stripped.parm7.gz",
             "qm_indices.tcl",
             "nyl12_es_vmd_common.tcl",
+            "nyl12_reactive_distances.tcl",
             "reaction_distances.png",
             "reaction_distances.json",
             "reaction_distances.csv",
@@ -215,6 +217,9 @@ def publish_inspection(run: Path, config_path: Path, plot_script: Path) -> Path:
     for name in ("stripped.parm7.gz", "qm_indices.tcl", "nyl12_es_vmd_common.tcl"):
         shutil.copy2(assets / name, generation / name)
         data["source_sha256"][str(assets / name)] = digest(assets / name)
+    reactive_helper = Path(config["reactive_vmd_helper"])
+    shutil.copy2(reactive_helper, generation / reactive_helper.name)
+    data["source_sha256"][str(reactive_helper)] = digest(reactive_helper)
     loader = """set ::nyl12_dir [file dirname [file normalize [info script]]]
 foreach name {qm_indices.tcl nyl12_es_vmd_common.tcl} {
     source [file join $::nyl12_dir $name]
@@ -223,6 +228,9 @@ nyl12_load stripped.parm7 reaction_path.dcd FRAMES $::nyl12_qm_indices $::nyl12_
 puts "One endpoint per reaction window; inspect distances.json for acceptance."
 """.replace("FRAMES", str(expected[0]))
     (generation / "reaction_path.vmd").write_text(loader)
+    from nyl12_covalent.vmd_reactive_distances import append_reactive_labels
+
+    append_reactive_labels(generation / "reaction_path.vmd", data["rows"], config)
     with (generation / "plot.log").open("w") as handle:
         subprocess.run(
             [

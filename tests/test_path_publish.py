@@ -15,6 +15,7 @@ ARTIFACTS = {
     "stripped.parm7.gz": "stripped.parm7.gz",
     "qm_indices.tcl": "qm_indices.tcl",
     "nyl12_es_vmd_common.tcl": "nyl12_es_vmd_common.tcl",
+    "nyl12_reactive_distances.tcl": "nyl12_reactive_distances.tcl",
     "reaction_distances.png": "distances.png",
     "reaction_distances.json": "distances.json",
     "reaction_distances.csv": "distances.csv",

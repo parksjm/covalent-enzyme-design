@@ -28,6 +28,14 @@ def _terminal_ready(
     )
 
 
+def _pause_before_publish(seconds: float) -> None:
+    """Delay a secondary publisher so the frozen primary publisher finishes first."""
+    if seconds < 0:
+        raise ValueError("Publish delay cannot be negative")
+    if seconds:
+        time.sleep(seconds)
+
+
 def main() -> None:
     """Inspect an existing path or supervise a new controller with inspection."""
     parser = argparse.ArgumentParser(description=__doc__)
@@ -35,6 +43,7 @@ def main() -> None:
     parser.add_argument("--config", required=True, type=Path)
     parser.add_argument("--watch", action="store_true")
     parser.add_argument("--poll-seconds", type=float, default=15)
+    parser.add_argument("--publish-delay-seconds", type=float, default=0)
     parser.add_argument("command", nargs=argparse.REMAINDER)
     args = parser.parse_args()
     logging.basicConfig(
@@ -42,6 +51,8 @@ def main() -> None:
     )
     if args.poll_seconds <= 0:
         raise ValueError("Polling interval must be positive")
+    if args.publish_delay_seconds < 0:
+        raise ValueError("Publish delay cannot be negative")
     command = args.command
     if command[:1] == ["--"]:
         command = command[1:]
@@ -68,6 +79,7 @@ def main() -> None:
                 child_entered_active_state = True
             if text != signature:
                 if state["completed_windows"]:
+                    _pause_before_publish(args.publish_delay_seconds)
                     output = publish_inspection(
                         args.run.resolve(),
                         args.config.resolve(),
