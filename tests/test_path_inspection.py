@@ -30,9 +30,7 @@ def _write_dcd(path: Path, frames: int = 1, atoms: int = 3) -> None:
 
 def test_measure_distances_uses_one_based_indices() -> None:
     coordinates = np.array([[0.0, 0.0, 0.0], [3.0, 4.0, 0.0]])
-    assert measure_distances(coordinates, {"bond": {"atoms": [1, 2]}}) == {
-        "bond": 5.0
-    }
+    assert measure_distances(coordinates, {"bond": {"atoms": [1, 2]}}) == {"bond": 5.0}
 
 
 @pytest.mark.parametrize(
@@ -80,7 +78,9 @@ def test_distance_jumps_rejects_changed_pairs_and_nonfinite_delta() -> None:
     with pytest.raises(ValueError, match="definitions changed"):
         distance_jumps([first, {**first, "window": "b", "distances_A": {"b": 2.0}}], 1)
     with pytest.raises(ValueError, match="Nonfinite"):
-        distance_jumps([first, {**first, "window": "b", "distances_A": {"a": np.nan}}], 1)
+        distance_jumps(
+            [first, {**first, "window": "b", "distances_A": {"a": np.nan}}], 1
+        )
 
 
 def test_dcd_counts_accepts_standard_coordinate_header(tmp_path: Path) -> None:
@@ -103,12 +103,8 @@ def _write_endpoint(run: Path, label: str, stage: str, converged: bool) -> None:
     folder = run / label
     folder.mkdir()
     (folder / "optimized.ncrst").write_bytes(b"coordinates")
-    (folder / "acceptance.json").write_text(
-        json.dumps({"native_converged": converged})
-    )
-    (folder / "process.json").write_text(
-        json.dumps({"exit_status": 0, "stage": stage})
-    )
+    (folder / "acceptance.json").write_text(json.dumps({"native_converged": converged}))
+    (folder / "process.json").write_text(json.dumps({"exit_status": 0, "stage": stage}))
 
 
 def test_collect_endpoints_includes_accepted_and_explicitly_rejected(
@@ -126,6 +122,9 @@ def test_collect_endpoints_includes_accepted_and_explicitly_rejected(
     )
     _write_endpoint(run, "w1", "direct", True)
     _write_endpoint(run, "w2", "relay", False)
+    relaxation = run / "phase1_unrestrained"
+    relaxation.mkdir()
+    (relaxation / "acceptance.json").write_text("{}")
 
     def fake_parm(*args: str) -> SimpleNamespace:
         return SimpleNamespace(
@@ -149,6 +148,7 @@ def test_collect_endpoints_includes_accepted_and_explicitly_rejected(
     )
     config = {
         "include_rejected_endpoint": True,
+        "excluded_endpoint_directories": ["phase1_unrestrained"],
         "atom_identities": {
             "1": {"name": "C1", "residue": 1},
             "2": {"name": "O1", "residue": 1},
@@ -171,8 +171,12 @@ def test_collect_endpoints_rejects_failed_engine_and_identity_mismatch(
     run.mkdir()
     topology = tmp_path / "system.parm7"
     topology.write_bytes(b"topology")
-    (run / "status.json").write_text(json.dumps({"state": "done", "completed_windows": ["w1"]}))
-    (run / "inputs.json").write_text(json.dumps({"topology": str(topology), "box": [1] * 6}))
+    (run / "status.json").write_text(
+        json.dumps({"state": "done", "completed_windows": ["w1"]})
+    )
+    (run / "inputs.json").write_text(
+        json.dumps({"topology": str(topology), "box": [1] * 6})
+    )
     _write_endpoint(run, "w1", "direct", True)
     config = {
         "include_rejected_endpoint": False,
@@ -191,7 +195,9 @@ def test_collect_endpoints_rejects_failed_engine_and_identity_mismatch(
     monkeypatch.setattr(
         inspection,
         "Rst7",
-        SimpleNamespace(open=lambda _restart: SimpleNamespace(coordinates=np.zeros((1, 1, 3)))),
+        SimpleNamespace(
+            open=lambda _restart: SimpleNamespace(coordinates=np.zeros((1, 1, 3)))
+        ),
         raising=False,
     )
     with pytest.raises(ValueError, match="identity mismatch"):

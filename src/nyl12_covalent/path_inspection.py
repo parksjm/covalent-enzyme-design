@@ -61,7 +61,9 @@ def collect_endpoints(run: Path, config: dict[str, Any]) -> dict[str, Any]:
     if status["state"] == "stopped" and config["include_rejected_endpoint"]:
         rejected = []
         for path in sorted(run.glob("*/acceptance.json")):
-            if path.parent.name not in labels:
+            if path.parent.name not in labels and path.parent.name not in config.get(
+                "excluded_endpoint_directories", []
+            ):
                 rejected.append(path.parent.name)
         labels.extend(rejected)
     if not labels:

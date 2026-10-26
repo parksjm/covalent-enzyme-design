@@ -175,5 +175,8 @@
     "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
     "MPLBACKEND": "Agg"
   },
-  "download_directory": "/data/jpc/covalent-enzyme-design/output_vmd_inspection_20261024"
+  "download_directory": "/data/jpc/covalent-enzyme-design/output_vmd_inspection_20261024",
+  "excluded_endpoint_directories": [
+    "phase1_unrestrained"
+  ]
 }

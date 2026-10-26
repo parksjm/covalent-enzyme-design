@@ -1,4 +1,28 @@
-## CURRENT — fully unrestrained phase1 endpoint optimization running
+## CURRENT — two original-interval phase-I windows running
+
+Latest user instruction: keep the phase-I interval unchanged and append only
+a few steps. Exactly stage1_17 and stage1_18 were launched, not phase II or
+ten finer windows. Session `nyl12_asp272_phase1_extend_20261025`; existing run
+`output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/` is unchanged.
+Targets (attack Å, q1 Å):17=(1.4505601244,0.9124292155),
+18=(1.3511202488,1.0248584310). Start is original stage1_16, not the reverted
+unrestrained checkpoint. The window17 and16 minimize.mdin hashes match exactly;
+only the harmonic targets advance by the original increments. No rotation,
+Hamiltonian, restraint strength, MM reference or convergence tolerance change.
+
+Controller `provenance/asp272_relay_20261025/extend_phase1.py`; executed frozen
+copy `run/source/extend_phase1_20261025.py`; plan `phase1_extension_plan.json`.
+Original status/source snapshots and an unsuccessful metadata-only preparation
+are preserved. The superseded phase-II draft was never prepared/executed and
+is archived as text to prevent accidental launch. Root corrected unexecuted
+draft/preparation issues before actual execution;36 relevant checks passed.
+Publisher `nyl12_phase1_extension_publish_20261025` updates the same
+`qmmm/pa6_asp272/plots/energies.png`, `plots/distances.png`, and
+`vmd/view_path.vmd` after each completed endpoint. New endpoints appear in
+`01_og1_to_asp272/window_17` and `window_18`. Stop after18 for review.
+The separate unrestrained diagnostic and its VMD publisher remain independent.
+
+## Concurrent diagnostic — fully unrestrained phase1 optimization
 
 User requests observing unbiased rearrangement before considering amine rotation.
 tmux: `nyl12_phase1_unrestrained_20261025`; scientific child directory:

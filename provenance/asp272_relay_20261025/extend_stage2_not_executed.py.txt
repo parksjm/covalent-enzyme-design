@@ -1,0 +1,172 @@
+"""SUPERSEDED DRAFT: not executed; attack-distance schedule awaits correction."""
+
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import importlib.util
+import json
+import logging
+from pathlib import Path
+import shutil
+import sys
+
+ROOT = Path("/data/jpc/covalent-enzyme-design")
+OUTPUT = ROOT / "output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2"
+RUNNER_PATH = ROOT / "provenance/asp272_relay_20261025/run_relay_warning_only.py"
+INSPECTION_CONFIG = ROOT / "configs/asp272_relay_inspection_20261025.json"
+PLOT_SCRIPT = ROOT / "scripts/plot_reaction_distances.py"
+sys.path.insert(0, str(ROOT / "src"))
+from nyl12_covalent.path_inspection import publish_inspection  # noqa: E402
+
+spec = importlib.util.spec_from_file_location("relay_warning_only", RUNNER_PATH)
+runner = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(runner)
+
+START = OUTPUT / "stage1_16/optimized.ncrst"
+EXPECTED_COMPLETED = [f"stage1_{i:02d}" for i in range(17)]
+Q2_ENDPOINT = 0.8
+ATTACK_TARGET = 1.55
+
+
+def schedule(q2_start: float) -> list[dict[str, float | str]]:
+    """Return the fixed ten-window linear q2 schedule."""
+    return [
+        {
+            "label": f"stage2_{i:02d}",
+            "attack_target_A": ATTACK_TARGET,
+            "q2_target_A": q2_start + i * (Q2_ENDPOINT - q2_start) / 9,
+        }
+        for i in range(10)
+    ]
+
+
+def validate_status(output: Path) -> dict:
+    """Require the exact completed phase I handoff before preparing or running."""
+    state = json.loads((output / "status.json").read_text())
+    if state.get("phase1_complete") is not True:
+        raise ValueError("Phase I is not marked complete")
+    if state.get("completed_windows") != EXPECTED_COMPLETED:
+        raise ValueError("Status does not contain exactly stage1_00 through stage1_16")
+    if state.get("state") != "stopped":
+        raise ValueError("Phase I status must be stopped before stage 2")
+    acceptance = json.loads((output / "stage1_16/acceptance.json").read_text())
+    process = json.loads((output / "stage1_16/process.json").read_text())
+    if not (acceptance["native_converged"] and acceptance["finite_coordinates_and_fixed_box"]):
+        raise ValueError("stage1_16 restart did not pass native acceptance")
+    if process.get("exit_status") != 0:
+        raise ValueError("stage1_16 process did not complete successfully")
+    if Path(process["command"][process["command"].index("-r") + 1]).resolve() != START.resolve():
+        raise ValueError("stage1_16 process does not identify the required restart")
+    return acceptance
+
+
+def prepare(output: Path) -> None:
+    """Save phase I status and a hashed, explicit stage 2 execution plan."""
+    acceptance = validate_status(output)
+    if (output / "status_before_stage2_20261025.json").exists() or (
+        output / "stage2_extension_plan.json"
+    ).exists():
+        raise FileExistsError("Stage 2 preparation artifacts already exist")
+    if not START.is_file():
+        raise FileNotFoundError(START)
+    q2_start = float(acceptance["actual_proton_difference_A"])
+    if abs(q2_start - (-1.710078)) > 0.00001:
+        raise ValueError(f"Unexpected phase I q2 endpoint: {q2_start:.9f} A")
+    sources = [
+        RUNNER_PATH,
+        ROOT / "provenance/pa6_ti1_driving_20261024/run_path.py",
+        output / "source/run_relay_warning_only.py",
+        output / "source/continuation.mdin",
+        INSPECTION_CONFIG,
+        PLOT_SCRIPT,
+        ROOT / "src/nyl12_covalent/path_inspection.py",
+        START,
+        output / "stage1_16/acceptance.json",
+        output / "stage1_16/process.json",
+    ]
+    hashes = {str(path): runner.old.digest(path) for path in sources}
+    shutil.copy2(__file__, output / "source/extend_stage2_20261025.py")
+    state = json.loads((output / "status.json").read_text())
+    runner.old.write(output / "status_before_stage2_20261025.json", state)
+    runner.old.write(
+        output / "stage2_extension_plan.json",
+        {
+            "created_utc": datetime.now(timezone.utc).isoformat(),
+            "start_restart": str(START),
+            "start_restart_sha256": hashes[str(START)],
+            "q2_definition": "d(Asp272 OD1-HG1) - d(Nterminal-HG1)",
+            "q2_start_A": q2_start,
+            "q2_endpoint_A": Q2_ENDPOINT,
+            "window_count": 10,
+            "schedule": schedule(q2_start),
+            "fixed_attack_target_A": ATTACK_TARGET,
+            "source_sha256": hashes,
+            "wrapper_sha256": runner.old.digest(__file__),
+            "tracking_policy": "existing warning-only policy; native convergence and finite fixed box remain required",
+        },
+    )
+
+
+def run(output: Path) -> None:
+    """Run stage 2 sequentially and apply the existing final chemistry gate."""
+    plan_path = output / "stage2_extension_plan.json"
+    if not plan_path.is_file() or not (output / "status_before_stage2_20261025.json").is_file():
+        raise ValueError("Run prepare mode first")
+    plan = json.loads(plan_path.read_text())
+    if plan["start_restart_sha256"] != runner.old.digest(START):
+        raise ValueError("Required stage1_16 restart changed")
+    for path, digest in plan["source_sha256"].items():
+        if runner.old.digest(Path(path)) != digest:
+            raise ValueError(f"Frozen source changed: {path}")
+    state = json.loads((output / "status.json").read_text())
+    if state.get("completed_windows") != EXPECTED_COMPLETED:
+        raise ValueError("Stage 2 can only start from the preserved phase I status")
+    inputs = json.loads((output / "inputs.json").read_text())
+    restart = START
+    state["state"] = "running"
+    state["stage2_started_utc"] = datetime.now(timezone.utc).isoformat()
+    runner.old.write(output / "status.json", state)
+    try:
+        publish_inspection(output, INSPECTION_CONFIG, PLOT_SCRIPT)
+        for item in plan["schedule"]:
+            label = str(item["label"])
+            restart = runner.window(
+                output,
+                label,
+                float(item["attack_target_A"]),
+                float(item["q2_target_A"]),
+                2,
+                restart,
+                inputs,
+            )
+            state["completed_windows"].append(label)
+            runner.old.write(output / "status.json", state)
+            publish_inspection(output, INSPECTION_CONFIG, PLOT_SCRIPT)
+        runner.gate(output, "stage2_09", 2)
+        state.update(state="stopped", stage2_complete=True, reason="Stage 2 completed; endpoint chemistry gate passed")
+    except Exception as error:
+        state.update(state="stopped", stage2_complete=False, reason=str(error))
+        raise
+    finally:
+        state["updated_utc"] = datetime.now(timezone.utc).isoformat()
+        runner.old.write(output / "status.json", state)
+        publish_inspection(output, INSPECTION_CONFIG, PLOT_SCRIPT)
+
+
+def main() -> None:
+    """Prepare provenance or explicitly run the planned stage 2 windows."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--prepare", action="store_true")
+    mode.add_argument("--run", action="store_true")
+    parser.add_argument("--output", type=Path, required=True)
+    args = parser.parse_args()
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    output = args.output.resolve()
+    prepare(output) if args.prepare else run(output)
+
+
+if __name__ == "__main__":
+    main()

@@ -369,6 +369,32 @@ path variants until this diagnostic and endpoint/orientation review are planned.
 
 ### Phase1 completed; numerical completion versus TI1 — 2026-10-25
 
+#### Two additional phase-I windows — latest user instruction
+
+The user requested extending the original phase-I path, then explicitly kept
+the original intervals and reduced the request to a few steps. The authorized
+extension is exactly stage1_17 and stage1_18 from the original stage1_16
+restart. Neither the previously discussed phase-II continuation nor ten finer
+windows was prepared or launched. There is no amine rotation or change to the
+reaction-coordinate definition.
+
+Continue the original linear targets with global fractions 17/16 and 18/16:
+attack target = a0 + f*(1.55-a0), and proton target = q0 + f*(0.8-q0),
+where a0 and q0 are the original initial target values. The attack targets are
+approximately 1.450560 and 1.351120 Å; the OG1–HG1 minus Asp272–HG1 targets
+are approximately 0.912429 and 1.024858 Å. Retain the two k100 harmonic
+springs, original MM reference/k10 positional restraints, DFTB3/QM region,
+native optimizer tolerances and warning-only tracking policy. These are soft
+target distances, not fixed atomic distances. Stop after the two windows for
+energy/geometry review; do not extrapolate another eight original increments
+toward an unphysical sub-angstrom attack target.
+
+Numerical convergence and energy turnover remain separate observations. Both
+total and bias-subtracted energy curves, all reaction distances and the endpoint
+VMD movie are republished after each window. A downturn in a driven profile is
+not alone proof of an unrestrained intermediate minimum. The unrestrained
+diagnostic is a separate branch and is not the continuation's starting model.
+
 #### User-requested unrestrained endpoint diagnostic — launched
 
 The original stage1_16 endpoint is retained without amine rotation. A separate

@@ -6,7 +6,7 @@
     "2": "02_asp272_to_nterm"
   },
   "source_files": {
-    "scripts/run_path.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/run_relay_warning_only.py",
+    "scripts/run_path.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/extend_phase1_20261025.py",
     "scripts/initial_driver.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/run_relay.py",
     "scripts/previous_driver.py": "/data/jpc/covalent-enzyme-design/provenance/pa6_ti1_driving_20261024/run_path.py",
     "scripts/plot_reaction_distances.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/plot_reaction_distances.py",
@@ -24,7 +24,9 @@
     "data/amine_orientation.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/amine_orientation.json",
     "scripts/analyze_amine_orientation.py": "/data/jpc/covalent-enzyme-design/provenance/asp272_relay_20261025/analyze_amine_orientation.py",
     "data/relay_energy_component_audit.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/relay_energy_component_audit.json",
-    "scripts/audit_relay_energy_components.py": "/data/jpc/covalent-enzyme-design/provenance/asp272_relay_20261025/audit_relay_energy_components.py"
+    "scripts/audit_relay_energy_components.py": "/data/jpc/covalent-enzyme-design/provenance/asp272_relay_20261025/audit_relay_energy_components.py",
+    "scripts/phase1_warning_only_driver.py": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/source/run_relay_warning_only.py",
+    "inputs/phase1_extension_plan.json": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_extension_plan.json"
   },
   "measurement_atoms": {
     "OG1": {
