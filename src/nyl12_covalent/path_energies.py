@@ -59,13 +59,30 @@ def relay_endpoint_energies(
             else d[distance_keys["relay_h"]] - d[distance_keys["acceptor_h"]]
         )
         blocks = re.findall(r"&rst\b(.*?)/", files[3].read_text(), flags=re.S | re.I)
-        if len(blocks) != 2:
-            raise ValueError("Expected two relay restraints")
+        values = [d[distance_keys["attack"]], q]
+        targets = [
+            process["attack_target_A"],
+            process["proton_difference_target_A"],
+        ]
+        expected_blocks = 2
+        if process["stage"] == 2:
+            expected_blocks = 3
+            values.append(d[distance_keys["donor_h"]] - d[distance_keys["relay_h"]])
+            try:
+                targets.append(process["relay_retention_target_A"])
+            except KeyError as error:
+                raise ValueError(
+                    "Stage II lacks the audited relay-retention target"
+                ) from error
+        if len(blocks) != expected_blocks:
+            raise ValueError(
+                f"Expected {expected_blocks} restraints for stage {process['stage']}"
+            )
         bias = 0.0
         for block, value, target in zip(
             blocks,
-            (d[distance_keys["attack"]], q),
-            (process["attack_target_A"], process["proton_difference_target_A"]),
+            values,
+            targets,
             strict=True,
         ):
             parameters = {

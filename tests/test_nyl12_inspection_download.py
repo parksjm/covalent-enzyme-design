@@ -321,8 +321,16 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
     binary = tmp_path / "bin"
     binary.mkdir()
     captured = tmp_path / "args"
+    rsync_stub = (
+        '#!/bin/sh\nprintf "CALL\\n%s\\n" "$*" >> "$CAPTURE_ARGS"\n'
+        'printf "%s\\n" "$@" >> "$CAPTURE_ARGS.details"\n'
+        'for arg in "$@"; do destination=$arg; done\n'
+        'case " $* " in *" --dry-run "*) ;; *) '
+        'case "$destination" in *qmmm/pa6_asp272/) '
+        'mkdir -p "$destination"; : > "$destination/MANIFEST.sha256";; esac;; esac\n'
+    )
     for name, body in {
-        "rsync": '#!/bin/sh\nprintf "CALL\\n%s\\n" "$*" >> "$CAPTURE_ARGS"\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS.details"\n',
+        "rsync": rsync_stub,
         "ssh": "#!/bin/sh\nexit 0\n",
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
@@ -372,8 +380,14 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
     binary = tmp_path / "bin"
     binary.mkdir()
     captured = tmp_path / "args"
+    rsync_stub = (
+        '#!/bin/sh\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS"\n'
+        'for arg in "$@"; do destination=$arg; done\n'
+        'case "$destination" in *qmmm/pa6_asp272/) '
+        'mkdir -p "$destination"; : > "$destination/MANIFEST.sha256";; esac\n'
+    )
     for name, body in {
-        "rsync": '#!/bin/sh\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS"\n',
+        "rsync": rsync_stub,
         "ssh": "#!/bin/sh\nexit 0\n",
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
@@ -406,7 +420,10 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
         "output_vmd_inspection_20261024/"
     )
     vmd_source_index = arguments.index(vmd_source)
-    assert arguments[vmd_source_index + 1] == "./nyl12-inspection-20261021/vmd_initial_final/"
+    assert (
+        arguments[vmd_source_index + 1]
+        == "./nyl12-inspection-20261021/vmd_initial_final/"
+    )
     assert arguments[-2] == (
         f"{current_user}@violet:/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272/"
     )

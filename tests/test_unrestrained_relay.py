@@ -44,36 +44,47 @@ def test_two_stage_schedule_does_not_extrapolate_bonds() -> None:
     assert stage1[0]["attack_target_A"] == 3.2
     assert stage1[-1]["attack_target_A"] == 1.55
     assert stage1[-1]["proton_difference_target_A"] == 0.8
-    stage2 = stage2_schedule(-1.7, 1.35)
+    stage2 = stage2_schedule(-1.7, 0.75, 1.3)
     assert len(stage2) == 21
     assert {row["attack_target_A"] for row in stage2} == {1.55}
     assert stage2[-1]["proton_difference_target_A"] == 0.8
-    assert {row["donor_separation_minimum_A"] for row in stage2} == {1.35}
+    assert {row["relay_retention_target_A"] for row in stage2} == {0.75}
+    assert {row["og1_hg1_minimum_A"] for row in stage2} == {1.3}
 
 
-def test_relay_uses_od1_and_explicit_donor_separation_wall() -> None:
+def test_relay_uses_od1_and_retains_the_first_transfer_coordinate() -> None:
     first = restraint_text(1, 1.55, 0.8, None)
-    second = restraint_text(2, 1.55, 0.8, 1.35)
+    second = restraint_text(2, 1.55, 0.8, 0.75)
     assert first.count("&rst") == 2
     assert second.count("&rst") == 3
     assert "13916,13917,14559,13917" in first
     assert "14559,13917,13905,13917" in second
-    assert "13916,13917,0,0,0,0,0,0" in second
-    assert "r2=1.3500000000, r3=10.0000000000" in second
+    assert "13916,13917,14559,13917" in second
+    assert "r2=0.7500000000, r3=0.7500000000" in second
     assert "14560" not in first + second
 
 
-@pytest.mark.parametrize("minimum", [1.19, 2.01])
-def test_stage2_rejects_invalid_donor_separation_wall(minimum: float) -> None:
-    """Reject a wall outside the declared chemically useful interval."""
-    with pytest.raises(ValueError, match="between 1.2 and 2.0"):
-        stage2_schedule(-1.7, minimum)
+@pytest.mark.parametrize(
+    ("retention", "minimum", "message"),
+    [
+        (0.29, 1.3, "Relay-retention target"),
+        (2.01, 1.3, "Relay-retention target"),
+        (0.75, 1.19, "OG1-HG1 minimum"),
+        (0.75, 2.01, "OG1-HG1 minimum"),
+    ],
+)
+def test_stage2_rejects_invalid_proton_ownership_controls(
+    retention: float, minimum: float, message: str
+) -> None:
+    """Reject invalid retained-coordinate or ownership thresholds."""
+    with pytest.raises(ValueError, match=message):
+        stage2_schedule(-1.7, retention, minimum)
 
 
 @pytest.mark.parametrize(
     ("stage", "minimum", "message"),
     [
-        (1, 1.35, "Stage I must not"),
+        (1, 0.75, "Stage I must not"),
         (2, None, "Stage II requires"),
         (3, None, "stage must be 1 or 2"),
     ],

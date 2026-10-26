@@ -42,6 +42,20 @@ else
     exit 2
 fi
 
+verify_nested_manifests() {
+    local root=$1
+    local manifest
+    local found=0
+    while IFS= read -r -d '' manifest; do
+        found=1
+        (cd "$(dirname "$manifest")" && "${checksum[@]}" "$(basename "$manifest")")
+    done < <(find "$root" -name MANIFEST.sha256 -type f -print0)
+    if [[ $found -ne 1 ]]; then
+        echo "No checksum manifests found under $root" >&2
+        return 1
+    fi
+}
+
 source_dir=/data/jpc/covalent-enzyme-design/output_laptop_inspection_20261021
 if [[ $dry_run -eq 0 ]]; then
     mkdir -p "$destination"
@@ -98,7 +112,7 @@ rsync "${vmd_rsync_args[@]}" \
     --include='MANIFEST.sha256' --exclude='*' \
     "$remote:$qmmm_source/" "$qmmm_destination/"
 if [[ $dry_run -eq 0 ]]; then
-    (cd "$qmmm_destination" && "${checksum[@]}" MANIFEST.sha256)
+    verify_nested_manifests "$qmmm_destination"
     echo "QM/MM: $qmmm_destination/plots/distances.png"
     echo "VMD: $qmmm_destination/vmd/view_path.vmd"
     echo "Active E-S optimization: $qmmm_destination/00_es_unrestrained/vmd/view_optimization.vmd"

@@ -51,7 +51,7 @@ def test_archives_all_phase2_and_resets_status(tmp_path: Path) -> None:
     status = json.loads((run / "status.json").read_text())
     assert status["completed_windows"] == STAGE1
     assert status["state"] == "stopped"
-    assert "donor-separation wall" in status["reason"]
+    assert "retained relay coordinate" in status["reason"]
     manifest = json.loads((archive / "manifest.json").read_text())
     assert all(
         record["sha256_before"] == record["sha256_after"]

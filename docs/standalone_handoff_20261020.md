@@ -1,3 +1,42 @@
+## CURRENT — retained-coordinate phase II active, 2026-10-26
+
+The first attempted repair of phase II also failed scientifically. A one-sided
+1.35-A lower wall on OG1-HG1 allowed a converged shared-proton structure at
+`stage2_00`: OG1-HG1 1.22198 A, Asp272 OD1-HG1 1.28484 A, and Thr N-HG1
+2.79899 A. DL-FIND converged normally in 393 cycles, so the failure was the
+reaction-coordinate model, not the optimizer. The hard proton-ownership gate
+correctly rejected it. Its complete artifacts are preserved under
+`clutter/failed_phase2_soft_wall_20261026/`; do not treat that endpoint as an
+accepted reaction-path window.
+
+Attempt 5 replaces the soft wall with a retained first-transfer coordinate:
+`d(OG1-HG1)-d(Asp272_OD1-HG1) = 0.76217766 A`, taken directly from accepted
+`stage1_20`. Phase II independently drives
+`d(Asp272_OD1-HG1)-d(Thr233_N-HG1)` while retaining the 1.55-A attack target.
+There are no MM positional restraints. The exact specification is
+`01_coordinate_drive_to_ti1/phase2_retained_coordinate_20261026.json`.
+
+Active calculation session:
+`nyl12_coordinate_drive_phase2_retained_20261026`; provenance:
+`01_coordinate_drive_to_ti1/resume_job_20261026_attempt5/`. Corrected
+`stage2_00` and `stage2_01` both converged and passed proton ownership. At
+`stage2_01`, OG1-HG1 is 1.74619 A, Asp272 OD1-HG1 is 1.01772 A, and Thr
+N-HG1 is 2.44905 A; `stage2_02` is active. The read-only monitor
+`nyl12_retained_path_inspection_20261026` publishes the accepted path after
+each window. The live laptop-ready path is
+`01_coordinate_drive_to_ti1/vmd_progress/reaction_path.vmd` (23 accepted
+endpoint frames through `stage2_01` at this checkpoint).
+
+The failed soft-wall optimizer trajectory is separately inspectable at
+`01_coordinate_drive_to_ti1/failed_soft_wall_stage2_00_vmd/view_stage2.vmd`.
+It contains 15 saved optimizer frames (the run used `ntwx=25`, so it does not
+contain all 393 optimization cycles), a stripped 19,976-atom topology, all 98
+QM atoms, and three complete nearby waters. The exporter independently checks
+all DCD coordinates and boxes. Its VMD display includes hidden protein cartoon,
+orange non-QM substrate carbons, QM licorice, an HG1 sphere, DynamicBonds,
+reactive and oxyanion-hole distances, and the OG1-C54-O49 Burgi-Dunitz angle.
+The laptop pull script includes this directory and verifies nested manifests.
+
 ## CURRENT — phase-II proton-return defect corrected, 2026-10-26
 
 The first phase-II implementation was scientifically invalid. Its sole proton

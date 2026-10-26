@@ -211,7 +211,7 @@ def _run_window(
             row["stage"],
             row["attack_target_A"],
             row["proton_difference_target_A"],
-            (row["donor_separation_minimum_A"] if row["stage"] == 2 else None),
+            (row["relay_retention_target_A"] if row["stage"] == 2 else None),
         )
     )
     command = _command(folder, topology, restart)
@@ -231,8 +231,9 @@ def _run_window(
         if row["stage"] == 1
         else values["Asp272_OD1_HG1"] - values["Thr_N_HG1"]
     )
+    relay_retention_actual = values["OG1_HG1"] - values["Asp272_OD1_HG1"]
     proton_ownership_valid = row["stage"] == 1 or (
-        values["OG1_HG1"] >= row["donor_separation_minimum_A"] - 0.1
+        values["OG1_HG1"] >= row["og1_hg1_minimum_A"]
     )
     write_json(
         folder / "acceptance.json",
@@ -244,8 +245,10 @@ def _run_window(
             "proton_coordinate_error_A": abs(
                 actual - row["proton_difference_target_A"]
             ),
-            "donor_separation_minimum_A": (
-                row["donor_separation_minimum_A"] if row["stage"] == 2 else None
+            "relay_retention_error_A": (
+                abs(relay_retention_actual - row["relay_retention_target_A"])
+                if row["stage"] == 2
+                else None
             ),
             "proton_ownership_valid": proton_ownership_valid,
             "distances_A": values,
@@ -297,7 +300,7 @@ def _run_ti1_release(
     return acceptance
 
 
-def _run_path_from_endpoint(endpoint: Path, donor_separation_minimum: float) -> None:
+def _run_path_from_endpoint(endpoint: Path, og1_hg1_minimum: float) -> None:
     """Run coordinate driving from one accepted, converged E-S endpoint."""
     path_inputs = json.loads((PATH / "inputs.json").read_text())
     status = json.loads((PATH / "status.json").read_text())
@@ -352,9 +355,11 @@ def _run_path_from_endpoint(endpoint: Path, donor_separation_minimum: float) -> 
             write_json(PATH / "status.json", status)
         stage1_final = distances(topology, restart)
         q2 = stage1_final["Asp272_OD1_HG1"] - stage1_final["Thr_N_HG1"]
+        relay_retention = stage1_final["OG1_HG1"] - stage1_final["Asp272_OD1_HG1"]
         for row in stage2_schedule(
             q2,
-            donor_separation_minimum,
+            relay_retention,
+            og1_hg1_minimum,
             path_inputs["windows_per_stage"],
         ):
             if row["label"] in status["completed_windows"]:
@@ -380,11 +385,11 @@ def _run_path_from_endpoint(endpoint: Path, donor_separation_minimum: float) -> 
         write_json(PATH / "status.json", status)
 
 
-def run(donor_separation_minimum: float) -> None:
+def run(og1_hg1_minimum: float) -> None:
     """Run E-S convergence, then two bounded coordinate-driving stages."""
     es_inputs = json.loads((ES / "inputs.json").read_text())
     _run_es(es_inputs)
-    _run_path_from_endpoint(ES / "optimized.ncrst", donor_separation_minimum)
+    _run_path_from_endpoint(ES / "optimized.ncrst", og1_hg1_minimum)
 
 
 def main() -> None:
@@ -392,7 +397,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode", choices=("prepare", "run", "resume-path"))
     parser.add_argument("--endpoint", type=Path)
-    parser.add_argument("--stage2-donor-separation-minimum", type=float)
+    parser.add_argument("--stage2-og1-hg1-minimum", type=float)
     args = parser.parse_args()
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
@@ -400,18 +405,16 @@ def main() -> None:
     if args.mode == "prepare":
         prepare()
     else:
-        if args.stage2_donor_separation_minimum is None:
-            parser.error(
-                "run and resume-path require --stage2-donor-separation-minimum"
-            )
+        if args.stage2_og1_hg1_minimum is None:
+            parser.error("run and resume-path require --stage2-og1-hg1-minimum")
         if args.mode == "run":
-            run(args.stage2_donor_separation_minimum)
+            run(args.stage2_og1_hg1_minimum)
             return
         if args.endpoint is None:
             parser.error("resume-path requires --endpoint")
         _run_path_from_endpoint(
             args.endpoint.resolve(),
-            args.stage2_donor_separation_minimum,
+            args.stage2_og1_hg1_minimum,
         )
 
 

@@ -29,6 +29,7 @@ def _window(run: Path, label: str, stage: int, total: float) -> dict:
                 "stage": stage,
                 "attack_target_A": 1.5,
                 "proton_difference_target_A": target,
+                **({"relay_retention_target_A": 0.1} if stage == 2 else {}),
             }
         )
     )
@@ -38,7 +39,10 @@ def _window(run: Path, label: str, stage: int, total: float) -> dict:
         )
     )
     blocks = []
-    for t in (1.5, target):
+    targets = [1.5, target]
+    if stage == 2:
+        targets.append(0.1)
+    for t in targets:
         blocks.append(
             f"&rst r1={t - 2}, r2={t}, r3={t}, r4={t + 2}, rk2=100, rk3=100, /"
         )

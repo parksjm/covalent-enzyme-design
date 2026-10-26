@@ -25,7 +25,7 @@ ATOMS = {
     "AMIDE_N": 19905,
 }
 PHASE2_CORRECTION_REASON = (
-    "Invalid phase II archived; restart required with donor-separation wall."
+    "Invalid phase II archived; restart required with retained relay coordinate."
 )
 
 
@@ -140,14 +140,17 @@ def schedule(initial: dict[str, float], windows: int = 21) -> list[dict[str, Any
 
 def stage2_schedule(
     initial_q2: float,
-    donor_separation_minimum: float,
+    relay_retention_target: float,
+    og1_hg1_minimum: float,
     windows: int = 21,
 ) -> list[dict[str, Any]]:
-    """Hold attack, prevent O-H return, and transfer Asp272-H to Thr N."""
+    """Retain the first proton transfer while driving Asp272-H to Thr N."""
     if windows < 2:
         raise ValueError("At least two windows are required per stage")
-    if not 1.2 <= donor_separation_minimum <= 2.0:
-        raise ValueError("Donor-separation minimum must be between 1.2 and 2.0 A")
+    if not 0.3 <= relay_retention_target <= 2.0:
+        raise ValueError("Relay-retention target must be between 0.3 and 2.0 A")
+    if not 1.2 <= og1_hg1_minimum <= 2.0:
+        raise ValueError("OG1-HG1 minimum must be between 1.2 and 2.0 A")
     return [
         {
             "label": f"stage2_{index:02d}",
@@ -155,7 +158,8 @@ def stage2_schedule(
             "attack_target_A": 1.55,
             "proton_difference_target_A": initial_q2
             + index / (windows - 1) * (0.8 - initial_q2),
-            "donor_separation_minimum_A": donor_separation_minimum,
+            "relay_retention_target_A": relay_retention_target,
+            "og1_hg1_minimum_A": og1_hg1_minimum,
         }
         for index in range(windows)
     ]
@@ -165,15 +169,15 @@ def restraint_text(
     stage: int,
     attack: float,
     proton: float,
-    donor_separation_minimum: float | None,
+    relay_retention_target: float | None,
 ) -> str:
     """Build the declared harmonic reaction-coordinate restraints."""
     if stage not in {1, 2}:
         raise ValueError("stage must be 1 or 2")
-    if stage == 1 and donor_separation_minimum is not None:
-        raise ValueError("Stage I must not declare a donor-separation wall")
-    if stage == 2 and donor_separation_minimum is None:
-        raise ValueError("Stage II requires a donor-separation wall")
+    if stage == 1 and relay_retention_target is not None:
+        raise ValueError("Stage I must not declare a relay-retention target")
+    if stage == 2 and relay_retention_target is None:
+        raise ValueError("Stage II requires a relay-retention target")
     proton_atoms = (
         f"{ATOMS['OG1']},{ATOMS['HG1']},{ATOMS['ASP_OD1']},{ATOMS['HG1']}"
         if stage == 1
@@ -189,12 +193,14 @@ def restraint_text(
             f"r2={target:.10f}, r3={target:.10f}, r4={target + 2:.10f}, "
             "rk2=100, rk3=100, /\n"
         )
-    if donor_separation_minimum is not None:
-        atoms = f"{ATOMS['OG1']},{ATOMS['HG1']},0,0,0,0,0,0"
+    if relay_retention_target is not None:
+        atoms = f"{ATOMS['OG1']},{ATOMS['HG1']},{ATOMS['ASP_OD1']},{ATOMS['HG1']}"
         blocks.append(
-            f"&rst iat={atoms}, rstwt=1,0,0,0, r1=0.0000000000, "
-            f"r2={donor_separation_minimum:.10f}, r3=10.0000000000, "
-            "r4=12.0000000000, "
+            f"&rst iat={atoms},0,0,0,0, rstwt=1,-1,0,0, "
+            f"r1={relay_retention_target - 2:.10f}, "
+            f"r2={relay_retention_target:.10f}, "
+            f"r3={relay_retention_target:.10f}, "
+            f"r4={relay_retention_target + 2:.10f}, "
             "rk2=100, rk3=100, /\n"
         )
     return "".join(blocks)
