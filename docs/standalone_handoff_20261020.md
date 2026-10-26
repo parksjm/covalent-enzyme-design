@@ -16,10 +16,14 @@ Original status/source snapshots and an unsuccessful metadata-only preparation
 are preserved. The superseded phase-II draft was never prepared/executed and
 is archived as text to prevent accidental launch. Root corrected unexecuted
 draft/preparation issues before actual execution;36 relevant checks passed.
-Publisher `nyl12_phase1_extension_publish_20261025` updates the same
+Publisher `nyl12_phase1_pending_publish_20261025` updates the same
 `qmmm/pa6_asp272/plots/energies.png`, `plots/distances.png`, and
 `vmd/view_path.vmd` after each completed endpoint. New endpoints appear in
 `01_og1_to_asp272/window_17` and `window_18`. Stop after18 for review.
+These directories now expose running/queued status.json and available inputs
+before optimization finishes. Only finalized endpoints enter plots/movies.
+This replaces the earlier completed-endpoint-only export; no new laptop pull
+script is needed. Old publisher logs and source snapshots are retained.
 The separate unrestrained diagnostic and its VMD publisher remain independent.
 
 ## Concurrent diagnostic — fully unrestrained phase1 optimization

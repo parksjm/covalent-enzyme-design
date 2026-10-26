@@ -25,16 +25,17 @@ def main() -> None:
     )
     config = json.loads(args.config.read_text())
     run = Path(config["run"])
-    identity = None
+    package_stamp = None
     while True:
         generation = (run / "live_inspection/latest").resolve(strict=True)
         data = json.loads((generation / "reaction_distances.json").read_text())
-        if data["identity"] != identity:
-            output = build_qmmm_package(args.config.resolve())
+        output = build_qmmm_package(args.config.resolve())
+        stamp = (output / "package_sources.json").stat().st_mtime_ns
+        if stamp != package_stamp:
             logging.info(
                 "QM/MM inspection updated: %s (%d frames)", output, len(data["rows"])
             )
-            identity = data["identity"]
+            package_stamp = stamp
         state = json.loads((run / "status.json").read_text())
         # A controller updates terminal status before its final inspection export.
         if not args.watch or (

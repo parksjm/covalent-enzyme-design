@@ -147,6 +147,56 @@ def test_live_child_has_its_own_checksum_boundary(tmp_path: Path) -> None:
         assert _hash((destination / relative).read_bytes()) == expected
 
 
+def test_planned_windows_publish_before_their_endpoints(tmp_path: Path) -> None:
+    """Queued inputs and running status update without inventing movie frames."""
+    config_path, destination, latest = _fixture(tmp_path)
+    config = json.loads(config_path.read_text())
+    plan = tmp_path / "extension.json"
+    plan.write_text(
+        json.dumps(
+            {
+                "schedule": [
+                    {"label": "stage1_17", "attack_target_A": 1.45},
+                    {"label": "stage1_18", "attack_target_A": 1.35},
+                ]
+            }
+        )
+    )
+    config["window_plan"] = {"path": str(plan), "stage": "stage1"}
+    config_path.write_text(json.dumps(config))
+    build_qmmm_package(config_path)
+    pending = destination / "01_og1_to_asp272"
+    assert (
+        json.loads((pending / "window_17/status.json").read_text())["state"] == "queued"
+    )
+    assert not (pending / "window_18/optimize.mdin").exists()
+    run = Path(config["run"])
+    window = run / "stage1_17"
+    window.mkdir()
+    (window / "minimize.mdin").write_text("actual input")
+    (window / "restraints.RST").write_text("actual target")
+    (window / "process.json").write_text(json.dumps({"exit_status": None}))
+    build_qmmm_package(config_path)
+    status = json.loads((pending / "window_17/status.json").read_text())
+    assert status["state"] == "running"
+    assert status["optimized_endpoint_available"] is False
+    assert (pending / "window_17/optimize.mdin").read_text() == "actual input"
+    assert len(json.loads((destination / "window_order.json").read_text())) == 1
+    (window / "acceptance.json").write_text("actual acceptance")
+    (window / "process.json").write_text(json.dumps({"exit_status": 0}))
+    data = json.loads((latest / "reaction_distances.json").read_text())
+    data["identity"] = "second"
+    data["rows"].append({"window": "stage1_17", "stage": "stage1", "accepted": True})
+    (latest / "reaction_distances.json").write_text(json.dumps(data))
+    build_qmmm_package(config_path)
+    status = json.loads((pending / "window_17/status.json").read_text())
+    assert status["state"] == "completed"
+    assert status["optimized_endpoint_available"] is True
+    assert (
+        json.loads((pending / "window_18/status.json").read_text())["state"] == "queued"
+    )
+
+
 def test_independent_package_cannot_escape_root(tmp_path: Path) -> None:
     """Reject ambiguous or escaping checksum boundaries."""
     config_path, _destination, _latest = _fixture(tmp_path)

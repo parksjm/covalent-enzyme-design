@@ -146,5 +146,9 @@
   },
   "independent_packages": [
     "phase1_unrestrained"
-  ]
+  ],
+  "window_plan": {
+    "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_extension_plan.json",
+    "stage": "1"
+  }
 }

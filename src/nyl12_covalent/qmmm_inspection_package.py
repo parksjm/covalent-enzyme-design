@@ -22,6 +22,61 @@ def _copy(source: Path, target: Path, sources: dict[str, Any], root: Path) -> No
     sources[str(target.relative_to(root))] = {"source": str(source), "sha256": digest}
 
 
+WINDOW_FILES = {
+    "acceptance.json": "geometry.json",
+    "process.json": "run.json",
+    "minimize.mdin": "optimize.mdin",
+    "restraints.RST": "restraints.RST",
+}
+
+
+def _planned_windows(config: dict[str, Any], data: dict[str, Any]) -> dict[str, Any]:
+    """Describe queued/running inputs without inventing optimized endpoints."""
+    if "window_plan" not in config:
+        return {}
+    specification = config["window_plan"]
+    plan = Path(specification["path"])
+    stage = config["stage_names"][str(specification["stage"])]
+    completed = {row["window"] for row in data["rows"] if row["accepted"]}
+    windows = []
+    for targets in json.loads(plan.read_text())["schedule"]:
+        label = targets["label"]
+        if Path(label).name != label:
+            raise ValueError("Invalid planned window name")
+        number = int(label.rsplit("_", 1)[1])
+        folder = Path(config["run"]) / label
+        files = {
+            name: hashlib.sha256((folder / name).read_bytes()).hexdigest()
+            for name in WINDOW_FILES
+            if (folder / name).is_file()
+        }
+        process = (
+            json.loads((folder / "process.json").read_text())
+            if "process.json" in files
+            else None
+        )
+        if label in completed:
+            state = "completed"
+        elif process is not None:
+            state = "running" if process.get("exit_status") is None else "not_accepted"
+        else:
+            state = "preparing" if folder.exists() else "queued"
+        windows.append(
+            {
+                "original_window": label,
+                "state": state,
+                "directory": str(Path(stage) / f"window_{number:02d}"),
+                "targets": targets,
+                "available_source_sha256": files,
+                "optimized_endpoint_available": label in completed,
+            }
+        )
+    return {
+        "plan_sha256": hashlib.sha256(plan.read_bytes()).hexdigest(),
+        "windows": windows,
+    }
+
+
 def build_qmmm_package(config_path: Path) -> Path:
     """Publish the latest verified movie, plots, scripts and numbered windows.
 
@@ -38,6 +93,7 @@ def build_qmmm_package(config_path: Path) -> Path:
     run = Path(config["run"])
     latest = (run / "live_inspection/latest").resolve(strict=True)
     data = json.loads((latest / "reaction_distances.json").read_text())
+    planned = _planned_windows(config, data)
     destination = Path(config["destination"])
     destination.mkdir(parents=True, exist_ok=True)
     previous = destination / "package_sources.json"
@@ -46,6 +102,7 @@ def build_qmmm_package(config_path: Path) -> Path:
         and json.loads(previous.read_text())["identity"] == data["identity"]
         and json.loads(previous.read_text())["layout_config_sha256"]
         == hashlib.sha256(config_path.read_bytes()).hexdigest()
+        and json.loads(previous.read_text()).get("planned_windows", {}) == planned
     ):
         return destination
     sources: dict[str, Any] = {}
@@ -123,6 +180,17 @@ def build_qmmm_package(config_path: Path) -> Path:
             }
         )
     (destination / "window_order.json").write_text(json.dumps(mapping, indent=2) + "\n")
+    for item in planned.get("windows", []):
+        folder = destination / item["directory"]
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / "status.json").write_text(json.dumps(item, indent=2) + "\n")
+        for name in item["available_source_sha256"]:
+            _copy(
+                run / item["original_window"] / name,
+                folder / WINDOW_FILES[name],
+                sources,
+                destination,
+            )
     text = f"""# PA6: Asp272-assisted QM/MM path
 
 Start here:
@@ -143,6 +211,8 @@ VMD frame order is in `window_order.json`; one frame is one optimized window,
 not an elementary chemical event or physical time. A whole numbered stage is
 an elementary-step hypothesis. Re-run the laptop pull and reload VMD for updates.
 The current package contains {len(mapping)} finalized endpoint frames.
+Planned/running windows have a status.json and available inputs before completion;
+their coordinates enter the movie only after endpoint acceptance is recorded.
 
 Original scientific run (unchanged): `{run}`.
 Stage/window directories contain small inputs and original acceptance records;
@@ -162,6 +232,7 @@ mechanism or a measured barrier. No raw QM/MM calculation was relocated.
         "run": str(run),
         "sources": sources,
         "layout_config_sha256": hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        "planned_windows": planned,
     }
     # Commit the package identity only after all payloads and checksums are ready.
     pending_record = destination / ".package_sources.json.pending"
