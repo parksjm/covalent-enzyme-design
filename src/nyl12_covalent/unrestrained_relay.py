@@ -24,6 +24,9 @@ ATOMS = {
     "O": 19904,
     "AMIDE_N": 19905,
 }
+PHASE2_CORRECTION_REASON = (
+    "Invalid phase II archived; restart required with donor-separation wall."
+)
 
 
 def sha256(path: Path) -> str:
@@ -135,10 +138,16 @@ def schedule(initial: dict[str, float], windows: int = 21) -> list[dict[str, Any
     return rows
 
 
-def stage2_schedule(initial_q2: float, windows: int = 21) -> list[dict[str, Any]]:
-    """Hold the attack bond target while transferring Asp272-H to Thr N."""
+def stage2_schedule(
+    initial_q2: float,
+    donor_separation_minimum: float,
+    windows: int = 21,
+) -> list[dict[str, Any]]:
+    """Hold attack, prevent O-H return, and transfer Asp272-H to Thr N."""
     if windows < 2:
         raise ValueError("At least two windows are required per stage")
+    if not 1.2 <= donor_separation_minimum <= 2.0:
+        raise ValueError("Donor-separation minimum must be between 1.2 and 2.0 A")
     return [
         {
             "label": f"stage2_{index:02d}",
@@ -146,15 +155,25 @@ def stage2_schedule(initial_q2: float, windows: int = 21) -> list[dict[str, Any]
             "attack_target_A": 1.55,
             "proton_difference_target_A": initial_q2
             + index / (windows - 1) * (0.8 - initial_q2),
+            "donor_separation_minimum_A": donor_separation_minimum,
         }
         for index in range(windows)
     ]
 
 
-def restraint_text(stage: int, attack: float, proton: float) -> str:
-    """Build the two declared harmonic reaction-coordinate restraints."""
+def restraint_text(
+    stage: int,
+    attack: float,
+    proton: float,
+    donor_separation_minimum: float | None,
+) -> str:
+    """Build the declared harmonic reaction-coordinate restraints."""
     if stage not in {1, 2}:
         raise ValueError("stage must be 1 or 2")
+    if stage == 1 and donor_separation_minimum is not None:
+        raise ValueError("Stage I must not declare a donor-separation wall")
+    if stage == 2 and donor_separation_minimum is None:
+        raise ValueError("Stage II requires a donor-separation wall")
     proton_atoms = (
         f"{ATOMS['OG1']},{ATOMS['HG1']},{ATOMS['ASP_OD1']},{ATOMS['HG1']}"
         if stage == 1
@@ -168,6 +187,14 @@ def restraint_text(stage: int, attack: float, proton: float) -> str:
         blocks.append(
             f"&rst iat={atoms}, rstwt={weights}, r1={target - 2:.10f}, "
             f"r2={target:.10f}, r3={target:.10f}, r4={target + 2:.10f}, "
+            "rk2=100, rk3=100, /\n"
+        )
+    if donor_separation_minimum is not None:
+        atoms = f"{ATOMS['OG1']},{ATOMS['HG1']},0,0,0,0,0,0"
+        blocks.append(
+            f"&rst iat={atoms}, rstwt=1,0,0,0, r1=0.0000000000, "
+            f"r2={donor_separation_minimum:.10f}, r3=10.0000000000, "
+            "r4=12.0000000000, "
             "rk2=100, rk3=100, /\n"
         )
     return "".join(blocks)

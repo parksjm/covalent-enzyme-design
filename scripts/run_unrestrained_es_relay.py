@@ -23,6 +23,7 @@ from nyl12_covalent.unrestrained_relay import (  # noqa: E402
     driven_input,
     es_input,
     native_converged,
+    PHASE2_CORRECTION_REASON,
     restraint_text,
     schedule,
     sha256,
@@ -210,6 +211,7 @@ def _run_window(
             row["stage"],
             row["attack_target_A"],
             row["proton_difference_target_A"],
+            (row["donor_separation_minimum_A"] if row["stage"] == 2 else None),
         )
     )
     command = _command(folder, topology, restart)
@@ -229,6 +231,9 @@ def _run_window(
         if row["stage"] == 1
         else values["Asp272_OD1_HG1"] - values["Thr_N_HG1"]
     )
+    proton_ownership_valid = row["stage"] == 1 or (
+        values["OG1_HG1"] >= row["donor_separation_minimum_A"] - 0.1
+    )
     write_json(
         folder / "acceptance.json",
         {
@@ -239,12 +244,19 @@ def _run_window(
             "proton_coordinate_error_A": abs(
                 actual - row["proton_difference_target_A"]
             ),
+            "donor_separation_minimum_A": (
+                row["donor_separation_minimum_A"] if row["stage"] == 2 else None
+            ),
+            "proton_ownership_valid": proton_ownership_valid,
             "distances_A": values,
             "positional_restraints": "none",
         },
     )
-    if not (converged and valid):
-        raise ValueError(f"Native optimizer did not converge in {row['label']}")
+    if not (converged and valid and proton_ownership_valid):
+        raise ValueError(
+            f"Window {row['label']} failed convergence, coordinates, or "
+            "proton-ownership acceptance"
+        )
     return folder / "optimized.ncrst"
 
 
@@ -285,7 +297,7 @@ def _run_ti1_release(
     return acceptance
 
 
-def _run_path_from_endpoint(endpoint: Path) -> None:
+def _run_path_from_endpoint(endpoint: Path, donor_separation_minimum: float) -> None:
     """Run coordinate driving from one accepted, converged E-S endpoint."""
     path_inputs = json.loads((PATH / "inputs.json").read_text())
     status = json.loads((PATH / "status.json").read_text())
@@ -301,10 +313,17 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
     resumable_running = status["state"] == "running" and bool(
         status["completed_windows"]
     )
+    resumable_corrected_phase2 = (
+        status["state"] == "stopped"
+        and status.get("reason") == PHASE2_CORRECTION_REASON
+        and status["completed_windows"]
+        == [f"stage1_{index:02d}" for index in range(21)]
+    )
     if (
         status["state"] != "waiting_for_es"
         and not resumable_stopped
         and not resumable_running
+        and not resumable_corrected_phase2
     ):
         raise ValueError("Coordinate-driving workflow has already been started")
     topology = Path(path_inputs["topology"])
@@ -333,7 +352,11 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
             write_json(PATH / "status.json", status)
         stage1_final = distances(topology, restart)
         q2 = stage1_final["Asp272_OD1_HG1"] - stage1_final["Thr_N_HG1"]
-        for row in stage2_schedule(q2, path_inputs["windows_per_stage"]):
+        for row in stage2_schedule(
+            q2,
+            donor_separation_minimum,
+            path_inputs["windows_per_stage"],
+        ):
             if row["label"] in status["completed_windows"]:
                 restart = PATH / row["label"] / "optimized.ncrst"
                 continue
@@ -357,11 +380,11 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
         write_json(PATH / "status.json", status)
 
 
-def run() -> None:
+def run(donor_separation_minimum: float) -> None:
     """Run E-S convergence, then two bounded coordinate-driving stages."""
     es_inputs = json.loads((ES / "inputs.json").read_text())
     _run_es(es_inputs)
-    _run_path_from_endpoint(ES / "optimized.ncrst")
+    _run_path_from_endpoint(ES / "optimized.ncrst", donor_separation_minimum)
 
 
 def main() -> None:
@@ -369,18 +392,27 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode", choices=("prepare", "run", "resume-path"))
     parser.add_argument("--endpoint", type=Path)
+    parser.add_argument("--stage2-donor-separation-minimum", type=float)
     args = parser.parse_args()
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
     )
     if args.mode == "prepare":
         prepare()
-    elif args.mode == "run":
-        run()
     else:
+        if args.stage2_donor_separation_minimum is None:
+            parser.error(
+                "run and resume-path require --stage2-donor-separation-minimum"
+            )
+        if args.mode == "run":
+            run(args.stage2_donor_separation_minimum)
+            return
         if args.endpoint is None:
             parser.error("resume-path requires --endpoint")
-        _run_path_from_endpoint(args.endpoint.resolve())
+        _run_path_from_endpoint(
+            args.endpoint.resolve(),
+            args.stage2_donor_separation_minimum,
+        )
 
 
 if __name__ == "__main__":

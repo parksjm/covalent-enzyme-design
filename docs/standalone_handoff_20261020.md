@@ -1,3 +1,38 @@
+## CURRENT — phase-II proton-return defect corrected, 2026-10-26
+
+The first phase-II implementation was scientifically invalid. Its sole proton
+coordinate, `d(Asp272_OD1-HG1)-d(Thr233_N-HG1)`, could reach its target after
+HG1 returned covalently to Thr233 OG1 and Asp272 moved away. At accepted
+`stage2_05`, OG1-HG1 was 1.00503 A, Asp272 OD1-HG1 was 1.77026 A, and Thr
+N-HG1 was 2.70623 A. The calculation was interrupted during `stage2_06`; no
+sander process from that attempt remains. This branch must not be interpreted
+as an Asp-to-N proton-transfer path.
+
+All seven invalid `stage2_*` directories were moved without deletion to
+`clutter/invalid_phase2_hg1_return_20261026/01_coordinate_drive_to_ti1_stage2_archive/`.
+Its `manifest.json` records source/destination mappings and before/after file
+hashes; `status_before.json` permits rollback. The live run directory was reset
+to the accepted `stage1_00` through `stage1_20` sequence. The repair utility is
+`scripts/archive_invalid_phase2.py`, and its provenance job is
+`01_coordinate_drive_to_ti1/phase2_repair_job_20261026/`.
+
+Corrected phase II retains the attack and Asp-to-N difference coordinates and
+adds a one-sided lower wall at 1.35 A on Thr233 OG1-HG1. This wall prevents
+covalent return to OG1 but applies no bias above the lower bound. It is a
+reaction-specific internal-coordinate bias, not a positional restraint on MM
+atoms. Every phase-II window now fails acceptance if OG1-HG1 is more than
+0.10 A below the declared wall. The exact rationale and settings are in
+`01_coordinate_drive_to_ti1/phase2_correction_20261026.json`.
+
+Active calculation session:
+`nyl12_coordinate_drive_phase2_corrected_20261026`; provenance:
+`01_coordinate_drive_to_ti1/resume_job_20261026_attempt4/`. It started from the
+original accepted E-S endpoint, reused rather than recomputed accepted stage I,
+and began regenerated `stage2_00` from `stage1_20/optimized.ncrst`. Active
+read-only inspection session: `nyl12_corrected_path_inspection_20261026`;
+provenance: `inspection_monitor_job_20261026_attempt4/`. The monitor updates
+`vmd_progress/` after each accepted window.
+
 ## CURRENT — converged E-S and unrestrained coordinate path, 2026-10-26
 
 The initial 5000-cycle unrestrained E-S minimization exhausted without native
