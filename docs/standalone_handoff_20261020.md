@@ -1,5 +1,19 @@
 ## CURRENT — two original-interval phase-I windows running
 
+IMPORTANT clarification: the ES reference and current driven path use k10
+positional restraints on ALL103153 MM atoms (protein, MM substrate, solvent,
+ions), in addition to any driving biases. Only the98 QM atoms lack positional
+restraints. Reference is analytic_relaxation_attempt2/starting.ncrst, not the
+preceding window. The user requires a truly unrestrained ES reference; original
+setup does not meet that requirement and must be described as restrained.
+The phase1_unrestrained branch alone removes both positional and driving
+restraints. No active path Hamiltonian has been silently changed mid-run.
+Native original EAMBER is -397695.4038 kcal/mol without positional bias;
+latest reversion evaluation at01:20:59UTC was -443693.5466 (not converged).
+Difference -45998.1428 is a whole-system potential-energy change, not a catalytic
+barrier or proof of a better active site. Script/evidence:
+provenance/es_energy_comparison_20261025/compare_energies.py and comparison.json.
+
 Latest user instruction: keep the phase-I interval unchanged and append only
 a few steps. Exactly stage1_17 and stage1_18 were launched, not phase II or
 ten finer windows. Session `nyl12_asp272_phase1_extend_20261025`; existing run

@@ -505,8 +505,10 @@ Thr233, adjacent Thr234, the Phe113 backbone donor, Asn186 side chain,
 Asp272/Asp274 carboxylates and the central substrate amide. No water was
 forced into the QM region. Sander analytic gradients were used with electronic
 embedding, QM Ewald/PME, 10 Å cutoffs and an SCC threshold of 10−10.
-All MM atoms were restrained to the original coordinates at
-10 kcal mol−1 Å−2; QM atoms were unrestrained. The initial 25-cycle run did
+All 103,153 MM atoms were restrained to the original coordinates at
+10 kcal mol−1 Å−2, including MM protein, substrate, solvent and ion atoms;
+the 98 QM atoms had no positional restraints. This was a position-restrained
+ES relaxation, not an unrestrained ES minimum. The initial 25-cycle run did
 not converge (RMS gradient 2.4646 versus a 0.05 kcal mol−1 Å−1 target).
 A continuation with a 500-cycle budget retained the same Hamiltonian and
 original restraint reference and reached the declared RMS threshold after
@@ -514,3 +516,13 @@ original restraint reference and reached the declared RMS threshold after
 no Hessian classification was performed. Optimizer snapshots are coordinate evaluations,
 not a molecular-dynamics trajectory. This pilot does not establish TI1
 stability, reaction barriers or validated native TI1 force-field parameters.
+
+The subsequent phase-I coordinate-driving pilot retained these MM positional
+restraints in addition to two harmonic reaction-coordinate biases. Its
+positional reference remained the original preparation restart rather than
+the previous reaction window. A separate endpoint-reversion diagnostic removed
+both types of restraint (`ntr=0`, `nmropt=0`), with all atomic coordinates active,
+no SHAKE and a fixed periodic cell. This run must converge and undergo geometry
+review before being promoted to a new ES reference. The user's intended ES
+reference protocol is fully unrestrained atomic minimization; the exploratory
+restrained model must not be described as satisfying that requirement.

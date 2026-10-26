@@ -1,0 +1,47 @@
+{
+  "observed_utc": "2026-10-26T01:20:59.793986+00:00",
+  "original_ES_source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1",
+  "reversion_source": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained",
+  "original_ES_EAMBER_without_position_restraints_kcal_mol": -397695.4038,
+  "original_ES_position_restraint_kcal_mol": 11887.0748,
+  "original_ES_total_reconstructed_kcal_mol": -385808.32899999997,
+  "latest_reversion_Etot_kcal_mol": -443693.5466,
+  "relative_without_position_restraints_kcal_mol": -45998.14280000003,
+  "printed_DFTBESCF_difference_kcal_mol": -24.61739999999918,
+  "reversion_process": {
+    "started_utc": "2026-10-26T00:25:29.921204+00:00",
+    "exit_status": null,
+    "command": [
+      "/data/jpc/code/ambertools26/venv/bin/sander",
+      "-O",
+      "-i",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/minimize.mdin",
+      "-p",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/source/00_md_solvated.prmtop",
+      "-c",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/starting.ncrst",
+      "-o",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/minimized.mdout",
+      "-r",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/optimized.ncrst",
+      "-x",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/optimization.nc",
+      "-inf",
+      "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/mdinfo"
+    ]
+  },
+  "scope": "Live last printed evaluation, not necessarily the latest restart or a converged minimum. Same topology/QM/embedding and fixed cell; geometry optimization histories differ.",
+  "evidence_lines": [
+    " EAMBER  =  -397695.4038",
+    "RESTRAINT  =    11887.0748",
+    " Etot   =   -443693.5466  EKtot",
+    "RESTRAINT  =         0.0000",
+    "DFTBESCF=   -11049.0470",
+    "DFTBESCF=   -11073.6644"
+  ],
+  "log_snapshot_sha256": {
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/analytic_relaxation_continuation_attempt1/minimized.mdout": "d43e5a09ddc2627696224e3d2fa618a26bda1acc3db69b8b182290da1733db46",
+    "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/minimized.mdout": "aa7768e4e331c2e65c382d59ddf1f4d1a2f8e47d5f9f754d8bde4e19ca45fa68"
+  },
+  "original_native_energy_excludes_bias": "Native EAMBER is reported separately from the positive RESTRAINT contribution."
+}
