@@ -14,8 +14,9 @@ def publish_download(generation: Path, destination: Path) -> None:
         generation: Immutable, verified inspection generation.
         destination: Existing curated download directory with checksum manifest.
     """
+    destination.mkdir(parents=True, exist_ok=True)
     manifest = destination / "MANIFEST.sha256"
-    original = manifest.read_text()
+    original = manifest.read_text() if manifest.exists() else ""
     (generation / "previous_download_manifest.sha256").write_text(original)
     entries = {}
     for line in original.splitlines():

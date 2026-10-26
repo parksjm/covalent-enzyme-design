@@ -28,6 +28,7 @@ def test_inputs_have_no_positional_restraints() -> None:
         assert "verbosity=1" in text
     assert "nmropt=1" in driven
     assert "DISANG=restraints.RST" in driven
+    assert driven.index("&wt type='END'") < driven.index("&dlfind")
 
 
 def test_two_stage_schedule_does_not_extrapolate_bonds() -> None:

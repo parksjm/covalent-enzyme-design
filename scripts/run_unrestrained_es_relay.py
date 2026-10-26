@@ -291,10 +291,21 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
     status = json.loads((PATH / "status.json").read_text())
     resumable_stopped = (
         status["state"] == "stopped"
-        and status.get("reason") == "Unrestrained E-S continuation did not converge"
+        and status.get("reason")
+        in {
+            "Unrestrained E-S continuation did not converge",
+            "Engine failed in stage1_00",
+        }
         and not status["completed_windows"]
     )
-    if status["state"] != "waiting_for_es" and not resumable_stopped:
+    resumable_running = status["state"] == "running" and bool(
+        status["completed_windows"]
+    )
+    if (
+        status["state"] != "waiting_for_es"
+        and not resumable_stopped
+        and not resumable_running
+    ):
         raise ValueError("Coordinate-driving workflow has already been started")
     topology = Path(path_inputs["topology"])
     if not coordinates_valid(topology, endpoint, path_inputs["box"]):
@@ -313,6 +324,9 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
         restart = endpoint
         rows = schedule(initial, path_inputs["windows_per_stage"])
         for row in rows:
+            if row["label"] in status["completed_windows"]:
+                restart = PATH / row["label"] / "optimized.ncrst"
+                continue
             restart = _run_window(row, restart, topology, path_inputs)
             status["completed_windows"].append(row["label"])
             status["updated_utc"] = _now()
@@ -320,6 +334,9 @@ def _run_path_from_endpoint(endpoint: Path) -> None:
         stage1_final = distances(topology, restart)
         q2 = stage1_final["Asp272_OD1_HG1"] - stage1_final["Thr_N_HG1"]
         for row in stage2_schedule(q2, path_inputs["windows_per_stage"]):
+            if row["label"] in status["completed_windows"]:
+                restart = PATH / row["label"] / "optimized.ncrst"
+                continue
             restart = _run_window(row, restart, topology, path_inputs)
             status["completed_windows"].append(row["label"])
             status["updated_utc"] = _now()

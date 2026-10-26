@@ -92,7 +92,15 @@ def driven_input(base: str, max_cycles: int = 2000) -> str:
     text, count = re.subn(r"\bnmropt\s*=\s*0", "nmropt=1", text, count=1)
     if count != 1:
         raise ValueError("Expected nmropt=0 in unrestrained base input")
-    text += "\n&wt type='END' /\nDISANG=restraints.RST\nDUMPAVE=restraint_values.dat\n"
+    control, dlfind = text.split("&dlfind", maxsplit=1)
+    text = (
+        control.rstrip()
+        + "\n&wt type='END' /\n"
+        + "DISANG=restraints.RST\n"
+        + "DUMPAVE=restraint_values.dat\n"
+        + "&dlfind"
+        + dlfind
+    )
     validate_no_positional_restraints(text)
     return text
 

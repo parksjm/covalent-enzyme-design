@@ -1,3 +1,30 @@
+## CURRENT — converged E-S and unrestrained coordinate path, 2026-10-26
+
+The initial 5000-cycle unrestrained E-S minimization exhausted without native
+DL-FIND convergence but retained a valid E-S geometry. The conditional
+continuation started from its exact restart and converged after 1121 additional
+cycles. Acceptance: native convergence true, fixed finite cell true, no
+restraints, OG1-C 3.16529 A, OG1-HG1 0.99215 A, Asp272 OD1-HG1 1.82505 A;
+accepted endpoint SHA-256
+`93a7f1a4b2508c6ed7bf94b1ec184371da0ae54c1bba4b085584dc6e53d2c80f`.
+
+The first automatic path launch was stopped before a window because the live
+publisher consumed the prior terminal status before the resume child changed
+it. A tested state-transition guard fixed that race. The next attempt exposed
+two non-scientific input/publishing defects: the Amber `&dlfind` namelist must
+follow `&wt`/`DISANG` declarations, and a configured new `vmd_progress/`
+destination needs an initialized manifest. Both now have regression tests.
+Failed zero-step/interrupted artifacts were moved reversibly to
+`clutter/failed_coordinate_drive_resume_20261026/`.
+
+Current tmux session: `nyl12_coordinate_drive_resume3_20261026`. The path uses
+the accepted E-S endpoint, no positional restraints, and only the two declared
+reaction-coordinate biases. `stage1_00` converged and passed acceptance with
+zero target error; `stage1_01` is active. The controller resumes from accepted
+windows without recomputing them. Live state:
+`qmmm/pa6_asp272/01_coordinate_drive_to_ti1/status.json`; active job provenance:
+`qmmm/pa6_asp272/01_coordinate_drive_to_ti1/resume_job_20261026_attempt3/`.
+
 ## CURRENT — top-level output cleanup, 2026-10-25
 
 Fifty superseded top-level output directories were moved reversibly into
