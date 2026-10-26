@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/home/jpc/.local/bin/uv",
+    "run",
+    "python",
+    "provenance/output_directory_cleanup_20261025/move_superseded_outputs.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {},
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/provenance/output_directory_cleanup_20261025/move_superseded_outputs.py": "6a568075421a134ded9de51dde7d4f14e531103970a98d6180070556ba7a011c"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/provenance/output_directory_cleanup_20261025/job/job.log",
+  "session_name": "nyl12_output_cleanup_20261025",
+  "started_utc": null
+}

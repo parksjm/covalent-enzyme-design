@@ -1,3 +1,17 @@
+## CURRENT — top-level output cleanup, 2026-10-25
+
+Fifty superseded top-level output directories were moved reversibly into
+`clutter/superseded_exports_and_test_runs_20261025/`: 37 numbered laptop
+inspection snapshots, one pre-review snapshot, nine temporary test-job output
+directories, and three failed VMD packaging attempts. No file was deleted.
+The move verified per-file SHA-256 hashes and totaled 654196829 bytes; see
+`provenance/output_directory_cleanup_20261025/move_manifest.json` and its logged
+tmux job. Canonical `output_laptop_inspection_20261021/` and
+`output_vmd_inspection_20261024/` remain because the laptop pull script uses
+them. Action logs, parameter cache, active `qmmm/` calculations, and scientific
+`output_nyl12_*` evidence remain in place. Restore any moved directory by using
+the manifest's source/destination mapping.
+
 ## CURRENT — corrected unrestrained E-S to TI1 workflow, 2026-10-25
 
 User rejected the prior blanket k10 positional restraints on all 103153 MM
