@@ -99,5 +99,6 @@ if [[ $dry_run -eq 0 ]]; then
     (cd "$qmmm_destination" && "${checksum[@]}" MANIFEST.sha256)
     echo "QM/MM: $qmmm_destination/plots/distances.png"
     echo "VMD: $qmmm_destination/vmd/view_path.vmd"
+    echo "Active E-S optimization: $qmmm_destination/00_es_unrestrained/vmd/view_optimization.vmd"
     echo "Run scripts: $qmmm_destination/scripts/"
 fi

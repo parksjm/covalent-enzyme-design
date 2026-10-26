@@ -31,6 +31,18 @@ frozen atoms, native DL-FIND maximum-component tolerance 1e-4 Hartree/Bohr, up
 to 5000 continuation cycles. `verbosity=1` suppresses redundant multi-gigabyte
 DL-FIND XYZ files; Amber NetCDF snapshots remain available.
 
+A verified stripped snapshot of the live optimization is in
+`qmmm/pa6_asp272/00_es_unrestrained/vmd/`; load `view_optimization.vmd` in VMD.
+The current export contains 59 states (starting structure, all complete saved
+optimizer frames, and the latest restart), 19976 atoms, all protein and PA6,
+and three complete nearby TIP3P waters (topology residues 3328, 10325, 20216).
+Bulk solvent and ions are excluded. The 98 physical QM atoms use Licorice,
+non-QM substrate carbons are orange, and the protein NewCartoon representation
+is loaded but hidden. `frame_manifest.json` records exact atom remapping,
+source-snapshot hashes, and independent DCD coordinate/box validation. The
+minimization remains active, so this is a progress snapshot rather than its
+final trajectory; regenerate with `scripts/export_active_es_optimization_vmd.py`.
+
 Only after native convergence plus the noncovalent E-S geometry gate, the same
 tmux workflow proceeds to `01_coordinate_drive_to_ti1/`: 21 phase-I windows
 approach OG1-C=1.55 A and transfer HG1 to Asp272 OD1, followed by 21 phase-II
