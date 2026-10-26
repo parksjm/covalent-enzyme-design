@@ -1,0 +1,1991 @@
+{
+  "started_utc": "2026-10-26T01:48:59.709805+00:00",
+  "policy": "Archive only redundant DL-FIND full-system XYZ files, superseded full optimizer NetCDF files, and regenerated live-publisher products. Retain restarts, mdout, inputs, acceptance, source snapshots, curated VMD, and append-only provenance.",
+  "archive": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025",
+  "rollback": "Move archived files back to their recorded original paths.",
+  "files": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/energies.json",
+      "bytes": 2088,
+      "sha256": "48315d94774912cedccc3297f7ea89a1953ceaf577a5ae692f3abc7c0a160b70",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/energies.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/plot.py",
+      "bytes": 2016,
+      "sha256": "148562de931c26f44416bf15b3ad5d1538c367d72602efb52def234861ff7359",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/plot.py"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/relative_energies.png",
+      "bytes": 88795,
+      "sha256": "51d891f9586f532843c1f0ec8963b1b9b90fd4cce970c78ea7355b705af654a5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/relative_energies.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "c49e7992b8423e047233803fd026e70935a69085a08851a055acebb206d9556f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/export.cpptraj",
+      "bytes": 1710,
+      "sha256": "e0b3d36cc1687cf2399bb1dc9d37e830cad48cd6c712e40a081a009bcb27327a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/export.log",
+      "bytes": 8125,
+      "sha256": "06589eb3fce8d581a0a0a9210855dbbd522b3b09339e530d5cd291dddb6d2e03",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.csv",
+      "bytes": 3729,
+      "sha256": "e2b7825d9edf8c12d39162fd966012944963e3eb6e8114feda534599782c9958",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.json",
+      "bytes": 29257,
+      "sha256": "c6ef064000571f1af497fb2c53b522498ec300174189f8e1a129d92e11df15a6",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.png",
+      "bytes": 209501,
+      "sha256": "4aa9b44ea6bec58c387356640c38e033d8bbd2c6551688808366e3fb885e7f09",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_path.dcd",
+      "bytes": 2637908,
+      "sha256": "b291df96b44fd961be0fbe55597125afaa208e1469e0d727608a59d2ca6f95db",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "e1cd03b004a0e742ba9a4362cd17401faf36420290bbd5d4ec2f10789659d619",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0001/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "361da7fe9e3d73f4203e31a4c94b862436f1d02f6cb36c1794d76aefeaf366c8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/export.cpptraj",
+      "bytes": 1710,
+      "sha256": "e0b3d36cc1687cf2399bb1dc9d37e830cad48cd6c712e40a081a009bcb27327a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/export.log",
+      "bytes": 8125,
+      "sha256": "7e09fb90c8908803f8db9c15ca37a4ed1dccfa3e745e977f41dfe0d04205e05c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/previous_download_manifest.sha256",
+      "bytes": 1864,
+      "sha256": "fb30708162af50628aec4198642d1cdb0974f5f2f11f524e2628c5aa82e148d1",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.csv",
+      "bytes": 3729,
+      "sha256": "e2b7825d9edf8c12d39162fd966012944963e3eb6e8114feda534599782c9958",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.json",
+      "bytes": 29257,
+      "sha256": "4bc97014a6117429654c8a80b1a6015e4d7fc0684c3b5ccc0c04244d9ae5b897",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.png",
+      "bytes": 209501,
+      "sha256": "4aa9b44ea6bec58c387356640c38e033d8bbd2c6551688808366e3fb885e7f09",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_path.dcd",
+      "bytes": 2637908,
+      "sha256": "b291df96b44fd961be0fbe55597125afaa208e1469e0d727608a59d2ca6f95db",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "e1cd03b004a0e742ba9a4362cd17401faf36420290bbd5d4ec2f10789659d619",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0002/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "dbf36da2fdcc0609028a51d9e8d94a6bc2d95408afbbaa6afbacb0c7761fe54e",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/export.cpptraj",
+      "bytes": 1710,
+      "sha256": "e0b3d36cc1687cf2399bb1dc9d37e830cad48cd6c712e40a081a009bcb27327a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/export.log",
+      "bytes": 8125,
+      "sha256": "eafcb336cfab12690eddb378982f6870f4f61f6547500266c63462b67f34ef1b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "c21201f65e2387a9a814985a4097e4288b90221f5f25cd4bc21dc4fe40e78e31",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.csv",
+      "bytes": 3728,
+      "sha256": "bca87fd894ef011b6b1b966c822fee9d835a3684f33d7a149323610439447a51",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.json",
+      "bytes": 29323,
+      "sha256": "e8e9b06c3cca8f7884c8248c67f38033e4f8c2d535fd40cd9c65368fa707ece5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.png",
+      "bytes": 205638,
+      "sha256": "337bdbea603b5a7a6ce724c007832c0917ca8e4f054f3cc7a1db617fdff2e707",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_path.dcd",
+      "bytes": 2637908,
+      "sha256": "b291df96b44fd961be0fbe55597125afaa208e1469e0d727608a59d2ca6f95db",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "e1cd03b004a0e742ba9a4362cd17401faf36420290bbd5d4ec2f10789659d619",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0003/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "565f304e6c1999ed4931fbc817b41b23145b0bfd824bf5e0743388a31354af4c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/export.cpptraj",
+      "bytes": 1835,
+      "sha256": "98b61870d9ed6348bc8aa8a75043e89d438974ea9603e833869de691c0385836",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/export.log",
+      "bytes": 8592,
+      "sha256": "233deb465793e6197527e5a7b2ef0fd02fd18dab45199ebe0d545b967f53e086",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "375178ca03bb0f5ca5f89ddbee20688c883e7e77ce65a8e50a7282f244bf13ed",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.csv",
+      "bytes": 4041,
+      "sha256": "695a7fac1c2a3427f23c96872782505802735f872389931bc3b1a4f017c8282f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.json",
+      "bytes": 31710,
+      "sha256": "d8f02f9d0d8e83c32a419c612f65b7d8fdd70c43aae509d17690d30b581443eb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.png",
+      "bytes": 210038,
+      "sha256": "fb8fd13337d42dd67e637b9adc846f674802e54e8d482407e448c5d4a2ad2458",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_path.dcd",
+      "bytes": 2877700,
+      "sha256": "652d3cf73d2dbc483f9b7fe7ce3e6129e7e6c0b62040488c5a7e5a3e09c8fd14",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "7e590cd0575c6d3d28c6f631afe1c69871688b90e0b77f871ef2de94f28b1c4b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0004/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "07767512aa44dd81f101e3516fc14d8afa6dd2d56cecf730bfd1ae0647aa7558",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/export.cpptraj",
+      "bytes": 1960,
+      "sha256": "592cce18bd2d7408d90fcd9c90b352526a40db7f1f28afac9eb5ae09cc119bc3",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/export.log",
+      "bytes": 9059,
+      "sha256": "c5f225016a26cd8c8255934ddbd54707a080e8345fbc4e6f32804138499b8358",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "a919dd26c77a06cd8e0bbfbeb4a66a5e9b1a8b734e5d557447a213b6c7849b44",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.csv",
+      "bytes": 4352,
+      "sha256": "c0cbfca1d00a069210465101043af3f710382ee138557d9bbc7e034eb4bb0d47",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.json",
+      "bytes": 34093,
+      "sha256": "d1b8f6c259bb0ba111beae6eba88e04026a1444baa8e32ea5658bd61374a3426",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.png",
+      "bytes": 214162,
+      "sha256": "c3526d28748da55c0b051a5023d25ea9a5380361b39a7f9f4cdd352fdbdc516b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_path.dcd",
+      "bytes": 3117492,
+      "sha256": "18c778a6375b87108259d04029271c3a86baf9e68661df907df67d7f7a150c1f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "47f3a9d84ab67f5690f30f55aa33ff80d194ff8de1727b9aec02a1ea0ddc4c49",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0005/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "b231022a8fcd185aaf82e46f4c25189835e4baead945caf91cb45e2effb87463",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/export.cpptraj",
+      "bytes": 2085,
+      "sha256": "c5913652c692c3cdf2161b446083e019a46227b8198e84f0ab9ecde2b505c9ad",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/export.log",
+      "bytes": 9526,
+      "sha256": "66db940a1311456e64bda100d6510bb07c9f181c6b89003da800b557aaa822ae",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "87e4c4fffdad2299ee5b1d6cc093fd06460de0340bfa4e9cb0945d3546c2bc60",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.csv",
+      "bytes": 4668,
+      "sha256": "65a7d1de9b1f6e16a0f508dc6b694230ba12d427811b5577ec03b8ce6df259e2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.json",
+      "bytes": 36555,
+      "sha256": "4f0df686313800feb8ecd8a750d7cfa876acf09cfc20c92e618d08dc20ad466b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.png",
+      "bytes": 223531,
+      "sha256": "c1461d2aad24fe8a821f69f149103d6eace2b3cb4391c258b089053f9b2f59f6",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_path.dcd",
+      "bytes": 3357284,
+      "sha256": "bb6bef5ca5005d9d55be6ca655a303e01e570072cd601d704140a4b77b227e20",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "d8dea7011bbb149d5e1600520d41dc740269b1c750ab81e5ab436c69fb4af41c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0006/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "b945f7ae0f9a159c5761505006475380aea341ce129019315e946f6e26bb7908",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/export.cpptraj",
+      "bytes": 2085,
+      "sha256": "c5913652c692c3cdf2161b446083e019a46227b8198e84f0ab9ecde2b505c9ad",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/export.log",
+      "bytes": 9526,
+      "sha256": "fb1274c0a210020acd1b1a2a4d7e6fcf010089d9862d36e5c1b443b94315d56a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "f7a0f7c15ed01820a10ef5b255c6c7108ebad3b56dc1e2d087cd24e4ab574e5f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.csv",
+      "bytes": 4667,
+      "sha256": "5a24111d3f3b2cc32f4970d03d93f318b57f4964c0b0776275a290b6c2e62e02",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.json",
+      "bytes": 36558,
+      "sha256": "bb904bc83a8ac4ac0eb1a53b35fa26a6425cb2249ad07b35d3481e17bb022553",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.png",
+      "bytes": 218071,
+      "sha256": "2278b2b937fc9d74100b3f660803d0f1a7bcc87776487d87fbe0b195e9cdd2f2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_path.dcd",
+      "bytes": 3357284,
+      "sha256": "bb6bef5ca5005d9d55be6ca655a303e01e570072cd601d704140a4b77b227e20",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "d8dea7011bbb149d5e1600520d41dc740269b1c750ab81e5ab436c69fb4af41c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0007/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "ad744130e1df6a1928ebc8906edef596a3ef24dc02ab2c4fbc682e4cbedc032d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/export.cpptraj",
+      "bytes": 2210,
+      "sha256": "2b6c4d2767e70a1f69f7bf69baf3d0c32492d41e017949cca8ffb468244ac236",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/export.log",
+      "bytes": 9993,
+      "sha256": "d6ef2fed60b2159b1c04e3145a90f051835b81efb5a46f8fbcc4690124b5ebe7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "3949ad9862a7a2c344e103d02918143a51c11279dda4ef47fa86573331ebbe35",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.csv",
+      "bytes": 4985,
+      "sha256": "252a0195ab007209fce42608411a233b8d5186ddcd645879c9c21aa0c29393d4",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.json",
+      "bytes": 38947,
+      "sha256": "4b595524a63bfc91d8a8fdf04bc22a4cd4cd0ed96e93d5a4682d57aad3809d42",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.png",
+      "bytes": 221063,
+      "sha256": "2a30d231526432a13449e26117f8a3e70022e8b6fde849f2fecd83479bbe86d8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_path.dcd",
+      "bytes": 3597076,
+      "sha256": "6860771879b6af1941deaa1cc972f47c49af2fe5a811f18091a19c0b493bd5b2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "31ba20f0cb65462fe78070e855e1062e512ce379a17fa437b7c87d1e220e08de",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0008/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "361337327c3650efdae42951c8ff99d9f2c7451ca41503886d83c937023cfb42",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/export.cpptraj",
+      "bytes": 2335,
+      "sha256": "d8b1be7192bb0dd4c3145c5bf8920c8ce81dc84094bbc6f5c3ab6bc15ff12dca",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/export.log",
+      "bytes": 10460,
+      "sha256": "35a9e16305273a1380620c87b1cf9b70e6a4517a36d97eb5945faa5b89ef5097",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "5c904f0fbc1fab02c1d43600e87abf9976f5951a4baf599008d123cb365d6aa7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.csv",
+      "bytes": 5300,
+      "sha256": "17416c77b9f77a93a6c194e1c0beb9ca347107730e4a7c07b02f0fe3751742b3",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.json",
+      "bytes": 41333,
+      "sha256": "567946d36a8f61c3157126b5810c6376bb0ad582fdf9c533ac16e1aa84c9eda0",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.png",
+      "bytes": 224103,
+      "sha256": "e6bc8054daac1ba89666dcdfbe1757ad3047f265ccf60ac717cc060e083c64f4",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_path.dcd",
+      "bytes": 3836868,
+      "sha256": "05641d71aec358aef1d9cf03795d75d0d7d24eeca990ce4106cce02186299101",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "6ed7d6065230d1ab00e3beb69bd7c30536b2d865bddd0c6508afe09319a80b3c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0009/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "2df4bd7707a1b6802d6ad8e91c4c77790f25f24c7be108d1c0a32ba610709754",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/export.cpptraj",
+      "bytes": 2460,
+      "sha256": "c8b62aee4a80cce62185d5018aa2f5ad65a04b93908f71f2c7ace89fd54ef85a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/export.log",
+      "bytes": 10927,
+      "sha256": "033180854a2abfb808d4bd647841b974773f318c6f5ffc43184682240126df29",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "cfcbc52d9ae7aea75432f00d7b07600aa461712fa907bb641119501f147c8225",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.csv",
+      "bytes": 5614,
+      "sha256": "6ccc05c4e017aa0e4012e89707b82eef4d9a5af207e77a407a75244cab2a5b21",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.json",
+      "bytes": 43716,
+      "sha256": "13164617195af2f33d895afda12ead03c16fea04af121cd3fd1dd5167437d836",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.png",
+      "bytes": 229243,
+      "sha256": "79a84dc85171f892fbeb5ead182149e5a03ce372fb89928a63124101ecfa6182",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_path.dcd",
+      "bytes": 4076660,
+      "sha256": "f877d4caf4e8fbfb78cf33aea182ea2a7540cdf91d43c680fa49f40f1f067c45",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "7c57e6ffff214bda3bdf72c6a2a6d5c8c1d8572779df1bbceec9001638dadbbb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0010/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "b32c91548f8c80d7e6755268989c42c608bf53f99cb93306fb70fdd82a397b1a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/export.cpptraj",
+      "bytes": 2460,
+      "sha256": "c8b62aee4a80cce62185d5018aa2f5ad65a04b93908f71f2c7ace89fd54ef85a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/export.log",
+      "bytes": 10927,
+      "sha256": "cad4635025fc304afede71b836d3de00197340c23b3c94d5522648e2f4add74f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "976773463e261257405b9241b3ab1bf1ebd7ac86f342fcaae1adeea8bf210fcf",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.csv",
+      "bytes": 5614,
+      "sha256": "6ccc05c4e017aa0e4012e89707b82eef4d9a5af207e77a407a75244cab2a5b21",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.json",
+      "bytes": 43825,
+      "sha256": "8fdae4cb5282a466dd708d080d931f7988f976f1d9585a6aefee76f8823ba40d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.png",
+      "bytes": 229243,
+      "sha256": "79a84dc85171f892fbeb5ead182149e5a03ce372fb89928a63124101ecfa6182",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_path.dcd",
+      "bytes": 4076660,
+      "sha256": "f877d4caf4e8fbfb78cf33aea182ea2a7540cdf91d43c680fa49f40f1f067c45",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "7c57e6ffff214bda3bdf72c6a2a6d5c8c1d8572779df1bbceec9001638dadbbb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0011/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "2eea8ee92daf41e395735e3f06c92b82c2cce89a0ea4a7f2c081c1dd8cca862f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/export.cpptraj",
+      "bytes": 2460,
+      "sha256": "c8b62aee4a80cce62185d5018aa2f5ad65a04b93908f71f2c7ace89fd54ef85a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/export.log",
+      "bytes": 10927,
+      "sha256": "436e45e017c0c150df37fcdc0c743a7cd75db292119bdafa7a7854f92f42f8a0",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "ab3cc53c25160aa49ea8b3b7e50b859fcdaca7df8562812fee7e351233dd2eee",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.csv",
+      "bytes": 5614,
+      "sha256": "6ccc05c4e017aa0e4012e89707b82eef4d9a5af207e77a407a75244cab2a5b21",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.json",
+      "bytes": 43857,
+      "sha256": "65aa53f176b1047592995a1db53bc510f2e4bb78d4fec44279bf052bf4e547cd",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.png",
+      "bytes": 229243,
+      "sha256": "79a84dc85171f892fbeb5ead182149e5a03ce372fb89928a63124101ecfa6182",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_path.dcd",
+      "bytes": 4076660,
+      "sha256": "f877d4caf4e8fbfb78cf33aea182ea2a7540cdf91d43c680fa49f40f1f067c45",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "7c57e6ffff214bda3bdf72c6a2a6d5c8c1d8572779df1bbceec9001638dadbbb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0012/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "109ad84c807a73792a15c512e863ac73ff48ea85b52c409e90bfbddc92c67bc3",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/export.cpptraj",
+      "bytes": 2585,
+      "sha256": "ed5a95dfe28e11377dc21b752ecdfaaf02c6ba0ef29fd0be7f7b58687115e6c3",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/export.log",
+      "bytes": 11394,
+      "sha256": "5f4667bcf71bfe3643aec19f0200eb3c1a0aa37fcc3ff95493cb47ef9e59fb24",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "c439adbe96eb173256db7b9b22daed679ad8ec56f3414fb034530f40e78a7b98",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.csv",
+      "bytes": 5930,
+      "sha256": "80b183e9511fe2e27417e14d472f1f99d4897b508454f0c53f71bd74b3eb5354",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.json",
+      "bytes": 46244,
+      "sha256": "9ad3fe35e5b7eca55059b19d18c2280a5ee7541c8eef93581a2ab0c36b28422a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.png",
+      "bytes": 234928,
+      "sha256": "7120db9d54b1637248b9165dde2c17fe7b8d84c00b93b668b3dca8a5bc9f08a4",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_path.dcd",
+      "bytes": 4316452,
+      "sha256": "c7e9c40c1df67630ad3419ab1a2e23db890e04283a21f5c8c471d8cd21ace330",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "7c4704caf9c4f438e98d30b1a824d325e3c6d51727af532e4c16fe8ff2f01d03",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0013/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "3cf3d623c8158311ba38b840c196ce3a7fd413e39f646efde413f35faaeb92a8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/export.cpptraj",
+      "bytes": 2710,
+      "sha256": "d1fda5660872bcc0b7517ae71bd9ce432e6e309040161047a3770377b4e32271",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/export.log",
+      "bytes": 11861,
+      "sha256": "c64dbb60a6196addf093932ba38a36ecc93ed424fef3a04a58f70e52c6a9fc41",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "efdf84c5303a04d7ff78cc59c27bd2a32df45ae7a16e7fa3032335156a1615af",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.csv",
+      "bytes": 6245,
+      "sha256": "a18cd4f9a83eaa77a99a550b6de0be5ccd224886a270c00880ae4ef9e5c811a7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.json",
+      "bytes": 48627,
+      "sha256": "9cc49d0412eeaa789b531c33105cbb585146ed982c8f4429777cea49c8169e68",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.png",
+      "bytes": 238194,
+      "sha256": "0ea761e3d492af751de54a846ef068d0cfb65763bd56ae9352a34f20e23ac99f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_path.dcd",
+      "bytes": 4556244,
+      "sha256": "06a00b317898cdda99aa2ec0406199d92a1d7504a050a2f344a2bae672cd2f4c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "df322d50a1a037368863112ca9c817790ba8f9fffc41ae58630f468ae6c908e9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0014/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/MANIFEST.sha256",
+      "bytes": 924,
+      "sha256": "3fb4000fde94808cb0a8262c3524c46dd3980a4202f128f6bc5182c529f7c834",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/MANIFEST.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/export.cpptraj",
+      "bytes": 2710,
+      "sha256": "d1fda5660872bcc0b7517ae71bd9ce432e6e309040161047a3770377b4e32271",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/export.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/export.log",
+      "bytes": 11861,
+      "sha256": "51d9cb4160f59090a72b42a9debc05ee0c56895c656586b1b7062dcf8ca2a4b2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/export.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/nyl12_es_vmd_common.tcl",
+      "bytes": 2523,
+      "sha256": "e3dcf24f538e2bceccd521db1902416dd2363a39c21c7fc84dea2b75c3f94bff",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/nyl12_es_vmd_common.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/plot.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/plot.log"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/previous_download_manifest.sha256",
+      "bytes": 2300,
+      "sha256": "8d18726ce50f1d82e06077bd0714336a9f4ec65ad1a1dd492ea62a523c778e94",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/previous_download_manifest.sha256"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/qm_indices.tcl",
+      "bytes": 1183,
+      "sha256": "4b22d909cc939e3a620b60db082282c37540c529fabc1d482da85a68041d4a80",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/qm_indices.tcl"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.csv",
+      "bytes": 6245,
+      "sha256": "a18cd4f9a83eaa77a99a550b6de0be5ccd224886a270c00880ae4ef9e5c811a7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.csv"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.json",
+      "bytes": 48767,
+      "sha256": "7d3cea6f5374cd907a18caaaa666ffaf420ddc9816b8d7a0bf06d6ffa9e8efb7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.png",
+      "bytes": 238194,
+      "sha256": "0ea761e3d492af751de54a846ef068d0cfb65763bd56ae9352a34f20e23ac99f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_distances.png"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_path.dcd",
+      "bytes": 4556244,
+      "sha256": "06a00b317898cdda99aa2ec0406199d92a1d7504a050a2f344a2bae672cd2f4c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_path.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_path.vmd",
+      "bytes": 347,
+      "sha256": "df322d50a1a037368863112ca9c817790ba8f9fffc41ae58630f468ae6c908e9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/reaction_path.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/stripped.parm7.gz",
+      "bytes": 1041607,
+      "sha256": "1cc47250f212bd078cf75036ad1fa3242d8102787f666600c91e71cb59c94ad5",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_inspection/update_0015/stripped.parm7.gz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/optimization.nc",
+      "bytes": 495626408,
+      "sha256": "864cbdc86cfdd608380220a85811d9f326ab222ae2edda6fecdd69ec2a373168",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path.xyz",
+      "bytes": 9912124000,
+      "sha256": "1ce508e063d44fab0479332424475ebad82104c81b1003b1d9a1572a5882c5af",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path_active.xyz",
+      "bytes": 9912124000,
+      "sha256": "1ce508e063d44fab0479332424475ebad82104c81b1003b1d9a1572a5882c5af",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path_force.xyz",
+      "bytes": 9912124000,
+      "sha256": "c6eec9f0a332c27df6abe30e591ba377afbab4fde1eca5762dd15474c254a948",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/phase1_unrestrained/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/optimization.nc",
+      "bytes": 81779032,
+      "sha256": "d2f486d261c3eaa8683b8e31c57c57438f1c27c692747bb16cf8d6571931482b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path.xyz",
+      "bytes": 1640456522,
+      "sha256": "9ca9b54209315cf63bb4b5c7f0ea7d2ac8af540cf9dff0c1f28b327d826d8c5a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path_active.xyz",
+      "bytes": 1640456522,
+      "sha256": "9ca9b54209315cf63bb4b5c7f0ea7d2ac8af540cf9dff0c1f28b327d826d8c5a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path_force.xyz",
+      "bytes": 1640456522,
+      "sha256": "5095189a207c9f3a9660bd53ed5d747a87a9b5e4f42f9032288a52a7e0bbe5e4",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_00/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/optimization.nc",
+      "bytes": 87974352,
+      "sha256": "20961d75f47553e1fa91eeb24284e7455e1ce970b95eb42010ca4abe6e7b0207",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path.xyz",
+      "bytes": 1764358072,
+      "sha256": "1a8ed766ea1223ab8959a274e9657dbcbffd18d6a6b03d5aa6b93e4baa16150c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path_active.xyz",
+      "bytes": 1764358072,
+      "sha256": "1a8ed766ea1223ab8959a274e9657dbcbffd18d6a6b03d5aa6b93e4baa16150c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path_force.xyz",
+      "bytes": 1764358072,
+      "sha256": "13790ccc9b7d4b9d83cd61233f53ffa58556bf2583d39b4b7b16b901c5318ba9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_01/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/optimization.nc",
+      "bytes": 52041496,
+      "sha256": "af1bfe13154b3ca1f7697aeb16bba6cfc172aef6bcb9bc08f9cf646e420d9b0d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path.xyz",
+      "bytes": 1055641206,
+      "sha256": "10fa7e9da7656a41e6699d0c525fdbb45efb1bd6370f7f587be1196ad2bd2f4d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path_active.xyz",
+      "bytes": 1055641206,
+      "sha256": "10fa7e9da7656a41e6699d0c525fdbb45efb1bd6370f7f587be1196ad2bd2f4d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path_force.xyz",
+      "bytes": 1055641206,
+      "sha256": "67caa6e123f4b35d216de95b8668e52772cf0b9aa76edd0f5600fce43473a269",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_02/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/optimization.nc",
+      "bytes": 16108640,
+      "sha256": "68fa7c24715d1d6f17e42a8672235f06b5e09033b4ee384dba8141b5fafdecc0",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path.xyz",
+      "bytes": 322144030,
+      "sha256": "77331b3f6190a25779c136eb9085f87ae1b18e58e4577913d7bb3a843211e00d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path_active.xyz",
+      "bytes": 322144030,
+      "sha256": "77331b3f6190a25779c136eb9085f87ae1b18e58e4577913d7bb3a843211e00d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path_force.xyz",
+      "bytes": 322144030,
+      "sha256": "eb8f85944f2de18253a7510297ee05a6c8ffd95e5f454e6f117a0122e2e6f7e0",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_03/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/optimization.nc",
+      "bytes": 14869576,
+      "sha256": "8766e2c037978573a2600282071e83b740f067005c0e6b72e57f3b2e68198646",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path.xyz",
+      "bytes": 317187968,
+      "sha256": "f5afb36c473062388c3924b1568d2d5213b44e9775bc4214a98947471a54cd84",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path_active.xyz",
+      "bytes": 317187968,
+      "sha256": "f5afb36c473062388c3924b1568d2d5213b44e9775bc4214a98947471a54cd84",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path_force.xyz",
+      "bytes": 317187968,
+      "sha256": "9a50ceab3e892fcbbb1d35241fc48e59c9dd08602a0c4a4107c95b02d148c3ad",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_04/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/optimization.nc",
+      "bytes": 111516568,
+      "sha256": "67266370595f93d06994bd55491179223c28b3c17452edc3ae1147bcf22b5c41",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path.xyz",
+      "bytes": 2250052148,
+      "sha256": "a5cdfd3e189e0a7dfc379044b571b6dfb6f90707ea9829a06a38885764e19cba",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path_active.xyz",
+      "bytes": 2250052148,
+      "sha256": "a5cdfd3e189e0a7dfc379044b571b6dfb6f90707ea9829a06a38885764e19cba",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path_force.xyz",
+      "bytes": 2250052148,
+      "sha256": "bdb1e9f7049408b53be21344b0c3dc9bb57c21862a0cbd17daea0ab54daa56be",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_05/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/optimization.nc",
+      "bytes": 59475880,
+      "sha256": "3236043a96107d4ebbed77b98ea27660773fc3307797813945cbce3ba495bc6e",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path.xyz",
+      "bytes": 1199367004,
+      "sha256": "42dce58328ded9f91bd52cd8345173d1254fc739790181f7429909e6357000be",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path_active.xyz",
+      "bytes": 1199367004,
+      "sha256": "42dce58328ded9f91bd52cd8345173d1254fc739790181f7429909e6357000be",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path_force.xyz",
+      "bytes": 1199367004,
+      "sha256": "3bdcc7d0127068331c321e5e871ba41c27322c09ed74ecb75b3c28f7486387b9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_06/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/optimization.nc",
+      "bytes": 49563368,
+      "sha256": "57aab62995dfca3fbec6290505277189ca4c0715baa34ca9da4d19a6ee0c8942",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path.xyz",
+      "bytes": 1001124524,
+      "sha256": "f7f8964d874a0cdd260633760d3fd440731d3ed117d288422592071b0e6c954b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path_active.xyz",
+      "bytes": 1001124524,
+      "sha256": "f7f8964d874a0cdd260633760d3fd440731d3ed117d288422592071b0e6c954b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path_force.xyz",
+      "bytes": 1001124524,
+      "sha256": "25628c1903713ed98c712f8a91cccaa7956cf74453ef28f0ed21a9fbbd4aeb41",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_07/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/optimization.nc",
+      "bytes": 56997752,
+      "sha256": "d31208021d2b4c7e8540f4bc9cbb372365fcb6f2a85e3bc8533dcc9c13705d1b",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path.xyz",
+      "bytes": 1139894260,
+      "sha256": "dc5f6cb03871a490d0abb65081c994e06882152ae6b51a89c0d2d15ad2213cfb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path_active.xyz",
+      "bytes": 1139894260,
+      "sha256": "dc5f6cb03871a490d0abb65081c994e06882152ae6b51a89c0d2d15ad2213cfb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path_force.xyz",
+      "bytes": 1139894260,
+      "sha256": "473f639e25c3b6d7a1f4088042d0310f8c602ec427bd3ff9abc8529131e010ae",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_08/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/optimization.nc",
+      "bytes": 33455536,
+      "sha256": "2ab77215b28c35bd0f3c46204cd796f4751d9efeb8f606b169772b2dddb13a4e",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path.xyz",
+      "bytes": 674024432,
+      "sha256": "36bf8373e8f70aa459a053795db3fa0c28b2ec8deb0010cd8d97b22361c92ea6",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path_active.xyz",
+      "bytes": 674024432,
+      "sha256": "36bf8373e8f70aa459a053795db3fa0c28b2ec8deb0010cd8d97b22361c92ea6",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path_force.xyz",
+      "bytes": 674024432,
+      "sha256": "5d505fb3a8c18ddc74c4a9eed09504c1d21581020a0fe5ea29afa13e4b544d99",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_09/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/optimization.nc",
+      "bytes": 130102528,
+      "sha256": "3c4fc9575b02f63a2ea9a05ff4553c543ec73da6acf76f53230580247970e835",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path.xyz",
+      "bytes": 2606888612,
+      "sha256": "b655a22be113abc1c55f275f71f0201e4405149180eb0f94008d0d60049647f8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path_active.xyz",
+      "bytes": 2606888612,
+      "sha256": "b655a22be113abc1c55f275f71f0201e4405149180eb0f94008d0d60049647f8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path_force.xyz",
+      "bytes": 2606888612,
+      "sha256": "cc2a6095c9133784ac5a140934fa76ac396f0e818366b57158e1e5df45718d50",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_10/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/optimization.nc",
+      "bytes": 63193072,
+      "sha256": "9d0389a4636ab6c26d23bcce579163fa61278fc210f9554903c14935d79e2c2e",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path.xyz",
+      "bytes": 1283620058,
+      "sha256": "05f91eb8a9ed7b58de8ed8b3a39aecd436f260ab731b1c460a45439f35bde0bb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path_active.xyz",
+      "bytes": 1283620058,
+      "sha256": "05f91eb8a9ed7b58de8ed8b3a39aecd436f260ab731b1c460a45439f35bde0bb",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path_force.xyz",
+      "bytes": 1283620058,
+      "sha256": "0077ae0dc41ae386a66d347664ba0a556e247ed7d522b37c25b2fa9ebbad6cad",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_11/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/optimization.nc",
+      "bytes": 34694600,
+      "sha256": "8a2ab98be75bf2963709ec822b8cb6dc3d6cf3edba416feae6706b654909e931",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path.xyz",
+      "bytes": 713672928,
+      "sha256": "d41cdc4cd5200d9bf503ce243cea330e4408a4f6da7dc4adea411eecb71df423",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path_active.xyz",
+      "bytes": 713672928,
+      "sha256": "d41cdc4cd5200d9bf503ce243cea330e4408a4f6da7dc4adea411eecb71df423",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path_force.xyz",
+      "bytes": 713672928,
+      "sha256": "e5086d87981cd680f18736d18646f4a5b18fe904ab086e46e12738e9cd66f7d7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_12/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/optimization.nc",
+      "bytes": 97886864,
+      "sha256": "a65bcab16b5cdd238403ebb9b74d1af94d6708daf7cee86b070fc5f4c17e73f4",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path.xyz",
+      "bytes": 1962600552,
+      "sha256": "d246a65357263fa13d40095a9d15033273ba6240b09b5510c01a3caec27cb332",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path_active.xyz",
+      "bytes": 1962600552,
+      "sha256": "d246a65357263fa13d40095a9d15033273ba6240b09b5510c01a3caec27cb332",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path_force.xyz",
+      "bytes": 1962600552,
+      "sha256": "3aeb9cbc795ced624a30bf939a91cfc335334aaca27b37678803b37258dd348a",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_13/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/optimization.nc",
+      "bytes": 100364992,
+      "sha256": "3a7def4a21f60b107f5b67b197b7870826a61004c0096009b90fa3d9f4b15444",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path.xyz",
+      "bytes": 2007205110,
+      "sha256": "e6da3903800031aea07b722280780219a24e3fc82504ce25df72958ffb298e14",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path_active.xyz",
+      "bytes": 2007205110,
+      "sha256": "e6da3903800031aea07b722280780219a24e3fc82504ce25df72958ffb298e14",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path_force.xyz",
+      "bytes": 2007205110,
+      "sha256": "32eaef906502ceeb3e0484c652d390eedf508dd099bc61282a6bedb456e49249",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_14/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/optimization.nc",
+      "bytes": 105321248,
+      "sha256": "30027e43cab2fa08cb4b100f465cb09f05688a0cce6b58e109c9bbfbaa2b4ed2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path.xyz",
+      "bytes": 2116238474,
+      "sha256": "34f9d1bcb23a0e9610ca7f12f087ae1a9f9a7528d2fe6ec0d9ea6bbdfd35fed9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path_active.xyz",
+      "bytes": 2116238474,
+      "sha256": "34f9d1bcb23a0e9610ca7f12f087ae1a9f9a7528d2fe6ec0d9ea6bbdfd35fed9",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path_force.xyz",
+      "bytes": 2116238474,
+      "sha256": "1099c98bcbeb208b35d00edc45a5535a32226bcc9c8fc9aadc70148332276de2",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_15/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/optimization.nc",
+      "bytes": 74344648,
+      "sha256": "fd32176598ca13cccebe4040ce94af1982531f621429f889205cb7d7119e78ed",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path.xyz",
+      "bytes": 1501686786,
+      "sha256": "fade312b546419ba0ff9467b63603c9ac4d4b08bf47f38c00c506a8218ce264f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path_active.xyz",
+      "bytes": 1501686786,
+      "sha256": "fade312b546419ba0ff9467b63603c9ac4d4b08bf47f38c00c506a8218ce264f",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path_force.xyz",
+      "bytes": 1501686786,
+      "sha256": "a5ad667119afd7f93e33c6dfc56f6ed89773498495f32dd94ab080a813808df8",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_16/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/optimization.nc",
+      "bytes": 122668144,
+      "sha256": "f2a67d551f0a8a6d32ddfb014ea371c56c4cf658eb62a4bb72b610b76f7cf207",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path.xyz",
+      "bytes": 2468118876,
+      "sha256": "a1f522a47d9bf309be6c40086df646a6ffbd1e7d75e0ce9e93c1d7feee442342",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path_active.xyz",
+      "bytes": 2468118876,
+      "sha256": "a1f522a47d9bf309be6c40086df646a6ffbd1e7d75e0ce9e93c1d7feee442342",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path_force.xyz",
+      "bytes": 2468118876,
+      "sha256": "dcc36c46397974ed874b3f88ea5b560d697d7bc77116711ee218400048945c2c",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_17/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/optimization.nc",
+      "bytes": 44607112,
+      "sha256": "b893cfa32540a9449b104496c2b1f46a8078e3822bdfb20e0c65f06961c60442",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/optimization.nc"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path.xyz",
+      "bytes": 902003284,
+      "sha256": "b9c79b8a27b1d32fc7d1ca17659700507c4fef563d8a562752cd906ccd539666",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path_active.xyz",
+      "bytes": 902003284,
+      "sha256": "b9c79b8a27b1d32fc7d1ca17659700507c4fef563d8a562752cd906ccd539666",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path_active.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path_force.xyz",
+      "bytes": 902003284,
+      "sha256": "8c6556b2049284c5c094e5df9bf6e78740be2ecc6b9305d317a460634f32b8a3",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/stage1_18/path_force.xyz"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_README.md",
+      "bytes": 438,
+      "sha256": "7d21f00586a5ab358879340f1829f34d0c47606958569e939416b7620c3eb767",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_README.md"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_frames.json",
+      "bytes": 14749,
+      "sha256": "9c750f6b8fd78faffdc4b10346ca16ee163245786ce234da093a1e303f8656be",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_frames.json"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_progress.dcd",
+      "bytes": 57310484,
+      "sha256": "c3ac5bbb618307e1076d5829718838ae1f462207f16878bd6a3ab9c82c7f2db7",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_progress.dcd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_progress.vmd",
+      "bytes": 420,
+      "sha256": "3eee8119182836602f8095785cacee830de927b6de74094c710dbf92e426cb64",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/asp272_relay_progress.vmd"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/concatenate.cpptraj",
+      "bytes": 2100,
+      "sha256": "4c1df3d586298e45ae7c8b83793a1efaa8bba7d4c42aece596bd0eef0ddefa95",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/concatenate.cpptraj"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/cpptraj.log",
+      "bytes": 10905,
+      "sha256": "c59fc925ba53cd3bdca982df1e2030c9836a7f47ec9feb26039a8496ac2d126d",
+      "archived": true,
+      "archive_path": "/data/jpc/covalent-enzyme-design/clutter/obsolete_qmmm_20261025/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/vmd_progress_snapshot_20261025/cpptraj.log"
+    }
+  ],
+  "ended_utc": "2026-10-26T01:50:27.835820+00:00",
+  "total_bytes": 112478870857
+}

@@ -1,0 +1,45 @@
+{
+  "atom_identities": {
+    "13905": {"name": "N", "residue": 929},
+    "13906": {"name": "H1", "residue": 929},
+    "13907": {"name": "H2", "residue": 929},
+    "13916": {"name": "OG1", "residue": 929},
+    "13917": {"name": "HG1", "residue": 929},
+    "14559": {"name": "OD1", "residue": 968},
+    "14560": {"name": "OD2", "residue": 968},
+    "14578": {"name": "OD1", "residue": 970},
+    "14579": {"name": "OD2", "residue": 970},
+    "19903": {"name": "C54", "residue": 1313},
+    "19904": {"name": "O49", "residue": 1313},
+    "19905": {"name": "N59", "residue": 1313}
+  },
+  "pairs": {
+    "OG1-C": {"atoms": [13916, 19903], "group": "Covalent center"},
+    "C-O(oxyanion)": {"atoms": [19903, 19904], "group": "Covalent center"},
+    "C-N(leaving group)": {"atoms": [19903, 19905], "group": "Covalent center"},
+    "OG1-HG1": {"atoms": [13916, 13917], "group": "Transferring proton"},
+    "Asp272 OD1-HG1": {"atoms": [14559, 13917], "group": "Transferring proton"},
+    "Asp272 OD2-HG1": {"atoms": [14560, 13917], "group": "Transferring proton"},
+    "Thr N-HG1": {"atoms": [13905, 13917], "group": "Transferring proton"},
+    "Thr N-H1": {"atoms": [13905, 13906], "group": "Amine geometry"},
+    "Thr N-H2": {"atoms": [13905, 13907], "group": "Amine geometry"},
+    "OG1-Asp272 OD1": {"atoms": [13916, 14559], "group": "Relay separation"},
+    "Thr N-Asp272 OD1": {"atoms": [13905, 14559], "group": "Relay separation"},
+    "Thr N-Asp274 OD1": {"atoms": [13905, 14578], "group": "Other contacts"},
+    "Thr N-Asp274 OD2": {"atoms": [13905, 14579], "group": "Other contacts"}
+  },
+  "jump_threshold_A": 0.25,
+  "include_rejected_endpoint": true,
+  "output": "/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272/01_coordinate_drive_to_ti1/live_inspection",
+  "viewer_assets": "/data/jpc/covalent-enzyme-design/output_vmd_inspection_20261024",
+  "strip_mask": "!:1-1313,3328,10325,20216",
+  "expected_stripped_atoms": 19976,
+  "cpptraj": "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+  "plot_python": "/data/jpc/code/miniforge3/bin/python",
+  "export_environment": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "MPLBACKEND": "Agg"
+  },
+  "download_directory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272/01_coordinate_drive_to_ti1/vmd_progress",
+  "excluded_endpoint_directories": []
+}

@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-26T01:47:08.297993+00:00",
+  "policy": "Trash only redundant DL-FIND full-system XYZ files, superseded full optimizer NetCDF files, and regenerated live-publisher products. Retain restarts, mdout, inputs, acceptance, source snapshots, curated VMD, and append-only provenance.",
+  "rollback": "Restore from the desktop trash or regenerate from retained inputs and restarts.",
+  "files": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/live_energy_plot/energies.json",
+      "bytes": 2088,
+      "sha256": "48315d94774912cedccc3297f7ea89a1953ceaf577a5ae692f3abc7c0a160b70",
+      "trashed": false
+    }
+  ]
+}

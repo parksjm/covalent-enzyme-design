@@ -523,3 +523,21 @@ to the enzyme. GFN2 is optional after explicit software setup approval;
 g-xTB can first be evaluated only for clusters if installation is approved.
 Report signed profile errors, reaction energies, barriers when present,
 geometry/proton-state retention, convergence and model/version hashes.
+# Corrected unrestrained construction protocol (2026-10-25)
+
+The initial relay pilot used a 10 kcal mol-1 A-2 positional restraint on every
+MM atom. That suppresses protein, substrate and solvent reorganization and is
+not suitable as the relaxed E-S reference or the production construction path.
+Those calculations are retained only as restrained diagnostics; they cannot
+establish a mechanistic barrier.
+
+The corrected workflow first converges the complete solvated E-S complex with
+all atoms active and no positional or reaction-coordinate restraints. It then
+uses 21 bounded windows for OG1 attack/HG1 transfer to Asp272 OD1 and 21 windows
+for Asp272-to-terminal-N proton transfer. During the second stage, OG1-C is
+biased at 1.55 A solely to construct a TI1 seed; this is explicitly artificial
+and is not interpreted as an unbiased path. All biases are subsequently
+released and TI1 must remain tetrahedral in a converged optimization before it
+is accepted as a minimum candidate. Highest-energy driven structures will only
+serve as starting guesses for later first-order saddle searches.
+

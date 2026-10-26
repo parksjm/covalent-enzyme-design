@@ -1,3 +1,40 @@
+## CURRENT — corrected unrestrained E-S to TI1 workflow, 2026-10-25
+
+User rejected the prior blanket k10 positional restraints on all 103153 MM
+atoms. The prior restrained paths remain diagnostic history only. Their bulky,
+regenerable XYZ/NetCDF/live-publisher artifacts (283 files; 112478870857 bytes)
+and curated inspection bundle were moved reversibly to `clutter/`; see
+`provenance/qmmm_cleanup_20261025/cleanup_manifest.json`. Core restarts, mdout,
+inputs, acceptance records, source snapshots and append-only provenance remain
+in place. The active old raw relay directory is now 380 MB.
+
+New session: `nyl12_unrestrained_es_to_ti1_20261025`. Active calculation:
+`qmmm/pa6_asp272/00_es_unrestrained/`. It continues the E-S-like endpoint that
+reverted from biased phase I but had not converged after 2000 cycles. Exact
+controls: DFTB3/3ob-3-1, unchanged QM98/link8/charge-2 and full solvated system,
+fixed cell, all 103251 atoms active, `ntr=0`, `nmropt=0`, no DISANG/reference or
+frozen atoms, native DL-FIND maximum-component tolerance 1e-4 Hartree/Bohr, up
+to 5000 continuation cycles. `verbosity=1` suppresses redundant multi-gigabyte
+DL-FIND XYZ files; Amber NetCDF snapshots remain available.
+
+Only after native convergence plus the noncovalent E-S geometry gate, the same
+tmux workflow proceeds to `01_coordinate_drive_to_ti1/`: 21 phase-I windows
+approach OG1-C=1.55 A and transfer HG1 to Asp272 OD1, followed by 21 phase-II
+windows with the attack target bounded at 1.55 A while transferring HG1 from
+Asp272 toward terminal Thr N. No target is extrapolated to a shorter attack or
+Asp-H bond. Tracking errors are diagnostics, not arbitrary stop limits. The
+environment has no positional restraints; only the two declared reaction
+coordinate biases operate in each window. Asp272 OD1 is the actual acceptor
+(current HG1 distance 1.83 A); OD2 is tracked but is 3.95 A away.
+
+After phase II, every driving bias is released in
+`02_ti1_unrestrained_validation/`. A converged tetrahedral geometry that
+persists there is a TI1 minimum candidate. Driven endpoints are construction
+and TS-search seeds, not a barrier. The live publisher updates the endpoint VMD
+movie and all declared reaction-distance plots after every completed window.
+Prepared/executed input hashes are in
+`jobs/unrestrained_es_to_ti1_20261025/status.json`.
+
 ## CURRENT — two original-interval phase-I windows running
 
 IMPORTANT clarification: the ES reference and current driven path use k10

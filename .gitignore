@@ -9,6 +9,8 @@ __pycache__/
 htmlcov/
 output*/
 scratch/
+clutter/
+jobs/
 *.prmtop
 *.inpcrd
 *.rst7
