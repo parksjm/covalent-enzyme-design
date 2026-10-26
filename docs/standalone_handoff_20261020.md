@@ -50,6 +50,21 @@ the absolute/relative energy plot are in
 snapshot while the minimization continues. These are whole-system optimization
 energies and must not be interpreted as a reaction barrier.
 
+Overnight conditional session `nyl12_es_conditional_to_path_20261025` watches
+the current 5000-cycle run without interrupting it. If that run converges, the
+original controller proceeds to coordinate driving and the watcher exits
+without launching anything. If it exhausts without native DL-FIND convergence,
+the watcher creates `00_es_unrestrained/continuation_01/`, starts from the exact
+latest restart, and permits up to 10000 additional cycles with the same DFTB3
+Hamiltonian, QM98/link8/charge−2 definition, cell, tolerances, and no restraints.
+Only a natively converged, finite endpoint that passes the declared noncovalent
+E-S geometry gate can start coordinate driving. After an accepted continuation,
+the watcher runs the existing live path publisher and resumes the 21+21-window
+coordinate-driving workflow from that exact hashed endpoint. If either E-S run
+fails acceptance, the chain stops explicitly. Live watcher state:
+`00_es_unrestrained/conditional_continuation_status.json`; logged tmux metadata:
+`00_es_unrestrained/conditional_continuation_job/`.
+
 Only after native convergence plus the noncovalent E-S geometry gate, the same
 tmux workflow proceeds to `01_coordinate_drive_to_ti1/`: 21 phase-I windows
 approach OG1-C=1.55 A and transfer HG1 to Asp272 OD1, followed by 21 phase-II

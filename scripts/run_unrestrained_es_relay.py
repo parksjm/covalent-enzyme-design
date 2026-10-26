@@ -285,21 +285,32 @@ def _run_ti1_release(
     return acceptance
 
 
-def run() -> None:
-    """Run E-S convergence, then two bounded coordinate-driving stages."""
-    es_inputs = json.loads((ES / "inputs.json").read_text())
+def _run_path_from_endpoint(endpoint: Path) -> None:
+    """Run coordinate driving from one accepted, converged E-S endpoint."""
     path_inputs = json.loads((PATH / "inputs.json").read_text())
     status = json.loads((PATH / "status.json").read_text())
-    if status["state"] != "waiting_for_es":
-        raise ValueError("Workflow has already been started")
+    resumable_stopped = (
+        status["state"] == "stopped"
+        and status.get("reason") == "Unrestrained E-S continuation did not converge"
+        and not status["completed_windows"]
+    )
+    if status["state"] != "waiting_for_es" and not resumable_stopped:
+        raise ValueError("Coordinate-driving workflow has already been started")
+    topology = Path(path_inputs["topology"])
+    if not coordinates_valid(topology, endpoint, path_inputs["box"]):
+        raise ValueError("Accepted E-S endpoint has invalid coordinates or cell")
+    initial = _validate_es(topology, endpoint)
     try:
-        initial = _run_es(es_inputs)
         status.update(
-            state="running", es_endpoint_distances_A=initial, updated_utc=_now()
+            state="running",
+            reason=None,
+            es_endpoint=str(endpoint),
+            es_endpoint_sha256=sha256(endpoint),
+            es_endpoint_distances_A=initial,
+            updated_utc=_now(),
         )
         write_json(PATH / "status.json", status)
-        topology = Path(path_inputs["topology"])
-        restart = ES / "optimized.ncrst"
+        restart = endpoint
         rows = schedule(initial, path_inputs["windows_per_stage"])
         for row in rows:
             restart = _run_window(row, restart, topology, path_inputs)
@@ -329,15 +340,30 @@ def run() -> None:
         write_json(PATH / "status.json", status)
 
 
+def run() -> None:
+    """Run E-S convergence, then two bounded coordinate-driving stages."""
+    es_inputs = json.loads((ES / "inputs.json").read_text())
+    _run_es(es_inputs)
+    _run_path_from_endpoint(ES / "optimized.ncrst")
+
+
 def main() -> None:
     """Prepare or execute the corrected sequential workflow."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("prepare", "run"))
+    parser.add_argument("mode", choices=("prepare", "run", "resume-path"))
+    parser.add_argument("--endpoint", type=Path)
     args = parser.parse_args()
     logging.basicConfig(
         level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
     )
-    prepare() if args.mode == "prepare" else run()
+    if args.mode == "prepare":
+        prepare()
+    elif args.mode == "run":
+        run()
+    else:
+        if args.endpoint is None:
+            parser.error("resume-path requires --endpoint")
+        _run_path_from_endpoint(args.endpoint.resolve())
 
 
 if __name__ == "__main__":
