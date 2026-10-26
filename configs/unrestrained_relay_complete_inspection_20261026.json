@@ -73,6 +73,9 @@
     "O49_to_Phe113_N": ["substrate_O49", "Phe113_N"],
     "O49_to_Asn186_ND2": ["substrate_O49", "Asn186_ND2"]
   },
+  "persistent_angles": {
+    "Burgi_Dunitz_OG1_C54_O49": ["OG1", "substrate_C", "substrate_O49"]
+  },
   "proton_atom": "HG1",
   "export_environment": {
     "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",

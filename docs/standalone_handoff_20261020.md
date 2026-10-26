@@ -57,9 +57,16 @@ The live VMD publisher now also installs stage-aware native bond-distance
 labels, DynamicBonds representations for the forming/breaking bonds, persistent
 O49--Phe113 N and O49--Asn186 ND2 distances, and a small HG1 sphere. The helper
 is `scripts/nyl12_reactive_distances.tcl`; the replacement read-only monitor is
-`nyl12_reactive_path_inspection_20261026`. It waits 25 seconds after each status
+`nyl12_vmd_labels_path_inspection_20261026`. It waits 25 seconds after each status
 change so its complete annotated bundle is published after the frozen primary
 publisher, without modifying or interrupting sander.
+
+Native bond-distance labels are explicitly shown on load rather than relying on
+VMD's default label visibility. The two persistent oxyanion-hole measurements,
+O49--Phe113 backbone N and O49--Asn186 ND2, are also explicitly shown. A native
+angle label reports the Burgi-Dunitz angle as OG1--C54--O49, with C54 as the
+central atom. The current monitor provenance is
+`01_coordinate_drive_to_ti1/inspection_monitor_job_20261026_attempt3/`.
 
 ## CURRENT — top-level output cleanup, 2026-10-25
 

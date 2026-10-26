@@ -65,6 +65,7 @@ def test_optional_dynamic_pairs_and_persistent_labels_are_exported(
         "O49_to_Phe113_N": ["O49", "PheN"],
         "O49_to_Asn186_ND2": ["O49", "AsnND2"],
     }
+    config["persistent_angles"] = {"Burgi_Dunitz_OG1_C54_O49": ["O", "C", "O49"]}
     config["proton_atom"] = "H"
     viewer = tmp_path / "view.vmd"
     viewer.write_text("# existing viewer\n")
@@ -74,10 +75,13 @@ def test_optional_dynamic_pairs_and_persistent_labels_are_exported(
     assert "{1 OG1 4 C54 1.9}" in text
     assert "{O49_to_Phe113_N 10 O49 11 N}" in text
     assert "{O49_to_Asn186_ND2 10 O49 12 ND2}" in text
-    assert text.rstrip().endswith("2 HG1")
+    assert "{Burgi_Dunitz_OG1_C54_O49 1 OG1 4 C54 10 O49}" in text
+    assert " 2 HG1 " in text
     tcl = (ROOT / "scripts/nyl12_reactive_distances.tcl").read_text()
     assert "mol representation DynamicBonds $cutoff 0.12 12" in tcl
     assert "$first getbonds" in tcl and "$first setbonds" in tcl
+    assert "label show Bonds $id" in tcl
+    assert "label add Angles" in tcl and "label show Angles $id" in tcl
 
 
 @pytest.mark.parametrize("bad", ["stage", "empty", "same", "index", "name"])

@@ -6,7 +6,7 @@ namespace eval ::nyl12_reactive {
     variable dynamic_reps
     variable current_stage
 }
-proc ::nyl12_reactive::install {molid stages pairs_by_stage {dynamic_by_stage {}} {persistent_pairs {}} {proton_atom {}} {proton_name {}}} {
+proc ::nyl12_reactive::install {molid stages pairs_by_stage {dynamic_by_stage {}} {persistent_pairs {}} {proton_atom {}} {proton_name {}} {persistent_angles {}}} {
     variable frame_stages
     variable stage_pairs
     variable label_ids
@@ -83,6 +83,22 @@ proc ::nyl12_reactive::install {molid stages pairs_by_stage {dynamic_by_stage {}
         }
         set id [llength [label list Bonds]]
         label add Bonds $molid/$a $molid/$b
+        label show Bonds $id
+    }
+    foreach angle $persistent_angles {
+        lassign $angle title a name_a b name_b c name_c
+        foreach index [list $a $b $c] name [list $name_a $name_b $name_c] {
+            set selection [atomselect $molid "index $index and name $name"]
+            set count [$selection num]
+            $selection delete
+            if {$count != 1} {error "Persistent angle atom mismatch: $index/$name"}
+        }
+        if {[llength [lsort -unique -integer [list $a $b $c]]] != 3} {
+            error "Persistent angle needs three distinct atoms"
+        }
+        set id [llength [label list Angles]]
+        label add Angles $molid/$a $molid/$b $molid/$c
+        label show Angles $id
     }
     if {$proton_atom ne ""} {
         set proton [atomselect $molid "index $proton_atom and name $proton_name"]

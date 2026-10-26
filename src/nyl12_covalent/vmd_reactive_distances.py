@@ -21,6 +21,7 @@ def append_reactive_labels(
     definitions = config["stage_measurements"]
     dynamic = config.get("stage_dynamic_bonds", {})
     persistent = config.get("persistent_measurements", {})
+    persistent_angles = config.get("persistent_angles", {})
     cutoffs = config.get("dynamic_bond_cutoffs", {})
     proton_atom = config.get("proton_atom")
     stages = [str(row["stage"]) for row in rows]
@@ -66,6 +67,27 @@ def append_reactive_labels(
         persistent_lines.append(
             f"{{{label} {a['index']} {a['name']} {b['index']} {b['name']}}}"
         )
+    angle_lines = []
+    for label, atom_keys in persistent_angles.items():
+        if not re.fullmatch(r"[A-Za-z0-9_]+", label) or len(atom_keys) != 3:
+            raise ValueError("Invalid persistent angle declaration")
+        angle_atoms = [atoms[key] for key in atom_keys]
+        for atom in angle_atoms:
+            if (
+                not isinstance(atom["index"], int)
+                or atom["index"] < 0
+                or not re.fullmatch(r"[A-Za-z0-9_]+", atom["name"])
+            ):
+                raise ValueError("Invalid persistent angle atom identity")
+        if len({atom["index"] for atom in angle_atoms}) != 3:
+            raise ValueError("Persistent angle needs three distinct atoms")
+        angle_lines.append(
+            "{"
+            + label
+            + " "
+            + " ".join(f"{atom['index']} {atom['name']}" for atom in angle_atoms)
+            + "}"
+        )
     if proton_atom is not None:
         proton = atoms[proton_atom]
         if (
@@ -87,7 +109,14 @@ def append_reactive_labels(
         + "} {"
         + " ".join(persistent_lines)
         + "}"
-        + (f" {proton['index']} {proton['name']}" if proton_atom is not None else "")
+        + (
+            f" {proton['index']} {proton['name']}"
+            if proton_atom is not None
+            else " {} {}"
+        )
+        + " {"
+        + " ".join(angle_lines)
+        + "}"
         + "\n"
     )
 
