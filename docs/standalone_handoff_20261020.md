@@ -42,6 +42,13 @@ is loaded but hidden. `frame_manifest.json` records exact atom remapping,
 source-snapshot hashes, and independent DCD coordinate/box validation. The
 minimization remains active, so this is a progress snapshot rather than its
 final trajectory; regenerate with `scripts/export_active_es_optimization_vmd.py`.
+DL-FIND energy progress is extracted reproducibly from the paired
+`Energy calculation finished` and `Testing convergence in cycle` records by
+`scripts/plot_dlfind_optimization_energy.py`. Current CSV, JSON metadata, and
+the absolute/relative energy plot are in
+`qmmm/pa6_asp272/00_es_unrestrained/plots/`; rerun the script to update this
+snapshot while the minimization continues. These are whole-system optimization
+energies and must not be interpreted as a reaction barrier.
 
 Only after native convergence plus the noncovalent E-S geometry gate, the same
 tmux workflow proceeds to `01_coordinate_drive_to_ti1/`: 21 phase-I windows
