@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 from pathlib import Path
 
 import pytest
@@ -45,3 +46,12 @@ def test_run_queue_rejects_empty_escape_and_bad_gpu(tmp_path: Path) -> None:
     queue.write_text("../outside\n")
     with pytest.raises(ValueError, match="escapes"):
         MODULE.run_queue(campaign, queue, 0)
+
+
+def test_wait_for_success_accepts_zero_and_rejects_failure(tmp_path: Path) -> None:
+    status = tmp_path / "status.json"
+    status.write_text(json.dumps({"exit_status": 0}))
+    MODULE.wait_for_success(status, 1.0)
+    status.write_text(json.dumps({"exit_status": 2}))
+    with pytest.raises(RuntimeError, match="failed"):
+        MODULE.wait_for_success(status, 1.0)
