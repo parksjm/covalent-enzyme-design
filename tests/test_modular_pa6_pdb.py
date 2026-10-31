@@ -26,7 +26,8 @@ def test_convert_legacy_pdb_preserves_coordinates_and_splits_residues(
         "ATOM      1  CA  ALA A   1       0.000   0.000   0.000  1.00  0.00           C  ",
         "TER       2      ALA A   1",
     ]
-    for serial, row in enumerate(rows, start=2):
+    serial_offset = 19892
+    for serial, row in enumerate(rows, start=serial_offset + 1):
         name, x, y, z = row[1], float(row[2]), float(row[3]), float(row[4])
         element = row[5][0].upper()
         pdb_lines.append(
@@ -34,7 +35,7 @@ def test_convert_legacy_pdb_preserves_coordinates_and_splits_residues(
             f"  1.00  0.00          {element:>2s}  "
         )
     for left, right in sorted(bonds):
-        pdb_lines.append(f"CONECT{left + 1:5d}{right + 1:5d}")
+        pdb_lines.append(f"CONECT{left + serial_offset:5d}{right + serial_offset:5d}")
     pdb_lines.append("END")
     pdb = tmp_path / "legacy.pdb"
     pdb.write_text("\n".join(pdb_lines) + "\n", encoding="ascii")

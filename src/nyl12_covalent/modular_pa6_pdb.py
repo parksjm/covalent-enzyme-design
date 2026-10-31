@@ -218,7 +218,11 @@ def _pdb_ligand_bonds(lines: list[str], ligand: list[PdbAtom]) -> set[tuple[int,
     for line in lines:
         if not line.startswith("CONECT"):
             continue
-        fields = [int(value) for value in line.split()[1:]]
+        fields = [
+            int(line[index : index + 5])
+            for index in range(6, len(line), 5)
+            if line[index : index + 5].strip()
+        ]
         if fields and fields[0] in serial_to_index:
             for target in fields[1:]:
                 if target in serial_to_index:
