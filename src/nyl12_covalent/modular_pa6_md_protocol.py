@@ -53,7 +53,7 @@ def replica_runner(pmemd_cuda: Path) -> str:
     lines = [
         "#!/usr/bin/env bash",
         "set -euo pipefail",
-        f'PMEMD_CUDA="{pmemd_cuda}"',
+        f'PMEMD_CUDA="${{PMEMD_CUDA_OVERRIDE:-{pmemd_cuda}}}"',
         'SYSTEM_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"',
         'PRMTOP="${SYSTEM_DIR}/md_solvated.prmtop"',
         'INPCRD="${SYSTEM_DIR}/md_solvated.inpcrd"',

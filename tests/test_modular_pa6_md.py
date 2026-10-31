@@ -51,6 +51,7 @@ def test_protocol_rejects_bad_seed_and_relative_binary() -> None:
     runner = replica_runner(Path("/opt/amber/bin/pmemd.cuda"))
     assert runner.count("if [[ ! -s") == 7
     assert "07_prod_100ns.nc" in runner
+    assert 'PMEMD_CUDA="${PMEMD_CUDA_OVERRIDE:-/opt/amber/bin/pmemd.cuda}"' in runner
 
 
 def test_leap_inputs_select_mbondi3_release_and_explicit_ions(tmp_path: Path) -> None:
