@@ -1,0 +1,7 @@
+source leaprc.gaff2
+set default PBRadii mbondi3
+loadamberparams pa6_shared_p6i_gaff2.frcmod
+loadamberparams pa6_shared_p6i_improper.frcmod
+loadoff P6N.lib
+loadoff P6I.lib
+loadoff P6C.lib

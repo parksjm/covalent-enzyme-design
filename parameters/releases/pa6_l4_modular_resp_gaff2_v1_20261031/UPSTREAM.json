@@ -1,0 +1,9 @@
+{
+  "source_repository": "https://github.com/parksjm/polyamide-amber-ff.git",
+  "source_branch": "codex/pa6-l4-validation",
+  "source_commit": "8abafd1",
+  "source_path": "parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031",
+  "source_manifest_sha256": "9e007d708afeb73ef5af956b593e994ff0b0d0698826bb73e64ae35d11de57f3",
+  "imported_on": "2026-10-31",
+  "policy": "immutable one-way import; update by importing a new release identifier"
+}

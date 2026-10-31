@@ -1,0 +1,16 @@
+PA6 matched-protocol improper refit; not production-certified
+MASS
+
+BOND
+
+ANGLE
+
+DIHE
+
+IMPROPER
+c3-ns-c -o      14.136127   180.000000      2.000
+c -c3-ns-hn      0.000000   180.000000      2.000
+c3-o -c -o      10.044658   180.000000      2.000
+
+NONBON
+

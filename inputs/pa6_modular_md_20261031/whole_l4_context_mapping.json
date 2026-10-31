@@ -1,0 +1,4438 @@
+{
+  "blocks": [
+    {
+      "assignments": [
+        {
+          "atom_index_1based": 1,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6N:N",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 2,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6N:C1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 3,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6N:C2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 4,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6N:C3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 5,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6N:C4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 6,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6N:C5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 7,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6N:C",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 8,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6N:O",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 9,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 10,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 11,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 12,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 13,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 14,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 15,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 16,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 17,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 18,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 19,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 20,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 21,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 22,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 23,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 24,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 25,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6C:N",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 26,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6C:C1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 27,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6C:C2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 28,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6C:C3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 29,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6C:C4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 30,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6C:C5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 31,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6C:C",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 32,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6C:O",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 33,
+          "atom_name": "OXT",
+          "element": "O",
+          "equivalence_class": "P6C:OXT",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 34,
+          "atom_name": "HN1",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 35,
+          "atom_name": "HN2",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 36,
+          "atom_name": "HN3",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 37,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 38,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 39,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 40,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 41,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 42,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 43,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 44,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 45,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 46,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 47,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 48,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 49,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 50,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 51,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 52,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 53,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 54,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 55,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 56,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 57,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 58,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 59,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 60,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 61,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 62,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 63,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 64,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 65,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 66,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 67,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 68,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 69,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6C:HN",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 70,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 71,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 72,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 73,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 74,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 75,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 76,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 77,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 78,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 79,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        }
+      ],
+      "atom_count": 79,
+      "block_index_1based": 1,
+      "charge": 0,
+      "conformer": "template_model7",
+      "esp": "/data/jpc/covalent-enzyme-design/parameters/pa6_l4_zwitterion_resp_gaff2/02_dft_geometry_def2svp/template_model7/hf_631gd_mk_esp.esp",
+      "esp_sha256": "caad974c9520209e08aad1d390eb396cb328e6ed8ddf4e6869f9641e0dd527a8",
+      "molecule": "whole_l4_zwitterion"
+    },
+    {
+      "assignments": [
+        {
+          "atom_index_1based": 1,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6N:N",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 2,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6N:C1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 3,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6N:C2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 4,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6N:C3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 5,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6N:C4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 6,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6N:C5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 7,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6N:C",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 8,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6N:O",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 9,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 10,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 11,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 12,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 13,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 14,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 15,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 16,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 17,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 18,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 19,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 20,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 21,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 22,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 23,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 24,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 25,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6C:N",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 26,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6C:C1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 27,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6C:C2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 28,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6C:C3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 29,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6C:C4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 30,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6C:C5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 31,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6C:C",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 32,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6C:O",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 33,
+          "atom_name": "OXT",
+          "element": "O",
+          "equivalence_class": "P6C:OXT",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 34,
+          "atom_name": "HN1",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 35,
+          "atom_name": "HN2",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 36,
+          "atom_name": "HN3",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 37,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 38,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 39,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 40,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 41,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 42,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 43,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 44,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 45,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 46,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 47,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 48,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 49,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 50,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 51,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 52,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 53,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 54,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 55,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 56,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 57,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 58,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 59,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 60,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 61,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 62,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 63,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 64,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 65,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 66,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 67,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 68,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 69,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6C:HN",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 70,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 71,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 72,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 73,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 74,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 75,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 76,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 77,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 78,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 79,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        }
+      ],
+      "atom_count": 79,
+      "block_index_1based": 2,
+      "charge": 0,
+      "conformer": "md_replica1_frame1161",
+      "esp": "/data/jpc/covalent-enzyme-design/parameters/pa6_l4_zwitterion_resp_gaff2/02_dft_geometry_def2svp/md_replica1_frame1161/hf_631gd_mk_esp.esp",
+      "esp_sha256": "58d208b1a81f7af1c9d61c7fba905c208193c4a862b1c9cba4bd21398bcbbe71",
+      "molecule": "whole_l4_zwitterion"
+    },
+    {
+      "assignments": [
+        {
+          "atom_index_1based": 1,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6N:N",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 2,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6N:C1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 3,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6N:C2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 4,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6N:C3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 5,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6N:C4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 6,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6N:C5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 7,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6N:C",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 8,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6N:O",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 9,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 10,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 11,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 12,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 13,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 14,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 15,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 16,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 17,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 18,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 19,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 20,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 21,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 22,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 23,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 24,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 25,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6C:N",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 26,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6C:C1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 27,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6C:C2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 28,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6C:C3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 29,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6C:C4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 30,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6C:C5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 31,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6C:C",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 32,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6C:O",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 33,
+          "atom_name": "OXT",
+          "element": "O",
+          "equivalence_class": "P6C:OXT",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 34,
+          "atom_name": "HN1",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 35,
+          "atom_name": "HN2",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 36,
+          "atom_name": "HN3",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 37,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 38,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 39,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 40,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 41,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 42,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 43,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 44,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 45,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 46,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 47,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 48,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 49,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 50,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 51,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 52,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 53,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 54,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 55,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 56,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 57,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 58,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 59,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 60,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 61,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 62,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 63,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 64,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 65,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 66,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 67,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 68,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 69,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6C:HN",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 70,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 71,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 72,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 73,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 74,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 75,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 76,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 77,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 78,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 79,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        }
+      ],
+      "atom_count": 79,
+      "block_index_1based": 3,
+      "charge": 0,
+      "conformer": "md_replica2_frame0651",
+      "esp": "/data/jpc/covalent-enzyme-design/parameters/pa6_l4_zwitterion_resp_gaff2/02_dft_geometry_def2svp/md_replica2_frame0651/hf_631gd_mk_esp.esp",
+      "esp_sha256": "637669ac4027da0e5e61bde215250fb54b347166e958dbe54a03f42d31585f0f",
+      "molecule": "whole_l4_zwitterion"
+    },
+    {
+      "assignments": [
+        {
+          "atom_index_1based": 1,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6N:N",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 2,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6N:C1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 3,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6N:C2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 4,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6N:C3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 5,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6N:C4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 6,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6N:C5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 7,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6N:C",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 8,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6N:O",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 9,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 10,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 11,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 12,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 13,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 14,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 15,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 16,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 17,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6I:N",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 18,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6I:C1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 19,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6I:C2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 20,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6I:C3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 21,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6I:C4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 22,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6I:C5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 23,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6I:C",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 24,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6I:O",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 25,
+          "atom_name": "N",
+          "element": "N",
+          "equivalence_class": "P6C:N",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 26,
+          "atom_name": "C1",
+          "element": "C",
+          "equivalence_class": "P6C:C1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 27,
+          "atom_name": "C2",
+          "element": "C",
+          "equivalence_class": "P6C:C2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 28,
+          "atom_name": "C3",
+          "element": "C",
+          "equivalence_class": "P6C:C3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 29,
+          "atom_name": "C4",
+          "element": "C",
+          "equivalence_class": "P6C:C4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 30,
+          "atom_name": "C5",
+          "element": "C",
+          "equivalence_class": "P6C:C5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 31,
+          "atom_name": "C",
+          "element": "C",
+          "equivalence_class": "P6C:C",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 32,
+          "atom_name": "O",
+          "element": "O",
+          "equivalence_class": "P6C:O",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 33,
+          "atom_name": "OXT",
+          "element": "O",
+          "equivalence_class": "P6C:OXT",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 34,
+          "atom_name": "HN1",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 35,
+          "atom_name": "HN2",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 36,
+          "atom_name": "HN3",
+          "element": "H",
+          "equivalence_class": "P6N:HN",
+          "residue_index_1based": 1,
+          "stage2_variable": false,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 37,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 38,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6N:H1",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 39,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 40,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6N:H2",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 41,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 42,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6N:H3",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 43,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 44,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6N:H4",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 45,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 46,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6N:H5",
+          "residue_index_1based": 1,
+          "stage2_variable": true,
+          "template": "P6N"
+        },
+        {
+          "atom_index_1based": 47,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 2,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 48,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 49,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 50,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 51,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 52,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 53,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 54,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 55,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 56,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 57,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 2,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 58,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6I:HN",
+          "residue_index_1based": 3,
+          "stage2_variable": false,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 59,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 60,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6I:H1",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 61,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 62,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6I:H2",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 63,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 64,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6I:H3",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 65,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 66,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6I:H4",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 67,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 68,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6I:H5",
+          "residue_index_1based": 3,
+          "stage2_variable": true,
+          "template": "P6I"
+        },
+        {
+          "atom_index_1based": 69,
+          "atom_name": "HN",
+          "element": "H",
+          "equivalence_class": "P6C:HN",
+          "residue_index_1based": 4,
+          "stage2_variable": false,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 70,
+          "atom_name": "H11",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 71,
+          "atom_name": "H12",
+          "element": "H",
+          "equivalence_class": "P6C:H1",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 72,
+          "atom_name": "H21",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 73,
+          "atom_name": "H22",
+          "element": "H",
+          "equivalence_class": "P6C:H2",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 74,
+          "atom_name": "H31",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 75,
+          "atom_name": "H32",
+          "element": "H",
+          "equivalence_class": "P6C:H3",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 76,
+          "atom_name": "H41",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 77,
+          "atom_name": "H42",
+          "element": "H",
+          "equivalence_class": "P6C:H4",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 78,
+          "atom_name": "H51",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        },
+        {
+          "atom_index_1based": 79,
+          "atom_name": "H52",
+          "element": "H",
+          "equivalence_class": "P6C:H5",
+          "residue_index_1based": 4,
+          "stage2_variable": true,
+          "template": "P6C"
+        }
+      ],
+      "atom_count": 79,
+      "block_index_1based": 4,
+      "charge": 0,
+      "conformer": "md_replica3_frame1151",
+      "esp": "/data/jpc/covalent-enzyme-design/parameters/pa6_l4_zwitterion_resp_gaff2/02_dft_geometry_def2svp/md_replica3_frame1151/hf_631gd_mk_esp.esp",
+      "esp_sha256": "5e821712ae9c87468d24c4fa088cd273a0209a0a1e23a4a860aad35ddb462257",
+      "molecule": "whole_l4_zwitterion"
+    }
+  ],
+  "derived_template_charges": {
+    "P6C": -1.0,
+    "P6I": 0.0,
+    "P6N": 1.0
+  },
+  "equivalence_groups": [
+    {
+      "class": "P6C:C",
+      "members": [
+        {
+          "atom_index_1based": 31,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 31,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 31,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 31,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:C1",
+      "members": [
+        {
+          "atom_index_1based": 26,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 26,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 26,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 26,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:C2",
+      "members": [
+        {
+          "atom_index_1based": 27,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 27,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 27,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 27,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:C3",
+      "members": [
+        {
+          "atom_index_1based": 28,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 28,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 28,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 28,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:C4",
+      "members": [
+        {
+          "atom_index_1based": 29,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 29,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 29,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 29,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:C5",
+      "members": [
+        {
+          "atom_index_1based": 30,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 30,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 30,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 30,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:H1",
+      "members": [
+        {
+          "atom_index_1based": 70,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 71,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 70,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 71,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 70,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 71,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 70,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 71,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:H2",
+      "members": [
+        {
+          "atom_index_1based": 72,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 73,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 72,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 73,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 72,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 73,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 72,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 73,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:H3",
+      "members": [
+        {
+          "atom_index_1based": 74,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 75,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 74,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 75,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 74,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 75,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 74,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 75,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:H4",
+      "members": [
+        {
+          "atom_index_1based": 76,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 77,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 76,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 77,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 76,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 77,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 76,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 77,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:H5",
+      "members": [
+        {
+          "atom_index_1based": 78,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 79,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 78,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 79,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 78,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 79,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 78,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 79,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:HN",
+      "members": [
+        {
+          "atom_index_1based": 69,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 69,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 69,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 69,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:N",
+      "members": [
+        {
+          "atom_index_1based": 25,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 25,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 25,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 25,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:O",
+      "members": [
+        {
+          "atom_index_1based": 32,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 32,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 32,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 32,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6C:OXT",
+      "members": [
+        {
+          "atom_index_1based": 33,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 33,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 33,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 33,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C",
+      "members": [
+        {
+          "atom_index_1based": 15,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 23,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 15,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 23,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 15,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 23,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 15,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 23,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C1",
+      "members": [
+        {
+          "atom_index_1based": 10,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 18,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 10,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 18,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 10,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 18,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 10,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 18,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C2",
+      "members": [
+        {
+          "atom_index_1based": 11,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 19,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 11,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 19,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 11,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 19,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 11,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 19,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C3",
+      "members": [
+        {
+          "atom_index_1based": 12,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 20,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 12,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 20,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 12,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 20,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 12,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 20,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C4",
+      "members": [
+        {
+          "atom_index_1based": 13,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 21,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 13,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 21,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 13,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 21,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 13,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 21,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:C5",
+      "members": [
+        {
+          "atom_index_1based": 14,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 22,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 14,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 22,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 14,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 22,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 14,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 22,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:H1",
+      "members": [
+        {
+          "atom_index_1based": 48,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 49,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 59,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 60,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 48,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 49,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 59,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 60,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 48,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 49,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 59,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 60,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 48,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 49,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 59,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 60,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:H2",
+      "members": [
+        {
+          "atom_index_1based": 50,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 51,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 61,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 62,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 50,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 51,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 61,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 62,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 50,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 51,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 61,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 62,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 50,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 51,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 61,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 62,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:H3",
+      "members": [
+        {
+          "atom_index_1based": 52,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 53,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 63,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 64,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 52,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 53,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 63,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 64,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 52,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 53,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 63,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 64,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 52,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 53,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 63,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 64,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:H4",
+      "members": [
+        {
+          "atom_index_1based": 54,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 55,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 65,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 66,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 54,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 55,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 65,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 66,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 54,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 55,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 65,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 66,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 54,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 55,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 65,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 66,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:H5",
+      "members": [
+        {
+          "atom_index_1based": 56,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 57,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 67,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 68,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 56,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 57,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 67,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 68,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 56,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 57,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 67,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 68,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 56,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 57,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 67,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 68,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:HN",
+      "members": [
+        {
+          "atom_index_1based": 47,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 58,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 47,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 58,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 47,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 58,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 47,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 58,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:N",
+      "members": [
+        {
+          "atom_index_1based": 9,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 17,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 9,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 17,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 9,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 17,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 9,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 17,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6I:O",
+      "members": [
+        {
+          "atom_index_1based": 16,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 24,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 16,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 24,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 16,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 24,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 16,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 24,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C",
+      "members": [
+        {
+          "atom_index_1based": 7,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 7,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 7,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 7,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C1",
+      "members": [
+        {
+          "atom_index_1based": 2,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 2,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 2,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 2,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C2",
+      "members": [
+        {
+          "atom_index_1based": 3,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 3,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 3,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 3,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C3",
+      "members": [
+        {
+          "atom_index_1based": 4,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 4,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 4,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 4,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C4",
+      "members": [
+        {
+          "atom_index_1based": 5,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 5,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 5,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 5,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:C5",
+      "members": [
+        {
+          "atom_index_1based": 6,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 6,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 6,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 6,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:H1",
+      "members": [
+        {
+          "atom_index_1based": 37,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 38,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 37,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 38,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 37,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 38,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 37,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 38,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:H2",
+      "members": [
+        {
+          "atom_index_1based": 39,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 40,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 39,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 40,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 39,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 40,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 39,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 40,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:H3",
+      "members": [
+        {
+          "atom_index_1based": 41,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 42,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 41,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 42,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 41,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 42,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 41,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 42,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:H4",
+      "members": [
+        {
+          "atom_index_1based": 43,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 44,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 43,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 44,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 43,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 44,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 43,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 44,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:H5",
+      "members": [
+        {
+          "atom_index_1based": 45,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 46,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 45,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 46,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 45,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 46,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 45,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 46,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:HN",
+      "members": [
+        {
+          "atom_index_1based": 34,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 35,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 36,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 34,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 35,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 36,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 34,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 35,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 36,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 34,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 35,
+          "block_index_1based": 4
+        },
+        {
+          "atom_index_1based": 36,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:N",
+      "members": [
+        {
+          "atom_index_1based": 1,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 1,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 1,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 1,
+          "block_index_1based": 4
+        }
+      ]
+    },
+    {
+      "class": "P6N:O",
+      "members": [
+        {
+          "atom_index_1based": 8,
+          "block_index_1based": 1
+        },
+        {
+          "atom_index_1based": 8,
+          "block_index_1based": 2
+        },
+        {
+          "atom_index_1based": 8,
+          "block_index_1based": 3
+        },
+        {
+          "atom_index_1based": 8,
+          "block_index_1based": 4
+        }
+      ]
+    }
+  ],
+  "independent_charge_constraints": [
+    {
+      "atom_indices_1based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "block_index_1based": 1,
+      "residue_index_1based": 1,
+      "target_charge": 1.0,
+      "template": "P6N"
+    },
+    {
+      "atom_indices_1based": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "block_index_1based": 1,
+      "residue_index_1based": 2,
+      "target_charge": 0.0,
+      "template": "P6I"
+    }
+  ],
+  "schema_version": 1,
+  "status": "whole_l4_context_mapping_not_fitted"
+}

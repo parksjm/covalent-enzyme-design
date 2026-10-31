@@ -1,0 +1,61 @@
+{
+  "artifact_sha256": {
+    "P6C.lib": "de3f2924cfacb64efa8b5a9565250c5ed376558036d79ccbeb9ac45e24bbfd8e",
+    "P6C.mol2": "6fb53c1b91e27759e72de563e9efcca3348f0edac8d87c141d81ec57f5e5894a",
+    "P6I.lib": "d67d333d1043f4f5764cd2e2d55838b44e3f339eca99b18fc4041a7dfa3b50d7",
+    "P6I.mol2": "954453b0779522b5381e9d2b43ea229bed189733fb29bd90859a2876f6734f90",
+    "P6N.lib": "bad803ef61d62364d36efa9ad4fffc0329c0ca3c0ed791d257dbaf4e83a7cfb0",
+    "P6N.mol2": "49492db8abde75be8c8a0cc70af6cbd034a6289a384187d275463c7aff85d199",
+    "README.md": "0651874cfbc4b0f06063faac027fb62d2bc67c74a042ef735d1f09d0639f2267",
+    "leaprc.pa6_shared_p6i": "6a1696826ef843e057a9a72fd6fc835af17ff00e1d566cbe1597004d41f5e668",
+    "pa6_l4_canonical.inpcrd": "ae068840308047c2092dc2bc526467d03d2a7a13d4ad6e19956cc98dde2b1670",
+    "pa6_l4_canonical.prmtop": "b881c104510169d212683fd437cd908253833d5efd80cefd51fd8769627fa8af",
+    "pa6_shared_p6i_charges.txt": "9d8f86e676c8e16356e80f5c974ac8c409bbbcd28f13d0279a3d9a300e1e4f1c",
+    "pa6_shared_p6i_gaff2.frcmod": "7d35cfd403fb1ae421092f894e11f60da69db67595b0717831a4e1b32008fa3e",
+    "pa6_shared_p6i_improper.frcmod": "69606f8af54f56f42a5fde186f78e94748eca94ea9658be41725ea96dd4400a0"
+  },
+  "chemistry": {
+    "formal_charge": 0,
+    "multiplicity": 1,
+    "polymer": "PA6",
+    "sequence": [
+      "P6N",
+      "P6I",
+      "P6I",
+      "P6C"
+    ],
+    "terminal_state": "N-terminal ammonium/C-terminal carboxylate"
+  },
+  "documented_exception": {
+    "approval_record": "User approved the corrected accelerated path on 2026-10-31; mixed-solvent conformer-energy comparisons are retained as non-gating diagnostics.",
+    "disposition": "retained as non-gating diagnostic",
+    "historical_gate": "identical-coordinate GB comparator non-regression",
+    "reason": "GBneck2/GBSA and SMD are distinct solvent models; the sampled conformers are not an equilibrium release set, while direct MM-versus-QM bonded profiles and final-topology MD pass."
+  },
+  "force_field": {
+    "bonded_override": "three accepted improper terms",
+    "charges": "standard two-stage multiconformer RESP",
+    "pb_radii": "mbondi3",
+    "protein_compatibility_target": "ff19SB",
+    "small_molecule_base": "GAFF2"
+  },
+  "known_limitations": [
+    "Validated for the PA6 L4 zwitterion scope, not arbitrary lengths.",
+    "Not validated for bulk, melt, crystalline, TI1, or acyl-enzyme states.",
+    "The mixed-solvent conformer-energy analysis is diagnostic only."
+  ],
+  "md_ready": true,
+  "production_ready_for_validated_l4_scope": true,
+  "release_id": "pa6_l4_modular_resp_gaff2_v1_20261031",
+  "schema_version": 1,
+  "source_revision": "01d14b0",
+  "source_sha256": {
+    "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/bonded/improper_refit_acceptance_attempt1/acceptance.json": "9fd522ce7fa680dbdcd8564592ceee687fb2406d4bca6258057ed8cc0836de0f",
+    "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/corrected_energetics_20261031/energetic_decomposition_attempt1/report.json": "39b09197622027a895ea50f96d6034c8d4059cfe520453bf6de99b078b353849",
+    "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/final_decision_attempt4/acceptance.json": "9a2bd719503cab579cf6f78e67294bccfc4e5d0cb8a238a9bf64f164c5f848b6",
+    "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/md_refit/aggregate_analysis_attempt1/report.json": "d71ce41d230b95a026f777251b12252534347230912778d0ec693793dab3a75d",
+    "/data/jpc/polyamide-amber-ff/output/pa6_modular_oligomer_esp_20261029/gaff2_shared_p6i_library/candidate_attempt4_mbondi3/manifest.json": "03c74bf78937111755a9f457af7ab1735b1a4cf31bc9e21ab1a8494968670a9d"
+  },
+  "status": "md_ready_release_for_validated_pa6_l4_scope",
+  "universal_length_validated": false
+}
