@@ -91,6 +91,10 @@ def convert_legacy_pa6_l4_pdb(
         raise ValueError("Imported release is not accepted for modular PA6 L4 MD")
 
     templates = ("P6N", "P6I", "P6I", "P6C")
+    for template in set(templates):
+        name = f"{template}.mol2"
+        if release.get("artifact_sha256", {}).get(name) != _sha256(release_dir / name):
+            raise ValueError(f"Imported release artifact hash mismatch: {name}")
     template_names = {
         name: _read_mol2_graph(release_dir / f"{name}.mol2")[0]
         for name in set(templates)
