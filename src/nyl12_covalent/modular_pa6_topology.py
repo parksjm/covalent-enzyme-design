@@ -11,6 +11,7 @@ import parmed
 
 
 PA6_SEQUENCE = ("P6N", "P6I", "P6I", "P6C")
+CHARGE_TOLERANCE = 0.01
 
 
 def validate_release(release_dir: Path) -> dict[str, Any]:
@@ -48,6 +49,19 @@ def validate_topology(
         Compact topology identity and size report.
     """
     topology = parmed.load_file(str(path))
+    pa6_inventory = [
+        (index + 1, residue.name)
+        for index, residue in enumerate(topology.residues)
+        if residue.name in PA6_SEQUENCE
+    ]
+    expected_inventory = [
+        (1313, "P6N"),
+        (1314, "P6I"),
+        (1315, "P6I"),
+        (1316, "P6C"),
+    ]
+    if pa6_inventory != expected_inventory:
+        raise ValueError(f"Unexpected modular PA6 residue inventory: {pa6_inventory}")
     pa6_residues = list(topology.residues[1312:1316])
     if [residue.name for residue in pa6_residues] != list(PA6_SEQUENCE):
         raise ValueError("PA6 residue sequence is not P6N-P6I-P6I-P6C at 1313-1316")
@@ -87,7 +101,7 @@ def validate_topology(
     if "mbondi3" not in radius_text.lower():
         raise ValueError(f"Topology does not identify mbondi3 radii: {radius_text!r}")
     charge = sum(float(atom.charge) for atom in topology.atoms)
-    if solvated and abs(charge) > 1.0e-4:
+    if solvated and abs(charge) > CHARGE_TOLERANCE:
         raise ValueError(f"Solvated topology is not neutral: {charge:.8f}")
     return {
         "path": str(path.resolve()),

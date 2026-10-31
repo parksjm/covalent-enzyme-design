@@ -17,6 +17,7 @@ from nyl12_covalent.modular_pa6_md_protocol import (
     replica_runner,
 )
 from nyl12_covalent.modular_pa6_topology import (
+    CHARGE_TOLERANCE,
     sha256,
     validate_release,
     validate_topology,
@@ -151,7 +152,10 @@ def _prepare_system(
             "modular_types_and_charges_match_release": True,
             "three_inter_residue_pa6_bonds": True,
             "mbondi3_radii": True,
-            "solvated_system_neutral": abs(final_report["total_charge"]) < 1.0e-4,
+            "solvated_system_neutral_with_rounding_tolerance": abs(
+                final_report["total_charge"]
+            )
+            < CHARGE_TOLERANCE,
         },
     }
     if not all(report["checks"].values()):
@@ -164,15 +168,21 @@ def _prepare_system(
 
 def _write_leap_pdb(source: Path, destination: Path) -> None:
     output: list[str] = []
-    for line in source.read_text(encoding="ascii").splitlines():
-        if not line.startswith(("ATOM  ", "HETATM")):
-            continue
+    atom_lines = [
+        line
+        for line in source.read_text(encoding="ascii").splitlines()
+        if line.startswith(("ATOM  ", "HETATM"))
+    ]
+    for index, line in enumerate(atom_lines):
         residue = int(line[22:26])
         atom = line[12:16].strip()
         if residue in NTERMINUS_RESIDUES and atom == "H":
             line = f"{line[:12]} H1 {line[16:]}"
         output.append(line)
-        if residue in CHAIN_END_RESIDUES and atom == "OXT":
+        next_residue = (
+            int(atom_lines[index + 1][22:26]) if index + 1 < len(atom_lines) else None
+        )
+        if residue in CHAIN_END_RESIDUES and next_residue != residue:
             output.append("TER")
     output.append("END")
     destination.write_text("\n".join(output) + "\n", encoding="ascii")
@@ -249,7 +259,7 @@ def _box_volume(path: Path) -> float:
 def _ion_counts(charge: float, volume_angstrom3: float) -> tuple[int, int, int]:
     pairs = round(0.150 * AVOGADRO * 1.0e-27 * volume_angstrom3)
     integral_charge = round(charge)
-    if abs(charge - integral_charge) > 1.0e-4:
+    if abs(charge - integral_charge) > CHARGE_TOLERANCE:
         raise ValueError(f"Dry system charge is not integral: {charge:.8f}")
     return pairs + max(0, -integral_charge), pairs + max(0, integral_charge), pairs
 

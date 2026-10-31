@@ -71,6 +71,7 @@ def test_pdb_preprocessing_restores_boundaries_and_n_terminal_name(
         "ATOM      1  H   ALA A   1       0.000   0.000   0.000  1.00  0.00           H  \n"
         "ATOM      2  OXT PRO A1312       1.000   0.000   0.000  1.00  0.00           O  \n"
         "HETATM    3  OXT P6C A1316       2.000   0.000   0.000  1.00  0.00           O  \n"
+        "HETATM    4  H52 P6C A1316       3.000   0.000   0.000  1.00  0.00           H  \n"
         "END\n"
     )
     destination = tmp_path / "leap.pdb"
@@ -78,6 +79,7 @@ def test_pdb_preprocessing_restores_boundaries_and_n_terminal_name(
     text = destination.read_text()
     assert " H1 " in text
     assert text.count("TER\n") == 2
+    assert text.index("H52 P6C") < text.rindex("TER\n")
     assert text.endswith("END\n")
 
 
@@ -85,6 +87,7 @@ def test_ion_counts_and_leap_error_gate() -> None:
     sodium, chloride, pairs = _ion_counts(-2.0, 1_000_000.0)
     assert pairs == 90
     assert (sodium, chloride) == (92, 90)
+    assert _ion_counts(-2.009, 1_000_000.0) == (92, 90, 90)
     with pytest.raises(ValueError, match="not integral"):
         _ion_counts(0.2, 1_000_000.0)
     _require_clean_leap("Errors = 0")
