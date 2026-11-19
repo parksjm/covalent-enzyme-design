@@ -73,6 +73,7 @@ def test_relay_neb_pull_copies_only_latest_stripped_bundle(tmp_path: Path) -> No
         "02_uniform_48_lbfgs",
         "03_adaptive_24_lbfgs",
         "04_uniform_24_cg",
+        "04_uniform_24_cg/long_run",
     ],
 )
 def test_spacing_trial_pull_keeps_latest_portable_only(
@@ -93,6 +94,8 @@ def test_spacing_trial_pull_keeps_latest_portable_only(
         "plots/neb_evolution.png",
         "plots/neb_evolution.svg",
         "plots/neb_evolution.csv",
+        "plots/replay_comparison.svg",
+        "plots/replay_comparison.json",
         "plots/plot_energy_evolution.py",
         "calculation/minimize.mdin",
         "progress/progress.json",
@@ -157,6 +160,13 @@ def test_spacing_trial_pull_keeps_latest_portable_only(
     old.mkdir()
     (old / "images.json").write_text("old")
     (root / "progress/latest").symlink_to(bundle.name)
+    parent_history = (
+        source
+        / relative.parent
+        / "history/prior_long_run/progress/update_000001/images.json"
+    )
+    parent_history.parent.mkdir(parents=True, exist_ok=True)
+    parent_history.write_text("historical nested replay")
     subprocess.run(
         [rsync, "-rt", *relay_options(), f"{source}/", f"{target}/"], check=True
     )
@@ -176,3 +186,4 @@ def test_spacing_trial_pull_keeps_latest_portable_only(
     assert not (latest / "native_report.mdout").exists()
     assert not (latest / "source_nebpath.xyz.gz").exists()
     assert not (latest / "frame_links").exists()
+    assert not (target / parent_history.relative_to(source)).exists()

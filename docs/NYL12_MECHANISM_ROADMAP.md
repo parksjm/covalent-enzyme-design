@@ -8,7 +8,43 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
+### Active — long CG identical-start replay (2026-11-19)
+
+The user authorized a much larger CG budget, including starting over if needed.
+The finished 79-cycle pilot has no usable optimizer checkpoint. The supported
+same-start replay is running in `04_uniform_24_cg/long_run/`, under the same
+`04_neb/spacing_tests/` campaign. Session: `nyl12_neb_cg_long_20261119`.
+Only iteration ceilings changed: DL-FIND maxcycle 250→32,000 and Amber maxcyc
+100,000→300,000. The resulting 224,000-evaluation budget is 128× the pilot.
+All physical settings, thirteen control files and tolerances are unchanged;
+input equivalence was checked by inverse replacement of those exact tokens.
+The pilot and all other NEB jobs remain unchanged.
+
+The first native profile reproduces all 24 pilot energies and Max/RMS gradient
+values exactly. An independent tmux checker compares through cycle 79 and
+records whether the replay subsequently advances beyond it. Full overlap is
+pending; allow about 65 minutes to retrace the pilot, not to converge.
+Current plots and movies publish under `long_run/plots/` and
+`long_run/progress/latest/vmd/`; recursive laptop pull filters include them.
+Read `long_run/README.md` and `replay_verification/last.json` before reporting
+this as an exact optimizer restart or a scientifically converged path.
+
+
 ### Running — four parallel NEB numerical-spacing trials (2026-11-19)
+
+**Early progress checkpoint:** uniform24/adaptive24 L-BFGS reached cycle80,
+dense48 reached40, and the short CG diagnostic reached78. At approximately
+comparable energy/gradient work, all four new bands have zero automatic image
+resets; the original band has31. Profile maxima are39.8,55.1,42.0 and46.4
+kcal/mol respectively; these are provisional physical-image maxima, not
+validated barriers. Maximum-gradient/target ratios are113,81,64 and21; all
+four RMS-gradient criteria pass, but no band has converged. CG currently has
+the smallest maximum gradient despite a higher profile maximum; this is
+promising numerical evidence, not a basis to rank physical mechanisms.
+Its short1,750-evaluation budget is nearly exhausted by design. Continue the
+planned matched-work checks before selecting a production continuation.
+Snapshot: `04_neb/spacing_tests/plots/early_comparison_status_20261119.json`.
+
 
 The user authorized four violet trials under the canonical
 `09_water_relay_acylation/04_neb/spacing_tests/` directory. The retained original
@@ -804,6 +840,22 @@ results. Keep references in `REFERENCES.md`, claims/artifacts in
 `SOURCE_LEDGER.md`, and decisions here. Move only mature, accepted findings
 from the run ledger into manuscript prose. Do not paste long run logs into the
 manuscript.
+
+## Student MD comparison arm — 2026-11-19
+
+A transferable handoff is in `student_handoff/nyl12_ash274_md/START_HERE.md`.
+The immediate hypothesis is a matched WT protonation-state effect, followed by
+rebuilding the prior eight mutants with the same PA6 RESP/GAFF2 release.
+ASH274 has 8.385% pooled Tier A occupancy versus 1.375% for ASP/ASP, but its
+replicas are 16.77% and 0%; joint native-Thr gates do not show a corresponding
+advantage. This is a testable hypothesis, not an established catalytic benefit.
+Use independent 100 ns replicas, matched 300 K protocols and replica-level
+uncertainty. Preserve the historical site-AE comparison and implement validated
+four-site tracking before ranking LigandMPNN designs. The old mutant panel
+uses legacy AM1-BCC/GAFF substrate parameters and cannot isolate protonation.
+No new MD was launched while preparing the handoff. Three WT microstates are
+portable prepared starts; mutant coordinate references still require rebuilding.
+This MD subproject does not replace the current mechanism/TS priorities.
 
 ## Operating rules
 

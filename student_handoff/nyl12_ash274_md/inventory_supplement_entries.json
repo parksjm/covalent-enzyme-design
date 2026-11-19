@@ -1,0 +1,155 @@
+[
+  {
+    "source": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/environment/historical_analysis_packages.json",
+    "destination": "environment/historical_analysis_packages.json",
+    "profile": "core",
+    "required": false,
+    "bytes": 8600,
+    "sha256": "bfb814b478e40fbee06c1f2acf67884fc4831e0c4dcb6590a89723c42c9df726",
+    "category": "portable_environment_analysis_and_inventory"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/analysis/raw_comparison_manifest.json",
+    "destination": "analysis/raw_comparison_manifest.json",
+    "profile": "core",
+    "required": false,
+    "bytes": 2500,
+    "sha256": "03380bb9533e6763182bc3c96a742b8331655c578e6a70bcc13b58fac2ccfa8b",
+    "category": "portable_environment_analysis_and_inventory"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/analysis/compare_analysis_command.json",
+    "destination": "analysis/compare_analysis_command.json",
+    "profile": "core",
+    "required": false,
+    "bytes": 716,
+    "sha256": "474c42666006047f178fac81d0b0d1dc7222e604ab11925cbafed6b14369e3a4",
+    "category": "portable_environment_analysis_and_inventory"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/ASSET_INVENTORY.md",
+    "destination": "ASSET_INVENTORY.md",
+    "profile": "core",
+    "required": false,
+    "bytes": 6122,
+    "sha256": "4fcfd4cd9246f7eaba3afc5acde675faba5799e54953f3285717fe818adb9790",
+    "category": "portable_environment_analysis_and_inventory"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/plot_matched_si.py",
+    "destination": "analysis/ash272_si/plot_matched_si.py",
+    "profile": "core",
+    "required": false,
+    "bytes": 3528,
+    "sha256": "8cf5eb04c39a587d3e359448960ca64afe63b0b2468327f45f8ab825236041b9",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/README.md",
+    "destination": "analysis/ash272_si/README.md",
+    "profile": "core",
+    "required": false,
+    "bytes": 2399,
+    "sha256": "fb760e395279243121a445a01aedd5f1dd67c6d73a8e13179b228e52cd088f85",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/analysis_config.json",
+    "destination": "analysis/ash272_si/analysis_config.json",
+    "profile": "core",
+    "required": false,
+    "bytes": 752,
+    "sha256": "ce9514592d473258edb76f1832160a07fbbdce587a83c795cc9ee3dc22fa8cfd",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/replica_1_geometry.csv",
+    "destination": "analysis/ash272_si/results_attempt1/replica_1_geometry.csv",
+    "profile": "core",
+    "required": false,
+    "bytes": 11063725,
+    "sha256": "88350b843180bf82066b22b00380facf9d923a1916e65f59b486b49171ce1d25",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/replica_2_geometry.csv",
+    "destination": "analysis/ash272_si/results_attempt1/replica_2_geometry.csv",
+    "profile": "core",
+    "required": false,
+    "bytes": 11059609,
+    "sha256": "b08be88779f1a61e3bb09217df1ca5832b15be6b7a4fd4233b8c4c510e3090b9",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/analysis_summary.json",
+    "destination": "analysis/ash272_si/results_attempt1/analysis_summary.json",
+    "profile": "core",
+    "required": false,
+    "bytes": 48964,
+    "sha256": "605ca3334bc70f1966dd48d90c710502b4396799a54dcac7e865633383b4abdf",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/si_matched_panels/ash272_si_trajectory_panel.png",
+    "destination": "analysis/ash272_si/results_attempt1/si_matched_panels/ash272_si_trajectory_panel.png",
+    "profile": "core",
+    "required": false,
+    "bytes": 889656,
+    "sha256": "d6499c9e505e39e134a99fbcedae96f18fc338faa490b2e93fd76d3c1219295a",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/si_matched_panels/ash272_si_trajectory_panel.pdf",
+    "destination": "analysis/ash272_si/results_attempt1/si_matched_panels/ash272_si_trajectory_panel.pdf",
+    "profile": "core",
+    "required": false,
+    "bytes": 1062066,
+    "sha256": "bb9211f06e79e44e28915013f645a32d3a92d6bd0f5d1305646425fc5f8e016d",
+    "category": "existing_ASH272_SI_not_ASH274"
+  },
+  {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/si_trajectory_panels/wt_seed_2026100921_si_trajectory_panel.png",
+    "destination": "inspection/historical_WT_SI_style/wt_seed_2026100921_si_trajectory_panel.png",
+    "profile": "inspection",
+    "required": false,
+    "bytes": 1326206,
+    "sha256": "e159cdf5001c0bfeb76262ec3fb1d547709e310e73103150f4237e211eec228e",
+    "category": "historical_WT_SI_style_reference"
+  },
+  {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/si_trajectory_panels/wt_seed_2026100921_si_trajectory_panel.pdf",
+    "destination": "inspection/historical_WT_SI_style/wt_seed_2026100921_si_trajectory_panel.pdf",
+    "profile": "inspection",
+    "required": false,
+    "bytes": 94490,
+    "sha256": "89430aa9ecd29d421f691d938922d58858223e603fb4113926755e9c27dd8d17",
+    "category": "historical_WT_SI_style_reference"
+  },
+  {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/si_trajectory_panels/si_trajectory_metric_summary.csv",
+    "destination": "inspection/historical_WT_SI_style/si_trajectory_metric_summary.csv",
+    "profile": "inspection",
+    "required": false,
+    "bytes": 3405,
+    "sha256": "32a40c29ce236d50ca256209d3d712912cc5634f6538dde1356f120269ea5389",
+    "category": "historical_WT_SI_style_reference"
+  },
+  {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/si_trajectory_panels/si_trajectory_timeseries.csv",
+    "destination": "inspection/historical_WT_SI_style/si_trajectory_timeseries.csv",
+    "profile": "inspection",
+    "required": false,
+    "bytes": 265741,
+    "sha256": "64bfd10ea47916f1fdf73876b29220ff21cf74ad526f13cd1806edb87cd46515",
+    "category": "historical_WT_SI_style_reference"
+  },
+  {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/si_trajectory_panels/SI_TRAJECTORY_PANELS.md",
+    "destination": "inspection/historical_WT_SI_style/SI_TRAJECTORY_PANELS.md",
+    "profile": "inspection",
+    "required": false,
+    "bytes": 872,
+    "sha256": "f0bcac4567ca00b2a98c55a1a94401c9f0d1fe12cfce08d9ff95f94370e251fd",
+    "category": "historical_WT_SI_style_reference"
+  }
+]

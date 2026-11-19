@@ -1,0 +1,21 @@
+[project]
+name = "nyl12-student-md-analysis"
+version = "0.1.0"
+description = "Pinned export of the established Nyl12 MD analysis tools"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy==1.26.4",
+  "ParmEd==4.3.0",
+  "MDAnalysis==2.10.0",
+  "matplotlib==3.10.8",
+  "scipy==1.16.3",
+  "pandas==2.3.3",
+  "biopython==1.86",
+  "rdkit==2025.3.6",
+]
+
+[dependency-groups]
+dev = ["pytest==9.0.2", "pytest-cov>=7.1.0", "ruff==0.15.13"]
+
+[tool.uv]
+package = false

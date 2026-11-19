@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "name": "neutral_replica_01",
+      "state": "ASP272_ASP274",
+      "topology": "datasets/wt_asp272_asp274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASP272_ASP274/neutral_replica_01/05_production_10ns.nc",
+        "raw_trajectories/ASP272_ASP274/neutral_replica_01/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    },
+    {
+      "name": "neutral_replica_02",
+      "state": "ASP272_ASP274",
+      "topology": "datasets/wt_asp272_asp274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASP272_ASP274/neutral_replica_02/05_production_10ns.nc",
+        "raw_trajectories/ASP272_ASP274/neutral_replica_02/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    },
+    {
+      "name": "ash272_replica_1",
+      "state": "ASH272_ASP274",
+      "topology": "datasets/wt_ash272_asp274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASH272_ASP274/ash272_replica_1/05_production_10ns.nc",
+        "raw_trajectories/ASH272_ASP274/ash272_replica_1/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    },
+    {
+      "name": "ash272_replica_2",
+      "state": "ASH272_ASP274",
+      "topology": "datasets/wt_ash272_asp274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASH272_ASP274/ash272_replica_2/05_production_10ns.nc",
+        "raw_trajectories/ASH272_ASP274/ash272_replica_2/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    },
+    {
+      "name": "ash274_replica_1",
+      "state": "ASP272_ASH274",
+      "topology": "datasets/wt_asp272_ash274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASP272_ASH274/ash274_replica_1/05_production_10ns.nc",
+        "raw_trajectories/ASP272_ASH274/ash274_replica_1/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    },
+    {
+      "name": "ash274_replica_2",
+      "state": "ASP272_ASH274",
+      "topology": "datasets/wt_asp272_ash274/topology.prmtop",
+      "trajectories": [
+        "raw_trajectories/ASP272_ASH274/ash274_replica_2/05_production_10ns.nc",
+        "raw_trajectories/ASP272_ASH274/ash274_replica_2/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000
+    }
+  ],
+  "temperature_K": 300,
+  "source_pose": "distributed Boltz model30",
+  "analysis": "one classifier for all six replicas",
+  "path_resolution": "Runfromextractedbundleroot; source script resolvesrelativepathsagainstcwd.",
+  "raw_trajectories_in_core_bundle": false
+}

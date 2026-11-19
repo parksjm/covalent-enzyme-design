@@ -1,0 +1,79 @@
+{
+  "entries": [
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_md_statistical_analysis_20260825/md_geometry_activity_replicates.csv",
+      "destination": "evidence/legacy_md_results/md_geometry_activity_replicates.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 18761,
+      "sha256": "2c89d100cc3d3db04fc98fa6953b2282102c34ff781aac40f180dd80b48a14e5",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_md_statistical_analysis_20260825/md_geometry_activity_variant_summary.csv",
+      "destination": "evidence/legacy_md_results/md_geometry_activity_variant_summary.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 3411,
+      "sha256": "9bcea74b9145a6f6227ca8f8529a41ffd7131751f0c5890d9108bda491bf52d3",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_variant_summary_20260918.csv",
+      "destination": "evidence/legacy_md_results/md_variant_summary_20260918.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 1781,
+      "sha256": "261227f8a9b01395e0513eb822511296d97da3d2a00ed975d30d5fb31ff0dbfa",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_stability_calls_20260918.csv",
+      "destination": "evidence/legacy_md_results/md_stability_calls_20260918.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 214,
+      "sha256": "84d9ba70fa6ab436e68abc32192fe471c56e7daa1b4d04b580b5ddf78a78963a",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_by_variant_20260918.csv",
+      "destination": "evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_by_variant_20260918.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 18924,
+      "sha256": "e65bab6b99ce92c030632a2d6b58a1a5ddd0bd7a125e13b0935a7444fffc2ef2",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_20260918.csv",
+      "destination": "evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_20260918.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 4351,
+      "sha256": "38eea934e5138384306e5cb3dd2d6842172cc40db843a3aa3eeec7a88746ac7b",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_tier_definitions_20260918.md",
+      "destination": "evidence/legacy_md_results/md_tier_definitions_20260918.md",
+      "profile": "core",
+      "required": false,
+      "bytes": 450,
+      "sha256": "21fbc9fb2c3bf363cb171b7d776f197af57f6550044fa0a112a2bf2a85ca7fd7",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_20260918.md",
+      "destination": "evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_20260918.md",
+      "profile": "core",
+      "required": false,
+      "bytes": 9929,
+      "sha256": "a92c700b10f521983dd1a578a85aaad7c8f0c50c95bc1b16cb1795c150809a9c",
+      "category": "historical_AM1BCC_MD_occupancy_binding_persistence_NOT_AS H274_revalidation"
+    }
+  ],
+  "total_bytes": 57821,
+  "copied_evidence": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results",
+  "frozen_manifest_modified": false
+}

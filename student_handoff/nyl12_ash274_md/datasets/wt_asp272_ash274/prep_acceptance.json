@@ -1,0 +1,142 @@
+{
+  "accepted": true,
+  "scope": "Existing topology/microstate inventory only; no new scientific acceptance",
+  "topology_sha256": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+  "source_receipt": {
+    "path": "wt_asp272_ash274/evidence/source_preparation_acceptance.json",
+    "sha256": "9e0cd152b607935f8334912c8661bd6a00085faa256e36f294b21579d229f1a4"
+  },
+  "source_receipt_absolute": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/preparation_acceptance.json",
+  "source_receipt_sha256": "9e0cd152b607935f8334912c8661bd6a00085faa256e36f294b21579d229f1a4",
+  "topology_audit": {
+    "natom": 104934,
+    "total_charge_e": -0.004004946642281522,
+    "four_neutral_beta_Thr": true,
+    "protected_site_charge_inventory": [
+      {
+        "amber_residue": 929,
+        "resname": "THR",
+        "charge_e": -0.0010000005487783227,
+        "atom_charges": {
+          "N": -0.4844,
+          "H1": 0.12239999999999998,
+          "H2": 0.12239999999999998
+        }
+      },
+      {
+        "amber_residue": 968,
+        "resname": "ASP",
+        "charge_e": -1.0000000005487781,
+        "atom_charges": {
+          "N": -0.5163,
+          "OD1": -0.8013999989024437,
+          "OD2": -0.8013999989024437
+        }
+      },
+      {
+        "amber_residue": 970,
+        "resname": "ASH",
+        "charge_e": 1.0975563374815422e-09,
+        "atom_charges": {
+          "N": -0.4157,
+          "OD1": -0.5553999989024437,
+          "OD2": -0.6376000010975562,
+          "HD2": 0.4747
+        }
+      },
+      {
+        "amber_residue": 1025,
+        "resname": "THR",
+        "charge_e": -0.0010000005487783227,
+        "atom_charges": {
+          "N": -0.4844,
+          "H1": 0.12239999999999998,
+          "H2": 0.12239999999999998
+        }
+      },
+      {
+        "amber_residue": 1064,
+        "resname": "ASP",
+        "charge_e": -1.0000000005487781,
+        "atom_charges": {
+          "N": -0.5163,
+          "OD1": -0.8013999989024437,
+          "OD2": -0.8013999989024437
+        }
+      },
+      {
+        "amber_residue": 1066,
+        "resname": "ASH",
+        "charge_e": 1.0975563374815422e-09,
+        "atom_charges": {
+          "N": -0.4157,
+          "OD1": -0.5553999989024437,
+          "OD2": -0.6376000010975562,
+          "HD2": 0.4747
+        }
+      },
+      {
+        "amber_residue": 1121,
+        "resname": "THR",
+        "charge_e": -0.0010000005487783227,
+        "atom_charges": {
+          "N": -0.4844,
+          "H1": 0.12239999999999998,
+          "H2": 0.12239999999999998
+        }
+      },
+      {
+        "amber_residue": 1160,
+        "resname": "ASP",
+        "charge_e": -1.0000000005487781,
+        "atom_charges": {
+          "N": -0.5163,
+          "OD1": -0.8013999989024437,
+          "OD2": -0.8013999989024437
+        }
+      },
+      {
+        "amber_residue": 1162,
+        "resname": "ASH",
+        "charge_e": 1.0975563374815422e-09,
+        "atom_charges": {
+          "N": -0.4157,
+          "OD1": -0.5553999989024437,
+          "OD2": -0.6376000010975562,
+          "HD2": 0.4747
+        }
+      },
+      {
+        "amber_residue": 1217,
+        "resname": "THR",
+        "charge_e": -0.0010000005487783227,
+        "atom_charges": {
+          "N": -0.4844,
+          "H1": 0.12239999999999998,
+          "H2": 0.12239999999999998
+        }
+      },
+      {
+        "amber_residue": 1256,
+        "resname": "ASP",
+        "charge_e": -1.0000000005487781,
+        "atom_charges": {
+          "N": -0.5163,
+          "OD1": -0.8013999989024437,
+          "OD2": -0.8013999989024437
+        }
+      },
+      {
+        "amber_residue": 1258,
+        "resname": "ASH",
+        "charge_e": 1.0975563374815422e-09,
+        "atom_charges": {
+          "N": -0.4157,
+          "OD1": -0.5553999989024437,
+          "OD2": -0.6376000010975562,
+          "HD2": 0.4747
+        }
+      }
+    ]
+  }
+}

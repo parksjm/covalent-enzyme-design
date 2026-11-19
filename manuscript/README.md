@@ -25,3 +25,7 @@ to an artifact and its hash; record failures as well as successes; state whether
 a method is implemented, executed, converged, scientifically accepted, or only
 planned. Store evolving calculation state in new dated provenance snapshots.
 Do not overwrite past snapshots to make them agree with later job state.
+
+Student protonation/occupancy study summary and matched comparison plan:
+`student_handoff/nyl12_ash274_md/STUDY_SUMMARY.md` and `STUDY_PLAN.md` in the
+repository root. These remain exploratory, separate from verified kinetic claims.

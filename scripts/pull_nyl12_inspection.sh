@@ -468,21 +468,21 @@ rsync "${vmd_rsync_args[@]}" --copy-links \
     --exclude='/04_neb/progress/update_*/' \
     --exclude='/04_neb/progress/source_milestones/' \
     --exclude='/04_neb/history/' \
-    --exclude='/04_neb/spacing_tests/*/progress/update_*/' \
+    --exclude='/04_neb/spacing_tests/**/progress/update_*/' \
     --exclude='/04_neb/spacing_tests/**/source_milestones/' \
     --exclude='/04_neb/spacing_tests/**/source_snapshot*/' \
-    --exclude='/04_neb/spacing_tests/*/inputs/' \
+    --exclude='/04_neb/spacing_tests/**/inputs/' \
     --exclude='/04_neb/spacing_tests/**/history/' \
-    --include='/04_neb/spacing_tests/*/calculation/' \
-    --include='/04_neb/spacing_tests/*/calculation/minimize.mdin' \
-    --exclude='/04_neb/spacing_tests/*/calculation/***' \
+    --include='/04_neb/spacing_tests/**/calculation/' \
+    --include='/04_neb/spacing_tests/**/calculation/minimize.mdin' \
+    --exclude='/04_neb/spacing_tests/**/calculation/***' \
     --include='/04_neb/calculation/' \
     --include='/04_neb/calculation/minimize.mdin' \
     --exclude='/04_neb/calculation/***' --exclude='*.xyz' --exclude='*.xyz.gz' \
     --exclude='*.mdout' --exclude='native_report.mdout' \
-    --include='/04_neb/spacing_tests/*/progress/' \
-    --include='/04_neb/spacing_tests/*/progress/latest/' \
-    --include='/04_neb/spacing_tests/*/progress/latest/***' \
+    --include='/04_neb/spacing_tests/**/progress/' \
+    --include='/04_neb/spacing_tests/**/progress/latest/' \
+    --include='/04_neb/spacing_tests/**/progress/latest/***' \
     --include='/04_neb/progress/' --include='/04_neb/progress/latest/' \
     --include='/04_neb/progress/latest/***' \
     --include='/04_neb/progress/progress.json' \

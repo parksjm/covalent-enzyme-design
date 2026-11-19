@@ -1,0 +1,3161 @@
+{
+  "matched_summary": [
+    {
+      "case": "neutral_replica_01",
+      "microstate": "ASP272_ASP274",
+      "replica": 1,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 37,
+      "tier_a_percent": 0.37,
+      "tier_a_positive_phi_count": 37,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 2,
+      "last50ns_tier_a_percent": 0.04,
+      "tier_ab_positive_phi_count": 819,
+      "tier_ab_positive_phi_intact_native_thr_count": 0,
+      "heat_seed": 731110,
+      "production_10ns_seed": 771110,
+      "continuation_90ns_seed": 781110,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/neutral_replica_01.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/md_solvated.prmtop",
+      "topology_sha256_recorded": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "tier_a_positive_phi_intact_native_thr_count": 0
+    },
+    {
+      "case": "neutral_replica_02",
+      "microstate": "ASP272_ASP274",
+      "replica": 2,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 238,
+      "tier_a_percent": 2.38,
+      "tier_a_positive_phi_count": 238,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 5,
+      "last50ns_tier_a_percent": 0.1,
+      "tier_ab_positive_phi_count": 1296,
+      "tier_ab_positive_phi_intact_native_thr_count": 31,
+      "heat_seed": 731127,
+      "production_10ns_seed": 771127,
+      "continuation_90ns_seed": 781127,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/neutral_replica_02.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/md_solvated.prmtop",
+      "topology_sha256_recorded": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "tier_a_positive_phi_intact_native_thr_count": 21
+    },
+    {
+      "case": "ash272_replica_1",
+      "microstate": "ASH272_ASP274",
+      "replica": 1,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 3886,
+      "tier_a_percent": 38.86,
+      "tier_a_positive_phi_count": 3886,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 1853,
+      "last50ns_tier_a_percent": 37.06,
+      "tier_ab_positive_phi_count": 7253,
+      "tier_ab_positive_phi_intact_native_thr_count": 12,
+      "heat_seed": 732101,
+      "production_10ns_seed": 772101,
+      "continuation_90ns_seed": 842101,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash272_replica_1.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/ash272_solvated.prmtop",
+      "topology_sha256_recorded": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+      "tier_a_positive_phi_intact_native_thr_count": 7
+    },
+    {
+      "case": "ash272_replica_2",
+      "microstate": "ASH272_ASP274",
+      "replica": 2,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 1724,
+      "tier_a_percent": 17.24,
+      "tier_a_positive_phi_count": 1724,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 31,
+      "last50ns_tier_a_percent": 0.62,
+      "tier_ab_positive_phi_count": 3695,
+      "tier_ab_positive_phi_intact_native_thr_count": 0,
+      "heat_seed": 732202,
+      "production_10ns_seed": 772202,
+      "continuation_90ns_seed": 842202,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash272_replica_2.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/ash272_solvated.prmtop",
+      "topology_sha256_recorded": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+      "tier_a_positive_phi_intact_native_thr_count": 0
+    },
+    {
+      "case": "ash274_replica_1",
+      "microstate": "ASP272_ASH274",
+      "replica": 1,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 1677,
+      "tier_a_percent": 16.77,
+      "tier_a_positive_phi_count": 1677,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 644,
+      "last50ns_tier_a_percent": 12.88,
+      "tier_ab_positive_phi_count": 5865,
+      "tier_ab_positive_phi_intact_native_thr_count": 8,
+      "heat_seed": 732101,
+      "production_10ns_seed": 772101,
+      "continuation_90ns_seed": 842101,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_1.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop",
+      "topology_sha256_recorded": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+      "tier_a_positive_phi_intact_native_thr_count": 5
+    },
+    {
+      "case": "ash274_replica_2",
+      "microstate": "ASP272_ASH274",
+      "replica": 2,
+      "production_ns": 100,
+      "saved_frames": 10000,
+      "frame_interval_ps": 10,
+      "tier_a_count": 0,
+      "tier_a_percent": 0.0,
+      "tier_a_positive_phi_count": 0,
+      "last50ns_denominator_frames": 5000,
+      "last50ns_tier_a_count": 0,
+      "last50ns_tier_a_percent": 0.0,
+      "tier_ab_positive_phi_count": 30,
+      "tier_ab_positive_phi_intact_native_thr_count": 0,
+      "heat_seed": 732202,
+      "production_10ns_seed": 772202,
+      "continuation_90ns_seed": 842202,
+      "temperature_K": 300,
+      "force_field": "ff19SB + modular multiconformer RESP/GAFF2 PA6 L4 v1_20261031; TIP3P",
+      "catalytic_Nterm": "neutral NH2 at all four mature beta termini",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_2.csv",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop",
+      "topology_sha256_recorded": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+      "tier_a_positive_phi_intact_native_thr_count": 0
+    }
+  ],
+  "matched_protocols": {
+    "neutral_replica_01": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 731110
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 741110
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 751110
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 761110
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 771110
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "neutral_replica_01",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/md_solvated.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/01_mm_minimization/min.rst7": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_source_snapshot/scripts/run_model30_md_replica.py": "1a7c415293072e75651c33cc0af561106858e256158b6afb2f7b0a7cd1eeec4e",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 781110,
+        "queued_utc": "2026-11-11T03:46:06.986968+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/jobs/neutral_replica_01/continuation_after_heating/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_extension_source/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_extension_source/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 300.92,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-11T04:09:07.661606+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/05_production_10ns.rst7": "881a5772648c6639d3462b44b1015e6434277a3efef6090a049fcddf8c30e9e0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.in": "3baa392f17224534e87a0fef972a1d7a7e7d826474f019098c19c43bb1550c6c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/05_production_10ns.in": "18bdaca2e8df80a2a184544e7d56aa4fc82ae80ea322a471e720333dd564345e"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-11T11:52:14.594612+00:00"
+      },
+      "topology_sha256_recorded": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.nc"
+      ]
+    },
+    "neutral_replica_02": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 731127
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 741127
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 751127
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 761127
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 771127
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "neutral_replica_02",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/md_solvated.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/01_mm_minimization/min.rst7": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_source_snapshot/scripts/run_model30_md_replica.py": "1a7c415293072e75651c33cc0af561106858e256158b6afb2f7b0a7cd1eeec4e",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 781127,
+        "queued_utc": "2026-11-11T03:46:07.063994+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/jobs/neutral_replica_02/continuation_after_heating/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_extension_source/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_extension_source/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 299.33,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-11T04:10:07.741259+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/05_production_10ns.rst7": "906842dd73ebab447820c57abdcd7f250475ca0318747efacc13c4fadec40b4e",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.in": "8c301627557c850924e612ecb2a18c5653eca3c2b47071d8f3443694ce1321f3",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/05_production_10ns.in": "7fff82e72984dc4adaf531b3173aabcaf279aa33110efae57984d4e520144a62"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-11T11:58:23.525355+00:00"
+      },
+      "topology_sha256_recorded": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.nc"
+      ]
+    },
+    "ash272_replica_1": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 732101
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 742101
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 752101
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 762101
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 772101
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "ash272_replica_1",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/ash272_solvated.prmtop": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/min_unrestrained.rst7": "58a072eaa4101a3f17cb96209f37f63a65b7ec94dbd274a3b130fb9d92a4daae",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 842101,
+        "queued_utc": "2026-11-13T13:50:10.707344+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/pilot_completion/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 301.5,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-13T13:50:11.177021+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/system.prmtop": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/05_production_10ns.rst7": "43f0884d599c5917b8eb44dff45b0f81bf9727900d2b1e0382f76440172374f9",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.in": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/05_production_10ns.in": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-13T21:33:46.855365+00:00"
+      },
+      "topology_sha256_recorded": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.nc"
+      ]
+    },
+    "ash272_replica_2": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 732202
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 742202
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 752202
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 762202
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 772202
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "ash272_replica_2",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/ash272_solvated.prmtop": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/min_unrestrained.rst7": "58a072eaa4101a3f17cb96209f37f63a65b7ec94dbd274a3b130fb9d92a4daae",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 842202,
+        "queued_utc": "2026-11-13T13:51:01.481928+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/pilot_completion/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 299.24,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-13T13:51:01.954125+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/system.prmtop": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/05_production_10ns.rst7": "2bc21caaa6f8659b7675f9aaf0a06ea44e84bf6aa4f648d2f8af6939a1818c9d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.in": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/05_production_10ns.in": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-13T21:43:50.301105+00:00"
+      },
+      "topology_sha256_recorded": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.nc"
+      ]
+    },
+    "ash274_replica_1": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 732101
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 742101
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 752101
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 762101
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 772101
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "ash274_replica_1",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/min_unrestrained.rst7": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 842101,
+        "queued_utc": "2026-11-14T16:18:38.811851+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/pilot_completion/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 300.65,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-14T16:18:39.289627+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/system.prmtop": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.rst7": "c9aa025b3e69088118d1f5e7184161734a8aad83a6120af353869f143f8a5168",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.in": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.in": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-15T00:02:19.055732+00:00"
+      },
+      "topology_sha256_recorded": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.nc"
+      ]
+    },
+    "ash274_replica_2": {
+      "protocol": {
+        "protocol": "model30_matched_10ns_pilot_v1",
+        "dt_ps": 0.002,
+        "temperature_K": 300,
+        "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+        "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+        "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+        "electrostatics": "Periodic PME cut=10.0 A",
+        "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+        "restraint_reference": "Original minimized coordinates for every restrained stage",
+        "production_restraints": "ntr=0 nmropt=0",
+        "trajectory_interval_ps": {
+          "equilibration": 2,
+          "production": 10
+        },
+        "stages": [
+          {
+            "name": "01_heat_nvt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 5.0,
+            "seed": 732202
+          },
+          {
+            "name": "02_density_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 2.0,
+            "seed": 742202
+          },
+          {
+            "name": "03_weak_npt",
+            "steps": 50000,
+            "duration_ps": 100.0,
+            "heavy_restraint_kcal_mol_A2": 0.5,
+            "seed": 752202
+          },
+          {
+            "name": "04_equil_npt",
+            "steps": 100000,
+            "duration_ps": 200.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 762202
+          },
+          {
+            "name": "05_production_10ns",
+            "steps": 5000000,
+            "duration_ps": 10000.0,
+            "heavy_restraint_kcal_mol_A2": null,
+            "seed": 772202
+          }
+        ],
+        "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+        "label": "ash274_replica_2",
+        "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/min_unrestrained.rst7": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/src/nyl12_covalent/pilot_md_protocol.py": "6194fb01d912de827a6b4e4b1bc802022a06843bc726ea57a83328b3c12664c4"
+        }
+      },
+      "extension": {
+        "status": "100ns_complete_requires_projected_phi_native_sampling_analysis",
+        "additional_ns": 90,
+        "total_production_ns": 100,
+        "seed": 842202,
+        "queued_utc": "2026-11-14T16:19:13.792872+00:00",
+        "source_job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/pilot_completion/status.json",
+        "source_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/continue_model30_md.py": "f2f49889366d8dec65d9bae644356cfb997f6cd48de68f57eadda0180c865fd0",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/source_snapshot/scripts/run_model30_md_replica.py": "82e4867d59a751ca5e06d5209a4ff71fd17ff3da782b7e5f81c31ed21a097a5d",
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP": "7ed3f439d09d6beff94210bb3f356585e6918cd3f500dcc58046067ac8fd9602"
+        },
+        "command": [
+          "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+          "-O",
+          "-i",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.in",
+          "-o",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.out",
+          "-p",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/system.prmtop",
+          "-c",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.rst7",
+          "-r",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.rst7",
+          "-x",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.nc",
+          "-inf",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.mdinfo"
+        ],
+        "source_checkpoint_acceptance": {
+          "completed_steps": 5000000,
+          "final_time_ps": 10500.0,
+          "final_temperature_K": 298.1,
+          "temperature_gate_pass": true,
+          "scientific_scope": "Stage completion does not prove binding stability or equilibration"
+        },
+        "started_utc": "2026-11-14T16:19:14.344559+00:00",
+        "input_sha256": {
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/system.prmtop": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.rst7": "f726658c4c5b27fbb32c02d9b46f766caaf31216010760c2ad4e03b2ae65cfaa",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.in": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca",
+          "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.in": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb"
+        },
+        "returncode": 0,
+        "ended_utc": "2026-11-15T00:08:46.939875+00:00"
+      },
+      "topology_sha256_recorded": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+      "trajectory_paths_not_opened": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.nc"
+      ]
+    }
+  },
+  "initial_pose": {
+    "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_distributed_static_20261011/workers/aster/canonical/pa6_l4z_l2_nyl12_wt/pa6_l4z_l2_nyl12_wt_model_30.pdb",
+    "sha256_recorded": "9662c374512ee480a8c23cbf04d2c5a845a63c5cbe846f24b5523a98be0f1d7e",
+    "description": "Distributed canonicalWT Boltz model30; exact source file above, not legacyWTmodel41. Coordinate conversion acceptance says heavycoordinates preserved. Protonatedstates separately prepared/minimized fromsameparent pose, not identical equilibratedcoordinates.",
+    "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_distributed_static_20261011/workers/aster/canonical/pa6_l4z_l2_nyl12_wt/confidence_pa6_l4z_l2_nyl12_wt_model_30.json",
+    "confidence_scalars": {
+      "confidence_score": 0.7676286697387695,
+      "ptm": 0.7050291299819946,
+      "iptm": 0.6792566776275635,
+      "ligand_iptm": 0.8085446953773499,
+      "protein_iptm": 0.6757662296295166,
+      "complex_plddt": 0.789721667766571,
+      "complex_iplddt": 0.7678945660591125,
+      "complex_pde": 2.445211410522461,
+      "complex_ipde": 8.576135635375977
+    }
+  },
+  "force_field_release": {
+    "artifact_sha256": {
+      "P6C.lib": "de3f2924cfacb64efa8b5a9565250c5ed376558036d79ccbeb9ac45e24bbfd8e",
+      "P6C.mol2": "6fb53c1b91e27759e72de563e9efcca3348f0edac8d87c141d81ec57f5e5894a",
+      "P6I.lib": "d67d333d1043f4f5764cd2e2d55838b44e3f339eca99b18fc4041a7dfa3b50d7",
+      "P6I.mol2": "954453b0779522b5381e9d2b43ea229bed189733fb29bd90859a2876f6734f90",
+      "P6N.lib": "bad803ef61d62364d36efa9ad4fffc0329c0ca3c0ed791d257dbaf4e83a7cfb0",
+      "P6N.mol2": "49492db8abde75be8c8a0cc70af6cbd034a6289a384187d275463c7aff85d199",
+      "README.md": "0651874cfbc4b0f06063faac027fb62d2bc67c74a042ef735d1f09d0639f2267",
+      "leaprc.pa6_shared_p6i": "6a1696826ef843e057a9a72fd6fc835af17ff00e1d566cbe1597004d41f5e668",
+      "pa6_l4_canonical.inpcrd": "ae068840308047c2092dc2bc526467d03d2a7a13d4ad6e19956cc98dde2b1670",
+      "pa6_l4_canonical.prmtop": "b881c104510169d212683fd437cd908253833d5efd80cefd51fd8769627fa8af",
+      "pa6_shared_p6i_charges.txt": "9d8f86e676c8e16356e80f5c974ac8c409bbbcd28f13d0279a3d9a300e1e4f1c",
+      "pa6_shared_p6i_gaff2.frcmod": "7d35cfd403fb1ae421092f894e11f60da69db67595b0717831a4e1b32008fa3e",
+      "pa6_shared_p6i_improper.frcmod": "69606f8af54f56f42a5fde186f78e94748eca94ea9658be41725ea96dd4400a0"
+    },
+    "chemistry": {
+      "formal_charge": 0,
+      "multiplicity": 1,
+      "polymer": "PA6",
+      "sequence": [
+        "P6N",
+        "P6I",
+        "P6I",
+        "P6C"
+      ],
+      "terminal_state": "N-terminal ammonium/C-terminal carboxylate"
+    },
+    "documented_exception": {
+      "approval_record": "User approved the corrected accelerated path on 2026-10-31; mixed-solvent conformer-energy comparisons are retained as non-gating diagnostics.",
+      "disposition": "retained as non-gating diagnostic",
+      "historical_gate": "identical-coordinate GB comparator non-regression",
+      "reason": "GBneck2/GBSA and SMD are distinct solvent models; the sampled conformers are not an equilibrium release set, while direct MM-versus-QM bonded profiles and final-topology MD pass."
+    },
+    "force_field": {
+      "bonded_override": "three accepted improper terms",
+      "charges": "standard two-stage multiconformer RESP",
+      "pb_radii": "mbondi3",
+      "protein_compatibility_target": "ff19SB",
+      "small_molecule_base": "GAFF2"
+    },
+    "known_limitations": [
+      "Validated for the PA6 L4 zwitterion scope, not arbitrary lengths.",
+      "Not validated for bulk, melt, crystalline, TI1, or acyl-enzyme states.",
+      "The mixed-solvent conformer-energy analysis is diagnostic only."
+    ],
+    "md_ready": true,
+    "production_ready_for_validated_l4_scope": true,
+    "release_id": "pa6_l4_modular_resp_gaff2_v1_20261031",
+    "schema_version": 1,
+    "source_revision": "01d14b0",
+    "source_sha256": {
+      "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/bonded/improper_refit_acceptance_attempt1/acceptance.json": "9fd522ce7fa680dbdcd8564592ceee687fb2406d4bca6258057ed8cc0836de0f",
+      "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/corrected_energetics_20261031/energetic_decomposition_attempt1/report.json": "39b09197622027a895ea50f96d6034c8d4059cfe520453bf6de99b078b353849",
+      "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/final_decision_attempt4/acceptance.json": "9a2bd719503cab579cf6f78e67294bccfc4e5d0cb8a238a9bf64f164c5f848b6",
+      "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/md_refit/aggregate_analysis_attempt1/report.json": "d71ce41d230b95a026f777251b12252534347230912778d0ec693793dab3a75d",
+      "/data/jpc/polyamide-amber-ff/output/pa6_modular_oligomer_esp_20261029/gaff2_shared_p6i_library/candidate_attempt4_mbondi3/manifest.json": "03c74bf78937111755a9f457af7ab1735b1a4cf31bc9e21ab1a8494968670a9d"
+    },
+    "status": "md_ready_release_for_validated_pa6_l4_scope",
+    "universal_length_validated": false
+  },
+  "local_parameter_payload_matches_release": {
+    "P6C.lib": true,
+    "P6C.mol2": true,
+    "P6I.lib": true,
+    "P6I.mol2": true,
+    "P6N.lib": true,
+    "P6N.mol2": true,
+    "leaprc.pa6_shared_p6i": true,
+    "pa6_shared_p6i_gaff2.frcmod": true,
+    "pa6_shared_p6i_improper.frcmod": true
+  },
+  "analysis_gates": {
+    "TierA": {
+      "d1_max_A": 3.2,
+      "d2_d3_max_A": 3.8,
+      "BD_degrees": [
+        90,
+        120
+      ],
+      "abs_phi_degrees": [
+        70,
+        110
+      ]
+    },
+    "TierB": {
+      "d1_max_A": 3.5,
+      "d2_d3_max_A": 4.0,
+      "BD_degrees": [
+        85,
+        125
+      ],
+      "abs_phi_degrees": [
+        60,
+        125
+      ]
+    },
+    "orientation": "signedprojectedphi>0 separately; everyTierAframeinmatchedsixcasespositive",
+    "native_Thr": {
+      "scaffold_fit": "backboneN/CA/C/O Phe113,Asn186,Asp272,Asp274 to cif/n12c.cif chainA;Thr233 heldout",
+      "OG1_shift_max_A": 0.75,
+      "Nalpha_shift_max_A": 1.25,
+      "abs_psi_delta_max_deg": 35,
+      "abs_chi1_delta_max_deg": 20
+    },
+    "stricter_count_scope": "Nativegate evaluated in TierA/B+positivephi andintactPA6 subset; counts8+0(ASH274),0+31(ASP/ASP),12+0(ASH272), not nativepass fractions across allframes.",
+    "last50ns_definition": "last5000 saved productionframes=frames5001\u201310000. SourceTIME includes prior0.5ns equilibration; firstTIME510ps,last100500ps.",
+    "frame_correlation": "10psframes correlated; independentMDseedreplicas definecomparisonstrength.",
+    "TierAonly_joint_native_counts": {
+      "neutral_replica_01": 0,
+      "neutral_replica_02": 21,
+      "ash272_replica_1": 7,
+      "ash272_replica_2": 0,
+      "ash274_replica_1": 5,
+      "ash274_replica_2": 0
+    }
+  },
+  "legacy_panel": [
+    {
+      "variant": "WT",
+      "alpha_substitution_verified": "none",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_wt_model_41",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.767848014831543,
+      "complex_plddt_0to1": 0.7915792465209961,
+      "ligand_iptm_0to1": 0.7677853107452393,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_wt/predictions/pa6_l4z_l2_nyl12_wt/confidence_pa6_l4z_l2_nyl12_wt_model_41.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "T53Q",
+      "alpha_substitution_verified": "T53Q",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_t53q_model_10",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.763515293598175,
+      "complex_plddt_0to1": 0.7858202457427979,
+      "ligand_iptm_0to1": 0.7733097076416016,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_t53q/predictions/pa6_l4z_l2_nyl12_t53q/confidence_pa6_l4z_l2_nyl12_t53q_model_10.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "F55N",
+      "alpha_substitution_verified": "F55N",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_f55n_model_1",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7601060271263123,
+      "complex_plddt_0to1": 0.7806652188301086,
+      "ligand_iptm_0to1": 0.7702518105506897,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f55n/predictions/pa6_l4z_l2_nyl12_f55n/confidence_pa6_l4z_l2_nyl12_f55n_model_1.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "K59D",
+      "alpha_substitution_verified": "K59D",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_k59d_model_16",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7720808982849121,
+      "complex_plddt_0to1": 0.7937731146812439,
+      "ligand_iptm_0to1": 0.8138716220855713,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_k59d/predictions/pa6_l4z_l2_nyl12_k59d/confidence_pa6_l4z_l2_nyl12_k59d_model_16.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "K59E",
+      "alpha_substitution_verified": "K59E",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_k59e_model_3",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7649324536323547,
+      "complex_plddt_0to1": 0.7841052412986755,
+      "ligand_iptm_0to1": 0.7937541007995605,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_k59e/predictions/pa6_l4z_l2_nyl12_k59e/confidence_pa6_l4z_l2_nyl12_k59e_model_3.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "F101E",
+      "alpha_substitution_verified": "F101E",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_f101e_model_17",
+      "initial_static_tier": "A",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7759113311767578,
+      "complex_plddt_0to1": 0.7920689582824707,
+      "ligand_iptm_0to1": 0.7884098887443542,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f101e/predictions/pa6_l4z_l2_nyl12_f101e/confidence_pa6_l4z_l2_nyl12_f101e_model_17.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "F101H",
+      "alpha_substitution_verified": "F101H",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_f101h_model_8",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7799579501152039,
+      "complex_plddt_0to1": 0.8000462651252747,
+      "ligand_iptm_0to1": 0.8079199194908142,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f101h/predictions/pa6_l4z_l2_nyl12_f101h/confidence_pa6_l4z_l2_nyl12_f101h_model_8.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "P105K",
+      "alpha_substitution_verified": "P105K",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_p105k_model_11",
+      "initial_static_tier": "B",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7642225623130798,
+      "complex_plddt_0to1": 0.7831656336784363,
+      "ligand_iptm_0to1": 0.8102287650108337,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_p105k/predictions/pa6_l4z_l2_nyl12_p105k/confidence_pa6_l4z_l2_nyl12_p105k_model_11.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    },
+    {
+      "variant": "V111C",
+      "alpha_substitution_verified": "V111C",
+      "beta_sequence_identical_to_WT": true,
+      "selected_model": "pa6_l4z_l2_nyl12_v111c_model_46",
+      "initial_static_tier": "A",
+      "replicas_with_normal_100ns_completion": 3,
+      "replicas_configured": 3,
+      "parameter_generation": "legacy AM1-BCC/GAFF ligand + ff19SB/TIP3P; NOT modular RESP/GAFF2",
+      "confidence_score_0to1": 0.7755123972892761,
+      "complex_plddt_0to1": 0.7953172326087952,
+      "ligand_iptm_0to1": 0.8010327816009521,
+      "sequence_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+      "confidence_json": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_v111c/predictions/pa6_l4z_l2_nyl12_v111c/confidence_pa6_l4z_l2_nyl12_v111c_model_46.json",
+      "source_selection_table": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv"
+    }
+  ],
+  "legacy_panel_details": {
+    "WT": {
+      "sequence_key": "nyl12_wt",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "0d2ecf0c8f2a1d93cd9827de501a2c152fcbc78d6121f4a09a6a4c064d7ed74d",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820117,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820134,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820151,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.767848014831543,
+        "ptm": 0.6993602514266968,
+        "iptm": 0.67292320728302,
+        "ligand_iptm": 0.7677853107452393,
+        "protein_iptm": 0.6705533266067505,
+        "complex_plddt": 0.7915792465209961,
+        "complex_iplddt": 0.7634595632553101,
+        "complex_pde": 2.4844796657562256,
+        "complex_ipde": 8.743928909301758,
+        "chains_ptm": {
+          "0": 0.9761335253715515,
+          "1": 0.9762545824050903,
+          "2": 0.9760072231292725,
+          "3": 0.9757702946662903,
+          "4": 0.9884681105613708,
+          "5": 0.9899723529815674,
+          "6": 0.9883156418800354,
+          "7": 0.9885441660881042,
+          "8": 0.817110538482666
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9761335253715515,
+            "1": 0.8296137452125549,
+            "2": 0.5206452012062073,
+            "3": 0.5365051627159119,
+            "4": 0.8926873207092285,
+            "5": 0.760377049446106,
+            "6": 0.5415392518043518,
+            "7": 0.5494025349617004,
+            "8": 0.4508470594882965
+          },
+          "1": {
+            "0": 0.8244474530220032,
+            "1": 0.9762545824050903,
+            "2": 0.528179943561554,
+            "3": 0.5302678942680359,
+            "4": 0.7394434809684753,
+            "5": 0.7840722799301147,
+            "6": 0.5571800470352173,
+            "7": 0.5430785417556763,
+            "8": 0.299742192029953
+          },
+          "2": {
+            "0": 0.531862199306488,
+            "1": 0.5307219624519348,
+            "2": 0.9760072231292725,
+            "3": 0.83897465467453,
+            "4": 0.520693838596344,
+            "5": 0.5485100150108337,
+            "6": 0.7379195094108582,
+            "7": 0.6816908121109009,
+            "8": 0.2355934977531433
+          },
+          "3": {
+            "0": 0.5361377596855164,
+            "1": 0.5310307145118713,
+            "2": 0.8385565876960754,
+            "3": 0.9757702946662903,
+            "4": 0.5322350263595581,
+            "5": 0.5389307141304016,
+            "6": 0.6851955652236938,
+            "7": 0.7552154064178467,
+            "8": 0.270998477935791
+          },
+          "4": {
+            "0": 0.8912265300750732,
+            "1": 0.7338745594024658,
+            "2": 0.5207059979438782,
+            "3": 0.5382564067840576,
+            "4": 0.9884681105613708,
+            "5": 0.9013040065765381,
+            "6": 0.5794650316238403,
+            "7": 0.5834096074104309,
+            "8": 0.4492471516132355
+          },
+          "5": {
+            "0": 0.7640106678009033,
+            "1": 0.7767626643180847,
+            "2": 0.53713059425354,
+            "3": 0.5309497714042664,
+            "4": 0.8934128880500793,
+            "5": 0.9899723529815674,
+            "6": 0.5853800177574158,
+            "7": 0.5905238389968872,
+            "8": 0.39856016635894775
+          },
+          "6": {
+            "0": 0.5392617583274841,
+            "1": 0.547298789024353,
+            "2": 0.7371436357498169,
+            "3": 0.6807166337966919,
+            "4": 0.5801910758018494,
+            "5": 0.5862331986427307,
+            "6": 0.9883156418800354,
+            "7": 0.8853578567504883,
+            "8": 0.26562249660491943
+          },
+          "7": {
+            "0": 0.5443633794784546,
+            "1": 0.5261754393577576,
+            "2": 0.6755545139312744,
+            "3": 0.7474319338798523,
+            "4": 0.5756701231002808,
+            "5": 0.5878986716270447,
+            "6": 0.87589430809021,
+            "7": 0.9885441660881042,
+            "8": 0.2856106162071228
+          },
+          "8": {
+            "0": 0.7264113426208496,
+            "1": 0.6639495491981506,
+            "2": 0.4563656449317932,
+            "3": 0.48634183406829834,
+            "4": 0.7677853107452393,
+            "5": 0.7318171262741089,
+            "6": 0.5074155330657959,
+            "7": 0.5209402441978455,
+            "8": 0.817110538482666
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "WT",
+        "model": "pa6_l4z_l2_nyl12_wt_model_41",
+        "tier": "B",
+        "interface_delta": "-27.85",
+        "geometry_score": "94.75",
+        "d1": "3.29",
+        "d2": "2.85",
+        "d3": "2.82",
+        "a1": "100.3",
+        "abs_herschlag_phi": "91.3",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_wt_model_41/complex_min.pdb"
+      }
+    },
+    "T53Q": {
+      "sequence_key": "nyl12_t53q",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGQFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "c7dbe172fc06e641892acb59546e7843a6fa75c69b596baca6cec0bedb43e065",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820817,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820834,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820851,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.763515293598175,
+        "ptm": 0.7065491676330566,
+        "iptm": 0.6742954850196838,
+        "ligand_iptm": 0.7733097076416016,
+        "protein_iptm": 0.6720550656318665,
+        "complex_plddt": 0.7858202457427979,
+        "complex_iplddt": 0.7540401220321655,
+        "complex_pde": 2.33801531791687,
+        "complex_ipde": 8.295546531677246,
+        "chains_ptm": {
+          "0": 0.9806312918663025,
+          "1": 0.9805687665939331,
+          "2": 0.9805993437767029,
+          "3": 0.9803430438041687,
+          "4": 0.9889065623283386,
+          "5": 0.9893962740898132,
+          "6": 0.9888878464698792,
+          "7": 0.9888145923614502,
+          "8": 0.8359649777412415
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9806312918663025,
+            "1": 0.8659884333610535,
+            "2": 0.5031332969665527,
+            "3": 0.5110257863998413,
+            "4": 0.9127733111381531,
+            "5": 0.7918432354927063,
+            "6": 0.5230455994606018,
+            "7": 0.5302712917327881,
+            "8": 0.4972606301307678
+          },
+          "1": {
+            "0": 0.8623433113098145,
+            "1": 0.9805687665939331,
+            "2": 0.5043324828147888,
+            "3": 0.5126639008522034,
+            "4": 0.7774753570556641,
+            "5": 0.8209672570228577,
+            "6": 0.5356392860412598,
+            "7": 0.5216490030288696,
+            "8": 0.33218666911125183
+          },
+          "2": {
+            "0": 0.5159633159637451,
+            "1": 0.5020915865898132,
+            "2": 0.9805993437767029,
+            "3": 0.8744157552719116,
+            "4": 0.5004453063011169,
+            "5": 0.526187002658844,
+            "6": 0.7657817602157593,
+            "7": 0.7090456485748291,
+            "8": 0.2447342872619629
+          },
+          "3": {
+            "0": 0.5124067664146423,
+            "1": 0.5118806958198547,
+            "2": 0.8690873384475708,
+            "3": 0.9803430438041687,
+            "4": 0.5095511078834534,
+            "5": 0.5206306576728821,
+            "6": 0.713799774646759,
+            "7": 0.7841313481330872,
+            "8": 0.2841058075428009
+          },
+          "4": {
+            "0": 0.9154186844825745,
+            "1": 0.7734990119934082,
+            "2": 0.5223268270492554,
+            "3": 0.5324399471282959,
+            "4": 0.9889065623283386,
+            "5": 0.9229983687400818,
+            "6": 0.5642831921577454,
+            "7": 0.5685984492301941,
+            "8": 0.47175148129463196
+          },
+          "5": {
+            "0": 0.7968854904174805,
+            "1": 0.8039951324462891,
+            "2": 0.532065749168396,
+            "3": 0.5364054441452026,
+            "4": 0.9168902039527893,
+            "5": 0.9893962740898132,
+            "6": 0.5677805542945862,
+            "7": 0.578072190284729,
+            "8": 0.4194769561290741
+          },
+          "6": {
+            "0": 0.5401495695114136,
+            "1": 0.5352879166603088,
+            "2": 0.7521592974662781,
+            "3": 0.7022086977958679,
+            "4": 0.5676653981208801,
+            "5": 0.5650167465209961,
+            "6": 0.9888878464698792,
+            "7": 0.9157285094261169,
+            "8": 0.2813512980937958
+          },
+          "7": {
+            "0": 0.5418151617050171,
+            "1": 0.5321119427680969,
+            "2": 0.700941801071167,
+            "3": 0.7666789293289185,
+            "4": 0.5595791935920715,
+            "5": 0.572715163230896,
+            "6": 0.9115312099456787,
+            "7": 0.9888145923614502,
+            "8": 0.3016667068004608
+          },
+          "8": {
+            "0": 0.7336795330047607,
+            "1": 0.6799466013908386,
+            "2": 0.4583745300769806,
+            "3": 0.4821278750896454,
+            "4": 0.7733097076416016,
+            "5": 0.7340018153190613,
+            "6": 0.48960211873054504,
+            "7": 0.506797194480896,
+            "8": 0.8359649777412415
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "T53Q",
+        "model": "pa6_l4z_l2_nyl12_t53q_model_10",
+        "tier": "B",
+        "interface_delta": "-18.74",
+        "geometry_score": "87.5",
+        "d1": "2.96",
+        "d2": "2.89",
+        "d3": "2.88",
+        "a1": "85.0",
+        "abs_herschlag_phi": "93.5",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/complex_min.pdb"
+      }
+    },
+    "F55N": {
+      "sequence_key": "nyl12_f55n",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFNTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "41e4cf0573b3dc56055e13759c3bf2a6977e0621ed72f17513072be0c5eef64d",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820417,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820434,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820451,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7601060271263123,
+        "ptm": 0.7035683989524841,
+        "iptm": 0.6778692603111267,
+        "ligand_iptm": 0.7702518105506897,
+        "protein_iptm": 0.675520122051239,
+        "complex_plddt": 0.7806652188301086,
+        "complex_iplddt": 0.7543275952339172,
+        "complex_pde": 2.4730522632598877,
+        "complex_ipde": 8.714543342590332,
+        "chains_ptm": {
+          "0": 0.9772295951843262,
+          "1": 0.9779845476150513,
+          "2": 0.9768297076225281,
+          "3": 0.9769473671913147,
+          "4": 0.9871480464935303,
+          "5": 0.9882233142852783,
+          "6": 0.9861195087432861,
+          "7": 0.9859797358512878,
+          "8": 0.8226842284202576
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9772295951843262,
+            "1": 0.83904629945755,
+            "2": 0.522610604763031,
+            "3": 0.5422823429107666,
+            "4": 0.8935701251029968,
+            "5": 0.7676990628242493,
+            "6": 0.5467624664306641,
+            "7": 0.5487234592437744,
+            "8": 0.4554196298122406
+          },
+          "1": {
+            "0": 0.8353565335273743,
+            "1": 0.9779845476150513,
+            "2": 0.5387848019599915,
+            "3": 0.5318023562431335,
+            "4": 0.750389039516449,
+            "5": 0.793817400932312,
+            "6": 0.5611190795898438,
+            "7": 0.5414846539497375,
+            "8": 0.30142906308174133
+          },
+          "2": {
+            "0": 0.5340963006019592,
+            "1": 0.5398202538490295,
+            "2": 0.9768297076225281,
+            "3": 0.8467159271240234,
+            "4": 0.5272644758224487,
+            "5": 0.5520637631416321,
+            "6": 0.7378820776939392,
+            "7": 0.6804457902908325,
+            "8": 0.23685115575790405
+          },
+          "3": {
+            "0": 0.5398139357566833,
+            "1": 0.5311223268508911,
+            "2": 0.8435986638069153,
+            "3": 0.9769473671913147,
+            "4": 0.5342344641685486,
+            "5": 0.5418102741241455,
+            "6": 0.6899216175079346,
+            "7": 0.751078724861145,
+            "8": 0.2729785442352295
+          },
+          "4": {
+            "0": 0.8855006694793701,
+            "1": 0.7428642511367798,
+            "2": 0.5262072682380676,
+            "3": 0.5347657203674316,
+            "4": 0.9871480464935303,
+            "5": 0.9061518311500549,
+            "6": 0.5936147570610046,
+            "7": 0.5933396220207214,
+            "8": 0.45017194747924805
+          },
+          "5": {
+            "0": 0.7659746408462524,
+            "1": 0.7822052836418152,
+            "2": 0.5360977053642273,
+            "3": 0.5355398058891296,
+            "4": 0.9005382657051086,
+            "5": 0.9882233142852783,
+            "6": 0.6025800108909607,
+            "7": 0.5998393893241882,
+            "8": 0.3930402398109436
+          },
+          "6": {
+            "0": 0.5466756224632263,
+            "1": 0.5470879673957825,
+            "2": 0.7324769496917725,
+            "3": 0.6802245378494263,
+            "4": 0.5927971005439758,
+            "5": 0.5985690355300903,
+            "6": 0.9861195087432861,
+            "7": 0.892448902130127,
+            "8": 0.26918932795524597
+          },
+          "7": {
+            "0": 0.5442529916763306,
+            "1": 0.5335868000984192,
+            "2": 0.6732289791107178,
+            "3": 0.7423014044761658,
+            "4": 0.5876649022102356,
+            "5": 0.5972168445587158,
+            "6": 0.8867203593254089,
+            "7": 0.9859797358512878,
+            "8": 0.2891380190849304
+          },
+          "8": {
+            "0": 0.7280466556549072,
+            "1": 0.6724358797073364,
+            "2": 0.4614684581756592,
+            "3": 0.4836363196372986,
+            "4": 0.7702518105506897,
+            "5": 0.7319381833076477,
+            "6": 0.5117290019989014,
+            "7": 0.525178074836731,
+            "8": 0.8226842284202576
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "F55N",
+        "model": "pa6_l4z_l2_nyl12_f55n_model_1",
+        "tier": "B",
+        "interface_delta": "-22.24",
+        "geometry_score": "98.75",
+        "d1": "3.08",
+        "d2": "3.04",
+        "d3": "2.9",
+        "a1": "89.5",
+        "abs_herschlag_phi": "99.9",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/complex_min.pdb"
+      }
+    },
+    "K59D": {
+      "sequence_key": "nyl12_k59d",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEDMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "4b985d2365199aa53eb5d47a4e5bb93d841cb4c968cd2ac38963eb6bc4a79f48",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820517,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820534,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820551,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7720808982849121,
+        "ptm": 0.7106234431266785,
+        "iptm": 0.6853120923042297,
+        "ligand_iptm": 0.8138716220855713,
+        "protein_iptm": 0.6818807721138,
+        "complex_plddt": 0.7937731146812439,
+        "complex_iplddt": 0.7661603093147278,
+        "complex_pde": 2.3649001121520996,
+        "complex_ipde": 8.33625316619873,
+        "chains_ptm": {
+          "0": 0.9793077111244202,
+          "1": 0.9789073467254639,
+          "2": 0.9780964851379395,
+          "3": 0.9776666164398193,
+          "4": 0.9896706938743591,
+          "5": 0.9908781051635742,
+          "6": 0.9890995621681213,
+          "7": 0.9892001748085022,
+          "8": 0.8561672568321228
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9793077111244202,
+            "1": 0.8584453463554382,
+            "2": 0.521486222743988,
+            "3": 0.5394822955131531,
+            "4": 0.9101844429969788,
+            "5": 0.795356810092926,
+            "6": 0.5400511622428894,
+            "7": 0.5458996891975403,
+            "8": 0.5530381202697754
+          },
+          "1": {
+            "0": 0.8530938625335693,
+            "1": 0.9789073467254639,
+            "2": 0.523838222026825,
+            "3": 0.5299902558326721,
+            "4": 0.7707846164703369,
+            "5": 0.8144887089729309,
+            "6": 0.553351640701294,
+            "7": 0.5375434756278992,
+            "8": 0.38306012749671936
+          },
+          "2": {
+            "0": 0.5322571396827698,
+            "1": 0.5265860557556152,
+            "2": 0.9780964851379395,
+            "3": 0.865119457244873,
+            "4": 0.5233460664749146,
+            "5": 0.5449118614196777,
+            "6": 0.747645378112793,
+            "7": 0.6955317854881287,
+            "8": 0.2854146361351013
+          },
+          "3": {
+            "0": 0.54029780626297,
+            "1": 0.5293228030204773,
+            "2": 0.8629474639892578,
+            "3": 0.9776666164398193,
+            "4": 0.5355888605117798,
+            "5": 0.5414199233055115,
+            "6": 0.6999749541282654,
+            "7": 0.7620436549186707,
+            "8": 0.33176350593566895
+          },
+          "4": {
+            "0": 0.9086008667945862,
+            "1": 0.7665569186210632,
+            "2": 0.5287877321243286,
+            "3": 0.5431793332099915,
+            "4": 0.9896706938743591,
+            "5": 0.9221845269203186,
+            "6": 0.5746671557426453,
+            "7": 0.5778530240058899,
+            "8": 0.5433197617530823
+          },
+          "5": {
+            "0": 0.7986382842063904,
+            "1": 0.7998661398887634,
+            "2": 0.5365074872970581,
+            "3": 0.539795458316803,
+            "4": 0.9177138209342957,
+            "5": 0.9908781051635742,
+            "6": 0.578564465045929,
+            "7": 0.5826684236526489,
+            "8": 0.4933834969997406
+          },
+          "6": {
+            "0": 0.5428205728530884,
+            "1": 0.5443233847618103,
+            "2": 0.7467094659805298,
+            "3": 0.6970919370651245,
+            "4": 0.5765548348426819,
+            "5": 0.5757766366004944,
+            "6": 0.9890995621681213,
+            "7": 0.9079773426055908,
+            "8": 0.32527056336402893
+          },
+          "7": {
+            "0": 0.546530544757843,
+            "1": 0.5318527221679688,
+            "2": 0.6908712387084961,
+            "3": 0.7567862868309021,
+            "4": 0.5683055520057678,
+            "5": 0.5779168009757996,
+            "6": 0.9012208580970764,
+            "7": 0.9892001748085022,
+            "8": 0.3499797582626343
+          },
+          "8": {
+            "0": 0.7864320874214172,
+            "1": 0.7167500257492065,
+            "2": 0.4862777292728424,
+            "3": 0.5267177820205688,
+            "4": 0.8138716220855713,
+            "5": 0.7752697467803955,
+            "6": 0.5235515832901001,
+            "7": 0.5411291122436523,
+            "8": 0.8561672568321228
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "K59D",
+        "model": "pa6_l4z_l2_nyl12_k59d_model_16",
+        "tier": "B",
+        "interface_delta": "-23.44",
+        "geometry_score": "91.25",
+        "d1": "3.35",
+        "d2": "2.93",
+        "d3": "2.86",
+        "a1": "98.4",
+        "abs_herschlag_phi": "102.2",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/complex_min.pdb"
+      }
+    },
+    "K59E": {
+      "sequence_key": "nyl12_k59e",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEEMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "f8a5735570417fafb82fe7b58a0754cca10d8b3c4a2d70119a523e4d9d7dc1b6",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820617,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820634,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820651,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7649324536323547,
+        "ptm": 0.7117782235145569,
+        "iptm": 0.6882413029670715,
+        "ligand_iptm": 0.7937541007995605,
+        "protein_iptm": 0.6854666471481323,
+        "complex_plddt": 0.7841052412986755,
+        "complex_iplddt": 0.7598639726638794,
+        "complex_pde": 2.4558961391448975,
+        "complex_ipde": 8.599681854248047,
+        "chains_ptm": {
+          "0": 0.977153480052948,
+          "1": 0.9762997627258301,
+          "2": 0.9755901098251343,
+          "3": 0.9754270315170288,
+          "4": 0.9909564852714539,
+          "5": 0.9918960928916931,
+          "6": 0.9905674457550049,
+          "7": 0.990840494632721,
+          "8": 0.8672210574150085
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.977153480052948,
+            "1": 0.7719670534133911,
+            "2": 0.5646383166313171,
+            "3": 0.5937633514404297,
+            "4": 0.8994603157043457,
+            "5": 0.7608850002288818,
+            "6": 0.5751727223396301,
+            "7": 0.5796474814414978,
+            "8": 0.5584986805915833
+          },
+          "1": {
+            "0": 0.7668240666389465,
+            "1": 0.9762997627258301,
+            "2": 0.5756053328514099,
+            "3": 0.5727999210357666,
+            "4": 0.7191981077194214,
+            "5": 0.7766566872596741,
+            "6": 0.5833737850189209,
+            "7": 0.5685184001922607,
+            "8": 0.37479203939437866
+          },
+          "2": {
+            "0": 0.5731849074363708,
+            "1": 0.5771887898445129,
+            "2": 0.9755901098251343,
+            "3": 0.7679796814918518,
+            "4": 0.5572200417518616,
+            "5": 0.5810704231262207,
+            "6": 0.7375890016555786,
+            "7": 0.6733312606811523,
+            "8": 0.30594027042388916
+          },
+          "3": {
+            "0": 0.5881933569908142,
+            "1": 0.5725423693656921,
+            "2": 0.7692622542381287,
+            "3": 0.9754270315170288,
+            "4": 0.5710402131080627,
+            "5": 0.5783678889274597,
+            "6": 0.6823100447654724,
+            "7": 0.757377564907074,
+            "8": 0.3574922978878021
+          },
+          "4": {
+            "0": 0.8985448479652405,
+            "1": 0.708405613899231,
+            "2": 0.5474608540534973,
+            "3": 0.5842422842979431,
+            "4": 0.9909564852714539,
+            "5": 0.8946471810340881,
+            "6": 0.6095201373100281,
+            "7": 0.611964225769043,
+            "8": 0.5550422072410583
+          },
+          "5": {
+            "0": 0.7599148154258728,
+            "1": 0.760671854019165,
+            "2": 0.5656180381774902,
+            "3": 0.5603541135787964,
+            "4": 0.87936931848526,
+            "5": 0.9918960928916931,
+            "6": 0.613991916179657,
+            "7": 0.6134294271469116,
+            "8": 0.49414852261543274
+          },
+          "6": {
+            "0": 0.5664283633232117,
+            "1": 0.5721779465675354,
+            "2": 0.7301346063613892,
+            "3": 0.6724762320518494,
+            "4": 0.6079085469245911,
+            "5": 0.6137804985046387,
+            "6": 0.9905674457550049,
+            "7": 0.8804760575294495,
+            "8": 0.3446436822414398
+          },
+          "7": {
+            "0": 0.5784558057785034,
+            "1": 0.5452488660812378,
+            "2": 0.6620337963104248,
+            "3": 0.7453665137290955,
+            "4": 0.6021876931190491,
+            "5": 0.6118906736373901,
+            "6": 0.8736617565155029,
+            "7": 0.990840494632721,
+            "8": 0.36925265192985535
+          },
+          "8": {
+            "0": 0.7504163384437561,
+            "1": 0.6530062556266785,
+            "2": 0.5035298466682434,
+            "3": 0.5392179489135742,
+            "4": 0.7937541007995605,
+            "5": 0.7448587417602539,
+            "6": 0.5357435345649719,
+            "7": 0.5430808663368225,
+            "8": 0.8672210574150085
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "K59E",
+        "model": "pa6_l4z_l2_nyl12_k59e_model_3",
+        "tier": "B",
+        "interface_delta": "-25.65",
+        "geometry_score": "98.25",
+        "d1": "3.23",
+        "d2": "2.92",
+        "d3": "2.75",
+        "a1": "93.3",
+        "abs_herschlag_phi": "100.4",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/complex_min.pdb"
+      }
+    },
+    "F101E": {
+      "sequence_key": "nyl12_f101e",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQERRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "3269843a7d1c92d2868a291ae94ec2a82d62c63c8d7423cf8cc863f0540563d9",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820217,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820234,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820251,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7759113311767578,
+        "ptm": 0.7320591807365417,
+        "iptm": 0.7112807631492615,
+        "ligand_iptm": 0.7884098887443542,
+        "protein_iptm": 0.7097063660621643,
+        "complex_plddt": 0.7920689582824707,
+        "complex_iplddt": 0.7699605822563171,
+        "complex_pde": 2.2260007858276367,
+        "complex_ipde": 7.786524772644043,
+        "chains_ptm": {
+          "0": 0.9735793471336365,
+          "1": 0.9735067486763,
+          "2": 0.972673237323761,
+          "3": 0.9729470610618591,
+          "4": 0.9885173439979553,
+          "5": 0.9901163578033447,
+          "6": 0.9890615940093994,
+          "7": 0.9887418746948242,
+          "8": 0.8200753331184387
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9735793471336365,
+            "1": 0.8359033465385437,
+            "2": 0.5772058963775635,
+            "3": 0.6138123273849487,
+            "4": 0.9059603810310364,
+            "5": 0.7842341065406799,
+            "6": 0.5993960499763489,
+            "7": 0.6106236577033997,
+            "8": 0.450043648481369
+          },
+          "1": {
+            "0": 0.8309338688850403,
+            "1": 0.9735067486763,
+            "2": 0.6046839952468872,
+            "3": 0.5851417779922485,
+            "4": 0.7661073803901672,
+            "5": 0.8068715333938599,
+            "6": 0.6138806343078613,
+            "7": 0.5946080684661865,
+            "8": 0.293016254901886
+          },
+          "2": {
+            "0": 0.5823266506195068,
+            "1": 0.6052308678627014,
+            "2": 0.972673237323761,
+            "3": 0.8387212157249451,
+            "4": 0.5795554518699646,
+            "5": 0.605506181716919,
+            "6": 0.7621224522590637,
+            "7": 0.702231764793396,
+            "8": 0.2387721836566925
+          },
+          "3": {
+            "0": 0.6115283966064453,
+            "1": 0.5839759707450867,
+            "2": 0.8364807963371277,
+            "3": 0.9729470610618591,
+            "4": 0.5955461859703064,
+            "5": 0.5951496958732605,
+            "6": 0.7124248147010803,
+            "7": 0.7753603458404541,
+            "8": 0.2805681824684143
+          },
+          "4": {
+            "0": 0.9104650020599365,
+            "1": 0.7627048492431641,
+            "2": 0.5651482939720154,
+            "3": 0.5960692167282104,
+            "4": 0.9885173439979553,
+            "5": 0.9017648696899414,
+            "6": 0.6382011771202087,
+            "7": 0.6324364542961121,
+            "8": 0.440355509519577
+          },
+          "5": {
+            "0": 0.7911843657493591,
+            "1": 0.800176739692688,
+            "2": 0.5887765288352966,
+            "3": 0.5729168057441711,
+            "4": 0.8958463072776794,
+            "5": 0.9901163578033447,
+            "6": 0.6488654613494873,
+            "7": 0.6417973041534424,
+            "8": 0.38474389910697937
+          },
+          "6": {
+            "0": 0.5873838067054749,
+            "1": 0.597707211971283,
+            "2": 0.7613959312438965,
+            "3": 0.7029287815093994,
+            "4": 0.6347076296806335,
+            "5": 0.6462879180908203,
+            "6": 0.9890615940093994,
+            "7": 0.8923975825309753,
+            "8": 0.26696082949638367
+          },
+          "7": {
+            "0": 0.5916058421134949,
+            "1": 0.5697844624519348,
+            "2": 0.6979407072067261,
+            "3": 0.7685279250144958,
+            "4": 0.6258306503295898,
+            "5": 0.6437288522720337,
+            "6": 0.8844771981239319,
+            "7": 0.9887418746948242,
+            "8": 0.28737786412239075
+          },
+          "8": {
+            "0": 0.755832850933075,
+            "1": 0.6896429061889648,
+            "2": 0.524860680103302,
+            "3": 0.5421422123908997,
+            "4": 0.7884098887443542,
+            "5": 0.7519692182540894,
+            "6": 0.5767556428909302,
+            "7": 0.5855966210365295,
+            "8": 0.8200753331184387
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "F101E",
+        "model": "pa6_l4z_l2_nyl12_f101e_model_17",
+        "tier": "A",
+        "interface_delta": "-19.92",
+        "geometry_score": "100.0",
+        "d1": "3.1",
+        "d2": "2.94",
+        "d3": "2.78",
+        "a1": "103.6",
+        "abs_herschlag_phi": "93.0",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/complex_min.pdb"
+      }
+    },
+    "F101H": {
+      "sequence_key": "nyl12_f101h",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQHRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "83a02567aecc591585d690dfe62bb1c98cf31448c10950c54994ec1f2c0edc58",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820317,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820334,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820351,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7799579501152039,
+        "ptm": 0.7227316498756409,
+        "iptm": 0.6996045708656311,
+        "ligand_iptm": 0.8079199194908142,
+        "protein_iptm": 0.6969818472862244,
+        "complex_plddt": 0.8000462651252747,
+        "complex_iplddt": 0.7831252813339233,
+        "complex_pde": 2.3379416465759277,
+        "complex_ipde": 8.143342971801758,
+        "chains_ptm": {
+          "0": 0.9699274301528931,
+          "1": 0.9695858359336853,
+          "2": 0.9693239331245422,
+          "3": 0.9689359068870544,
+          "4": 0.9803826212882996,
+          "5": 0.9829755425453186,
+          "6": 0.9807199835777283,
+          "7": 0.9805197715759277,
+          "8": 0.8391017913818359
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9699274301528931,
+            "1": 0.8336036205291748,
+            "2": 0.5552533268928528,
+            "3": 0.5846772789955139,
+            "4": 0.8973171710968018,
+            "5": 0.7754230499267578,
+            "6": 0.5814318060874939,
+            "7": 0.5955237746238708,
+            "8": 0.48523592948913574
+          },
+          "1": {
+            "0": 0.8238359093666077,
+            "1": 0.9695858359336853,
+            "2": 0.5787387490272522,
+            "3": 0.5652937889099121,
+            "4": 0.7555662393569946,
+            "5": 0.7994125485420227,
+            "6": 0.5987597703933716,
+            "7": 0.5758586525917053,
+            "8": 0.3205239176750183
+          },
+          "2": {
+            "0": 0.5634400844573975,
+            "1": 0.5794578790664673,
+            "2": 0.9693239331245422,
+            "3": 0.8402897715568542,
+            "4": 0.5580244064331055,
+            "5": 0.5907462239265442,
+            "6": 0.7359491586685181,
+            "7": 0.6822352409362793,
+            "8": 0.2590758800506592
+          },
+          "3": {
+            "0": 0.5851564407348633,
+            "1": 0.5645781755447388,
+            "2": 0.8353302478790283,
+            "3": 0.9689359068870544,
+            "4": 0.5767310857772827,
+            "5": 0.5779515504837036,
+            "6": 0.6871976256370544,
+            "7": 0.7504625916481018,
+            "8": 0.3016203045845032
+          },
+          "4": {
+            "0": 0.9009786248207092,
+            "1": 0.7546622157096863,
+            "2": 0.5556004643440247,
+            "3": 0.573451042175293,
+            "4": 0.9803826212882996,
+            "5": 0.8868529200553894,
+            "6": 0.6325201988220215,
+            "7": 0.6331048011779785,
+            "8": 0.47065266966819763
+          },
+          "5": {
+            "0": 0.7815996408462524,
+            "1": 0.7891384363174438,
+            "2": 0.5739237666130066,
+            "3": 0.5665024518966675,
+            "4": 0.8868482112884521,
+            "5": 0.9829755425453186,
+            "6": 0.6467356085777283,
+            "7": 0.6394323706626892,
+            "8": 0.42400285601615906
+          },
+          "6": {
+            "0": 0.5804750323295593,
+            "1": 0.5800260305404663,
+            "2": 0.7418265342712402,
+            "3": 0.688497006893158,
+            "4": 0.6284923553466797,
+            "5": 0.6404868364334106,
+            "6": 0.9807199835777283,
+            "7": 0.8734865188598633,
+            "8": 0.2923596203327179
+          },
+          "7": {
+            "0": 0.5823808908462524,
+            "1": 0.5621094703674316,
+            "2": 0.6807069778442383,
+            "3": 0.753417432308197,
+            "4": 0.6267435550689697,
+            "5": 0.6349763870239258,
+            "6": 0.865520179271698,
+            "7": 0.9805197715759277,
+            "8": 0.3144136369228363
+          },
+          "8": {
+            "0": 0.7796192765235901,
+            "1": 0.7054794430732727,
+            "2": 0.5126949548721313,
+            "3": 0.5370474457740784,
+            "4": 0.8079199194908142,
+            "5": 0.7618631720542908,
+            "6": 0.5782605409622192,
+            "7": 0.5918883085250854,
+            "8": 0.8391017913818359
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "F101H",
+        "model": "pa6_l4z_l2_nyl12_f101h_model_8",
+        "tier": "B",
+        "interface_delta": "-18.99",
+        "geometry_score": "97.083",
+        "d1": "3.25",
+        "d2": "3.01",
+        "d3": "2.81",
+        "a1": "103.0",
+        "abs_herschlag_phi": "93.3",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/complex_min.pdb"
+      }
+    },
+    "P105K": {
+      "sequence_key": "nyl12_p105k",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMKLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "b0e56340c5aac8efda877d407ddfef4c33c45718ac49a52b37fd7f81cebc8aad",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820717,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820734,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820751,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7642225623130798,
+        "ptm": 0.7146631479263306,
+        "iptm": 0.688450276851654,
+        "ligand_iptm": 0.8102287650108337,
+        "protein_iptm": 0.6853702068328857,
+        "complex_plddt": 0.7831656336784363,
+        "complex_iplddt": 0.754402220249176,
+        "complex_pde": 2.389897584915161,
+        "complex_ipde": 8.34811782836914,
+        "chains_ptm": {
+          "0": 0.9776114821434021,
+          "1": 0.9776274561882019,
+          "2": 0.9772124886512756,
+          "3": 0.9765402674674988,
+          "4": 0.9883928894996643,
+          "5": 0.9892677664756775,
+          "6": 0.9874014258384705,
+          "7": 0.9872559905052185,
+          "8": 0.8528657555580139
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9776114821434021,
+            "1": 0.839185357093811,
+            "2": 0.5382618308067322,
+            "3": 0.5459634065628052,
+            "4": 0.9102709889411926,
+            "5": 0.7828853726387024,
+            "6": 0.5546283721923828,
+            "7": 0.5625129342079163,
+            "8": 0.5214143991470337
+          },
+          "1": {
+            "0": 0.8381742835044861,
+            "1": 0.9776274561882019,
+            "2": 0.5437158346176147,
+            "3": 0.5431538224220276,
+            "4": 0.7640753984451294,
+            "5": 0.8119806051254272,
+            "6": 0.5678811073303223,
+            "7": 0.5511269569396973,
+            "8": 0.34980785846710205
+          },
+          "2": {
+            "0": 0.5500755310058594,
+            "1": 0.5466287136077881,
+            "2": 0.9772124886512756,
+            "3": 0.8429049253463745,
+            "4": 0.5366660356521606,
+            "5": 0.5632237195968628,
+            "6": 0.7593096494674683,
+            "7": 0.6946694254875183,
+            "8": 0.27565133571624756
+          },
+          "3": {
+            "0": 0.5447519421577454,
+            "1": 0.5434634685516357,
+            "2": 0.8401302099227905,
+            "3": 0.9765402674674988,
+            "4": 0.5433088541030884,
+            "5": 0.5488978624343872,
+            "6": 0.699008584022522,
+            "7": 0.7740230560302734,
+            "8": 0.3170974850654602
+          },
+          "4": {
+            "0": 0.9132842421531677,
+            "1": 0.7558882236480713,
+            "2": 0.5376827120780945,
+            "3": 0.5434854030609131,
+            "4": 0.9883928894996643,
+            "5": 0.8911944031715393,
+            "6": 0.6001662015914917,
+            "7": 0.601458728313446,
+            "8": 0.5149233937263489
+          },
+          "5": {
+            "0": 0.7828978896141052,
+            "1": 0.794343113899231,
+            "2": 0.54520183801651,
+            "3": 0.5411030054092407,
+            "4": 0.887103796005249,
+            "5": 0.9892677664756775,
+            "6": 0.6100056171417236,
+            "7": 0.6075363755226135,
+            "8": 0.4576497972011566
+          },
+          "6": {
+            "0": 0.5549271702766418,
+            "1": 0.5536673665046692,
+            "2": 0.7444984912872314,
+            "3": 0.6866699457168579,
+            "4": 0.5970418453216553,
+            "5": 0.604293942451477,
+            "6": 0.9874014258384705,
+            "7": 0.8764863014221191,
+            "8": 0.3132624328136444
+          },
+          "7": {
+            "0": 0.5575153231620789,
+            "1": 0.5386413931846619,
+            "2": 0.678520679473877,
+            "3": 0.7534202337265015,
+            "4": 0.590702474117279,
+            "5": 0.6017885208129883,
+            "6": 0.8674866557121277,
+            "7": 0.9872559905052185,
+            "8": 0.33813488483428955
+          },
+          "8": {
+            "0": 0.7797264456748962,
+            "1": 0.704880952835083,
+            "2": 0.4952391982078552,
+            "3": 0.5137625336647034,
+            "4": 0.8102287650108337,
+            "5": 0.7591977715492249,
+            "6": 0.5460469126701355,
+            "7": 0.564690887928009,
+            "8": 0.8528657555580139
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "P105K",
+        "model": "pa6_l4z_l2_nyl12_p105k_model_11",
+        "tier": "B",
+        "interface_delta": "-16.3",
+        "geometry_score": "90.083",
+        "d1": "3.37",
+        "d2": "2.86",
+        "d3": "2.73",
+        "a1": "94.1",
+        "abs_herschlag_phi": "99.4",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/complex_min.pdb"
+      }
+    },
+    "V111C": {
+      "sequence_key": "nyl12_v111c",
+      "sequence": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGACIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "alpha_length": 232,
+        "beta_length": 96,
+        "alpha_sha256": "a3f613359b26249c133e7b9e56dfc36af747b82003ab7429b398aa579f6b044c",
+        "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+      },
+      "replicas": [
+        {
+          "replica": "replica_01",
+          "production_seed": 820917,
+          "complete": true
+        },
+        {
+          "replica": "replica_02",
+          "production_seed": 820934,
+          "complete": true
+        },
+        {
+          "replica": "replica_03",
+          "production_seed": 820951,
+          "complete": true
+        }
+      ],
+      "confidence": {
+        "confidence_score": 0.7755123972892761,
+        "ptm": 0.7176674604415894,
+        "iptm": 0.6962931752204895,
+        "ligand_iptm": 0.8010327816009521,
+        "protein_iptm": 0.6938755512237549,
+        "complex_plddt": 0.7953172326087952,
+        "complex_iplddt": 0.7794524431228638,
+        "complex_pde": 2.380411386489868,
+        "complex_ipde": 8.321248054504395,
+        "chains_ptm": {
+          "0": 0.9751051068305969,
+          "1": 0.9743351936340332,
+          "2": 0.9738367795944214,
+          "3": 0.9738993048667908,
+          "4": 0.9888225197792053,
+          "5": 0.9897181987762451,
+          "6": 0.9872720241546631,
+          "7": 0.9877578616142273,
+          "8": 0.8480488657951355
+        },
+        "pair_chains_iptm": {
+          "0": {
+            "0": 0.9751051068305969,
+            "1": 0.8298824429512024,
+            "2": 0.5478161573410034,
+            "3": 0.5623589754104614,
+            "4": 0.9053566455841064,
+            "5": 0.7775284051895142,
+            "6": 0.5681697726249695,
+            "7": 0.5765281915664673,
+            "8": 0.5109274983406067
+          },
+          "1": {
+            "0": 0.8267672657966614,
+            "1": 0.9743351936340332,
+            "2": 0.5552656650543213,
+            "3": 0.5561639070510864,
+            "4": 0.7583280205726624,
+            "5": 0.8047159910202026,
+            "6": 0.5800225734710693,
+            "7": 0.5637380480766296,
+            "8": 0.3381282389163971
+          },
+          "2": {
+            "0": 0.5572959780693054,
+            "1": 0.5562441349029541,
+            "2": 0.9738367795944214,
+            "3": 0.8360762000083923,
+            "4": 0.5462204217910767,
+            "5": 0.5717257857322693,
+            "6": 0.7476546764373779,
+            "7": 0.690135657787323,
+            "8": 0.26667943596839905
+          },
+          "3": {
+            "0": 0.5659922361373901,
+            "1": 0.557934045791626,
+            "2": 0.8349184989929199,
+            "3": 0.9738993048667908,
+            "4": 0.5615978240966797,
+            "5": 0.5657083988189697,
+            "6": 0.695742130279541,
+            "7": 0.764306366443634,
+            "8": 0.3073263168334961
+          },
+          "4": {
+            "0": 0.9016289114952087,
+            "1": 0.748478889465332,
+            "2": 0.5523139834403992,
+            "3": 0.5688197016716003,
+            "4": 0.9888225197792053,
+            "5": 0.9018240571022034,
+            "6": 0.6268128156661987,
+            "7": 0.6275628805160522,
+            "8": 0.5014273524284363
+          },
+          "5": {
+            "0": 0.7811657190322876,
+            "1": 0.7931051254272461,
+            "2": 0.5649712681770325,
+            "3": 0.5628821849822998,
+            "4": 0.8987080454826355,
+            "5": 0.9897181987762451,
+            "6": 0.6379276514053345,
+            "7": 0.6368478536605835,
+            "8": 0.44111791253089905
+          },
+          "6": {
+            "0": 0.5756686925888062,
+            "1": 0.5695613622665405,
+            "2": 0.7430580854415894,
+            "3": 0.6873939037322998,
+            "4": 0.6249471306800842,
+            "5": 0.6342046856880188,
+            "6": 0.9872720241546631,
+            "7": 0.887106716632843,
+            "8": 0.3003513216972351
+          },
+          "7": {
+            "0": 0.5761309266090393,
+            "1": 0.5570380091667175,
+            "2": 0.6813773512840271,
+            "3": 0.753488302230835,
+            "4": 0.6195525527000427,
+            "5": 0.6335774660110474,
+            "6": 0.880780041217804,
+            "7": 0.9877578616142273,
+            "8": 0.3213607668876648
+          },
+          "8": {
+            "0": 0.7556904554367065,
+            "1": 0.6913998126983643,
+            "2": 0.49847742915153503,
+            "3": 0.5294327139854431,
+            "4": 0.8010327816009521,
+            "5": 0.7575178146362305,
+            "6": 0.5471177101135254,
+            "7": 0.5650278925895691,
+            "8": 0.8480488657951355
+          }
+        }
+      },
+      "initial_model_record": {
+        "variant": "V111C",
+        "model": "pa6_l4z_l2_nyl12_v111c_model_46",
+        "tier": "A",
+        "interface_delta": "-16.83",
+        "geometry_score": "100.0",
+        "d1": "3.17",
+        "d2": "2.93",
+        "d3": "2.96",
+        "a1": "90.1",
+        "abs_herschlag_phi": "108.1",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/complex_min.pdb"
+      }
+    }
+  },
+  "legacy_MD_completion_tail_evidence": [
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232599,
+      "read_start_byte": 7208023,
+      "read_length_bytes": 24576,
+      "tail_sha256": "abd0f520c23709aa29b9b4f66885aa3ae2c5554ea932710956d87c2fcd90f3e4",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232599,
+      "read_start_byte": 7208023,
+      "read_length_bytes": 24576,
+      "tail_sha256": "598aeaddf0823d0a2006e04818bcc3c2ea4475c92eb2da257a0f55606b48d13e",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232599,
+      "read_start_byte": 7208023,
+      "read_length_bytes": 24576,
+      "tail_sha256": "cec8a86457d7956b214660bd42482ba0d26a22bd48b9a1c46b847d71057ebc26",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "2a3aac4b69095db2ac93802ca532e8530767ef8d696a66d34f5459da0419e4ee",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "28e9ee16ce04e410c6580733c64380f41b775eac2c54fb64cdf25dbd9bc7c1d6",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "2aedf0ca4020b15b85f102198a984ed81f0aa2e652165f9a76b74527459ce9a9",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "618f935cee269179ad00eb5f3bcb16edeff885770e5f609f830d6356bad8110b",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "eb5b6bdedd5efd2dc8c37a49659f24317f0e5a91be7f2c27c77bb9aeaa38f154",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "60ff254185db08a01d1227a1621347b98ef56789ab2bb3d0a9a8b862b11b3933",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "23da40c892ad7f4610560e76018b3f36c215626e27799b5d8748ed146cc50401",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "27ad85894e41a94de9da1b92d1cb3b20f7804d03b3507eae12902e9877792be8",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "42b2dee9b7addf893d21e539bf73d555b19e41566d8f9a76a4ebe928443aaf8a",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "a73d544528e826892e80893c00792e6563be2fccc62e920310d74334e323a20e",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "9a01f874567705097cdb47b001b5cb24a79e1029f7cb00c1378385e1fe7cbcd5",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232600,
+      "read_start_byte": 7208024,
+      "read_length_bytes": 24576,
+      "tail_sha256": "ad346e0afa90f05227e3e11b1337e8f0d5b860e312ad8e8e4b84ddd9278f583c",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "13bcfa2c14998de2e2c670159d56c4810022f5bffd9aea4b7baacf99010038fa",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "7eb8e23295fb0f928b195931598b11108270883d0bf2834a5212efd8a1094822",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "865d2da02cf6323e981c82b844d9d6efc80a0930d14784add2dfbd208d3f033d",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "74dfeb53af06580cce0ce08a98ea9d9d9f058b59c218b451efb3146ee042a7a9",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "b21b8a490a6e2acf8ff7d703aede99e9e7a17d4d413ef1045f243f76562f6ede",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232601,
+      "read_start_byte": 7208025,
+      "read_length_bytes": 24576,
+      "tail_sha256": "002370c7673043f8df476c8a3abd5c8b4ace3fe90f9bc008ad5f17fde06d77f1",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "dc5dab8458e3ce5ba63ebf526f24208a09c81a880b68fe202bf2d4c20e635553",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "64d4a6adcb144032a7fcddc154a574c70f6c5ea298b8b627c7e133473a7c44bc",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "83dc2a81cd8ff19da518eff67033456e4098d3e6f32f9834267780f6f656cf6b",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_01/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "b92cd652ae936ca852e99577e8c4d0a50b9c809e330f96d08126fa5015966db4",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_02/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "8ff98250c445b2a4cfaf69702f80a3cbf5333747369c8fc01e50b3c6d3d0ddd4",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_03/07_prod_100ns.out",
+      "file_size_bytes": 7232602,
+      "read_start_byte": 7208026,
+      "read_length_bytes": 24576,
+      "tail_sha256": "02baab650791022d31652a7998bcf7644c5b8e303d5e18c276ae4fc50170a5c2",
+      "normal_completion_markers": true,
+      "last_nstep": 50000000,
+      "complete_100ns": true
+    }
+  ],
+  "sequence_identity": {
+    "source_config": "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml",
+    "WT": {
+      "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "alpha_length": 232,
+      "beta_length": 96,
+      "alpha_sha256": "0d2ecf0c8f2a1d93cd9827de501a2c152fcbc78d6121f4a09a6a4c064d7ed74d",
+      "beta_sha256": "149a42fc379f6b2fac92c0b0de059d160db3e507c88aaafc9b26ad4ef3bdb6c3"
+    },
+    "variants": [
+      "WT",
+      "T53Q",
+      "F55N",
+      "K59D",
+      "K59E",
+      "F101E",
+      "F101H",
+      "P105K",
+      "V111C"
+    ],
+    "organism_strain_or_accession": null,
+    "organism_strain_status": "Not established by auditedsequenceconfig/manuscriptmetadata; do not substitute homologNylC strain. Sequence strings/hashes are authoritative for these simulations."
+  },
+  "effective_structural_strain": {
+    "source_files": [
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/settings.json",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/regional_summary.csv",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/source_manifest.csv",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/sampling_diagnostics.csv",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/EFFECTIVE_STRAIN_RESULTS.md",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/presentation/effective_strain_plot_values.csv",
+      "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/presentation/SPEAKER_NOTES.md",
+      "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_effective_strain.py"
+    ],
+    "interpretation": "Existingeffectiveproteinstrainanalysis is separate structuralmetric; inspect settings/region/source_manifest beforecomparing withcurrentmodel30. Not mechanicalstrainenergy oractivity.",
+    "organism_strain_distinction": "Effectiveproteinstructuralstrain is supplied separately from organismstrain/accession; no organismassignment was inferred.",
+    "PA6_plot_rows": [
+      {
+        "substrate": "PA6",
+        "variant": "T53Q",
+        "mutant_WT_strain": "0.015195443051211009",
+        "WT_WT_baseline": "0.00242429473633078",
+        "evaluated_residues": "245",
+        "region_residues": "280"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "F55N",
+        "mutant_WT_strain": "0.009117346736691356",
+        "WT_WT_baseline": "0.0026594514608620813",
+        "evaluated_residues": "228",
+        "region_residues": "272"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "K59D",
+        "mutant_WT_strain": "0.00966600836825874",
+        "WT_WT_baseline": "0.003460132480314593",
+        "evaluated_residues": "177",
+        "region_residues": "256"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "K59E",
+        "mutant_WT_strain": "0.009379839489182744",
+        "WT_WT_baseline": "0.0034141370157418495",
+        "evaluated_residues": "177",
+        "region_residues": "256"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "F101E",
+        "mutant_WT_strain": "0.0081634291205222",
+        "WT_WT_baseline": "0.0032917573203087675",
+        "evaluated_residues": "132",
+        "region_residues": "262"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "F101H",
+        "mutant_WT_strain": "0.008763103190122197",
+        "WT_WT_baseline": "0.0032061818218704794",
+        "evaluated_residues": "132",
+        "region_residues": "262"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "P105K",
+        "mutant_WT_strain": "0.014302016939209374",
+        "WT_WT_baseline": "0.002508562919260815",
+        "evaluated_residues": "200",
+        "region_residues": "287"
+      },
+      {
+        "substrate": "PA6",
+        "variant": "V111C",
+        "mutant_WT_strain": "0.005913946820744222",
+        "WT_WT_baseline": "0.0025112838606086768",
+        "evaluated_residues": "345",
+        "region_residues": "376"
+      }
+    ],
+    "definition": "Mean mutant\u2013WT deformation over evaluable residues within15\u00c5 ofanymutationcopy, median over20comparisons of25modelensembles; matchedWT\u2013WTbaseline. Sources:SPEAKER_NOTES.md/settings.json; fourcopiesnotindependent.",
+    "csv": "prior_pa6_effective_strain.csv"
+  },
+  "recommendation_for_brief": {
+    "design": "Matched independently seeded production replicas for each declared fixed Asp state; preserve same selected pose/chemistry/register/FF/water/salt/temp and aligned analysis; compare replica/block estimates, not60000independentframes. Include multiple starting poses as a separate later variable.",
+    "number_of_replicas": "Existing2 perstate exploratory. Atleast3 matched100ns replicas pergenotype/state; prefer4 whenreplicavarianceislarge. Full100ns/late50ns/10nsblock reporting; use replica asunit, treat4siteswithinreplicaascorrelated. Extension driven byprecision/sampling diagnosis, not fixedclaimthat3or4converges.",
+    "protonation": "ASH274 denotes protonatedAsp274, not a mutation. Protonate correspondingAsp in allfour sites as declared, preserve neutralbetaNH2, regeneratecharges/counterions; fixedchargeMD cannot exchangeprotons or determine pKa/equilibriumacidstate.",
+    "acceptance_reporting": "Report TierA, positivephi and nativeThr gates separately, each perreplica and production block. Neither TierA fraction nor confidence is catalyticactivity, proton-transfer evidence or a barrier.",
+    "limitations": "ASH274 1677+0 frames vsASP/ASP37+238 andASH2723886+1724 does not establishcausality orbeneficialacidassignment. NewandlegacyFF datasets use different poses/protocols; do notpool them. Mature substratehydrolysis is separatefromautocleavage.",
+    "Asp_geometry": "For everyoneof4active sites use chemicallylabel-invariant minimum of4AspO-O distances: OD1-OD1,OD1-OD2,OD2-OD1,OD2-OD2. Do not average4sites asindependentreplicas."
+  },
+  "no_trajectory_files_opened": true,
+  "no_new_MD_launched": true,
+  "file_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/inputs/manifest.json": "af1c87ea687f762840d5f07a548e06769a6892a4f052b9af05372ec0a183fb2f",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/summary.json": "cc62fff70d9656662b3b40d49f1d7465d9281ea46a212210ca5f23e81c5dbc76",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/bounded_screen_counts.csv": "76dc3d56466f6b723220fb56846a4210f9c6f4b59e28a253d9897ddf2d822129",
+    "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/manifest.json": "9e007d708afeb73ef5af956b593e994ff0b0d0698826bb73e64ae35d11de57f3",
+    "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md": "0651874cfbc4b0f06063faac027fb62d2bc67c74a042ef735d1f09d0639f2267",
+    "/data/jpc/covalent-enzyme-design/docs/asp_pair_md_water_screen_20261116.md": "f8057518b2a423002695d6602d0ba1b6cfe7d5a21c80369ee477e5a830be7b39",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/modular_es_snapshot_selection.py": "ced628df3f3b542142f6969be7ca14d1481494be955566b1f622f06cc52c3a0a",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/nalpha_water_relay.py": "14480537353db2afe26d11fb75892984b4aea8d6b4a5f7ba0343432b620b0d33",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/neutral_replica_01.csv": "99ab1d74e09d010a631a17e5b8be3af5d8743584d11f3ceaf63942527f4898c7",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/protocol.json": "bc96221d5d130dbbcc20a00d2a5020f597e854bb08bf02f3e007ea6dee5343a1",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/extension_100ns.json": "52ebb3bd86c65f993c5f15c86aefebadd5487a5580269c26f1fb2e9936cfe37e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/05_production_10ns.in": "18bdaca2e8df80a2a184544e7d56aa4fc82ae80ea322a471e720333dd564345e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_01/06_production_90ns.in": "3baa392f17224534e87a0fef972a1d7a7e7d826474f019098c19c43bb1550c6c",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/neutral_replica_02.csv": "df0b77f2dae8f7ec7a0b0fb5184f388063e2dfc9cc2010250369998fbb8cddc1",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/protocol.json": "fd877469850889ffb3f14887892d842b01800edf41035562d9c303e19d786431",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/extension_100ns.json": "5d3a58dc20126478ff8238eef0e4805a2f16aac08426f18e406231b5edd35896",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/05_production_10ns.in": "7fff82e72984dc4adaf531b3173aabcaf279aa33110efae57984d4e520144a62",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/03_md/neutral_replica_02/06_production_90ns.in": "8c301627557c850924e612ecb2a18c5653eca3c2b47071d8f3443694ce1321f3",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash272_replica_1.csv": "1c2e06b399bcf8a24a03d90f2d30c27e015a43d8085f3e448d147d9177a5be4e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/protocol.json": "97ed6a5c4da9316b8350ab4dd8294e2a1a1b8e41dc59a18e755398a8cfdcee5d",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/extension_100ns.json": "b7928d49c8f0d09128ac5c051e7b42fb987542d976aba93b6009cba103168e4d",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/05_production_10ns.in": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_1/06_production_90ns.in": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash272_replica_2.csv": "e1c5e445ced4c90ccb56dd7c26b9c0f08d7241e6e9055be0d2b55de9a90c4b99",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/protocol.json": "5240d4d1b9400e4c7815d21863d59197dd31bfd4ad7846e74c50ad488c35a2b6",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/extension_100ns.json": "1e89a00a0352641181feceb005d44f2af764dabb13bec785af8dd560d260a69a",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/05_production_10ns.in": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/03_md/ash272_replica_2/06_production_90ns.in": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_1.csv": "6e27f99b5327c7636077dc8b2e247ea628e84dee0bf95fce8e653ee72d3ed150",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/protocol.json": "2e4d0747900d79a5ccb03662cf9da5986779c0131ed1e81e358b56aa17e470fe",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/extension_100ns.json": "166f936768e1a54878a804914f6c4eeb023ccd153946c5641ee30fc1a279aaef",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.in": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.in": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_2.csv": "82768619761b96df427f193effe10b41d4b35d3d54c190bb4b25dbcfa6353131",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/protocol.json": "85f77347a0b1fce7a12b398f804f52dbedbf07e26743f424f9f532664a06649e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/extension_100ns.json": "8a451cd9840ed2e396649132f4267a6b7d4bcdc1c4ab1592f317d4a39ed9472d",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.in": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.in": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/conversion.json": "a6d05a4a628da85130b6ff6a623d49d40fd7623f30f60a8bbc3bf0c6badf46f8",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_distributed_static_20261011/workers/aster/canonical/pa6_l4z_l2_nyl12_wt/confidence_pa6_l4z_l2_nyl12_wt_model_30.json": "9c277bd866539cba14dacbc77b2396cccf18a031afe12d9e86c75d7f583e720c",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6C.lib": "de3f2924cfacb64efa8b5a9565250c5ed376558036d79ccbeb9ac45e24bbfd8e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6C.mol2": "6fb53c1b91e27759e72de563e9efcca3348f0edac8d87c141d81ec57f5e5894a",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6I.lib": "d67d333d1043f4f5764cd2e2d55838b44e3f339eca99b18fc4041a7dfa3b50d7",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6I.mol2": "954453b0779522b5381e9d2b43ea229bed189733fb29bd90859a2876f6734f90",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6N.lib": "bad803ef61d62364d36efa9ad4fffc0329c0ca3c0ed791d257dbaf4e83a7cfb0",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/P6N.mol2": "49492db8abde75be8c8a0cc70af6cbd034a6289a384187d275463c7aff85d199",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/leaprc.pa6_shared_p6i": "6a1696826ef843e057a9a72fd6fc835af17ff00e1d566cbe1597004d41f5e668",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/pa6_shared_p6i_gaff2.frcmod": "7d35cfd403fb1ae421092f894e11f60da69db67595b0717831a4e1b32008fa3e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/pa6_shared_p6i_improper.frcmod": "69606f8af54f56f42a5fde186f78e94748eca94ea9658be41725ea96dd4400a0",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/00_system/leap_final.in": "9983766bc9ab204c7413c25df0e86f97a0739bac98136b7613723fc962b7bb04",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/preparation_manifest.json": "0d1158be0ab9fddf893d31a1085a97aea5f6a2c9b5a6dda56fa3eb5e1c2ab749",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/preparation_acceptance.json": "b89e4a289c874aed8046f84de0103e29d51ad204491863ce77f99a16fdc58862",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/preparation_manifest.json": "c2092d59adb50d9f5910e5913be90ee22bbd94d0106934e07179e9c4299aa691",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/preparation_acceptance.json": "9e0cd152b607935f8334912c8661bd6a00085faa256e36f294b21579d229f1a4",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/leap_ash274_final.in": "9d9b546bf0759b245ca85d6defb73d72e3ee2b97fc5f979c979d3077ce81050e",
+    "/data/jpc/enzyme-substrate-modeling/config/config_nyl12_pa6_pa66_ssl_sites_1_4.yaml": "5fcce374850bdd01985602aebae22a68a559efc0b862a4b4305539dc497770e1",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv": "86805093d89b2d337801e00ae4afb9a37015e5b006cef6cb43b61b7a36731fc7",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/solvated_systems.csv": "9f7864e72b6b367976d9135d9864acf54788b53e0e6ed815e29a359b004f2ddf",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/RUN_NOTES.md": "9f25ac0f56c4f04feb3f60eb39c31140386c45353930ec6950fb6c83f67ab6dc",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_wt/predictions/pa6_l4z_l2_nyl12_wt/confidence_pa6_l4z_l2_nyl12_wt_model_41.json": "9132dfafaefe676ab04fa778d1f16da8e09c06b46f7a1e0ec2729f538be10f85",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_01/07_prod_100ns.in": "519d260d888346c5957c94c0f4b264a7e72a15eb08f432178d42aafebe3c6004",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_02/07_prod_100ns.in": "7b140ea504fc8a91241cbb7f2094cca3ce3c70db25ffab536b7a3e73e636a2bb",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/replica_03/07_prod_100ns.in": "0ad18185093a08943b98028d326c291bf97e480502c80bb950c967f90ecbd04e",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_wt_model_41/leap_solvate_150mM.in": "7b59dcb329cb575cbc7724540d0f312256456fe8909fd7efb02cb35f40bcb320",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_t53q/predictions/pa6_l4z_l2_nyl12_t53q/confidence_pa6_l4z_l2_nyl12_t53q_model_10.json": "42c753698fb3e551770b5e4e63537bee9bc027c68dfc97c28a18970b2da7eea3",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_01/07_prod_100ns.in": "a803651ea228ad6e27813b1123abfa503b0eb91a47f51945dd382777aba2bb81",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_02/07_prod_100ns.in": "60eb744f7ff1a2be0a1229b855ea77ba856d42574a2bf43eef461ef5ab34bc63",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/replica_03/07_prod_100ns.in": "9decc8482f31dadad1bd2aca1209f9482fde921587022c3604f862d1f8b1de58",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_t53q_model_10/leap_solvate_150mM.in": "4e757a6dbaea6d9f7d63b2df84b0e22965f0b40ff8ca3837cb40d744a880bcda",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f55n/predictions/pa6_l4z_l2_nyl12_f55n/confidence_pa6_l4z_l2_nyl12_f55n_model_1.json": "f0060880d01bbdb7df38c0414297af8cf9c92ad0b284f1debedf219ce3e13622",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_01/07_prod_100ns.in": "6e37d0fa2807030c9a09428962dd5979e001eb1ec8c47cbe964d509c09c37372",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_02/07_prod_100ns.in": "d9ec061b5dca00280966fc2017850d5a2a5f1c84f2a2738b1d8f9870480b1e12",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/replica_03/07_prod_100ns.in": "8378f6568f93a9f651cc891998fcefe23152bf7759315502f053b595bf77b86f",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f55n_model_1/leap_solvate_150mM.in": "7ca1d99fc665f43101e755c02835d5df41515f66d5ca1f1a2e466eff628819e7",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_k59d/predictions/pa6_l4z_l2_nyl12_k59d/confidence_pa6_l4z_l2_nyl12_k59d_model_16.json": "5e4c2f2e6d79d470afb319a9de37f523db1931a84ce3a5fd3f57c4496e9cfc41",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_01/07_prod_100ns.in": "40430a4ef9cadc69419859f8ad33250d8e06a830ea974950cb23969feae75477",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_02/07_prod_100ns.in": "30e121f15f97a3e8b4e3b343bf7ab83ca514da928ca0c3590be1920c428c7915",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/replica_03/07_prod_100ns.in": "8dc4fbd23a87f2e0d21ef285be06bac64fdd948bc4356b23733136bcf59c2889",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59d_model_16/leap_solvate_150mM.in": "5216a6927b528035b0c4697623a5590862139fa58f47b0f5e0d3b54332104886",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_k59e/predictions/pa6_l4z_l2_nyl12_k59e/confidence_pa6_l4z_l2_nyl12_k59e_model_3.json": "df02cc7e915e53549708918a155a76275514de21e47821dc1eca2cce425193ad",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_01/07_prod_100ns.in": "de572aa227af904c49cbebc5fb8285bfadbabe737d689ef493bedf815ce9502f",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_02/07_prod_100ns.in": "81a8b9a747d04b9559ef9ef74d2d049228c89574e5fd7486ab7627cc890fe84a",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/replica_03/07_prod_100ns.in": "f6cb32a4d63b05094a92ba8e65507d8a6f10589268648f033936b25f5eca9f5a",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_k59e_model_3/leap_solvate_150mM.in": "cc09c0ba41edc1e088430d20bb9c33b32ac159ca1bae283f5a406b93beadf930",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f101e/predictions/pa6_l4z_l2_nyl12_f101e/confidence_pa6_l4z_l2_nyl12_f101e_model_17.json": "234229074c95986745075a39c0d9492a80fed09ba7ab93e7f6541d5ab70e6aaf",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_01/07_prod_100ns.in": "88106a661225cc49453b098a26e1e4f113b1446fc6168ed084d2a3220bdde2d6",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_02/07_prod_100ns.in": "341206d9063b37819dae1dd2a7c93303e8caa3d0e288c541b2c53644781c59f0",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/replica_03/07_prod_100ns.in": "9fef6dc436e8a8eff7012dc519e75349bb668a2ed9196b25bdf9e7d8158a69d0",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101e_model_17/leap_solvate_150mM.in": "9b8c249b9ae184c68a23a8ea57ad1ae8ee49b349f34739e10c129cecacf26623",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_f101h/predictions/pa6_l4z_l2_nyl12_f101h/confidence_pa6_l4z_l2_nyl12_f101h_model_8.json": "9704ec9d0c78abfc60d3a53b7c8d84b373358adff4236be150e83cfe17cce712",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_01/07_prod_100ns.in": "170268973a5239eaa0cca3472f2a2a14173fa66176165649208b083cf9d1ed93",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_02/07_prod_100ns.in": "0d301cdd5ea61c8bf8e24362c40c282987a9ab8d2b063139f1457d93ed886ec3",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/replica_03/07_prod_100ns.in": "95087d5d7b208d7fbb5ca5e519fd3fc3d20eb9636a13528e011c3170e8cd9151",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_f101h_model_8/leap_solvate_150mM.in": "da9b186923b9e147bb71aca4150fe85617d1f273d27b87eddeb107ce22fe8c21",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_p105k/predictions/pa6_l4z_l2_nyl12_p105k/confidence_pa6_l4z_l2_nyl12_p105k_model_11.json": "7816ac8dd7a7bf573eef2fa7f28f4a4cbbca76c8e9748d5c8d4ebf230c4bffef",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_01/07_prod_100ns.in": "5ec2c22028a5a46485cbdff9a5748834e35ae6b6ea9ef5c2d131d29f96f50109",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_02/07_prod_100ns.in": "3a2208f6c6df30c10cb661c5b2e5ce2e8696ff69335bc67fcfc2e6890f68811e",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/replica_03/07_prod_100ns.in": "06e906e07ce1459bf15f3c73d56c1265fd72c742e3206a87ba7f31abb961bce4",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_p105k_model_11/leap_solvate_150mM.in": "8db5e828cf6ab5edfa9d552204f986138a74a9f86c970ba3ddcfc4bea6d9832f",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/output/boltz_results_pa6_l4z_l2_nyl12_v111c/predictions/pa6_l4z_l2_nyl12_v111c/confidence_pa6_l4z_l2_nyl12_v111c_model_46.json": "5eb279303bee2f4634fb39d5a36457948edf687058656648e64471a8f504328d",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_01/07_prod_100ns.in": "b770b824adbaa54d934b73ca78023d1a547e20427ecf7069ef1f16b1bd149b2f",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_02/07_prod_100ns.in": "fdecfd7e516c4694e5b632f3eeca861fccb52b4d025e14543f03787361e551d2",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/replica_03/07_prod_100ns.in": "cf60e4efbcfaafeb21be31419cc9f43b3df90cea591c8170269db79e0fa162d1",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/systems/pa6_l4z_l2_nyl12_v111c_model_46/leap_solvate_150mM.in": "16b10e8a19224543e8cf0729c46881d84edc15704332b74f908726b287711872",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/settings.json": "123a9188fed9ec6ea1607e58461d2c2452ccb70d7e1740c9ccf9f517ef37b53b",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/regional_summary.csv": "0331947261a72248f6b0fc2dc63bd1dce5a8fe37af8dcf9fbb02dcbd40aab900",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/source_manifest.csv": "818910200afe69be78548350961359e2867ce025b11f027e22d7feb3837293c0",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/sampling_diagnostics.csv": "df4340f63218bed4fae9db7f086f4ca17897ef0023fb3e85ff063933e8fbada7",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/PA6/EFFECTIVE_STRAIN_RESULTS.md": "9d62ccb7def7f219f4119dcbc0addb4e19e83e7044fbeff4b44accedd26ef24e",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/presentation/effective_strain_plot_values.csv": "d27456b6560903700cd485edea0abb6cdbdf1cd9e2c1fc188cd1d5de3124e2dc",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_effective_strain_20261015/presentation/SPEAKER_NOTES.md": "11e68640ac6e46c6257e0872e4fa4e93c1123411586d52a4e1c159ce22378d6e",
+    "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_effective_strain.py": "50807ca834390d53a36b444ed13c4e37d80df917d86f42ea5b74369f7cf82dc1",
+    "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/manuscript_modeling_section_20261011/METHODS_SECTION_DRAFT.md": "f57b97a496fb263b65e16742b20b7c914f3b733fafad9175b5c0c904c607426e",
+    "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/manuscript_modeling_section_20261011/README.md": "af3a782327b609896a13472c9784b68d220604107911a1379fff7d34297b750a",
+    "/data/jpc/enzyme-substrate-modeling/output_nyl12_balanced_static_analysis_20261011/ensemble_summary.csv": "ac29ee556140121cf1faf924b0666ed2b4a93a71fb886f18ee75e94a98ae8a7f",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/controls_attempt1/neutral_replica_01_gates.csv": "b9d5296053125d2eefb9ef74732f146ead9c34c4f0ec6b671fe3f57bfef6c9b6",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/controls_attempt1/neutral_replica_02_gates.csv": "a27af05b38a26bb5fc55fd30c84da466541d7811b781db9fdaf1d650c2e6ac7c",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/controls_attempt1/ash272_replica_1_gates.csv": "9c2b72ec6b507d54582351c23a2cb14f7bc918b354ea951b765d6b8badfd8cad",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/controls_attempt1/ash272_replica_2_gates.csv": "ade39ab7e746b9d16150b8afb4e5f134fd9a586ed812c45ada557aef33501a74",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/primary_attempt1/ash274_replica_1_gates.csv": "0f0b02e4e14f4a5a48ec0118fda13caf7c302de98ed027d3241101d996a02c7a",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/primary_attempt1/ash274_replica_2_gates.csv": "3c2e549eddf5747aaf37f9d38975ebbb7d6c7422661dcc4d9f17f9ae80b868aa"
+  },
+  "new_modular_mutant_panel_audit": {
+    "conclusion": "No separatelycompleted modularRESP/GAFF2 mutantpanel identified in scopedmetadataaudit. PreviousWT+8singlemutantPA6panel islegacyAM1BCC/GAFF(27normal100nsruns). Currentmodel30Aspmicrostate comparisonsareWTusingnewmodularRESP/GAFF2. Do not relabellegacy mutanttrajectories asnewFFruns.",
+    "additional_checked_roots": [
+      "/data/jpc/covalent-enzyme-design-pa6-md/configs",
+      "/data/jpc/covalent-enzyme-design-pa6-md/qmmm",
+      "/data/jpc/covalent-enzyme-design-pa6-md/inputs/pa6_modular_md_20261031",
+      "/data/jpc/polyamide-amber-ff/output"
+    ],
+    "scope_limit": "Metadata-onlyboundedsearch; no globalclaimthatnootherdataexistselsewhere."
+  },
+  "verification": {
+    "matched_counts_agree_with_authoritative_summary": true,
+    "late50ns_counts_recomputed_from_cached_CSV": true,
+    "all27legacyproductiontails_have50millionsteps_andnormalcompletion": true,
+    "all9selectedpanel_sequences_diff_exactlyasnamed": true,
+    "local_modular_parameter_payloads_match_release": true,
+    "no_trajectoryfiles_opened": true,
+    "new_MD_jobs_launched": 0
+  }
+}

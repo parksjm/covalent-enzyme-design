@@ -1,0 +1,217 @@
+{
+  "scope": "Existinghistorical27PA6WT+8singlemutantreplicaruns; someaggregatetablesalsoincludePA66rows(seefamilycolumn). No newanalysis.",
+  "files": [
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_md_statistical_analysis_20260825/md_geometry_activity_replicates.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/md_geometry_activity_replicates.csv",
+      "sha256": "2c89d100cc3d3db04fc98fa6953b2282102c34ff781aac40f180dd80b48a14e5",
+      "bytes": 18761,
+      "table_rows": 54,
+      "columns": [
+        "variant",
+        "model",
+        "replica",
+        "n_frames",
+        "last_time_ns",
+        "frac_tier_a_full_geometry",
+        "frac_tier_b_full_geometry",
+        "frac_tier_c_full_geometry",
+        "mean_d1",
+        "median_d1",
+        "max_d1",
+        "mean_d2",
+        "mean_d3",
+        "mean_a1",
+        "median_abs_herschlag_phi",
+        "latest_d1",
+        "latest_d2",
+        "latest_d3",
+        "latest_a1",
+        "latest_Herschlag_phi",
+        "experiment",
+        "source_csv",
+        "weighted_tier_score",
+        "median_abs_herschlag_phi_deviation",
+        "activity_mean",
+        "activity_values",
+        "activity_n_rows",
+        "active_vs_wt"
+      ],
+      "variant_counts": {
+        "F101E": 6,
+        "F101H": 6,
+        "F55N": 6,
+        "K59D": 6,
+        "K59E": 6,
+        "P105K": 6,
+        "T53Q": 6,
+        "V111C": 6,
+        "WT": 6
+      }
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_md_statistical_analysis_20260825/md_geometry_activity_variant_summary.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/md_geometry_activity_variant_summary.csv",
+      "sha256": "9bcea74b9145a6f6227ca8f8529a41ffd7131751f0c5890d9108bda491bf52d3",
+      "bytes": 3411,
+      "table_rows": 18,
+      "columns": [
+        "experiment",
+        "variant",
+        "n_replicates",
+        "activity_mean",
+        "activity_values",
+        "active_vs_wt",
+        "mean_weighted_tier_score",
+        "sd_weighted_tier_score",
+        "mean_frac_tier_a_full_geometry",
+        "sd_frac_tier_a_full_geometry",
+        "mean_frac_tier_b_full_geometry",
+        "sd_frac_tier_b_full_geometry",
+        "mean_frac_tier_c_full_geometry",
+        "sd_frac_tier_c_full_geometry",
+        "mean_mean_d1",
+        "sd_mean_d1",
+        "mean_latest_d1",
+        "sd_latest_d1",
+        "mean_median_abs_herschlag_phi_deviation",
+        "sd_median_abs_herschlag_phi_deviation"
+      ],
+      "variant_counts": {
+        "F101E": 2,
+        "F101H": 2,
+        "F55N": 2,
+        "K59D": 2,
+        "K59E": 2,
+        "P105K": 2,
+        "T53Q": 2,
+        "V111C": 2,
+        "WT": 2
+      }
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_variant_summary_20260918.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/md_variant_summary_20260918.csv",
+      "sha256": "261227f8a9b01395e0513eb822511296d97da3d2a00ed975d30d5fb31ff0dbfa",
+      "bytes": 1781,
+      "table_rows": 18,
+      "columns": [
+        "variant",
+        "mean_tier_a",
+        "mean_tier_b",
+        "mean_tier_c",
+        "persistent_reps",
+        "mean_d1",
+        "n_replicates",
+        "family",
+        "activity"
+      ],
+      "family_counts": {
+        "PA6_L2": 9,
+        "PA6,6_L1": 9
+      },
+      "variant_counts": {
+        "F101E": 2,
+        "F101H": 2,
+        "F55N": 2,
+        "K59D": 2,
+        "K59E": 2,
+        "P105K": 2,
+        "T53Q": 2,
+        "V111C": 2,
+        "WT": 2
+      }
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_stability_calls_20260918.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/md_stability_calls_20260918.csv",
+      "sha256": "84d9ba70fa6ab436e68abc32192fe471c56e7daa1b4d04b580b5ddf78a78963a",
+      "bytes": 214,
+      "table_rows": 2,
+      "columns": [
+        "comparison",
+        "WT",
+        "F101E",
+        "F101H",
+        "F55N",
+        "K59D",
+        "K59E",
+        "P105K",
+        "T53Q",
+        "V111C"
+      ],
+      "comparison_counts": {
+        "PA6 L4 \u2192 L2": 1,
+        "PA6,6 L3 \u2192 L1": 1
+      }
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_by_variant_20260918.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_by_variant_20260918.csv",
+      "sha256": "e65bab6b99ce92c030632a2d6b58a1a5ddd0bd7a125e13b0935a7444fffc2ef2",
+      "bytes": 18924,
+      "table_rows": 187,
+      "columns": [
+        "variant",
+        "canonical_residue_label",
+        "residue_name",
+        "ligand_group",
+        "interaction_type",
+        "persistent_replicas",
+        "mean_tier_b_occupancy",
+        "max_tier_b_occupancy",
+        "mean_tier_c_occupancy",
+        "mean_all_frame_occupancy",
+        "mean_tier_b_enrichment"
+      ],
+      "variant_counts": {
+        "F101H": 31,
+        "K59D": 41,
+        "T53Q": 36,
+        "V111C": 41,
+        "WT": 38
+      }
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_20260918.csv",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_20260918.csv",
+      "sha256": "38eea934e5138384306e5cb3dd2d6842172cc40db843a3aa3eeec7a88746ac7b",
+      "bytes": 4351,
+      "table_rows": 37,
+      "columns": [
+        "canonical_residue_label",
+        "residue_name",
+        "ligand_group",
+        "interaction_type",
+        "n_stable_variants",
+        "variants",
+        "mean_tier_b_occupancy",
+        "max_tier_b_occupancy",
+        "mean_tier_c_occupancy",
+        "mean_tier_b_enrichment"
+      ]
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_tier_definitions_20260918.md",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/md_tier_definitions_20260918.md",
+      "sha256": "21fbc9fb2c3bf363cb171b7d776f197af57f6550044fa0a112a2bf2a85ca7fd7",
+      "bytes": 450
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/pa6_l4_l2_stable_md_productive_contacts_20260918.md",
+      "copy": "/data/jpc/covalent-enzyme-design/student_handoff/nyl12_ash274_md/evidence/legacy_md_results/pa6_l4_l2_stable_md_productive_contacts_20260918.md",
+      "sha256": "a92c700b10f521983dd1a578a85aaad7c8f0c50c95bc1b16cb1795c150809a9c",
+      "bytes": 9929
+    }
+  ],
+  "total_bytes": 57821,
+  "caveats": [
+    "HistoricalAM1BCC/pose/protonationlineage; notnewreleasedmodularRESP/ASH274results.",
+    "Persistent/stability andoldTierA/B/C definitionsarepreservedwithtables; notautomaticallyequivalenttocurrentjointproductivecriterion.",
+    "Productivecontactbyvarianttableconditionsonhistoricallystable/persistentreplcas; notall27runs.",
+    "Geometry/activityassociation is descriptive andnotcausal orabarrier/PMF."
+  ],
+  "source_files_modified": false,
+  "trajectories_read": false,
+  "MD_or_QM_rerun": false
+}

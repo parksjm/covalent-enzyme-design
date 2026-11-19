@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-19T23:05:46.621576+00:00",
+  "pytest_command": "uv run pytest -q tests/test_student_bundle_tools.py tests/test_student_prepared_md.py --cov=student_handoff/nyl12_ash274_md/tools",
+  "tests_passed": 44,
+  "tests_failed": 0,
+  "coverage_percent": 91.51785714285714,
+  "ruff_command": "uv run ruff check student_handoff/nyl12_ash274_md/tools tests/test_student_bundle_tools.py tests/test_student_prepared_md.py",
+  "ruff_passed": true,
+  "new_MD_launched": false,
+  "scope": "Focused tests of new student bundle/launcher behavior; no Amber installation-wide test or scientific convergence claim."
+}

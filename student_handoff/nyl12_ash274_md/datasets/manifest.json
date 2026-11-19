@@ -1,0 +1,1389 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "wt_asp272_ash274": {
+      "microstate": "ASP272/ASH274",
+      "topology": {
+        "path": "wt_asp272_ash274/topology.prmtop",
+        "sha256": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d"
+      },
+      "restart": {
+        "path": "wt_asp272_ash274/start.rst7",
+        "sha256": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6"
+      },
+      "preparation_acceptance": {
+        "path": "wt_asp272_ash274/prep_acceptance.json",
+        "sha256": "c999fa1a0b37d12df2f51f6197e514892adce28eb27f8a7f8f135a8ab2d48c28"
+      },
+      "minimization_acceptance": {
+        "path": "wt_asp272_ash274/md_start_receipt.json",
+        "sha256": "ee279a02598c7fb87ed4bc6b7f3b6f03935f4f46c67019b7466eed7b31bc49b1"
+      },
+      "restart_stage": "unrestrained_minimized",
+      "minimizedstart": {
+        "path": "wt_asp272_ash274/start.rst7",
+        "sha256": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6"
+      },
+      "protected_residues": [
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 113,
+          "resname": "PHE"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 156,
+          "resname": "LYS"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 186,
+          "resname": "ASN"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 929,
+          "resname": "THR"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 968,
+          "resname": "ASP"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 970,
+          "resname": "ASH"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 345,
+          "resname": "PHE"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 388,
+          "resname": "LYS"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 418,
+          "resname": "ASN"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1025,
+          "resname": "THR"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1064,
+          "resname": "ASP"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1066,
+          "resname": "ASH"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 577,
+          "resname": "PHE"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 620,
+          "resname": "LYS"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 650,
+          "resname": "ASN"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1121,
+          "resname": "THR"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1160,
+          "resname": "ASP"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1162,
+          "resname": "ASH"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 809,
+          "resname": "PHE"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 852,
+          "resname": "LYS"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 882,
+          "resname": "ASN"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1217,
+          "resname": "THR"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1256,
+          "resname": "ASP"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1258,
+          "resname": "ASH"
+        }
+      ],
+      "source_md_protocols": [
+        {
+          "replica": "ash274_replica_1",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 732101
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 742101
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 752101
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 762101
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 772101
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "ash274_replica_1",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP"
+          },
+          "files": [
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/01_heat_nvt.acceptance.json",
+              "sha256": "3f2e4f77e24c63fea05b97766a6a62b4a38ce42e6c647145fa3929a74fff3eb8"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/01_heat_nvt.in",
+              "sha256": "dbb5a5d2a0b4762ff3f2a2927017d2cee07425662f6e668c54ff7f253f75e5f9"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/02_density_npt.acceptance.json",
+              "sha256": "0a72a9dcaef4b8759bd4baff100627eedd5892d20675048b339730d1ff502d70"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/02_density_npt.in",
+              "sha256": "31a5057cc23fbdebd35c517da4b5662698f00843ea0e7c69971fc8b84fd5437d"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/03_weak_npt.acceptance.json",
+              "sha256": "38ba594ffb055bd7dc88e22b4824b43f1587f12ec4fb962e86ba5f0c460852c2"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/03_weak_npt.in",
+              "sha256": "4dff3c2a29cdc781d044d554e921ad56b16123ee3e226ce421471faf1dce6e68"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/04_equil_npt.acceptance.json",
+              "sha256": "908f3a938985bb5c516e245434061fe042f2df406fdb806bedf8d00fdf85793e"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/04_equil_npt.in",
+              "sha256": "1e67bc3e3a8b33477edcceca5d1d14160a3c9db4e833a472f4312603319fb538"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/05_production_10ns.acceptance.json",
+              "sha256": "418173d59e12a416ce5ec24fd03626c87408eaf85febdd895e5e26719480fed2"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/05_production_10ns.in",
+              "sha256": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/06_production_90ns.acceptance.json",
+              "sha256": "8c0c7fef6d8a1f5eddf8d6a594e15176b327211e49c21eb7dd006783f644f98d"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/06_production_90ns.in",
+              "sha256": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/completion.json",
+              "sha256": "8323a0c12032b55032d4a071de51bd0a33b98545bb4565186ab29d7337ae623c"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/extension_100ns.json",
+              "sha256": "166f936768e1a54878a804914f6c4eeb023ccd153946c5641ee30fc1a279aaef"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_1/protocol.json",
+              "sha256": "2e4d0747900d79a5ccb03662cf9da5986779c0131ed1e81e358b56aa17e470fe"
+            }
+          ]
+        },
+        {
+          "replica": "ash274_replica_2",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 732202
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 742202
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 752202
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 762202
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 772202
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "ash274_replica_2",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP"
+          },
+          "files": [
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/01_heat_nvt.acceptance.json",
+              "sha256": "149f221d647bbaa7a130869f1c1d076fa64c64a80b7581220dbdc4198be6fd03"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/01_heat_nvt.in",
+              "sha256": "8af05ea35ed958b53b93831acde21889e6be020167ed4b35ab0554fec3223c83"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/02_density_npt.acceptance.json",
+              "sha256": "05108801277b8a1f186ef55027575567476c9713c284b903a7255118b1257a23"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/02_density_npt.in",
+              "sha256": "6e7f73093332156b57bb2528f30e4b4242efcc7cc35d817ba2e69343b019c3bb"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/03_weak_npt.acceptance.json",
+              "sha256": "4ad62a63aa6d786df2a3402d9c3b2c2d200da65110c061680e4061afcd38eee0"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/03_weak_npt.in",
+              "sha256": "4bcd9e608b69f79dae21ec39769cbd33293461d00df5aadc2224a86c61b99be8"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/04_equil_npt.acceptance.json",
+              "sha256": "772a26c303813029b73d88ba186e79589aaff018b7620f796fa1d9543d8b2b4b"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/04_equil_npt.in",
+              "sha256": "cb47da1a6a6b539c95dfb89a5ee4b4608859066291abfb206e27bc3b34ffa027"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/05_production_10ns.acceptance.json",
+              "sha256": "e68d65b1bf78f8d6bd77d490457fb7abba50e881b232c5ca29d64cd08e4e2e68"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/05_production_10ns.in",
+              "sha256": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/06_production_90ns.acceptance.json",
+              "sha256": "341951b4ca5dceb48765d6a09e948356522f560d9b94bd7c486db0fa3d6ccc2d"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/06_production_90ns.in",
+              "sha256": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/completion.json",
+              "sha256": "a5cfd3c0cf38058a07186ec43134948fd2f260f9682aa9ed1b9c3bb727084bbb"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/extension_100ns.json",
+              "sha256": "8a451cd9840ed2e396649132f4267a6b7d4bcdc1c4ab1592f317d4a39ed9472d"
+            },
+            {
+              "path": "wt_asp272_ash274/source_md/ash274_replica_2/protocol.json",
+              "sha256": "85f77347a0b1fce7a12b398f804f52dbedbf07e26743f424f9f532664a06649e"
+            }
+          ]
+        }
+      ],
+      "scientifically_optional_control": false,
+      "requires_new_system_build_for_mutants": true
+    },
+    "wt_asp272_asp274": {
+      "microstate": "ASP272/ASP274",
+      "topology": {
+        "path": "wt_asp272_asp274/topology.prmtop",
+        "sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+      },
+      "restart": {
+        "path": "wt_asp272_asp274/start.rst7",
+        "sha256": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af"
+      },
+      "preparation_acceptance": {
+        "path": "wt_asp272_asp274/prep_acceptance.json",
+        "sha256": "5bd2ee3ef4a57ebf528fe88549d4a5e7140fb82fbd7a1a05bcbfb389991826d2"
+      },
+      "minimization_acceptance": {
+        "path": "wt_asp272_asp274/md_start_receipt.json",
+        "sha256": "707cd1c627a2fb50ce9b1e8fd4ba96d592d675f268a62bcb2a3c866a29b61f60"
+      },
+      "restart_stage": "unrestrained_minimized",
+      "minimizedstart": {
+        "path": "wt_asp272_asp274/start.rst7",
+        "sha256": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af"
+      },
+      "protected_residues": [
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 113,
+          "resname": "PHE"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 156,
+          "resname": "LYS"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 186,
+          "resname": "ASN"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 929,
+          "resname": "THR"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 968,
+          "resname": "ASP"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 970,
+          "resname": "ASP"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 345,
+          "resname": "PHE"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 388,
+          "resname": "LYS"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 418,
+          "resname": "ASN"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1025,
+          "resname": "THR"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1064,
+          "resname": "ASP"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1066,
+          "resname": "ASP"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 577,
+          "resname": "PHE"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 620,
+          "resname": "LYS"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 650,
+          "resname": "ASN"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1121,
+          "resname": "THR"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1160,
+          "resname": "ASP"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1162,
+          "resname": "ASP"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 809,
+          "resname": "PHE"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 852,
+          "resname": "LYS"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 882,
+          "resname": "ASN"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1217,
+          "resname": "THR"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1256,
+          "resname": "ASP"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1258,
+          "resname": "ASP"
+        }
+      ],
+      "source_md_protocols": [
+        {
+          "replica": "neutral_replica_01",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 731110
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 741110
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 751110
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 761110
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 771110
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "neutral_replica_01",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda"
+          },
+          "files": [
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/01_heat_nvt.in",
+              "sha256": "30133ff325f715220e631366f57a21c08be7daf8588832283309dc285a169ea4"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/02_density_npt.acceptance.json",
+              "sha256": "a00317f9bf78563aa2095db516f0b1a2c7e143e4ae1631d05d4f62ed6f362aab"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/02_density_npt.in",
+              "sha256": "51e2d5231e8f7b6acd1ce4c10286d67a9c465053e46196ff30861015fdb6d0d8"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/03_weak_npt.acceptance.json",
+              "sha256": "055c319e7d2ca4b1e33c53b4b7bde027496756c22d15f33b90ecdbbb31d20380"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/03_weak_npt.in",
+              "sha256": "a994ecaea0eac5be6cad52116b474031928cd25ef678321f78bba0a60e7808e2"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/04_equil_npt.acceptance.json",
+              "sha256": "81290f778bd3398e352f318ee41840980c1137c2cf85c9781d12623dc76b6a65"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/04_equil_npt.in",
+              "sha256": "a6a0731385637acd861e22c969caa9369ec609b831cdf7e6188dfbe1921535f2"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/05_production_10ns.acceptance.json",
+              "sha256": "a9c7e54691c2901079efe93d3336e19d26902c82a36f1ef7c004da6d8da5ce2c"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/05_production_10ns.in",
+              "sha256": "18bdaca2e8df80a2a184544e7d56aa4fc82ae80ea322a471e720333dd564345e"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/06_production_90ns.acceptance.json",
+              "sha256": "c5925baaa7aec06ae334ad3ad049763431c52b2fa5390ecc9710086f1749d310"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/06_production_90ns.in",
+              "sha256": "3baa392f17224534e87a0fef972a1d7a7e7d826474f019098c19c43bb1550c6c"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/completion.json",
+              "sha256": "06da11ba3033d3d475d66c4db630edf52a5874f6131ccd1710385756f97cab1f"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/extension_100ns.json",
+              "sha256": "52ebb3bd86c65f993c5f15c86aefebadd5487a5580269c26f1fb2e9936cfe37e"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_01/protocol.json",
+              "sha256": "bc96221d5d130dbbcc20a00d2a5020f597e854bb08bf02f3e007ea6dee5343a1"
+            }
+          ]
+        },
+        {
+          "replica": "neutral_replica_02",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 731127
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 741127
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 751127
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 761127
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 771127
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "neutral_replica_02",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda"
+          },
+          "files": [
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/01_heat_nvt.in",
+              "sha256": "94a0cd87cfc68a9da18917a0ac251a2f3667cb2969d7ddc60b20dba63507de85"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/02_density_npt.acceptance.json",
+              "sha256": "5ceac70c043e5614960a1fcacd7b311fb1ea3adf2999602c7296217e4322ca74"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/02_density_npt.in",
+              "sha256": "f8bb73cbdcc59f3f19f0509de0fb490872ca55b513d93b614ffba7b34d8b003c"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/03_weak_npt.acceptance.json",
+              "sha256": "7575c745a6e073a5cc7d31d5950253468b65c7ad2f16273b13c9b0bb7818ab96"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/03_weak_npt.in",
+              "sha256": "64804e0892951202c1b358991b67e6620e2727b56376a70daae07daa8753693a"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/04_equil_npt.acceptance.json",
+              "sha256": "f054119421df21f7a824e3877921d4e4ee6c6ba59de533029f731e7461ab3fd1"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/04_equil_npt.in",
+              "sha256": "3359195e3d307582c6a92791d4dd1e099d6416994c9e31b3246e3bd0734a92e4"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/05_production_10ns.acceptance.json",
+              "sha256": "a099afbdf8919a93dcb95946d02e9a7c767f1f2fb8b8c1d813bcd045f7cd0bbe"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/05_production_10ns.in",
+              "sha256": "7fff82e72984dc4adaf531b3173aabcaf279aa33110efae57984d4e520144a62"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/06_production_90ns.acceptance.json",
+              "sha256": "1ec6331d3ebe347d5b7392ed4fbda40cf3b1f5fda2135383c25c979fbee8b369"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/06_production_90ns.in",
+              "sha256": "8c301627557c850924e612ecb2a18c5653eca3c2b47071d8f3443694ce1321f3"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/completion.json",
+              "sha256": "1e2d1e9c867c53da778445e992df071710cb18bc04b84cb7ba3bf8ce794114e0"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/extension_100ns.json",
+              "sha256": "5d3a58dc20126478ff8238eef0e4805a2f16aac08426f18e406231b5edd35896"
+            },
+            {
+              "path": "wt_asp272_asp274/source_md/neutral_replica_02/protocol.json",
+              "sha256": "fd877469850889ffb3f14887892d842b01800edf41035562d9c303e19d786431"
+            }
+          ]
+        }
+      ],
+      "scientifically_optional_control": false,
+      "requires_new_system_build_for_mutants": true
+    },
+    "wt_ash272_asp274": {
+      "microstate": "ASH272/ASP274",
+      "topology": {
+        "path": "wt_ash272_asp274/topology.prmtop",
+        "sha256": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662"
+      },
+      "restart": {
+        "path": "wt_ash272_asp274/start.rst7",
+        "sha256": "58a072eaa4101a3f17cb96209f37f63a65b7ec94dbd274a3b130fb9d92a4daae"
+      },
+      "preparation_acceptance": {
+        "path": "wt_ash272_asp274/prep_acceptance.json",
+        "sha256": "85e921805aaaee3566a3c1ede1cd3723e05396c12c718d88563ce14339163ce7"
+      },
+      "minimization_acceptance": {
+        "path": "wt_ash272_asp274/md_start_receipt.json",
+        "sha256": "6fa51689a8907cf0cad01b2604c38dd9c223bc08761a6ad711755f2707ba8ab2"
+      },
+      "restart_stage": "unrestrained_minimized",
+      "minimizedstart": {
+        "path": "wt_ash272_asp274/start.rst7",
+        "sha256": "58a072eaa4101a3f17cb96209f37f63a65b7ec94dbd274a3b130fb9d92a4daae"
+      },
+      "protected_residues": [
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 113,
+          "resname": "PHE"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 156,
+          "resname": "LYS"
+        },
+        {
+          "site": "AE",
+          "chain": "A",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 186,
+          "resname": "ASN"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 929,
+          "resname": "THR"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 968,
+          "resname": "ASH"
+        },
+        {
+          "site": "AE",
+          "chain": "E",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 970,
+          "resname": "ASP"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 345,
+          "resname": "PHE"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 388,
+          "resname": "LYS"
+        },
+        {
+          "site": "BF",
+          "chain": "B",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 418,
+          "resname": "ASN"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1025,
+          "resname": "THR"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1064,
+          "resname": "ASH"
+        },
+        {
+          "site": "BF",
+          "chain": "F",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1066,
+          "resname": "ASP"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 577,
+          "resname": "PHE"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 620,
+          "resname": "LYS"
+        },
+        {
+          "site": "CG",
+          "chain": "C",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 650,
+          "resname": "ASN"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1121,
+          "resname": "THR"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1160,
+          "resname": "ASH"
+        },
+        {
+          "site": "CG",
+          "chain": "G",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1162,
+          "resname": "ASP"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 113,
+          "structure_residue": 113,
+          "amber_residue": 809,
+          "resname": "PHE"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 156,
+          "structure_residue": 156,
+          "amber_residue": 852,
+          "resname": "LYS"
+        },
+        {
+          "site": "DH",
+          "chain": "D",
+          "sequence_residue": 186,
+          "structure_residue": 186,
+          "amber_residue": 882,
+          "resname": "ASN"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 233,
+          "structure_residue": 1,
+          "amber_residue": 1217,
+          "resname": "THR"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 272,
+          "structure_residue": 40,
+          "amber_residue": 1256,
+          "resname": "ASH"
+        },
+        {
+          "site": "DH",
+          "chain": "H",
+          "sequence_residue": 274,
+          "structure_residue": 42,
+          "amber_residue": 1258,
+          "resname": "ASP"
+        }
+      ],
+      "source_md_protocols": [
+        {
+          "replica": "ash272_replica_1",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 732101
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 742101
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 752101
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 762101
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 772101
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "ash272_replica_1",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP"
+          },
+          "files": [
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/01_heat_nvt.acceptance.json",
+              "sha256": "6694354c6e6c896a9cd3a083010338229bdbdccc9cfb9790368fad41989b092f"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/01_heat_nvt.in",
+              "sha256": "dbb5a5d2a0b4762ff3f2a2927017d2cee07425662f6e668c54ff7f253f75e5f9"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/02_density_npt.acceptance.json",
+              "sha256": "f58552ada7389f1f4cd81dbf65fc11a2f7a15b6d2b8f19119c1dc5aa2c9fb505"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/02_density_npt.in",
+              "sha256": "31a5057cc23fbdebd35c517da4b5662698f00843ea0e7c69971fc8b84fd5437d"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/03_weak_npt.acceptance.json",
+              "sha256": "8af69bd1c4f90060db756c45cb24a65fb36771cb48840fed0ffad22274956164"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/03_weak_npt.in",
+              "sha256": "4dff3c2a29cdc781d044d554e921ad56b16123ee3e226ce421471faf1dce6e68"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/04_equil_npt.acceptance.json",
+              "sha256": "cba9cd6f8ae81d2bf9f543f418023f53af51295c9442211a4f1f3cfe76a5876a"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/04_equil_npt.in",
+              "sha256": "1e67bc3e3a8b33477edcceca5d1d14160a3c9db4e833a472f4312603319fb538"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/05_production_10ns.acceptance.json",
+              "sha256": "9e6bab7254b6d4af20066953a9991c867ff2ccd1ad7462e20035483f63b4f046"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/05_production_10ns.in",
+              "sha256": "065ca9c969b74ec720a73f28d492d8b413b31ef7ef361c8f6923d4eccbd4109e"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/06_production_90ns.acceptance.json",
+              "sha256": "f35bd21cce455611740678fef9d7a1e2fefab36fa595aeafd95082714d931a83"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/06_production_90ns.in",
+              "sha256": "3fe45030b185c04be541976fc6a8a15ac23819fb7eb0272d659481fe6b50b02b"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/completion.json",
+              "sha256": "8677e6f6f4fd557d5015075d7e3836611781f47c1062f9f98599b04c89575a1d"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/extension_100ns.json",
+              "sha256": "b7928d49c8f0d09128ac5c051e7b42fb987542d976aba93b6009cba103168e4d"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_1/protocol.json",
+              "sha256": "97ed6a5c4da9316b8350ab4dd8294e2a1a1b8e41dc59a18e755398a8cfdcee5d"
+            }
+          ]
+        },
+        {
+          "replica": "ash272_replica_2",
+          "protocol": {
+            "protocol": "model30_matched_10ns_pilot_v1",
+            "dt_ps": 0.002,
+            "temperature_K": 300,
+            "thermostat": "Langevin ntt=3 gamma_ln=1.0 ps^-1",
+            "barostat": "Monte Carlo barostat=2 ntp=1 pres0=1.0 taup=2.0 ps",
+            "constraints": "SHAKE hydrogen bonds ntc=2 ntf=2",
+            "electrostatics": "Periodic PME cut=10.0 A",
+            "heavy_restraint_mask": "!:WAT,Na+,Cl- & !@H=",
+            "restraint_reference": "Original minimized coordinates for every restrained stage",
+            "production_restraints": "ntr=0 nmropt=0",
+            "trajectory_interval_ps": {
+              "equilibration": 2,
+              "production": 10
+            },
+            "stages": [
+              {
+                "name": "01_heat_nvt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 5.0,
+                "seed": 732202
+              },
+              {
+                "name": "02_density_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 2.0,
+                "seed": 742202
+              },
+              {
+                "name": "03_weak_npt",
+                "steps": 50000,
+                "duration_ps": 100.0,
+                "heavy_restraint_kcal_mol_A2": 0.5,
+                "seed": 752202
+              },
+              {
+                "name": "04_equil_npt",
+                "steps": 100000,
+                "duration_ps": 200.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 762202
+              },
+              {
+                "name": "05_production_10ns",
+                "steps": 5000000,
+                "duration_ps": 10000.0,
+                "heavy_restraint_kcal_mol_A2": null,
+                "seed": 772202
+              }
+            ],
+            "analysis": "Use projected_herschlag_phi, not old four-atom cpptraj dihedral",
+            "label": "ash272_replica_2",
+            "executable": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP"
+          },
+          "files": [
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/01_heat_nvt.acceptance.json",
+              "sha256": "10e25cef915302a2532f07b05e27d8768abfeb67cbdc4a1fd3148cb994fc85ef"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/01_heat_nvt.in",
+              "sha256": "8af05ea35ed958b53b93831acde21889e6be020167ed4b35ab0554fec3223c83"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/02_density_npt.acceptance.json",
+              "sha256": "4602bc954525def0dd7dfe319ddfb9cb2231bf57e452e75060e24fc9b4eeea91"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/02_density_npt.in",
+              "sha256": "6e7f73093332156b57bb2528f30e4b4242efcc7cc35d817ba2e69343b019c3bb"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/03_weak_npt.acceptance.json",
+              "sha256": "cfa374cfe6372e77a3ac3dbc8b8e0a6d613a13a850e1c8c2155148263c6f162c"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/03_weak_npt.in",
+              "sha256": "4bcd9e608b69f79dae21ec39769cbd33293461d00df5aadc2224a86c61b99be8"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/04_equil_npt.acceptance.json",
+              "sha256": "f1178e9347babb15143f5a9802372b8e5715a79607c24b2201d39d42f512d9e1"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/04_equil_npt.in",
+              "sha256": "cb47da1a6a6b539c95dfb89a5ee4b4608859066291abfb206e27bc3b34ffa027"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/05_production_10ns.acceptance.json",
+              "sha256": "3e6025336007aac7cbb4a50488b3bb78af5897a1b7684806474a7152a3495837"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/05_production_10ns.in",
+              "sha256": "728113cb94cdfaad16e9128dae42c8800ee8732b710f0cc4f055804e2ca7f3eb"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/06_production_90ns.acceptance.json",
+              "sha256": "a1ee52719e28011f49ba3ca281ccd82c81ff0b985aa6ef909db7f55b4bcdddd5"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/06_production_90ns.in",
+              "sha256": "98bddc45696f43b4bcc48fbc39dd6e489ca3ebcf0204140f54d109640afa21ca"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/completion.json",
+              "sha256": "66e242603f6d1d12c5e997783906120f56be7d9a0c75d3f25c4b49e396ef7eda"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/extension_100ns.json",
+              "sha256": "1e89a00a0352641181feceb005d44f2af764dabb13bec785af8dd560d260a69a"
+            },
+            {
+              "path": "wt_ash272_asp274/source_md/ash272_replica_2/protocol.json",
+              "sha256": "5240d4d1b9400e4c7815d21863d59197dd31bfd4ad7846e74c50ad488c35a2b6"
+            }
+          ]
+        }
+      ],
+      "scientifically_optional_control": true,
+      "requires_new_system_build_for_mutants": true
+    }
+  }
+}

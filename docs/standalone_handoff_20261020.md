@@ -1,3 +1,43 @@
+## CURRENT — student MD handoff, 2026-11-19
+
+A transferable handoff is in `student_handoff/nyl12_ash274_md/START_HERE.md`.
+The immediate hypothesis is a matched WT protonation-state effect, followed by
+rebuilding the prior eight mutants with the same PA6 RESP/GAFF2 release.
+ASH274 has 8.385% pooled Tier A occupancy versus 1.375% for ASP/ASP, but its
+replicas are 16.77% and 0%; joint native-Thr gates do not show a corresponding
+advantage. This is a testable hypothesis, not an established catalytic benefit.
+Use independent 100 ns replicas, matched 300 K protocols and replica-level
+uncertainty. Preserve the historical site-AE comparison and implement validated
+four-site tracking before ranking LigandMPNN designs. The old mutant panel
+uses legacy AM1-BCC/GAFF substrate parameters and cannot isolate protonation.
+No new MD was launched while preparing the handoff. Three WT microstates are
+portable prepared starts; mutant coordinate references still require rebuilding.
+This MD subproject does not replace the current mechanism/TS priorities.
+
+
+## CURRENT — long CG same-start replay launched, 2026-11-19
+
+User requested a supported restart with a considerably higher budget and
+explicitly allowed starting over. No usable DL-FIND checkpoint exists: the
+installed Sander adapter disables dump/restart. A supported identical-start
+replay is now running in the existing CG trial's `long_run/` child:
+`qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/04_uniform_24_cg/long_run/`.
+Native session: `nyl12_neb_cg_long_20261119`. Only maxcycle 250→32,000 and
+Amber maxcyc 100,000→300,000 changed, yielding 224,000 evaluations (128×pilot).
+All controls, chemistry, force tolerances, CG settings and 12 Å active region
+are unchanged; inverse substitution verifies the rest of mdin byte-for-byte.
+The completed pilot and other running NEBs are preserved.
+
+The first 24-image profile and Max/RMS gradients match the pilot exactly.
+Replay checking is scripted in `nyl12_cg_replay_check_20261119`; it compares
+cycles 1–79 and then records advancement, without claiming science convergence.
+Allow roughly 65 minutes to replay the old pilot. VMD and numeric comparison
+sessions `nyl12_cg_long_view_20261119` and `nyl12_cg_long_comparison_20261119`
+publish child `progress/latest/vmd/view_path.vmd` and `plots/comparison.png`.
+The updated pull supports nested paths; recopy its laptop script. New entry
+points are `scripts/prepare_long_cg_replay.py` and
+`scripts/verify_neb_cg_replay.py`; run records/source hashes are retained.
+
 ## CURRENT — parallel NEB spacing tests running on violet, 2026-11-19
 
 Four native paths now run concurrently in the existing

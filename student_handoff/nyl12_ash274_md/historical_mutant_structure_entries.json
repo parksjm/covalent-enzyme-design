@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F101E/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1617837,
+      "sha256": "79776c4546d45dbf45a1bcd2c0ecb4fe1e9a9238e7b33e3b855ca14e7868853e",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F101E/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 203,
+      "sha256": "90dffee694b0e125652435b1894835a00268c4269f89faf18c43d7a5a8261715",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F101H/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1618485,
+      "sha256": "93582d8ae714558ec490ea37157968dbd0c1fc118d69423cb102f3d6fa673e22",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F101H/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 200,
+      "sha256": "d9f366fb7839b1a581e26a3bb73f8049cb8c6ba25c5b8ee5ddb8504540f3d190",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F55N/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1617513,
+      "sha256": "55d518221f5a602230ed4ec58831b6ef16c9e95262cdc3e0544da96e2a30fd52",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/F55N/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 199,
+      "sha256": "c3781545b2209ab7ae9e41ad19972d4b2a8329ff90906d336fc287a851d3063b",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/K59D/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1616217,
+      "sha256": "fd5ac987b1d92d682492d37889f4869f3cd9317a37068c11f9f0d1a9f0dd8fe7",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/K59D/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 198,
+      "sha256": "9202257142cd2606298d99ca97b67640c61226a5fa1a483d027ccc5acf1cdb4e",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/K59E/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1617189,
+      "sha256": "fce84cd9b3e23e9dd288e84419af7ea7be170730a3d4b81054cacd566acc7b96",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/K59E/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 200,
+      "sha256": "2b464a3809e41ff692c1a2c194f269ac4e5d7142c5dd57b948933b7b1a8e30b3",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/P105K/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1622049,
+      "sha256": "cfcd8d9912748ac08b31bc0bf7161b53a1ea7d3778b9605c49eb8e3beea8f39b",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/P105K/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 200,
+      "sha256": "c7a5d4712993c59d221d9feb28ddadb116eaf2da6c05c2ac1de3a62470b64019",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/T53Q/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1620429,
+      "sha256": "2ae7bde2f34c9047b668185c842cf2f8cd85b8c7d9b520894a073d39408583be",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/T53Q/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 202,
+      "sha256": "cfe42870a4ab024e8dc197c12c7781bda0a4ee9ccf554a8b2124e6b73576ac82",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/complex_min.pdb",
+      "destination": "original_inputs/historical_mutant_starting_complexes/V111C/complex_min.pdb",
+      "profile": "core",
+      "required": false,
+      "bytes": 1617837,
+      "sha256": "59cfe0325981aad5d299f3cc4156561205a58efbbb659856ead03ae5fee36d6c",
+      "category": "legacy_relaxed_mutant_pose_NOT_ASH274_MD_ready"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/energy.json",
+      "destination": "original_inputs/historical_mutant_starting_complexes/V111C/metadata/energy.json",
+      "profile": "core",
+      "required": false,
+      "bytes": 199,
+      "sha256": "f94490dd7a0cf6bac654f0cc17c5dcd88a0805811137d44af2fdc1b43928d7da",
+      "category": "legacy_starting_model_metadata"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/selected_pa6_models.csv",
+      "destination": "original_inputs/historical_mutant_starting_complexes/selected_pa6_models.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 2145,
+      "sha256": "86805093d89b2d337801e00ae4afb9a37015e5b006cef6cb43b61b7a36731fc7",
+      "category": "original_model_selection_manifest"
+    },
+    {
+      "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_md_pilot_100ns_20260818/solvated_systems.csv",
+      "destination": "original_inputs/historical_mutant_starting_complexes/solvated_systems.csv",
+      "profile": "core",
+      "required": false,
+      "bytes": 1834,
+      "sha256": "9f7864e72b6b367976d9135d9864acf54788b53e0e6ed815e29a359b004f2ddf",
+      "category": "legacy_MD_lineage_not_new_protonation"
+    }
+  ],
+  "models": [
+    {
+      "genotype": "F101E",
+      "model": "pa6_l4z_l2_nyl12_f101e_model_17",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/complex_min.pdb",
+      "pdb_sha256": "79776c4546d45dbf45a1bcd2c0ecb4fe1e9a9238e7b33e3b855ca14e7868853e",
+      "selection_record": {
+        "variant": "F101E",
+        "model": "pa6_l4z_l2_nyl12_f101e_model_17",
+        "tier": "A",
+        "interface_delta": "-19.92",
+        "geometry_score": "100.0",
+        "d1": "3.1",
+        "d2": "2.94",
+        "d3": "2.78",
+        "a1": "103.6",
+        "abs_herschlag_phi": "93.0",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101e_model_17/energy.json",
+          "sha256": "90dffee694b0e125652435b1894835a00268c4269f89faf18c43d7a5a8261715",
+          "bytes": 203
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "F101H",
+      "model": "pa6_l4z_l2_nyl12_f101h_model_8",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/complex_min.pdb",
+      "pdb_sha256": "93582d8ae714558ec490ea37157968dbd0c1fc118d69423cb102f3d6fa673e22",
+      "selection_record": {
+        "variant": "F101H",
+        "model": "pa6_l4z_l2_nyl12_f101h_model_8",
+        "tier": "B",
+        "interface_delta": "-18.99",
+        "geometry_score": "97.083",
+        "d1": "3.25",
+        "d2": "3.01",
+        "d3": "2.81",
+        "a1": "103.0",
+        "abs_herschlag_phi": "93.3",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f101h_model_8/energy.json",
+          "sha256": "d9f366fb7839b1a581e26a3bb73f8049cb8c6ba25c5b8ee5ddb8504540f3d190",
+          "bytes": 200
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "F55N",
+      "model": "pa6_l4z_l2_nyl12_f55n_model_1",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/complex_min.pdb",
+      "pdb_sha256": "55d518221f5a602230ed4ec58831b6ef16c9e95262cdc3e0544da96e2a30fd52",
+      "selection_record": {
+        "variant": "F55N",
+        "model": "pa6_l4z_l2_nyl12_f55n_model_1",
+        "tier": "B",
+        "interface_delta": "-22.24",
+        "geometry_score": "98.75",
+        "d1": "3.08",
+        "d2": "3.04",
+        "d3": "2.9",
+        "a1": "89.5",
+        "abs_herschlag_phi": "99.9",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_f55n_model_1/energy.json",
+          "sha256": "c3781545b2209ab7ae9e41ad19972d4b2a8329ff90906d336fc287a851d3063b",
+          "bytes": 199
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "K59D",
+      "model": "pa6_l4z_l2_nyl12_k59d_model_16",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/complex_min.pdb",
+      "pdb_sha256": "fd5ac987b1d92d682492d37889f4869f3cd9317a37068c11f9f0d1a9f0dd8fe7",
+      "selection_record": {
+        "variant": "K59D",
+        "model": "pa6_l4z_l2_nyl12_k59d_model_16",
+        "tier": "B",
+        "interface_delta": "-23.44",
+        "geometry_score": "91.25",
+        "d1": "3.35",
+        "d2": "2.93",
+        "d3": "2.86",
+        "a1": "98.4",
+        "abs_herschlag_phi": "102.2",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59d_model_16/energy.json",
+          "sha256": "9202257142cd2606298d99ca97b67640c61226a5fa1a483d027ccc5acf1cdb4e",
+          "bytes": 198
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "K59E",
+      "model": "pa6_l4z_l2_nyl12_k59e_model_3",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/complex_min.pdb",
+      "pdb_sha256": "fce84cd9b3e23e9dd288e84419af7ea7be170730a3d4b81054cacd566acc7b96",
+      "selection_record": {
+        "variant": "K59E",
+        "model": "pa6_l4z_l2_nyl12_k59e_model_3",
+        "tier": "B",
+        "interface_delta": "-25.65",
+        "geometry_score": "98.25",
+        "d1": "3.23",
+        "d2": "2.92",
+        "d3": "2.75",
+        "a1": "93.3",
+        "abs_herschlag_phi": "100.4",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_k59e_model_3/energy.json",
+          "sha256": "2b464a3809e41ff692c1a2c194f269ac4e5d7142c5dd57b948933b7b1a8e30b3",
+          "bytes": 200
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "P105K",
+      "model": "pa6_l4z_l2_nyl12_p105k_model_11",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/complex_min.pdb",
+      "pdb_sha256": "cfcd8d9912748ac08b31bc0bf7161b53a1ea7d3778b9605c49eb8e3beea8f39b",
+      "selection_record": {
+        "variant": "P105K",
+        "model": "pa6_l4z_l2_nyl12_p105k_model_11",
+        "tier": "B",
+        "interface_delta": "-16.3",
+        "geometry_score": "90.083",
+        "d1": "3.37",
+        "d2": "2.86",
+        "d3": "2.73",
+        "a1": "94.1",
+        "abs_herschlag_phi": "99.4",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_p105k_model_11/energy.json",
+          "sha256": "c7a5d4712993c59d221d9feb28ddadb116eaf2da6c05c2ac1de3a62470b64019",
+          "bytes": 200
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "T53Q",
+      "model": "pa6_l4z_l2_nyl12_t53q_model_10",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/complex_min.pdb",
+      "pdb_sha256": "2ae7bde2f34c9047b668185c842cf2f8cd85b8c7d9b520894a073d39408583be",
+      "selection_record": {
+        "variant": "T53Q",
+        "model": "pa6_l4z_l2_nyl12_t53q_model_10",
+        "tier": "B",
+        "interface_delta": "-18.74",
+        "geometry_score": "87.5",
+        "d1": "2.96",
+        "d2": "2.89",
+        "d3": "2.88",
+        "a1": "85.0",
+        "abs_herschlag_phi": "93.5",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_t53q_model_10/energy.json",
+          "sha256": "cfe42870a4ab024e8dc197c12c7781bda0a4ee9ccf554a8b2124e6b73576ac82",
+          "bytes": 202
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    },
+    {
+      "genotype": "V111C",
+      "model": "pa6_l4z_l2_nyl12_v111c_model_46",
+      "source_pdb": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/complex_min.pdb",
+      "pdb_sha256": "59cfe0325981aad5d299f3cc4156561205a58efbbb659856ead03ae5fee36d6c",
+      "selection_record": {
+        "variant": "V111C",
+        "model": "pa6_l4z_l2_nyl12_v111c_model_46",
+        "tier": "A",
+        "interface_delta": "-16.83",
+        "geometry_score": "100.0",
+        "d1": "3.17",
+        "d2": "2.93",
+        "d3": "2.96",
+        "a1": "90.1",
+        "abs_herschlag_phi": "108.1",
+        "selection_policy": "tier_ab",
+        "pdb_path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/complex_min.pdb"
+      },
+      "original_model_metadata": [
+        {
+          "source": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/1_relaxation/pa6_l4z_l2_nyl12_v111c_model_46/energy.json",
+          "sha256": "f94490dd7a0cf6bac654f0cc17c5dcd88a0805811137d44af2fdc1b43928d7da",
+          "bytes": 199
+        }
+      ],
+      "scientific_status": "Historical relaxed pose only; legacy AM1-BCC MD lineage/may have flipped local pose. Requires explicit ASH274 protonation+releasedmodularRESP/GAFF2 topologyrebuild and validation before new MD.",
+      "already_MD_ready_ASH274_system": false
+    }
+  ],
+  "missing": [],
+  "genotypes_requested": [
+    "F101E",
+    "F101H",
+    "F55N",
+    "K59D",
+    "K59E",
+    "P105K",
+    "T53Q",
+    "V111C"
+  ],
+  "selection_manifest_sha256": "86805093d89b2d337801e00ae4afb9a37015e5b006cef6cb43b61b7a36731fc7",
+  "total_bytes": 12953136,
+  "frozen_data_manifest_modified": false,
+  "source_coordinates_modified": false,
+  "new_MD_or_Boltz_run": false
+}

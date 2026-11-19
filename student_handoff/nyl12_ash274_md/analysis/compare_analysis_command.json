@@ -1,0 +1,18 @@
+{
+  "working_directory": "extracted_bundle_root",
+  "requires_profile": "raw_reference_only files explicitly acquired separately (75.55GB); notdefaultbundle",
+  "command": [
+    "uv",
+    "run",
+    "--project",
+    "analysis_environment",
+    "python",
+    "preparation_source/scripts/compare_asp_pair_md.py",
+    "--manifest",
+    "analysis/raw_comparison_manifest.json",
+    "--output",
+    "analysis/recomputed_md_comparison"
+  ],
+  "environment": "Exact observed MDAnalysis2.10.0 environment:environment/historical_analysis_packages.json +historical_analysis_pixi.lock",
+  "ready_without_raw_data": "analysis/existing_md_comparison/*.csv andsummary.json arecompleteexistinganalysis; norecalculationrequired."
+}

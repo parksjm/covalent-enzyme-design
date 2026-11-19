@@ -1,0 +1,38 @@
+canonical_residue_label,residue_name,ligand_group,interaction_type,n_stable_variants,variants,mean_tier_b_occupancy,max_tier_b_occupancy,mean_tier_c_occupancy,mean_tier_b_enrichment
+Asn186_A,ASN,scissile_amide,hydrogen bond / catalytic polar contact,5,"F101H, K59D, T53Q, V111C, WT",1.0,1.0,0.995,0.028
+Thr233_A,THR,scissile_amide,hydrogen bond / catalytic polar contact,5,"F101H, K59D, T53Q, V111C, WT",1.0,1.0,1.0,0.015
+Phe113_A,PHE,scissile_amide,hydrogen bond / oxyanion-hole backbone contact,5,"F101H, K59D, T53Q, V111C, WT",1.0,1.0,0.999,0.01
+Leu271_A,LEU,scissile_amide,nonpolar contact,5,"F101H, K59D, T53Q, V111C, WT",0.982,1.0,0.979,-0.0
+Gly273_A,GLY,scissile_amide,nonpolar contact,5,"F101H, K59D, T53Q, V111C, WT",0.887,1.0,0.879,0.054
+Phe113_A,PHE,n_terminal_segment,nonpolar packing with PA6 segment,5,"F101H, K59D, T53Q, V111C, WT",0.821,0.983,0.827,0.005
+Ile112_A,ILE,scissile_amide,nonpolar contact,5,"F101H, K59D, T53Q, V111C, WT",0.803,0.968,0.814,0.009
+Leu271_A,LEU,n_terminal_segment,nonpolar packing with PA6 segment,5,"F101H, K59D, T53Q, V111C, WT",0.779,0.985,0.778,-0.006
+Phe113_A,PHE,c_terminal_segment,nonpolar packing with PA6 segment,5,"F101H, K59D, T53Q, V111C, WT",0.763,0.842,0.767,-0.012
+Asp272_A,ASP,scissile_amide,hydrogen bond / polar contact,5,"F101H, K59D, T53Q, V111C, WT",0.658,0.923,0.61,0.086
+Ile77_A,ILE,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",1.0,1.0,0.998,0.004
+Gly76_A,GLY,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.978,1.0,0.977,0.006
+Ser50_A,SER,c_terminal_segment,hydrogen bond / polar contact to PA6 segment,4,"F101H, T53Q, V111C, WT",0.965,1.0,0.963,0.0
+Met104_D,MET,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.946,0.978,0.958,-0.01
+Gly273_A,GLY,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.865,0.985,0.862,0.032
+Phe226_A,PHE,n_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.755,1.0,0.742,0.026
+Phe55_D,PHE,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.751,0.891,0.748,-0.001
+Trp227_A,TRP,n_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.739,0.991,0.742,-0.0
+Leu106_D,LEU,c_terminal_segment,nonpolar packing with PA6 segment,4,"F101H, T53Q, V111C, WT",0.727,0.95,0.725,-0.002
+Leu271_A,LEU,c_terminal_segment,nonpolar packing with PA6 segment,4,"K59D, T53Q, V111C, WT",0.718,0.967,0.701,0.013
+Phe101_D,PHE,n_terminal_segment,nonpolar packing with PA6 segment,4,"K59D, T53Q, V111C, WT",0.715,0.983,0.718,-0.0
+Phe101_D,PHE,c_terminal_segment,nonpolar packing with PA6 segment,4,"K59D, T53Q, V111C, WT",0.666,0.957,0.691,-0.048
+Thr233_A,THR,c_terminal_segment,hydrogen bond / polar contact to PA6 segment,4,"F101H, K59D, T53Q, WT",0.573,0.937,0.527,0.055
+Ile295_B,ILE,c_terminal_group,nonpolar contact,4,"F101H, T53Q, V111C, WT",0.514,0.794,0.511,0.0
+Lys59_D,LYS,c_terminal_group,salt bridge / cation-carboxylate contact,3,"T53Q, V111C, WT",0.983,1.0,0.99,-0.005
+Val111_A,VAL,c_terminal_segment,nonpolar packing with PA6 segment,3,"F101H, T53Q, WT",0.853,0.969,0.856,-0.015
+Tyr66_D,TYR,c_terminal_group,hydrogen bond / polar contact,3,"T53Q, V111C, WT",0.645,1.0,0.651,-0.015
+Thr116_A,THR,n_terminal_segment,hydrogen bond / polar contact to PA6 segment,3,"T53Q, V111C, WT",0.64,1.0,0.63,0.013
+Pro228_A,PRO,n_terminal_segment,nonpolar packing with PA6 segment,3,"T53Q, V111C, WT",0.62,0.957,0.607,0.009
+Gln57_D,GLN,c_terminal_group,hydrogen bond / polar contact,3,"T53Q, V111C, WT",0.586,1.0,0.573,0.013
+Gln57_D,GLN,c_terminal_segment,hydrogen bond / polar contact to PA6 segment,3,"T53Q, V111C, WT",0.567,0.774,0.557,0.023
+Lys156_A,LYS,n_terminal_segment,hydrogen bond / polar contact to PA6 segment,3,"F101H, T53Q, WT",0.553,0.985,0.55,0.014
+Leu299_B,LEU,n_terminal_segment,nonpolar packing with PA6 segment,3,"F101H, V111C, WT",0.513,0.774,0.52,-0.022
+Asp59_D,ASP,n_terminal_group,salt bridge / anion-ammonium contact,1,K59D,0.937,0.937,0.914,0.017
+Arg102_D,ARG,c_terminal_group,salt bridge / cation-carboxylate contact,1,K59D,0.844,1.0,0.873,-0.024
+Glu98_D,GLU,n_terminal_group,salt bridge / anion-ammonium contact,1,WT,0.42,0.6,0.442,-0.039
+Arg103_D,ARG,c_terminal_group,salt bridge / cation-carboxylate contact,1,F101H,0.396,0.791,0.392,0.073

@@ -1,0 +1,20 @@
+{
+  "dataset_manifest": "../datasets/manifest.json",
+  "dataset": "wt_asp272_asp274",
+  "amber_home": "$AMBERHOME",
+  "cuda_engine": "$PMEMD_CUDA",
+  "output": "../runs/wt_asp272_asp274_wave2",
+  "session_prefix": "nyl12_student_asp274_wave2",
+  "replicas": [
+    {
+      "name": "replica_03",
+      "seed": 20261521,
+      "gpu": "0"
+    },
+    {
+      "name": "replica_04",
+      "seed": 20261522,
+      "gpu": "1"
+    }
+  ]
+}

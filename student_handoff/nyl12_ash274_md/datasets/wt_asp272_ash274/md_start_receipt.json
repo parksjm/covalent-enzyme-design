@@ -1,0 +1,23 @@
+{
+  "process_complete": true,
+  "restart_readable": true,
+  "coordinates_sha256": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6",
+  "restart_sha256": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6",
+  "topology_sha256": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+  "restart_stage": "unrestrained_minimized",
+  "force_convergence": "not asserted; MD preparation only",
+  "stationary_point_claim": false,
+  "source_receipt": {
+    "path": "wt_asp272_ash274/evidence/source_md_start_acceptance.json",
+    "sha256": "d36e8ddfd1c314c5089629d1253b8b88f6d14e10013d70ec91eebda4fc556952"
+  },
+  "source_receipt_absolute": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/minimization_acceptance.json",
+  "source_receipt_sha256": "d36e8ddfd1c314c5089629d1253b8b88f6d14e10013d70ec91eebda4fc556952",
+  "source_assessment": {
+    "process_complete": true,
+    "restart_readable": true,
+    "force_convergence": "not asserted; MD preparation only",
+    "restart_sha256": "e7c58599f8f47bbaa620bfa55476bdd2004e1693708eb44e5b72d321373028f6",
+    "topology_sha256": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d"
+  }
+}

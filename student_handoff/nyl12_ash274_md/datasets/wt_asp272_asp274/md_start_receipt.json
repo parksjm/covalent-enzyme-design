@@ -1,0 +1,38 @@
+{
+  "process_complete": true,
+  "restart_readable": true,
+  "coordinates_sha256": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af",
+  "restart_sha256": "745f259775b52afd3c14fb6ff44d7daf14303ff0a7191635889468bda67431af",
+  "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+  "restart_stage": "unrestrained_minimized",
+  "force_convergence": "not asserted; MD preparation only",
+  "stationary_point_claim": false,
+  "source_receipt": {
+    "path": "wt_asp272_asp274/evidence/source_md_start_acceptance.json",
+    "sha256": "a9176174a089f0e566c9dc40a125385b577377ce7d04197533fbcf61fc5aa253"
+  },
+  "source_receipt_absolute": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/01_mm_minimization/md_start_acceptance.json",
+  "source_receipt_sha256": "a9176174a089f0e566c9dc40a125385b577377ce7d04197533fbcf61fc5aa253",
+  "source_assessment": {
+    "heavy_nonbonded_contacts_below_1.6A": [],
+    "maximum_heavy_bond": [
+      1.8186578826763056,
+      11307,
+      11308,
+      16,
+      6
+    ],
+    "maximum_any_bond": [
+      1.8186578826763056,
+      11307,
+      11308,
+      16,
+      6
+    ],
+    "final_rms_gradient": 0.042036,
+    "final_max_gradient": 2.3413,
+    "gradient_converged": false,
+    "assessment": "Proceed to gentle thermal equilibration only if no sub1.2A heavy nonbonded contacts and no extreme heavy bond lengths; gradient sufficient for MD, not stationary point.",
+    "md_start_contact_gate_pass": true
+  }
+}
