@@ -1034,3 +1034,42 @@ preserving original 1e-7 Å diagnostic failures. Neither review constitutes
 force/chemical convergence. Configurations, reviews, coherent movies and
 source-hashed comparison histories are retained under
 `09_water_relay_acylation/04_neb/spacing_tests/` in the ASH274 campaign.
+
+## Exploratory pKa screens: mature/precursor NylC and mature Nyl12
+
+PROPKA 3.5.1 was applied to protein-only coordinates as a static sensitivity
+screen. For mature Nyl12, three Model30 Tier A MD frames represented geometries
+sampled under ASP272/ASP274, ASH272/ASP274 and ASP272/ASH274 assignments.
+All eight mature chains and explicit chain boundaries were retained. Protein
+hydrogens and the nonstandard PA6 ligand were omitted, and ASH heavy atoms
+were normalized to ASP for the common titratable-group model. Consequently,
+these predictions compare conformations; they do not estimate the free energies
+or populations of the original fixed-charge MD microstates. All four beta
+sites were reported, including the catalytic Thr233 free amino terminus.
+
+For NylC, we compared mature 5XYG with uncleaved 7YU0 and 7YU1 using the
+deposited sequences, without back-mutation to WT. The precursor structures
+contain H130Y/N266A/T267A and D122G/H130Y/T267C substitutions, respectively.
+Thr267 is internal in those precursor chains; its free amino terminus is
+represented only after cleavage in mature 5XYG. A malformed TER record in the
+initial mature input prevented terminal recognition. Correcting only the
+terminal record restored the Thr267 N-terminal group without changing atom
+coordinates. Only the corrected attempt3 mature results are retained for
+interpretation. Precursor results are from attempt2; its earlier mature
+values are superseded. Default and coupled-alternative crystal predictions
+were retained separately. The original Nyl12 screen did not inspect coupled
+alternatives. The pKa subset is distinct from our nine-entry structural
+Asp–Asp distance audit, which itself performed no pKa calculation.
+
+An exploratory MCCE4-Alpha/DelPhi calculation completed for mature NylC, but
+failed structural/scientific acceptance because internal coordinate gaps
+created 13 spurious terminal groups in the alpha chains. Its extreme titration
+bounds are diagnostic failures, not accepted pKas. A subsequent complete
+Nyl12 protein-only step-1 preflight retained eight chains but recognized zero
+NTR and zero CTR groups and emitted 2,840 error diagnostics. No full Nyl12
+MCCE titration was launched; no accepted precursor MCCE result was obtained.
+Original inputs, commands, hashes and explicit rejection receipts are
+preserved. Detailed results and source paths are indexed in
+`docs/propka_asp_pair_pilot_20261116.md` and the student handoff's
+`evidence/pka/source_mapping.json`. No calculation was rerun for this
+documentation consolidation.

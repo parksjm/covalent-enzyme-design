@@ -592,3 +592,16 @@ coverage 94% for the screen, 99% for reusable geometry and 96% for diagnostics
 (96% combined); Ruff passed. The negative is bounded to sampled mature-
 substrate E–S conformations; it neither excludes transient/multiple-water
 reorganization nor assigns an acid state or catalytic free-energy barrier.
+
+## pKa consolidation — 2026-11-19
+
+Corrected mature NylC PROPKA uses
+`analysis/negoro_2023_protonation/crystal_propka_20261116/attempt3/results/asp306_asp308_pka.csv`;
+precursor rows only use the attempt2 counterpart. Mature N-terminal values
+are audited in `terminal_pka_20261116/before_after.json` under the same
+analysis root. Nyl12 uses
+`qmmm/pa6_flipped_model30/09_propka_static_tier_a/screen_attempt1/catalytic_pka.csv`.
+The student `evidence/pka/source_mapping.json` records exact source hashes
+and filtered precursor rows. Manuscript pKa Methods/Results retain corrected
+values, unmodified precursor-mutation caveats and explicit MCCE rejection
+status. No new pKa calculation was performed for this consolidation.

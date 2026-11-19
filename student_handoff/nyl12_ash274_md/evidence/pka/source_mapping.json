@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/crystal_propka_20261116/attempt3/results/asp306_asp308_pka.csv",
+      "source_sha256": "967b2031683ecbd06b26e76812048bafbdc9214aa303e4fc78bda50735c2a0ee",
+      "destination": "nylc_mature_corrected_attempt3.csv",
+      "destination_sha256": "967b2031683ecbd06b26e76812048bafbdc9214aa303e4fc78bda50735c2a0ee",
+      "bytes": 283,
+      "operation": "byte_identical_copy"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/09_propka_static_tier_a/screen_attempt1/catalytic_pka.csv",
+      "source_sha256": "75e2783b95eb721915ca28df41f2f0227d5ac8df02fa1e7a7f5c3b5bff2e6294",
+      "destination": "nyl12_catalytic_pka_36_values.csv",
+      "destination_sha256": "75e2783b95eb721915ca28df41f2f0227d5ac8df02fa1e7a7f5c3b5bff2e6294",
+      "bytes": 1903,
+      "operation": "byte_identical_copy"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/terminal_pka_20261116/before_after.json",
+      "source_sha256": "f1f2216888c8aaedc9bcce6e07bd972cbda818649d38bd4eb4ba6ee68f56a4a7",
+      "destination": "terminal_before_after.json",
+      "destination_sha256": "f1f2216888c8aaedc9bcce6e07bd972cbda818649d38bd4eb4ba6ee68f56a4a7",
+      "bytes": 4305,
+      "operation": "byte_identical_copy"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/scientific_acceptance.json",
+      "source_sha256": "40dcfc6fdc170695da464845d5e889b319e894f5b47649f596edac468e8738a4",
+      "destination": "mcce_nylc_scientific_acceptance.json",
+      "destination_sha256": "40dcfc6fdc170695da464845d5e889b319e894f5b47649f596edac468e8738a4",
+      "bytes": 4741,
+      "operation": "byte_identical_copy"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/scientific_acceptance.json",
+      "source_sha256": "9ce1312599a7dc29773c1200d1e046d9862f5330c8578735e633e30f23e882a5",
+      "destination": "mcce_nyl12_preflight_scientific_acceptance.json",
+      "destination_sha256": "9ce1312599a7dc29773c1200d1e046d9862f5330c8578735e633e30f23e882a5",
+      "bytes": 4809,
+      "operation": "byte_identical_copy"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/crystal_propka_20261116/attempt2/results/asp306_asp308_pka.csv",
+      "source_sha256": "a38139d59f3b75f950b5fd588084a9696997c912773310572a05b2e188c900b9",
+      "destination": "nylc_precursor_7YU0_7YU1_attempt2.csv",
+      "destination_sha256": "9d29446984a7052c2dd95f79216fc29a6c489c0a232ae52a174edcb2f3a8f653",
+      "bytes": 531,
+      "operation": "filter_rows_only_no_recalculation",
+      "column": "structure",
+      "included_identifiers": [
+        "7YU0",
+        "7YU1"
+      ],
+      "source_rows": 24,
+      "output_rows": 16,
+      "excluded_identifiers": [
+        "5XYG"
+      ]
+    }
+  ],
+  "extraction_script_sha256": "4ea6aade6c54fe387d1c955d00da7fe3bb3df62b8b65cf1600bd033b3382f5fc",
+  "obsolete_5XYG_attempt2_rows_included": false,
+  "recalculated_pKa_values": false,
+  "source_data_modified": false,
+  "jobs_launched": false,
+  "mcce_receipt_scope": {
+    "mcce_nylc_scientific_acceptance.json": {
+      "source_status": "scientifically_rejected",
+      "accepted_pKa_result": false,
+      "scope": "Retained negative/preflight evidence only"
+    },
+    "mcce_nyl12_preflight_scientific_acceptance.json": {
+      "source_status": "scientific_acceptance_failed",
+      "accepted_pKa_result": false,
+      "scope": "Retained negative/preflight evidence only"
+    }
+  }
+}

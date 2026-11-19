@@ -1,0 +1,128 @@
+{
+  "propka_version": "3.5.1",
+  "change": "PDB-format TER records replaced four bare TER lines; coordinates and ATOM records unchanged",
+  "source_ter_fixed_input_sha256": "0aef9604c388f6eb1d75d426b9f816099fd385c54b1342ea1cb1ef3c61ea8799",
+  "pka_sha256": {
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/crystal_propka_20261116/attempt2/results/5XYG/protein.pka": "0ef09f2e7b5b26d70f8f4de5bce6d6f57e1fd2387ceef9d2951a4644e3ed14ae",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/terminal_pka_20261116/results/5XYG/protein.pka": "4cc6df78ba0f02e465c3a2dc0f91984e7555b47f2d238d000a54e7364d3afbdb",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/crystal_propka_20261116/attempt2/results/5XYG/protein_alt_state.pka": "0ef09f2e7b5b26d70f8f4de5bce6d6f57e1fd2387ceef9d2951a4644e3ed14ae",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/terminal_pka_20261116/results/5XYG/5XYG_protein_fixed_ter_alt_state.pka": "d8b58ce1b02df286c4a48840220142782de80549dd163e61b068fc62e1e0e488"
+  },
+  "comparison": {
+    "default": {
+      "N+:267:C": {
+        "before": null,
+        "after": "6.55",
+        "coupled_before": null,
+        "coupled_after": true,
+        "delta": null
+      },
+      "ASP:306:C": {
+        "before": "3.45",
+        "after": "2.19",
+        "coupled_before": false,
+        "coupled_after": false,
+        "delta": -1.26
+      },
+      "ASP:308:C": {
+        "before": "7.47",
+        "after": "6.49",
+        "coupled_before": false,
+        "coupled_after": true,
+        "delta": -0.98
+      },
+      "N+:267:D": {
+        "before": null,
+        "after": "6.35",
+        "coupled_before": null,
+        "coupled_after": true,
+        "delta": null
+      },
+      "ASP:306:D": {
+        "before": "3.41",
+        "after": "2.21",
+        "coupled_before": false,
+        "coupled_after": false,
+        "delta": -1.2
+      },
+      "ASP:308:D": {
+        "before": "6.94",
+        "after": "5.49",
+        "coupled_before": false,
+        "coupled_after": true,
+        "delta": -1.45
+      }
+    },
+    "coupled_alternative": {
+      "N+:267:C": {
+        "before": null,
+        "after": "4.59",
+        "coupled_before": null,
+        "coupled_after": true,
+        "delta": null
+      },
+      "ASP:306:C": {
+        "before": "3.45",
+        "after": "2.19",
+        "coupled_before": false,
+        "coupled_after": false,
+        "delta": -1.26
+      },
+      "ASP:308:C": {
+        "before": "7.47",
+        "after": "8.45",
+        "coupled_before": false,
+        "coupled_after": true,
+        "delta": 0.98
+      },
+      "N+:267:D": {
+        "before": null,
+        "after": "4.60",
+        "coupled_before": null,
+        "coupled_after": true,
+        "delta": null
+      },
+      "ASP:306:D": {
+        "before": "3.41",
+        "after": "2.21",
+        "coupled_before": false,
+        "coupled_after": false,
+        "delta": -1.2
+      },
+      "ASP:308:D": {
+        "before": "6.94",
+        "after": "7.24",
+        "coupled_before": false,
+        "coupled_after": true,
+        "delta": 0.3
+      }
+    }
+  },
+  "backbone_warning_audit": {
+    "before": [
+      "GLU 136 A",
+      "THR 267 C",
+      "GLY  15 B",
+      "GLY  31 B",
+      "GLY  93 B",
+      "THR 132 B",
+      "ALA 135 B",
+      "THR 267 D"
+    ],
+    "after": [
+      "GLU 136 A",
+      "GLY  15 B",
+      "GLY  31 B",
+      "GLY  93 B",
+      "THR 132 B",
+      "ALA 135 B"
+    ],
+    "target_terminal_warnings_before": [
+      "THR 267 C",
+      "THR 267 D"
+    ],
+    "target_terminal_warnings_after": []
+  },
+  "process_note": "Both PROPKA calls completed and wrote summaries. The wrapper status is 1 because its final mv expected the coupled file without PROPKA's _alt_state suffix.",
+  "interpretation": "The N+267 assignments are defensible as PROPKA terminal-group predictions: the fixed-TER parser test adds N+267 in both chains and removes the prior THR267 BBN protonation warnings. Remaining BBN warnings are for unrelated residues; they limit global-model confidence but do not involve N+267 or Asp306/308. Asp306 predictions are low in both chains. Asp308 remains state-sensitive/coupled; neither pKa establishes a protonation microstate without a justified pH and a validated method."
+}

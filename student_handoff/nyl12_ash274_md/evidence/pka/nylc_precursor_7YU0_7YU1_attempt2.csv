@@ -1,0 +1,17 @@
+structure,state,chain,residue,pka
+7YU0,default,A,306,4.92
+7YU0,default,A,308,6.37
+7YU0,default,B,306,6.34
+7YU0,default,B,308,4.18
+7YU0,coupled_alternative,A,306,6.22
+7YU0,coupled_alternative,A,308,5.07
+7YU0,coupled_alternative,B,306,4.99
+7YU0,coupled_alternative,B,308,5.53
+7YU1,default,A,306,6.36
+7YU1,default,A,308,4.24
+7YU1,default,B,306,6.39
+7YU1,default,B,308,6.53
+7YU1,coupled_alternative,A,306,5.01
+7YU1,coupled_alternative,A,308,5.59
+7YU1,coupled_alternative,B,306,6.39
+7YU1,coupled_alternative,B,308,6.53

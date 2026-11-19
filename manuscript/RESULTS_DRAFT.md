@@ -415,3 +415,53 @@ from this crystal panel. NylC Tyr146 maps to Nyl12 Phe113, while Lys189,
 Asn219, Thr267, Asp306 and Asp308 map to Lys156, Asn186, Thr233, Asp272
 and Asp274, respectively. The Tyr phenolic OH mechanism therefore cannot be
 transferred unchanged to the actual Nyl12 sequence.
+
+## Static pKa sensitivity: cleavage state and Asp-pair hypotheses
+
+The corrected NylC predictions are summarized below. Ranges span resolved
+chains, not statistical confidence intervals. Values are model predictions;
+none constitutes an experimentally determined protonation assignment.
+
+| NylC input | PROPKA output | Asp306 pKa | Asp308 pKa | Thr267 free N-terminal pKa |
+|---|---|---:|---:|---:|
+| Mature 5XYG, corrected termini | Default | 2.19–2.21 | 5.49–6.49 | 6.35–6.55 |
+| Mature 5XYG, corrected termini | Coupled alternative | 2.19–2.21 | 7.24–8.45 | 4.59–4.60 |
+| Uncleaved 7YU0 | Default | 4.92–6.34 | 4.18–6.37 | Not a free terminus |
+| Uncleaved 7YU0 | Coupled alternative | 4.99–6.22 | 5.07–5.53 | Not a free terminus |
+| Uncleaved 7YU1 | Default | 6.36–6.39 | 4.24–6.53 | Not a free terminus |
+| Uncleaved 7YU1 | Coupled alternative | 5.01–6.39 | 5.59–6.53 | Not a free terminus |
+
+The precursor structures were not back-mutated. Differences therefore combine
+cleavage state, mutations and structural environment; they cannot be attributed
+to maturation alone. The corrected mature predictions do not favor specifically
+protonated Asp306. The coupled alternative instead permits an elevated Asp308
+pKa. Its correspondence to Nyl12 Asp274 motivates a competing microstate test,
+not a transferred protonation assignment. Likewise, a relatively low mature
+NylC terminal pKa is consistent with testing a neutral N-terminal base but
+does not establish the corresponding Nyl12 state.
+
+For the substrate-facing Nyl12 beta site E, the original default predictions
+were:
+
+| MD starting geometry | Asp272 pKa | Asp274 pKa | Thr233 free N-terminal pKa |
+|---|---:|---:|---:|
+| ASP272/ASP274 replica 2, frame 284 | 1.02 | 3.44 | 9.70 |
+| ASH272/ASP274 replica 1, frame 4868 | 0.88 | 6.95 | 8.93 |
+| ASP272/ASH274 replica 1, frame 3492 | 2.37 | 5.84 | 9.62 |
+
+Across all four sites in these three snapshots, Asp272 spans 0.88–6.67,
+Asp274 0.83–7.98 and the Thr233 amino terminus 6.53–9.87. Thus neither
+specifically protonated Asp272 nor a universally neutral Nyl12 Thr233 amino
+terminus is established. The site-E terminal estimates tend toward NH3+ near
+pH 8 in an isolated-site interpretation, contrasting with mature NylC. Missing
+substrate, conformational sampling, group coupling, crystal mutations and the
+uncertain assay-temperature pH limit that comparison. No fixed protonation
+assignment was changed automatically on the basis of these screens.
+
+The MCCE results cannot resolve the uncertainty: mature NylC's apparent
+Asp pKas below 0 and terminal pKas above 14 were scientifically rejected
+because of artificial internal termini, while complete Nyl12 failed input
+preflight before titration. Treating these as a valid independent prediction
+disagreeing with PROPKA would be misleading. Current ASH274 MD comparisons
+therefore test sensitivity to an explicit hypothesis; increased geometric
+occupancy does not establish that microstate's equilibrium population.

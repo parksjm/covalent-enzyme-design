@@ -1,0 +1,9 @@
+structure,state,chain,residue,pka
+5XYG,default,C,306,2.19
+5XYG,default,C,308,6.49
+5XYG,default,D,306,2.21
+5XYG,default,D,308,5.49
+5XYG,coupled_alternative,C,306,2.19
+5XYG,coupled_alternative,C,308,8.45
+5XYG,coupled_alternative,D,306,2.21
+5XYG,coupled_alternative,D,308,7.24

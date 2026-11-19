@@ -97,6 +97,32 @@ remain unconverged with high provisional maxima. None is a verified viable
 activation barrier. These limitations do not prevent an explicitly exploratory
 E–S MD screen, but they prevent calling it TS-guided activity optimization.
 
+## pKa evidence and limits
+
+Static protein-only PROPKA screens covered mature NylC 5XYG, uncleaved
+mutant precursors 7YU0/7YU1 (not back-mutated), and three mature Nyl12
+Tier A snapshots. Corrected terminal recognition in mature 5XYG gave
+Asp306 pKa 2.19–2.21, Asp308 5.49–6.49 (default) or 7.24–8.45
+(coupled alternative), and Thr267 N-terminal pKa 6.35–6.55 or 4.59–4.60.
+These values supersede the earlier malformed-TER mature input.
+
+In Nyl12's substrate-facing site, Asp272 predictions were 0.88–2.37,
+Asp274 3.44–6.95 and Thr233 N-terminal 8.93–9.70 across the three
+snapshots. Neither protonated Asp272 nor neutral Nyl12 Thr233 is established
+by these estimates. The lack of PA6, conformation/coupling sensitivity and
+mutant precursor structures limit interpretation. A possible elevated
+Asp308/Asp274 pKa motivates testing ASH274; it does not demonstrate its
+experimental population.
+
+MCCE did not provide an accepted independent pKa result. Mature NylC's
+extreme bounds were rejected because artificial internal termini corrupted
+the input; complete Nyl12 failed terminal-recognition preflight before
+titration. Do not interpret these rejected bounds as a credible disagreement
+with PROPKA. Per-chain tables and rejection receipts are in `evidence/pka/`;
+full Methods/Results tables are in the current repository manuscript.
+The first handoff archives predate this documentation addition; obtain the
+current repository documents/evidence alongside those frozen data archives.
+
 ## Interpretation and proposed next study
 
 The defensible hypothesis is that local protonation influences the accessible

@@ -1,4 +1,4 @@
-# Static PROPKA screen of the Nyl12 Asp pair
+# Static pKa screens of Nyl12 and mature/precursor NylC
 
 Status: exploratory, 2026-11-16. PROPKA 3.5.1 was already available in
 `/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis`; no dependency was
@@ -71,3 +71,32 @@ relay by analogy with BapA; that does not independently establish the
 Asp306 microstate. Our audit of all their Table 1 deposited structures
 found closest Asp306/Asp308 O–O distances of 3.58–4.17 Å, without a
 short direct Asp–Asp hydrogen bond. See `docs/negoro_2023_mechanism_audit.md`.
+
+## Consolidated documentation and corrected crystal comparison (2026-11-19)
+
+The manuscript Methods and Results now consolidate both the Nyl12 screen
+and the corrected mature/uncleaved NylC comparison, including tables.
+NylC 7YU0/7YU1 retain their deposited maturation-blocking mutations; they
+were not back-mutated to WT. Cleavage effects are therefore confounded by
+sequence and conformation.
+
+Use mature 5XYG values only from
+`analysis/negoro_2023_protonation/crystal_propka_20261116/attempt3/results/asp306_asp308_pka.csv`.
+The TER-correction audit, including N-terminal predictions, is
+`analysis/negoro_2023_protonation/terminal_pka_20261116/before_after.json`.
+Precursor 7YU0/7YU1 values are in the attempt2 table; **exclude its superseded
+5XYG rows**. The student `evidence/pka/` copies provide that filtered
+comparison and full Nyl12 table with source hashes.
+
+Mature 5XYG: Asp306 2.19–2.21; Asp308 5.49–6.49 default or 7.24–8.45
+coupled alternative; Thr267 N terminus 6.35–6.55 default or 4.59–4.60
+alternative. Precursor predictions are chain/coupling dependent. These are
+static protein-only predictions, not protonation measurements.
+
+The mature NylC MCCE4 result was rejected because internal missing-coordinate
+boundaries generated artificial termini. Its apparent Asp <0/N-terminal >14
+bounds must not be treated as accepted evidence. Complete Nyl12 MCCE step 1
+also failed (zero NTR/CTR groups; 2,840 diagnostics); no full Nyl12 titration
+was run. Rejection receipts are preserved under
+`analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/` and
+`analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/`.

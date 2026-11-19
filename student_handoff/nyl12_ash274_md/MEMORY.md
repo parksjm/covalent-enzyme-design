@@ -32,3 +32,13 @@
   TI1 or verified realistic TS has been established by the current QM/MM work.
 - Record every action, exact source/version/hash, microstate, seeds, restraints,
   process completion and scientific acceptance. Never silently fix failed input.
+
+## pKa documentation addition — 2026-11-19
+
+Read `docs/propka_asp_pair_pilot_20261116.md` and the manuscript pKa sections
+in the current project checkout. Corrected mature NylC, deposited uncleaved
+mutant controls and mature Nyl12 were screened with PROPKA; none determines
+a unique experimental Asp-pair/Thr-N microstate. MCCE results are rejected
+or input-preflight failures, not accepted independent pKas. Compact tables
+and rejection receipts are in `evidence/pka/`. The original data archives
+remain immutable and predate this addition; use current Git documents/evidence.

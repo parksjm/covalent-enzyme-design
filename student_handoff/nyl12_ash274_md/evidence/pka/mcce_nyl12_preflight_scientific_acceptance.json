@@ -1,0 +1,148 @@
+{
+  "status": "scientific_acceptance_failed",
+  "snapshot": {
+    "case": "neutral_replica_02",
+    "state": "ASP272_ASP274",
+    "replica": 2,
+    "frame": 284,
+    "time_ps": 3340.0,
+    "tier": "A",
+    "protein_only": true,
+    "excluded_ligand": "PA6 substrate; not present or added"
+  },
+  "source": {
+    "path": "qmmm/pa6_flipped_model30/09_propka_static_tier_a/screen_attempt1/neutral_replica_02/protein.pdb",
+    "sha256": "0070f094c4f3a84e3394f9b35af9ab774b4dcc578600cc82245ce4aacb095786"
+  },
+  "input_normalization": {
+    "removed_only_terminal_OXT_records": 8,
+    "details_path": "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/normalization.json",
+    "no_protonation_state_changes": true
+  },
+  "mcce": {
+    "repository": "MCCE4-Alpha",
+    "commit": "08066fd303647a1287296bfae702bf4291e3baab",
+    "python": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+    "entrypoint": "step1.py only",
+    "dielectric": 4.0,
+    "dry": true,
+    "exit_code": 0,
+    "steps_2_to_4_invoked": false,
+    "step1_log_reports_skipped_steps_2_to_4": true
+  },
+  "chain_acceptance": {
+    "expected_chain_count": 8,
+    "observed_chain_count": 8,
+    "expected_ranges": {
+      "A": {
+        "first": 1,
+        "last": 232,
+        "residues": 232
+      },
+      "B": {
+        "first": 1,
+        "last": 232,
+        "residues": 232
+      },
+      "C": {
+        "first": 1,
+        "last": 232,
+        "residues": 232
+      },
+      "D": {
+        "first": 1,
+        "last": 232,
+        "residues": 232
+      },
+      "E": {
+        "first": 1,
+        "last": 96,
+        "residues": 96
+      },
+      "F": {
+        "first": 1,
+        "last": 96,
+        "residues": 96
+      },
+      "G": {
+        "first": 1,
+        "last": 96,
+        "residues": 96
+      },
+      "H": {
+        "first": 1,
+        "last": 96,
+        "residues": 96
+      }
+    },
+    "observed": {
+      "A": {
+        "residue_count": 232,
+        "first": 1,
+        "last": 232
+      },
+      "B": {
+        "residue_count": 232,
+        "first": 1,
+        "last": 232
+      },
+      "C": {
+        "residue_count": 232,
+        "first": 1,
+        "last": 232
+      },
+      "D": {
+        "residue_count": 232,
+        "first": 1,
+        "last": 232
+      },
+      "E": {
+        "residue_count": 96,
+        "first": 1,
+        "last": 96
+      },
+      "F": {
+        "residue_count": 96,
+        "first": 1,
+        "last": 96
+      },
+      "G": {
+        "residue_count": 96,
+        "first": 1,
+        "last": 96
+      },
+      "H": {
+        "residue_count": 96,
+        "first": 1,
+        "last": 96
+      }
+    },
+    "passed": true
+  },
+  "terminus_acceptance": {
+    "expected_NTR": 8,
+    "observed_NTR": 0,
+    "expected_CTR": 8,
+    "observed_CTR": 0,
+    "step1_label_messages": [],
+    "passed": false,
+    "diagnosis": "MCCE4-Alpha lib/premcce.c premcce_terminals compares every N atom with all C atoms and every C atom with all N atoms using a global 3.0 A cutoff; this snapshot produced zero NTR/CTR labels."
+  },
+  "process_acceptance": {
+    "step1_exit_zero": true,
+    "step1_output_exists": true,
+    "nonfatal_error_diagnostic_count": 2840,
+    "note": "Step1 returned success despite numerous atom-placement/torsion diagnostics; this does not constitute parameter-quality acceptance."
+  },
+  "decision": "Do not launch full pKa steps until correct terminal labeling has been resolved and preflight is accepted.",
+  "artifact_sha256": {
+    "qmmm/pa6_flipped_model30/09_propka_static_tier_a/screen_attempt1/neutral_replica_02/protein.pdb": "0070f094c4f3a84e3394f9b35af9ab774b4dcc578600cc82245ce4aacb095786",
+    "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/protein.pdb": "2022b975ad4c0c1f8c03f0c18f53bf266ff87f13e0e0f2b3357f2e1383c3469c",
+    "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/normalization.json": "5c26a707673f7f3cb617dfe580d74be4282939d81e497b320519caac08fbee79",
+    "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/step1_out.pdb": "acc9951f746e307923a8669bd5c3f2885413f5771b49beac3595eabedaad7003",
+    "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/step1.log": "aad6b2e019b571a2558827d83889b6a0cb16c90d0dc009177b7e53d9e858d263",
+    "analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/run_step1.sh": "dafc9bfb0e616da40299ae6fbabdf0aca8859fb93438ed4e72e49355963161f3",
+    "/tmp/mcce4-alpha-inspect.uRXJg2/MCCE4-Alpha/bin/step1.py": "591dbdd4ae727b160d7f138fad7468715930d08c24cf28ccc074bd412e476baa",
+    "/tmp/mcce4-alpha-inspect.uRXJg2/MCCE4-Alpha/lib/premcce.c": "1301794f5c63887de4d490d377e4c09482271e1fe90f8dcc07ea4b24ae50e1cd"
+  }
+}

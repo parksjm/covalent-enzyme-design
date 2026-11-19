@@ -1,0 +1,197 @@
+{
+  "state": "scientifically_rejected",
+  "criteria": {
+    "all_three_structures_completed_steps_1_to_4": false,
+    "5XYG_step1_completed": true,
+    "5XYG_step2_completed": true,
+    "5XYG_step3_completed": true,
+    "5XYG_step4_completed": true,
+    "target_Asp306_and_Asp308_sites_present_in_MCCE_outputs": true,
+    "pKout_fits_finite_and_inside_simulated_pH_range": false,
+    "chain_breaks_and_terminal_protonation_scientifically_validated": false,
+    "scientific_acceptance": "rejected; setup sensitivity unresolved"
+  },
+  "results": [
+    {
+      "site": "Asp306",
+      "chain": "C",
+      "pK.out": "<0.0",
+      "charge_by_pH": [
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    },
+    {
+      "site": "Asp308",
+      "chain": "C",
+      "pK.out": "<0.0",
+      "charge_by_pH": [
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    },
+    {
+      "site": "Asp306",
+      "chain": "D",
+      "pK.out": "<0.0",
+      "charge_by_pH": [
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    },
+    {
+      "site": "Asp308",
+      "chain": "D",
+      "pK.out": "<0.0",
+      "charge_by_pH": [
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00",
+        "-1.00"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    },
+    {
+      "site": "Thr267_NTR",
+      "chain": "C",
+      "pK.out": ">14.0",
+      "charge_by_pH": [
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "0.99",
+        "0.97"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    },
+    {
+      "site": "Thr267_NTR",
+      "chain": "D",
+      "pK.out": ">14.0",
+      "charge_by_pH": [
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "1.00",
+        "0.99",
+        "0.97",
+        "0.88"
+      ],
+      "fit_quality": "No in-range slope/chi-square; saturated curve."
+    }
+  ],
+  "accepted": false,
+  "completed": true,
+  "decision": "Do not accept the 5XYG MCCE values as interpretable site pKas; preserve only as a diagnostic result.",
+  "completed_utc": "2026-11-16T18:26:18Z",
+  "method_audit": {
+    "solver": "DELPHI",
+    "protein_dielectric": 4.0,
+    "solvent_dielectric": 80.0,
+    "salt_molar": 0.15,
+    "titration_pH": "0\u201314, 1-unit spacing",
+    "monte_carlo_runs": 6,
+    "iterations_per_run": 2000,
+    "step4_success_log": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/runs/5XYG/logs/step4.log",
+    "maximum_occupancy_stdev_by_pH": "0.016\u20130.028"
+  },
+  "input_artifacts": {
+    "protein_only": true,
+    "explicit_waters_or_ligand_included": false,
+    "SEQRES_A_B_length": 355,
+    "MCCE_A_B_terminal_group_count": 13,
+    "MCCE_A_B_terminal_groups": [
+      "NTR+A0019_",
+      "CTR-A0128_",
+      "NTR+A0136_",
+      "CTR-A0259_",
+      "NTR+B0003_",
+      "CTR-B0012_",
+      "CTR-B0028_",
+      "CTR-B0091_",
+      "CTR-B0129_",
+      "NTR+B0132_",
+      "CTR-B0133_",
+      "NTR+B0135_",
+      "CTR-B0260_"
+    ],
+    "intended_beta_terminals_recognized": [
+      "NTR+C0267_",
+      "CTR-C0355_",
+      "NTR+D0267_",
+      "CTR-D0355_"
+    ],
+    "assessment": "Multiple NTR/CTR groups were assigned at internal coordinate-fragment boundaries of the mature alpha-chain structure. These artificial charged termini can strongly perturb the Asp306/Asp308 and beta N-terminal electrostatics; the saturated out-of-range fits are therefore scientifically rejected/unresolved."
+  }
+}
