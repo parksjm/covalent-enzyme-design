@@ -1,0 +1,735 @@
+{
+  "scope": "READ-ONLY proposed explicit source/config allowlist. Root alone stages/commits/pushes. No broad qmmm/analysis/model/artifact Git adds.",
+  "entries": [
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/diagnostic_activation_release/audit_proton_inventory.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 3853,
+      "sha256": "0b4899e40aa51f31686d4c8a7674fc8865c56515a82dbc9d37c2da099ab4f4a6",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/diagnostic_activation_release/run.sh",
+      "category": "backlogged_scientific_source",
+      "bytes": 79,
+      "sha256": "8b69f3589695d42ff4e1105089c5f5bd53b57e4ae630f795075b83a52a7622b9",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/diagnostic_activation_release/run_release.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 4502,
+      "sha256": "39619133fedbf19aca24cced919214546c4b9e1797970da3e4252f1b357d1e5d",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/d_reference/run_reference.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 10539,
+      "sha256": "f0073d5c3aaba6e981e29f4954563fc3f99f6e102abe7e2fe4708231cc17f8a7",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/d_reference/select_gradients.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 5948,
+      "sha256": "a9ac25ee416987e8b527565309169a968af250be326a1f0216d17ef4c7c07e9c",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/endpoint_audit/audit_endpoints.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11859,
+      "sha256": "4421125a4d31ed630e10daab75983660cbc2467655d5fb7194ea67a030f025df",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/endpoint_audit/audit_supplement.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 3795,
+      "sha256": "5bb392f51b50fc3c5ca303a8cab2d286ee43f59937129d6e96640ffad4ff7c9b",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/export_support.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 7893,
+      "sha256": "1d3d8236ba808e7b8f4c7be129046cc1a7ce8cc400adb0fc5ccf484a8ca440d1",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/line_search_diagnosis/analyze_retained.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 9551,
+      "sha256": "3939c4ca3b43c895e9516107d7936ed84e3cfdd542b438e4464334a0f98c7cee",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/line_search_diagnosis/cutoff_pairs.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 3513,
+      "sha256": "22f693f9a8e8b91ac4c357b908fe0e501c5a8f8f4436e547dba6c621ca6b28e5",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/line_search_diagnosis/pair_energy.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 4074,
+      "sha256": "eb67dd3363288f2a9b9a5a87dcf1cc9fc9370621a8413c32a0b54900277c1bbc",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/monitor_progress.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 7177,
+      "sha256": "f75d331fb8e85dd3dea1bef01cfd3aa1faf5f3f2a6b03b1ad0e7f6f1d31599f0",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/monitor_release.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 8802,
+      "sha256": "dc89e8cf2c613a6f1c938266bef02ad186278a0e9c9a04be5f47b074d58eeb8e",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/release_endpoint.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 8291,
+      "sha256": "b8285c5a3746204250aebc0b441a424b90b4dc75256692492afcbc1f6fa8be59",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/resume_pilot.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11089,
+      "sha256": "690d1904db7f4caf5551209cd678f0b57a34b54c17d8fa9e77c626e68300c9ef",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/run_pilot.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11367,
+      "sha256": "7a49c082aa5262814474f0501c6ea12a3cc50f78ae616830e2554ebe2a59da85",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/runtime_support.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11515,
+      "sha256": "ede553dc918a9f3164e6f55130cb737b5ac4a51c828e59564d7687a7976a8008",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/verify_callback.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 6763,
+      "sha256": "8d0ea5da75892ab74e6745112b0e1ae2b28abc6085d355c951a8aaa12a2e259b",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_coordinate_preflight/preflight_native.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 6864,
+      "sha256": "d845a6f59702981628d498d719d491107f25a1d50ba3bc084c4ed75f8859c56b",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/prepare_grid.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 13115,
+      "sha256": "e78ae4f3b9364a72246452cd43c3c917cd164885a20ba968dc1606d74da70d0e",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/proton_occupancy_audit/analyze_initial_residue_labels.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 12883,
+      "sha256": "22c5d8d1a3e69df9a893ae196ee89922a04720f69df9a0f82f01f9d8a94f6d65",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/proton_occupancy_audit/analyze_occupancy.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 13237,
+      "sha256": "d9ac9d46cb4fc153d3d79e2b96878846d588243cbcb1934d3b253b43274c8710",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/proton_occupancy_audit/test_occupancy.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 1276,
+      "sha256": "051e26183d1964b8ce57cdcf02021583fd49fa222984ea13437a74be5b1b8f8a",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/queue_candidate_releases.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 3631,
+      "sha256": "a503697e894a236834f03d0e4342ffa7e1d336bd49d43cbe24870e4b30c509d4",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/continue_references.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 7099,
+      "sha256": "9069a8e86339fc3952fd729461c1acd0c8fb8856694df54b966b94ba2acd9c40",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/gradient_analysis/analyze.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11114,
+      "sha256": "bc134b66417602b012f36a4dff7ee487b8220e5d6d375c075cee2e4ff8f48ece",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/gradient_analysis/plot.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 1799,
+      "sha256": "6305c01152679d5f3e5bfb70e4978a87ab7d79e8997918f890e611dd947f0dd9",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/gradient_analysis/test_analysis.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 1775,
+      "sha256": "8fe96f8bad6d2ae840afe799b2176c6b68051514b0c0b1132905d4500e1423dd",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/gradient_analysis/verify_embedding.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 2658,
+      "sha256": "21dc593c50a095798325021525f8f958fd3ca429452d838307f79b0099f82738",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/queue_consumer.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 8392,
+      "sha256": "635b7534d9c2e4bf797fe5934ac8b63a07fff546a947198846d1ed9f5a666f09",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/reference_calculators.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 7072,
+      "sha256": "71d4bbec4e77f7c011e5d18155e3493f42ef7390d79b8255a52d4bf161282d9b",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/reference_common.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 1887,
+      "sha256": "46181d386872dfe97675d45a738229428e7ea911e97b1954cd7888a870088327",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/reference_embedding.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 6245,
+      "sha256": "dcb9ecb4d46b2d17bca7102351de084c08ad17ce49c90264a1b3d3b3d9f74516",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/reference_gaussian.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 3869,
+      "sha256": "d76159ef2fb99b108301189f00736ce070b39613eabe71f156bfae2304cbc750",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/reference_checks/run_reference_queue.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 11300,
+      "sha256": "d88cb5d8a0b49716c33754d04bd6a0951906e4a8dc392a59c41c62d09698e199",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/release_execution.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 12479,
+      "sha256": "e1879c53b27591e1ca0286526a7e0232e9cef672f955f18f12b19b17ddc4d09f",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/release_queue_support.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 10953,
+      "sha256": "2724182420740fcbb95a754f270b14790b89aac8c9d60b65dda845c549aaa213",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/run_row.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 15074,
+      "sha256": "02c28a4e47f2a54cec0c527aa5401d24afb21bad4c0c829c559348e3b3e82a0e",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/test_release_queue_support.py",
+      "category": "backlogged_scientific_source",
+      "bytes": 4186,
+      "sha256": "5a549579f08f95d2572264089afc86157fb74cf3283b4fc3fbd571995b08d9ff",
+      "reason": "Canonical grid, occupancy/release/reference or diagnostic source supporting manuscript claims and backlogged tests."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/controls_config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 7161,
+      "sha256": "eee7c2d8effbdeb8511ce20e6635e7bb35ccaefbf6aa36bf73c3edbf6c285414",
+      "reason": "Explicit current chemistry, input/mapping/method or source trajectory configuration; references large external artifacts but does not embed them."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/primary_config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 4345,
+      "sha256": "5ac18b5ead77e2293ba62f8ede099a4223036790279b701b1a6a5424a162ac63",
+      "reason": "Explicit current chemistry, input/mapping/method or source trajectory configuration; references large external artifacts but does not embed them."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/calculation/minimize.mdin",
+      "category": "curated_small_scientific_config",
+      "bytes": 4992,
+      "sha256": "5c0e0daa322c52bbb089d05a52b6ff4d7ff1ee854eaa9f3c67d1a82b3a1891a0",
+      "reason": "Explicit current chemistry, input/mapping/method or source trajectory configuration; references large external artifacts but does not embed them."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 69168,
+      "sha256": "6b6b64d4555f6c43edcce92bf597809b838e5aef071bf2cf9b89a0e06f41a0b9",
+      "reason": "Explicit current chemistry, input/mapping/method or source trajectory configuration; references large external artifacts but does not embed them."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/01_uniform_24_lbfgs/calculation/minimize.mdin",
+      "category": "curated_small_scientific_config",
+      "bytes": 5187,
+      "sha256": "9aa6e97b3b09d303efd4273d71f8076e75d59ef575ba51acf2a68059d12e80d6",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/01_uniform_24_lbfgs/config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 72101,
+      "sha256": "248d8f808ec72598b63a9df24d2781bc263ecd0d34072da3372651c0f5a7deac",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/02_uniform_48_lbfgs/calculation/minimize.mdin",
+      "category": "curated_small_scientific_config",
+      "bytes": 5187,
+      "sha256": "b262cd2b4bd41d3679faedd48e317d26043b4ec090b48b70ad1a3cd5e9ca5ef7",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/02_uniform_48_lbfgs/config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 72354,
+      "sha256": "284e50cbff16df43196bc14c5a5339d622d7c996140df5c6db88d14dd191e0c6",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/03_adaptive_24_lbfgs/calculation/minimize.mdin",
+      "category": "curated_small_scientific_config",
+      "bytes": 5200,
+      "sha256": "ae805b7fc8fd679fdf7ac647beeb2fdb60d9173cfb04c7dfa2c72732fe5020b4",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/03_adaptive_24_lbfgs/config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 72122,
+      "sha256": "0cf8d97210cf970329190eeb564f10a22fce2408a46262b65f715b168c59a339",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/04_uniform_24_cg/calculation/minimize.mdin",
+      "category": "curated_small_scientific_config",
+      "bytes": 5182,
+      "sha256": "c635fd52e44f9edf218bbc7b933fd49388bcf733e9b6ff5a7f53be0679c57eaf",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/04_uniform_24_cg/config.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 72089,
+      "sha256": "6c6452ff03f2857fd64ed9344ec4f7b9e0a11040fcaadfd44766f12ba6fd1a66",
+      "reason": "Current bounded spacing/optimizer trial configuration/input; generator source also allowlisted. Exclude this trial full inputs, history, status and progress trees."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/case.json",
+      "category": "curated_small_scientific_config",
+      "bytes": 54524,
+      "sha256": "85f7cf603bbc5e6e8909e8a76f3a7d573cd31283a5a340ede8fed5781c6da121",
+      "reason": "Explicit current chemistry, input/mapping/method or source trajectory configuration; references large external artifacts but does not embed them."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/run_diagnostics_after_controls.py",
+      "category": "current_relay_neb_source",
+      "bytes": 1252,
+      "sha256": "2fc9fb3b9798fe14df24c3cfa06d748702561cfe990087180021cd2751ff4679",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/construction_diagnostic.py",
+      "category": "current_relay_neb_source",
+      "bytes": 4627,
+      "sha256": "7f293716865c0e9084f7a6a23a9c075fe2d96c516bc26f97d29ce4a18b2db322",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/construction_diagnostic_retry.py",
+      "category": "current_relay_neb_source",
+      "bytes": 4657,
+      "sha256": "84cc013d71682a94bc7e2c9df18ac3f334b0e40a80f414af95d2e39d6dd7e09e",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/construction_diagnostic_retry2.py",
+      "category": "current_relay_neb_source",
+      "bytes": 4705,
+      "sha256": "be15af23d8ab3f0dc084360e15b3db6a2a5ee75d43bf6cb01d2ef3af04a3d4a0",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/recipe_reproduction/reproduce.py",
+      "category": "current_relay_neb_source",
+      "bytes": 3850,
+      "sha256": "f9dc01ff0f1eb50ed39d3b1601a1b518adc6169b8df9990d08cf3bb1f01f02c0",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/search_acyl_torsion.py",
+      "category": "current_relay_neb_source",
+      "bytes": 6972,
+      "sha256": "2d189a49a0595d3a0f52ec28226833c3d3b3c5b71ef0724c1fe2ddf77dff03aa",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/01_endpoint_inputs/search_construction.py",
+      "category": "current_relay_neb_source",
+      "bytes": 4547,
+      "sha256": "1bf8e4131402c703e4983ddb2ef937db25dad8fa4679d82bb0ffa96c12833098",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/launch.sh",
+      "category": "current_relay_neb_source",
+      "bytes": 4181,
+      "sha256": "1286188825137de8d6998b6f049eef66d2bc094a67ad9e9df10665a0e3e884b3",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/plots/extract_recent_band_diagnosis.py",
+      "category": "current_relay_neb_source",
+      "bytes": 4139,
+      "sha256": "3f730071fd9dfdc0dcc9a957d1ce5b3ec4509772776976d2addcf308bd216c72",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/plots/plot_energy_evolution.py",
+      "category": "current_relay_neb_source",
+      "bytes": 9841,
+      "sha256": "017e3f157d7b9945a0f6ce62e8c6ef7a4ce6c1fe1cacf81c31fa1736dfad4072",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/plots/run.sh",
+      "category": "current_relay_neb_source",
+      "bytes": 257,
+      "sha256": "b2cdab677f45bca65248dbb4502b479401b1a2acd23f799eb1dfd20bee6ae0bb",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/launch_progress.sh",
+      "category": "current_relay_neb_source",
+      "bytes": 1293,
+      "sha256": "b1f787101e842336d52ba005444be6fffba1e5e25cdc7a22f8d10e9763f044a2",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/prepare_trials.py",
+      "category": "current_relay_neb_source",
+      "bytes": 7475,
+      "sha256": "3de1bef8f9b5000644ead4f7ac4e45995e0527c357573bb8c959f03d9d7396c9",
+      "reason": "Canonical relay/acyl preparation, launch, diagnosis or plotting source; retain as code, not adjacent run artifacts."
+    },
+    {
+      "path": "qmmm/benchmarks/01_small_model_proton_transfer/source/analyze_benchmark.py",
+      "category": "external_test_import_source",
+      "bytes": 7392,
+      "sha256": "9c100ff3cfd63df4b962504115e40826570f8b122692bea9e1feb922fd8c8fff",
+      "reason": "Dynamically imported benchmark generator/analyzer in tests/test_proton_transfer_benchmark_setup.py or test_proton_transfer_barrier_benchmark.py; retain only source, never Gaussian/DFTB results."
+    },
+    {
+      "path": "qmmm/benchmarks/01_small_model_proton_transfer/source/generate_benchmark.py",
+      "category": "external_test_import_source",
+      "bytes": 10775,
+      "sha256": "39ead0f9337e0e17668b32a955922ec241687bae57996af7c0298c7ca021a983",
+      "reason": "Dynamically imported benchmark generator/analyzer in tests/test_proton_transfer_benchmark_setup.py or test_proton_transfer_barrier_benchmark.py; retain only source, never Gaussian/DFTB results."
+    },
+    {
+      "path": "qmmm/benchmarks/02_small_model_intrinsic_barriers/source/analyze_barrier_benchmark.py",
+      "category": "external_test_import_source",
+      "bytes": 9741,
+      "sha256": "048f5128267b7c3a2c62630e1577d0068586dd2d4555778464426f4bf0ec9893",
+      "reason": "Dynamically imported benchmark generator/analyzer in tests/test_proton_transfer_benchmark_setup.py or test_proton_transfer_barrier_benchmark.py; retain only source, never Gaussian/DFTB results."
+    },
+    {
+      "path": "qmmm/benchmarks/02_small_model_intrinsic_barriers/source/prepare_approximate_inputs.py",
+      "category": "external_test_import_source",
+      "bytes": 4351,
+      "sha256": "d911bc4879ff6fbcd1766df7878d3348fa4a3d2a02ee04a8b038617b7a13f2b6",
+      "reason": "Dynamically imported benchmark generator/analyzer in tests/test_proton_transfer_benchmark_setup.py or test_proton_transfer_barrier_benchmark.py; retain only source, never Gaussian/DFTB results."
+    },
+    {
+      "path": "qmmm/benchmarks/02_small_model_intrinsic_barriers/source/prepare_barrier_benchmark.py",
+      "category": "external_test_import_source",
+      "bytes": 7961,
+      "sha256": "aa2d7a7e55e02bee0d11180ffcc307a00665c4a055752d4fb127dc714e7aaac4",
+      "reason": "Dynamically imported benchmark generator/analyzer in tests/test_proton_transfer_benchmark_setup.py or test_proton_transfer_barrier_benchmark.py; retain only source, never Gaussian/DFTB results."
+    },
+    {
+      "path": "provenance/asp272_relay_20261025/run_relay_warning_only.py",
+      "category": "external_test_source_or_template",
+      "bytes": 13857,
+      "sha256": "aabda99208405f3850eacce8ed7e6d708416456aad67b2395aeaa5d69b67eac1",
+      "reason": "Dynamically imported by tests/test_relay_warning_only.py; outsideqmmm but essential to clean test collection."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/calculation/dimer.mdin",
+      "category": "external_test_source_or_template",
+      "bytes": 2617,
+      "sha256": "a58a13f4ffaf814a99e1392af16b158dc0d78124d2a34b846051723e0fd50046",
+      "reason": "Read directly by tests/test_native_irc_driver.py as a small native-input regression template."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb_prepare.py",
+      "category": "external_test_source_or_template",
+      "bytes": 22443,
+      "sha256": "23bb854865a228c4500bdfe245f657d2a3c2331beb87b6a2129fb8fbed65e782",
+      "reason": "Imported by tests/test_neb_seed_resampling.py; canonical resampling source outside07comparison."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/05_selected_mm/replica_1_tier_A/prepare_ash274_mm.py",
+      "category": "historical_preparation_source",
+      "bytes": 14516,
+      "sha256": "6536c7700adfc2ab9e75440166a51f128840a3c728d6a1e140eabf8e4df89124",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/05_selected_mm/replica_1_tier_A/run.sh",
+      "category": "historical_preparation_source",
+      "bytes": 423,
+      "sha256": "9a811f270739a6a0b302140a7c3023685f3fb1f28d6029ed2e281c720320eb5c",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/assess_partial.py",
+      "category": "historical_preparation_source",
+      "bytes": 6731,
+      "sha256": "4f559ee30067b6311c7a20655f2b383b2b67dda2aae789c79e93d70d52294ed5",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/audit_shell.py",
+      "category": "historical_preparation_source",
+      "bytes": 6670,
+      "sha256": "ccbb38bff9be9c40d8cce8a07067dc09b39305171b3a5337ccb4d0a4431bf90b",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/audit_water_1576_full_hbonds.py",
+      "category": "historical_preparation_source",
+      "bytes": 6103,
+      "sha256": "a5419d2896175a3e53142c55d996231d2a05574755d0a5ad8713687f52cdaf6a",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/prepare_and_run_ash274_qmmm.py",
+      "category": "historical_preparation_source",
+      "bytes": 23249,
+      "sha256": "35524132abd6840504b66d76f776a4c1ad9ec2a9cae3fef1491e605200c2f347",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/record_water_geometry.py",
+      "category": "historical_preparation_source",
+      "bytes": 4087,
+      "sha256": "0d0cbb6edf66c16c3d648643dae4ed45adfcabd3b393538f586eccb0221d53ee",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/run.sh",
+      "category": "historical_preparation_source",
+      "bytes": 433,
+      "sha256": "81a034238c66b920dcb7bd647867ca297ef546c6d6f65fdaea162eb33cd6aa99",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/prepare_and_run_ash274_qmmm.py",
+      "category": "historical_preparation_source",
+      "bytes": 21494,
+      "sha256": "8b91896e123c26471891436372927e3b8ce691dc1a97e2b47defb9f6d895a47a",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/reassess_existing.py",
+      "category": "historical_preparation_source",
+      "bytes": 2544,
+      "sha256": "9e13844b365ef3b538953fe1044bbc214fe5d4eb8b991a1808ec218a4b7183d4",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/run.sh",
+      "category": "historical_preparation_source",
+      "bytes": 433,
+      "sha256": "81a034238c66b920dcb7bd647867ca297ef546c6d6f65fdaea162eb33cd6aa99",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/assess_water_qm_endpoint.py",
+      "category": "historical_preparation_source",
+      "bytes": 4352,
+      "sha256": "106a873586295a15d5c0eec78cff75f3529207ee372c3266fa1459327268f7c3",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/audit_water_1576_full_hbonds.py",
+      "category": "historical_preparation_source",
+      "bytes": 6095,
+      "sha256": "d9130d820aeddce4e8c0a34ab27e803ccba809439cbf9370a1d07b58b1de6c34",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/audit_water_qm_shell.py",
+      "category": "historical_preparation_source",
+      "bytes": 4540,
+      "sha256": "f4d1e3a0d9f7e0cd9199b3662cfea78f7a5db585eae586cfaeb0d9577d6a1e69",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/prepare_and_run_water_qm_qmmm.py",
+      "category": "historical_preparation_source",
+      "bytes": 24844,
+      "sha256": "0f61d96f0e345447c20e7390ddb8c921ed2188ee707e3df9e81e035b721f6f2e",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/run.sh",
+      "category": "historical_preparation_source",
+      "bytes": 586,
+      "sha256": "949bd0109f489a1df7195573040698b348246f56a41094099aa827616e60be0b",
+      "reason": "Canonical prepared-state provenance/reproduction source underlying the current relay system; optional if committing only runtime minimum."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/scientific_acceptance.json",
+      "category": "mandatory_runtime_config",
+      "bytes": 10910,
+      "sha256": "a47a078c02935d75a216f8ca8f35222564b180f011ac5f44f0c29f4b47de1c66",
+      "reason": "Case load_case requires this compact validated force calibration; preserve calibration evidence, never the referenced native binaries/large outputs."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/preparation.json",
+      "category": "mandatory_runtime_config",
+      "bytes": 10277,
+      "sha256": "1cb0f1f130b27ec2a6495c61891b533c5cb8bf2751ddbd0c54aca8a68bb79223",
+      "reason": "Both relay_progress.verify_mapping and07/export_water_path.export load qm_region.mask from this exact10KB JSON at runtime; .py-only commit omits a required input."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/export_water_path.py",
+      "category": "runtime_or_test_import_source",
+      "bytes": 9818,
+      "sha256": "5d567cf3d8129663f35643743284b38c55e7d644dacc032478b2d1b45e32db84",
+      "reason": "Legacy water-path code directly imported by current relay exporters/tests; local module dependency closure."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/prepare_water_to_asp272_path.py",
+      "category": "runtime_or_test_import_source",
+      "bytes": 17621,
+      "sha256": "21e50d4fb36a99d25ff0bc798f7866801c42ce3d3603857888f2e2859671d335",
+      "reason": "Legacy water-path code directly imported by current relay exporters/tests; local module dependency closure."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/run_water_to_asp272_path.py",
+      "category": "runtime_or_test_import_source",
+      "bytes": 33527,
+      "sha256": "bdc190ff923e02321aa65f7cfebc645a2aff7deac60cf528f27e782ba8829f17",
+      "reason": "Legacy water-path code directly imported by current relay exporters/tests; local module dependency closure."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/water_path_vmd_support.py",
+      "category": "runtime_or_test_import_source",
+      "bytes": 9405,
+      "sha256": "f8ab0af242a92c17d146b7fc99fbe4c27befd94bde9d4d430ff3946de3c5d159",
+      "reason": "Legacy water-path code directly imported by current relay exporters/tests; local module dependency closure."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/README.md",
+      "category": "workflow_documentation",
+      "bytes": 5806,
+      "sha256": "ed02609d9a18b7e30a47e08e7b15be6621efc3589127dc3968df55568426614d",
+      "reason": "Established scientific workflow/gates and bounded trial definitions; not generated status."
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/spacing_tests/README.md",
+      "category": "workflow_documentation",
+      "bytes": 4124,
+      "sha256": "a739ded950d03138ced78d872ffb2910115f5c1aa6c06fdefedc153eaea92389",
+      "reason": "Established scientific workflow/gates and bounded trial definitions; not generated status."
+    }
+  ],
+  "counts_by_category": {
+    "backlogged_scientific_source": 39,
+    "historical_preparation_source": 16,
+    "runtime_or_test_import_source": 4,
+    "current_relay_neb_source": 13,
+    "workflow_documentation": 2,
+    "mandatory_runtime_config": 2,
+    "curated_small_scientific_config": 13,
+    "external_test_source_or_template": 3,
+    "external_test_import_source": 5
+  },
+  "total_files": 97,
+  "total_bytes": 1102651,
+  "duplicate_qmmm_copies_not_allowlisted": [
+    {
+      "qmmm_path": "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/03_reverse_path/plots/plot_relay_coordinate_path.py",
+      "canonical_equivalent": "scripts/plot_relay_coordinate_path.py",
+      "sha256": "f71b78e1b8d16f66eb1be00d34787495d19d58b587c472c6f497e77b9a6c8c1d"
+    }
+  ],
+  "external_fixture_or_import_warnings": [
+    {
+      "path": "qmmm/pa6_static_es_seed/pa6_l4z_l2_nyl12_wt_model_23_canonical.pdb",
+      "referenced_by": "tests/test_screen_pa6_binding_orientation.py",
+      "action": "Not allowlisted: scientific model fixture, not source. Needs explicit curated fixture decision; do not stage broad models."
+    },
+    {
+      "path": "provenance/xa_ma_capped_reference_20261022/pa6_l4_source.mol2",
+      "referenced_by": "tests/test_pa6_resp_{acceptance,preparation,restart}.py andtest_pa6_validation_geometry.py",
+      "action": "Not source-allowlisted; verify already tracked/curated test fixture separately."
+    },
+    {
+      "path": "scripts/screen_pa6_binding_orientation.py",
+      "external_runtime_dependency": "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_nma_four_site_geometry.py",
+      "action": "Out-of-repository legacy import remains a clean-checkout limitation. Do not silently copy unrelated workspace; root review required."
+    }
+  ],
+  "missing_or_oversize": [],
+  "exclusion_policy": [
+    "Never stage raw MD/restarts/topologies/models/engine output/plots/binaries",
+    "Exclude progress/update_*, history, job*, source_snapshot*,source_milestones,evaluations,inputs,Gaussianoutputs and credentials",
+    "Status/acceptance/generated scientific-result JSONs excluded except explicitly identified mandatory calibration/preparation config",
+    "Per-trial launch.sh generated byprepare_trials.py excluded; canonical prepare_trials.py/launch_progress.sh included"
+  ],
+  "dependencies_requiring_special_attention": [
+    "07/export_water_path.py imports siblingwater_path_vmd_support.py",
+    "Both currentexporters read06water_qm_reoptimization/preparation.json",
+    "Currentcase calibrationJSON is mandatory toload_case",
+    "Backloggedtests dynamicallyimport qmmmbenchmarksource and05new_neb_prepare.py"
+  ],
+  "notes": "No git mutations or .gitignore changes performed. Hashes are review checkpoints; inspect any subsequently edited file before staging."
+}

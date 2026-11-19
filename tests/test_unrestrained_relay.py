@@ -25,6 +25,7 @@ def test_inputs_have_no_positional_restraints() -> None:
     driven = driven_input(BASE)
     for text in (relaxed, driven):
         assert "ntr=0" in text
+        assert "tole=1.d-5" in text
         assert "restraint_wt" not in text
         assert "restraintmask" not in text
         assert "verbosity=1" in text

@@ -1,0 +1,8 @@
+{
+  "state": "intentionally_stopped",
+  "reason": "Standalone direct OG1-HG1 to ThrN PT is uphill without a product basin; no current justified convergence target for further refinement. Coupled acylation and alternative pose are separate questions.",
+  "utc": "2026-11-11T01:50:27.692609+00:00",
+  "process_acceptance": "Controller then all 20 verified Sander children terminated; no SIGKILL needed.",
+  "scientific_acceptance": "Not a converged PMF or accepted barrier; interruption is intentional, not spontaneous failure.",
+  "outputs": "All original outputs, status records, partial trajectories and restarts retained unchanged by this script."
+}

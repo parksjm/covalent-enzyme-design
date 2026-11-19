@@ -199,6 +199,33 @@ def test_real_amber_accounting(qm_fixture: tuple) -> None:
     assert result["embedding_and_link_distance_validated"] is False
 
 
+def test_explicit_role_identities(qm_fixture: tuple) -> None:
+    topology, coordinates, spec = qm_fixture
+    defaults = {
+        "thr_n_terminus": ("N", 7, 2),
+        "nucleophile": ("OG1", 8, 1),
+        "oxyanion_donor_backbone": ("N", 7, 1),
+        "oxyanion_donor_sidechain": ("ND2", 7, 2),
+        "asp272_od1": ("OD1", 8, 0),
+        "asp272_od2": ("OD2", 8, 0),
+        "asp274_od1": ("OD1", 8, 0),
+        "asp274_od2": ("OD2", 8, 0),
+        "scissile_carbon": ("C54", 6, 0),
+        "scissile_oxygen": ("O49", 8, 0),
+        "leaving_nitrogen": ("N59", 7, 1),
+        "donor_carbonyl_c": ("C", 6, 0),
+        "donor_carbonyl_o": ("O", 8, 0),
+    }
+    spec["role_identities"] = {
+        role: {"name": name, "element": element, "bonded_hydrogens": hydrogens}
+        for role, (name, element, hydrogens) in defaults.items()
+    }
+    assert module.audit_es_qm_region(topology, coordinates, spec)["qmcharge"] == -2
+    spec["role_identities"].pop("nucleophile")
+    with pytest.raises(ValueError, match="every ES role"):
+        module.audit_es_qm_region(topology, coordinates, spec)
+
+
 @pytest.mark.parametrize(
     "mutation",
     [

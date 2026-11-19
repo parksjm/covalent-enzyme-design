@@ -104,8 +104,13 @@ def _components(parm: Any, selected: set[int], owners: dict[int, str]) -> None:
             raise ValueError(f"Disconnected declared chemical component: {group}")
 
 
-def _roles(parm: Any, selected: set[int], roles: dict[str, int]) -> dict:
-    required = {
+def _roles(
+    parm: Any,
+    selected: set[int],
+    roles: dict[str, int],
+    role_identities: dict[str, dict[str, Any]] | None = None,
+) -> dict:
+    defaults = {
         "thr_n_terminus": ("N", 7, 2),
         "nucleophile": ("OG1", 8, 1),
         "oxyanion_donor_backbone": ("N", 7, 1),
@@ -120,6 +125,27 @@ def _roles(parm: Any, selected: set[int], roles: dict[str, int]) -> dict:
         "donor_carbonyl_c": ("C", 6, 0),
         "donor_carbonyl_o": ("O", 8, 0),
     }
+    if role_identities is None:
+        required = defaults
+    else:
+        if set(role_identities) != set(defaults):
+            raise ValueError("Explicit role identities must cover every ES role")
+        required = {}
+        for role, identity in role_identities.items():
+            if set(identity) != {"name", "element", "bonded_hydrogens"}:
+                raise ValueError(f"Invalid explicit role identity schema: {role}")
+            name = identity["name"]
+            element = identity["element"]
+            hydrogens = identity["bonded_hydrogens"]
+            if (
+                not isinstance(name, str)
+                or not name
+                or type(element) is not int
+                or type(hydrogens) is not int
+                or hydrogens < 0
+            ):
+                raise ValueError(f"Invalid explicit role identity: {role}")
+            required[role] = (name, element, hydrogens)
     if set(roles) != set(required) or len(set(roles.values())) != len(required):
         raise ValueError("Explicit distinct ES role indices are required")
     observations = {}
@@ -218,7 +244,12 @@ def audit_es_qm_region(
         )
     selected, owners = _selected_atoms(parm, groups)
     _components(parm, selected, owners)
-    roles = _roles(parm, selected, spec["roles"])
+    roles = _roles(
+        parm,
+        selected,
+        spec["roles"],
+        spec.get("role_identities"),
+    )
     masses = {1: 1.008, 6: 12.011, 7: 14.007, 8: 15.999}
     for number in selected:
         atom = parm.atoms[number - 1]

@@ -53,9 +53,10 @@ def _valid_sites() -> list[AtomSite]:
                 [
                     _site(serial, "N", "N", "THR", "E", 1, (2.8, 0, 0)),
                     _site(serial + 1, "O", "OG1", "THR", "E", 1, (0, 2.8, 0)),
+                    _site(serial + 2, "C", "CB", "THR", "E", 1, (0, 2.8, 1.5)),
                 ]
             )
-            serial += 2
+            serial += 3
 
     ligand_atoms = [
         ("C54", "C", (0, 4.4, 0)),
@@ -78,7 +79,7 @@ def test_valid_model_reports_geometry_contacts_and_confidence() -> None:
     report = audit_sites(_valid_sites())
 
     assert report["inventory_passed"] is True
-    assert report["chain_heavy_atom_counts"] == {"A": 234, "E": 98, "I": 33, "J": 1}
+    assert report["chain_heavy_atom_counts"] == {"A": 234, "E": 99, "I": 33, "J": 1}
     assert report["bridge_distances"] == {"N_water_O_A": 2.8, "OG1_water_O_A": 2.8}
     assert report["bridge_distance_screen_passed"] is True
     assert report["water_heavy_contact_screen_passed"] is True

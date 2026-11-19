@@ -42,6 +42,7 @@ def inputs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple:
         929: (
             "THR",
             [
+                ("CB", 6, (1, 0, 2), ""),
                 ("OG1", 8, (1, 0, 1), "nucleophile"),
                 ("N", 7, (0, 0, 2), "thr_n_terminus"),
             ],

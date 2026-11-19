@@ -405,3 +405,190 @@ with the user as a coauthor. The formal citation will be updated after
 publication. No public accession, experimental method or editing history was
 provided by this clarification. Describe it as the supplied structural
 reference; do not infer those missing details from its filename/header.
+
+## Catalytic-reference alignment and hASNaseIII precedent — 2026-10-26
+
+The current solvated E-S endpoint and its preserved raw MD seed were aligned to
+the supplied `cif/n12c.cif` using the N/CA/C/O atoms of Phe113, Asn186, Asp272
+and Asp274; Thr233 was excluded from the fit. The raw MD seed already contained
+the non-native-like Thr233 backbone/N-terminal displacement later seen after
+QM/MM minimization. Reproducible reports and overlays are under
+`qmmm/pa6_asp272/00_es_unrestrained/catalytic_alignment_*_to_n12c/`.
+
+The historical WT PA6 L4-to-L2 static campaign contains exactly two
+OpenMM-relaxed Tier A models, 23 and 40. Both were evaluated with the same
+held-out Thr233 alignment. Model 23 retains the more reference-like Thr233
+geometry and is the leading replacement seed; model 40's otherwise tighter
+scaffold fit does not compensate for its 56-degree Thr233 psi difference.
+Results are under `qmmm/pa6_static_es_seed/`. No QM/MM calculation has been
+launched from either static model. Before use, the selected PDB still requires
+reproducible topology/protonation preparation and visual/register inspection.
+
+Reference R41 was read as a mature-substrate hydrolysis study. Its direct
+N-terminal-Thr self-activation path and DFTB3-screen/DFT-refinement hierarchy
+motivate a new Nyl12 hypothesis; they do not establish an Asp-independent Nyl12
+mechanism, transfer numerical barriers, or describe Nyl12 autocatalytic
+cleavage. Gaussian 16 is the available parallel DFT/MM backend in the present
+Amber build; installed QUICK is serial. No DFT/MM job was launched during this
+audit because the prior E-S seed failed the structural gate.
+
+## Direct proton-transfer embedded-method comparison — 2026-11-10
+
+`qmmm/benchmarks/03_direct_pt_embedded_method_comparison/` retains five exact
+coordinate-drive restarts, all DFTB3/3OB, GFN2-xTB and
+omegaB97X-D/def2-SVP outputs, tmux job records, source hashes, a separately
+hashed parser-only retry, and the final correction table/plot. All 15 engine
+calculations terminated normally. The first automatic analysis failed only
+because an unprinted Sander field was requested; the retained retry used
+`EPtot` without rerunning calculations.
+
+Window-specific 20-A point-charge counts are 8,104, 8,105, 8,107, 8,095 and
+8,088, which invalidates the raw cutoff-based reaction profile. Accepted claims
+use only method double differences and the original periodic DFTB3/MM profile.
+DFTB3 versus DFT RMSE is 1.49 kcal/mol; GFN2-xTB versus DFT RMSE is 3.91
+kcal/mol. The diagnostic DFT-corrected periodic hybrid endpoint is +15.85
+kcal/mol and the five selected points remain monotonic. No DFT/MM stationary
+point, barrier, or free energy is claimed.
+
+## Corrected coupled-path and fast-QM decision — 2026-11-10
+
+The old asynchronous continuation after window 24 is scientifically excluded:
+it satisfied the scalar coordinate by transferring terminal-N H1 back to OG1
+rather than forming the OG1--substrate bond. The exact window-24 restart remains
+valid and seeds a corrected attack-only branch under
+`reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/`.
+All three N--H identities are now explicit flat-bottom gates; the local 12 A
+active region remains movable and there are no global positional restraints.
+
+Attempt 1 is retained as a process-only failure: the minimal source snapshot
+omitted `path_distances.py`, imported by the VMD exporter, and therefore exited
+before Sander. Attempt 2 added the complete transitive import set, passed local
+and azalea SHA-256/import checks, and launched in tmux session
+`nyl12_corrected_attack_window24_attempt2_20261110`. The biased endpoint is not
+called TI1. Accepted geometries will support a coupled DFTB3/PM6/PM6-DH+/
+GFN2-xTB versus omegaB97X-D/def2-SVP method comparison before any new production
+umbrella campaign.
+
+Attempt 2 accepted three windows and then stopped at `attack_04`, despite native
+convergence and correct HG1/H1/H2 identities, because OG1--C lagged its nominal
+target by 0.115 A versus an arbitrary 0.10 A hard gate. The original acceptance
+record is preserved. A separate `acceptance_revision.json` declares target lag
+diagnostic, promotes the converged endpoint, and attempt 3 resumes from it in
+the same calculation directory. Proton identity and convergence remain hard
+gates.
+
+
+## Completed water-relay diagnostic and next decision — 2026-11-17
+
+The 25-window result is authoritative in `qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/protocol.json`, `energy_ledger.csv`, and `window_025/acceptance.json`. Final physical/bias-inclusive relative energies: +54.0235/+58.1547 kcal/mol; OG1–C 1.852 Å; both relay protons transferred, both Asp residues protonated, Thr N neutral. Final status `endpoint_negative_or_incomplete`; no unbiased endpoint release. Executed Methods and bounded Results interpretation were added to the manuscript. All 25 force-converged windows are path observations, not evidence of an index-one saddle or a stable TI1.
+
+The controlling roadmap now proposes one 5×5 activation/attack map from the accepted E–S seed, sparse matched-embedding method checks, and candidate releases. This is planned work, not executed data. It supersedes earlier pending instructions to extend this water-relay scan. Existing method-error context: `docs/coupled_method_panel_results_20261110.md`. Mechanistic precedent remains Andjelkovic et al., R41, DOI 10.1021/acs.jcim.3c00900; the precedent does not establish mechanistic equivalence for Nyl12.
+
+## Saved gradients and occupancy callback — 2026-11-18
+
+Primary computational evidence is under
+`qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/`:
+`reference_checks/gradient_analysis/acceptance.json` verifies 110-atom mapping
+and common 104,824-charge embedding for all three saved reference states.
+`results.json`, `projections.csv`, `arrays.npz` and `directional_derivatives.png`
+retain the projected analytic gradients. Scripts, input/output hashes and
+source snapshots are preserved there. No new QM evaluations were performed
+for this analysis. Gaussian/xTB embedded-QM and native total-QM/MM derivatives
+remain explicitly distinct; this limited comparison does not certify a method.
+
+`occupancy_callback_pilot/callback_proof/scientific_acceptance.json` records
+all seven actual-optimizer coupling gates passed, including expected/applied
+0.20 kcal/mol bias and analytic force addition. Four native calls and two
+bounded iterations were used. `job_callback_proof/status.json` records exit 0.
+The separately authorized four-point diagnostic was launched only after these
+gates passed; its immutable protocol and source copies are in
+`occupancy_callback_pilot/pilot/`, with launcher records in `job_pilot/`.
+The native NFE/PMD failure is retained and the Amber installation is unchanged.
+
+### Numerical line-search repair — 2026-11-18
+
+Retained-trial evidence and reproducible scripts are in the grid's
+`occupancy_callback_pilot/line_search_diagnosis/`: `audit.json`, `steps.csv`,
+`cutoff_pairs.json`, and `pair_energy.json`. Ordinary MM pair 11272/11330
+crosses the 10 Å cutoff; pair-removal energy and force predictions explain the
+observed jump within native output precision. No new QM evaluation was used
+for this diagnosis. The installed `dlf_lbfgs.F90` implementation is linked
+through `src/nyl12_covalent/dlfind_lbfgs.py`; library/source hashes are retained
+in `pilot/continuation_001/protocol.json` and the new point process records.
+Original stop records are preserved in named history folders. A passed the
+unchanged force gate after three further optimizer steps; B then started.
+The wrapper's real-library and input/resource tests passed (12 tests, 95%
+statement coverage); together with analytic-coordinate/bias checks, 43 focused
+tests passed. Continuation-script line coverage was not measured. No native
+installation, dependency, chemical state, Hamiltonian or force criterion changed.
+
+### Complete occupancy pilot and endpoint-D tests — 2026-11-18
+
+`occupancy_callback_pilot/endpoint_audit/` retains exact endpoint/input
+coordinate and hash checks, native-energy/bias checks, all 54 proton owners,
+heavy-bond retention and carbonyl/amide geometry. The common E–S energy
+(−450493.0781 kcal/mol) was checked against its actual native mdout.
+`audit.json`, `summary.csv`, `supplement.json` and `sourcehashes.json` are the
+primary evidence for the four-point table and oxyanion-contact observations.
+No additional QM evaluation was used for that audit.
+
+The one-candidate zero-bias release is in `pilot/point_D/unbiased_release/`,
+with entry point `release_endpoint.py` and `job_D_release/` launch records.
+The separate exact-D electronic check is in `d_reference/`, with immutable
+`preflight.json`, source copies and `job_D_reference/` launcher records.
+Its nonperiodic embedded-QM scope is explicitly distinct from native periodic
+total QM/MM. No TI1, new barrier, or method acceptance is asserted at launch.
+
+### Literature-grounded mechanistic reframing — 2026-11-18
+
+The terminal D release/reference files were reviewed: the release force-
+converged to reactant geometry, and the fixed-embedding DFT/xTB gradients both
+resisted additional attack in the tested direction. Local primary-paper
+extraction and source hashes are in
+`analysis/nyl12_mechanism_evidence_20261118/local_evidence.md` and
+`local_provenance.json`; reproducible acid-reach coordinates and hashes are in
+`acid_reach.json`/`extract_acid_reach.py`. No new electronic calculation was
+performed for this review.
+
+New references R44–R48 were checked against primary publisher/author/PubMed
+records. R48's indexed author-manuscript passages on pp. 793 and 795 explicitly
+state reversal of early proton transfer after release and lack of metastable
+intermediates within the calculated FAAH acylation/deacylation path. Its direct
+PDF requests returned 429/redirect errors, so indexed primary text and the
+PubMed abstract were used. R46 is a caution: its concerted deprotonation/attack
+still forms a tetrahedral intermediate. R44/R45 support scissile-NH/nitrogen-
+inversion hypotheses and experimental amidase-specificity engineering, not
+a universal fixed reaction sequence. R47 is the published 2025 Chem Catalysis
+version of the earlier homolog-screening preprint. Primary mature NylC Fig. 10
+(R25) is explicitly BapA-guided and does not demonstrate a TI1 lifetime.
+
+The roadmap now prioritizes complete proton delivery and C–N cleavage rather
+than a required stable TI1. This is an evidence-based prospective revision;
+no replacement pathway campaign or enzyme mutation was launched. The actual
+proton donor, resting microstate and existence of a TI1/acylenzyme basin in
+Nyl12 remain unresolved. Low polymer conversion is not a measurement of kcat
+or of a unique chemical free-energy barrier.
+
+### Existing-MD leaving-group relay screen — 2026-11-18
+
+Primary evidence is
+`qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/`:
+`bounded_screen_acceptance.json`, `bounded_screen_counts.csv`,
+`primary_attempt1/screen.json`, `controls_attempt1/screen.json`, and
+`diagnostics_attempt1/{diagnostics.json,primary_nearpasses.csv}`. Each screen
+attempt retains input/source/trajectory SHA-256 records and source snapshots;
+`primary_job/`, `controls_job/` and `diagnostics_job/` retain exact commands,
+environments, logs and successful process statuses. The primary null
+`selected.json` was preserved after the controls stage; no microstate was
+promoted or restart selected.
+
+All 60,000 source frames were represented in the cached geometry tables;
+18,958 passed unchanged Tier A/B plus positive φ, 51 passed all structural
+gates, and none had the Nalpha–water-O–Nleave heavy bridge needed for either
+hydrogen-bond class. Native OG1/Nalpha displacement was the main rejection
+source. Exact thresholds and six-case counts are recorded in the executed
+Methods section and campaign README. Nine focused tests passed, with measured
+coverage 94% for the screen, 99% for reusable geometry and 96% for diagnostics
+(96% combined); Ruff passed. The negative is bounded to sampled mature-
+substrate E–S conformations; it neither excludes transient/multiple-water
+reorganization nor assigns an acid state or catalytic free-energy barrier.

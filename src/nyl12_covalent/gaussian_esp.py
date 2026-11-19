@@ -15,15 +15,32 @@ from nyl12_covalent.gaussian_checks import final_orientation, validate_geometry
 BOHR_ANGSTROM = 0.529177210903
 
 
-def _read_espgen(path: Path, atom_count: int) -> tuple[NDArray, NDArray]:
-    """Read one complete, finite, standard espgen coordinate/potential block."""
+def read_espgen(path: Path, atom_count: int) -> tuple[NDArray, NDArray]:
+    """Read one complete, finite, standard espgen coordinate/potential block.
+
+    Args:
+        path: Amber ``espgen`` output path.
+        atom_count: Required number of atomic centers.
+
+    Returns:
+        Atomic centers and ESP point records in atomic units.
+
+    Raises:
+        ValueError: If the file is empty, malformed, truncated, or nonfinite.
+    """
     lines = path.read_text().splitlines()
     if not lines:
         raise ValueError("Empty espgen data")
     header = lines[0].split()
-    if len(header) != 3:
-        raise ValueError("Expected espgen atom/point/zero header")
-    atoms, points, extra = map(int, header)
+    if len(header) == 3:
+        atoms, points, extra = map(int, header)
+    else:
+        try:
+            atoms, points, extra = (
+                int(lines[0][start : start + 5]) for start in (0, 5, 10)
+            )
+        except (ValueError, TypeError) as exc:
+            raise ValueError("Expected espgen atom/point/zero header") from exc
     if atoms != atom_count or points < 1 or extra != 0:
         raise ValueError("Invalid espgen atom count, point count or extra block")
     if len(lines) != 1 + atoms + points:
@@ -104,7 +121,7 @@ def assess_hf_esp(
     energy = (
         float(energies[-1].replace("D", "E").replace("d", "e")) if energies else None
     )
-    centers, potentials = _read_espgen(esp_path, molecule.GetNumAtoms())
+    centers, potentials = read_espgen(esp_path, molecule.GetNumAtoms())
     log_delta = float(np.max(np.abs(xyz - reference)))
     grid_delta = float(np.max(np.abs(centers * BOHR_ANGSTROM - xyz)))
     compact = re.sub(r"\s+", "", text).lower()

@@ -1,0 +1,33 @@
+{
+  "source_yaml": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/0_boltz/input/yaml_incremental_msa/pa6_l4z_l2_nyl12_wt.yaml",
+  "source_yaml_sha256": "49de234e8da0b5d1a8bb433328621538ee9c632a227fc0f0e36cc978d276c8a2",
+  "template_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "template_cif_sha256": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c",
+  "generated_yaml": "/data/jpc/covalent-enzyme-design/inputs/template_conditioned_es_pilot/nyl12_pa6_l4_to_l2_template.yaml",
+  "generated_yaml_sha256": "082e4e0dfb1bad67336b79c1ab4ba52a98c8669139bfb161cafc60f15afe96cb",
+  "seed_manifest": "/data/jpc/covalent-enzyme-design/inputs/template_conditioned_es_pilot/seeds.csv",
+  "seed_manifest_sha256": "be705e5a417e1369858cdccc9d19c7396139121b7bd3acbf60dc92d18dc58872",
+  "seed_count": 12,
+  "seed_base": 2026102700,
+  "query_chains": [
+    "A",
+    "E",
+    "B",
+    "F",
+    "C",
+    "G",
+    "D",
+    "H"
+  ],
+  "template_chains": [
+    "A",
+    "A",
+    "B",
+    "B",
+    "C",
+    "C",
+    "D",
+    "D"
+  ],
+  "calculation_launched": false
+}

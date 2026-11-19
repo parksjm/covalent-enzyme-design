@@ -38,11 +38,13 @@ TARGET_ATOMS: dict[str, dict[str, str]] = {
 }
 ACTIVE_SITE_ATOMS = {
     "thr_og1": "Thr929.OG1",
+    "thr_cb": "Thr929.CB",
     "phe_n": "Phe113.N",
     "asn_nd2": "Asn186.ND2",
 }
 AMBER_RESIDUES = {
     "thr_og1": (929, "THR", "OG1"),
+    "thr_cb": (929, "THR", "CB"),
     "phe_n": (113, "PHE", "N"),
     "asn_nd2": (186, "ASN", "ND2"),
 }
@@ -149,16 +151,17 @@ def source_sha256(path: Path = GEOMETRY_SOURCE) -> str:
 def coordinates_from_amber(topology: object, substrate: str) -> dict[str, Vector]:
     """Validate an Amber model and collect the unique active-site coordinates.
 
-    Residue numbers are one-based Amber residue positions. The imported model
-    layout has 1,314 residues, with the covalent ligand at residue 1,313.
+    Residue numbers are one-based Amber residue positions. The solute layout
+    occupies the first 1,314 residues, with the ligand at residue 1,313;
+    explicitly solvated systems may contain additional water and ion residues.
     """
     if substrate not in TARGET_ATOMS:
         raise ValueError(f"Unsupported substrate: {substrate}")
     residues = list(topology.residues)
     atoms = list(topology.atoms)
     xyz = np.asarray(topology.coordinates, dtype=float)
-    if len(residues) != 1314:
-        raise ValueError(f"expected 1314 Amber residues, found {len(residues)}")
+    if len(residues) < 1314:
+        raise ValueError(f"expected at least 1314 Amber residues, found {len(residues)}")
     if xyz.shape != (len(atoms), 3):
         raise ValueError(
             f"coordinates must have shape ({len(atoms)}, 3), got {xyz.shape}"
@@ -224,10 +227,11 @@ def measure_active_site(
 ) -> dict[str, object]:
     """Measure active-site distances, attack angle, and projected phi.
 
-    Coordinates use keys ``Thr929.OG1``, ``Phe113.N``, ``Asn186.ND2`` and
-    ``substrate.<atom-name>``. Supported substrate labels are ``pa6`` and
-    ``poly``. State must explicitly be ``ti1`` or ``es``; the report records
-    that this is descriptive geometry and carries no TI1/ES classification.
+    Coordinates use keys ``Thr929.OG1``, ``Thr929.CB``, ``Phe113.N``,
+    ``Asn186.ND2`` and ``substrate.<atom-name>``. Supported substrate labels
+    are ``pa6`` and ``poly``. State must explicitly be ``ti1`` or ``es``; the
+    report records that this is descriptive geometry and carries no TI1/ES
+    classification.
     """
     if state not in {"ti1", "es"}:
         raise ValueError("state must be explicitly set to 'ti1' or 'es'")
@@ -235,6 +239,7 @@ def measure_active_site(
         raise ValueError(f"Unsupported substrate: {substrate}")
     target = TARGET_ATOMS[substrate]
     og1 = _coordinate(coordinates, ACTIVE_SITE_ATOMS["thr_og1"])
+    thr_cb = _coordinate(coordinates, ACTIVE_SITE_ATOMS["thr_cb"])
     phe_n = _coordinate(coordinates, ACTIVE_SITE_ATOMS["phe_n"])
     asn_nd2 = _coordinate(coordinates, ACTIVE_SITE_ATOMS["asn_nd2"])
     carbon = _coordinate(coordinates, f"substrate.{target['carbonyl_c']}")
@@ -252,6 +257,7 @@ def measure_active_site(
             "d2_phe113_n_scissile_o": distance(phe_n, oxygen),
             "d3_asn186_nd2_scissile_o": distance(asn_nd2, oxygen),
             "a_BD_og1_c_o": angle_degrees(og1, carbon, oxygen),
+            "theta_cb_og1_c": angle_degrees(thr_cb, og1, carbon),
             "herschlag_phi_projected": projected_herschlag_phi(
                 og1, oxygen, carbon, nitrogen, adjacent_c
             ),

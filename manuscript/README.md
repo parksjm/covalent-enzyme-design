@@ -5,6 +5,7 @@ not a report of validated catalytic improvement. Preserve this distinction
 when converting planned methods to past tense.
 
 - [Introduction](INTRODUCTION_DRAFT.md)
+- [Mechanism execution roadmap and paper scope](../docs/NYL12_MECHANISM_ROADMAP.md)
 - [Methods: completed work and planned extensions](METHODS_DRAFT.md)
 - The force-field parameterization section in the Methods draft covers the
   planned ff19SB/GAFF2/RESP workflow, state definitions and validation gates.

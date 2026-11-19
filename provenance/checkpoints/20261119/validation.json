@@ -1,0 +1,36 @@
+{
+  "full_custom_test_suite": {
+    "status": {
+      "command": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/output_agent_actions/commit_checkpoint_20261119/run_tests.py"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design",
+      "ended_utc": "2026-11-19T20:43:10.037559Z",
+      "env_overrides": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+      },
+      "exit_status": 0,
+      "input_sha256": {
+        "/data/jpc/covalent-enzyme-design/output_agent_actions/commit_checkpoint_20261119/run_tests.py": "61d0093570cdf054382971465278180d4ce964331741af5ef7cc9302e73ed8b8",
+        "/data/jpc/covalent-enzyme-design/pyproject.toml": "d7ce212704c4bcbf0547cc781f0490573f8a564141f204129fd91daf8b6c504f",
+        "/data/jpc/covalent-enzyme-design/tests/test_candidate_mm_qmmm_controller.py": "1b4dd750febe1d82826f65b5460674b4b307fbca108b8cee06b6e16de1892dd2",
+        "/data/jpc/covalent-enzyme-design/uv.lock": "37233405271b6ceb61083c4a49a0c1dc8e4c4e0aca8272d5a585fd5600d6acbc"
+      },
+      "log": "/data/jpc/covalent-enzyme-design/output_agent_actions/commit_checkpoint_20261119/tests_02/job.log",
+      "session_name": "nyl12_commit_tests_final_20261119",
+      "started_utc": "2026-11-19T20:41:42.324244Z"
+    },
+    "log_sha256": "0864c9753b3a6514d4ee15f57cff4e2f8710a60804b7b862ea9461976236b093",
+    "summary": "1456 passed, 13 skipped, 64 warnings in 85.95s (0:01:25)"
+  },
+  "environment": "Existing analysis Python with existing uv test tooling appended; no package installation",
+  "ruff_full_scripts_src_tests_findings": 0,
+  "initial_failure": "Incorrect test file-vs-directory assertion; productionqueue unchanged; focused11tests and fullsuite rerun pass",
+  "staged_source_scope_manifest": "provenance/checkpoints/20261119/source_manifest.json",
+  "raw_calculation_data_included": false,
+  "staged_whitespace_policy": "Code/docs pass; original CIF/PDB fixed-format trailing fields and CSV CRLF intentionally preserved."
+}

@@ -1,5 +1,10 @@
 # Working references
 
+- **R43.** Kästner, J.; Sherwood, P. *Superlinearly converging dimer method
+  for transition state search*. J. Chem. Phys. **2008**, *128*, 014106.
+  https://doi.org/10.1063/1.2815812
+  Bibliographic details and method abstract verified 2026-11-13.
+
 Started 2026-10-20. Stable DOI keys are used in the drafts. This is a working
 bibliography; journal formatting and complete author lists remain to be added.
 R7–R9 identifiers are consistent with prior project citations; publisher
@@ -214,6 +219,24 @@ https://www.sciencedirect.com/science/article/pii/S0022283601950430 .
   Broadly Parametrized Self-Consistent Tight-Binding Quantum Chemical Method
   with Multipole Electrostatics and Density-Dependent Dispersion Contributions*.
   JCTC (2019), 15, 1652–1671. https://doi.org/10.1021/acs.jctc.8b01176 .
+- **R41.** Andjelkovic, M.; Zinovjev, K.; Ramos-Guzmán, C. A.; Ruiz-Pernía,
+  J. J.; Tuñón, I. *Elucidation of the Active Form and Reaction Mechanism in
+  Human Asparaginase Type III Using Multiscale Simulations*. J Chem Inf Model
+  (2023), 63, 5676–5688. https://doi.org/10.1021/acs.jcim.3c00900 . Primary
+  full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC10852353/ . This is a
+  mature-substrate hydrolysis precedent; its discussion of self-cleavage as an
+  activation prerequisite must not be substituted for the modeled catalytic
+  substrate-hydrolysis steps.
+- **R42.** Tao, Y.; Giese, T. J.; Ekesan, Ş.; Zeng, J.; Aradi, B.; Hourahine,
+  B.; Aktulga, H. M.; Götz, A. W.; Merz, K. M., Jr.; York, D. M. *Amber Free
+  Energy Tools: Interoperable Software for Free Energy Simulations Using
+  Generalized Quantum Mechanical/Molecular Mechanical and Machine Learning
+  Potentials*. J Chem Phys (2024), 160, 224104.
+  https://doi.org/10.1063/5.0211276 . Primary full text reviewed. Establishes
+  direct Sander/xTB and Sander/DFTB+ interfaces with QM/MM Ewald and a
+  DeePMD-kit correction interface; its G-T proton-transfer example also shows
+  that uncorrected DFTB3 and GFN2-xTB profiles can differ substantially from
+  the ab initio reference.
 
 Implementation documentation checked 2026-10-25: g-xTB development README,
 https://github.com/grimme-lab/g-xtb ; ASH xTB interface,
@@ -223,3 +246,61 @@ The current g-xTB README explicitly excludes point-charge embedding; ASH
 likewise states that electrostatically embedded g-xTB QM/MM is unavailable.
 Analytic gradients are available in the current development binary, unlike
 the older implementation. Do not conflate the two releases.
+
+- **R43.** Kästner, J.; Sherwood, P. *Superlinearly converging dimer method
+  for transition state search*. J Chem Phys (2008), 128, 014106.
+  https://doi.org/10.1063/1.2815812 . Existing BibTeX key retained; reference
+  list synchronized 2026-11-18.
+
+## Amide hydrolysis without a required TI1 minimum — reviewed 2026-11-18
+
+- **R48.** Palermo, G.; Campomanes, P.; Cavalli, A.; Rothlisberger, U.;
+  De Vivo, M. *Anandamide Hydrolysis in FAAH Reveals a Dual Strategy for
+  Efficient Enzyme-Assisted Amide Bond Cleavage via Nitrogen Inversion*.
+  J Phys Chem B (2015), 119, 789–801. https://doi.org/10.1021/jp5052276 .
+  Primary abstract: https://pubmed.ncbi.nlm.nih.gov/25205244/ ; author manuscript:
+  https://infoscience.epfl.ch/record/208620/files/Full%20Text.pdf . Indexed primary
+  full-text passages on pp. 793 and 795 explicitly report reversal of the early
+  PT1 state on constraint release and no metastable intermediates within the
+  calculated acylation/deacylation steps. Their conclusion is model-dependent
+  and does not establish the Nyl12 mechanism. Direct PDF access returned
+  429/redirect errors; the primary indexed passages and PubMed abstract were
+  available. Distinguish a concerted full acylation from concerted addition only.
+- **R44.** Syrén, P.-O.; Hult, K. *Amidases Have a Hydrogen Bond that Facilitates
+  Nitrogen Inversion, but Esterases Have Not*. ChemCatChem (2011), 3, 853–860.
+  https://doi.org/10.1002/cctc.201000448 . Primary modeling/experimental study
+  proposes a scissile-NH hydrogen bond to an enzyme/substrate acceptor that
+  facilitates nitrogen inversion. A mechanistic hypothesis and design precedent,
+  not proof of a universal requirement or an observed Nyl12 contact.
+- **R45.** Syrén, P.-O.; Hendil-Forssell, P.; Aumailley, L.; Besenmatter, W.;
+  Gounine, F.; Svendsen, A.; Martinelle, M.; Hult, K. *Esterases with an
+  Introduced Amidase-Like Hydrogen Bond in the Transition State Have Increased
+  Amidase Specificity*. ChemBioChem (2012), 13, 645–648.
+  https://doi.org/10.1002/cbic.201100779 . Publisher graphical abstract reports
+  up to 50-fold improved amide-over-ester hydrolysis specificity after rational
+  introduction of the proposed interaction; this is a specificity ratio, not
+  evidence for a 50-fold absolute Nyl12 turnover improvement.
+- **R46.** Nutho, B.; Mulholland, A. J.; Rungrotmongkol, T. *Quantum
+  Mechanics/Molecular Mechanics (QM/MM) Calculations Support a Concerted
+  Reaction Mechanism for the Zika Virus NS2B/NS3 Serine Protease with Its
+  Substrate*. J Phys Chem B (2019), 123, 2889–2903.
+  https://doi.org/10.1021/acs.jpcb.9b02157 . Primary author record/abstract:
+  https://research-information.bris.ac.uk/en/publications/quantum-mechanicsmolecular-mechanics-qmmm-calculations-support-a- .
+  Here “concerted” denotes nucleophile deprotonation plus attack; a tetrahedral
+  intermediate still forms. It is not evidence for intermediate-free acylation.
+- **R47.** Drufva, E. E.; Cahill, J. F.; Saint-Vincent, P. M. B.; et al.
+  *Identification and characterization of substrate- and product-selective
+  nylon hydrolases*. Chem Catalysis (2025), 5, 101418.
+  https://doi.org/10.1016/j.checat.2025.101418 . Published primary study of diverse
+  Ntn-hydrolases supports widespread nylon promiscuity and substrate/product
+  selectivity without evidence of prior selection for this activity. Use this
+  published version rather than the earlier 2024 preprint. It does not establish
+  the native function or microscopic hydrolysis mechanism of Nyl12.
+
+Additional primary historical counterexample, retained with limitations:
+Harrison, M. J.; Burton, N. A.; Hillier, I. H.; Gould, I. R. *Mechanism and
+transition state structure for papain catalysed amide hydrolysis, using a
+hybrid QM/MM potential*. Chem Commun (1996), 2769–2770.
+https://doi.org/10.1039/CC9960002769 . Its AM1/MM concerted, no-TI prediction
+is a cysteine/thiol example using an early approximate model, not direct
+validation of hydroxyl-nucleophile Nyl12 chemistry.

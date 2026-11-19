@@ -44,7 +44,7 @@ def build_ti1_reference_graph(
         raise FileNotFoundError(f"PA6 MOL2 source does not exist: {pa6_mol2_path}")
 
     pa6 = load_pa6(pa6_mol2_path)
-    _validate_pa6_source(pa6.mol)
+    validate_pa6_zwitterion(pa6.mol)
     template, _ = _build_template()
     combined = Chem.CombineMols(template, pa6.mol)
     rw = Chem.RWMol(combined)
@@ -142,8 +142,16 @@ def build_ti1_reference_graph(
     return molecule, metadata
 
 
-def _validate_pa6_source(molecule: Chem.Mol) -> None:
-    """Require the source's named termini and explicit zwitterionic inventory."""
+def validate_pa6_zwitterion(molecule: Chem.Mol) -> None:
+    """Require the canonical PA6 L4 atom inventory and zwitterionic termini.
+
+    Args:
+        molecule: Explicit-hydrogen, named PA6 L4 molecular graph.
+
+    Raises:
+        ValueError: If atom count, net charge, required names, or terminal
+            protonation differs from the canonical soluble-oligomer reference.
+    """
     if molecule.GetNumAtoms() != 79 or Chem.GetFormalCharge(molecule) != 0:
         raise ValueError("PA6 source must be the 79-atom neutral zwitterion")
     named = {

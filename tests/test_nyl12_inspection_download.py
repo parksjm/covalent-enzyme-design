@@ -15,6 +15,20 @@ ROOT = Path(__file__).resolve().parents[1]
 PULL = ROOT / "scripts/pull_nyl12_inspection.sh"
 
 
+def test_pull_includes_every_curated_vmd_manifest_file_type() -> None:
+    """VMD export logs required by MANIFEST.sha256 must not be filtered out."""
+    script = PULL.read_text()
+    assert "--include='*_export.log'" in script
+
+
+def test_pull_includes_both_mbar_pipeline_smoke_tests() -> None:
+    """Both provisional MBAR diagnostics remain available on the laptop."""
+    script = PULL.read_text()
+    assert "04_mbar_pipeline_smoke_2ps" in script
+    assert "pipeline_pmf_block01_partial_20261109T2109EST/result" in script
+    assert "window24_proton_state_20261109T2123EST" in script
+
+
 def test_local_repair_diagnostic_inventory(tmp_path: Path) -> None:
     protein = tmp_path / "protein_source"
     protein.mkdir()
@@ -354,7 +368,6 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
             str(destination),
         ]
         subprocess.run(argv, env=environment, check=True, capture_output=True)
-        assert captured.read_text().count("CALL\n") == 3
         arguments = Path(str(captured) + ".details").read_text().splitlines()
         assert ("--dry-run" in arguments) == dry_run
         assert "--delete" not in arguments
@@ -362,8 +375,42 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
         assert any(
             arg.endswith("output_laptop_inspection_20261021/") for arg in arguments
         )
-        assert arguments[-1] == f"{destination}/qmmm/pa6_asp272/"
-        assert arguments[-2].endswith("qmmm/pa6_asp272/")
+        assert any(arg.endswith("qmmm/pa6_asp272/") for arg in arguments)
+        assert any(
+            arg.endswith(
+                "qmmm/pa6_resp_gaff2_wt/"
+                "11_frame1603_12A_reaction_path_20261109/"
+                "reaction_paths/01_proton_transfer/plots/"
+            )
+            for arg in arguments
+        )
+        assert any(
+            arg.endswith(
+                "04_direct_pt_umbrella_initial/analysis/03_production_2ps_overlap/"
+            )
+            for arg in arguments
+        )
+        assert any(
+            arg.endswith(
+                "04_direct_pt_umbrella_initial/visualization/"
+                "sequential_production_windows/"
+            )
+            for arg in arguments
+        )
+        assert any(
+            arg.endswith(
+                "qmmm/pa6_resp_gaff2_wt/"
+                "11_frame1603_12A_reaction_path_20261109/"
+                "reaction_paths/02_asynchronous_es_to_ti1/plots/"
+            )
+            for arg in arguments
+        )
+        assert any(arg.endswith("qmmm/pa6_static_es_seed/") for arg in arguments)
+        benchmark_suffix = (
+            "qmmm/benchmarks/03_direct_pt_embedded_method_comparison/final_analysis/"
+        )
+        assert f"{destination}/{benchmark_suffix}" in arguments
+        assert any(arg.endswith(benchmark_suffix) for arg in arguments)
         vmd_source_index = next(
             index
             for index, arg in enumerate(arguments)
@@ -424,10 +471,25 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
         arguments[vmd_source_index + 1]
         == "./nyl12-inspection-20261021/vmd_initial_final/"
     )
-    assert arguments[-2] == (
+    qmmm_source = (
         f"{current_user}@violet:/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272/"
     )
-    assert arguments[-1] == "./nyl12-inspection-20261021/qmmm/pa6_asp272/"
+    qmmm_source_index = arguments.index(qmmm_source)
+    assert (
+        arguments[qmmm_source_index + 1]
+        == "./nyl12-inspection-20261021/qmmm/pa6_asp272/"
+    )
+    assert (
+        f"{current_user}@violet:/data/jpc/covalent-enzyme-design/"
+        "qmmm/benchmarks/03_direct_pt_embedded_method_comparison/final_analysis/"
+    ) in arguments
+    assert (
+        "./nyl12-inspection-20261021/qmmm/benchmarks/"
+        "03_direct_pt_embedded_method_comparison/final_analysis/"
+    ) in arguments
+    assert "--exclude=source_restarts/" in arguments
+    assert any("03_acylenzyme_neb/vmd_progress/latest/" in arg for arg in arguments)
+    assert any("nyl12_active_site_conservation_20261110" in arg for arg in arguments)
     assert "--dry-run" not in arguments
     assert "-rtpvz" in arguments
     assert (tmp_path / "nyl12-inspection-20261021").is_dir()

@@ -107,6 +107,7 @@ def audit_sites(sites: list[AtomSite]) -> dict:
     volume = float(np.linalg.det(vectors / norms[:, None]))
     coordinates = {
         "Thr929.OG1": og1.xyz,
+        "Thr929.CB": atoms["E", 1, "CB"].xyz,
         "Phe113.N": atoms["A", 113, "N"].xyz,
         "Asn186.ND2": atoms["A", 186, "ND2"].xyz,
     }

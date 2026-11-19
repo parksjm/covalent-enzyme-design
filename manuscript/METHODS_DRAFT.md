@@ -1,5 +1,25 @@
 # Methods — working draft
 
+## ASH272 trajectory comparison — executed exploratory analysis
+
+Two 100 ns WT Nyl12–PA6 L4 replicas with Asp272 protonated in all four
+active sites, Asp274 deprotonated and the catalytic Thr233 N terminus neutral
+were analyzed at 10 ps/frame after the recorded 0.5 ns equilibration.
+Protein Cα and ligand heavy-atom RMSDs were measured after fitting each
+replica to its first production frame. We calculated d1 (Thr233 OG1 to
+scissile carbonyl C), d2 (Phe113 N to carbonyl O), d3 (Asn186 ND2 to
+carbonyl O), the OG1–C–O Bürgi–Dunitz angle, and **signed** projected
+Herschlag φ using the existing atom mapping and Tier classifier. Asp272 and
+Asp274 O/O separations and side-chain torsions were measured in all four
+sites. A geometric water-bridge/H-bond screen sampled every 50 ps with
+donor–acceptor distance ≤3.5 Å, H–acceptor distance ≤2.5 Å, and D–H–A
+angle ≥120°. Water occupancy is not a proton-transfer rate or a free-energy
+estimate. The executed script, exact trajectories, topology hashes, CSVs,
+figures, and selected restart/PDB structures are under
+`qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/`.
+The matched SI panel preserves the earlier trace/histogram palette and layout,
+changing the φ axis to signed values.
+
 Status: 2026-10-25. Sections explicitly distinguish completed preparation from
 planned methods. Unresolved numerical settings must be filled from accepted
 run manifests, not inferred from a generic protocol. References are in
@@ -94,6 +114,26 @@ establish accuracy for this covalent active site.
 The existing development topology uses original GAFF and provisional
 AM1-BCC or Gasteiger charges. It has not undergone the coupled-state Gaussian
 RESP fit described below and is excluded from validated TI1 refinement.
+
+For noncovalent PA6 L4 sampling, the primary soluble-oligomer state is the
+79-atom zwitterion with an explicit N-terminal NH3+ group, a C-terminal COO-
+group and net charge zero. This state is appropriate to test for exposed
+oligomer termini near neutral pH, but terminal protonation remains dependent on
+pH, hydration, dielectric environment and ion pairing. It is not assumed to
+describe a terminus buried in bulk or crystalline nylon. Any neutral NH2/COOH
+sensitivity model will be parameterized independently and will not share a RESP
+fit with the zwitterion.
+
+Four bound-like PA6 L4 conformers were selected from a template-conditioned
+model and one snapshot from each of three independent WT trajectories. Their
+heavy-atom backbone and amide torsions were retained while all remaining
+coordinates were optimized with omegaB97X-D/def2-SVP and SMD water. Def2-SVP
+was selected for this geometry-only stage after a def2-TZVP attempt spent more
+than three hours in an unnecessary initial `CalcFC` Hessian without beginning
+an optimization step. No Hessian is required for RESP geometry sampling. The
+subsequent Merz-Kollman ESP convention remains gas-phase HF/6-31G(d), and one
+accepted conformer will be compared with def2-TZVP to assess geometry-basis
+sensitivity before the force field is certified.
 
 ### Chemical-state-specific electrostatic parameters
 
@@ -279,15 +319,64 @@ or new force-field parameters have yet been accepted. Compatibility with the
 intended ff19SB environment requires validation of charge constraints, caps,
 bonded parameters and relevant conformational energies [R8].
 
-## Reaction paths and saddle-point validation — proposed, not executed
+## Reaction paths and saddle-point validation
 
 DFTB3/3ob QM/MM will first be assessed for local refinement and exploratory
 paths [R9]. After TI1 repair, reverse bond formation and proton transfer will
 be used to obtain ES/path guesses. Driven scans or NEB will provide TS starting
-geometries, followed by Hessian-based saddle refinement. The installed Sander
+geometries, followed by saddle-point refinement. The installed Sander
 interface supports DL-FIND P-RFO (`imin=1, ntmin=5`, `optalg='PRFO'`), central-
 difference Hessians and Bofill updates [R3,S9]. Newer Sella and pysisyphus
 implementations are comparison candidates, not adopted dependencies [R12,R13].
+
+### DL-FIND dimer saddle-point searches
+
+Transition-state refinement was initiated using the native Sander interface to
+DL-FIND [R3] and the improved dimer method of Kästner and Sherwood [R43]. The
+dimer estimates local curvature from gradients at nearby geometries, rotates
+toward a low-curvature direction, and translates uphill along that direction
+while relaxing perpendicular directions. It therefore searches for a
+first-order saddle point without constructing a full Hessian during the search.
+The improved formulation uses limited-memory BFGS optimization to reduce the
+number of gradient evaluations [R43].
+
+For the initial flipped-pose Nyl12–PA6 acylation search, image 8 of the final
+complete NEB band (cycle 499) supplied the starting coordinates. The initial
+dimer direction was the central difference between images 7 and 9, scaled to
+a 0.01 Å norm over the declared QM weighting mask. Full-system coordinates
+were reconstructed from native active-atom XYZ output using the original E–S
+reference for the fixed exterior; the reconstructed image energy was checked
+against the corresponding native NEB energy before launch. Calculations
+retained the same DFTB3/3OB QM/MM Hamiltonian, topology, protonation state,
+98 physical QM atoms, eight link atoms, QM charge of −2, and 4,165 movable
+atoms used for the preceding band. The initial search therefore retains
+deprotonated Asp272/Asp274 and is distinct from the prospective ASH272 MD
+comparison.
+
+Searches used Cartesian coordinates, native `dimer=.true.`, `dimer_mode=1`,
+`optalg='LBFGS'`, `dimer_tolrot=2`, and `dimer_maxrot=20`. Declared DL-FIND
+controls were `tol=1e-4`, `tole=1e-5`, `maxstep=0.1`, and `maxcycle=1000`.
+No reaction-coordinate or positional restraint potentials were applied;
+atoms outside the declared movable region remained fixed. These are search
+settings, rather than evidence of convergence. Candidate stationary points
+require subsequent vibrational characterization showing one imaginary mode
+associated with the intended reaction and downhill connectivity checks to
+the relevant minima before assignment as a validated transition state.
+
+For the current forward E-S-to-TI1 exploration, a single generalized
+coordinate was defined as xi = d(Thr233 OG1-HG1) - d(Thr233 N-HG1) -
+d(Thr233 OG1-substrate carbonyl C). A harmonic bias was advanced from
+approximately -4.317 to -0.800 Å in 24 windows, with a maximum target increment
+of 0.15 Å. No separate target was imposed on either proton transfer or
+nucleophilic attack, allowing the two chemical events to advance
+asynchronously. Calculations used the accepted 12 Å DL-FIND movable shell and
+no positional restraints. Each window retained the component distances and
+energy for discontinuity and hysteresis checks. This driven path is treated
+only as a source of pathway and umbrella-sampling seeds; it is not interpreted
+as a free-energy profile, activation barrier or validated transition state.
+An initial two-restraint synchronous trial was terminated after two accepted
+windows because it imposed an unsupported timing relationship between the two
+chemical events.
 
 Final validation will require convergence in all movable coordinates, a fresh
 Hessian with exactly one significant negative eigenvalue in the declared
@@ -526,3 +615,422 @@ no SHAKE and a fixed periodic cell. This run must converge and undergo geometry
 review before being promoted to a new ES reference. The user's intended ES
 reference protocol is fully unrestrained atomic minimization; the exploratory
 restrained model must not be described as satisfying that requirement.
+
+### Embedded-QM Hamiltonian comparison on the direct proton-transfer path
+
+Five fixed geometries spanning the direct Thr233 OG1-HG1 to N-terminal-N
+coordinate were selected from the periodic DFTB3/MM drive. The common QM region
+contained 98 real atoms and eight Amber link hydrogens (charge -2; singlet).
+Each geometry was evaluated with DFTB3/3OB, GFN2-xTB 6.7.1 and
+omegaB97X-D/def2-SVP. For method matching, Amber generated adjusted and imaged
+MM point charges within 20 A with QM Ewald and PME disabled; the retained
+Gaussian geometry and charge records were converted deterministically to xTB's
+legacy point-charge format using a hardness of 999.0. No coordinates were
+optimized in this benchmark.
+
+Because the finite 20-A charge list contained 8,088--8,107 atoms depending on
+the window, raw finite-cutoff relative energies were not interpreted as a
+reaction profile. Method assessment used per-window relative-energy double
+differences against omegaB97X-D. DFTB3 and GFN2-xTB gave RMSE values of 1.49
+and 3.91 kcal/mol, respectively; their transferred-endpoint errors were -0.57
+and +7.93 kcal/mol. The DFTB3-minus-DFT differences were then subtracted from
+the original periodic-Ewald DFTB3/MM relative profile as a sparse diagnostic
+correction. The resulting non-restraint energies were 0.00, 0.42, 7.27, 12.57
+and 15.85 kcal/mol and remained monotonically uphill. These values are neither
+a free-energy profile nor proof of stationary-point absence; they do not include
+DFT/MM relaxation or Hessian classification.
+
+### Reaction-specific fast-Hamiltonian selection and corrected attack branch
+
+The isolated proton-transfer comparison was not used to select a production
+Hamiltonian because it omits nucleophilic attack, carbonyl polarization and
+oxyanion formation. A chemically controlled attack branch was instead started
+from the exact 24th asynchronous endpoint, which retained all three protons on
+the terminal nitrogen and had an OG1--carbonyl-C distance of 2.104 A. Only the
+OG1--C distance was advanced, from 2.104 to 1.50 A in increments no larger than
+0.075 A. Flat-bottom restraints allowed each terminal N--H distance to move
+freely between 0.90 and 1.20 A, with outer walls at 0.80 and 1.35 A, thereby
+preventing the untracked H1-to-OG1 exchange observed in the discarded
+continuation. The established 12 A DL-FIND movable shell was retained without
+global positional restraints. These biased geometries were classified as
+benchmark seeds rather than stationary points.
+
+Sparse E--S, transferred-proton, early-attack, late-attack and TI1-like
+geometries will be evaluated with DFTB3/3OB, PM6, PM6-DH+, GFN2-xTB and
+omegaB97X-D/def2-SVP. Promotion requires preservation of proton identities and
+connectivity, reference-consistent state ordering, relative-energy RMSE no
+greater than 3 kcal/mol, endpoint errors no greater than 5 kcal/mol, and
+agreement in projected reactive-coordinate gradient directions. The production
+free-energy path will then use the explicit two-dimensional coordinates
+`d(OG1,HG1)-d(N,HG1)` and `d(OG1,C)`, with H1/H2 identity gates, rather than the
+chemically degenerate one-dimensional composite coordinate.
+
+## Experimental context and simulation temperature (reported 2026-11-11)
+
+Nyl12 variants were assayed as crude E. coli cell lysates using 5 mg PA6 or
+PA66 polymer powder per well of a 96-well PCR plate, in 200 mM Tris buffer
+reported as pH 8.0, at 75 °C for 6 h. These conditions were supplied by the
+experimental investigator; the reaction volume and temperature of pH adjustment
+remain unconfirmed. The model30 simulations used 300 K. The soluble PA6 L4
+models and fixed protonation states therefore do not reproduce the complete
+polymer-powder/lysate assay. Potential-energy pathways are not assay-temperature
+free-energy barriers. Tris temperature dependence further prevents assigning
+the incubation pH from the reported value without knowing its measurement
+temperature (Brooke et al., 2015, https://pmc.ncbi.nlm.nih.gov/articles/PMC8956001/).
+A matched 348.15 K sampling comparison is a proposed follow-up, not completed
+work. Detailed provenance: docs/assay_conditions_and_temperature_20261111.md.
+## Deposited NylC structure panel and Asp–Asp distances
+
+We examined all nine PDB entries listed in Table 1 of Negoro et al.
+(*FEBS J.* 2023, doi:10.1111/febs.16755): 5XYG, 3AXG, 5XYO, 5XYT, 5Y0L,
+5Y0M, 7YU0, 7YU1 and 7YU2. Deposited PDB coordinate files were retained
+without minimization or protonation changes. For each resolved protein site,
+we measured all four Euclidean distances between Asp306 OD1/OD2 and Asp308
+OD1/OD2 and used the minimum as an oxygen-label-invariant site descriptor.
+Any deposited alternative locations were retained in the complete pair ledger;
+the minimum does not assign proton positions or establish hydrogen bonding.
+Rigid crystallographic copies preserve these within-site distances and were
+not counted as independent observations. An independent ATOM-record inventory
+checked target-oxygen completeness in the 15 deposited 3AXG protein chains;
+no sixteenth site was assumed or reconstructed.
+
+The scripted extraction ran in tmux with retained command arguments,
+environment, source snapshots, input SHA256 hashes and process status.
+Authoritative JSON records and a site-level CSV are archived under
+`analysis/negoro_2023_protonation/table1_job/panel/`; the runnable scripts are
+`audit_table1_structures.py` and `audit_crystal_and_mapping.py` under
+`analysis/negoro_2023_protonation/`. Process completion and coordinate coverage
+were assessed separately from mechanistic interpretation. No molecular
+dynamics, energy calculation or pKa determination was performed for this panel.
+
+## Independent activation/attack grid (started 2026-11-18)
+
+### Proton-occupancy audit and coordinate integration check
+
+For each completed grid point we verified the restart digest and audited all
+54 real QM hydrogens against their two nearest QM heavy atoms, with a
+full-system nearest-heavy check for boundary escape. The declared geometric
+thresholds were 1.25 Å for covalent assignment and 1.35 Å for the second
+neighbor shared/ambiguous flag. Assignments are geometric descriptors, not
+electronic bond orders or pKa estimates. We also evaluated smooth coordination
+`CN(X,H)=sum_H [1+(r_XH/1.25 Å)^6]^-1` for the catalytic N and OG1, relay
+water, Asp pair and substrate heteroatoms. The label-independent activation
+coordinate is `CN(Thr N,H)−CN(Thr OG1,H)`; both component counts and the
+attack distance remain explicit observables. A reusable implementation
+provides its analytic Cartesian derivative. Synthetic-coordinate derivative
+and hydrogen-permutation tests passed; 12 focused tests covered all 41
+executable statements of the coordinate module. No molecular QM forces were
+numerically differentiated for these unit tests.
+
+Two one-cycle native DL-FIND evaluations on identical E–S coordinates tested
+the proposed Sander NFE/PMD integration, with and without a deliberately
+nonzero N_OF_BONDS restraint. The source, QM region, active shell and periodic
+Hamiltonian were identical. Native PMD's half-k convention predicts a
+0.20 kcal/mol contribution for the prescribed 0.20 coordinate offset and
+spring constant 10. The observed energy difference was zero, and PMD/CV
+initialization/output was absent. We rejected this integration backend rather
+than interpreting process exit zero as evidence of an active bias. The
+original 0.40 kcal/mol expectation was retained with an explicit convention
+correction; no installation was modified.
+
+A separately authorized unbiased release started from q_004_attack_001,
+retaining the accepted source QM/MM input with `nmropt=0`, `ntr=0` and no
+reaction restraints. Only the two cycle limits were increased to 5000.
+Force/SCC completion and final chemical occupancy were recorded separately.
+The initial structure, saved optimization frames (every 25 steps) and final
+restart were exported as a 13-frame stripped trajectory retaining WAT1576.
+All inputs, source copies, hashes, process records and scripts are archived
+under the grid's `proton_occupancy_audit/`, `occupancy_coordinate_preflight/`
+and `diagnostic_activation_release/` directories.
+
+### Analytic occupancy-bias callback and bounded pilot
+
+After rejecting the inactive native PMD integration, we added the tested
+coordination bias and its analytic Cartesian derivative to native Sander
+energy/gradient evaluations through an explicit optimizer callback. Each native
+call evaluated one requested geometry with the unchanged periodic DFTB3/MM
+Hamiltonian; the retained DL-FIND force-output conversion used the previously
+validated source-hash-matched calibration. The native energy was converted
+from hartree to kcal/mol before adding the bias; gradients were expressed in
+kcal/mol/Å. Native input/output coordinates, single energy/force-frame counts,
+SCC status and artifact hashes were checked. An actual two-iteration L-BFGS-B
+proof with four native evaluations reproduced a deliberately prescribed
+0.20 kcal/mol bias and verified nonzero analytic force addition. The proof's
+iteration limit was intentional and was not a stationary-point criterion.
+
+A four-point serial diagnostic started at q_004_attack_001, with
+q_occ=CN(N,H)−CN(OG1,H) targeted at 2.10 and independent OG1–C targets
+3.1251784, 2.60, 2.10 and 1.60 Å. The bias was
+0.5*100*(q_occ−q_target)^2 + 0.5*200*(r−r_target)^2 kcal/mol, with r in Å.
+All 54 real QM H atoms contributed; both component counts and real-H
+ownership were retained to detect unintended chemistry. The original 102-real-
+atom QM region, charge −1, eight links and 4,662-atom movable shell were
+unchanged. No additional positional restraints or bounds were introduced.
+SciPy L-BFGS-B used scaled variables y=x/(0.1 Å), with corresponding analytic
+gradient scaling; this variable scaling does not impose a step cap. Each point
+allowed 1,500 iterations and 3,000 function evaluations. A maximum absolute
+active biased-gradient component ≤0.12 kcal/mol/Å was required for serial
+continuation; energy-based termination alone was insufficient. Accepted
+optimizer iterations were distinguished from line-search trial evaluations.
+These four diagnostic candidates do not constitute a converged minimum-energy
+reaction path or a free-energy calculation.
+
+The initial A minimization's L-BFGS-B energy line search terminated before
+the force criterion was met. A retained-trial energy/gradient audit localized
+the discontinuity to an ordinary MM pair crossing the unchanged 10 Å
+nonbonded cutoff. We therefore resumed from its final accepted geometry using
+the installed DL-FIND gradient-based L-BFGS step routine, without an energy
+line search. The small ctypes interface records the inspected source and
+shared-library hashes and enforces exclusive ownership of native global state.
+Inputs to that routine were in bohr and hartree/bohr; proposed displacements
+were capped at 0.05 Å per atom. Nonpositive secant curvature caused an explicit,
+recorded history reset. The force criterion, physical energy/gradient
+evaluation, bias, QM partition, active shell and all electronic settings were
+retained. Original failed records were preserved and the continuation appended
+native evaluations and accepted snapshots in the same logical point directory.
+Runtime and scientific convergence were recorded separately.
+
+After all four points converged, we audited their exact final restart/input
+coordinate agreement, retained artifact hashes, native energies, recomputed
+bias energies, all real-QM hydrogen owners and original heavy-atom bonds.
+Carbonyl pyramidalization was measured as the signed height above the plane
+of its three original bonded neighbors, together with their three-angle sum.
+We measured both oxyanion-hole donor distances, attack geometry and substrate
+C–O/C–N distances; restrained force convergence was not treated as TI1 identity.
+
+A single diagnostic release started at D with both harmonic spring constants
+set exactly to zero. Every recorded optimizer state required zero added bias
+and equal total/physical energy. Native settings, partition, active shell,
+gradient-based optimizer and force tolerance were retained. Saved accepted
+snapshots and all native trial inputs/outputs were retained separately. Final
+proton ownership, chemistry and force completion were to be evaluated before
+any intermediate claim; a Hessian was not included in this release protocol.
+In parallel, one exact-D finite-embedding force comparison was initiated with
+ωB97X-D/def2-SVP and GFN2-xTB, using the same 110 QM/link atoms and 104,824
+adjusted MM charges as the preceding reference protocol. Additional dual
+directions shortened substrate O–Phe113 N or O–Asn186 ND2 while holding
+proton occupancy and attack distance fixed to first order. The respective
+three-coordinate Jacobians were verified full rank and no cut parent moved.
+
+### Saved reference-gradient projections
+
+Without new electronic-structure evaluations, we parsed saved analytic gradients
+for E–S, q_004_attack_001 and q_003_attack_005. Gaussian and GFN2-xTB models
+contained the same 110 QM/link atoms and 104,824 adjusted MM point charges.
+Atom order, coordinates and embedding membership were verified. Local dual
+directions obtained from the two-CV gradient Gram matrix changed q_occ or
+OG1–C independently while holding the other constant to first order. None
+moved a cut parent, so link-position chain-rule terms were zero for these
+directions. Dot products yielded local directional derivatives, not relaxed
+barriers. Embedded-QM-only Gaussian/xTB derivatives and native total DFTB3/MM
+derivatives were reported separately because their energy components differ.
+Reference outputs and analysis are retained in
+`08_activation_attack_grid/reference_checks/gradient_analysis/`.
+
+### Independent-coordinate grid protocol
+
+To vary proton transfer independently of nucleophilic attack, a 5 × 5 relaxed
+PES grid was initiated from the accepted water-in-QM E–S endpoint. The two
+restrained coordinates were `q_N = d(OG1,HG1) − d(Thr N,HG1)` and
+`r_attack = d(OG1,substrate carbonyl C)`. Five q_N targets span the measured
+E–S value (approximately −1.778 Å) to +1.050 Å; five attack targets span
+3.099537 to 1.500 Å. Amber harmonic restraint parameters rk2=rk3=100 were
+applied to each coordinate. Five one-core row workers run concurrently;
+each row first approaches its q_N target at the E–S attack distance and then
+sweeps attack at fixed q_N. Short target increments (at most 0.15 Å for q_N
+and 0.10 Å for attack) give 135 optimization stages for 25 reported points.
+The source topology, 102 real QM atoms, eight links, charge −1, periodic
+electrostatics and 4,662-atom movable region were retained. These row sweeps
+are deterministic continuations from one seed, not independent MD replicas
+or a converged free-energy surface. Measured coordinates, target lag, proton
+inventory, process/force acceptance and physical/bias-inclusive energies are
+retained separately. No basin or barrier is established while this grid runs.
+
+Sparse ωB97X-D/def2-SVP and GFN2-xTB comparisons use an explicitly separate
+finite nonperiodic embedding model with full MM point-charge membership,
+audited link treatment and retained analytic-gradient output. The initial
+E–S Gaussian force calculation was started with eight CPU cores and 32 GB.
+The exported field contains 104,824 adjusted MM charges after excluding the
+eight MM link parents. An initial Sander/EXTERN invocation returned exit zero
+despite Gaussian exceeding its field-query centre limit; its energy and
+zero-atom formatted checkpoint were rejected. The corrected reference driver
+runs Gaussian Force directly, retaining the same geometry and charges but
+omitting the additional MM field-query coordinates. Acceptance requires normal
+Gaussian termination, 110 QM/link atoms and 330 finite Cartesian gradient
+components. This gives local embedded-QM gradients; saved-gradient projections
+were subsequently analyzed as described above. A complete periodic
+DFTB3-versus-DFT total-gradient comparison has not been performed.
+Cross-method comparisons require common adjusted charge membership and
+consistent point-charge self-energy conventions. Such comparisons diagnose
+local electronic-method sensitivity; finite-cluster energies must not be
+substituted directly into the periodic-grid PES profile. Exact inputs,
+source snapshots and launcher/process records are under
+`qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/`.
+
+## Water-mediated Thr activation diagnostic (executed 2026-11-17)
+
+The accepted ASP272/ASH274 E–S restart with neutral Thr233 N was optimized
+using the unchanged 102-real-atom, charge −1 DFTB3/MM partition including
+WAT1576 and a 4,662-atom, complete-residue 12 Å movable region. A sequential
+25-window scan restrained
+`Q = d(OG1,HG1) − d(WO,HG1) + d(WO,H2) − d(Asp272 OD1,H2)`
+from −1.692959 to +1.500 Å and independently restrained OG1–carbonyl C
+from 3.099537 to 1.650 Å. Both target schedules advanced across the same
+windows, although the individual proton transfers could progress unequally.
+These are seed-generating restraints; their schedule is not a minimum-energy
+path determination. The authoritative force constants and engine settings
+are retained in each window's `restraints.RST` and `drive.mdin`.
+
+All calculations used scripted tmux execution with input and output hashes,
+force-convergence and chemical-inventory checks, and cumulative VMD/energy/
+distance exports. A continuity check initially rejected window 5 because it
+included a distant spectator separation. Protocol revision 5 restricted this
+check to seven declared reactive distances, preserved the original decision,
+validated the five completed windows, and resumed from window 6 without
+recalculating them. The chemistry, Hamiltonian, shell, and target schedules
+were unchanged. Physical relative energies were computed as
+`(EPtot − RESTRAINT)_window − EPtot_ES`; bias-inclusive energies were retained
+separately. An unbiased endpoint release was conditional on the endpoint
+chemistry and tetrahedral-geometry gates; the final endpoint failed that
+gate, so no release was performed. Protocol, scripts, and acceptance records
+are under
+`qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/`.
+
+## Existing-MD Nalpha-to-leaving-N water screen (executed 2026-11-18)
+
+We screened all frames eligible under the cached Tier A/B and signed-φ
+criteria in six existing 100 ns production replicas (10,000 saved frames
+each, 10 ps spacing). ASP272/ASH274 was primary; the two ASH272/ASP274
+and two ASP272/ASP274 replicas were separately authorized controls. All
+used their existing neutral catalytic Thr233 NH2 topologies and source MD
+trajectories. Controls were not promoted to the primary microstate.
+
+The existing geometric thresholds were retained: Tier A required d1 ≤3.2 Å,
+d2/d3 ≤3.8 Å, Bürgi–Dunitz angle 90–120°, and |φ| 70–110°; Tier B allowed
+d1 ≤3.5 Å, d2/d3 ≤4.0 Å, angle 85–125°, and |φ| 60–125°. Only positive
+signed φ frames were retained. Here d1 is Thr233 OG1–scissile C, d2 is
+Phe113 N–carbonyl O, and d3 is Asn186 ND2–carbonyl O. Native Thr233 was
+held out from a Kabsch fit to backbone N/CA/C/O of Phe113, Asn186, Asp272
+and Asp274 against `cif/n12c.cif` chain A. The unchanged native limits were
+OG1 displacement ≤0.75 Å, Nalpha displacement ≤1.25 Å, |Δψ| ≤35°, and
+|Δχ1| ≤20°. The intact-PA6 check required every topology bond within the
+four PA6 residues (Amber 1313–1316) to exceed 0.65 Å and remain ≤1.30 Å
+when either atom was H, or ≤1.85 Å otherwise. All Tier A/B positive-φ
+frames passed this bond-retention check.
+
+An observed one-water bridge required the same topology-owned water O
+within 3.5 Å of both Thr233 Nalpha and the scissile leaving amide N.
+Productive leaving-leg geometry additionally required an O–H···Nleave
+contact with H···N ≤2.5 Å and O–H···N angle ≥120°. An observed Nalpha–H···O
+contact used the same donor–acceptor/H–acceptor/angle criteria and defined
+a separate strict two-leg class when both legs passed. Absence of that
+incoming contact in neutral NH2 E–S did not alone reject a leaving-leg
+candidate: the future proton transferred from OG1 is not present on Nalpha
+in the screened state. Distances used exact triclinic minimum images,
+including the truncated-octahedral cells; fractional rounding alone was not
+used as the final distance criterion. Atom names, covalent hydrogen owners,
+neutral NH2 inventory and declared Asp state were read from each actual MD
+topology. No water coordinates, hydrogens or protonation states were edited.
+
+| Fixed microstate | Replica | Frames | Tier A/B, φ > 0 | All structural gates | One-water bridges |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ASP272/ASH274 | 1 | 10,000 | 5,865 | 8 | 0 |
+| ASP272/ASH274 | 2 | 10,000 | 30 | 0 | 0 |
+| ASP272/ASP274 | 1 | 10,000 | 819 | 0 | 0 |
+| ASP272/ASP274 | 2 | 10,000 | 1,296 | 31 | 0 |
+| ASH272/ASP274 | 1 | 10,000 | 7,253 | 12 | 0 |
+| ASH272/ASP274 | 2 | 10,000 | 3,695 | 0 | 0 |
+| Total | — | 60,000 | 18,958 | 51 | 0 |
+
+“All structural gates” means Tier A/B, positive φ, intact PA6 and native
+Thr233 together. “One-water bridges” denotes the heavy-atom prerequisite;
+its zero count also makes both hydrogen-bond classes zero. Frames are
+correlated; these are geometric counts, not independent observations,
+protonation populations or transfer rates. This mature-substrate hydrolysis
+screen does not address precursor autocleavage.
+
+Per-frame gate tables, all input/trajectory SHA-256 hashes, source snapshots
+and separate process/scientific records are retained in
+`qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/00_screen/`.
+`primary_attempt1/` and `controls_attempt1/` retain the two screen stages;
+`diagnostics_attempt1/` retains eight primary nearpasses and overlapping
+native-gate failure distributions. `bounded_screen_acceptance.json` and
+`bounded_screen_counts.csv` give the combined counts. The three tmux jobs
+completed with exit status zero, while candidate acceptance was negative:
+no frame was extracted, no new MD or QM/MM was launched by this screen,
+and the primary `selected.json` has null primary/reserve entries.
+
+
+## Balanced acyl-enzyme endpoint and asynchronous reverse-path test — initiated 2026-11-18
+
+An independent acyl-enzyme/amine coordinate hypothesis was constructed from the
+accepted water-in-QM E–S structure. Atom identities, total proton inventory and
+QM charge (−1) were retained. Both fragments of the scissile amide were kept;
+Thr OG1 formed the ester, the amide C–N bond was separated, and the departing
+alkylamine acquired a second proton. One original water proton was assigned to
+the departing amine, while original Thr HG1 replaced it on the same water. This
+label-balanced construction does not establish the actual proton-transfer
+route. The beta-chain N termini remained initially neutral and the initial
+acid microstate was ASP272/ASH274.
+
+A bounded coordinate-only search tested 285 rigid leaving-fragment placements
+and a 24-value acyl-arm torsion sweep. Internal fragment geometry was preserved
+except for explicitly constructed ester/amine coordinates. The selected guess
+had no severe nonbonded contacts using thresholds 1.1 Å for heavy–heavy, 1.0 Å
+for heavy–H and 0.8 Å for H–H pairs, excluding product 1–2/1–3 neighbors. These
+thresholds are gross-overlap preparation checks, not measures of relaxed energy
+or hydrogen-bond quality. Maximum heavy/H shifts were 2.172/2.366 Å; protein
+and water oxygen coordinates were unchanged during construction. The acute
+83.97° starting ester angle was left for energy optimization.
+
+The initiated QM/MM workflow retains 102 real QM atoms, 54 real QM H and eight
+link H, with the same periodic DFTB3/3ob Hamiltonian, zero electronic temperature
+and complete-residue 12 Å movable region (4,662 atoms). Temporary harmonic
+terms target OG1–C=1.4 Å, C–Nleave=3.0 Å and the seed's smooth leaving-N
+proton coordination; springs are 200 kcal mol−1 Å−2, 50 kcal mol−1 Å−2 and
+100 kcal mol−1 per squared coordination unit, respectively. All terms are
+removed for a separate unbiased optimization. No classical covalent-product
+parameters are substituted. The maximum active Cartesian gradient criterion
+remains 0.12 kcal mol−1 Å−1; endpoint chemical inventory and curvature
+verification are assessed separately.
+
+Conditional on force convergence and balanced acyl-enzyme retention, 36 reverse
+windows target the scalar ξ = r(OG1,C) − r(C,Nleave) + (1 Å)
+[CN(OG1,H) − CN(Nleave,H)] toward the accepted E–S value, using a
+100 kcal mol−1 Å−2 harmonic spring. Each CN sums all 54 real QM hydrogens with
+the previously defined smooth switching function. Nalpha occupancy and the
+individual component coordinates are unrestrained, permitting asynchronous
+proton motion, attack and scission. The scalar may still admit chemically
+different structures; a final zero-bias release and explicit connectivity audit
+are required. This is a potential-energy path search, not a PMF or verified TS.
+Native inputs, construction choices, physical/bias energies, all proton owners
+and process/scientific outcomes are retained in the campaign manifests.
+
+
+### Parallel NEB numerical-path diagnostics (initiated 2026-11-19)
+
+Four violet trials were initialized from the retained ASP272/ASH274 NEB
+cycle-268 band: uniform 24-image L-BFGS, uniform 48-image L-BFGS, adaptive
+24-image L-BFGS and uniform 24-image CG. Each used 13 controls; adaptive
+placement doubled the QM arc-length sampling weight near source images 9–10.
+Native initialization remained piecewise Cartesian linear interpolation.
+The common component step cap was 0.02 bohr. The periodic DFTB3/3ob Hamiltonian,
+electronic temperature 0 K, QM charge −1, 102 real QM atoms/54 real H/eight
+link atoms, neutral Thr Nalpha, frozen endpoints/exterior and original
+12 Å/4,662-atom movable selection were unchanged; no additional restraints
+were introduced. L-BFGS remained primary. CG was limited to 1,750 evaluations
+(about 79 full 24-image cycles) as a curvature-history diagnostic.
+
+Installed-source inspection identified a hardcoded >90° kink repair applied
+after step capping. Comparisons therefore record native Max/RMS gradients and
+target ratios, reset counts/timing, coherent image/chemical gaps, elapsed time
+and actual energy-evaluation counts at 50/100/250 cycles where feasible, rather
+than rank transient profile maxima. Frozen-endpoint 24/48-image bands require
+22/46 interior evaluations per full cycle. One shared reacting H20318 in the
+48-image seed was accepted explicitly for that unconverged seed only, with its
+strict retention failure and SHA-pinned review retained; spectator gates were
+unchanged. Separate startup reviews accepted native mapping at 1e-6 Å while
+preserving original 1e-7 Å diagnostic failures. Neither review constitutes
+force/chemical convergence. Configurations, reviews, coherent movies and
+source-hashed comparison histories are retained under
+`09_water_relay_acylation/04_neb/spacing_tests/` in the ASH274 campaign.

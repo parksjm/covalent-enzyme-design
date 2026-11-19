@@ -1,0 +1,18 @@
+{
+  "cpptraj": "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+  "reference_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "selection_mode": "explicit_native_torsion",
+  "selection_rule": "M02 alternative-basin seed: replica-3 frame 1150 is Tier A with native psi/chi1 classifications and a relay-ready Thr233 OG1/HG1--Asp272 OD1 contact; it intentionally fails the held-out native-position displacement gate.",
+  "topology": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/systems/wt/md_solvated.prmtop",
+  "windows_ns": [[0.0, 100.0]],
+  "replicas": [
+    {
+      "name": "replica_03_relay",
+      "frames": [1150],
+      "trajectory": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/systems/wt/replica_03/07_prod_100ns.nc",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/analysis/full_100ns_attempt1/wt_replica_03/geometry_timeseries.csv",
+      "torsion_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/06_replica03_native_thr_screen_20261106_attempt1/torsion_screen/results/geometry_and_thr_torsions.csv",
+      "summary_json": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/analysis/full_100ns_attempt1/wt_replica_03/summary.json"
+    }
+  ]
+}

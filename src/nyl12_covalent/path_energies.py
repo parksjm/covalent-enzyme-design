@@ -11,6 +11,8 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+from nyl12_covalent.direct_acyl_bias import proton_guard_bias
+
 
 def relay_endpoint_energies(
     run: Path,
@@ -162,3 +164,106 @@ def write_energy_artifacts(
         env=environment,
         check=True,
     )
+
+
+def driven_path_energies(run: Path, window_names: list[str]) -> list[dict[str, Any]]:
+    """Extract reported total and restraint-removed energies for a driven path.
+
+    Args:
+        run: Directory containing one subdirectory per coordinate-drive window.
+        window_names: Ordered window directory names.
+
+    Returns:
+        Auditable energy rows, referenced to the first window.
+
+    Raises:
+        ValueError: If a window is missing, unconverged, or lacks one reported
+            total-energy/restraint-energy endpoint.
+    """
+    if not window_names:
+        raise ValueError("No driven-path windows supplied")
+    rows: list[dict[str, Any]] = []
+    for window_name in window_names:
+        folder = run / window_name
+        files = {
+            "mdout": folder / "minimized.mdout",
+            "acceptance": folder / "acceptance.json",
+            "restraint": folder / "restraints.RST",
+        }
+        if any(not path.is_file() for path in files.values()):
+            raise ValueError(f"Incomplete driven-path window: {window_name}")
+        acceptance = json.loads(files["acceptance"].read_text())
+        if acceptance.get("native_converged") is not True:
+            raise ValueError(f"Unconverged driven-path window: {window_name}")
+        output_text = files["mdout"].read_text()
+        total_matches = re.findall(r"Etot\s*=\s*([-+\d.EeDd]+)", output_text)
+        restraint_matches = re.findall(r"RESTRAINT\s*=\s*([-+\d.EeDd]+)", output_text)
+        if not total_matches or not restraint_matches:
+            raise ValueError(f"Missing final energy record: {window_name}")
+        total = float(total_matches[-1].replace("D", "E").replace("d", "e"))
+        restraint = float(restraint_matches[-1].replace("D", "E").replace("d", "e"))
+        unbiased = total - restraint
+        guard = proton_guard_bias(
+            files["restraint"].read_text(),
+            acceptance.get("geometry_A", {}).get("substrate_N_HG1_A", float("nan")),
+        )
+        components = {}
+        if guard is not None:
+            if not math.isfinite(guard) or guard > restraint + 0.001:
+                raise ValueError(f"Invalid substrate guard energy: {window_name}")
+            components = {
+                "substrate_proton_guard_bias_kcal_mol": guard,
+                "composite_bias_kcal_mol": restraint - guard,
+            }
+        if not all(math.isfinite(value) for value in (total, restraint, unbiased)):
+            raise ValueError(f"Nonfinite driven-path energy: {window_name}")
+        rows.append(
+            {
+                "window": window_name,
+                "stage": 1,
+                "accepted": True,
+                "total_kcal_mol": total,
+                "driving_bias_kcal_mol": restraint,
+                **components,
+                "minus_driving_kcal_mol": unbiased,
+                "source_sha256": {
+                    str(path): hashlib.sha256(path.read_bytes()).hexdigest()
+                    for path in files.values()
+                },
+            }
+        )
+    reference_total = rows[0]["total_kcal_mol"]
+    reference_unbiased = rows[0]["minus_driving_kcal_mol"]
+    for row in rows:
+        row["relative_total_kcal_mol"] = row["total_kcal_mol"] - reference_total
+        row["relative_minus_driving_kcal_mol"] = (
+            row["minus_driving_kcal_mol"] - reference_unbiased
+        )
+    return rows
+
+
+def write_driven_path_energy_data(
+    rows: list[dict[str, Any]], output: Path
+) -> tuple[Path, Path]:
+    """Write driven-path energy JSON and CSV files.
+
+    Args:
+        rows: Output from :func:`driven_path_energies`.
+        output: Existing output directory.
+
+    Returns:
+        Paths to the JSON and CSV files.
+    """
+    if not rows:
+        raise ValueError("No driven-path energy rows supplied")
+    json_path = output / "potential_energy.json"
+    csv_path = output / "potential_energy.csv"
+    json_path.write_text(json.dumps(rows, indent=2) + "\n")
+    columns = list(
+        dict.fromkeys(key for row in rows for key in row if key != "source_sha256")
+    )
+    with csv_path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=columns, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(rows)
+    return json_path, csv_path

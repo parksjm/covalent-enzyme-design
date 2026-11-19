@@ -9,6 +9,10 @@ import pytest
 
 from nyl12_covalent import path_energies
 from nyl12_covalent.path_energies import relay_endpoint_energies
+from nyl12_covalent.path_energies import (
+    driven_path_energies,
+    write_driven_path_energy_data,
+)
 
 DISTANCE_KEYS = {
     "attack": "attack",
@@ -138,3 +142,69 @@ def test_incomplete_distance_mapping_fails(tmp_path: Path) -> None:
     endpoint = _window(tmp_path, "stage1_00", 1, -100)
     with pytest.raises(ValueError, match="mapping"):
         relay_endpoint_energies(tmp_path, [endpoint], {"attack": "attack"})
+
+
+def _driven_window(run: Path, name: str, total: float, restraint: float) -> None:
+    folder = run / name
+    folder.mkdir()
+    (folder / "minimized.mdout").write_text(
+        f"Etot = -1\nRESTRAINT = 9\nEtot = {total}\nRESTRAINT = {restraint}\n"
+    )
+    (folder / "acceptance.json").write_text(json.dumps({"native_converged": True}))
+    (folder / "restraints.RST").write_text("&rst /\n")
+
+
+def test_driven_path_uses_reported_final_restraint_energy(tmp_path: Path) -> None:
+    _driven_window(tmp_path, "window_01", -100.0, 2.0)
+    _driven_window(tmp_path, "window_02", -95.0, 1.0)
+    rows = driven_path_energies(tmp_path, ["window_01", "window_02"])
+    assert rows[0]["relative_total_kcal_mol"] == 0.0
+    assert rows[1]["relative_total_kcal_mol"] == 5.0
+    assert rows[1]["relative_minus_driving_kcal_mol"] == 6.0
+    assert len(rows[0]["source_sha256"]) == 3
+    output = tmp_path / "plots"
+    output.mkdir()
+    json_path, csv_path = write_driven_path_energy_data(rows, output)
+    assert json.loads(json_path.read_text())[1]["window"] == "window_02"
+    assert csv_path.read_text().startswith("window,")
+
+
+def test_driven_path_rejects_unconverged_window(tmp_path: Path) -> None:
+    _driven_window(tmp_path, "window_01", -100.0, 2.0)
+    (tmp_path / "window_01" / "acceptance.json").write_text(
+        json.dumps({"native_converged": False})
+    )
+    with pytest.raises(ValueError, match="Unconverged"):
+        driven_path_energies(tmp_path, ["window_01"])
+
+
+def test_guarded_continuation_subtracts_both_biases_and_exports_columns(
+    tmp_path: Path,
+) -> None:
+    from nyl12_covalent.direct_acyl_drive import direct_restraint
+
+    _driven_window(tmp_path, "original", -100.0, 2.0)
+    _driven_window(tmp_path, "guarded", -95.0, 3.0)
+    folder = tmp_path / "guarded"
+    (folder / "restraints.RST").write_text(
+        direct_restraint(0.3, substrate_proton_guard=True)
+    )
+    (folder / "acceptance.json").write_text(
+        json.dumps(
+            {
+                "native_converged": True,
+                "geometry_A": {"substrate_N_HG1_A": 1.4},
+            }
+        )
+    )
+    rows = driven_path_energies(tmp_path, ["original", "guarded"])
+    assert rows[1]["substrate_proton_guard_bias_kcal_mol"] == pytest.approx(1.125)
+    assert rows[1]["composite_bias_kcal_mol"] == pytest.approx(1.875)
+    assert rows[1]["relative_minus_driving_kcal_mol"] == pytest.approx(4.0)
+    _, csv_path = write_driven_path_energy_data(rows, tmp_path)
+    assert (
+        "substrate_proton_guard_bias_kcal_mol" in csv_path.read_text().splitlines()[0]
+    )
+    (folder / "acceptance.json").write_text(json.dumps({"native_converged": True}))
+    with pytest.raises(ValueError, match="guard energy"):
+        driven_path_energies(tmp_path, ["guarded"])

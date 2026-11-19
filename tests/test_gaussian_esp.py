@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 from rdkit import Chem
 
-from nyl12_covalent.gaussian_esp import BOHR_ANGSTROM, assess_hf_esp
+from nyl12_covalent.gaussian_esp import BOHR_ANGSTROM, assess_hf_esp, read_espgen
 
 
 @pytest.fixture
@@ -54,6 +54,20 @@ def test_valid_standalone_esp_is_not_a_fit(inputs: tuple) -> None:
     assert report["energy_hartree"] == -75.1
     assert not report["charges_fitted"]
     assert not report["native_charge_transfer_eligible"]
+
+
+def test_fixed_width_espgen_header_with_abutting_counts(tmp_path: Path) -> None:
+    esp = tmp_path / "fixed_width.esp"
+    esp.write_text(
+        f"{79:5d}{18391:5d}{0:5d}\n"
+        + " 0.0 0.0 0.0\n" * 79
+        + " 0.0 0.0 0.0 0.0\n" * 18391
+    )
+
+    centers, points = read_espgen(esp, atom_count=79)
+
+    assert centers.shape == (79, 3)
+    assert points.shape == (18391, 4)
 
 
 @pytest.mark.parametrize(

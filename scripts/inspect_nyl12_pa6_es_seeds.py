@@ -54,6 +54,9 @@ def _geometry(parm: Any, mapping: dict) -> dict:
     coordinates = {
         name: tuple(xyz[_atom(parm, mapping[role]).idx]) for role, name in keys.items()
     }
+    coordinates["Thr929.CB"] = tuple(
+        xyz[_atom(parm, {"residue": 929, "resname": "THR", "atom": "CB"}).idx]
+    )
     coordinates["substrate.C62"] = tuple(
         xyz[_atom(parm, {"residue": 1313, "resname": "LIG", "atom": "C62"}).idx]
     )

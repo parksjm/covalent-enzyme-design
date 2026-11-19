@@ -1,0 +1,12 @@
+{
+  "topology": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/systems/wt/md_solvated.prmtop",
+  "reference_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "image_anchor": ":1313-1316",
+  "replicas": [
+    {
+      "name": "replica_03",
+      "trajectory": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_azalea_blackwell_attempt1/systems/wt/replica_03/07_prod_100ns.nc",
+      "screen_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/06_replica03_native_thr_screen_20261106_attempt1/torsion_screen/results/geometry_and_thr_torsions.csv"
+    }
+  ]
+}

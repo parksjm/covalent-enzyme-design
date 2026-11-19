@@ -1,0 +1,183 @@
+{
+  "status": "validated",
+  "scope": "One-cycle DL-FIND LBFGS native SANDER evaluations only; not a TS validation or IRC",
+  "system": {
+    "topology_atoms": 104922,
+    "active_mask_atoms": 4165,
+    "active_mask": ":27-32,34,43-56,61,70-81,83,108-124,141,144-170,181-192,199-201,211,215,222-230,232,277,279,736-738,750-758,760-765,783,787,790,792-805,929-934,946,948-974,1006-1019,1037,1039-1040,1042-1051,1053-1054,1080-1097,1099-1100,1313-1316,1580,1639,1962,2010,2779,2942,3012,3152,3327,3528,4023,4079,4165,4529,4883,4917,4938,5084,5706,5709,5795,6363,6578,6687,6850,7060,7157,7321,7526,7766,8129,8194,8313,8357,8519,8530,8602,8607,8626,8632,8643,8695,8801,8826,8842,9270,9368,9381,9575,9845,9914,9980,10148,10260,10591,10594,10630,10664-10665,10669,10834,10881,11029,11088,11091,11108,11121,11137,11141,11523,11543,11609,11803,11818,12165,12507,12521,12889,13192,13712,13717,14449,14521,14601,14619,14694,14706,14860,15096,15728,15741,15909,15945,16110,16175,16273,16299,16403,16467,16499,16512,16585,16640,16651,16662,16670,16680,16783,16919,17370,17435,17448,17454-17455,17462,17486,17491,17497,17515,17564,17588-17589,17789,17827,18240,18323,18789,19041,19620,19919,20400,20505,21023,21288,21305,21674,21682,21697,21702,21713,21744,21792,21847,21873,21879,22201,22246,22254,22259,22352,22355,22373,22377,22382,22392,22396,22412,22414,22422,22473-22474,22504,22513,22535,22591,22622,22646,22658,22665,22676,22696,22708,22763,23143,23173,23182,23204,23217,23241,23266,23286,23335,23424,25439,25441,25664,25896,25954,26056,26160,26298,26361,26543,26714,26814,26993,26996,27090,27118,27154,27186,27219,27222,27231,27662,28155,28979,29147,29459,29695",
+    "qm_mask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+    "qmcharge": -2,
+    "qm_theory": "DFTB3",
+    "qmcut_angstrom": 10.0,
+    "dftb_telec_kelvin": 0.0
+  },
+  "process": {
+    "center_native_sander_exit_code": 0,
+    "plus_minus_0p01_native_sander_exit_codes": [
+      0,
+      0
+    ],
+    "one_energy_evaluation_per_snapshot": true,
+    "python_sander_setup": "failed at first setup: Fortran CMAP allocation assertion; no energy/force returned"
+  },
+  "energy_match": {
+    "native_0K_center_hartree": -718.134029878173,
+    "known_native_300K_endpoint_hartree": -718.134029878265,
+    "difference_hartree": 9.197265171678737e-11,
+    "difference_kcal_per_mol": 5.7713712692475385e-08,
+    "tolerance_kcal_per_mol": 0.05,
+    "passed": true
+  },
+  "active_gradient": {
+    "path_force_rows": 4165,
+    "path_force_finite": true,
+    "path_xyz_input_max_abs_error_angstrom": {
+      "minus": 1.2380316150029103e-07,
+      "plus": 1.2380316150029103e-07
+    },
+    "path_force_raw_projected_along_mode": {
+      "minus_0p01": -0.0012422657961922512,
+      "center": -1.7240365780921263e-05,
+      "plus_0p01": 0.0011430362549033537
+    },
+    "writer_source": {
+      "physical_force_sign": "path_force is physical force = negative energy gradient; dl-find.F90 passes -glob%xgradient to write_xyz",
+      "unit_conversion": "dlf_util.F90 write_xyz multiplies every vector by ANG_AU; raw path_force is physical force in Eh/A divided by AU_PER_ANG^2",
+      "raw_to_Eh_per_angstrom": 3.5710676725828128,
+      "raw_to_kcal_per_mol_angstrom": 2240.8788896886044,
+      "source_hashes": [
+        {
+          "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sander/dlfind_module.F90",
+          "sha256": "6b6542ed69435912fda6d25d1883bf4c05c34d26ed091467848f47f825fb55fb",
+          "bytes": 103646
+        },
+        {
+          "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dl-find.F90",
+          "sha256": "b7cf5bf4cf7c1e22d9e87a3ddb636abbdb3b62f5f53c8aeea747a9b57d848b0d",
+          "bytes": 72824
+        },
+        {
+          "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dlf_util.F90",
+          "sha256": "cab4e0358c48d587c4989248927b57fbbe7af873b5ff3d98a00d6a977545f5fa",
+          "bytes": 29945
+        }
+      ]
+    },
+    "local_finite_difference_at_ts": {
+      "step_angstrom": 0.01,
+      "dE_ds_hartree_per_angstrom": 4.500000159168849e-05,
+      "dE_ds_kcal_per_mol_angstrom": 0.028237928498799646,
+      "gradient_from_center_path_force_hartree_per_angstrom": 6.156651290375086e-05,
+      "note": "Small derivative; mdout energy print precision limits relative component agreement."
+    },
+    "curvature_check": {
+      "energy_curvature_hartree_per_angstrom2": -0.4174365403741831,
+      "force_curvature_hartree_per_angstrom2": -0.4259037522006495,
+      "relative_difference": 0.020283830013722706,
+      "agreement_within_5_percent": true
+    },
+    "observed_force_to_gradient_scale": -2240.8787970661792,
+    "observed_force_to_gradient_scale_units": "kcal mol^-1 A^-1 per raw path_force.xyz unit"
+  },
+  "nonlinear_0p1A_check": {
+    "finite_difference_dE_ds_kcal_per_mol_angstrom": 2.4246967081561115,
+    "pair_mean_offset_from_center_kcal_per_mol": -1.2968875802770514,
+    "interpretation": "Strong saddle curvature at this step; retain as downhill evidence, not force-scale calibration."
+  },
+  "unlaunched_prepared_pair": {
+    "offsets_from_ts_angstrom": {
+      "plus": 0.011,
+      "minus": 0.009
+    },
+    "reason": "Exact source-derived conversion plus \u00b10.01 A curvature agreement made additional evaluations unnecessary."
+  },
+  "source_hashes": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/system.prmtop",
+      "sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "bytes": 22279567
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/calculation/optimized.ncrst",
+      "sha256": "418f9ad173ba10bee9a59ef67f73eb9436c17e63fad2296b40dfa2d8ef3e7bf7",
+      "bytes": 2518964
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/calculation/path_tsmode.xyz",
+      "sha256": "0797c851e80928df31c61a88c6d34376b6d400ee1962ba91dfd97aa330ef2302",
+      "bytes": 31789506
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/calculation/dimer.mdin",
+      "sha256": "c5e63a8b0eb5039c266a0a8fa89fdbc4fbe619dddd05a804093206cfc3264592",
+      "bytes": 2616
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/calculation/path_force.xyz",
+      "sha256": "f1ed2fe82e39b57aa02a93eabf7adbf10cf4e4a64e86c8146391441961d84d44",
+      "bytes": 199934
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/calculation/dimer.mdout",
+      "sha256": "70dfb0ba3f1325bbca1b18abcf50f972229df96ea2e5f1a01a0f71927fc5ed18",
+      "bytes": 211230
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/fd_validation_0p01A/plus/dimer.mdout",
+      "sha256": "abeb2ef33d51f92f0aea676297afaecfeb3d7e5efe85ebc936fcb791a751b9cd",
+      "bytes": 211330
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/fd_validation_0p01A/minus/dimer.mdout",
+      "sha256": "b97d9d2c9796c30e4f823d2dfc76a5d56adc941fcc01c3bce9210b3988c8922b",
+      "bytes": 211332
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/fd_validation_0p01A/plus/path_force.xyz",
+      "sha256": "f65c118fec1bd084b08e9535a2beab1c0c7430ace1c35dd857dcaa468be93d85",
+      "bytes": 199934
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/fd_validation_0p01A/minus/path_force.xyz",
+      "sha256": "e7793ed4d9eea80150d172886b35ffc6a514c94dd808df45b0fdf9ccb0544b73",
+      "bytes": 199934
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/venv/bin/sander",
+      "sha256": "66323629c6d540a8038f8f8fe7557acf391f6797d88898844da708989de6a97e",
+      "bytes": 9934368
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/scripts/prepare_native_sander_gradient_probe.py",
+      "sha256": "da768c3f8adabdb5d0c8ebd83cca7dbc3f8cee95a861518919f9e6df31ab1610",
+      "bytes": 4512
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/scripts/probe_native_dftb_gradient_fd.py",
+      "sha256": "3c858edb2bbc66ebcee9ab25874cd21005a63eff20d6c87e54a2e32fb254e8c1",
+      "bytes": 10449
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/sander/dlfind_module.F90",
+      "sha256": "6b6542ed69435912fda6d25d1883bf4c05c34d26ed091467848f47f825fb55fb",
+      "bytes": 103646
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dl-find.F90",
+      "sha256": "b7cf5bf4cf7c1e22d9e87a3ddb636abbdb3b62f5f53c8aeea747a9b57d848b0d",
+      "bytes": 72824
+    },
+    {
+      "path": "/data/jpc/code/ambertools26/build_assets/src/ambertools26_src/AmberTools/src/libdlfind/src/dlf_util.F90",
+      "sha256": "cab4e0358c48d587c4989248927b57fbbe7af873b5ff3d98a00d6a977545f5fa",
+      "bytes": 29945
+    }
+  ],
+  "artifacts": {
+    "python_api_feasibility": "output_sander_python_probe_20261113/feasibility.json",
+    "native_center_run": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2",
+    "fd_0p01_directory": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/fd_validation_0p01A"
+  },
+  "passed": true,
+  "validation_sha256": "ed4ea5febef7b2b94746df8e980952140705b9e5a7e6b2784901dd315f623a65"
+}

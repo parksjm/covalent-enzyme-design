@@ -1,0 +1,204 @@
+{
+  "case": "water_qm_reoptimization",
+  "source_corrected_shell_case": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell",
+  "source_corrected_shell_restart_sha256": "f09eac265cc74f4105080ac3bf0900f19f257942c9e407272b22082e37464bc8",
+  "microstate": {
+    "ASP272": "ASP",
+    "ASP274": "ASH(HD2-OD2)",
+    "Thr233_N": "neutral NH2"
+  },
+  "system": {
+    "atoms": 104934,
+    "residues": 29781,
+    "total_charge_e": -0.004004946642281522,
+    "full_solvent": true
+  },
+  "qm_region": {
+    "mask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14580,19918-19921,19929-19935,19941-19945,20317-20319",
+    "charge": -1,
+    "real_atoms": 102,
+    "link_h": 8,
+    "electrons": 378,
+    "multiplicity": 1,
+    "link_cuts": [
+      [
+        [
+          112,
+          "CA"
+        ],
+        [
+          112,
+          "N"
+        ]
+      ],
+      [
+        [
+          113,
+          "C"
+        ],
+        [
+          113,
+          "CA"
+        ]
+      ],
+      [
+        [
+          186,
+          "CA"
+        ],
+        [
+          186,
+          "CB"
+        ]
+      ],
+      [
+        [
+          930,
+          "C"
+        ],
+        [
+          930,
+          "CA"
+        ]
+      ],
+      [
+        [
+          968,
+          "CA"
+        ],
+        [
+          968,
+          "CB"
+        ]
+      ],
+      [
+        [
+          970,
+          "CA"
+        ],
+        [
+          970,
+          "CB"
+        ]
+      ],
+      [
+        [
+          1314,
+          "C3"
+        ],
+        [
+          1314,
+          "C4"
+        ]
+      ],
+      [
+        [
+          1315,
+          "C2"
+        ],
+        [
+          1315,
+          "C3"
+        ]
+      ]
+    ]
+  },
+  "prior_comparison": {
+    "charge_equal": true,
+    "prior_charge": -1,
+    "target_charge": -1,
+    "link_cut_identities_equal": true,
+    "only_qm_atom_identity_change": {
+      "prior_only": [
+        "968:HD2"
+      ],
+      "target_only": [
+        "970:HD2"
+      ]
+    }
+  },
+  "movable_region": {
+    "radius_angstrom": 12.0,
+    "mask": ":21-24,27-34,43-56,61,70-83,108-125,128,141,143-170,181-192,199-201,211,215,222-230,232,277,279,736-738,750-758,760-765,783-784,786-787,790,792-805,929-934,946,948-974,1006-1019,1037,1039-1040,1042-1051,1053-1054,1068,1080-1097,1099-1100,1313-1316,1478,1576,1580,1639,1747,1920,1962,1988,2010,2566,2606,2779,2802,2942,2996,3012,3152,3327,3352,3473,3528,3602,3780,3927,4023,4079,4165,4361,4529,4575,4826,4859,4883,4917,4938,5030,5084,5555,5706,5709,5795,6265,6363,6445,6515,6578,6671,6687,6850,6903,7060,7157,7199,7321,7330,7526,7536,7677,7766,8090,8107,8123,8129,8194,8313,8357,8519,8530,8597,8602,8607,8626,8632,8643,8695,8801,8826,8842,8922,9270,9368,9381,9575,9670,9804,9845,9914,9980,10148,10174,10260-10261,10591,10594,10615,10630,10636,10664-10665,10669,10834,10881,10937,11029,11055,11088,11091,11108,11121-11122,11137,11141,11194,11330,11523,11543,11589,11597,11609,11615,11803,11818,11899,11942,11954,12165,12507,12521,12889,13192,13211,13712,13717,13743,13793,13989,14046,14449,14521,14601,14619,14694,14706,14847,14860,14951,15045,15096,15315,15611,15728,15741,15909,15945,16110,16175,16273,16299,16403,16467,16499,16512,16585,16632,16640,16651,16662,16670,16680,16700,16783,16919,16928,17069,17296,17370,17435,17448,17454-17455,17462,17486,17491,17497,17511,17515,17564,17586,17588-17589,17789,17827,17956,18028,18116,18240,18323,18450,18496,18756,18789,18959,19041,19216,19620,19919,20400,20505,21006,21023,21055,21288,21305,21318,21486,21674,21682,21697,21702,21713,21744,21753,21792,21847,21873,21879,22201,22246,22254,22259,22352,22355,22373,22377,22382,22392,22396,22410,22412,22414,22422,22473-22474,22504,22508,22513,22535,22544,22591,22622,22646,22658,22665,22676,22696,22708,22725,22763,22791,22856,22877,23143,23173,23182,23204,23217,23241,23266,23286,23335,23403,23424,23469,24037,24204,25057,25439,25441,25664,25896,25954,26056,26160,26183,26289,26298,26361,26425,26506,26543,26714,26814,26993,26996,27090,27118,27120,27154,27186,27195,27219,27222,27231,27390,27529,27662,28155,28170,28202,28784,28979,29147,29292,29459,29695",
+    "atom_count": 4662,
+    "residue_count": 558,
+    "audit_sha256": "51ffe0059cc34f49b44ad0fd9d904fd44bfd8adc5fa9e02e0395b3100e0f5842",
+    "near_qm_atom_omissions_at_start": 0,
+    "all_qm_atoms_movable": true
+  },
+  "periodic_embedding": {
+    "ntb": 1,
+    "igb": 0,
+    "qmmm_int": 1,
+    "adjust_q": 2,
+    "qm_ewald": 1,
+    "qm_pme": 1,
+    "qmcut_angstrom": 10.0,
+    "prior_box": [
+      114.915114,
+      114.915114,
+      114.915114,
+      109.471219,
+      109.471219,
+      109.471219
+    ],
+    "target_box": [
+      114.91513,
+      114.91513,
+      114.91513,
+      109.471219,
+      109.471219,
+      109.471219
+    ],
+    "max_box_delta_angstrom": 1.6000000002236447e-05
+  },
+  "geometry_before_qmmm": {
+    "d1": 3.0766500443068905,
+    "d2": 3.0670612893657276,
+    "d3": 2.9446238245450003,
+    "attack": 116.80698657815073,
+    "projected_phi": 97.92495321398242,
+    "scissile_CO_A": 1.262119413069291,
+    "scissile_CN_A": 1.3565245779634931
+  },
+  "method": "Amber Sander26 native DL-FIND / DFTB3-3OB-3-1 QM/MM",
+  "optimization": {
+    "algorithm": "LBFGS",
+    "tol": 0.0001,
+    "tole": 1e-05,
+    "maxcycle": 2000,
+    "restraints": "none"
+  },
+  "acceptance_gates": {
+    "process": "Sander return code 0 and normal final results",
+    "force_convergence": "DL-FIND reports 'Convergence reached' and 'Optimisation converged' before maxcycle=2000",
+    "proton_retention": "E-site HD2 remains within 1.25 A of ASH274 OD2 and OD2 is its nearest listed catalytic acceptor",
+    "neutral_thr_n": "Thr929 retains exactly H1/H2 at N-H <=1.25 A and no H3",
+    "geometry": "existing Tier A/B classifier and positive projected phi; scissile C-N remains <=1.6 A"
+  },
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/inputs/system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/00_system/ash272_solvated.prmtop": "9847ae89e972997aba3168221b6b313295f0f80d4628f58c59b0b293bd1a2662",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop": "da610f64ab59afa8803041c593e9e559aa94a9c4d3fe4eec8ac3d9404a013c7d",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/preparation_acceptance.json": "9e0cd152b607935f8334912c8661bd6a00085faa256e36f294b21579d229f1a4",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/06_qmmm_optimizations/replica_1_tier_A/preparation.json": "5450a9c768530965fc566dc031a416b81f43c8ae3228eb61dc7faf3f45943b73",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/06_ash272_comparison/06_qmmm_optimizations/replica_1_tier_A/minimize.mdin": "7ff4f8d62101ef501d9b7798be5e7e518972891536cc82e6d0d7cf91cc8125f8",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/preparation.json": "ad1ec455885378173a8d899dc3c4d32289246c26c3b4f2a219d5da7d84220906",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/acceptance.json": "976af8a2319aa0089da8e74c263f7d32bcad55e1c412d3fdcb80af5e7f3fe54f",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/status.json": "a990f52a9e56853c214c623f2a8a9c49cd6ed1893b6aa5ad965bde543f408aa9",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/process.json": "4335e5f4205a254a32615409079a3c79f6b795fb017f57fb91455390eee0bf74",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/optimized.ncrst": "f09eac265cc74f4105080ac3bf0900f19f257942c9e407272b22082e37464bc8",
+    "/data/jpc/code/ambertools26/venv/bin/sander": "66323629c6d540a8038f8f8fe7557acf391f6797d88898844da708989de6a97e",
+    "/data/jpc/code/ambertools26/venv/lib/libdlfind.so": "273996da3b1136c60d76b84263f7022f1d58a8f45b0124c45288fa45cf852fc8",
+    "/data/jpc/code/ambertools26/venv/lib/libsander.so": "50c910d8465481a1b904403b81fa8e17455c6ff43f233219af66e9957e028af5",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/prepare_and_run_water_qm_qmmm.py": "0f61d96f0e345447c20e7390ddb8c921ed2188ee707e3df9e81e035b721f6f2e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/audit_water_qm_shell.py": "f4d1e3a0d9f7e0cd9199b3662cfea78f7a5db585eae586cfaeb0d9577d6a1e69",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/shell_audit_water_qm.json": "51ffe0059cc34f49b44ad0fd9d904fd44bfd8adc5fa9e02e0395b3100e0f5842",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/run.sh": "949bd0109f489a1df7195573040698b348246f56a41094099aa827616e60be0b",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/starting.ncrst": "f09eac265cc74f4105080ac3bf0900f19f257942c9e407272b22082e37464bc8",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/water_qm_reoptimization/minimize.mdin": "45e70a7602b29d684e383c61be0a051bc8d1ea7e5232eb821cd46bbf1f16682e"
+  },
+  "status": "prepared; launch follows in tmux",
+  "original_starting_sha256": "f09eac265cc74f4105080ac3bf0900f19f257942c9e407272b22082e37464bc8",
+  "starting_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/optimized.ncrst"
+}

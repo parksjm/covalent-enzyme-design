@@ -1,3 +1,1818 @@
+## CURRENT — parallel NEB spacing tests running on violet, 2026-11-19
+
+Four native paths now run concurrently in the existing
+`09_water_relay_acylation/04_neb/spacing_tests/` directory:
+01 uniform24 L-BFGS, 02 uniform48 L-BFGS, 03 adaptive24 L-BFGS and
+04 uniform24 CG. All share the retained cycle268 source band, the same
+DFTB3/3ob charge−1 QM102/H54/eight-link setup and 4,662-atom 12 Å movable
+region. Endpoints/exterior and tolerances are unchanged. The three L-BFGS
+trials are primary; CG has only a 1,750-evaluation diagnostic budget.
+See the comparison README for exact numerical changes and explicit shared-H
+review of one interpolated48-image seed. No chemical restraints were added.
+
+Each native engine and VMD exporter runs in its own recorded tmux session.
+Comparison monitor `nyl12_neb_spacing_comparison_20261119` writes
+`spacing_tests/plots/comparison.png` and current/history JSON/CSV. Portable
+movies publish beneath each trial's `progress/latest/vmd/` after a
+coherent native band is captured. Laptop pull filters now include current
+trial artifacts and exclude accumulated raw/history data; recopy the script.
+The original NEB remains running. New profiles are very early and can be
+high-energy; improved convergence and a reliable barrier are not established.
+
+Root verification: 50 focused tests passed, Ruff/shell/whitespace checks pass.
+Measured new-code coverage is85–92%; preparation recipe90%. No dependencies
+installed. Initial combineduv collection lacked matplotlib; existing analysis
+Python plus existinguv test tools resolved that environment mismatch.
+Next compare forces/reset frequency/chemical gaps and work at50/100/250cycles,
+not maxima alone. Actual native startup mapping agrees within 2.29e-7 Å for all four trials.
+Separate `startup_precision_review.json` records accept mapping at 1e-6 Å;
+original stricter 1e-7 diagnostic failures remain preserved. All four portable
+movies have published. This is separate from force/chemical acceptance. No azalea work is authorized
+while its outage is handled by the sysadmin.
+
+## CURRENT — NEB energy-profile evolution inspected, 2026-11-19
+
+The native ASP272/ASH274 relay-acyl NEB remains running on violet. A frozen
+151-cycle snapshot and reproducible plotting script are in
+`09_water_relay_acylation/04_neb/plots/` (under the existing ASH274 campaign).
+`neb_evolution.png` overlays selected profiles and plots every completed
+iteration's maximum and native gradient/target ratios. The maximum changes
+from 52.05 to 40.97 kcal/mol; the last 20 cycles decrease by 6.31 kcal/mol.
+A large intervening excursion approaches 78 kcal/mol. At cycle 151, maximum
+gradient is 172.73 times target and RMS gradient is 1.181 times target.
+The band is still evolving; convergence and a TS barrier are not established.
+
+Subsequent diagnosis found repeated automatic DL-FIND kink repairs, not SCC
+failure. In the installed Cartesian NEB implementation, bends above 90 degrees
+trigger interpolation between neighboring images. After resets, maxima jump
+35.08→82.74 kcal/mol (244→245) and 32.83→75.15 (269→270). Saved geometry also
+shows a stretched transferring proton at the high-energy repaired image.
+At cycle 295 the maximum is 54.67 kcal/mol, with maximum gradient 238.53 times
+target. Local relaxation is repeatedly interrupted; sustained convergence is
+not established. Evidence and installed-source hashes are saved in
+`04_neb/plots/convergence_diagnosis.json` and the recent-band geometry diagnosis.
+The run remains unchanged. Next priority is a bounded test of improved band
+handling near images 9–10, preserving endpoints, Hamiltonian and the 12 Å shell.
+The plot job completed in tmux; engine and monitoring settings are unchanged.
+Existing laptop pull filters include the compact plots and scripts.
+
+Azalea is back online; its outage investigation is assigned to the sysadmin.
+No further azalea diagnostics or system changes are requested. Laptop pull now
+uses violet's existing mirrored files without triggering an azalea refresh.
+
+## CURRENT — exact legacy07 VMD viewer repaired, 2026-11-19
+
+The user was opening `07_ash274_comparison/07_water_to_asp272_ti1_like/`
+`vmd_progress/view_path.vmd`, not the newer09viewer. That exactfile and its
+exporter are now corrected. Rootcauses: PRO1312in MMcarbonselection, partitioned
+representations dropping C–H/C–N connections, oldfixedcolors, invalid shared
+labelargument/return assumptions, and improperly nested camera matrix values.
+Earlier headless tests were too permissive; new checks follow actual VMD API
+contracts. Full visible Element Licorice plus MMcarbonorangeoverlay preserves
+all146retained displayed chemicalbonds. PRO1312rendered0;54Hdynamicbonds use
+resolution12. Seven07-specific distances plus BDangle have individual offsets.
+Current09viewer also received a view-only refresh; no historical coordinates
+were rebuilt or changed. Movie/topology hashes remain unchanged.
+
+Exact07flatpull verified all10checksums; current09portablepull verified25root+
+10VMDchecksums. Rootfocusedregression17tests,Ruff/shell/whitespace passed.
+Originalfiles/sources are retained in07/history/viewer_*; backups excludedfrom
+ordinarypulls. Existing07pull block delivers the correctedfile at the same
+laptop path. Source in a fresh VMDsession to clear old duplicate views.
+ActualGUIrendering remains unavailable here; tests check realcommandcontracts,
+selections, bonded-endpoint coverage, camera math and delivery, not pixels.
+
+Only the owned NEBinspectionmonitor was paused during sharedcode changes and
+restarted at its canonicalprogress_job. ScientificSander was never signaled.
+The ASP272/ASH274NEB still uses the protocol below. OfficialAPIevidence is
+recorded in viewer manifests and the actionjournal (UIUCVMDmanual/source).
+
+## CURRENT — VMD display corrected; ASP272/ASH274 NEB launched, 2026-11-19
+
+User requested repair of the VMD script and NEB refinement of the latest path.
+The stray fragment was protein PRO1312 incorrectly included by an off-by-one
+substrate display selection. The renderer now derives the bonded P6 substrate
+component (actual residues1313–1316), uses explicit stripped-atom mapping,
+centers only the visible active-site atoms, and defaults to six distances plus
+the OG1–C–O Bürgi–Dunitz angle. Dynamic bonds retain the agreed thresholds.
+The transferring H is20318, not originalHG1 (currently on QM water). Re-sourcing
+safely replaces only the same-bundle molecule/labels; unrelated objects remain.
+
+Corrected coordinate-driving inspection is `progress/latest/` → update000089
+in the same `09_water_relay_acylation` campaign. Movie/topology coordinates were
+reused unchanged; all25root+10VMD portable manifest entries verified in a real
+local rsync copy. Headless Tcl checked reload/camera/selection behavior; VMD GUI
+is unavailable here, so no pixel-render claim is made.
+
+**Native NEB launched:** tmux `nyl12_ash274_acyl_neb_20261119`, calculation
+`qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/calculation/`.
+Runnable launcher `04_neb/launch.sh`; input `calculation/minimize.mdin`; job
+metadata/logs `04_neb/job/`. Same periodic0K DFTB3/3ob,102realQM/54realH,
+eightlinks,charge−1,ASP272/ASH274 and neutral betaN termini; all4,662atoms
+in the original complete-residue12Å region remain movable for interior images.
+QM-weighted image distances do not freeze MM forces. Endpoints are frozen
+standard NEB endpoints; the original exterior remains frozen. No extra reaction
+or positional restraints are included.
+
+The band has24regularimages plus one disabled climbing slot (`neb_nimage=25`),
+13trace-derived controls, `maxstep=0.05`bohr, `maxcycle=16000` and the installed
+adapter's112,000energy-evaluation budget (7×maxcycle). Source50frames are38
+force-converged endpoint structures plus12accepted checkpoints bridging
+window025. Exact unbiased E–S and acyl endpoint ancestry, all H identities,
+native slot placement, predicted24images and23midpoints passed preflight.
+No control was dropped. Native alignment changes the QM atoms by ≤0.00390Å.
+An earlier draft trace-order error was caught before any engine launch; that
+rejected preparation is under `preparation_history/neb_seed_order_rejected_20261119/`.
+
+**Live monitor launched:** `nyl12_ash274_neb_progress_20261119`, records in
+`04_neb/progress_job/`. It pairs complete native energy reports with verified
+`nebpath.xyz` bands and publishes `04_neb/progress/latest/` movie/energy/distance/
+coordination artifacts. Numbered native NetCDF restarts remain unusable and
+are not used. Native Sander input was accepted and energy evaluation started;
+launch/startup is not NEB convergence or a verified transition state.
+
+The laptop pull script now includes this latest NEB inspection and current
+mdin while omitting raw native/history files. Refresh the laptop script copy.
+Focused root verification:73tests pass; Ruff, shellsyntax and whitespace pass.
+Separate preparation tests32pass, newhelpers92%coverage; VMD tests14pass,
+97%coverage; monitor/helper coverage93–96%. No new dependencies installed.
+
+## Previous checkpoint — acyl-enzyme retained; reverse scan complete, 2026-11-19
+
+Both overnight jobs exited 0. The independent acyl-enzyme survived zero-bias
+DFTB3/MM optimization (106 steps, max active gradient component 0.11697
+kcal/mol/Å; gate 0.12). OG1–C=1.34456 Å, C–Nleave=3.28712 Å and C–O=1.24229 Å.
+Thr-NH2, neutral departing amine, intact QM water and ASH274 proton are retained;
+no unassigned/shared QM H or changed spectator-H counts were detected.
+This is a force-converged endpoint candidate; curvature is not verified.
+
+All 36 reverse windows individually force-converged, followed by a zero-bias
+E–S release (38 steps; OG1–C=3.17092 Å, C–N=1.35691 Å). The acyl endpoint is
++11.06 kcal/mol relative to this returned E–S. Maximum sampled physical energy
+is window_020, +50.89 kcal/mol relative to returned E–S; its bias is only
+0.000108 kcal/mol. This is NOT a verified TS barrier, MEP or PMF. Window24→25
+has an18.59kcal/mol energy drop with a proton-occupancy change and needs local
+path refinement. Individually converged windows do not prove path continuity.
+
+The tracked reacting H is original water H20318; original HG1 remains on water
+at both endpoints and the peak. Thr Nalpha remains near NH2. Thus this scan
+has not demonstrated the proposed Nalpha–water–leaving-N relay. The high
+sampled maximum remains a concern for this branch.
+
+No campaign job remains running. Next: inspect/refine window24→25 and assess
+window020 as a saddle candidate with curvature/downhill tests. Preserve the
+new product endpoint; a stable TI1 is not required. All evidence and the final
+VMD movie/plots are in the same `09_water_relay_acylation/` campaign described
+below; compact results are `overnight_summary_20261119.json`. The laptop pull
+includes `progress/latest/vmd/view_path.vmd` and the final accepted-state plots.
+
+## Previous checkpoint — acyl-enzyme endpoint workflow launched, 2026-11-18
+
+User authorized the revised product-connected mechanism plan. A stable TI1
+is optional; success requires credible reactant/product connectivity and
+verified transition state(s). See the top of `docs/NYL12_MECHANISM_ROADMAP.md`.
+
+The existing-MD relay screen is complete: 60,000 frames, 18,958 Tier A/B with
+positive signed phi, 51 also passing the unchanged native-Thr gates, and zero
+preorganized one-water Nalpha–water–leaving-amide-N bridges. No candidate or
+protonation state was silently promoted. Full counts, controls and limitations
+are under `09_water_relay_acylation/00_screen/` in the ASH274 campaign and in
+manuscript Methods/Results. This is not proof that a reorganized/multiwater
+relay cannot form.
+
+**Actual launched work:** tmux `nyl12_acyl_endpoint_20261118`, launcher
+`qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/02_acyl/job/`.
+Entry point `scripts/run_relay_acyl_campaign.py`; explicit inputs in the
+campaign `case.json` and `protocol.json`. It starts an independent balanced
+acyl-enzyme guess from the already accepted water-QM E–S source. QM102,
+54 real QM H, eight link H, charge −1, ASP272/ASH274 and neutral beta-N termini,
+periodic DFTB3/3ob, electronic temperature 0 K and the original complete-residue
+12 Å/4,662-atom movable selection are unchanged. No new classical acyl/TI1
+parameters or E–S MM minimization were used. No positional restraints are added;
+the original frozen exterior is explicit.
+
+The initial ideal planar-ester guess clashed. The retained bounded 285-position
+leaving-fragment search plus 24-value acyl torsion sweep yielded a guess with
+**zero severe contacts**, maximum heavy/H displacements 2.172/2.366 Å, and
+unchanged protein/water-oxygen coordinates. The selected acyl torsion is +15°
+about actual bonded atoms C19920–C19919. Its acute source-like ester angle
+83.97° must relax; the guess is not an optimized endpoint. All failed guesses,
+sources, scores and the final construction audit are retained in
+`01_endpoint_inputs/`. TIP3P's H–H constraint is excluded only from the temporary
+chemical graph; the topology itself is unchanged.
+
+The persistent script first allows 1,500 steps of product-seed preoptimization
+with three explicit harmonic terms (OG1–C, C–Nleave, leaving-N H coordination).
+It then removes all terms for up to 2,500 steps. Only a force-converged, fully
+audited acyl-enzyme/amine endpoint triggers 36 reverse asynchronous windows
+(1,500 steps each), then a zero-bias E–S release. The single scalar couples
+attack, scission and label-invariant OH/Nleave-H occupancy; Thr Nalpha is free.
+There is no fixed TI1 proton inventory. An unintended endpoint or force/process
+failure stops the queue explicitly in `campaign_status.json`; no TS or barrier
+is certified automatically. Curvature/downhill verification remains a next gate.
+
+Live inspection session: `nyl12_acyl_progress_20261118`, launcher `progress_job/`.
+It exports accepted-only plots and the water-retaining VMD movie to
+`progress/latest/` in the same campaign. `scripts/pull_nyl12_inspection.sh`
+includes compact reports and latest inspection files, excluding raw native
+restarts/evaluations and full MD. Check both launcher and scientific records:
+launch alone is not convergence or chemical acceptance.
+
+## CURRENT — D returned to E–S; mechanistic objective revised, 2026-11-18
+
+Read the controlling revision at the top of `docs/NYL12_MECHANISM_ROADMAP.md`.
+The user asked why/whether TI1 is needed and requested a literature review.
+The revised success criterion is a credible product-connected hydrolysis path
+and verified transition state(s), **not mandatory identification of a stable
+tetrahedral minimum**. No new calculations were launched during this review.
+
+Both D jobs completed normally. The zero-bias release took 249 accepted steps
+and returned to E–S (OG1–C 3.211 Å, C–O 1.264 Å, C–N 1.356 Å). Thr N is NH2;
+water H1 binds OG1 and original HG1 binds water. ASH274 keeps its proton.
+`pilot/point_D/unbiased_release/release_assessment.json` and `process.json`
+record the force/chemical outcome. The finished DFT/xTB reference is under
+`d_reference/{results.json,gradient_projections.json}`: both electronic methods
+locally oppose further attack at fixed occupancy in this geometry. This
+neither proves absence of TI1 nor validates total periodic DFTB3/MM globally.
+
+New primary references R44–R48 are saved in manuscript references/BibTeX.
+FAAH calculations explicitly released an early proton-transfer structure back
+to reactants yet found complete acylation without metastable intermediates;
+hASNaseIII instead found a stepwise path. Nitrogen inversion and proton access
+to the leaving amide N must be included. NylC maturation and mature hydrolysis
+remain separate. The current fixed high-q_occ attack pilot did not test a full
+cycle in which Thr-NH3+ donates a proton onward and returns toward NH2.
+
+Coordinate audit (`analysis/nyl12_mechanism_evidence_20261118/acid_reach.json`)
+finds Nalpha–leaving-N 5.80 Å in E–S and 5.23 Å at D, incompatible with a
+ready direct transfer. D's QM water is closer to the leaving N (O–N 3.35 Å,
+nearest H–N 2.60 Å), motivating evaluation of a reorganized relay. A different
+water role does not reinstate the earlier fixed-pocket pseudo-ring assumption.
+Nyl12 F113 lacks NylC Y146's side-chain OH while retaining the backbone NH;
+do not assume the same proton-delivery mechanism or an automatic F113Y rescue.
+
+Next work is **proposed, not launched**: screen existing equilibrated models
+for a leaving-group proton network, prepare one balanced acyl-enzyme endpoint,
+and test an asynchronously coupled attack/cleavage/proton-transfer path without
+a required TI1 minimum. Check deacylation/TS connectivity before design/PMFs.
+
+## Previous checkpoint — pilot complete; D release and sparse reference launched
+
+User authorized the next steps. All four occupancy-pilot points reached the
+unchanged maximum biased-gradient criterion ≤0.12 kcal/mol/Å. Actual OG1–C
+distances A–D are 3.1403/2.6623/2.2266/1.8537 Å; physical energies relative
+to original E–S are +17.052/+20.633/+28.416/+42.763 kcal/mol. All retain
+N-terminal H1/H2/HG1, no OG1 proton, intact WAT1576 and the ASH274 proton.
+Point D is pyramidalized (carbonyl out-of-original-neighbor-plane height
+0.278 Å), but fails the original TI1 gates: OG1–C >1.75 Å and C–O
+1.292 Å <1.30 Å. It is an attack-like endpoint, not an identified TI1.
+Phe113 N–substrate O worsens from 3.161 to 4.110 Å; Asn186 ND2–O remains
+short (2.837 Å). The physical profile is uphill; it is not a barrier or PMF.
+Reproducible audited evidence: `occupancy_callback_pilot/endpoint_audit/`.
+
+One unbiased release is launched from D in tmux `occupancy_D_unbiased_release`.
+Entry point: `occupancy_callback_pilot/release_endpoint.py`; output:
+`pilot/point_D/unbiased_release/`; launcher: `job_D_release/`. Both harmonic
+springs are exactly zero, with total=physical energy checked at every saved
+state. Same QM102/−1, 54 real QM H, 4,662 movable atoms, periodic DFTB3/MM,
+0 K electronic temperature and force criterion. Original D is retained.
+`release_assessment.json` will classify the final geometry and proton inventory;
+Hessian verification remains separate. Its provisional geometric classifier
+is not a replacement for the original stricter TI1 gates quoted above.
+No follow-up path or sampling launches automatically.
+
+Live release export is launched in tmux `occupancy_D_release_progress`
+(`job_D_release_progress/`), using `monitor_release.py --watch`. It writes
+the same accepted-state conventions under
+`pilot/point_D/unbiased_release/progress/`: energy/coordinate plot and
+`vmd/view_path.vmd`. All 54 QM H and WAT1576 are retained, with dynamic
+bonds, visible labels and standard substrate colors. The pull script includes
+these small products and endpoint/reference reports, excluding native call
+restarts, checkpoints, scratch and point-charge arrays.
+
+One parallel sparse method check is launched in tmux
+`occupancy_D_method_reference`, launcher `job_D_reference/`, results
+`occupancy_callback_pilot/d_reference/`. It uses this exact N3/OG0 D geometry,
+110 QM/link atoms and 104,824 adjusted MM charges, for
+ωB97X-D/def2-SVP Force (8 CPU/32 GB), then GFN2-xTB gradient (1 thread).
+It is a finite nonperiodic embedded-QM diagnostic, **not full periodic DFT/MM**.
+Exact atom/charge/coordinate checks precede the electronic calculations.
+Saved-gradient projections include attack/proton occupancy and restoration
+of Phe113/Asn186 oxyanion contacts at fixed occupancy/attack. No new DFT
+optimization or broad campaign was started. Await the release chemistry and
+these matched local derivatives before prescribing another reaction path.
+
+## Previous checkpoint — cutoff discontinuity diagnosed; pilot resumed in place
+
+The user authorized diagnosis and repair. Retained final trials establish an
+ordinary **MM 10 Å cutoff** discontinuity, rather than an SCC failure or an
+occupancy-derivative defect. Pair 11272 OE2(GLU754)–11330 O(GLN757) crosses
+10 Å between native calls 283/284. Observed ΔE is −0.0010040 kcal/mol for a
+4.77×10⁻⁹ Å maximum move; analytic gradient work is +3.10×10⁻⁸ kcal/mol.
+The screened-Coulomb plus LJ pair-removal prediction (−0.0009792 kcal/mol)
+and equal/opposite force jumps agree within printed energy/force precision.
+QM cutoff membership is unchanged. Evidence/scripts:
+`occupancy_callback_pilot/line_search_diagnosis/`.
+
+The repair replaces SciPy's smooth-energy Wolfe line search with the already
+installed DL-FIND gradient-based L-BFGS step routine through a guarded ctypes
+binding (`src/nyl12_covalent/dlfind_lbfgs.py`). Native units are bohr and
+hartree/bohr; per-atom displacement is capped at 0.05 Å. Nonpositive secant
+curvature triggers an explicitly logged history reset. Chemistry, QM102/−1,
+12 Å/4,662-atom movable region, electronic settings, both springs, cutoff,
+Hamiltonian and 0.12 kcal/mol/Å force criterion are unchanged. Energy remains
+monitored; this change does not smooth or silently alter the physical model.
+The installed-library quadratic test passed; 43 focused tests passed overall,
+with 95% wrapper line coverage (continuation runtime coverage unmeasured).
+
+Continuation launched in tmux `occupancy_attack_pilot_continuation`; entry point
+`occupancy_callback_pilot/resume_pilot.py`, launcher `job_pilot_continuation/`.
+It starts `point_A/accepted_00158_final.ncrst`, appends evaluation numbering
+from 285 and accepted iteration numbering from 158 in the **same point_A**,
+then gates the existing B–D sequence on force convergence. Original terminal
+records move to `point_A/history/line_search_stop/` and
+`pilot/history/line_search_stop/`; immutable continuation source/protocol
+records are in `pilot/continuation_001/`. Check actual launcher/status and
+scientific records before reporting convergence; launch alone is not proof.
+
+**Verified repair outcome:** A passed the unchanged force gate after three
+additional steps (accepted iteration 161; maximum 0.109355 kcal/mol/Å).
+Its N retains H1/H2/HG1, OG1 is deprotonated, WAT1576 retains both H, and
+ASH274 retains HD2. These assignments describe the **biased** endpoint, not an
+unbiased minimum. B has started and shortened OG1–C toward its 2.60 Å target.
+Monitor `occupancy_pilot_progress_continuation` now refreshes the same
+`pilot/progress/` plots/movie; records are in `job_progress_continuation/`.
+The pull script includes diagnosis, continuation protocol and archived stop
+records while excluding full native-evaluation/snapshot binaries.
+
+## Previous checkpoint — pilot stopped at point A; diagnosis required
+
+ETA inspection found the pilot had stopped after 158 accepted iterations and
+284 native evaluations (about 20 min). L-BFGS-B reported status 2, `ABNORMAL`;
+the maximum active biased-gradient component was 0.277869 kcal/mol/Å versus
+the 0.12 gate. Native process/SCC checks passed. The outer launcher exited 0
+because the runtime records scientifically incomplete termination explicitly:
+`occupancy_callback_pilot/pilot/completion.json` says `incomplete`, stopped A.
+Points B–D did not run. Final accepted coordinates and all native trial calls
+are retained. Do not mistake launcher exit 0 for convergence or restart the
+whole pilot unchanged. The next task is a bounded line-search/energy-gradient
+consistency diagnosis using retained evaluations, then an explicitly recorded
+continuation from the final accepted A snapshot. No force tolerance, chemistry
+or Hamiltonian has been changed. A completion ETA is not yet defensible.
+
+## Previous checkpoint — analytic callback verified; diagnostic pilot launched
+
+User authorized steps 1–2 immediately and step 3 after readiness. Steps 1–2
+are complete: the real optimizer receives the occupancy bias energy and
+analytic force, and saved three-state reference gradients have been analyzed
+without new QM calculations. Read the current decision at the top of
+`docs/NYL12_MECHANISM_ROADMAP.md` before continuing.
+
+Callback proof: `qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/occupancy_callback_pilot/callback_proof/scientific_acceptance.json`.
+All seven gates passed; expected/applied initial bias 0.20 kcal/mol, four native
+evaluations, two intentionally bounded optimizer iterations. This verifies
+coupling, not convergence of a molecular stationary point. Native PMD inputs
+remain unsupported in this DL-FIND minimization mode; no Amber installation
+was changed. The adapter and coordination tests passed (31 tests; library
+coverage reported 100%; runtime/proof coverage unmeasured).
+
+Step 3 is launched in tmux `occupancy_attack_pilot`, with launcher records
+`occupancy_callback_pilot/job_pilot/`. Runtime entry point:
+`occupancy_callback_pilot/run_pilot.py`; serial output:
+`occupancy_callback_pilot/pilot/point_A` through `point_D`.
+Targets: q_occ=2.10; independent OG1–C distances 3.1251784/2.60/2.10/1.60 Å.
+Same QM102/−1, 54 real QM H, 4,662 movable atoms, periodic Hamiltonian and
+0 K electronic temperature. Each point stops at force/SCC failure or budget;
+force acceptance is max active biased-gradient component ≤0.12 kcal/mol/Å.
+All source copies, hashes, accepted iterations and raw native calls are retained.
+Inspect actual `job_pilot/status.json`, stage acceptance and completion records;
+launch success alone does not establish chemistry or convergence.
+
+Accepted-step inspection products are in `occupancy_callback_pilot/pilot/progress/`:
+`accepted_progress.png` (physical/total energies relative to the first pilot
+physical energy; absolute bias also shown), `accepted_iterations.csv`, and
+`vmd/view_path.vmd` with `path.parm7`/`path.dcd`. Frames retain WAT1576 and
+come only from accepted initial/every-25/final snapshots, not line-search
+trials. The pull script includes these named small products and gradient
+analysis outputs, preserving workstation/laptop layout and excluding native
+evaluation restarts/scratch. Exporter entry point: `monitor_progress.py --watch`.
+It is launched in tmux `occupancy_pilot_progress`, with `job_progress/` records,
+and refreshes every 120 s until the pilot terminates (48 h maximum). The real
+two-frame export smoke check and all ten bundle checksums passed. Duplicate
+label additions were removed; bonds/angles are explicitly visible. Initial
+exporter sources were retained before that presentation-only correction.
+
+Saved-gradient evidence: `reference_checks/gradient_analysis/acceptance.json`,
+`results.json`, `projections.csv`, `directional_derivatives.png`. DFT/xTB
+agree that attack is locally uphill along the tested directions, but disagree
+on some proton-transfer slopes. No fast Hamiltonian is newly validated; native
+total QM/MM slopes and embedded-QM-only slopes are kept separate.
+
+## Previous checkpoint — occupancy tasks complete; native CV integration issue
+
+All 25 grid-point proton inventories are audited (54 real QM H each), in
+`08_activation_attack_grid/proton_occupancy_audit/`. The single authorized
+unbiased release finished with force/SCC convergence and returned to E–S by
+Thr/water proton exchange; no activated minimum was retained. Its native
+energy is 4.7757 kcal/mol below the original E–S reference and geometry is
+Tier B. Source, optimized coordinates, assessment and 13-frame VMD movie are
+under `08_activation_attack_grid/diagnostic_activation_release/` (`vmd/view_optimization.vmd`).
+
+The label-invariant coordinate and analytic derivative are prepared in
+`src/nyl12_covalent/proton_coordination.py` (12 tests, 100% line coverage;
+agrees with all 25 independent audit values). **Do not use native NFE/PMD
+inputs with this Sander/DL-FIND minimization:** the bounded preflight found
+zero applied bias instead of 0.20 kcal/mol and no PMD initialization. The
+scientifically rejected integration test and corrected half-k assessment are
+under `occupancy_coordinate_preflight/attempt_2/`; the coordinate definition
+and analytic implementation metadata are in its parent. The installation was
+not changed, and no new reaction path was launched. Next integrate the analytic
+coordinate into a supported energy/gradient callback and check the saved DFT
+reference gradients, following the current roadmap.
+
+The two reference continuations have now finished normally (three total
+geometries including E–S). Raw and relative energies are in
+`08_activation_attack_grid/reference_checks/results.json`; gradient analysis
+and scientific method acceptance remain pending. The earlier gated release
+queue was not promoted; the new diagnostic was separately authorized.
+
+## Previous checkpoint — grid complete; references resumed
+
+The five rows and 25 reported grid points finished; no accepted TI1 was found.
+Rows 1–4 ended at OG1–C 1.887/1.886/1.860/1.783 Å and physical relative
+energies +28.34/+32.71/+36.62/+54.58 kcal/mol. Row 5 instead exchanges Thr
+HG1 with water H1, leaving Thr–OH intact; its lower-energy points are
+rearranged reactant states. Do not interpret the nominal high-q coordinate
+as complete Thr-N protonation. No unrestrained release ran.
+
+The E–S benchmarks completed, but selected-state reference exports failed on
+Amber's 20-character executable field. The short-wrapper/template repair
+passed an actual Sander export preflight. `ash274_reference_continuation`
+runs only the activated and attack DFT/xTB comparisons in parallel, retaining
+all completed E–S and DFTB3 data. Entry point:
+`08_activation_attack_grid/reference_checks/continue_references.py`;
+launcher: `reference_checks/job_export_repair/`. The final 25-point plot/movie
+refresh was also submitted (`job_final_export/`). Method interpretation and
+candidate releases remain pending. Read the dated grid result at the top of
+the mechanism roadmap before further calculations.
+
+## Previous checkpoint — activation grid and reference launches
+
+No calculation is active in the completed 25-window water-relay path. It
+transferred both intended protons but did not meet the tetrahedral endpoint
+gate: OG1–C = 1.852 Å, relative physical energy +54.0235 kcal/mol, monotonically
+increasing. The conditional unbiased release did not run. This branch leaves
+both Asp residues protonated and Thr N neutral; it does not rule out a
+Thr-NH3+/oxyanion intermediate or a route without a persistent TI1 minimum.
+Read the controlling dated decision at the top of
+`docs/NYL12_MECHANISM_ROADMAP.md`. The bounded 2D activation/attack grid and
+sparse reference checks are authorized and started. Five sessions
+`ash274_grid_row_1` through `ash274_grid_row_5` run independent q rows under
+`qmmm/pa6_flipped_model30/07_ash274_comparison/08_activation_attack_grid/`.
+The protocol contains 25 reported grid points and 135 bounded preparation/
+continuation stages, with QM102/charge −1, 4662 movable atoms, periodic
+electrostatics and two independent restraints per stage. See each
+`job_row_N/` and `row_NNN/row_status.json` for actual process state; the
+immutable prepared protocol is intentionally not rewritten during execution.
+`ash274_grid_progress` refreshes `progress/grid_heatmap.png` and per-row
+`progress/row_NNN/view_path.vmd` every 120 s. At least one initial frame was
+successfully exported; these rows are separate scans, not one reaction movie.
+`ash274_grid_reference_queue` now runs the corrected bounded comparison
+chain: E–S first, then at most three selected grid geometries, with up to two
+eight-core DFT workers. Its finite nonperiodic full-PC embedding is distinct
+from the periodic grid Hamiltonian. Source copies and hashes are under
+`reference_checks/source_snapshot/`; launcher records are in
+`reference_checks/job_queue/`; new results are under
+`reference_checks/evaluations/`. The E–S DFTB3 reference finished and direct
+Gaussian Force started. Analytic-gradient projection and scientific method
+acceptance remain pending.
+
+The earlier Sander/EXTERN E–S job returned process exit 0 despite Gaussian
+failing at its field-query centre limit; its zero-atom FCHK and EXTERNESCF
+are **rejected**. Do not use that job as a successful DFT reference.
+The corrected chain retains the exact 110 QM/link atoms and 104,824 adjusted
+MM charges (all non-QM atoms except eight link parents), runs Gaussian Force
+directly without the excessive `Prop=(Field,Read)` query block, and requires
+normal termination plus 110 atoms and 330 finite gradient values. Gaussian
+energies are corrected by its own logged point-charge self energy. Original
+setup failures remain preserved under `reference_checks/attempts/` and
+`reference_checks/es_seed/nonperiodic_full_pc/`.
+
+`ash274_grid_release_queue` waits for terminal grid rows and a root-reviewed
+qualitative method-comparison pass, then permits at most two candidate
+unbiased releases. An inconclusive comparison leaves releases pending;
+it is not silently promoted. No new intermediate or barrier is claimed.
+The complete water-relay result and provenance are recorded at
+the end of this handoff and in `manuscript/RESULTS_DRAFT.md`.
+
+## Previous checkpoint — water-in-QM E–S reoptimization, 2026-11-17
+
+The corrected-shell ASH274/ASP272 E–S DFTB3/MM optimization converged and
+retained Tier A geometry. Its mobile water 1576 forms a local
+Thr233 OG1–HG1···water O–H2···Asp272 OD1 hydrogen-bond arrangement in the
+endpoint, but not a bridge to Thr233 N or the substrate leaving nitrogen.
+The full geometry and input hashes are in
+`qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/water_1576_full_hbond_audit_final.json`.
+This single geometry does not establish occupancy or catalytic proton transfer.
+
+One water-in-QM reoptimization completed on violet in tmux
+`ash274_water_qm_reopt`, under sibling `water_qm_reoptimization/`. It started
+from the force-converged corrected-shell endpoint (SHA-256
+`f09eac265cc74f4105080ac3bf0900f19f257942c9e407272b22082e37464bc8`),
+with 102 QM atoms, charge −1, 378 electrons, eight unchanged link cuts and
+4,662 movable atoms in a complete-residue 12 Å region. The four additional
+boundary waters and zero starting-shell omissions are recorded in
+`shell_audit_water_qm.json`; the executable input, script and hashes are in
+`preparation.json`. Sander exited 0; DL-FIND converged at cycle 248. The
+endpoint retained Tier A E–S geometry (d1 3.100 Å, d2 3.063 Å, d3 2.959 Å,
+attack angle 116.44°, signed phi +98.75°). Thr OG1–HG1, both water O–H
+bonds, and ASH274 OD2–HD2 remained intact. The local Thr HG1···water O and
+water H2···Asp272 OD1 contacts remain oriented (1.932 Å/165.5° and
+1.730 Å/172.7°, respectively), while water O···substrate leaving N is
+4.107 Å. `water_1576_full_hbond_audit_final.json` and
+`scientific_water_assessment.json` give hashed geometry and separate gates.
+The generic `acceptance.json` contains a stale inherited initial water O···OG1
+distance; use `scientific_water_assessment.json` for the actual start/end
+comparison. This result supports one bounded water-assisted Thr activation
+and OG1 attack test toward TI1, with explicit proton inventory and an
+unrestrained endpoint release. It does not establish water occupancy,
+proton transfer or a complete relay to the leaving group.
+
+## CURRENT — bounded mechanism workstreams, 2026-11-16
+
+PROPKA 3.5.1 was found already installed; a three-frame Tier A protein-only
+screen completed in tmux without adding dependencies. See
+`docs/propka_asp_pair_pilot_20261116.md` and
+`qmmm/pa6_flipped_model30/09_propka_static_tier_a/screen_attempt1/` for
+methods, all four beta-site predictions, input hashes and limitations.
+The substrate-facing site E estimates vary with structure and do not
+consistently favor Asp272-COOH. This is a hypothesis screen, not a
+protonation assignment.
+
+The matched six-replica late Tier A persistence and three-replica candidate
+water-oxygen screen are in `docs/asp_pair_md_water_screen_20261116.md`.
+The water scan finished in tmux; per-frame event CSVs and 10 ps identity
+streaks are under `09_propka_static_tier_a/water_screen_attempt1/`.
+Oxygen proximity alone did not establish a hydrogen-bond relay; the
+inspected ASH274 Tier A frame has an OG1-HG1-to-water hydrogen bond but
+the water hydrogens do not point toward the Thr N terminus. Next inspect
+explicit hydrogen-bond geometry across candidate frames before selecting
+a follow-up QM/MM E–S snapshot.
+The two-leg hydrogen-bond scan subsequently finished in `hbond_job/` and
+`hbond_screen_attempt1/`. Among Tier A frames, complete
+OG1-HG1→water→Thr-N geometry occurred in only 1/238, 6/3886 and
+32/1677 frames across the three screened replicas; the longest
+same-water streak was three 10 ps samples. No Tier A frame had a
+complete two-leg bridge to the substrate leaving-group N. See the
+dated water-screen note for criteria and limitations.
+
+The two ASH274/ASP272 300 K MD replicas completed 100 ns each with process
+exit 0. A matched six-replica Tier A and Asp-pair analysis completed in
+`qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/`;
+its immutable inputs and tmux log are in `inputs/manifest.json` and
+`job_retry/`. The first analysis launch failed because the project `.venv`
+lacked MDAnalysis; the successful retry used the previously validated
+`enzyme-substrate-modeling/.pixi/envs/analysis` interpreter without adding
+a dependency. Tier A counts per 10,000 frames are ASP272/ASP274 37 and 238;
+ASH272/ASP274 3886 and 1724; ASP272/ASH274 1677 and 0. Site-1 median
+closest Asp-pair O–O distances are 4.89/4.90, 2.56/2.56, and 2.73/2.65 Å,
+respectively. These are replica-specific associations, not pKa estimates or
+proof that either Asp is protonated in the enzyme. Inspect time blocks,
+substrate register, proton geometry, and water before selecting follow-up
+snapshots. The Asp-pair comparison is the current E–S decision gate.
+
+The direct-route DFTB3/MM dimer converged at cycle 99. Its block-LOBPCG
+low-mode calculation also finished, but approximate eigenvalues −0.227 and
++0.033 Eh/(Å² amu) have residual norms 0.051 and 0.061, versus the 10⁻⁴
+target. Thus Hessian index one is **not verified**. The near-identical prior
+candidate has downhill paths toward E–S and acylenzyme; this is supportive
+but does not establish the new candidate's Hessian index. The bounded
+operator check below was performed before choosing another mode verifier.
+The 35.81 kcal/mol NEB peak remains an approximate
+PES image energy, not a verified barrier.
+
+A bounded ten-gradient operator diagnostic then completed in tmux; see
+`docs/ts_hessian_operator_diagnosis_20261116.md` and the TS folder's
+`hess_op_20261116/diagnosis.json`. Repeatability was exact at the tested
+step, chemical-mode step sensitivity 0.93%, and bilinear asymmetry 0.37%.
+The native force operator appears numerically stable enough for this
+test; full Hessian index remains open. Do not rerun the same stalled
+unpreconditioned low-mode calculation unchanged.
+
+## HISTORICAL — two bounded mechanism workstreams, 2026-11-14
+
+**Protonation comparison.** Violet tmux `nyl12_ash274_md_20261114` is
+running the four-beta-chain Asp274–COOH / Asp272–COO⁻, neutral-Thr-N
+alternative at 300 K, with two independent GPU replicas targeted to 100 ns.
+Run root: `qmmm/pa6_flipped_model30/07_ash274_comparison/`. The staged
+Asp274 proton is on OD2 in each beta chain. Dry charge changed by exactly
++4 e from the ASP/ASP parent, the substrate parameters and neutral Thr
+charges were retained, and the final ion count was audited (110 Na⁺,
+106 Cl⁻). Initial MM preparation passed readability and process gates; MD
+sampling and scientific acceptance are pending. The existing ASP/ASP and
+ASH272/ASP274 campaigns both originated from the same static model30
+protein/substrate pose and used the same 300 K MD protocol; they are
+independent solvent/seed realizations, not paired solvent configurations.
+After ASH274 completion, apply one signed-phi/Tier and Asp-pair/H-bond
+analysis to all six 100 ns replicas. Compare persistence by replica and
+time blocks, not by treating correlated frames as independent experiments.
+
+**Direct-route TS.** Violet tmux `nyl12_direct_ts_image08_20261114`
+completed a 0 K DFTB3/MM DL-FIND dimer refinement from image 8 of the
+converged 24-regular-image NEB. Run root:
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/`.
+The valid seed restart was reconstructed from native NEB XYZ; the known
+invalid native image restart writer was not used. The mode is the image
+9-minus-7 tangent displaced 0.01 Å on the rotation mask. The original 12 Å
+region (4,165 atoms), 98-atom QM region, charge −2, and zero electronic
+smearing are retained. Peak-image local clash audit found zero severe
+contacts. The scripted run allows up to 1,000 cycles and stops on first
+DFTB SCC failure. It converged at cycle 99 without SCC failure, meeting the
+native maximum-gradient criterion (9.2423×10⁻⁵ versus 1×10⁻⁴). Final
+OG1–C = 2.0805 Å, C–leaving-N = 1.5403 Å, and HG1–leaving-N =
+1.2184 Å; Thr N retains H1/H2. The new candidate differs from the earlier
+downhill-tested dimer structure by only 0.0058 Å RMSD over the 4,165
+movable atoms (0.0084 Å over mapped reactive atoms). This supports the
+same local chemical saddle hypothesis; it does **not** verify Hessian index
+one. A distinct block-LOBPCG finite-difference low-mode diagnostic is
+running in tmux `nyl12_ts_block_modes_20261114`, with 0.05 Å√amu
+displacements and a hard 160-HVP cap under
+`ts_image08_attempt1/mode_probe_block_0p05/`. Require one reproducible
+negative mode, no additional negative low modes, and downhill connectivity
+before calling this a true first-order TS.
+
+The task priority is to complete these two gates before opening another
+mechanism or temperature campaign. Assay temperature remains 348.15 K;
+current MD stays at 300 K as requested. Job records and
+`output_agent_actions/20261021.jsonl` retain commands, hashes, and status.
+
+## CURRENT — endpoint chemistry, movies, and path audit, 2026-11-14
+
+The matched ASH272 MD SI panel already exists at
+`qmmm/pa6_flipped_model30/06_ash272_comparison/04_md_validation_20261113/results_attempt1/si_matched_panels/ash272_si_trajectory_panel.png`
+(PDF alongside it). All four converged ASH272 QM/MM optimizations now have
+stripped VMD bundles in their respective `vmd_optimization/` directories;
+the laptop pull script includes them. Their audited endpoints all pass the
+geometric Tier A filter. Replica 1 Tier A has the most favorable *geometry*
+of this set (d1 2.778 Å, d2 2.961 Å, d3 2.981 Å, alpha_BD 103.84°,
+signed Herschlag phi +85.72°, CB–OG1–C 113.45°). However, **none retains
+the assigned ASH272 state**: in each endpoint the initial Asp272 HD2 is
+1.02–1.05 Å from Asp274 OD2 and 1.49–1.65 Å from Asp272 OD2. The
+Thr233 HG1 and substrate scissile C–N bond remain intact. See
+`06_qmmm_optimizations/endpoint_chemistry_geometry.json`. Treat these as
+geometrically promising, Asp274-protonated *outcomes*, not accepted
+ASH272-protonated E–S structures or proof of a catalytic protonation state.
+
+The converged direct-route NEB's 24-image VMD movie, exact relative PES
+profile, and reactive-distance plot are under its `vmd_final_24img/final_24img/`
+bundle, with laptop pull support. Maximum image energy is 35.80895 kcal/mol
+relative to image 1 (image 8, cycle 477). Identity and endpoint checks pass;
+the largest adjacent changes are OG1–C 0.388 Å, C–N 0.290 Å, and HG1–N
+0.515 Å. A separate full nonbonded-clash sweep is outstanding. The older
+~46 kcal/mol number is a dimer candidate relative to a separately minimized
+E–S structure, so the two values are not comparable barriers. Neither is a
+verified activation free energy or a confirmed first-order saddle point.
+
+The bounded dimer precision diagnosis found energy and force curvature agree
+within 0.73% at ±0.05 Å along the tested mode. This argues against a gross
+force-sign or derivative-precision error in that direction; the global
+low-mode eigensolver still produced no converged eigenpairs after 800 Hessian
+vector products. Next: refine a chemically accepted NEB maximum with a TS
+optimizer and independently verify exactly one negative mode and downhill
+connectivity. See `provenance/ts_verification_diagnosis_20261114.md`.
+
+Continue MD at 300 K for now. The assay was 75 °C (348.15 K), 6 h. A future
+348.15 K PMF/rate comparison would be more directly assay relevant. There is
+no universal viable barrier cutoff: for kappa=1, Eyring estimates at 348.15 K
+give roughly 0.11 s⁻¹ for ΔG‡=22 kcal/mol, 0.0062 s⁻¹ for 24, and
+~1.1×10⁻⁶ s⁻¹ for 30. These are illustrative unimolecular rates, not
+predicted assay conversion, and the NEB PES maximum cannot be substituted
+for ΔG‡.
+
+## PRIOR — completed processes requiring scientific acceptance, 2026-11-14
+
+No tmux sessions remain at this status check. The four ASH272 DFTB3/MM
+optimizations exited with process status 0 and each native mdout reports
+`Optimisation converged` with maximum-gradient criterion met. Their existing
+scientific-acceptance JSON files still say pending/running; **do not interpret
+them as chemically accepted** until proton retention, scissile-amide bonding,
+Thr233 orientation, substrate register, and final Tier geometry are measured
+from each final restart and the records are updated. Inputs and results are in
+`qmmm/pa6_flipped_model30/06_ash272_comparison/06_qmmm_optimizations/`.
+
+The 25-image trace-seeded 0 K NEB also exited 0, and native DL-FIND reports
+`Optimisation converged` after cycle 477. Its last complete 24-regular-image
+energy report has a maximum at image 8, approximately 35.81 kcal/mol relative
+to image 1. This is a **converged optimizer report, not yet an accepted MEP or
+barrier**: validate image-wise proton/connectivity, spacing, clashes and
+endpoint chemistry, then consider CI refinement/TS search. The new
+80-vector-subspace Hessian low-mode probe exited 0 but exhausted its 800-HVP
+(1,600-gradient) budget without two eigenpairs; first-order saddle character
+remains unverified. Do not raise the same numerical budget again without a
+different eigensolver/precision diagnosis.
+
+Assay-temperature record: the user confirmed the experimental protocol was
+**75 °C (348.15 K) for 6 h**; the later “65 K” message was not the assay
+temperature. The pH 8 Tris measurement temperature remains unknown. MD was
+at approximately 300 K. No simulation temperature was changed by this note.
+
+## PRIOR — ASH272 charge-aware QM/MM optimizations launched, 2026-11-14
+
+The active ASH272 QM region was remapped by residue position and atom name from
+the prior ASP topology. Its audited inventory is 99 real atoms + 8 link H,
+formal QM charge -1, 368 electrons, and singlet multiplicity. The source ASP
+region is 98 real atoms + 8 links, charge -2, and also 368 electrons; the
+added catalytic Asp272 HD2 is included. This corrects the earlier mix-up of
+QM nuclei with electrons. The remapped QM mask is recorded in each case's
+`preparation.json`.
+
+The first two native Sander starts stopped before gradients because DL-FIND's
+AmberTools26 `MASKLEN=2560` truncated a 2,913-character active atom mask. Those
+logs and metadata are retained in each Tier A case's
+`attempt_01_parser_mask_truncation/`. The 4,166 movable atoms were found to be
+exactly 441 complete residues. A 1,438-character residue mask was checked with
+ParmEd to select exactly the same 4,166 atoms; the preparation code now fails
+if it encounters a partial residue or if the compressed mask changes
+membership. The focused tests pass (8); Ruff check and format checks pass.
+
+Four unrestrained native DFTB3/MM optimizations are now active, initialized
+from the four accepted, completed MM endpoints. Tier A retry sessions are
+`ash272_qmmm_replica_1_tier_a_retry2_20261114` and
+`ash272_qmmm_replica_2_tier_a_retry2_20261114`; each mdout reports QM charge
+-1, 99 QM atoms, and 4,166 DL-FIND active atoms. Tier B sessions are
+`ash272_qmmm_replica_1_tier_b_20261114` and
+`ash272_qmmm_replica_2_tier_b_20261114`. Their command/input hashes and process
+records are alongside the run files under
+`qmmm/pa6_flipped_model30/06_ash272_comparison/06_qmmm_optimizations/`;
+Tier B attempts use the project launcher under each case's
+`attempt_01/job/`. At this handoff all four sessions were active and scientific
+acceptance was still pending. Check each process status, then assess force
+convergence, retained proton/scissile-amide chemistry, and endpoint geometry
+separately. No optimization outcome or chemical acceptance is claimed yet.
+
+## CURRENT — 300 K SCC diagnostic passed cycle 60, not a TS, 2026-11-13
+
+Tmux `model30_dimer_scc300_cycle60_20261113` completed at 15:43:21 UTC with
+process exit 0 and **zero SCC-failure warnings**. This passes the original 0 K
+first-failure point (cycle 50). The job is a bounded electronic-convergence
+diagnostic, not a validated TS. DL-FIND says `WARNING: OPTIMISATION HAS NOT
+CONVERGED`; cycle-60 maximum gradient is 0.040982 vs target 0.0001, maximum
+step 0.1 vs target 0.0004 (DL-FIND internal/atomic units). Midpoint energy
+changed from -718.1684607 Eh at the initial guess to -717.9685621 Eh at
+cycle 60, +125.44 kcal/mol. These are *search* energies, not a reaction barrier
+or PMF. Final saved geometry is product-like: Thr929 OG1–PA6 carbonyl C
+1.401 Å, Thr HG1–leaving-group N 1.024 Å, C–leaving-group N 2.107 Å, and
+OG1–HG1 2.131 Å (measured with the saved Amber topology/restart). A true
+saddle and downhill connectivity remain unestablished. The run's
+`pilot_status.json` field `scientifically_accepted=true` **only encodes process
+exit 0 plus no SCC warning**, not geometric or saddle acceptance. Do not
+continue the same dimer search blindly; inspect mode, forces, geometry and
+search trajectory first. Full artifacts are under
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/scc300_pilot_20261113/`.
+
+## PRIOR — dimer TS interrupted for DFTB3 SCC failures, 2026-11-13
+
+User requested immediate interruption. The original dimer session
+`model30_true_dimer_ts_20261113` was stopped by tmux Ctrl-C; the two ASH272
+GPU MD replicas remain running. Its native `dimer.mdout` contained 127 SCC
+nonconvergence warnings. Amber's implementation explicitly continues with
+inaccurate energies and forces after these warnings, so neither the interrupted
+search nor its apparent energy profile is a validated TS result.
+
+Scripted one-gradient probes and hashed inputs are under
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/scc_diagnostic_20261113/`.
+The original TS guess converges at `scfconv=1e-10`, but a saved later geometry
+fails at `1e-10`, Amber's default `1e-8`, and `1e-8` with Broyden iteration
+budget raised from 70 to 200. At the saved geometry, `dftb_telec=300 K`
+converged at both `scfconv=1e-8` and the original `1e-10`; the latter is a
+single-variable SCC change. On the original TS guess, 300 K versus 0 K changes
+the printed QM energy by about 0.0000024 kcal/mol. This same-geometry check
+does not establish negligible energy differences everywhere on the path.
+The first diagnostic attempt omitted `AMBERHOME` and failed before evaluation;
+its logs remain under `scc_diagnostic_20261113/job/` and `results/`. Corrected
+attempts are retained separately.
+
+Tmux `model30_dimer_scc300_pilot_20261113` is a bounded 20-cycle pilot from
+the original TS guess, keeping the original method, SCC tolerance and dimer
+settings while setting only `dftb_telec=300 K` and the pilot cycle limit.
+`scripts/run_dftb_scc_pilot.py` watches native output and terminates sander at
+the first SCC warning because sander itself treats that warning as nonfatal.
+Its results and process status are under `06_dimer_ts/scc300_pilot_20261113/`.
+Successful process completion would still not establish a saddle; assess SCC
+retention, force convergence, one negative mode and downhill connectivity
+separately. Do not restart from the failed original late checkpoint without a
+new geometry audit.
+
+**Pilot outcome (2026-11-13):** the 20-cycle job completed with process exit 0
+and no SCC-failure marker. It did not converge as a saddle: final reported
+maximum gradient 0.27710 versus target 0.00010, and the final DL-FIND output
+says `WARNING: OPTIMISATION HAS NOT CONVERGED`. Retain the 300 K smearing as a
+promising electronic-convergence setting, but do not treat the pilot endpoint
+as a TS or launch a full search from it before a geometry/optimizer audit.
+The same-geometry 0 K versus 300 K energy difference at the *initial* TS guess
+was ~0.0000024 kcal/mol; this is not a path-wide validation.
+
+Amber keyword audit: in the installed AmberTools 26 source, `itrmax` already
+defaults to 1000; `dftb_maxiter` defaults to 70 and controls Broyden resets.
+`scfconv` defaults to 1e-8, but using that value did not converge the saved
+late dimer geometry. `dftb_disper` toggles a dispersion correction, not SCC
+convergence, and `dftb_3rd_order='PA'` selects an additional parameterized
+third-order option rather than a solver aid; neither should be added ad hoc.
+The TS input has `imin=1,ntc=1`, so QM SHAKE and an MD timestep are irrelevant
+to this minimization. A 100 K smearing test remains optional; 300 K already
+passed a bounded electronic check. Source paper: Seabra et al., *J. Phys.
+Chem. A* 2007, DOI 10.1021/jp070071l (reported 1e-9 Eh SCC tolerance for
+alanine-dipeptide QM/MM dynamics, not a prescription for this active site).
+
+Further DL-FIND/source audit: `delta` is the dimer separation, but the installed
+Amber default is already 0.005 bohr (~0.00265 Å), exactly the proposed value;
+the run used that default. Its `maxstep=0.1` bohr (~0.053 Å) is already at the
+low end of the proposed range. `dimer_maxrot=20` is the installed default, and
+the initial dimer mode was explicitly derived from NEB images 7→9. The first
+SCC failure in the original run was at NSTEP 255, dimer cycle 50, during a
+**midpoint** evaluation after the preceding rotated endpoint converged. Thus
+the claim that a displaced endpoint first hit a clash is not supported by the
+native log; a geometry/clash audit remains necessary. The active region already
+contains 4165 atoms in a 12 Å shell, with only the exterior fixed. Reducing
+it to 4–6 Å would be a different mechanical approximation, not a generic SCC
+fix, and would repeat prior over-restraining concerns. The user explicitly
+directed on 2026-11-13 that the 12 Å movable shell must not be restricted
+further. In this build, DFTB3/3OB
+already loads `3ob-3-1` and sets H–X damping exponent `zeta=4.0`; no
+`dftb_hcorr` namelist keyword was found. Do not add the older `PA` third-order
+option without an explicit Hamiltonian comparison. Finite-T occupations may
+alter energies/forces near a narrow gap, so any 300 K search must be checked
+against 0 K at candidate stationary geometries and along the local path.
+The proposed `PA` file (`DFTB_3RD_ORDER_PA.DAT`) is absent from the installed
+`3ob-3-1` parameter directory; adding that option now would fail at setup.
+
+**Restart provenance correction:** `calculation/optimized.ncrst` was written
+again at output lines 5068, 5305, 5582, 5899, 6772, 7090 and 7244, all
+after the first SCC failure at line 4879. It is *not* the clean cycle-49
+checkpoint, even though line 4872 says a checkpoint was saved then. A bounded
+contact screen on the current restart found no obvious short nonbonded clash,
+but does not diagnose the first failure because that file was overwritten.
+The action journal retains this correction to the delegated read-only audit.
+Tmux `model30_dimer_scc300_cycle60_20261113` now reruns from the original TS
+guess, guarded to stop at the first SCC warning, to test the setting through
+the original cycle-50 failure point. Its job and calculation directories are
+under `06_dimer_ts/scc300_pilot_20261113/` as `job_cycle60/` and
+`calculation_cycle60/`. Do not infer the result until native output completes.
+
+## CURRENT — ASH272 MD queue and real saddle search launched, 2026-11-13
+
+User explicitly authorized both launches. ASH comparison root:
+`qmmm/pa6_flipped_model30/06_ash272_comparison/`.
+Tmux `ash272_2rep_100ns_20261113` completes unrestrained MM preparation then
+runs two independent GPU0/1 replicas using the original heating/equilibration
+and 10+90 ns protocol. Native GPU minimization verified past cycle6300.
+All four Asp272 residues are ASH with original OD2 protonated; Asp274 remains
+ASP and all four Thr233 N-termini remain NH2. Dry charge changes by
+4.0000000066 e; inherited -0.00400495 e residual is preserved. Salt recount:
+106 pairs plus four neutralizing Na, total110Na/106Cl. Substrate released
+charges/types/nonbonded parameters match the original topology exactly.
+Inputs and acceptance: `00_system/preparation_acceptance.json`; queue/source
+snapshots under `03_md/`; process record under `overnight_job/`.
+The queue waits for each replica's own successful10ns before its90ns extension.
+Do not describe a queued replica as actively integrating before native output.
+
+Tmux `model30_true_dimer_ts_20261113` launched a real native DL-FIND dimer saddle
+search in `qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/`.
+Final complete NEB cycle499 maximum is image8, E=-718.1684607Eh, about24.76
+kcal/mol above E-S. Terminal XYZ reconstruction was independently checked
+against that native energy and matched at printed precision; results retained
+under `energy_validation/`. Dimer direction from images7->9, same98QM+8links,
+charge-2, same4165movable atoms and fixed exterior; no reaction/position bias.
+Native dimer curvature/rotation output verified. Search convergence, one
+imaginary mode, and downhill connectivity remain unestablished. This job retains
+the original dianionic Asp state; it is separate from the new ASH MD comparison.
+
+## CURRENT — neutral model30 MD inspection movies exported, 2026-11-12
+
+The completed 100 ns neutral replicas now have compact laptop-viewable bundles:
+`qmmm/pa6_flipped_model30/03_md/neutral_replica_01/vmd_stripped_100ns/`
+and the corresponding `neutral_replica_02` path. Each bundle concatenates the
+10 ns and 90 ns production segments in chronological order, retains 401 frames
+(approximately 0.25 ns spacing plus the exact final frame), autoimages around
+PA6 residues 1313-1316, and retains all 19,967 protein/substrate atoms while
+removing bulk water and ions. Each DCD is 91.7 MiB. These downsampled files are
+for visualization only; quantitative analyses must use the original NetCDF.
+`view_production.vmd`, the matching stripped topology, source hashes, cpptraj
+inputs/logs, README and checksums are retained in each bundle. The laptop pull
+script includes the bundles but continues to exclude the raw 12+ GiB-per-replica
+production trajectories. Attempt 1 failed before reading coordinates because
+`libsander.so` was absent from its runtime library path; the preserved attempt-1
+record is under `03_md/jobs/neutral_vmd_export_20261112/`. Corrected tmux attempt
+2 supplied the explicit Amber library path and completed with exit status zero
+under `03_md/jobs/neutral_vmd_export_20261112_attempt2/`.
+
+## CURRENT — matched E-S to acylenzyme NEB running, 2026-11-11
+
+User authorized NEB once endpoint ready. Final unrestrained product accepted:
+SHA256 `d4ee10b57fc5844acbfa6e20af3718ba6bf0adac6a3d77b937843cee9dea8d46`;
+original optimized E-S `d9479cd85293e4c1ba4a877e0a77326b29d8e814f42e0575a7a6e29b88b222e6`.
+Same topology SHA256 `448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63`.
+Root: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/`.
+Tmux `model30_es_to_acylenzyme_neb_20261111`, Sander PID118669 at launch;
+native output confirms frozen endpoints, image setting17 (16 regular band
+images plus reserved CI slot), no climbing and no image freezing during
+optimization. OneCPU DFTB3/3OB periodic QM/MM,98QM+8links,charge-2;
+same4165 movable atoms, exterior fixed. `nebk=0.01`,maxstep0.1,maxcycle1000,
+tol1e-4,tole1e-5,ntr0,nmropt0,neb_climb_test0,neb_freeze_test0.
+Initial path uses original E-S, directed windows02,04,...20, then accepted
+product; failed21 excluded. All12 seed images have identical box/atom order,
+zero frozen-exterior mismatch, original ThrH1/H2 and substrateHN retained.
+Native interpolation redistributes seeds; actual E-S energy -718.2079132Eh
+and subsequent image evaluations verified. No converged barrier claimed.
+
+Tmux `model30_es_acyl_neb_monitor_20261111` runs campaign `monitor.py`:
+energy exports every60s, verified native XYZ reconstruction for first VMD band
+then every10cycles. Entries `plots/neb_profile.svg`, `plots/neb_evolution.png`,
+`vmd_progress/latest/reaction_path.vmd` appear after complete reports.
+Numbered native NetCDF NEB restarts remain INVALID due installed writer defect;
+only coherent native `calculation/nebpath.xyz` reconstruction is used for VMD.
+Inputs, scripts, source snapshots, exact command/environment and hashes retained.
+Preparation/monitor Ruff passed; runtime source/input/proton gates passed;
+new artifact-script coverage unmeasured. Monitor launches no candidate releases.
+
+## PREVIOUS — endpoint-first acylenzyme hypothesis optimizing, 2026-11-11
+
+User authorized endpoint-first construction after the direct composite coordinate
+became chemically degenerate. Pinned source: direct path window20 SHA256
+`d57540b6bd5ede95c360174ea4d1bd92c80625355d3c2ccd13f321443b9674ad`.
+New isolated directory: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/04_direct_acylenzyme/acylenzyme_endpoint`.
+Fourteen cheap deterministic geometry candidates preserved; selected C-N2.85A,
+ester1.40A, carbonyl1.23A, substrate N-HG1 1.03A, neutral ThrNH2 and original
+substrate HN retained. Max displacement1.4375A across42 atoms, frozen exterior0.
+Zero heavy-heavy overlaps under declared0.65sum-VdW rule; five H contacts retained.
+Starting OG1-C-acyl angle136.21deg is a seed limitation, not an optimized result.
+
+Reaction-unrestrained DFTB3/MM running in tmux
+`model30_acyl_endpoint_unrestrained_attempt2_20261111`, actual Sander PID103870
+verified with cycle7 energy -717.9966818Eh and RESTRAINT=0.0000. Same original
+compact4165 movable shell,98QM+8links,charge-2; outer atoms frozen. No proton
+holding restraints, restrained preoptimization, artificial guard, or NEB queued.
+First startup exit127 (missing explicit Amber shared-library path) is preserved
+in `job/`; corrected original Amber environment recorded in `job_attempt2/`.
+Calculation: `unrestrained_optimization_attempt2/`. Geometry/provenance and source
+snapshots retained. Initial5-frame VMD bundle in `visualization/latest` includes
+seed, saved trajectory, restart and all reactive-bond labels; chemistry retained
+at initial checkpoint but native force convergence not yet established.
+`monitor_direct_acyl_endpoint.py` records independent full-H chemistry and native
+convergence gates. Builder tests23 passed, module coverage95%, Ruff passed.
+Next: inspect completed reaction-unrestrained endpoint chemistry and convergence;
+do not infer a minimum or barrier from process exit alone or start NEB before review.
+
+## CURRENT — direct substrate-N acylation path launched, 2026-11-11
+
+The user authorized a direct four-center E–S-to-acylenzyme path. Tmux
+`model30_direct_acylenzyme_20261111` and Sander energy output were verified.
+Root: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/04_direct_acylenzyme/`.
+The HG1 acceptor was substrate N19929, not Thr N13905. The composite
+coordinate had 39 targets from −3.273755808 to +2.5 Å in 0.148044 Å steps.
+The planned acyl-like candidate release removed all reaction bias. The path
+used the original E–S model, 98 QM atoms plus eight links, charge −2, and
+4,165 movable atoms. Original amide HN19937 and Thr H1/H2 were monitored.
+VMD exports showed HG1–substrate N and dynamic C–N cleavage; the label watcher
+ran in `model30_vmd_substrate_n_labels_20261111`. No other jobs were stopped.
+The concurrent TI1 path was still running at verification; stepwise path 02
+required a separate check. No completed-window or scientific-success claim
+was made at launch.
+
+## CURRENT — stepwise attack and concurrent PT/attack running, 2026-11-11
+
+Both single-CPU DFTB3/MM jobs launched in tmux under
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/`, with 98 QM atoms plus
+eight links, charge −2, and 4,165 movable atoms. Path
+`02_nucleophilic_attack` (`model30_neutral_attack_20261111`) started from the
+released proton-transfer endpoint and had 16 OG1–C windows to 1.50 Å, no N–H
+restraints, and a planned reaction-unrestrained release. Path
+`03_concurrent_pt_attack/work` (`model30_concurrent_pt_attack_20261111`)
+started from original E–S and had 29 asynchronous composite targets from
+about −4.06 to 0.0 Å with 0.145 Å maximum step. Its planned early release
+required a converged TI1-like candidate. Chemistry gates tracked component
+distances, all relevant protons, and scissile C–N; no automatic umbrella
+sampling was queued. Per-window energy/distance plots and VMD were enabled.
+Sander processes were verified running at launch, with no completed-window or
+scientific-outcome claim. Focused tests passed (37 stepwise, 25 concurrent);
+Ruff passed; new coverage was unmeasured. Protocol:
+`docs/neutral_stepwise_concurrent_paths_20261111.md`.
+
+## CURRENT — proton-transferred endpoint retained, 2026-11-11
+
+`05_neutral_reaction_path/01_direct_pt` completed 19 converged windows and a
+reaction-unrestrained release. The endpoint had N–HG1 1.1105 Å, OG1–HG1
+1.5629 Å, and OG1–C 3.0397 Å; H1/H2 remained on N. DL-FIND converged within
+the 4,165-atom movable region; outer atoms remained fixed. Released total
+energy was −718.186312526996 Eh versus −718.207913180869 Eh for original
+E–S, a difference of +13.5546 kcal/mol. This was a proton-transferred
+stationary candidate, not a Hessian-validated minimum. The monotonic driven
+profile did not locate a TS. The latest VMD bundle had 20 frames (19 windows
+plus release), and its plot referenced PT01 rather than original E–S. The next
+step was OG1–C attack from that endpoint while tracking all N–H/OG1–H and
+scissile C–N distances, followed by release to test TI1 retention.
+
+## CURRENT — neutral PT path running; charged MM gated out, 2026-11-11
+
+Tmux `model30_neutral_direct_pt_20261111` had verified Sander output in
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/`. The plan
+was 19 direct OG1-to-Thr-N proton-transfer windows and an unrestrained release,
+using DFTB3/MM, 98 real QM atoms plus eight links, charge −2, and the original
+4,165-atom movable region. A long atom mask failed before optimization; an
+equivalent compact residue mask fixed it. Failure evidence was retained under
+`clutter/initial_mask_failure/`. Per-window VMD and plots were enabled and the
+laptop pull rules were updated. Charged frame 7013 MM reached force RMS
+0.0094117 but failed Tier/native geometry gates, so no charged QM job launched.
+See `docs/md_model30_charged_screen_20261111.md`.
+
+## CURRENT — neutral optimized E–S accepted; new paths authorized, 2026-11-11
+
+All four model30 replicas completed 100 ns and were screened. Neutral replica
+2 frame 27 (0.27 ns; early transient) completed MM and 12 Å DFTB3/MM
+optimization. It passed native convergence and Tier A geometry: d1 3.148 Å,
+signed Herschlag phi +100.035°, and Bürgi–Dunitz angle 105.491°. Charged
+replica 2 frame 7013 (70.13 ns) was an isolated Tier B/native pass authorized
+for MM; tmux `model30_charged_frame7013_mm_20261111` was launched. Evidence
+is under `qmmm/pa6_flipped_model30/04_md_screen_20261111/`. At this
+checkpoint, the direct OG1-to-Thr-N path was being prepared, not yet launched.
+The baseline had 98 QM atoms plus eight links, charge −2, and the original
+12 Å movable region. All N–H and OG1–H distances needed monitoring.
+Assay conditions were documented as crude lysate, 5 mg polymer powder,
+200 mM Tris, reported pH 8, 75 °C for 6 h; pH adjustment temperature was
+unknown. MD ran at 300 K; no high-temperature MD had launched.
+
+## CURRENT — matched MD underway; NEB ended, 2026-11-10
+
+The then-current NEB ended at cycle 437 by reaching its energy-evaluation
+limit; it had not converged, and its last profile peaked at 86.939 kcal/mol
+at image 8. No agent killed it. Two neutral model30 replicas were in
+unrestrained 10 ns production on violet under `03_md/neutral_replica_01` and
+`_02`. Two all-four-beta-NH3+ replicas were authorized, with charged setup
+on azalea underway. Neutral-replica heating (100 ps) and staged NPT (400 ps)
+passed. The RMS-force 0.042 endpoint was sufficient for MD preparation; no
+extra minimization was required. Job logs, not this historical status,
+determine whether any run is now active.
+
+## CURRENT — model30 MM endpoint passes geometry; force target unmet, 2026-11-10
+
+The neutral-all-four-beta model30 build and unrestrained GPU MM run exited 0
+after 10,000 cycles. RMS force was 0.042036 versus the 0.001 target, so it
+was not force-converged. Endpoint `01_mm_minimization/endpoint_complex.pdb`
+retained flipped phi +97.948° and Tier A/native geometry: d1/d2/d3
+2.882/2.978/2.871 Å, Bürgi–Dunitz angle 93.082°, and N-terminal-to-leaving-N
+distance 3.940 Å. OG1/N shifted 0.263/0.698 Å; psi/chi1 changes were
+−21.662/+5.626°. The reproducible audit is in `endpoint_geometry.json`
+and `measure_endpoint.py`. At this checkpoint, MD/QM/MM had not launched.
+
+## CURRENT — model30 build/minimization launched; direct-PT US stopped, 2026-11-10
+
+Tmux `nyl12_model30_mm_20261110` launched the model30 Amber build and fully
+unrestrained MM minimization under `qmmm/pa6_flipped_model30/`. Inputs,
+checks, and logs are in `00_system/`, `01_mm_minimization/`,
+`source_snapshot/`, and `job/`. The source was distributed Boltz batch
+model 30 from aster, not historical ensemble model 30. All four beta Thr
+N-termini were neutral; PA6 L4 was zwitterionic with modular RESP/GAFF2
+parameters. The heavy-atom mapping check passed (33 atoms, 32 bonds).
+Topology acceptance and force/geometry convergence were separate gates.
+The planned pilot comprised two neutral and two all-four-NH3+ replicas after
+each starting state passed checks.
+
+The direct OG1-to-Thr-N umbrella controller and 20 children on violet were
+intentionally stopped to prioritize MD. All 20 windows retained 22 ps of
+production data (2 ps pilot plus 20 ps extension), plus interrupted next
+blocks. The latest analyzed 12 ps prefix was unconverged; the stop did not
+exclude the pathway. See `docs/direct_pt_umbrella_stop_20261110.md`.
+The then-current acylenzyme NEB on azalea remained unchanged.
+
+## CURRENT — flipped-pose screen and donor clarification, 2026-11-10
+
+The then-current NEB was active at cycle 329 and unconverged. A screen of
+82 existing WT PA6 L4 structures found three positive-phi models passing
+Tier A/B plus native-Thr gates. Current E–S phi was −114.341°; the three
+alternatives were historical relaxed model 23 and distributed raw models
+30 and 25. Raw model 30 was the new lead: phi +72.24°, Tier B,
+terminal-N-to-leaving-N 3.77 Å, and psi/chi1 changes +3.61/−0.60°.
+It had not yet been minimized or equilibrated. With fixed atom mapping,
+opposite signed phi identifies the flipped local pose; the Tier filter used
+absolute phi. For an NH3+ microstate, OG1–HG1 remained the proposed donor.
+Reports: `docs/pa6_flipped_pose_screen_20261110.md` and
+`docs/nyl12_alternative_proton_routes_20261110.md`; source analysis:
+`analysis/pa6_binding_orientation_20261110/`.
+
+## CURRENT — repaired native NEB exports; calculation continues, 2026-11-10
+
+IMPORTANT: numbered native NEB NetCDF restart files are INVALID because the
+installed Amber custom writer passes x instead of x(lcrd). Do not use them.
+Earlier VMD bands and3failed candidate trials were quarantined under
+`reaction_paths/03_acylenzyme_neb/clutter/native_restart_export_defect/`.
+Internal NEB energies and native `nebpath.xyz` are usable. Ordinary endpoint
+minimization restarts use a different writer; acylenzyme release remains valid.
+
+Corrected live monitor: azalea `nyl12_acyl_candidates_xyz_20261110`, immutable
+`source_xyz_verified/`. It reconstructs full coordinates from fixed reference
+plus mapped native XYZ, checks elements/backbone/report coherence, exports VMD
+every10cycles and tests persistent dips (at most3). Independent cycle67 image10
+energy exactly reproduced native -706.7081487Eh (0kcal difference at printed
+precision). Old candidate monitor stopped. NEB itself continues unchanged.
+Current VMD entry remains `vmd_progress/latest/reaction_path.vmd`; copied to
+violet and checksum-verified. Updated laptop pull excludes clutter/raw restarts.
+Do not draw scientific conclusions from old failed candidate trials.
+
+Provisional native band: HG1 visits terminal N, returns to OG1, then transfers
+to leaving N during acylation. Peak remains about40kcal/mol and NEB is not
+converged; no viable catalytic barrier or mechanism established. See expanded
+repair/proton-route notes in docs/acylenzyme_backward_path_20261110.md.
+User accepted Lys156 plus Gly273-backbone QM sensitivity tests; exact masked
+fragment/charge design is being documented separately; no change to currentNEB.
+
+## CURRENT — backward acylenzyme endpoint and NEB queue, 2026-11-10
+
+Azalea tmux `nyl12_acylenzyme_neb_20261110` is now running native NEB.
+Reaction-unrestrained acylenzyme release CONVERGED and retained chemistry:
+OG1-C1.32384Å, C-O1.25576Å, C-Nleave4.11101Å, Nleave-HG1 1.01974Å.
+No Hessian/minimum-order proof yet. `status.json` phase is `03_neb`.
+Root: `qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/`.
+Method DFTB3/3OB periodic QM/MM; same 98 QM atoms and eight links; same atom
+names/indices. Native DL-FIND FREE-end NEB has 16 regular images plus CI slot,
+serial evaluations; 4,620 movable atoms selected by fixed ES reference at12Å.
+The construction has six temporary chemical restraints; release and NEB remove
+all of them. Outer coordinates are fixed, so do not call this globally free.
+`nyl12_acyl_neb_monitor_20261110` updates `plots/`;
+`nyl12_acyl_candidates_20261110` publishes coherent VMD bands and launches at
+most3 persistent-dip image releases. Entries: `plots/neb_profile.svg` and
+`vmd_progress/latest/reaction_path.vmd`. Source snapshots and remote action
+journal preserved; laptop pull excludes full-system raw coordinates.
+
+See `docs/acylenzyme_backward_path_20261110.md` for scheme correction, procedure,
+measured proton-transfer reach, literature and limitations. ThrN-leavingN is
+4.937Å in attack09; Asp272/274 nearest O-to-ThrN2.605/2.743Å, but to leavingN
+5.988/6.915Å. Both Asp residues are in QM. A2023 NylC study supports homologous
+Asp308-Asp306-Thr267 involvement in substrate hydrolysis, not only maturation.
+Existing Boltz MSAs give99.76%/99.95% Asp272/274 conservation (2126 unique
+>=80%-coverage beta hits), saved in docs/nyl12_active_site_conservation_20261110.md. No fresh BLAST has been submitted. First seed with
+large fragment rotation was rejected; deployed local seed has no heavy-heavy
+clashes and retains all atoms including leaving amine. Classical acyl MD still
+requires new parameters. An endpoint does not prove how its proton moved.
+
+## CURRENT — DFT/MM TI1 release stopped after reactant reversion, 2026-11-10
+
+User authorized stopping the azalea release. Sent Ctrl-C only to tmux
+`nyl12_ti1_unbiased_dft_20261110`; verified no sander/g16 processes remained.
+Gaussian abort and Sander external-call error are intentional interruption,
+not evidence of a spontaneous software failure. All artifacts retained in
+`reaction_paths/02_asynchronous_es_to_ti1/04_ti1_unbiased_dft_mm` under the
+frame1603 campaign. Last inspected cycle105 geometry had OG1-C 2.9290 A,
+C-O 1.2362 A, OG1-HG1 0.9817 A, N-HG1 1.8904 A, N-H1 1.0212 A,
+N-H2 1.0271 A: reactant-like reversion, not an accepted TI1 minimum.
+The run advanced beyond that inspection before interruption; the retained
+restart must be measured again before quoting its final geometry.
+Retained restart SHA256 c86656c20ff2c2b2f7d2f98c03cb645be3bdf7f4d323b71c4796207be47895b6.
+
+Interpretation: collapse of this seed under this embedding/active-region setup
+is not proof that TI1 is absent or that the entire fast-QM pathway is correct.
+Next priority is a bounded diagnostic before another long trajectory: audit
+embedding charge continuity and QM boundaries/protonation; analyze existing
+DFT reactive forces and oxyanion/attack geometry during release. Then compare
+addition-only versus coupled addition/leaving-group protonation/C-N cleavage
+with a small, matched set of constrained DFT/MM geometries. The coupled route
+is a hypothesis, not an established Nyl12 mechanism. Do not repeat the same
+TI1 release or start more umbrella sampling without a defensible chemical path.
+Use independent calculations in parallel within resource limits. A candidate
+TS must ultimately pass saddle-order and endpoint-connectivity checks; a
+coordinate-driving maximum is not sufficient.
+
+## CURRENT — unbiased TI1-like DFT/MM release active, 2026-11-10
+
+User authorized omegaB97X-D/def2-SVP/MM optimization from corrected attack_09.
+Session `nyl12_ti1_unbiased_dft_20261110` is active on azalea; Sander and Gaussian
+processes were verified. Run directory:
+`qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/04_ti1_unbiased_dft_mm/`.
+Gaussian uses all 28 physical cores and 64 GB memory. Input retains the audited
+QM/link definition, 20 A external embedding and 12 A movable shell; atoms outside
+the shell remain fixed. Reaction and positional restraints are absent (ntr=0,
+nmropt=0). Budget 500 optimization cycles; ntwx=1 requests optimization frames.
+This is an active-region minimum test, not a full-system stationary-point proof.
+Monitor proton identities, OG1--C, C--O, leaving-group C--N and convergence.
+Finite-cutoff membership changes remain an electrostatic sensitivity concern.
+
+In parallel, useful analysis is projected reactive gradients and updated US
+overlap/chemistry audits. Missing TI1 does not rule out acylation: addition,
+leaving-group protonation and C--N cleavage may form a coupled route to the
+acylenzyme without a metastable TI1 basin. Low percent conversion alone cannot
+identify the slow step. Redesign must lower barriers relative to populated
+states while avoiding over-stabilization of acylenzyme or product complexes.
+
+## CURRENT — coupled four-method panel complete and analyzed, 2026-11-10
+
+All 24 evaluations completed with required termination checks. Six-state
+relative-energy RMSE versus omegaB97X-D/def2-SVP is 3.27 kcal/mol for DFTB3,
+10.26 for PM6-DH+, and 3.61 for GFN2-xTB. TI1-like versus E--S errors are
++7.42, -14.17 and -1.57 kcal/mol, respectively. DFTB3's error grows by
+9.13 kcal/mol from coupled PT to TI1-like; xTB's direct-PT error is +8.02.
+No method passes all promotion gates. Prioritize gradient and unbiased DFT/MM
+stability tests; xTB merits attack-region follow-up but is not yet validated
+for the full pathway. See `docs/coupled_method_panel_results_20261110.md` and
+`qmmm/benchmarks/04_coupled_path_method_panel/analysis/method_errors.png`.
+Future independent benchmark states should run concurrently within physical-core
+budgets. The laptop pull configuration still needs this new result bundle.
+
+## PREVIOUS — six-geometry four-method panel launched, 2026-11-10
+
+The corrected attack branch completed all nine windows with correct terminal
+proton identities. Final OG1--C is 1.6526 A and carbonyl C--O is 1.3350 A.
+This is a restrained TI1-like seed; unbiased stability remains untested.
+
+The requested matched panel is active on azalea in tmux session
+`nyl12_coupled_four_methods_20261110`, under
+`qmmm/benchmarks/04_coupled_path_method_panel/`. Six exact geometries are used:
+original unrestrained E--S, direct-PT endpoint, asynchronous window 24, and
+corrected attack windows 03, 06 and 09. The methods are DFTB3/3OB, PM6-DH+,
+GFN2-xTB and omegaB97X-D/def2-SVP. Gaussian uses 16 cores; states run sequentially.
+No optimization or driving bias is applied during these single evaluations.
+All source restarts and the topology are hashed, input proton identities checked,
+and a complete source snapshot retained. Existing builder/parser tests passed
+(17 tests); the new orchestration script passed Ruff and remote import checks,
+but its coverage has not yet been measured.
+
+The runner writes `work/energies.json` after each complete four-method state.
+It does not yet compute final error statistics or validate projected gradients;
+those are the next analysis steps. Compare method-relative double differences;
+changing finite-cutoff charge membership forbids interpretation of raw profiles.
+The earlier plan to freeze charge membership across states is still pending.
+Inspect Gaussian normal termination and embedding inventories before accepting
+results. The local laptop export has not yet been updated for this panel.
+
+## CURRENT — corrected attack branch and reaction-specific fast-QM selection, 2026-11-10
+
+The gas-phase xTB advantage did not transfer to the actual enzyme QM region.
+Consequently, no production Hamiltonian is being chosen from proton affinities
+or the isolated five-window direct-PT test. The next selection uses coupled
+proton-transfer, carbonyl-polarization, nucleophilic-attack and oxyanion-forming
+geometries, with DFTB3/3OB, native Amber PM6 and PM6-DH+, embedded GFN2-xTB and
+omegaB97X-D/def2-SVP/MM evaluated on the same sparse structures.
+
+A corrected attack branch now starts from the exact valid `asynchronous_24`
+restart (HG1/H1/H2 all N-bound; OG1--C = 2.104 A). It drives only OG1--C to
+1.50 A in increments no larger than 0.075 A while flat-bottom gates retain all
+three N--H identities. The accepted 12 A movable shell remains free and no
+global positional restraints are present. Biased endpoints are benchmark
+seeds, not stationary points. Attempt 1 stopped before Sander because the
+minimal source snapshot omitted a transitive visualization import; no science
+ran. Attempt 2 passed local and remote source-hash/import checks and accepted
+three windows. It stopped after converged `attack_04` only because the 0.115 A
+target lag exceeded an arbitrary 0.10 A tracking gate; all three N--H identities
+were correct. Tracking is now diagnostic. An immutable acceptance revision
+promotes that endpoint, and attempt 3 is active in the same calculation
+directory on azalea in tmux session
+`nyl12_corrected_attack_window24_attempt3_20261110`.
+
+After coupled-method selection, the productive path will use a 2D coordinate:
+`xi_PT = d(OG1,HG1)-d(N,HG1)` and `xi_attack = d(OG1,C)`. This permits stepwise
+or concerted chemistry without the proton-identity degeneracy of the old scalar
+coordinate. Full gates and stationary-point criteria are in
+`docs/fast_qm_method_selection_and_coupled_path_plan_20261110.md`.
+
+## CURRENT — embedded enzyme-path DFTB3/GFN2-xTB/DFT comparison, 2026-11-10
+
+The matched five-window Hamiltonian benchmark completed on azalea in tmux
+session `nyl12_direct_pt_embedded_methods_attempt1_20261110`. It evaluated the
+accepted direct-proton-transfer geometries `pt_01`, `pt_05`, `pt_10`, `pt_14`,
+and `pt_19` with DFTB3/3OB, GFN2-xTB 6.7.1, and
+omegaB97X-D/def2-SVP. Unlike the earlier gas-phase model comparison, all three
+methods used the exact Amber QM/link geometry and the same adjusted, imaged MM
+point charges within 20 A for each individual window. DFTB3 was reevaluated
+without QM Ewald/PME so the embedding convention matched the external-Gaussian
+calculation.
+
+The retained Gaussian input is converted deterministically for xTB. Direct
+interface parsing established 98 real QM atoms plus eight link hydrogens (106
+total). This corrects the older window-24 manifest's incorrect statement of
+six link atoms/104 total. xTB charges use the legacy
+point-charge format in bohr with hardness 999.0; a definition-only xTB 6.7.1
+smoke test passed before launch.
+
+All 15 engine calculations terminated normally. A parser-only analysis retry
+used Sander `EPtot` and completed without rerunning the calculations. DFTB3's
+five-window embedded-QM profile agrees with omegaB97X-D/def2-SVP at 1.49
+kcal/mol RMSE and -0.57 kcal/mol endpoint error; GFN2-xTB gives 3.91 kcal/mol
+RMSE and +7.93 kcal/mol endpoint error. DFTB3 is therefore the closer method in
+the actual enzyme QM region despite xTB's advantage in the small gas-phase
+models.
+
+The 20-A charge membership varies from 8,088 to 8,107 atoms among windows, so
+the large raw finite-cutoff profiles are rejected as reaction profiles. Applying
+only the DFTB3-minus-DFT double differences to the original periodic DFTB3/MM
+path gives estimated hybrid relative energies of 0.00, 0.42, 7.27, 12.57 and
+15.85 kcal/mol. The corrected sparse profile remains monotonic and shows no
+transferred-proton minimum. This does not constitute a DFT/MM optimization or
+stationary-point proof, but it makes a DFTB3-only energetic artifact an unlikely
+explanation for the missing minimum. Prioritize coupled proton transfer and
+nucleophilic attack rather than an xTB rebuild for the isolated PT path.
+
+Attempt 1, the parser retry and final correction are under
+`qmmm/benchmarks/03_direct_pt_embedded_method_comparison/`. Full rationale,
+tables, limitations and acceptance decisions are in
+`docs/qmmm_direct_pt_embedded_method_benchmark_20261110.md`.
+
+## CURRENT — direct proton-transfer interim PyMBAR result, 2026-11-10
+
+The chemically valid direct HG1-transfer campaign now has an interim PyMBAR
+analysis combining the complete 2-ps pilot and complete 5-ps extension block 1
+(7 ps/window; active partial block 2 excluded). A fresh all-window trajectory
+audit of block 1 found H1 and H2 N-bound in all 2,000 frames. HG1 changes from
+OG1-bound through ambiguous to N-bound across the intended window sequence,
+with no proton-identity swap like the asynchronous pathway.
+
+The combined analysis contains 28,000 raw and 16,268 blockwise-decorrelated
+samples. Minimum bidirectional adjacent-window overlap is 0.204; the global
+PyMBAR overlap scalar is only 0.0127, so sampling is connected but not
+converged. Relative to the first umbrella target (xi = -1.090 A), the final
+target (xi = 0.750 A) is 15.49 kcal/mol higher. The PMF remains essentially
+uphill and supplies no product-side minimum or downhill branch, so 15.49
+kcal/mol is the free-energy cost to the restrained endpoint, not an accepted
+activation barrier. Adding the 5-ps block changes the common-domain PMF by
+0.55 kcal/mol RMS (1.10 kcal/mol maximum) relative to the 2-ps pilot.
+
+Results and hashes are under
+`07_direct_pt_umbrella_30ps_violet/analysis/mbar_7ps_complete/result/`; the
+laptop pull script now mirrors that exact campaign-relative path. The active
+umbrella campaign should continue to 30 ps/window, with cumulative MBAR and
+chemistry audits repeated after each complete block.
+
+## CURRENT — intrinsic gas-phase proton-transfer barrier pilot, 2026-11-10
+
+A second-stage method benchmark is active on azalea under
+`qmmm/benchmarks/02_small_model_intrinsic_barriers/`. It reuses the three
+validated small-model reaction families from the 81-point scan at the 2.7 A
+seed separation. Reactant, transition-state and product guesses are optimized
+without geometric restraints at omegaB97X-D/def2-SVP; each receives a
+frequency calculation and an omegaB97X-D/aug-cc-pVTZ single point. Accepted
+DFT stationary-point geometries then receive matched DFTB3/3OB and standalone
+GFN2-xTB single points. These approximate-method values are single-point
+barrier estimates, not independently optimized approximate-method saddles.
+
+Scientific acceptance requires zero significant imaginary frequencies for
+each endpoint, exactly one for each TS, preservation of the declared endpoint
+proton identities, normal forward/reverse IRC termination, and opposite proton
+identities at the two IRC endpoints. The analysis reports forward/reverse
+electronic barriers, reaction energies, DFT ZPE corrections, and errors of the
+two approximate methods relative to the DFT reference. Seven focused tests,
+shell syntax and Ruff pass; new Python code has 86% focused coverage.
+
+Attempt 1 exited before scientific work because its new Gaussian scratch
+subdirectory did not yet exist. It is retained as process provenance. Attempt
+2 is active in tmux session `nyl12_intrinsic_barriers_attempt2_20261110` with
+nine four-core Gaussian workers. Automatic validation/analysis is queued in
+`nyl12_intrinsic_barriers_analysis_queue_attempt2_20261110` and will write to
+`qmmm/benchmarks/02_small_model_intrinsic_barriers/analysis/result/` only if
+the calculation job exits successfully.
+
+## CURRENT — asynchronous-US chemistry gate and method benchmark, 2026-11-09
+
+The 25-window asynchronous umbrella campaign on azalea was stopped gracefully
+after every window completed its first 5-ps production block. A scripted
+all-window trajectory audit showed that windows 0--11 retain the reactant
+state (HG1 on OG1; H1/H2 on the terminal N), windows 12--15 make the intended
+HG1 transfer, and windows 16--20 retain HG1/H1/H2 on N. Window 21 begins an
+unintended H1 transfer from N back to OG1; windows 22--24 have H1 fully on OG1
+and the OG1--substrate-C distance retreats. Thus the valid prefix is preserved,
+but the composite coordinate becomes chemically degenerate after window 20.
+Do not extend or interpret the old asynchronous PMF as an E-S-to-TI1 profile.
+Partial block-2 artifacts are retained as interrupted provenance. The separate
+direct-proton-transfer 30-ps campaign on violet remains active. A matching
+all-window audit of its completed 2-ps pilot found H1 and H2 on N in every one
+of 800 saved frames; HG1 alone moves from OG1 to N across the intended window
+sequence. That campaign therefore passes the current proton-identity gate.
+
+Tao et al. (J. Chem. Phys. 2024, 160, 224104; DOI
+10.1063/5.0211276) establishes that Sander can be compiled with direct DFTB+
+and xTB library interfaces, including GFN2-xTB and QM/MM Ewald electrostatics.
+The retained local AmberTools26 Sander build still lacks xTB linkage; this is a
+local build limitation, not an Amber capability limitation. The current
+small-model benchmark therefore uses the installed standalone xTB 6.7.1,
+Amber SQM DFTB3/3OB, and Gaussian 16 reference single points. Rebuilding
+Sander with xTB is deferred until the benchmark justifies using GFN2-xTB in
+the enzyme.
+
+The benchmark is under `qmmm/benchmarks/01_small_model_proton_transfer/` and
+contains 81 matched fixed geometries: 2-propanol/methylamine (Thr-to-terminal
+amine), 2-propanol/acetate (Thr-to-Asp), and acetic acid/methylamine
+(AspH-to-terminal amine), each at 2.5, 2.7 and 3.0 A donor--acceptor
+separations with nine proton positions. Attempt 1 failed before scientific
+work because AMBERHOME was absent. Attempt 2 completed all DFTB3 and GFN2-xTB
+points, but Gaussian rejected `def2TZVPD` as an ambiguous built-in keyword.
+Attempt 3 preserves those attempts and uses omegaB97X-D/aug-cc-pVTZ, a
+recognized diffuse triple-zeta reference for H/C/N/O. All 81 calculations
+from each of DFTB3, GFN2-xTB and Gaussian completed. The calculation wrapper
+then exited nonzero because its acceptance parser retained the obsolete
+`wb97xd_def2tzvpd` dictionary key; no scientific calculation failed. The key
+was corrected, shell syntax/Ruff/three focused tests passed, and the completed
+outputs were analyzed without rerunning them.
+
+The analysis is complete under
+`qmmm/benchmarks/01_small_model_proton_transfer/analysis/result/`. Across the
+nine fixed-geometry profiles, mean per-profile MUE/RMSE values are 3.29/4.71
+kcal/mol for DFTB3 and 1.89/2.31 kcal/mol for GFN2-xTB; worst absolute errors
+are 17.74 and 8.43 kcal/mol, respectively. GFN2-xTB is closer to the
+omegaB97X-D reference for each of the three reaction families in this pilot.
+This supports testing GFN2-xTB/MM in the enzyme, but these scans are
+fixed-geometry potential profiles, not activation free energies, optimized
+proton affinities, or validation of an enzyme reaction path.
+
+The direct-proton-transfer umbrella campaign on violet remains active in
+production block 2 across 20 windows. Completion of this block gives about 10
+ps/window of production sampling; the chemically contaminated asynchronous
+campaign remains stopped.
+
+DeePMD-kit is available through the published Amber infrastructure, but no
+Nyl12 delta-MLP is being trained now. A correction would require a curated
+DFT QM/MM energy/force training set, uncertainty/transferability tests, and
+independent path validation. That is a possible later acceleration layer, not
+the fastest route to establish whether DFTB3 or GFN2-xTB is adequate.
+
+## CURRENT — direct-PT umbrella and asynchronous E-S-to-TI1 outcome, 2026-11-09
+
+The original asynchronous construction path stopped at OG1--carbonyl-C =
+2.104 A. Its bounded eight-window continuation completed through
+`asynchronous_32`. Provenance confirms that window 25 started directly from
+window 24's optimized restart. Nevertheless, the system made a sharp downhill
+structural jump at window 25 and the continued composite coordinate was
+satisfied mainly by proton identity exchange rather than C--O bond formation.
+Specifically, Thr929 H1 transferred from the N-terminal N back to OG1 while
+the originally tracked HG1 remained on N: N--H1/OG1--H1 changed from
+1.021/3.103 A in window 24 to 2.074/0.977 A in window 25. The scalar coordinate
+tracked only HG1 and therefore could not distinguish this chemically
+reactant-like proton swap from progress toward TI1.
+The final window has OG1--C = 2.413 A, N--HG1 = 1.026 A, OG1--HG1 = 3.749 A,
+and carbonyl C--O = 1.261 A, so it fails the declared TI1-like gate. No
+unrestrained TI1 release or new extension umbrella windows were launched.
+
+At the user's request, continuation windows 25--32 now reside directly beside
+windows 01--24 in the canonical `01_coupled_coordinate_drive/` directory. The
+obsolete empty extension directories were removed. The canonical
+`plots/potential_energy.{json,csv,png}` was regenerated in place for all 32
+windows; the prior 24-window plot and the temporary duplicate plot bundle are
+preserved under `clutter/asynchronous_path_preconsolidation_20261109/`.
+
+Do not extend the old scalar composite coordinate further. The next TI1
+construction should restart from window 24, where N has H1, H2 and transferred
+HG1 and OG1 has no proton. Drive OG1--carbonyl-C independently toward a
+covalent distance while applying explicit flat-bottom retention gates to all
+three N--H bonds and exclusion gates preventing H1/H2 from bonding to OG1.
+All other protein/MM degrees of freedom remain unrestrained. Release the
+proton-identity and attack restraints in a staged and then fully unrestrained
+optimization. Failure to retain TI1 after that corrected construction is a
+Hamiltonian/protonation/mechanism result, not evidence that a one-dimensional
+composite target was reached.
+
+The VMD display now removes static topology bonds for changing connectivity
+and uses separate DynamicBonds cutoffs: 1.40 A for OG1--HG1 and N--HG1, and
+1.90 A for OG1--carbonyl-C. Only non-QM substrate carbons are overlaid in
+orange; other substrate atoms use element colors. Visible measurements include
+OG1--HG1, N--HG1, OG1--C, carbonyl-O--Phe113(N),
+carbonyl-O--Asn186(ND2), and the OG1--C--O Burgi--Dunitz angle. The prior
+25-frame movie ended with the *converged endpoint* of the unrestrained release
+from `asynchronous_24`, which reverted to E-S. During the continuation, that
+failed release is omitted so the movie remains a continuous driven path.
+
+The 19-window direct Thr233-HG1-to-N-terminal-N coordinate drive completed.
+Its reported Sander potential energy increased monotonically to 15.38 kcal/mol
+relative to the first window (15.28 kcal/mol after subtracting the reported
+reaction-coordinate restraint). The unbiased endpoint optimization returned
+HG1 to OG1, so no transferred-proton stationary point was established.
+
+The 24-window asynchronous composite-coordinate drive also completed. Its
+biased endpoint reached OG1-HG1/N-HG1/OG1-C distances of
+2.275/1.017/2.104 Å, but unbiased optimization converged back to E-S at
+0.977/2.073/3.239 Å. The potential energy rose monotonically to 21.01 kcal/mol
+(20.81 kcal/mol with the reported restraint removed), with no downhill TI1
+basin. This path is a construction scan and umbrella seed, not a barrier.
+
+Reproducible JSON, CSV and PNG profiles are under each run's `plots/`
+directory. The laptop pull script includes both checksum-verified bundles.
+
+The corresponding 20-window direct-proton-transfer umbrella pilot completed
+successfully on 2026-11-09. All windows finished 1 ps heating, 1 ps
+equilibration and 2 ps production. The preliminary 2-ps histograms show strong
+adjacent-window coverage: histogram-intersection overlap ranges from 0.440 to
+0.705 (mean 0.558), with no adjacent pair below 0.2. These are encouraging
+sampling-connectivity diagnostics, not final PMF convergence evidence. The
+checksum-verified plot and numerical summaries are under
+`04_direct_pt_umbrella_initial/analysis/03_production_2ps_overlap/`.
+
+The 30-ps extension launched automatically in tmux session
+`nyl12_direct_umbrella_30ps_queue_20261109`; all 20 windows are currently in
+the additional 5-ps equilibration stage, before six retained 5-ps production
+blocks. A general tested exporter now orders windows by reaction-coordinate
+target, samples evenly across every completed production block, caps retained
+frames independently per window, concatenates them, and writes a frame-level
+source manifest plus the established reactive-site VMD display. The completed
+pilot bundle contains all 40 available frames from each window (800 total,
+19,967 stripped atoms) at
+`04_direct_pt_umbrella_initial/visualization/sequential_production_windows/`.
+Its `view_umbrella.vmd` uses the same dynamic bonds, element/orange substrate
+coloring, oxyanion-hole distances and Burgi--Dunitz angle as the coordinate-
+drive movies. The laptop pull script mirrors both the overlap and VMD bundles.
+
+A 25-window asynchronous-coordinate QM/MM umbrella pilot was launched at
+14:46 EST in tmux session `nyl12_asynchronous_umbrella_20261109`. It spans
+xi = d(OG1-HG1) - d(N-HG1) - d(OG1-C) from -4.317 to -0.800 Å, uses the E-S
+structure plus all 24 driven endpoints, and runs 1 ps heating, 1 ps
+equilibration and 2 ps production per window at 300 K with a 0.5-fs step and
+50 kcal mol-1 Å-2 bias. No positional restraints are present. All 25 seed
+restart hashes are recorded in the campaign input manifest. Violet is running
+20 direct-PT plus 25 asynchronous Sander processes without CPU oversubscription.
+The initial 2-ps production is only an overlap/equilibration pilot; PMF
+interpretation requires histogram overlap, autocorrelation/effective-sample
+size checks and likely longer production.
+
+The estimator and extension protocol is now specified in
+`docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md`: MBAR is primary,
+WHAM is an independent cross-check, and accepted pilots are extended in 5-ps
+blocks to at least 30 ps of production per window, excluding discarded
+equilibration. Longer sampling remains mandatory if convergence, overlap,
+uncertainty or hidden-coordinate gates fail. `pymbar==4.0.3` is installed and
+pinned through `uv`; optional JAX acceleration was not added.
+
+The production campaigns are split cleanly across hosts. Tmux controller
+`nyl12_direct_umbrella_30ps_queue_20261109` waits for the direct-PT pilot and
+then runs 5 ps equilibration plus six retained 5-ps production blocks on
+violet. The short asynchronous violet attempt had not completed even its
+heating stage; it and its obsolete dispatcher were stopped and moved intact to
+`clutter/obsolete_violet_asynchronous_pilot_20261109/`. A single unified
+25-window campaign was launched from the original coordinate-drive seeds on
+azalea as `nyl12_async_umbrella_30ps_20261109`: 1 ps heating, 5 ps
+equilibration and six retained 5-ps production blocks. Its canonical output is
+`06_asynchronous_umbrella_30ps_azalea/`. Azalea has 56 CPUs and 3.2 TB free.
+Both hosts use their native AmberTools 26 installations; different executable
+hashes are expected because the hosts have different architectures, while the
+topology hash is identical. No positional restraints are present.
+
+Completed reaction-path artifacts now use the same canonical relative layout
+on the workstations and in the laptop bundle:
+`reaction_paths/01_proton_transfer/` and
+`reaction_paths/02_asynchronous_es_to_ti1/`. Each PES plot is named
+`plots/potential_energy.png`. Historical JSON and engine logs retain their
+original absolute path strings as immutable provenance.
+
+Both completed coordinate-drive paths now have checksum-verified stripped VMD
+bundles under their matching `vmd_progress/latest/` directories. The direct
+proton-transfer bundle contains 20 frames (19 driven endpoints plus the
+unrestrained release), and the asynchronous bundle contains 25 frames (24
+driven endpoints plus its unrestrained release). The laptop pull script mirrors
+both bundles and their PES `plots/` directories under the same relative tree.
+
+## CURRENT — separate polyamide Amber FF project proposed, 2026-10-28
+
+A separate `polyamide-amber-ff` project is recommended for modular PA6/PA66
+residues, termini/caps, Boltz/AF3 mapping and enzyme-state extensions. The
+Nyl12 repository should consume versioned releases rather than own the general
+library. Prior nylon force fields mean novelty must come from the enzyme-ready
+state library, reproducible mappings and broad QM/MD validation, not merely
+another PA6 charge set. E--S can use the ordinary modular substrate; TI1 and
+acyl-enzyme fitting remain gated on validated stationary-point connectivity,
+proton ownership and charge. The proposed scope, paper positioning, state
+matrix, repository layout and compute allocation are documented in
+`docs/polyamide_amber_ff_project_charter.md`. Azalea is reachable and idle with
+56 CPU cores, 503 GiB RAM, two 98-GB GPUs, Gaussian access and AmberTools
+Sander. Tulip SSH from violet currently fails public-key authentication.
+
+## CURRENT — modular PA6 residue-library proposal, 2026-10-28
+
+The user proposed representing each polyamide monomer as an Amber residue so
+arbitrary oligomer lengths can be assembled. The concrete PA6 boundary is the
+inter-repeat amide C--N bond: each internal residue contains
+`NH-(CH2)5-C(=O)`, connects through head N and tail carbonyl C, and has net
+charge zero. Separate charged and neutral terminal templates plus nylon-derived
+acetyl-like and N-methylamide-like caps are required. Charges must be fit from
+capped/terminal oligomers with RESP equivalence and integer-residue constraints,
+not copied from an isolated monomer or directly partitioned from the current
+full-L4 fit. Boltz/AF3 conversion must use heavy-atom graph isomorphism and an
+immutable atom-map manifest rather than predicted atom names/order. The full
+plan and acceptance gates are in
+`docs/modular_polyamide_residue_parameterization_plan.md`. No modular
+production parameter has been certified, and current QM scans continue.
+
+## CURRENT — PA6 L4 QM bonded-term benchmark active, 2026-10-28
+
+The four-conformer RESP fit, GAFF2 typing, explicit-solvent minimization and
+170-ps staged MD sanity test are complete. They establish a usable candidate,
+not a certified production parameter set. The remaining gate is a direct QM
+benchmark of the transferred torsions and `parmchk2` impropers.
+
+Three small, charge-explicit nylon-6 fragments were optimized normally at
+omegaB97X-D/def2-SVP/SMD(water): neutral internal
+`CC(=O)NCCCCCC(=O)NC`, N-terminal `[NH3+]CCCCCC(=O)NC`, and C-terminal
+`CC(=O)NCCCCCC(=O)[O-]`. None used `CalcFC`; all expected bonds passed the
+endpoint gate.
+
+The completed controller `pa6_torsion_scan_controller_20261028` wrote
+`05_qm_torsion_benchmarks/02_relaxed_scans/` and launched eight four-core scan
+sessions. They cover four internal proper torsions, terminal ammonium rotation,
+both flagged amide impropers, and the carboxylate improper. The positive
+direction is active in all eight sessions; the negative direction follows
+sequentially, limiting demand to 32 cores. Proper scans cover full rotations;
+improper scans are complementary +/-60-degree branches from the same minimum,
+not full hysteresis cycles. Acceptance requires complete optimized windows,
+geometry continuity and agreement wherever angular profiles overlap. Accepted
+geometries then receive def2-TZVP
+single-point energies and fragment RESP/GAFF2 comparison. No new parameter is
+fit automatically, and the full PA6 L4 candidate remains uncertified.
+
+## CURRENT — authoritative plan and Model 23 late-cycle diagnosis, 2026-10-27
+
+The controlling scientific plan is now
+`docs/MASTER_PLAN_NYL12_COVALENT_REDESIGN.md`. It defines locked facts,
+required chemical states, measurable G0--G7 gates, DFTB3-versus-DFT
+validation, first-order-saddle acceptance, multistate symmetric design, data
+organization, and explicit pivot conditions. Topic documents remain detailed
+evidence; this handoff remains the operational checkpoint.
+
+The Model 23 whole-system DFTB3/MM optimization remains active in tmux session
+`nyl12_model23_dftb_es_20261027`. It uses one CPU core, not a GPU; both GPUs
+were free when checked. The user requested that it continue as long as it does
+not block needed resources. A provenance-preserved cycle-6790 snapshot is at
+`qmmm/pa6_model23/02_dftb3_es_optimization/diagnostics/cycle_6790_snapshot/`.
+Its PA6 metrics are d1 3.47397 A, d2 3.08211 A, d3 3.03706 A, Burgi-Dunitz
+98.8186 degrees, projected Herschlag phi 124.8201 degrees, and
+CB--OG1--C54 108.7603 degrees. It is only Tier B and lies extremely near the
+d1/phi Tier-B limits.
+
+After fitting the n12c catalytic scaffold, the same snapshot has Thr233
+heavy-atom RMSD 1.47992 A, N/OG1 displacements 2.31548/1.91531 A, chi1 change
++25.3189 degrees, and psi change -57.9843 degrees. It is degrading relative to
+the accepted starting structure and must be retained as a negative-control
+basin, not promoted merely if minimization converges.
+
+The next production branch is a bounded n12c-template-conditioned E-S pilot.
+Reuse the validated PA6 L4-to-L2 ligand graph and two existing generation
+contacts, preserve the mature tetramer and canonical mapping, generate 12
+independent Boltz seeds, then release contacts during staged relaxation and
+apply G1 to the complete denominator. The installed custom Boltz2 parser does
+support explicit CIF/PDB templates and chain mapping. Boltz reads the four
+precursor chains by mmCIF label-asym IDs A--D (corresponding to deposited
+auth-asym IDs A/F/H/V). The split-query mapping is therefore A/E->A, B/F->B,
+C/G->C and D/H->D. Duplicate template IDs still require an end-to-end parser
+preflight before launch. AF3 remains a second arm after the user's separate
+contact-restraint implementation is validated.
+
+The corrected mapping passed an installed-parser preflight: 9 query chains,
+8 template records and 1 parsed template. The 12-seed Boltz pilot completed
+successfully on 2026-10-27 at 19:02:32 UTC with exit status 0 and 12/12 complete
+canonical PDB/confidence artifact sets. Inputs and hashes are under
+`inputs/template_conditioned_es_pilot/`; the provenance-recorded run is
+`models/nyl12_template_conditioned_es/01_boltz_generation/`.
+
+Process success did not produce a G1 scientific promotion. The established
+four-site analyzer found the intended PA6 amide and AE site in all 12 models,
+but the best geometry per model comprised 0 Tier A, 3 Tier B (models 1, 7 and
+8), and 9 rejects. Model 7 is the closest miss: d1/d2/d3 =
+2.603/2.887/2.818 A, Burgi-Dunitz = 89.837 degrees and projected phi =
+-115.312 degrees. Model 8 has d1/d2/d3 = 2.532/2.800/3.002 A,
+Burgi-Dunitz = 87.409 degrees and projected phi = -106.455 degrees. Model 1
+has d1/d2/d3 = 3.021/3.115/2.492 A, Burgi-Dunitz = 86.412 degrees and
+projected phi = -123.635 degrees. Thus proximity is often good but the attack
+orientation is not Tier A. The other nine models fail more strongly.
+
+Protein/assembly confidence is uniformly high (confidence score mean 0.936,
+complex pLDDT mean 0.927 and ipTM mean 0.972), but ligand coordinates are much
+less certain: ligand atom B-factor/pLDDT means are only 38.3--43.6 on the
+0--100 PDB scale despite ligand ipTM values of 0.820--0.898. Confidence does
+not rescue the geometry failure. Raw analysis is under
+`01_boltz_generation/analysis/raw_geometry/`. Per the predeclared G1 gate,
+none proceeds to production relaxation as an accepted seed. Models 7 and 8
+may be retained as explicitly labelled near-miss diagnostics when refining the
+generation strategy; they are not accepted E-S structures.
+
+## CURRENT — hASNaseIII precedent and replacement E-S seed screen, 2026-10-26
+
+Andjelkovic et al. (JCIM 2023, DOI 10.1021/acs.jcim.3c00900) provide a directly
+relevant N-terminal-nucleophile substrate-hydrolysis precedent, distinct from
+precursor autocatalytic cleavage. Their selected acylation path first transfers
+the catalytic Thr hydroxyl proton directly to the same residue's neutral
+N-terminal amine (TS1, 14.0 +/- 0.4 kcal/mol), then performs nucleophilic attack
+(TS2, 18.6 +/- 0.7 kcal/mol). They screened alternatives with DFTB3/MM and
+refined the selected path with B3LYP-D3/6-31+G*/MM adaptive-string free-energy
+calculations. This supports testing a direct Thr233 OG1-to-N transfer before
+imposing an Asp272 proton shuttle. It does not establish the Nyl12 mechanism or
+transfer hASNaseIII barriers quantitatively. Reference R41 and manuscript notes
+preserve the source and mechanistic distinction.
+
+A catalytic-scaffold alignment to the supplied `cif/n12c.cif` confirmed that
+the current solvated E-S seed has a suspicious Thr233 backbone/N-terminal pose.
+After fitting 16 N/CA/C/O atoms from Phe113, Asn186, Asp272 and Asp274, the
+converged E-S Thr233 heavy-atom RMSD is 1.832 A; N and OG1 are displaced 2.730
+and 2.257 A, and psi differs by -45.64 degrees. The selected raw MD frame already
+showed the defect (Thr RMSD 1.616 A, N/OG1 shifts 2.284/2.146 A, psi difference
+-40.85 degrees), so the current minimization did not create it. The raw frame
+also shortens OG1--Asp272 OD1 from 4.920 A in the reference to 2.950 A, plausibly
+biasing the earlier Asp-relay hypothesis.
+
+The user's proposed replacement strategy is now preferred: use an
+OpenMM-relaxed, canonical-chain static Boltz E-S model that first passes the
+existing PA6 L4-to-L2 Tier A gate and then passes a separate native-like Thr233
+screen. Only WT models 23 and 40 are Tier A. Model 23 is the better catalytic
+scaffold seed: fit RMSD 0.568 A, Thr233 heavy-atom RMSD 0.623 A, N/OG1 shifts
+0.705/0.188 A, chi1 difference +4.52 degrees and psi difference -30.09 degrees.
+Model 40 has a smaller scaffold fit RMSD (0.346 A) but a worse Thr233 pose
+(heavy-atom RMSD 1.301 A, N shift 2.149 A, psi difference -56.03 degrees).
+Artifacts are under `qmmm/pa6_static_es_seed/`; model 23 is the current leading
+seed, subject to visual inspection and topology/protonation rebuilding before
+QM/MM. Tier A plus structural similarity is a seed gate, not evidence of a TS.
+
+Parallel DFT/MM was audited but not launched from the defective MD seed. The
+installed QUICK backend is CPU-serial (`MPI=FALSE`, `CUDA=FALSE`, OpenMP off).
+Amber Sander's external Gaussian interface supports electrostatic embedding,
+analytic Gaussian forces and `%NProcShared` through `&gau num_threads`; Gaussian
+16 is therefore the available parallel backend. With `qm_ewald=1`, a future
+pilot must explicitly use compatible Mulliken charge analysis. Launch only
+after the replacement E-S topology, protonation and direct-transfer coordinate
+are verified.
+
+## CURRENT — driven path complete; released TI1 reverted, 2026-10-26
+
+All 42 driven windows (`stage1_00`--`stage1_20` and
+`stage2_00`--`stage2_20`) converged and passed their declared window gates.
+The final driven endpoint is TI1-like: OG1-C 1.70283 A, Thr N-HG1 1.04794 A,
+OG1-HG1 2.58677 A, and C-O 1.33213 A. The controller selected this exact
+`stage2_20/optimized.ncrst` as the starting geometry for fully unrestrained TI1
+validation; its SHA-256 is identical to
+`02_ti1_unrestrained_validation/starting.ncrst`
+(`956c5667b0cf6f85c2fdd1452e408f26a260f52362279c00555e2c7dfa5b662b`).
+
+The unrestrained DFTB3/MM minimization ran inside the provenance-recorded tmux
+controller and converged natively after 416 DL-FIND cycles. It had `ntr=0`,
+`nmropt=0`, no DISANG or positional restraints, all atoms active, and
+`tole=1e-5` Hartree. It did **not** retain TI1: OG1-C relaxed to 3.05524 A,
+HG1 returned to OG1 (0.99217 A), Thr N-HG1 lengthened to 2.39747 A, and the
+substrate C-O/C-N distances returned to 1.26529/1.35661 A. The exact acceptance
+record is `02_ti1_unrestrained_validation/acceptance.json`, with
+`ti1_geometry_retained=false`. Therefore the current DFTB3/MM Hamiltonian and
+environment do not establish an unrestrained TI1 minimum, even though the
+biased construction profile descends after `stage2_09`. Do not launch an
+unchanged duplicate minimization.
+
+A verified stripped VMD trajectory of the released optimization is at
+`02_ti1_unrestrained_validation/vmd_optimizer_trajectory/`; load
+`view_stage2.vmd`. It contains 16 saved optimizer frames (written every 25
+cycles), 19,976 atoms, all 98 physical QM atoms, the complete protein/substrate
+display selection, and three complete nearby waters. The DCD coordinates and
+fixed boxes were independently verified exactly against the NetCDF source.
+These are optimizer snapshots, not MD time; the exact converged endpoint remains
+`02_ti1_unrestrained_validation/optimized.ncrst`. The laptop pull script includes
+and verifies the bundle.
+
+The energy discontinuity between `stage2_09` and `stage2_10` coincides with
+exchange of the terminal Thr ammonium hydrogen donated to Asp970 OD2. At
+`stage2_09`, H2--OD2 is 2.03513 A and H1--OD2 is 2.86346 A; at `stage2_10`,
+H1--OD2 is 2.04305 A and H2--OD2 is 3.48213 A. This supports the user's visual
+interpretation of the discontinuity as a hydrogen-bond rotamer switch rather
+than a distinct chemical elementary step.
+
+## CURRENT — stage2_02 reconciled; path continuing to TI1, 2026-10-26
+
+The prior `stage2_02` run exhausted 2000 DL-FIND cycles because its
+`tole=1e-7` Hartree energy-change threshold was below the observed DFTB3/MM
+numerical fluctuations. The RMS gradient and step criteria were already
+satisfied, and the largest residual maximum-component motions were remote MM
+atoms rather than relay atoms. The retained failed-attempt artifacts remain as
+`stage2_02/*_attempt1`. An in-place continuation from the exact final restart,
+with no change to the Hamiltonian or three reaction-coordinate biases and with
+`tole=1e-5` Hartree, converged in eight additional cycles. Its accepted endpoint
+has OG1-C 1.75170 A, OG1-HG1 1.75522 A, Asp272 OD1-HG1 1.02165 A, and Thr233
+N-HG1 2.34463 A. Native convergence, fixed-cell coordinates, and proton
+ownership all pass. Acceptance and process provenance are in `stage2_02/`.
+
+The strict reconciliation script `stage2_02/reconcile_stage2_02.py` required
+the exact stopped state through `stage2_01`, revalidated the resumed endpoint,
+preserved the prior status as
+`status_before_stage2_02_reconciliation_20261026.json`, and appended only
+`stage2_02`. Its immutable record is `stage2_02/reconciliation.json`; the next
+window is `stage2_03`.
+
+Active sequential controller:
+`nyl12_coordinate_drive_stage2_03_to_ti1_20261026`; provenance:
+`01_coordinate_drive_to_ti1/controller_resume_after_stage2_02_20261026/`.
+It skips all accepted windows, runs `stage2_03` through `stage2_20`, and then
+performs the fully unrestrained TI1 minimization in
+`02_ti1_unrestrained_validation/`. It fails closed on engine, native
+convergence, coordinate, proton-ownership, or final TI1 checks. At this
+checkpoint `stage2_03` has converged and passed all window gates, `stage2_04`
+is active, and no TI1 endpoint is yet claimed.
+
+Active read-only inspection publisher:
+`nyl12_path_inspection_stage2_03_to_ti1_20261026`; provenance:
+`01_coordinate_drive_to_ti1/inspection_monitor_after_stage2_02_20261026_attempt2/`.
+It updates the canonical VMD movie and energy/distance plots after accepted
+windows. The first replacement publisher attempt failed without affecting
+Sander because the reconciled window lacked canonical `process.json`; that
+metadata was regenerated from the preserved attempt and resume records, a
+one-shot export passed, and the replacement monitor is healthy.
+
+The `tole=1e-5` generator change and its regression assertion are uncommitted.
+Focused relay tests pass (10/10), Ruff passes, and no production dependency was
+added.
+
 ## CURRENT — retained-coordinate phase II active, 2026-10-26
 
 The first attempted repair of phase II also failed scientifically. A one-sided
@@ -1748,3 +3563,801 @@ not safety rejections. Default sandbox still fails bwrap RTM_NEWADDR. Record
 failures honestly in `output_agent_actions/20261021.jsonl`; repair logging before
 mutations. Neither unrelated tmux session was changed. Current tools may work
 on a short single retry; do not repeatedly escalate unchanged rejected actions.
+
+## Model 23 E-S checkpoint — 2026-10-26
+
+Use the accepted static Boltz **Model 23** as the current PA6 L4-to-L2 E-S
+starting pose. A fresh periodic system was built under
+`qmmm/pa6_model23/00_system/` with ff19SB, TIP3P, and the exact historical PA6
+ligand library/frcmod. The resulting system has 106,497 atoms, 106 NaCl pairs
+at approximately 150 mM, and the four expected neutral beta-chain Thr termini.
+The reviewed E-S QM region remaps exactly: 98 real QM atoms, eight link atoms,
+106 QM nuclei, and charge -2.
+
+There is **no completed PA6 L4 RESP/GAFF2 parameter set** in the audited
+artifacts. The current ligand files are the historical GAFF1 set associated
+with the earlier AM1-BCC workflow. They are acceptable for this coordinate and
+DFTB3/MM geometry pilot, but must not be described as RESP/GAFF2. Generate and
+validate a separate multi-conformer RESP/GAFF2 set before production classical
+MD or TI1 classical MD.
+
+The fully unrestrained classical negative control converged after 39,503 cycles
+but degraded the catalytic pose (Tier B; Thr233 OG1 displacement 1.555 A and
+psi change -64.707 degrees relative to the aligned reference). It is rejected
+as a DFTB starting point and retained at
+`qmmm/pa6_model23/clutter/01_full_unrestrained_classical_negative_control/`.
+
+The accepted preparation instead relaxed LEaP-added solvent/ions and all
+hydrogens while restraining only solute heavy atoms. It converged after 30,391
+cycles and retained the Model 23 Tier A geometry: d1 2.884 A, d2 2.885 A, d3
+2.871 A, aBD 94.490 degrees, and |phi| 99.041 degrees. The accepted restart is
+`qmmm/pa6_model23/01_solvent_relaxation/solvent_relaxed_final.ncrst`; reports
+are `geometry.json` and `alignment/alignment_report.json`. This scoped
+solvation restraint is preparation only. The next QM/MM optimization has no
+positional or reaction-coordinate restraints.
+
+The fully unrestrained periodic DFTB3/MM E-S calculation is prepared, but was
+**not launched before the planned reboot**, at
+`qmmm/pa6_model23/02_dftb3_es_optimization/`. Its `minimize.mdin` explicitly
+uses `ntr=0`, `nmropt=0`, and DL-FIND `active='@*'`; the exact command,
+environment, hashes, and audited region are in `preparation.json`. After a
+controlled reboot, first verify `nvidia-smi`, confirm no unrelated jobs, and
+launch with `scripts/run_nyl12_job.py` in tmux. Although PMEMD.CUDA succeeded
+when the correct Amber/CUDA environment was sourced, NVML currently reports a
+driver/library mismatch, so the host should still be rebooted at this stopping
+point.
+
+The hASNaseIII GitHub repository was audited at commit
+`8d1c076bc72393d4d7d794a8cf1d72bc92b3ff42`; see
+`docs/hasnaseiii_repository_audit_20261026.md`. It provides no runnable scripts
+or license, but its Amber/Gaussian six-CV string inputs are directly useful as
+a mechanistic design reference. They argue for a multidimensional Nyl12 path
+that couples proton transfer, OG1 attack, carbonyl rehybridization, and C-N
+cleavage rather than further one-dimensional coordinate driving. Do not copy
+the repository inputs; implement and cite an Nyl12-specific version.
+
+## Active Model 23 DFTB3/MM E-S optimization — 2026-10-27
+
+Violet was rebooted successfully. NVIDIA driver/NVML 580.196.07 is healthy and
+both RTX 6000 Ada GPUs were idle at preflight. All recorded preparation hashes
+matched, and the QM-region audit remained 98 real atoms plus eight link atoms
+(106 QM nuclei), charge -2. The calculation is fully unrestrained (`ntr=0`,
+`nmropt=0`, DL-FIND `active='@*'`).
+
+The optimization is running in tmux session
+`nyl12_model23_dftb_es_20261027`. Calculation files are under
+`qmmm/pa6_model23/02_dftb3_es_optimization/`; launcher provenance and status
+are under `provenance/attempt_01/`. Initial DFTB3/MM evaluation and at least 30
+DL-FIND cycles completed without initialization errors, and `RESTRAINT=0.0`.
+Trajectory frames are written every 25 optimizer cycles to `optimization.nc`.
+Do not infer convergence or chemical acceptance from the live restart. After
+process completion, inspect `status.json` and `minimized.mdout`, verify DL-FIND
+convergence, regenerate catalytic-geometry/alignment reports, and visually
+inspect the complete optimization trajectory before accepting the endpoint.
+
+Live inspection after more than 3,000 cycles found active-site degradation;
+see `qmmm/pa6_model23/02_dftb3_es_optimization/diagnostics/`. The frozen
+11:27:49 EDT snapshot is Tier B rather than Tier A: d1/d2/d3 =
+3.345/3.267/3.065 A, aBD = 99.788 degrees, and projected phi = 123.800
+degrees. Thr233 heavy-atom RMSD to the fitted `n12c.cif` scaffold increased
+from 0.623 to 1.355 A, OG1 displacement from 0.189 to 1.618 A, and psi
+difference from -30.01 to -60.14 degrees. This closely resembles the rejected
+fully unrestrained classical basin. Current strict nonconvergence is dominated
+by individual bulk-water hydrogens while the RMS gradient already passes.
+Do not accept this live endpoint merely if DL-FIND later reports convergence.
+
+The active-site measurement helper was corrected to accept explicitly solvated
+topologies with the validated 1,314-residue solute prefix; it previously
+required exactly 1,314 total residues and failed on the 30,303-residue system.
+The fix is covered by a solvated-topology regression test.
+
+At the 2026-10-27 12:17 EDT snapshot after more than 5,100 cycles, degradation
+continued: d1/d2/d3 = 3.407/3.092/3.019 A, aBD = 99.030 degrees, and projected
+phi = 123.857 degrees. Thr233 heavy-atom RMSD is 1.424 A, OG1 displacement
+1.811 A, N displacement 2.255 A, chi1 difference +25.52 degrees, and psi
+difference -57.92 degrees. The structure remains only narrowly Tier B and must
+not be accepted as the preferred E-S reference.
+
+The newly implemented CB–OG1–C54 metric is 119.085 degrees in the accepted
+Model 23 start, 111.642 degrees near cycle 3,200, and 109.659 degrees near cycle
+5,100. Andjelkovic et al.'s deposited hASNaseIII TS1 and TS2 structures give
+135.211 degrees (OG1–C 3.365 A) and 116.949 degrees (2.470 A), respectively.
+Thus the angle is useful but not sufficient: degraded Nyl12 geometries can
+retain a plausible value. The official SI provides no Michaelis-complex
+coordinates. See `docs/hasnaseiii_repository_audit_20261026.md`.
+
+The next recommended Nyl12 step is the bounded pilot in
+`docs/template_conditioned_es_plan_20261027.md`: use `n12c.cif` as a tetramer
+template, generate PA6 L4-to-L2 models with minimal register/site contacts,
+release those contacts before acceptance, and use staged MM plus inner-shell
+DFTB3/MM refinement. Do not repeat whole-system strict minimization dominated
+by bulk-water maximum components. Nyl12 remains justified by experimental
+activity, observed PA6 products, its crystal structure, and stable prior PA6
+MD; NylB should be a lower-complexity control if the bounded pilot fails, not an
+immediate replacement.
+
+## Template-conditioned Models 7 and 8 Amber rescue — 2026-10-27
+
+The user authorized a bounded Amber rescue of the two raw Tier B seeds, Models
+7 and 8. Both completed successfully in independent provenance-tracked tmux
+jobs. The diagnostic workflow was fully unrestrained and unsolvated OpenMM
+minimization with ff19SB plus the retained historical PA6 L4 AM1-BCC/GAFF1
+parameters; it must not be described as RESP/GAFF2 or production MD.
+
+Model 7 changed from d1/d2/d3 = 2.603/2.887/2.818 A, aBD = 89.837 degrees,
+CB-OG1-C54 = 121.676 degrees and phi = -115.312 degrees (Tier B) to
+3.347/2.862/2.871 A, 85.022 degrees, 107.073 degrees and -123.167 degrees
+(still Tier B). Model 8 changed from 2.532/2.800/3.002 A, 87.409 degrees,
+118.400 degrees and -106.455 degrees (Tier B) to 3.096/3.055/2.971 A,
+60.135 degrees, 121.414 degrees and -118.938 degrees (reject). Model 8's
+initial potential energy was 3.55 million kJ/mol, indicating severe clashes
+after force-field system building; it should not be promoted. Model 7 is also
+not promoted because it did not reach Tier A. Full outputs and provenance are
+under `models/nyl12_template_conditioned_es/02_amber_rescue_relaxation/`.
+
+## Active template-conditioned Model 7 DFTB3/MM pilot — 2026-10-27
+
+The Model 7 periodic system was rebuilt from its Amber/OpenMM endpoint with
+ff19SB, historical PA6 L4 AM1-BCC/GAFF1, TIP3P and 150 mM salt. Direct reuse of
+the earlier unsolvated topology was rejected because only one of four beta
+Thr N-termini had been neutralized there, changing the validated atom mapping.
+The periodic rebuild has all four neutral catalytic Thr termini.
+
+New solvent, ions and hydrogens were relaxed with solute heavy atoms restrained.
+The first two 10,000-cycle GPU segments reached their cycle limits; the third
+continuation converged after 45 additional cycles (RMS = 0.00984). The
+pre-QM/MM active-site geometry remained Tier B: d1/d2/d3 =
+3.347/2.861/2.869 A, aBD = 85.229 degrees, CB-OG1-C54 = 107.174 degrees and
+phi = -123.143 degrees.
+
+The established QM core was retained rather than enlarged: 98 real atoms,
+eight link atoms, charge -2, comprising Thr233/Thr234, the Phe113 backbone
+donor, Asn186 side chain, Asp272, Asp274 and the local reacting PA6 amide. The
+prior Model 23 result does not establish a missing QM atom or QM water. The
+Model 7 optimizer instead corrects the previous excessive-coordinate problem:
+all protein and substrate atoms plus complete waters within 8 A of the
+catalytic QM-component residues are movable (19,976 atoms; three waters in the
+starting structure), while only distant bulk solvent is fixed. There are no
+energetic or reaction-coordinate restraints (`ntr=0`, `nmropt=0`, observed
+`RESTRAINT=0.0`).
+
+The calculation is active in tmux session
+`nyl12_template_model7_dftb_es_20261027`. Files are under
+`qmmm/pa6_template_model7/02_dftb3_es_optimization/`; exact hashes, command and
+environment are under `provenance/attempt_01/`. Initialization succeeded and
+the optimization reached at least cycle 57. Do not accept the endpoint until
+process completion, convergence checks, catalytic geometry/alignment analysis,
+and trajectory inspection.
+## CURRENT — PA6 L4 zwitterion RESP/GAFF2 generation active, 2026-10-27
+
+The user authorized production-quality PA6 L4 parameters before enzyme MD.
+The locked noncovalent substrate graph is the full 79-atom zwitterion with
+N56 NH3+, C53/O48/O51 COO-, net charge zero and singlet multiplicity. This is
+the primary soluble, solvent-exposed oligomer state near neutral pH; it is not
+a claim that termini buried in crystalline nylon are always charged. A neutral
+NH2/COOH sensitivity state, if needed, requires a separate parameter set.
+
+The reproducible workflow is under
+`parameters/pa6_l4_zwitterion_resp_gaff2/`. Four bound-like conformers comprise
+template-conditioned Model 7 plus one snapshot from each of three independent
+historical 100-ns WT trajectories. Inputs preserve canonical atom order and
+freeze 25 declared heavy-atom backbone/amide torsions during
+omegaB97X-D/def2-TZVP/SMD(water) optimization; all other coordinates move.
+Focused preparation/graph tests pass (13/13), and Ruff/diff checks pass.
+
+Four eight-core Gaussian 16 jobs are active in tmux sessions named
+`pa6_l4_resp_dft_<conformer>_a2_20261027`. Exact inputs, hashes, scripts and
+status are retained under each conformer's `job_control_attempt2/`. An initial
+wrapper attempt failed before Gaussian because the vendor profile referenced
+unset `PERLLIB` under Bash nounset; failed `job_control/` records remain and no
+scientific steps were produced. The narrow wrapper fix was preflighted before
+attempt 2. After geometry acceptance, run fixed-geometry gas-phase
+HF/6-31G(d) MK ESP calculations, a shared multi-conformer two-stage RESP fit,
+GAFF2 typing/parmchk2 review, nylon torsion validation, and isolated/solvated
+validation. Historical GAFF1/AM1-BCC parameters remain a comparison control.
+
+## CURRENT — PA6 RESP geometry jobs restarted without CalcFC, 2026-10-27
+
+The four omegaB97X-D/def2-TZVP/SMD jobs in
+`parameters/pa6_l4_zwitterion_resp_gaff2/01_dft_geometry/` were intentionally
+interrupted after more than three hours. All initial SCFs had converged, but
+none had completed the full initial Hessian requested by `CalcFC`, and no
+geometry step had begun. The exact tmux sessions exited with status 130; logs,
+checkpoints, hashes and both earlier job-control attempts remain. No process
+from those attempts is active.
+
+The replacement inputs are in `02_dft_geometry_def2svp/` and use
+omegaB97X-D/def2-SVP, SMD water, 25 frozen heavy-atom backbone/amide torsions,
+`Opt=(Tight,ModRedundant,MaxCycles=300)`, eight cores and 16 GB, explicitly
+without `CalcFC`. Four new provenance-tracked tmux sessions named
+`pa6_l4_resp_def2svp_<conformer>_20261027` are active. Def2-SVP is the geometry
+basis only; fixed accepted geometries will still receive gas-phase
+HF/6-31G(d) Merz-Kollman ESP calculations. Before certification, compare one
+accepted conformer against def2-TZVP to quantify geometry sensitivity. The
+restart generator and metadata-driven acceptance checks have focused test and
+Ruff coverage; the production inputs independently pass atom-count, route,
+constraint-count and no-`CalcFC` checks.
+
+## CURRENT — PA6 L4 RESP fit complete; GAFF2 validation active, 2026-10-28
+
+All four omegaB97X-D/def2-SVP/SMD constrained geometries completed normally
+and passed graph, electronic-state, frozen-torsion and terminal-proton
+acceptance. Their fixed-geometry gas-phase HF/6-31G(d) MK calculations also
+completed normally. AmberTools 26 `espgen` outputs were validated and combined
+in the declared order: template Model 7, then historical MD replicas 1--3.
+
+The shared four-conformer two-stage RESP fit completed under
+`parameters/pa6_l4_zwitterion_resp_gaff2/03_multiconformer_resp/results_attempt3/`.
+The stage-2 ESP relative RMS is 0.03133; corresponding atom charges are
+identical across conformers and the rounded 79-atom charge sum is -0.000004 e.
+GAFF2 typing and `parmchk2` completed. There are no missing mass, bond, angle or
+nonbonded entries. Seven analogous dihedrals and three impropers were emitted;
+the improper with penalty 6.0 and the default improper require explicit review,
+and nylon torsion scans remain mandatory. The candidate is not MD-certified.
+
+The first minimization validation used the pre-QM MOL2 coordinates and exposed
+a 1.196 A H33--H36 clash; its nonconverged artifacts are retained as failed
+scientific evidence. Attempt 2 transfers the accepted template-Model-7 DFT
+coordinates without changing RESP charges or GAFF2 types. LEaP reports zero
+errors and zero warnings. The implicit-solvent XMIN continuation converged at
+RMS 0.00441 kcal mol-1 A-1. Explicit TIP3P minimization and a staged 170-ps
+sanity test completed. During the final unrestrained 100 ps, mean ligand
+heavy-atom RMSD was 2.58 A, the former H33--H36 contact remained at least
+2.90 A, and no amide isomerization occurred. Mean amide deviations from
+planarity were 7.2--8.6 degrees, with rare excursions near 30 degrees. Exact
+metrics and hashes are in `04_gaff2_validation/attempt2/short_md_summary.json`.
+The candidate passes short-MD sanity but remains uncertified until the key
+nylon torsions and flagged `parmchk2` impropers are benchmarked against QM.
+
+## CURRENT — integrated PA6 L4 torsion recovery active, 2026-10-29
+
+Six of eight bidirectional wB97X-D/def2-SVP/SMD(water) bonded benchmarks have
+completed. The carbonyl-side forward scan completed all 25 points; its reverse
+scan remains active in tmux session
+`pa6_scan_internal_neutral_carbonyl_side_20261028`. The original amide-omega
+forward scan stopped after ten optimized points with an L9999 error
+termination, before the reverse direction began. Those failed artifacts were
+preserved unchanged.
+
+A tested, non-overwriting recovery was generated under
+`parameters/pa6_l4_zwitterion_resp_gaff2/05_qm_torsion_benchmarks/02_relaxed_scans/internal_neutral/amide_omega/recovery_20261029/`.
+It continues forward from the last accepted geometry using 45 increments of
+5 degrees (46 optimized points including the starting geometry) and starts a
+fresh reverse scan from the original seed using 72 increments of -5 degrees
+(73 points). Both use `CalcFC`, `MaxCycles=300`, separate checkpoints/scratch,
+and provenance-recorded tmux sessions
+`pa6_amide_omega_recovery_forward_20261029` and
+`pa6_amide_omega_recovery_reverse_20261029`. Do not analyze or refit until all
+active scans terminate normally and the original/recovery forward segments are
+merged without double-counting their shared endpoint.
+
+## HOST SAFETY — azalea Gaussian installation, 2026-11-06
+
+Gaussian 16 is already installed on azalea at `/usr/local/g16`; `jpc` belongs
+to the `g16` group, the vendor profile resolves the executable, and the g16
+SHA-256 is `9dd1b1a7495c313954b5243ea427389adac55e55829ab4934f89b8e46fb0c8d5`.
+The ISO is not required for normal calculations. `/etc/fstab` currently has a
+required loop-mount entry from missing `/mnt/CMBStorage/Gaussian16.iso` to
+`/mnt/gaussian`; this caused `mnt-gaussian.mount` to fail and systemd to enter
+maintenance/emergency behavior at boot. `/mnt/CMBStorage` is a directory on
+the root filesystem, not a mounted storage volume.
+
+Do not mount the missing ISO, edit `/etc/fstab`, reboot azalea, or make the ISO
+a workflow prerequisite. Any boot-configuration repair requires a separate,
+explicit user authorization. Gaussian jobs should use the installed
+`/usr/local/g16` tree and established `g16` group wrapper only.
+
+## CURRENT — RESP/GAFF2 WT QM/MM restart, 2026-11-04
+
+The active, source-pinned checkpoint is
+`docs/qmmm_resp_gaff2_restart_20261104.md`. WT modular PA6 MD replicas contain
+many joint Tier A/B plus native-Thr-torsion frames. Replica 1 frame 1553 is the
+first near-pass seed. Fully unrestrained MM minimization is queued behind the
+current violet GPU job, with conditional 8 and 12 A movable-shell DFTB3/MM
+branches. They fail closed if MM convergence, Tier A/B geometry or native
+Thr233 gates fail. The modular QM region has been rebuilt and audited as 98
+real atoms + 8 links, charge -2; old whole-ligand indices are not reused.
+
+The prior unbiased TI1 validation did revert to E--S under the old setup.
+DFTB3 proton-transfer accuracy remains unvalidated for this chemistry; the
+small gas-phase omegaB97X-D/def2-SVP comparison remains required. Do not begin
+new coordinate driving until an accepted E--S endpoint and Hamiltonian gate are
+available.
+
+The frame-1553 MM continuation completed on 2026-11-05. A 20,000-cycle budget
+converged after 9,317 additional cycles (RMS 0.009969), but the endpoint stayed
+Tier B and failed the native Thr233 OG1-displacement gate (0.871 A versus 0.75
+A). CB--OG1--C stabilized near 120.26 degrees after falling from 141.28 degrees
+in the MD snapshot. The conditional QM/MM branches were not relaunched. See
+`docs/qmmm_resp_gaff2_restart_20261104.md` and the immutable continuation
+acceptance record for the exact decision.
+
+The full three-replica native-Thr screen completed on 2026-11-06. Replica 3
+contributed 157 joint Tier A/B plus native-torsion frames but no displacement-
+gate pass. Across all replicas, only four frames passed, all in replica 1 from
+77.65--80.10 ns. Frames 1554, 1562, and 1603 are the declared next MM seeds;
+frame 1572 is retained as an alternate. See
+`qmmm/pa6_resp_gaff2_wt/07_selected_es_candidates_20261106/selection_decision.json`
+for exact metrics, limitations, and input hashes. These correlated seeds must
+still pass fully unrestrained MM endpoint acceptance before any DFTB3/MM launch.
+
+Frames 1554, 1562, and 1603 were subsequently extracted and subjected to
+fully unrestrained segmented MM minimization. All converged in the second
+10,000-cycle segment, but none passed the complete endpoint gate. Frames 1554
+and 1603 remained Tier B and missed only the native Thr233 OG1-displacement
+limit (0.830 and 0.782 A, respectively, versus 0.750 A); frame 1562 also lost
+Tier-B geometry (`d1 = 3.576 A`). No DFTB3/MM job launched. Frame 1603 is the
+declared near-pass; do not loosen the gate post hoc without an explicit
+scientific decision. See `docs/qmmm_resp_gaff2_restart_20261104.md` and
+`qmmm/pa6_resp_gaff2_wt/09_mm_qmmm_selected_candidates_20261106/`.
+
+The user subsequently authorized a documented frame-1603 sensitivity test.
+Only the starting OG1-displacement ceiling is explicitly widened to 0.800 A;
+all other gates remain unchanged, and standard acceptance remains recorded as
+false. Independent 8-A and 12-A DFTB3/MM optimizations are active in tmux as
+`nyl12_f1603_nearpass_qmmm08_20261106` and
+`nyl12_f1603_nearpass_qmmm12_20261106`. Artifacts and authorization are under
+`qmmm/pa6_resp_gaff2_wt/10_frame1603_nearpass_qmmm_20261106/`. Final endpoint
+promotion still requires the standard, unmodified QM/MM acceptance criteria.
+
+## CURRENT — window-24 hybrid-DFT/MM basin diagnostic, 2026-11-09
+
+The chemically correct endpoint of asynchronous window 24 was preserved and
+hashed before launching a hybrid-DFT/MM diagnostic. It has `Thr233:HG1` on the
+N-terminal nitrogen, but `Thr233:OG1`--substrate-carbonyl-C is still 2.104 Å;
+therefore it is a proton-transferred pre-TI1 structure, not a covalent TI1.
+
+The calculation is under
+`qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_window24_wb97xd_def2svp_mm/`.
+It retains the 98-real-atom QM region (+8 links), charge -2, and the established
+12 Å movable shell, with no reaction-coordinate or Cartesian restraints.
+Gaussian 16 uses ωB97X-D/def2-SVP, an ultrafine grid, tight/XQC SCF, 16
+threads, and 32 GB. No additional dispersion correction is applied.
+
+Amber's external-Gaussian interface rejects QM Ewald/PME. The active diagnostic
+therefore uses periodically imaged MM point charges within 20 Å of any QM atom
+(16,000+ charge sites in the first generated input), while retaining periodic
+Amber MM--MM treatment. This is adequate to test local basin behavior but is
+not yet a quantitatively validated DFT/MM energy protocol. Require a 15/20/25 Å
+embedding-cutoff sensitivity test before interpreting relative energies.
+
+The persistent session is
+`nyl12_w24_wb97xd_def2svp_mm_20261109`. The wrapper first runs one Gaussian
+energy/gradient and checks both Gaussian and Sander completion; only then does
+it start the 500-cycle DL-FIND/L-BFGS optimization. At this checkpoint the
+first ωB97X-D SCF was active. Two earlier launches terminated before any
+calculation: first because the vendor Gaussian profile conflicted with strict
+shell nounset handling, then because the tmux shell lacked Amber's runtime
+library path. Both launcher defects were corrected and retained in the action
+journal; neither produced a scientific result.
+
+Interpretation must remain limited. Reversion to E--S would reject a stable
+proton-transferred minimum in the window-24 basin at this DFT/MM setup, but it
+would not rule out a TI1 minimum starting from an OG1--C geometry near
+1.5--1.6 Å.
+
+## CURRENT — MBAR pipeline smoke tests, 2026-11-09
+
+A typed PyMBAR 4 analysis path now performs per-window statistical-
+inefficiency estimation and decorrelation, MBAR overlap/effective-sample
+diagnostics, and a histogram FES with analytical uncertainties. It uses the
+Amber restraint convention `k*(xi-target)^2`; the restraint bias is therefore
+included consistently in the reduced potentials. Outputs are explicitly
+watermarked and labeled as pipeline smoke tests, not converged or promotable
+PMFs.
+
+Focused tests pass (5/5; 87% coverage of the new analysis module). The
+completed direct-proton-transfer 2-ps data set produced 8,000 raw and 4,268
+decorrelated samples. Its MBAR overlap scalar is 0.0137 and minimum
+bidirectional adjacent-window overlap is 0.164. The immutable asynchronous
+block-1 snapshot taken at 20:03 EST contains 205 samples in each of 25 windows
+(5,125 raw; 2,591 decorrelated); its corresponding diagnostics are 0.00367
+and 0.0791. These short profiles are useful only to validate the pipeline and
+identify inadequate sampling/overlap.
+
+The asynchronous campaign remains active on azalea in tmux session
+`nyl12_async_umbrella_30ps_20261109`. At 20:03 EST all 25 windows were at
+2,900--3,300 of 10,000 block-1 steps (mean 3,224; 1.612 of 5 ps). The observed
+rate predicts block-1 completion near 22:00 EST, subject to workstation load.
+
+An updated synchronized snapshot was taken at 21:09 EST with 615 reaction-
+coordinate samples per window (15,375 raw; 7,236 decorrelated). The provisional
+MBAR overlap scalar is 0.00469 and the minimum bidirectional adjacent-window
+overlap is 0.100. The profile reaches about 19.7 kcal/mol before declining by
+roughly 1 kcal/mol near the product-side boundary around -0.7 A. This endpoint
+downturn must not be interpreted as a TI1 basin. A window-24 trajectory audit
+showed that all four saved heating frames retained HG1, H1 and H2 on the
+N-terminal nitrogen with OG1--C = 2.096--2.197 A. H1 then transferred from N
+to OG1 before the first saved equilibration frame. All 20 equilibration and 80
+production frames have HG1 and H2 on N, H1 on OG1, and OG1--C = 2.971--3.690
+A; none retains the intended three-N--H protonation or OG1--C <= 2.5 A. The
+composite coordinate remains near its target because the increases in
+OG1--HG1 and OG1--C compensate. Product-side sampling must therefore be rebuilt
+from the last valid heating restart using explicit N--H proton-state guards and
+OG1--C as the attack coordinate, or with a proper two-dimensional PMF.
+
+## Stepwise attack publication recovery, 2026-11-11
+
+02_nucleophilic_attack stopped after accepted attack_01 solely because the runner
+exported update_0002 twice with plots enabled. No second scientific window had
+been attempted. Acceptance gates native convergence, all proton identities and
+scissile connectivity passed. Runner now publishes once and can continue from an
+accepted checkpoint without promoting or recomputing it. Ruff and 26 focused
+tests passed; runner coverage 84%. Original snapshot/logs remain intact; stopped
+status and input metadata copied to publication_recovery/. New immutable snapshot
+source_snapshot_publication_recovery/ and job_publication_recovery/ retain hashes.
+Tmux model30_neutral_attack_publication_recovery_20261111 resumed the original
+authorized OG1-C protocol, original start reference, step size 0.10 A maximum,
+endpoint 1.50 A, 2000 cycles and final reaction-unrestrained release. Actual
+attack_02 process verified starts from accepted attack_01 with exactly one
+OG1-C restraint and no N-H restraint. No duplicated movie frames or publication
+from resume itself. Scientific outcome remains pending; inspect status and gates.
+
+## Flipped-model direct-acyl TS search, 2026-11-13
+
+The original DL-FIND dimer search was seeded from the final-cycle-499 NEB
+highest-energy image 8, with an initial tangent from images 7 and 9. The
+SCC-guarded `dftb_telec=300` K diagnostic continued that same initial NEB
+seed for 60 dimer cycles and passed the prior cycle-50 SCC failure. It did not
+converge a saddle: maximum gradient was 0.040982 against 0.0001, and the saved
+geometry was product-like (Thr233 OG1--substrate C 1.401 A; HG1--leaving N
+1.024 A; scissile C--N 2.107 A). Its energy is not a validated barrier.
+
+The 200-cycle SCC-guarded continuation in tmux session
+`model30_dimer_scc300_continue_20261113` starts from that cycle-60 endpoint,
+not directly from the NEB image. The dimer direction was reconstructed from
+the saved mode trajectory; the 12 A movable region (4,165 atoms), 300 K
+electronic temperature, 1e-10 SCC tolerance, and dimer algorithm are retained.
+This is a new DL-FIND search from saved coordinates and mode; prior L-BFGS
+history is not carried over. Inputs, hashes, status, and native output are in
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/scc300_pilot_20261113/continuation_inputs_cycle60_20261113/`.
+The guard stops at the first SCC failure. This continuation instead stopped
+near dimer cycle 112 with Sander exit -11 (SIGSEGV) inside PME reciprocal-space
+`fill_charge_grid`, without an SCC failure. At cycle 112 the maximum gradient
+was 0.034233 versus a 0.0001 target, the step was essentially zero, and the
+reported dimer curvature was positive (0.00121). It was not a converged TS.
+The saved restart contains finite coordinates; its largest atomic displacement
+from the continuation start is 0.870 A. Both start and saved restart have the
+same 5,486 atoms outside the primary periodic box, so the crash cannot yet be
+attributed to a newly displaced atom crossing the box. The precise PME crash
+trigger is unknown. No automatic restart was launched; native output is kept.
+
+Keep the dimer search as the immediate diagnostic. Product-like movement may
+indicate a saddle toward acylenzyme or escape from the intended saddle; more
+cycles alone do not establish a valid TS. The installed Sander/DL-FIND exposes
+P-RFO with Bofill Hessian updates, but a full Hessian over the unchanged 12 A
+region would have 12,495 Cartesian coordinates and be costly. A GPR Hessian
+update is not exposed by this interface, so it is not a drop-in keyword change.
+If dimer stalls or finds an unwanted mode, revisit a bracketed NEB image and
+reactive mode before a bounded alternative search. A candidate needs one
+imaginary mode, endpoint connectivity, and a 0 K DFTB3 recheck; 300 K smearing
+is an SCC diagnostic, not final TS validation.
+
+### Bracketed image-7/image-8 TS reseed, 2026-11-13
+
+The 300 K image-8-seeded dimer continuation stalled by cycle 100 and then
+crashed in PME near cycle 112; it must not be resumed as a TS candidate. Native
+NEB cycle 499 was not converged (energy residual 5.2219e-4 vs 1e-5) and had no
+climbing image. Image 7 was reactant-like (OG1--C 2.045 A, HG1--leaving N
+1.836 A); the highest-energy image 8 was already product-like (1.474 and
+1.047 A). A fresh seed at the image-7/image-8 midpoint gives OG1--C 1.7595 A,
+OG1--HG1 1.4571 A, HG1--leaving N 1.4370 A, and scissile C--N 1.6940 A.
+The local audit found no nonreactive heavy-atom contacts below 2.0 A. Its
+initial dimer direction is the local 7-to-8 tangent, displaced 0.01 A on the
+rotation mask. The seed preparation is scripted, hashed and tested (5 focused
+tests passed, 84% helper coverage, Ruff passed).
+
+The new DFTB3/MM dimer search completed normally at its 200-cycle limit in
+tmux session `model30_dimer_bracket78_20261113`; artifacts are under
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/`.
+It retains the 12 A movable region and original QM/MM settings, with 300 K
+electronic smearing and a 200-cycle SCC-guarded budget. Sander exited 0 with
+no SCC failures or crash, but DL-FIND did not converge: final max gradient
+3.4118e-4 vs 1e-4, max step 6.0723e-3 vs 4e-4. Dimer curvature remained
+negative (-0.12285). The final reactive geometry shifted toward a proton-
+transfer saddle rather than concerted acylation: OG1--C 2.0678 A, OG1--HG1
+1.4204 A, HG1--leaving N 1.2110 A, scissile C--N 1.5651 A. It is not a
+validated TS or barrier.
+
+The 200-cycle continuation in tmux session
+`model30_dimer_bracket78_continue_20261113` finished normally inside the same
+07_dimer_ts directory at `continuation_cycle200_20261113/`. The saved cycle-200
+restart and dimer mode were reconstructed with source hashes; initial native
+energy matched the prior endpoint (-718.1334165 Eh). DL-FIND **converged at
+cycle 159** with all five criteria passing: max gradient 7.1496e-5 (target
+1e-4), max step 3.0105e-4 (target 4e-4), and final energy -718.134029878265
+Eh. Dimer curvature was negative (-0.12048); no SCC failure occurred. Final
+geometry: OG1--C 2.0851 A, OG1--HG1 1.4414 A, HG1--leaving N 1.2183 A,
+scissile C--N 1.5376 A. Displacement along the saved dimer mode couples HG1
+transfer to leaving N, OG1--C shortening and C--N lengthening, but a frequency
+calculation and downhill endpoint connectivity have not yet been performed.
+This is a converged dimer stationary-point candidate at 300 K electronic
+smearing, **not yet a validated first-order TS or activation barrier**. Do not
+restart for more optimizer cycles. Next: zero-smearing evaluation, mode and
+endpoint checks; also retain the possibility that this saddle represents an
+early proton-transfer-dominated step rather than the full concerted reaction.
+
+### TS validation progress, 2026-11-13
+
+The combined, stripped VMD optimization movie has 71 frames and is at
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/latest/view_ts_optimization.vmd`.
+The laptop pull script includes this bundle. A native DFTB3/MM one-cycle
+stationarity check at 0 K electronic temperature converged immediately at
+-718.134029878173 Eh, matching the 300 K dimer endpoint to the reported
+precision. It did not calculate a fresh Hessian or imaginary frequency.
+The original optimized E-S energy was -718.2079132 Eh, so the candidate is
++46.3625 kcal/mol on this potential-energy comparison; this is not a
+validated kinetic or free-energy barrier.
+
+The Python Sander API failed on this ff19SB CMAP topology. A native Sander
+one-cycle analytic-gradient adapter passed a source-audited force conversion
+and a 0 K finite-difference directional-curvature check (2.03% difference).
+Its acceptance record is under
+`continuation_cycle200_20261113/native_gradient_0K_onecycle_20261113_attempt2/scientific_acceptance.json`.
+Two numerical mass-weighted downhill branches from the converged dimer mode
+are being run in tmux to test endpoint connectivity. This is a provisional
+descent pilot, **not a formal Hessian-validated IRC**. The first launch under
+`irc_0K/job` stopped before an energy evaluation because `AMBERHOME` was
+missing; its evidence is retained. The corrected launch uses
+`AMBERHOME=/data/jpc/code/ambertools26/venv`, tmux session
+`model30_ts_irc0k_attempt2_20261113`, and the same scientific inputs under
+`irc_0K/job_attempt2` and `irc_0K/paths_attempt2`. Endpoint chemistry and
+first-order saddle character remain to be checked.
+
+The corrected numerical downhill pilot subsequently finished normally with
+20 accepted steps in each direction. The mode-plus endpoint is -718.1348814
+Eh (OG1--substrate C 2.076 A, HG1--leaving N 1.163 A); mode-minus is
+-718.1374740 Eh (OG1--C 2.094 A, HG1--leaving N 1.324 A). Both are still
+near the starting OG1--C separation. Thus these short paths demonstrate
+downhill proton-transfer movement, not connectivity to E-S and acylenzyme.
+Their source-native evaluation files and endpoint records are in
+`irc_0K/paths_attempt2/`.
+
+Two unrestrained 0 K DFTB3/MM endpoint minimizations, each allowing the same
+4,165-atom 12 A active region to move, started from those branch checkpoints
+in tmux sessions `model30_ts_mode_plus_min_20261113` and
+`model30_ts_mode_minus_min_20261113`. Inputs, trajectories and launcher status
+are in `irc_0K/endpoint_minimizations/mode_{plus,minus}/`. A bounded native
+finite-difference Hessian low-mode probe was also started in tmux session
+`model30_ts_mode_probe_attempt2_20261113`, with at most 240 analytic-gradient
+evaluations, under `irc_0K/mode_probe_attempt2/`. Its first launch failed
+before an energy call due to a relative topology path; that evidence is
+retained in `irc_0K/mode_probe_attempt1/`. The corrected attempt uses the same
+TS, Hamiltonian and 12 A shell. Until the two lowest modes converge and both
+unrestrained endpoints are classified, do not call the candidate a validated
+first-order TS or the 46.36 kcal/mol potential-energy difference an activation
+barrier.
+
+For context, inserting 46.36 kcal/mol *as if it were* an activation free
+energy into the Eyring equation at the 75 C assay temperature (348.15 K)
+gives approximately 5.7e-17 s^-1 for a single elementary step. A 20--22
+kcal/mol free-energy barrier at that temperature instead gives about
+2.0--0.11 s^-1. These rates are conditional illustrations, not rates inferred
+from the crude-lysate polymer assay: the computed quantity is a QM/MM
+potential-energy difference, the stationary candidate has not passed
+Hessian-index validation, and the assay does not specify an elementary
+single-turnover rate. Alternative protonation and conformational pathways can
+change the barrier itself, not just add a small thermal correction.
+
+**Endpoint result:** both 0 K unrestrained minimizations converged. The
+mode-minus branch returned to E-S-like chemistry at -718.207958911553 Eh
+(OG1--HG1 0.981 A, OG1--C 3.101 A, scissile C--N 1.360 A). The mode-plus
+branch reached acylenzyme-like chemistry at -718.201496183098 Eh (OG1--C
+1.329 A, HG1--leaving N 1.018 A, scissile C--N 3.053 A). The 0 K candidate
+TS is 46.3912 kcal/mol above the newly minimized E-S endpoint and 42.3357
+kcal/mol above the acylenzyme endpoint; the acylenzyme endpoint is 4.0554
+kcal/mol above E-S. This establishes *local downhill endpoint connectivity*
+for the direct route, not a minimum-energy path or activation free energy.
+The direct four-membered proton-transfer/acylation route remains highly
+unfavorable on this DFTB3/MM potential surface. Consider alternative
+protonation and proton-transfer routes before interpreting it as the enzyme's
+productive mechanism.
+
+The first bounded 0 K Hessian spectrum probe completed 120 native-gradient
+evaluations but exhausted its 60-HVP cap before ARPACK converged the two
+lowest active-shell modes. Its `mode_probe_attempt2/` and launcher records are
+preserved. Thus **first-order saddle character is still unverified**. An
+improved mode-seeded, bounded retry is being prepared; its result must be
+reported separately from the endpoint connectivity test.
+
+The later mode-seeded 0.01 A sqrt(amu) attempt also exhausted its 200-HVP
+limit after 400 native gradients without two converged eigenpairs; its
+`mode_probe_attempt3/spectrum.json` explicitly records an incomplete result.
+DL-FIND exports the analytic force in `path_force.xyz` with only seven decimal
+places. A bounded 0.1 A sqrt(amu) displacement-sensitivity retry is active in
+tmux `model30_ts_mode_probe_attempt4_20261113`. The existing dimer-mode energy
+curvatures at 0.01 and 0.1 A agree to about 1%, supporting this larger
+displacement as a numerical diagnostic. It remains unproven that the full
+4,165-atom active-shell Hessian has exactly one negative eigenvalue.
+
+A compact 99-frame endpoint-minimization VMD trace is at
+`irc_0K/vmd_progress/latest/view_downhill_minimizations.vmd`, with 19,976
+display atoms and three retained local waters. The workstation-to-laptop
+pull script includes it and the verified relative-energy/distance plot
+`irc_0K/plots/endpoint_minimization_progress.png`. The trace is stitched
+E-S-to-TS-to-acylenzyme from endpoint optimizations; it is not a formal IRC.
+
+A **fresh regular 0 K native NEB** is running in tmux session
+`model30_direct_0k_neb_20261113` under `irc_0K/new_neb/`. It uses the
+converged E-S/acyl endpoints, exact TS center seed, identical 104,922-atom
+topology and periodic box, and *exactly identical* coordinates outside the
+4,165-atom active shell. Its 13 trajectory-derived source structures have
+maximum adjacent changes of 0.3064 A (OG1--C), 0.3523 A (C--N), and 0.3052
+A (HG1--leaving N), with no new nonbonded heavy contacts below 2 A in seeds
+or segment midpoints. DL-FIND interpolates to 16 regular images plus its
+reserved climbing slot (`neb_nimage=17`); climbing is disabled initially
+(`neb_climb_test=0.0`). The previous 499-cycle band remains archived as
+unconverged and must not be merged with this path. Native `nebpath.xyz` is
+the coordinate authority. Apply force/energy and geometric acceptance before
+calling any profile a converged minimum-energy path; later CI activation
+requires a stable regular band and a separate documented continuation.
+
+**2026-11-13 Hessian continuation queue:** The 0.1 A sqrt(amu) low-mode
+probe (attempt4) was still advancing through native gradients without an
+electronic-convergence failure. Its ARPACK Krylov state cannot be resumed
+mid-process, so it remains running. A conditional tmux queue in
+`irc_0K/mode_probe_retry_queue/` checks its terminal `status.json` and
+`spectrum.json`. Only if attempt4 exits normally but is incomplete will it
+launch attempt5 with the *same* stationary coordinates, topology, active
+shell, electronic settings, 0.1 A sqrt(amu) difference step, and tolerance;
+the cap rises from 200 to 600 Hessian-vector products (400 to 1,200 native
+gradient evaluations), and ARPACK maximum iterations from 80 to 240.
+The queue skips attempt5 if attempt4 converges and stops on an attempt4
+process failure. The exact script is `irc_0K/queue_mode_probe_attempt5.sh`;
+all attempt outputs remain separate. Neither attempt establishes first-order
+saddle character until two lowest modes and their residuals are validated.
+
+### Update — direct NEB outcome and trace-seeded higher-resolution attempt, 2026-11-14
+
+The first regular 0 K direct NEB in `irc_0K/new_neb/` ended unconverged after
+499 accepted L-BFGS steps and 7,000 energy evaluations (the native energy
+evaluation cap). Image 7 was an unstable high-energy outlier; the final report
+still had residual tangential/perpendicular forces above `tol=1e-4` around
+images 5–8. Preserve that band as a failed attempt; do not use its energy
+maximum as a barrier or merge its coordinates into the new seed.
+
+A fresh trace-seeded run is active in tmux
+`model30_trace_seed25_step005_20261113`, under
+`irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/`. It reuses the
+13 saved trajectory-derived restart structures from the validated 295-frame
+mode-minus and 517-frame mode-plus endpoint traces, the same 104,922-atom
+topology, 98-atom QM region at charge -2, 4,165-atom active shell, fixed
+endpoints, and 0 K DFTB3/MM Hamiltonian. Only `neb_nimage` changed 17→25,
+`maxcycle` 1000→4000 (28,000 native energy evaluations), `maxstep` 0.1→0.05
+bohr, and the copied restart paths. Climbing remains disabled.
+
+Preflight verified all mapped atom identities, the same Thr HG1 proton
+transferring from OG1 to substrate leaving N 19929–HN 19937, retained Thr
+N-terminal H1/H2 and substrate N-HN distances near 1.02 A, exact source
+restart/trace hashes, and no new heavy-atom contacts below 2.0 A in the 13
+source images or their 12 linear midpoints. The first native path frame also
+preserves the retained proton bonds. At that point, the run was active and
+post-start checks were pending; see the completion update below.
+
+### Update — trace-seeded direct NEB completed and audited, 2026-11-14
+
+The native 25-slot run exited 0 and DL-FIND reported all regular-band
+convergence criteria met at cycle 477. The final native report contains 24
+regular images; its maximum is **35.80895 kcal/mol at image 8 relative to
+image 1**. The climbing image remained disabled. Native coordinates are
+`calculation/nebpath.xyz`; do not use the unusable numbered native NetCDF
+restart outputs as path coordinates.
+
+The full-system reconstruction was checked against the 4,165-atom active mask
+and fixed 104,922-atom topology. Atom-name/residue mapping and all 24 images
+passed endpoint identity and adjacent reactive-coordinate continuity gates.
+Image 1 has Thr233 OG1–HG1 0.981 A, OG1–scissile C 3.101 A, scissile C–N
+1.360 A, and HG1–leaving N 2.446 A. Image 24 has Thr OG1–HG1 2.430 A,
+OG1–scissile C 1.329 A, scissile C–N 3.053 A, and HG1–leaving N 1.018 A.
+The substrate carbonyl C–O, leaving N–HN, and Thr N-terminal H1/H2 bonds stay
+intact throughout the band. Maximum adjacent changes are 0.388 A (OG1–C),
+0.290 A (C–N), and 0.515 A (HG1–N). This validates the intended proton-
+transfer/acyl-enzyme endpoint identity and continuity; it does not complete
+substrate hydrolysis to measured PA6 L2 product. No separate full-system
+nonbonded clash sweep was performed on every optimized image.
+
+The portable 24-frame VMD bundle, energy profile, distance table/plot, and
+scientific acceptance record are at
+`irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/`.
+The pull script now includes it. The profile maximum remains a regular-band
+potential-energy maximum, not a validated PES barrier or PMF; a climbing-image
+TS refinement and first-order saddle validation are still separate work.
+
+#### Qualified comparison with earlier candidates
+
+- The dimer stationary-point candidate is **46.3625 kcal/mol above its
+  E–S reference** in the documented one-cycle 0 K evaluation. It is a single
+  proton-transfer-dominated stationary-point candidate (OG1–C 2.085 A,
+  C–N 1.538 A, HG1–leaving N 1.218 A), obtained with a 300 K electronic-
+  smearing dimer search. It is not the maximum of a path profile, and its
+  first-order saddle character was not established. Comparing its point energy
+  directly with the 35.81 regular-band maximum is not an apples-to-apples
+  barrier comparison.
+- The earlier 16-image direct NEB used the same 0 K DFTB3/MM Hamiltonian,
+  topology, active shell, QM charge, and endpoint pair, but stopped at its
+  7,000-evaluation cap after 499 L-BFGS steps. Its report had an unstable
+  image-7 outlier at 70.56 kcal/mol and residual forces above tolerance around
+  images 5–8. The completed run uses 24 regular images, a denser trace-derived
+  seed, a smaller maximum step, and a larger optimization budget; the optimizer
+  converged and the reactive distances vary continuously. The lower 35.81
+  value reflects a different, better-relaxed discretized band and structure,
+  not evidence by itself for a lower physical activation barrier.
+
+The durable run exporter is `export_final_24img.py`. Its identity, continuity,
+endpoint, and profile checks are summarized in the bundle's
+`scientific_acceptance.json`.
+
+### Update — corrected-shell ASH274 E–S accepted, 2026-11-17
+
+The matched ASP272/ASH274 seed has a force-converged, accepted Tier A
+DFTB3/MM endpoint at
+`qmmm/pa6_flipped_model30/07_ash274_comparison/06_qmmm_optimization/replica_1_tier_A_seed/corrected_shell/`.
+The endpoint retains ASH274 HD2 and neutral Thr233 N. Its d1/d2/d3 are
+3.07665/3.06706/2.94462 Å, attack angle 116.807°, and signed phi +97.925°.
+The corrected movable shell has 4,650 atoms, including water 1576; its oxygen
+shifted 0.1465 Å. This replaces the inherited shell that froze 111 residues
+within 12 Å. The earlier accepted run was an incomplete relaxation and is not
+the accepted endpoint.
+
+The final, audited water geometry is recorded in
+`corrected_shell/water_1576_full_hbond_audit_final.json` (the earlier
+`water_1576_full_hbond_audit.json` is retained as interim provenance).
+Thr233 OG1–HG1···water O is 167.9° with H···O 1.811 Å; water
+O–H2···Asp272 OD1 is 173.4° with H···OD1 1.533 Å. There is no corresponding
+bridge to Thr233 N or substrate leaving N. This local endpoint geometry does
+not demonstrate water occupancy or reactivity.
+
+A single-water-in-QM reoptimization (102 atoms, charge −1) in sibling
+`water_qm_reoptimization/` converged and passed the recorded Tier A and
+proton-inventory gates. Its accepted `optimized.ncrst` is the source of the
+bounded path below. The water geometry alone does not establish reactivity.
+
+### Current — bounded water-to-Asp272 TI1-like path, 2026-11-17
+
+Tmux session `water_to_asp272_ti1_like_20261117` launched a 25-window
+DFTB3/MM coordinate-drive diagnostic in
+`qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/`.
+Revision 4 of `protocol.json` passed no-launch hash, atom-map, restraint and
+target-step preflight. It drives Thr929 HG1 through WAT1576 to Asp272 OD1
+while shortening OG1–substrate C; the 12 Å movable shell remains unchanged.
+The runner tests force convergence, individual proton identities, bond
+geometry and continuity after every window. Each accepted window updates
+`vmd_progress/view_path.vmd`, `energy.svg`, and `distances.svg`, which the
+laptop pull script includes. An accepted endpoint triggers a separate
+unrestrained release. Stop status and scientific outcome are **pending**.
+This route targets Asp272-COOH with neutral Thr N, so any product is an
+alternative TI1-like state, not canonical TI1 with Thr N as NH3+. Treat the
+biased profile as a PES diagnostic, not a PMF or validated barrier.
+
+**Window-5 checkpoint and continuation (2026-11-17):** Windows 1–5
+force-converged. Window 5 retained all declared proton identities, with
+OG1–carbonyl C = 2.843 Å and physical energy 3.755 kcal/mol above the
+unbiased E–S endpoint. The first runner stopped because an unrelated,
+approximately 6 Å ASH274 HD2–water O distance changed by 0.445 Å and was
+incorrectly included in a 0.35 Å reaction-continuity gate. Protocol revision
+5 limits that gate to seven reactive distances; all measured distances remain
+reported. The original window-5 acceptance is retained as
+`window_005/acceptance_revision_1.json`. Revision-5 preflight validated all
+five existing windows, and the same tmux session name was relaunched with
+`--resume` from window 6. The completed outcome is recorded below.
+
+### Current — water-relay scan complete; next decision, 2026-11-17
+
+All 25 windows finished with force convergence. No job remains active in this
+path. Final status is `endpoint_negative_or_incomplete`; the gated unbiased
+release did not run. Both relay transfers occurred, yielding water-bound HG1
+and Asp272-bound H2 while ASH274 retained HD2 and Thr N stayed neutral.
+OG1–C ended at 1.852 Å (target 1.650 Å). Physical relative energy increased
+monotonically to +54.0235 kcal/mol; bias-inclusive energy is +58.1547.
+This scan neither found TI1 nor demonstrated its absence. It tests a
+both-Asp-protonated branch, not the Thr-NH3+/oxyanion intermediate.
+
+Read the **Controlling decision — after completed water-relay scan** at the
+top of `docs/NYL12_MECHANISM_ROADMAP.md` before launching further calculations.
+Next proposed work is a bounded 5 × 5 relaxed map of direct Thr OG1→Thr N
+proton transfer versus OG1–carbonyl C attack on the same accepted 102-QM-atom
+E–S seed, with the two targets varied independently. Follow informative
+points with sparse matched-embedding method checks and candidate releases.
+Do not claim a stable TI1 is mechanistically mandatory; a coupled path to
+acylenzyme remains an alternative. This plan is documented but not launched.
+Updated manuscript interpretation is in `manuscript/RESULTS_DRAFT.md`.

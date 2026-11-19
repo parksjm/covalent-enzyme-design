@@ -26,13 +26,16 @@ bound-start simulations address local structural stability, whereas measured
 product formation also depends on productive recognition and subsequent
 chemical steps [local sources S1–S3].
 
-For a covalent hydrolase, a useful design model must accommodate changes in
-connectivity, protonation and geometry over the catalytic cycle. A tetrahedral
-adduct can provide a chemically explicit starting point from which the
-preceding transition structure and noncovalent enzyme–substrate complex can be
-investigated. This construction is a mechanistic hypothesis to test, rather
-than proof that an imposed intermediate is stable. Path-generation methods
-must therefore be followed by stationary-point and endpoint validation.
+For a putative covalent hydrolase, a useful design model must accommodate changes
+in connectivity, protonation and geometry over the catalytic cycle. A stable
+tetrahedral intermediate is not a prerequisite for nucleophilic acyl
+substitution: addition, proton transfers and leaving-group departure can be
+coupled without a distinct metastable tetrahedral basin, as calculated for
+FAAH-catalyzed anandamide hydrolysis [R48]. The existence of such a basin is
+therefore a substrate- and environment-dependent hypothesis, not a mandatory
+design target. Product-connected pathways and the relevant transition states
+must be sought whether or not a persistent TI1 is found. Path-generation
+methods must be followed by stationary-point and endpoint validation.
 Established Hessian-based saddle-search algorithms and newer optimization
 methods provide complementary approaches to this task [R3,R12,R13].
 
@@ -55,6 +58,52 @@ network has been proposed for NylC [R23–R26]. We therefore treat relay geometr
 and protonation as hypotheses requiring structural and chemical validation.
 An unsuccessful placement search in one fixed conformation does not exclude
 transient solvation or establish an alternative mechanism.
+
+Negoro et al. proposed a triad-mediated substrate-hydrolysis mechanism for
+NylC in which Asp308 activates the Thr267 hydroxyl through Asp306 and the
+neutral alpha-amino group of Thr267 [R25, Fig. 10]. This proposal motivates
+testing the corresponding Asp274–Asp272–Thr233 network in Nyl12. Their
+assignment of protonated Asp306 is a mechanistic inference from the structural
+environment and proposed acid/base chemistry, rather than a direct measurement
+of its protonation state. Moreover, loss of activity in Asp mutants is partly
+confounded by failed autocatalytic maturation: an inactive uncleaved precursor
+does not independently establish the residue's catalytic role in mature-enzyme
+substrate hydrolysis. These limitations motivate explicit protonation-state
+comparisons and separate evaluation of maturation and substrate chemistry.
+
+Human asparaginase type III provides a particularly relevant multiscale
+substrate-hydrolysis precedent for an N-terminal threonine nucleophile [R41].
+In the selected acylation pathway, proton transfer from the threonine hydroxyl
+to its own neutral N-terminal amine precedes nucleophilic attack; the reported
+free-energy barriers were 14.0 and 18.6 kcal/mol, respectively. The authors
+used DFTB3-D3/MM to screen mechanisms and B3LYP-D3/6-31+G*/MM adaptive-string
+calculations for the selected free-energy path. This result motivates testing
+direct Thr233 self-activation in Nyl12 before imposing an Asp272 shuttle, while
+neither proving mechanistic equivalence nor conflating mature-substrate
+hydrolysis with the separate autocatalytic maturation reaction.
+
+This stepwise precedent does not imply that the same intermediates must exist
+for a flexible secondary polyamide amide. In contrast, the FAAH calculations
+found that removing a constraint from an early proton-transfer geometry returned
+the system to reactants, although the complete calculated path accomplished
+acylation without a metastable intermediate [R48]. Moreover, “concerted” can
+refer solely to deprotonation accompanying attack, while a tetrahedral minimum
+still forms, as in a Zika serine-protease study [R46]. Mechanistic comparisons
+must specify which bond changes are coupled. Amide nitrogen pyramidalization,
+inversion and access to a proton donor can be as important as carbonyl attack
+and oxyanion stabilization. Modeling and enzyme-engineering studies implicate
+a scissile-NH hydrogen-bond acceptor in facilitating this chemistry [R44,R45].
+
+The broad nylon activity found among diverse Ntn-hydrolases without evidence
+of prior selection for nylon degradation supports a promiscuous-activity
+framework [R47]. For Nyl12, a poor substrate pose, a rarely populated catalytic
+microstate or inefficient proton delivery could each limit activity; low
+polymer conversion alone cannot identify the rate-limiting chemical barrier.
+The correspondence of NylC Tyr146 to Nyl12 Phe113 is mechanistically relevant:
+the backbone NH oxyanion donor is retained, whereas the phenolic OH assigned
+a possible additional hydrolytic role in NylC is absent [R25; local mapping
+in docs/negoro_2023_mechanism_audit.md]. This is a hypothesis about alternative
+catalytic networks, not proof that introducing Tyr will improve Nyl12.
 
 Recent generative enzyme-design studies motivate complementing local chemical
 models with structural assessment across reaction states [R27–R31]. These

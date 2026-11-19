@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Thr929_OG1--P6I1314_carbonyl_C",
+    "atom_i_1based": 13916,
+    "atom_j_1based": 19916
+  },
+  {
+    "label": "Thr929_HG1--P6I1314_carbonyl_O",
+    "atom_i_1based": 13917,
+    "atom_j_1based": 19917
+  },
+  {
+    "label": "P6I1314_carbonyl_C--O",
+    "atom_i_1based": 19916,
+    "atom_j_1based": 19917
+  },
+  {
+    "label": "P6I1314_carbonyl_C--P6I1315_amide_N",
+    "atom_i_1based": 19916,
+    "atom_j_1based": 19929
+  },
+  {
+    "label": "Thr929_OG1--P6I1315_amide_N",
+    "atom_i_1based": 13916,
+    "atom_j_1based": 19929
+  }
+]

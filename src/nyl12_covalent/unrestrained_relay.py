@@ -82,7 +82,7 @@ def es_input(base: str, max_cycles: int = 5000) -> str:
         "Fully unrestrained noncovalent E-S continuation\n"
         + control[control.index("&cntrl") :]
         + "\n\n&dlfind optalg='LBFGS', crdrep='CART', active='@*', "
-        + f"tol=1.d-4, tole=1.d-7, maxcycle={max_cycles}, "
+        + f"tol=1.d-4, tole=1.d-5, maxcycle={max_cycles}, "
         + "maxstep=0.5, verbosity=1, /\n"
     )
     validate_no_positional_restraints(text)

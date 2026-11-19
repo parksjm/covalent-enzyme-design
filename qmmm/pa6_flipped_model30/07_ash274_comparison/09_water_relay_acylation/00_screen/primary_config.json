@@ -1,0 +1,114 @@
+{
+  "hypothesis": "Observed equilibrated ASP272/ASH274 E-S frames contain water preorganization compatible with Nalpha-to-water-to-amide-N proton delivery during acylation. Geometry is not proton transfer proof.",
+  "cases": [
+    {
+      "name": "ash274_replica_1",
+      "state": "ASP272_ASH274",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop",
+      "trajectories": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000,
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_1.csv"
+    },
+    {
+      "name": "ash274_replica_2",
+      "state": "ASP272_ASH274",
+      "topology": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop",
+      "trajectories": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.nc",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.nc"
+      ],
+      "expected_frames": 10000,
+      "geometry_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_2.csv"
+    }
+  ],
+  "reference_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "atoms": {
+    "nalpha": [
+      929,
+      "N"
+    ],
+    "og1": [
+      929,
+      "OG1"
+    ],
+    "hg1": [
+      929,
+      "HG1"
+    ],
+    "cb": [
+      929,
+      "CB"
+    ],
+    "carbon": [
+      1314,
+      "C"
+    ],
+    "oxygen": [
+      1314,
+      "O"
+    ],
+    "nleave": [
+      1315,
+      "N"
+    ],
+    "leaving_c1": [
+      1315,
+      "C1"
+    ],
+    "leaving_h": [
+      1315,
+      "HN"
+    ],
+    "phe_n": [
+      113,
+      "N"
+    ],
+    "asn_nd2": [
+      186,
+      "ND2"
+    ],
+    "lys_nz": [
+      156,
+      "NZ"
+    ]
+  },
+  "residue_names": {
+    "929": "THR",
+    "968": "ASP",
+    "970": "ASH",
+    "1313": "P6N",
+    "1314": "P6I",
+    "1315": "P6I",
+    "1316": "P6C"
+  },
+  "native_gates": {
+    "OG1_displacement_max_A": 0.75,
+    "Nalpha_displacement_max_A": 1.25,
+    "abs_psi_delta_max_deg": 35,
+    "abs_chi1_delta_max_deg": 20
+  },
+  "source_files": [
+    "/data/jpc/covalent-enzyme-design/scripts/screen_nalpha_leaving_water.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/nalpha_water_relay.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/catalytic_alignment.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/catalytic_alignment_geometry.py"
+  ],
+  "hash_inputs": [
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/inputs/manifest.json",
+    "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+    "/data/jpc/covalent-enzyme-design/scripts/screen_nalpha_leaving_water.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/nalpha_water_relay.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/catalytic_alignment.py",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/catalytic_alignment_geometry.py",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_1.csv",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/08_asp_pair_md_comparison/analysis_attempt2/ash274_replica_2.csv",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/00_system/ash274_solvated.prmtop",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/05_production_10ns.nc",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_1/06_production_90ns.nc",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/05_production_10ns.nc",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/03_md/ash274_replica_2/06_production_90ns.nc"
+  ]
+}

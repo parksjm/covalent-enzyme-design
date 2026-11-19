@@ -22,6 +22,7 @@ from nyl12_covalent.active_site_geometry import (
 def _coordinates() -> dict[str, tuple[float, float, float]]:
     return {
         "Thr929.OG1": (1.0, 0.0, 1.0),
+        "Thr929.CB": (1.0, 0.0, 2.0),
         "Phe113.N": (0.0, 1.0, 1.0),
         "Asn186.ND2": (1.0, 1.0, 0.0),
         "substrate.C54": (0.0, 0.0, 1.0),
@@ -45,6 +46,7 @@ def test_distance_and_measure_report_metrics_and_provenance(tmp_path: Path) -> N
     assert metrics["d2_phe113_n_scissile_o"] == pytest.approx(1.0)
     assert metrics["d3_asn186_nd2_scissile_o"] == pytest.approx(1.0)
     assert metrics["a_BD_og1_c_o"] == pytest.approx(90.0)
+    assert metrics["theta_cb_og1_c"] == pytest.approx(90.0)
     assert metrics["herschlag_phi_projected"] > 0.0
     assert (
         report["geometry_source_sha256"]
@@ -142,7 +144,7 @@ def _amber_model() -> SimpleNamespace:
     for residue_index, residue_name, names in (
         (112, "PHE", ["N"]),
         (185, "ASN", ["ND2"]),
-        (928, "THR", ["OG1"]),
+        (928, "THR", ["OG1", "CB"]),
         (1312, "LIG", ["C54", "O49", "N59", "C62", "C033", "O034", "N035", "C032"]),
     ):
         residue_atoms = []
@@ -159,6 +161,7 @@ def test_coordinates_from_amber_maps_required_residues_and_target_atoms() -> Non
     coordinates = coordinates_from_amber(_amber_model(), "pa6")
     assert set(coordinates) == {
         "Thr929.OG1",
+        "Thr929.CB",
         "Phe113.N",
         "Asn186.ND2",
         "substrate.C54",
@@ -166,6 +169,16 @@ def test_coordinates_from_amber_maps_required_residues_and_target_atoms() -> Non
         "substrate.N59",
         "substrate.C62",
     }
+
+
+def test_coordinates_from_amber_accepts_appended_solvent_residues() -> None:
+    model = _amber_model()
+    water_oxygen = _Atom("O", len(model.atoms))
+    model.residues.append(_Residue("WAT", [water_oxygen]))
+    model.atoms.append(water_oxygen)
+    model.coordinates = np.vstack((model.coordinates, [[99.0, 99.0, 99.0]]))
+    coordinates = coordinates_from_amber(model, "pa6")
+    assert coordinates["substrate.C54"] == (4.0, 0.0, 0.0)
 
 
 def test_coordinates_from_amber_rejects_identity_missing_duplicates_and_shape() -> None:
@@ -190,7 +203,7 @@ def test_coordinates_from_amber_rejects_identity_missing_duplicates_and_shape() 
 def test_coordinates_from_amber_rejects_residue_count_and_target() -> None:
     model = _amber_model()
     model.residues.pop()
-    with pytest.raises(ValueError, match="1314 Amber residues"):
+    with pytest.raises(ValueError, match="at least 1314 Amber residues"):
         coordinates_from_amber(model, "pa6")
     with pytest.raises(ValueError, match="Unsupported substrate"):
         coordinates_from_amber(_amber_model(), "unknown")

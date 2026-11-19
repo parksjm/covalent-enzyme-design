@@ -489,8 +489,9 @@ to the 2025 preprint model, not the subsequently changed g-xTB development
 binary. No reaction-specific g-xTB advantage is established here.
 
 Compatibility observed 2026-10-25:
-- sander has a published direct GFN2-xTB library interface with electrostatic
-  embedding/QM-MM PME [R39]. Local AmberTools26 `xtb_module.F90` implements
+- sander has published direct GFN2-xTB and DFTB+ library interfaces with
+  electrostatic embedding/QM-MM PME [R39, R42]. Local AmberTools26
+  `xtb_module.F90` implements
   GFN1/GFN2, but retained sander compile flags lack `-DXTB`; its disabled
   branch explicitly raises `XTB is not enabled`. Do not claim the current
   executable is ready for xTB or rebuild it silently.
@@ -507,6 +508,13 @@ Compatibility observed 2026-10-25:
 - No MLP fitting is planned. Pretrained corrections would still need charge,
   element, reactive-chemistry and embedding validation; availability alone is
   not a reason to substitute one.
+
+R42 also demonstrates why neither uncorrected tight-binding Hamiltonian should
+be accepted by reputation alone: GFN2-xTB and several DFTB3 variants produced
+substantially different proton-transfer free-energy surfaces from the
+PBE0/6-31G* reference for G-T tautomerization. Its DeePMD-kit correction was
+reaction-trained against ab initio QM/MM energies and forces; that success does
+not provide a transferable pretrained correction for Nyl12/PA6.
 
 Small-model benchmark specification: use 2-propanol/acetate (Thr-to-Asp,
 charge -1), acetic acid/methylamine (Asp-to-terminal-N, charge 0), and

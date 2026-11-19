@@ -17,6 +17,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--title", default="Reaction-path potential energy")
+    parser.add_argument(
+        "--subtitle",
+        default="First-window reference; construction scan, not a validated barrier.",
+    )
     args = parser.parse_args()
     rows = json.loads(args.data.read_text())
     x = list(range(len(rows)))
@@ -43,13 +48,12 @@ def main() -> None:
     ax.set(
         xlabel="Reaction-coordinate window",
         ylabel="Relative energy (kcal/mol)",
-        title="Asp272 relay: finalized endpoints (red shading = rejected window)",
+        title=args.title,
     )
     ax.grid(alpha=0.2)
     ax.legend()
     fig.suptitle(
-        "First-window reference; no MM positional restraints; driving biases shown.\n"
-        "Construction scan, not a validated barrier.",
+        args.subtitle,
         fontsize=10,
     )
     fig.savefig(args.output, dpi=160)

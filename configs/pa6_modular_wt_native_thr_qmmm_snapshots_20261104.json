@@ -1,0 +1,30 @@
+{
+  "cpptraj": "/data/jpc/code/ambertools26/venv/bin/cpptraj",
+  "reference_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "selection_mode": "explicit_native_torsion",
+  "selection_rule": "Within each of three nonoverlapping 50-100 ns windows, prefer Tier A to Tier B among frames passing native Thr233 psi/chi1 limits, then choose the frame nearest the window midpoint.",
+  "topology": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_attempt2/systems/wt/md_solvated.prmtop",
+  "windows_ns": [
+    [50.0, 66.67],
+    [66.67, 83.34],
+    [83.34, 100.0]
+  ],
+  "replicas": [
+    {
+      "name": "replica_01",
+      "frames": [1288, 1553, 1939],
+      "trajectory": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_attempt2/systems/wt/replica_01/07_prod_100ns.nc",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/analysis/full_100ns_attempt1/wt_replica_01/geometry_timeseries.csv",
+      "torsion_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/00_snapshot_selection/thr_torsion_screen/replica_01/results/geometry_and_thr_torsions.csv",
+      "summary_json": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/analysis/full_100ns_attempt1/wt_replica_01/summary.json"
+    },
+    {
+      "name": "replica_02",
+      "frames": [1152, 1639, 1957],
+      "trajectory": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/campaign_attempt2/systems/wt/replica_02/07_prod_100ns.nc",
+      "geometry_csv": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/analysis/full_100ns_attempt1/wt_replica_02/geometry_timeseries.csv",
+      "torsion_csv": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/00_snapshot_selection/thr_torsion_screen/replica_02/results/geometry_and_thr_torsions.csv",
+      "summary_json": "/data/jpc/covalent-enzyme-design-pa6-md/models/pa6_modular_md_20261031/analysis/full_100ns_attempt1/wt_replica_02/summary.json"
+    }
+  ]
+}
