@@ -22,6 +22,18 @@ assignment already considered, although a different protein/water ensemble
 can affect access to the reactive geometry. Do not equate this with finding
 a new stoichiometric intermediate.
 
+### Immediate resource gate — US two-host dispatch (2026-11-19)
+
+The current 8-CPU queue extrapolates to ~8.9 days from early heating speed.
+Violet's24 physical cores are busy; azalea's 28 cores are nearly idle. Tested
+static scheduling can preserve the8 running windows and allocate47 unstarted
+windows to24 azalea workers, leaving16 total windows locally and47 remotely.
+A two-to-three-day wall-time target assumes comparable throughput and must
+be revised after a native azalea benchmark. No new remote jobs have started.
+Automatic review rejected the required input transfer and requested explicit
+PI confirmation; approval is pending. Do not retry transfer without it.
+Preserve at least 30 ps production/window and all existing scientific settings.
+
 ### Launched — umbrella sampling from the converged direct NEB
 
 The 35.80895 kcal/mol historical band is force-converged at cycle 477,

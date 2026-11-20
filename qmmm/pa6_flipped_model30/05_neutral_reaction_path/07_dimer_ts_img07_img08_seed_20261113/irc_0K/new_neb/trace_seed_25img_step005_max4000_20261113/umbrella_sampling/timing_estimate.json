@@ -1,0 +1,138 @@
+{
+  "audit_time_utc": "2026-11-20T04:13:59.268338+00:00",
+  "scope": "Read-only status, stage, and host-capacity estimate; no worker changes.",
+  "evidence": {
+    "prepared_json_sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d",
+    "window_001_heating_mdout_sha256": "83e26eef50f3f0a086fe421365d39774ffb3d9a33a0b10f480b1ee8d9cbce8d2",
+    "window_001_heating_started_utc": "2026-11-20T03:50:07.900194+00:00",
+    "window_001_heating_mdout_mtime_utc": "2026-11-20T04:12:47.995170+00:00",
+    "window_001_heating_latest_mdout_line": "NSTEP =     1000   TIME(PS) =       0.500  TEMP(K) =    71.51  PRESS =     0.0",
+    "prepared_workers": 8,
+    "prepared_windows": 63,
+    "priority_first_eight": [
+      "window_001",
+      "window_063",
+      "window_033",
+      "window_032",
+      "window_034",
+      "window_018",
+      "window_044",
+      "window_011"
+    ],
+    "worker_states": [
+      {
+        "status": "running",
+        "current": "window_001",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_063",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_033",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_032",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_034",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_018",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_044",
+        "completed": []
+      },
+      {
+        "status": "running",
+        "current": "window_011",
+        "completed": []
+      }
+    ],
+    "stage_sequence": [
+      {
+        "label": "01_heating_1ps",
+        "kind": "heat"
+      },
+      {
+        "label": "02_equilibration_5ps",
+        "kind": "equil"
+      },
+      {
+        "label": "03_production_block_01_5ps",
+        "kind": "production"
+      },
+      {
+        "label": "03_production_block_02_5ps",
+        "kind": "production"
+      },
+      {
+        "label": "03_production_block_03_5ps",
+        "kind": "production"
+      },
+      {
+        "label": "03_production_block_04_5ps",
+        "kind": "production"
+      },
+      {
+        "label": "03_production_block_05_5ps",
+        "kind": "production"
+      },
+      {
+        "label": "03_production_block_06_5ps",
+        "kind": "production"
+      }
+    ],
+    "prepared_runtime_policy": "README documents eight single-thread CPU workers; source checks worker index against prepared workers and assigns static round-robin priority schedule."
+  },
+  "eta": {
+    "observed_initial_heating_rate_ps_per_hour": 1.32,
+    "estimate_basis": "0.50 ps logged in window_001 heating over elapsed wall time since process start; early heating only, stage mtime used as timing endpoint.",
+    "receipt_first_5ps_production": {
+      "required_cumulative_ps_per_window": 11,
+      "single_window_wall_hours_at_observed_rate": 8.3,
+      "first_priority_batch_of_eight_hours": 8.3,
+      "all_63_windows_hours_at_8_workers_idealized": 65.5
+    },
+    "full_minimum_30ps_production_plus_1ps_heat_and_5ps_equil": {
+      "total_ps_per_window": 36,
+      "single_window_wall_hours_at_observed_rate": 27.2,
+      "63_windows_8_worker_queue_makespan_hours_idealized": 214.2,
+      "days": 8.9
+    },
+    "uncertainty": "Very high: rate comes from only the first 0.5 ps of heating; temperature gate is 25\u2013350 K for heating and 250\u2013350 K for later stages; stage transitions, equilibration/production throughput, I/O, failures/retries, and contention may change rate. These are nominal elapsed estimates, not validated completion forecasts."
+  },
+  "capacity": {
+    "cpu_model": "Intel Xeon Silver 4516Y+",
+    "physical_cores": 24,
+    "logical_cpus": 48,
+    "affinity_cpus": 48,
+    "load_average_1_5_15": [
+      26.47,
+      26.67,
+      25.12
+    ],
+    "memory_total_gib": 503,
+    "memory_available_gib": 465,
+    "observed_other_competing_work": "Two GPU pmemd processes, at least five separate sander NEB processes, two Gaussian l502 processes consuming about four logical CPUs each, plus CPU-heavy monitors; process sample showed each of the eight US sander workers at ~100%.",
+    "safe_headroom_assessment": "No defensible spare physical-core headroom at this snapshot: load average exceeds 24 physical cores and eight US workers already saturate eight cores. Do not infer that RAM availability implies CPU capacity. Reassess after competing NEB/Gaussian work changes.",
+    "worker_limit_context": "Prepared config and README set eight single-thread workers; runtime enforces configured index range and round-robin queues. No evidence for increasing that prepared limit in this audit."
+  },
+  "assumptions": [
+    "36 ps/window = 1 ps heating + 5 ps equilibration + six 5 ps production blocks.",
+    "11 ps/window for a first 5 ps production receipt = 1 ps heating + 5 ps equilibration + first 5 ps production block.",
+    "Idealized queue makespan assumes uniform throughput across all stages and all workers; it excludes transition overhead and retries."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "source": "output_agent_actions/20261021.jsonl",
+  "source_prefix_sha256": "fb5c031b41bdf507b2760088654d81100c470c50bb5c8ab3e74c63fa45d119b5",
+  "source_prefix_bytes": 5783658,
+  "records": 233,
+  "selection": "Records since preceding commit timestamp; full live journal remains authoritative"
+}

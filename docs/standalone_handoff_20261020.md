@@ -1,3 +1,46 @@
+## CURRENT — US capacity review and explicit transfer approval pending, 2026-11-19
+
+Eight violet US windows remain in heating, with no production block complete.
+Initial measured speed is ~1.32 ps/hour/window: at least 30 ps production plus
+6 ps preparation across 63 windows extrapolates to ~8.9 days with eight workers.
+This is heating-only, contention-dependent timing, not a reliable completion
+promise. Full evidence is in the canonical US `timing_estimate.json`.
+Violet has24 physical cores and is busy; azalea has28 physical cores nearly idle,
+working installed Sander/analysis Python and two 96 GB GPUs. Its pmemd26 binary
+matches violet's hash; no GPU compatibility simulation was run.
+
+A tested static dispatcher is prepared in `scripts/dispatch_neb_umbrella.py`:
+eight controllers adopt the currently running local window jobs and each then
+run one new local window;24 remote controllers cover the other 47 windows.
+Every window has exactly one owner. This could reduce wall time to about two
+to three days if azalea throughput is comparable; benchmark first. It does
+not change Hamiltonian, inputs, seeds or minimum sampling. It has NOT launched.
+Stop only the verified old worker Python controllers during takeover; native
+window jobs/drivers must stay alive. Frozen sources and explicit host hashes
+are required.19 focused dispatcher/jobs tests pass; core coverage97.33%.
+
+Automatic review rejected the azalea staging transfer of topology, 24 seed
+restarts and campaign inputs/scripts, explicitly requiring confirmation.
+No transfer/probe/remote US launch occurred. An explicit async approval asks
+the PI to approve that transfer, a short native compatibility check and up to
+24 remote CPU workers. Do not retry the rejected transfer without that reply.
+The original 8 jobs continue. A scalar/observable/results synchronization plan
+is still needed before remote production analysis; raw trajectories should
+remain at their execution host and compact results be available on violet.
+
+Other jobs: current 2 WT GPU replicas are ~16 ns at 270–275 ns/day, ~7.5 h left
+each. Both remain on violet. Their cached parent queues still own all pending
+replicas; do not launch duplicates on azalea. Current PA6 Gaussian water
+probes have roughly 3 h left; the L4 intermediate geometry has only 5 optimization
+steps and no credible convergence ETA, with further workflow stages queued.
+No Gaussian or MD process was signaled during this capacity audit.
+
+`mechanism-agent` now explicitly models enzyme profiles and Nyl12/NylC/NylB
+comparative reasoning, with a five-case read-only qualification pilot. The PI
+reports prior dissatisfaction with Gemma 4 31B and possibly gpt-oss-120b; neither
+is qualified by assumption. Azalea's default Ollama service is not running;
+no local model/runtime was installed. See the separate repo's updated design.
+
 ## CURRENT — direct NEB umbrella sampling launched, 2026-11-19
 
 The user authorized US from the most favorable NEB path: the historical
