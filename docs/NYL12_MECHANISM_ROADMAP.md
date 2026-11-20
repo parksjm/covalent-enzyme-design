@@ -8,12 +8,13 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
-### Active — approved read-only mechanism-agent pilot (2026-11-20)
+### Completed — first read-only mechanism-agent pilot (2026-11-20)
 
 The separate private `/data/jpc/mechanism-agent` prototype now uses official
 local gpt-oss:120b on one azalea GPU with two CPU inference threads. Five
-source-hashed evidence cases run in tmux and produce a PI review packet.
-Runtime residency passed; scientific/model capability remains ungraded.
+source-hashed evidence cases completed in tmux and produced a PI review packet.
+Runtime residency and structural checks passed. Unsupported model claims
+were identified; scientific/model capability remains ungraded.
 No scientific submission or shell tools are exposed. The six-role ensemble
 is still a design; this is its single-model baseline. PI review, then a broader
 held-out evaluation, precede any consideration of execution adapters. Existing

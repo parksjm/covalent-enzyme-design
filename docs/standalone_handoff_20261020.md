@@ -1,14 +1,15 @@
-## CURRENT — read-only mechanism-agent pilot launched, 2026-11-20
+## CURRENT — read-only mechanism-agent pilot completed, 2026-11-20
 
 The PI approved the user-owned azalea Ollama runtime, official gpt-oss:120b
 (~65 GB), official ollama/Pydantic uv dependencies, and one idle GPU with two
 CPU inference threads. Runtime and full single-GPU residency are verified.
-The five-case read-only pilot is running in tmux; results remain ungraded
-pending PI review. It has no scientific execution tools. This supersedes the
+The five-case read-only pilot completed; all five outputs passed structural
+checks, but scientific review remains pending. Unsupported model claims were
+identified; no scientific execution permission was granted. It has no scientific execution tools. This supersedes the
 older documentation-only status below. The private repository is
 `/data/jpc/mechanism-agent`; its current roadmap, source/input hashes and
 retained setup failures are authoritative for that pilot. The next PI task
-is review of `runs/pilot_20261120/PI_REVIEW.md` after automatic generation.
+is review of the generated five-case report packet in the private repository.
 
 US remains 8 violet + 24 azalea native jobs. Eight of 63 windows have completed
 production blocks (now two blocks each); overlap remains disconnected, so no
