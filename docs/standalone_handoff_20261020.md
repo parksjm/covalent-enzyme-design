@@ -1,3 +1,54 @@
+## CURRENT — direct NEB umbrella sampling launched, 2026-11-19
+
+The user authorized US from the most favorable NEB path: the historical
+force-converged regular band (cycle 477, 35.80895 kcal/mol; no verified TS).
+Canonical directory is its existing `umbrella_sampling/` child, beneath
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/`.
+Read that child's `README.md`, `prepared.json`, `workers/*/status.json` and
+`native_retry02_startup_check.json` rather than interpreting submission as MD
+completion. Eight single-thread CPU workers have initialized native Sander
+with finite initial energies, the temperature ramp and both bias terms.
+All eight workers subsequently reached positive timesteps; see
+`launch_acceptance.json` for the immutable verified launch/progress receipt.
+No production block was complete at this checkpoint.
+
+There are 63 windows (all 24 original image centers retained, CV-only inserted
+centers, nearest actual image restart seeds), two independent chemical
+biases and at least 30 ps production per window after 1 ps heating/5 ps
+equilibration at 300 K. Exact source Hamiltonian, 98-real-QM/charge −2,
+neutral Thr N, ASP272/ASP274, and 4,165-atom movable boundary are retained.
+PMF interpretation is conditional on the frozen exterior; no NEB springs
+or Cartesian image restraints are carried into US. Native RK=100 for each
+CV uses E=kΔq². Competing proton branches are retained and flagged, with
+permutation-invariant proton observables alongside HG1-labeled distances.
+
+Initial workers failed before any MD because native Sander truncates long
+filenames. Their logs are preserved in preparation history. Retry02 uses
+short local filenames/symlinks and local DISANG without changing physics or
+seeds. Prepared SHA is
+`3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d`.
+The GROUP-card boundary/thermostat probe and first bad card-order probe are
+also preserved. An explicit heating-only temperature gate differs from the
+300 K equilibration/production gate; neither establishes sampling convergence.
+
+CPU-only analysis watcher `nyl12_direct_neb_us_analysis_20261120` publishes
+`analysis/latest/` after completed blocks; disconnected overlap suppresses
+global surfaces. Laptop pull now includes current diagnostics and compact
+window endpoint views, without full raw trajectories. Endpoint views are
+not full MD movies. Existing MD, five NEB engines and Gaussian jobs continue.
+Focused new-suite checks: 74 tests passed across existing test/plotting
+environments; Ruff, shell syntax and whitespace checks passed. Core new
+modules measured 90–99% coverage; CLI parser branches remain less covered.
+No new dependencies installed.
+
+The requested local-agent proposal is updated in
+`docs/local_agent_mechanism_project_20261024.md`: bounded tool-driven planner,
+deterministic executor and independent reviewer, official non-Chinese-origin
+model candidates, two reported 96 GB GPUs on azalea, and qualification on
+archived cases before autonomous submission. The redesigner-agent README was
+read for lessons; its implementation was not adopted. No LLM installation,
+service, model download or new autonomous framework has been launched.
+
 ## CURRENT — three-condition WT MD launched, 2026-11-19
 
 The authorized matched campaign is
@@ -12,8 +63,8 @@ are recorded. No azalea or preexisting NEB/Gaussian jobs were changed.
 The historical ASP272/ASP274 direct acylation NEB is confirmed converged
 (cycle 477, maximum 35.80895 kcal/mol) but has no validated TS. Current
 ASH274+QM-water bands differ in charge, QM selection, starting conformations
-and boundaries; they do not isolate a protonation effect. NEB-seeded US is
-under discussion/planning only; no new US run has been launched.
+and boundaries; they do not isolate a protonation effect. The subsequently
+authorized historical-band US launch is recorded in the newer checkpoint above.
 
 ## CURRENT — public repository and NEB/protonation checkpoint, 2026-11-19
 

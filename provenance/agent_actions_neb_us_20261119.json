@@ -1,0 +1,9 @@
+{
+  "source": "output_agent_actions/20261021.jsonl",
+  "source_prefix_sha256": "db2dacd6583a1877fb01cc7e19edc14a38cc13037ff0fc49f06bff84a738b126",
+  "source_prefix_bytes": 5601038,
+  "selection": "Records at/after preceding commit timestamp; full journal remains authoritative on violet",
+  "start_utc": "2026-11-20T03:02:46+00:00",
+  "records": 564,
+  "snapshot_sha256": "85a8d63046809e800411ae41594eacda113bed9f5c62d739592cdfc638127ce4"
+}

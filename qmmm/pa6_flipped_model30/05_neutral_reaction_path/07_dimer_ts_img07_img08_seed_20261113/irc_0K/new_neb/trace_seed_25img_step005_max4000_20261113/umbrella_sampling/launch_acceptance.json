@@ -1,0 +1,75 @@
+{
+  "timestamp_utc": "2026-11-20T03:56:12.698050+00:00",
+  "scope": "Launch/progress only; NOT heating completion or production/sampling acceptance",
+  "prepared_sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d",
+  "native_sander_pids": [
+    3911742,
+    3911747,
+    3911748,
+    3911749,
+    3911750,
+    3911751,
+    3911755,
+    3911762
+  ],
+  "workers": [
+    {
+      "worker": "worker_01",
+      "window": "window_001",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.24
+    },
+    {
+      "worker": "worker_02",
+      "window": "window_063",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.12
+    },
+    {
+      "worker": "worker_03",
+      "window": "window_033",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.49
+    },
+    {
+      "worker": "worker_04",
+      "window": "window_032",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.44
+    },
+    {
+      "worker": "worker_05",
+      "window": "window_034",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 18.01
+    },
+    {
+      "worker": "worker_06",
+      "window": "window_018",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 18.14
+    },
+    {
+      "worker": "worker_07",
+      "window": "window_044",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.54
+    },
+    {
+      "worker": "worker_08",
+      "window": "window_011",
+      "step": 200,
+      "time_ps": 0.1,
+      "temperature_K": 17.06
+    }
+  ],
+  "production_blocks_completed": 0,
+  "other_jobs_signaled": false
+}

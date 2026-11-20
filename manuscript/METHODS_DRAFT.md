@@ -1073,3 +1073,44 @@ preserved. Detailed results and source paths are indexed in
 `docs/propka_asp_pair_pilot_20261116.md` and the student handoff's
 `evidence/pka/source_mapping.json`. No calculation was rerun for this
 documentation consolidation.
+
+
+## NEB-seeded direct-acylation umbrella sampling (2026-11-19)
+
+The force-converged, regular 24-image E–S-to-acylenzyme NEB for the
+neutral-Thr233-N/ASP272/ASP274 microstate was used to seed a separate
+DFTB3/3ob QM/MM umbrella campaign (98 real QM atoms, charge −2; electronic
+0 K). The NEB maximum, 35.80895 kcal mol⁻¹ relative to its reactant endpoint,
+was not assumed to be a verified transition state or a free-energy barrier.
+The Hamiltonian and exact original 4,165-atom movable region were retained;
+100,757 exterior atoms were frozen. The resulting PMF is conditional on this
+boundary and fixed proton inventory. Legacy Amber GROUP cards encoded the
+movable selection; a native probe verified its identity, zero frozen-atom
+displacement and thermostat degrees of freedom (12,495).
+
+Separate native Amber potentials biased q_acyl=d(C,N_leaving)−d(C,OG1) and
+q_H=d(OG1,HG1)−d(N_leaving,HG1), allowing asynchronous fluctuations. Each
+Amber RK value was 100 kcal mol⁻¹ Å⁻², with central potential k(q−q0)² and
+native linear tails outside ±10 Å. No NEB spring or Cartesian image potential
+was retained. All 24 image centers were kept; additional centers gave 63
+windows with adjacent two-coordinate Euclidean spacing ≤0.10 Å. Each used
+the nearest validated original full-system restart, without coordinate
+interpolation. This path-centered sampling does not establish complete
+coverage of the two-dimensional chemical space.
+
+At 300 K, each window was allocated 1 ps heating, 5 ps equilibration and
+six 5 ps production blocks, with a 0.5 fs step, Langevin friction 2 ps⁻¹,
+independent recorded stage seeds, fixed volume and no bond constraints.
+Production allocation was at least 30 ps/window; completion alone was not
+sampling convergence. Full-precision coordinate-derived CVs were used to
+cross-evaluate both native biases in every window. CPU-only PyMBAR analysis
+retained valid samples from competing proton branches, assessed correlation,
+effective samples and overlap, and withheld global surfaces for disconnected
+overlap graphs. In addition to the HG1-labeled coordinate, a smooth
+permutation-invariant N/O–H coordination difference monitored proton transfer
+over the nine exchangeable real-QM hydrogens; Thr-N coordination and labeled
+bond distances were retained. Link H atoms were excluded from this pool.
+Unsampled bins were not interpolated. Interpretation and sampling extensions
+require block/replica stability and adequate orthogonal chemical coverage.
+Protocol, code/input hashes and live acceptance records are retained in the
+parent NEB directory's `umbrella_sampling/README.md` and manifests.

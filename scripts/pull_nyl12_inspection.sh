@@ -700,6 +700,28 @@ if [[ $dry_run -eq 0 ]]; then
     echo "Reactive distances: $trace_neb_destination/reactive_distances.csv"
 fi
 
+# NEB-seeded two-coordinate US: compact current diagnostics and window views.
+trace_us_source="${trace_neb_source%/vmd_final_24img/final_24img}/umbrella_sampling"
+trace_us_destination="${trace_neb_destination%/vmd_final_24img/final_24img}/umbrella_sampling"
+if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$trace_us_destination"; fi
+    rsync "${vmd_rsync_args[@]}" --copy-links \
+        --exclude='/inputs/' --exclude='/source_snapshot/' \
+        --exclude='/analysis_job/' --exclude='/preparation_history/' \
+        --exclude='/native_boundary_probe*/' \
+        --include='/analysis/' --include='/analysis/latest/' \
+        --include='/analysis/latest/***' --exclude='/analysis/*/' \
+        --include='/window_*/progress/***' \
+        --include='*/' --include='*.json' --include='*.csv' \
+        --include='*.md' --include='*.mdin' --include='*.RST' \
+        --include='*.png' --include='*.svg' --include='*.log' \
+        --exclude='*' \
+        "$remote:$trace_us_source/" "$trace_us_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        echo "NEB-seeded US diagnostics: $trace_us_destination/analysis/latest/"
+    fi
+fi
+
 # Cumulative accepted frames of the ASH274 water-relay TI1-like diagnostic.
 water_path_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress
 water_path_destination="$destination/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress"

@@ -1,0 +1,22 @@
+{
+  "seed_audit": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/seed_cv_audit.json",
+  "output": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+  "sander": "/data/jpc/code/ambertools26/venv/bin/sander",
+  "python": "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+  "workers": 8,
+  "seed_base": 202800001,
+  "temperature_K": 300,
+  "temperature_gate_K": [
+    250,
+    350
+  ],
+  "maximum_cv_step_A": 0.1,
+  "k_acyl": 100,
+  "k_h": 100,
+  "source_peak_image": 8,
+  "session_prefix": "nyl12_oldneb_us_20261119",
+  "heating_temperature_gate_K": [
+    25,
+    350
+  ]
+}

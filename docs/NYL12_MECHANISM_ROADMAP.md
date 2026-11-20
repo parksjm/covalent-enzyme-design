@@ -22,7 +22,7 @@ assignment already considered, although a different protein/water ensemble
 can affect access to the reactive geometry. Do not equate this with finding
 a new stoichiometric intermediate.
 
-### Proposed — umbrella sampling from the converged direct NEB
+### Launched — umbrella sampling from the converged direct NEB
 
 The 35.80895 kcal/mol historical band is force-converged at cycle 477,
 with ASP272/ASP274, neutral Thr N, 98 real QM atoms and charge -2. It
@@ -32,7 +32,7 @@ The current ASH274+water band is a different model/seed, not an acid-only
 comparison; its original HG1 has already exchanged onto water.
 
 NEB's Cartesian path spans the declared movable QM/MM atoms; it does not
-force an umbrella coordinate choice. A native-Sander proposal uses independent
+force an umbrella coordinate choice. The authorized native-Sander campaign uses independent
 chemical CVs: q_acyl=d(C,N_leaving)-d(C,OG1), and
 q_H=d(OG1,Hgamma)-d(N_leaving,Hgamma). Each window receives separate
 harmonic terms about the image-derived centers. Monitor all four component
@@ -52,8 +52,18 @@ be unweighted defines a conditional PMF and must be reported. Preserve the
 reference Hamiltonian and boundary conditions for a controlled PES/PMF
 comparison. Production is at least 30 ps/window, with extension based on
 overlap, autocorrelation/ESS and block/replica stability, not elapsed time alone.
-No new US production was launched by this proposal. A lower free-energy
-barrier is not assumed, and a stable TI1 is not required for concerted acylation.
+Eight CPU workers are now launched in the original band's `umbrella_sampling/`
+child (see its README, prepared hash and native retry02 receipt). There are
+63 target windows with ≤0.10 Å adjacent two-CV spacing, starting from actual
+NEB restarts; no Cartesian seed interpolation was used. Each receives
+1 ps heating, 5 ps equilibration and six 5 ps production blocks. The exact
+4,165-atom movable boundary is preserved, making the PMF conditional on the
+frozen exterior. Initial pre-MD filename-buffer failures were retained and
+repaired using short local names without changing physics or seeds.
+CPU-only MBAR diagnostics update after blocks; disconnected overlap blocks
+a global surface. At the launch checkpoint no production was complete.
+A lower free-energy barrier is not assumed, and a stable TI1 is not required
+for concerted acylation.
 
 Method context: Branduardi, Gervasio and Parrinello, JCP 126, 054103 (2007),
 DOI 10.1063/1.2432340; Lonsdale, Harvey and Mulholland, Chem. Soc. Rev. (2012),
