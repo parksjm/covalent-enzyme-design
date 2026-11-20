@@ -8,6 +8,17 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
+### Active — approved read-only mechanism-agent pilot (2026-11-20)
+
+The separate private `/data/jpc/mechanism-agent` prototype now uses official
+local gpt-oss:120b on one azalea GPU with two CPU inference threads. Five
+source-hashed evidence cases run in tmux and produce a PI review packet.
+Runtime residency passed; scientific/model capability remains ungraded.
+No scientific submission or shell tools are exposed. The six-role ensemble
+is still a design; this is its single-model baseline. PI review, then a broader
+held-out evaluation, precede any consideration of execution adapters. Existing
+US/MD jobs and the mechanism priorities below remain unchanged.
+
 ### Launched — matched WT protonation ensembles (2026-11-19)
 
 The user authorized all three WT conditions. The common-box campaign in
@@ -56,10 +67,12 @@ continue in tmux. The mirror publishes validated production observables/bias
 matrices and endpoint views on violet, with acceptance metadata last; raw
 trajectories stay on their execution host. The laptop pull follows this same
 layout and excludes raw trajectories, transfer staging and archived attempts.
-Current remote initial throughput is about 2.9 ps/hour/window; this is heating,
-not established production performance. Plan around two days provisionally,
-then update from complete production blocks; sampling convergence can require
-extensions beyond the minimum allocation.
+Measured production throughput is about 1.34 ps/hour locally and 2.80
+ps/hour on azalea. The frozen `timing_update_20261120.json` extrapolates first
+azalea blocks near 12:16 EST Nov 20 and all-window first-block coverage near
+10:05 EST Nov 21. Review expanded diagnostics around 12:30 EST today. These
+are receipt estimates, not PMF or convergence promises; connected overlap and
+block stability remain required.
 
 Next gates: verify finite/SCC-complete blocks, proton inventories and competing
 branches; obtain coverage across all 63 windows; review connected overlap,

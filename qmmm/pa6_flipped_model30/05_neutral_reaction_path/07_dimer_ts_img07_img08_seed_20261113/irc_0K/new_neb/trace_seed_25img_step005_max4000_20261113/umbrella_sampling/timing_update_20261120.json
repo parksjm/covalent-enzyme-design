@@ -1,0 +1,135 @@
+{
+  "asof_utc": "2026-11-20T15:40:00Z",
+  "scope": "Sampling progress and coverage estimates only; no PMF date or convergence claim.",
+  "status": {
+    "window_count": 63,
+    "prior_analysis_completed_first_blocks": 8,
+    "prior_analysis_status": "interim_disconnected_overlap; FES suppressed",
+    "violet_workers": 8,
+    "violet_current": "8/8 in production block 02/5 ps; 4.45-4.65 ps completed in current block",
+    "azalea_workers": 24,
+    "azalea_current": "24/24 in production block 01/5 ps; 0.20-0.40 ps completed in current block",
+    "static_queue": "Violet 16 windows across 8 workers (two sequential windows each); Azalea 47 across 24 workers (two sequential windows each)"
+  },
+  "restart_aware_throughput": {
+    "method": "Per active sander process: (latest mdout TIME(PS) minus stage restart TIME) / (mdout mtime minus process start); median across workers.",
+    "violet_ps_per_hour_median": 1.3365,
+    "azalea_ps_per_hour_median": 2.803,
+    "limitations": "Short stage samples; estimates assume current throughput persists. No performance guarantee."
+  },
+  "milestones": {
+    "next_violet_5ps_block_receipts_estimate_utc": "2026-11-20T15:59Z",
+    "next_azalea_first_5ps_block_receipts_estimate_utc": "2026-11-20T17:16Z",
+    "next_overlap_diagnostic_candidate_utc": "2026-11-20T15:59Z; next Violet block checkpoint for currently sampled windows, not evidence of path connectivity",
+    "all_63_first_block_coverage_estimate_utc": "2026-11-21T15:05Z",
+    "coverage_basis": "Frozen whole-window queue: current first windows must finish all six 5 ps production blocks before each worker begins its second window; second window requires 1 ps heat + 5 ps equilibration + first 5 ps production block. Local 16-window queue is the estimated bottleneck.",
+    "pmf_date": null
+  },
+  "empirical_overlap": {
+    "sampled_windows": 8,
+    "connected_components": 6,
+    "largest_component": [
+      "window_032",
+      "window_033",
+      "window_034"
+    ],
+    "positive_histogram_intersections": [
+      {
+        "pair": [
+          "window_032",
+          "window_033"
+        ],
+        "intersection": 0.54
+      },
+      {
+        "pair": [
+          "window_033",
+          "window_034"
+        ],
+        "intersection": 0.43
+      },
+      {
+        "pair": [
+          "window_032",
+          "window_034"
+        ],
+        "intersection": 0.76
+      }
+    ],
+    "other_sampled_windows_isolated": [
+      "window_001",
+      "window_011",
+      "window_018",
+      "window_044",
+      "window_063"
+    ],
+    "interpretation": "Finite-sample 2D histogram intersection only; disconnected sample, no PMF/barrier claim. No mass-coverage arrays used."
+  },
+  "sources": {
+    "resume_note": {
+      "path": "docs/nyl12_covalent_resume_20261019.md",
+      "sha256": "20b4515e0255b8592fb56e8189942a0b0f4f8675e40a829b5804daa8b74689bc"
+    },
+    "prepared": {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+      "sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+    },
+    "dispatch_plan": {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/plan.json",
+      "sha256": "8455834c913ba727f933a40d5ad0a2519a5fee525c57f58c4a986cab403f4253"
+    },
+    "distributed_launch_acceptance": {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/distributed_launch_acceptance_20261120.json",
+      "sha256": "fc0084df387bcd5e34cc54c7e65c31affe1ea41ffbe6827339bc1e21155fbf54"
+    },
+    "first_block_analysis": {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/first_block_summary_20261120.json",
+      "sha256": "ce78473c26180c3bfa7820353e950b7f9a9f7df2b5c01ee972578f67baf577c3"
+    },
+    "overlap_checkpoints": [
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_001/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "6b1a869c6e6d3ecc47878290caf78a55997291432d75b31a46cd9458dd98c112"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_011/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "fc4a3a4def279edb983fcac303b67f314bdd682e569c5b8c82d64b73ace1bebf"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_018/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "2704a2f6b7b4ac303e8552693046c46e97a6a73debe9dc22ebe82b080d9d8c3f"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_032/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "cfdc1a0fd4dbc0586728859ce77a0fc61bc1544fb25a1915d79f6cba20e8cc22"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_033/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "9fb4cb94a07ff946b0d0d2b9f02aacdb6808ad63a9f8badbf8c9e18ab1b227ed"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_034/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "bf0a446ce2bdffad7dcfb057be07573bfc70f3bf4e65d96bf1cba4466c33398f"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_044/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "56531968ff0b98b29ec629124babc338bb44d536a1fd46add1ca178b4249dbe3"
+      },
+      {
+        "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_063/03_production_block_01_5ps/overlap_checkpoint.json",
+        "sha256": "52a8c5839cbbb9c5a74174dfc3128a8b658f35c6334665bf64c64fe727faa4ac"
+      }
+    ]
+  },
+  "remote_evidence": {
+    "method": "Read-only SSH to azalea; current worker status, native process start time, current working directory, and mdout mtime/time were inspected in place.",
+    "observed_utc": "2026-11-20T15:36Z",
+    "hashing": "Remote dynamic process/mdout snapshot was not copied or hashed; frozen prepared/queue and prior analysis files are hashed above."
+  },
+  "assumptions": [
+    "Stage throughput remains near the measured per-process medians across later windows and production blocks.",
+    "All currently assigned workers continue their existing static whole-window queues without interruption or manual reassignment.",
+    "Window first-block coverage means completion of 5 ps production for that window, not chemical retention, overlap, sampling convergence, or PMF acceptance.",
+    "Overlap diagnostic timing refers only to the next scheduled block checkpoint; a connected empirical graph may require longer sampling."
+  ]
+}
