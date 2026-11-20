@@ -28,9 +28,25 @@ def mapped_topology() -> tuple[SimpleNamespace, list[dict]]:
                 sequence, "ASH" if sequence == 274 else "ASP"
             )
             names = ["CA"] + (
-                ["H1", "H2"] if sequence == 233 else ["HD2"] if resname == "ASH" else []
+                ["N", "H1", "H2"]
+                if sequence == 233
+                else ["HD2"]
+                if resname == "ASH"
+                else []
             )
-            members = [SimpleNamespace(name=n) for n in names]
+            members = [
+                SimpleNamespace(
+                    name=n,
+                    charge=0.0,
+                    atomic_number=1 if n.startswith("H") else 7 if n == "N" else 6,
+                    bond_partners=[],
+                )
+                for n in names
+            ]
+            if sequence == 233:
+                members[0].charge = -0.001
+                nitrogen = next(a for a in members if a.name == "N")
+                nitrogen.bond_partners = [a for a in members if a.atomic_number == 1]
             residues.append(SimpleNamespace(name=resname, atoms=members))
             atoms.extend(members)
             rows.append(
@@ -180,7 +196,7 @@ def test_four_copy_mapping_and_protected_mutation_rejection() -> None:
         support.validate_protected(top, rows)
     top.residues[0].name = "PHE"
     top.residues[3].atoms.append(SimpleNamespace(name="H3"))
-    with pytest.raises(ValueError, match="neutral"):
+    with pytest.raises(ValueError, match="hydrogen inventory"):
         support.validate_protected(top, rows)
 
 
@@ -350,3 +366,87 @@ def test_all_gpus_are_checked_before_any_replica_launch(
     with pytest.raises(ValueError, match="GPU1"):
         runner.launch(config, ROOT)
     assert not launched
+
+
+def test_explicit_charged_terminal_contract_and_whole_residue_sum(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from prepared_terminal_state import terminal_contract, validate_terminal
+
+    assert terminal_contract({"microstate": "ASP272/ASP274"}) == (
+        "NH2",
+        -0.001,
+        "legacy_neutral_state_contract_v1",
+    )
+    assert terminal_contract(
+        {"microstate": "ASP272/ASP274", "terminal_protonation": "NH3+"}
+    )[:2] == ("NH3+", 1.0)
+    assert terminal_contract(
+        {"microstate": "ASP272/ASH274", "terminal_protonation": "NH2"}
+    )[:2] == ("NH2", 0.0)
+    with pytest.raises(ValueError):
+        terminal_contract(
+            {"microstate": "ASP272/ASH274", "terminal_protonation": "NH3+"}
+        )
+    with pytest.raises(ValueError):
+        terminal_contract({"microstate": "unknown"})
+    with pytest.raises(ValueError):
+        terminal_contract(
+            {"microstate": "ASP272/ASP274", "terminal_protonation": "auto"}
+        )
+    manifest, _, top = dataset(tmp_path, monkeypatch)
+    doc = json.loads(manifest.read_text())
+    entry = doc["datasets"]["wt_asp272_ash274"]
+    entry.update(microstate="ASP272/ASP274", terminal_protonation="NH3+")
+    for row in entry["protected_residues"]:
+        residue = top.residues[row["amber_residue"] - 1]
+        if row["sequence_residue"] == 274:
+            row["resname"] = "ASP"
+            residue.name = "ASP"
+            residue.atoms = [a for a in residue.atoms if a.name != "HD2"]
+        if row["sequence_residue"] == 233:
+            # Charge +1 is on the WHOLE residue, deliberately not the N+H subset.
+            nitrogen = next(a for a in residue.atoms if a.name == "N")
+            hydrogen = SimpleNamespace(
+                name="H3", charge=0.1, atomic_number=1, bond_partners=[nitrogen]
+            )
+            residue.atoms.append(hydrogen)
+            nitrogen.bond_partners.append(hydrogen)
+            for atom in residue.atoms:
+                atom.charge = 0.1 if atom.name in {"N", "H1", "H2", "H3"} else 0.6
+    top.atoms = [a for r in top.residues for a in r.atoms]
+    top.coordinates = np.zeros((len(top.atoms), 3))
+    manifest.write_text(json.dumps(doc))
+    result = support.load_dataset(manifest, "wt_asp272_ash274")[0]
+    assert result["validated_terminal_contract"]["four_thr_charge_sum_e"] == 4.0
+    first = top.residues[3]
+    assert validate_terminal(first, "NH3+", 1.0) == pytest.approx(1.0)
+    with pytest.raises(ValueError, match="inventory"):
+        validate_terminal(first, "NH2", 0.0)
+    first.atoms[0].charge += 0.1
+    with pytest.raises(ValueError, match="Whole Thr"):
+        validate_terminal(first, "NH3+", 1.0)
+    first.atoms[0].charge -= 0.1
+    next(a for a in first.atoms if a.name == "N").bond_partners.pop()
+    with pytest.raises(ValueError, match="connectivity"):
+        validate_terminal(first, "NH3+", 1.0)
+
+
+def test_explicit_neutral_zero_and_legacy_residual_are_distinct_contracts(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    manifest, _, top = dataset(tmp_path, monkeypatch)
+    doc = json.loads(manifest.read_text())
+    doc["datasets"]["wt_asp272_ash274"]["terminal_protonation"] = "NH2"
+    manifest.write_text(json.dumps(doc))
+    with pytest.raises(ValueError, match="Whole Thr"):
+        support.load_dataset(manifest, "wt_asp272_ash274")
+    for row in doc["datasets"]["wt_asp272_ash274"]["protected_residues"]:
+        if row["sequence_residue"] == 233:
+            top.residues[row["amber_residue"] - 1].atoms[0].charge = 0.0
+    assert (
+        support.load_dataset(manifest, "wt_asp272_ash274")[0][
+            "validated_terminal_contract"
+        ]["four_thr_charge_sum_e"]
+        == 0.0
+    )

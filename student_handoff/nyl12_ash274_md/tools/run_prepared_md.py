@@ -74,6 +74,7 @@ def plan(config_path: Path, repo: Path) -> Path:
     sources = [
         Path(__file__).resolve(),
         HERE / "prepared_md_support.py",
+        HERE / "prepared_terminal_state.py",
         config_path,
         repo / "scripts/run_model30_md_replica.py",
         repo / "scripts/continue_model30_md.py",

@@ -86,10 +86,14 @@ accepted initial minimum; equilibration and both production segments have
 ## New mutants and microstates require explicit preparation
 
 A changed sequence or microstate requires a separately prepared, validated
-system and dataset entry. Current execution supports only ASP272/ASP274,
-ASP272/ASH274 and ASH272/ASP274 with neutral Thr NH2. Other protonation
-patterns require explicit method/tool review; changing a JSON label is not
-sufficient. Use the repository's authoritative protein and PA6
+system and dataset entry. Current execution supports ASP272/ASP274, ASP272/ASH274 and ASH272/ASP274
+with neutral Thr NH2, plus explicitly declared cationic Thr NH3+ with
+ASP272/ASP274. New manifests specify `terminal_protonation` as `NH2` or
+`NH3+`; the latter checks all four whole Thr residue charges and N-bound
+H1/H2/H3 inventories. Legacy neutral manifests retain their documented
+-0.001 e/residue charge residual; new explicit NH2 preparations require
+whole-residue charge zero. Other patterns require explicit method/tool
+review; changing a JSON label is not sufficient. Use the repository's authoritative protein and PA6
 parameter release, retaining its charge method and topology conventions.
 Rebuild changed residues with an explicit source-chain/full-sequence/Amber
 mapping, review termini/proton inventory, recount charge and ions, then run the
@@ -106,3 +110,14 @@ inventories are checked. For conservative design protection also retain the
 maturation boundary at 232, Thr234 and Gly273 in every symmetry copy. Neither
 these protections nor successful MD certify a productive catalytic pathway.
 LigandMPNN design and mutation selection are separate reviewed steps.
+
+## Multi-condition GPU queues
+
+Use `scripts/queue_prepared_md.py` from the current repository for campaigns
+with several replicas assigned to the same GPU. Its `plan` and `launch`
+commands use a queue JSON listing three prepared MD config files, GPU IDs,
+output and session prefix. Two workers execute replicas sequentially, without
+sharing a GPU between campaign replicas. Do not call the individual runner's
+`launch` on a four-replica config with repeated GPU IDs. The active matched
+WT campaign is documented in
+`qmmm/pa6_flipped_model30/10_wt_protonation_md/README.md`.

@@ -9,6 +9,8 @@ from pathlib import Path
 import subprocess
 from typing import Any
 
+from prepared_terminal_state import terminal_contract, validate_terminal
+
 PROTECTED = {113: "PHE", 156: "LYS", 186: "ASN", 233: "THR"}
 SITES = ("AE", "BF", "CG", "DH")
 
@@ -69,12 +71,19 @@ def replicas(config: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
-def validate_protected(topology: Any, rows: list[dict[str, Any]]) -> None:
+def validate_protected(
+    topology: Any,
+    rows: list[dict[str, Any]],
+    terminal_protonation: str = "NH2",
+    expected_thr_charge: float = -0.001,
+) -> None:
     """Require six protected identities across all four explicitly mapped sites.
 
     Args:
         topology: Loaded original ParmEd topology.
         rows: Site/chain/full-sequence/Amber-index/resname correspondence records.
+        terminal_protonation: Legacy-neutral NH2 or explicitly declared NH3+.
+        expected_thr_charge: Whole Thr charge; legacy-neutral recipe is -0.001e.
 
     Raises:
         ValueError: If mapping, catalytic identity or neutral-Thr inventory differs.
@@ -104,10 +113,8 @@ def validate_protected(topology: Any, rows: list[dict[str, Any]]) -> None:
                 f"Protected catalytic identity mismatch: {site}/{sequence}"
             )
         names = {a.name for a in residue.atoms}
-        if sequence == 233 and (not {"H1", "H2"} <= names or "H3" in names):
-            raise ValueError(
-                "All four catalytic Thr N termini must retain declared neutral NH2"
-            )
+        if sequence == 233:
+            validate_terminal(residue, terminal_protonation, expected_thr_charge)
         if sequence in (272, 274) and (("HD2" in names) != (residue.name == "ASH")):
             raise ValueError("Declared Asp proton inventory differs from topology")
 
@@ -188,7 +195,18 @@ def load_dataset(
         if r["sequence_residue"] in expected
     ):
         raise ValueError("Dataset microstate differs from protected Asp/ASH mapping")
-    validate_protected(top, dataset["protected_residues"])
+    terminal, charge, basis = terminal_contract(dataset)
+    validate_protected(top, dataset["protected_residues"], terminal, charge)
+    dataset = {
+        **dataset,
+        "validated_terminal_contract": {
+            "state": terminal,
+            "whole_thr_charge_e": charge,
+            "basis": basis,
+            "copy_count": 4,
+            "four_thr_charge_sum_e": 4 * charge,
+        },
+    }
     return (
         dataset,
         files["topology"],

@@ -8,6 +8,58 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
+### Launched — matched WT protonation ensembles (2026-11-19)
+
+The user authorized all three WT conditions. The common-box campaign in
+`qmmm/pa6_flipped_model30/10_wt_protonation_md/` now runs unrestrained GPU
+MM before four independent 100 ns replicas per state, sequentially allocated
+to two free Violet GPUs. All three actual preparation audits passed; full
+MD acceptance and occupancy results remain pending. Read its README and
+frozen orchestration status. These simulations test fixed-microstate
+structural ensembles; they do not allow proton exchange or establish pKas.
+Proton movement from cationic Thr N to either Asp would reach a proton
+assignment already considered, although a different protein/water ensemble
+can affect access to the reactive geometry. Do not equate this with finding
+a new stoichiometric intermediate.
+
+### Proposed — umbrella sampling from the converged direct NEB
+
+The 35.80895 kcal/mol historical band is force-converged at cycle 477,
+with ASP272/ASP274, neutral Thr N, 98 real QM atoms and charge -2. It
+connects E–S to acylenzyme by direct OG1-proton delivery to leaving N.
+A regular-band maximum is not a verified TS, but the images can seed US.
+The current ASH274+water band is a different model/seed, not an acid-only
+comparison; its original HG1 has already exchanged onto water.
+
+NEB's Cartesian path spans the declared movable QM/MM atoms; it does not
+force an umbrella coordinate choice. A native-Sander proposal uses independent
+chemical CVs: q_acyl=d(C,N_leaving)-d(C,OG1), and
+q_H=d(OG1,Hgamma)-d(N_leaving,Hgamma). Each window receives separate
+harmonic terms about the image-derived centers. Monitor all four component
+distances and exchangeable proton identities so degeneracy or competing
+proton transfer is not hidden by a summed coordinate. Seed a local pilot
+from the existing band, then add windows/orthogonal coverage based on overlap
+and hysteresis; do not interpret an unsampled narrow ribbon as a complete
+two-dimensional free-energy surface.
+
+Alternatively, a path CV can express progress s and distance z from the
+reference path using these reactive distances. This needs a reviewed native
+implementation or explicit dependency approval; no PLUMED installation is
+implied. Avoid restraining every QM Cartesian coordinate to each image.
+NEB springs are removed. All applied umbrella/orthogonal biases must be
+represented in MBAR reduced potentials; an extra confining wall that cannot
+be unweighted defines a conditional PMF and must be reported. Preserve the
+reference Hamiltonian and boundary conditions for a controlled PES/PMF
+comparison. Production is at least 30 ps/window, with extension based on
+overlap, autocorrelation/ESS and block/replica stability, not elapsed time alone.
+No new US production was launched by this proposal. A lower free-energy
+barrier is not assumed, and a stable TI1 is not required for concerted acylation.
+
+Method context: Branduardi, Gervasio and Parrinello, JCP 126, 054103 (2007),
+DOI 10.1063/1.2432340; Lonsdale, Harvey and Mulholland, Chem. Soc. Rev. (2012),
+DOI 10.1039/C2CS15297E. These support CV/bias methodology, not a Nyl12 mechanism.
+
+
 ### Cationic Thr233 comparison and NEB checkpoint — 2026-11-19
 
 Cationic Thr233 N termini with ASP272/ASP274 should be retained as a competing

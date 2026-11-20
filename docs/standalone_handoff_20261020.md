@@ -1,3 +1,20 @@
+## CURRENT — three-condition WT MD launched, 2026-11-19
+
+The authorized matched campaign is
+`qmmm/pa6_flipped_model30/10_wt_protonation_md/README.md`. Three accepted
+common-box preparations cover neutral Thr-N/ASP272/ASP274, neutral Thr-N/
+ASP272/ASH274 and cationic Thr-N/ASP272/ASP274 in all four copies. The
+controller `wt_three_protonation_20261119` performs fully unrestrained GPU
+MM then queues four independent 100 ns replicas per state on two Violet
+GPUs. Frozen sources, explicit charge normalization and counterion changes
+are recorded. No azalea or preexisting NEB/Gaussian jobs were changed.
+
+The historical ASP272/ASP274 direct acylation NEB is confirmed converged
+(cycle 477, maximum 35.80895 kcal/mol) but has no validated TS. Current
+ASH274+QM-water bands differ in charge, QM selection, starting conformations
+and boundaries; they do not isolate a protonation effect. NEB-seeded US is
+under discussion/planning only; no new US run has been launched.
+
 ## CURRENT — public repository and NEB/protonation checkpoint, 2026-11-19
 
 The user explicitly requested public visibility; GitHub confirms
