@@ -1,6 +1,6 @@
 # Nyl12–PA6 mechanism: decision roadmap
 
-Status: working mechanism subproject plan, updated 2026-11-19. The overarching
+Status: working mechanism subproject plan, updated 2026-11-20. The overarching
 `MASTER_PLAN_NYL12_COVALENT_REDESIGN.md` remains controlling for redesign;
 this document is its **single forward-looking mechanism execution plan**.
 The append-only action journal, run manifests and manuscript source ledger hold
@@ -22,17 +22,51 @@ assignment already considered, although a different protein/water ensemble
 can affect access to the reactive geometry. Do not equate this with finding
 a new stoichiometric intermediate.
 
-### Immediate resource gate — US two-host dispatch (2026-11-19)
+### Active — distributed NEB-seeded US, approved and launched 2026-11-20
 
-The current 8-CPU queue extrapolates to ~8.9 days from early heating speed.
-Violet's24 physical cores are busy; azalea's 28 cores are nearly idle. Tested
-static scheduling can preserve the8 running windows and allocate47 unstarted
-windows to24 azalea workers, leaving16 total windows locally and47 remotely.
-A two-to-three-day wall-time target assumes comparable throughput and must
-be revised after a native azalea benchmark. No new remote jobs have started.
-Automatic review rejected the required input transfer and requested explicit
-PI confirmation; approval is pending. Do not retry transfer without it.
-Preserve at least 30 ps production/window and all existing scientific settings.
+The PI explicitly approved transfer, a native compatibility test and up to
+24 CPU workers on azalea. **32 native Sander calculations are verified
+running: eight on violet and 24 on azalea**, with positive integration steps.
+Static ownership covers all 63 windows once: 16 locally (eight adopted plus
+eight subsequent windows), 47 remotely. Native violet jobs were not restarted.
+The canonical `umbrella_sampling/` directory is identical on both hosts.
+Read its `status.json`, `distributed_launch_acceptance_20261120.json`,
+`dispatch/plan.json` and `dispatch/remote_status/azalea/` for durable state.
+
+Azalea uses its installed architecture-native CPU Sander and analysis Python;
+no executable binary was copied. The 100-step native test completed normally,
+with initial EPtot matching violet at printed precision (difference 0.0000
+kcal/mol; allowed tolerance 0.001). All 1,046 transferred input/source hashes
+passed. Native method, topology, charges, seeds, restraints, 12 Å/4,165-atom
+movable selection and at least 30 ps production/window are unchanged. The
+initial24-controller attempt failed before MD due to an Amber libtinfo/tmux
+ABI conflict; failed artifacts were preserved. The tested launcher isolates
+tmux's library environment while retaining scientific job library paths.
+The remote retry generation is execution provenance, not a new reaction path.
+
+First 5 ps blocks from the original eight windows are available. At this
+checkpoint only 8/63 windows have completed production blocks and sampled
+overlap is disconnected. **A full-path PMF/barrier is not yet estimable.**
+Current plots are `analysis/latest/{sample_coverage,histogram_overlap,mbar_overlap}.png`.
+Middle-window HG1 occupation of Thr Nalpha is retained as competing chemistry;
+do not label a resulting projected surface a verified direct-route mechanism.
+
+A seven-day CPU-only MBAR/plot watcher and seven-day compact results mirror
+continue in tmux. The mirror publishes validated production observables/bias
+matrices and endpoint views on violet, with acceptance metadata last; raw
+trajectories stay on their execution host. The laptop pull follows this same
+layout and excludes raw trajectories, transfer staging and archived attempts.
+Current remote initial throughput is about 2.9 ps/hour/window; this is heating,
+not established production performance. Plan around two days provisionally,
+then update from complete production blocks; sampling convergence can require
+extensions beyond the minimum allocation.
+
+Next gates: verify finite/SCC-complete blocks, proton inventories and competing
+branches; obtain coverage across all 63 windows; review connected overlap,
+autocorrelation/ESS and block stability before a PMF interpretation. Extend
+sampling selectively under the approved protocol. Any new mechanism or
+Hamiltonian decision remains a PI discussion. Keep existing NEB/MD/parameter
+work intact and use completed results as evidence rather than another pivot.
 
 ### Launched — umbrella sampling from the converged direct NEB
 

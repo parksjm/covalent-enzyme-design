@@ -1114,3 +1114,18 @@ Unsampled bins were not interpolated. Interpretation and sampling extensions
 require block/replica stability and adequate orthogonal chemical coverage.
 Protocol, code/input hashes and live acceptance records are retained in the
 parent NEB directory's `umbrella_sampling/README.md` and manifests.
+
+
+Distributed umbrella execution retained byte-identical scientific inputs
+across violet and azalea, using separately hashed native executable builds.
+A 100-step compatibility probe reproduced the reference initial potential
+energy at printed precision (acceptance tolerance 0.001 kcal mol⁻¹). A static
+manifest assigned 16 windows to violet and 47 to azalea with eight and 24
+single-threaded workers, respectively. Ongoing violet windows were adopted
+without restarting MD. Completed remote observables and cross-bias matrices
+were checksum-validated and published on the analysis host with acceptance
+metadata last, avoiding partially transferred blocks in MBAR. Full native
+trajectories remained on their execution hosts; compact structural views
+and analysis products were mirrored separately. Neither the distribution
+nor the control-process library isolation changed the QM/MM Hamiltonian,
+thermostat, seed schedule, frozen exterior or chemical bias definitions.

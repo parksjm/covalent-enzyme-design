@@ -1,3 +1,22 @@
+## Current execution — 2026-11-20
+
+32 native CPU Sander jobs are running: 8 on violet,24 on azalea. The PI
+approved the transfer and launch. Read `distributed_launch_acceptance_20261120.json`
+for actual positive-step/PID proof and `azalea_compatibility_receipt.json` for
+the architecture-native 100-step probe (initial-energy difference 0.0000kcal/mol).
+Static ownership is 16/47 windows, defined by `dispatch/plan.json`. Current
+controllers are `dispatch/violet/` locally and `dispatch/azalea/` remotely;
+the remote link resolves to a retained retry generation. The old `workers/`
+controllers are retired historical records. Use the existing plan for this
+ongoing campaign; do not invoke the original eight-worker launch again.
+
+The native scientific inputs and at least 30 ps production/window are unchanged.
+Raw trajectories remain at the execution host. A seven-day mirror publishes
+completed-block scalar/observable/bias data and compact endpoint views onto
+violet; a seven-day CPU-only MBAR watcher updates `analysis/latest/`. Initial
+completed coverage is 8/63 windows with disconnected overlap: no full-path
+PMF/barrier is established. Laptop pull excludes staging and archived attempts.
+
 # Direct acylation NEB-seeded umbrella sampling
 
 Authorized 2026-11-19. Read `status.json`, `workers/*/status.json` and native
@@ -73,7 +92,7 @@ independent effective samples, chemical branches and block/replica stability.
 ## Finding and reproducing files
 
 - Native inputs, logs, restart and full trajectory: `window_*/<stage>/`.
-- Completed-block compact structural views: `window_*/progress/block_*/view.vmd`.
+- Completed-block compact structural views: `window_*/progress/block_*/view_umbrella.vmd`.
   These contain stage endpoints and are explicitly **not full MD movies**.
 - Small plots and numerical diagnostics: `analysis/latest/`.
 - CPU queue status and retained tmux job records: `workers/`.

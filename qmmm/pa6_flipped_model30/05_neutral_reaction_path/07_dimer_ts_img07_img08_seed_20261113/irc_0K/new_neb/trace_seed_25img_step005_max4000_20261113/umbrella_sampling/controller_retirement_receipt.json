@@ -1,0 +1,307 @@
+{
+  "created_utc": "2026-11-20T13:17:55.575804+00:00",
+  "prepared_sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d",
+  "controllers": [
+    {
+      "pid": 3911597,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "0"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401334"
+    },
+    {
+      "pid": 3911603,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "1"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401350"
+    },
+    {
+      "pid": 3911609,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "2"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401370"
+    },
+    {
+      "pid": 3911615,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "3"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401391"
+    },
+    {
+      "pid": 3911621,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "4"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401408"
+    },
+    {
+      "pid": 3911627,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "5"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401421"
+    },
+    {
+      "pid": 3911633,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "6"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401441"
+    },
+    {
+      "pid": 3911638,
+      "argv": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/source_snapshot/scripts/run_neb_umbrella.py",
+        "worker",
+        "--config",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--worker",
+        "7"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "start_ticks": "72401461"
+    }
+  ],
+  "protected_native_jobs": {
+    "4072625": {
+      "pid": 4072625,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_001/03_production_block_02_5ps",
+      "start_ticks": "75402821"
+    },
+    "4072629": {
+      "pid": 4072629,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_032/03_production_block_02_5ps",
+      "start_ticks": "75403534"
+    },
+    "4072906": {
+      "pid": 4072906,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_063/03_production_block_02_5ps",
+      "start_ticks": "75408280"
+    },
+    "4072966": {
+      "pid": 4072966,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_044/03_production_block_02_5ps",
+      "start_ticks": "75412301"
+    },
+    "4073792": {
+      "pid": 4073792,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_018/03_production_block_02_5ps",
+      "start_ticks": "75427619"
+    },
+    "4073885": {
+      "pid": 4073885,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_011/03_production_block_02_5ps",
+      "start_ticks": "75431422"
+    },
+    "4074081": {
+      "pid": 4074081,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_034/03_production_block_02_5ps",
+      "start_ticks": "75434323"
+    },
+    "4074424": {
+      "pid": 4074424,
+      "argv": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_033/03_production_block_02_5ps",
+      "start_ticks": "75443294"
+    }
+  },
+  "retired_utc": "2026-11-20T13:17:55.685808+00:00",
+  "only_original_controllers_signaled": true,
+  "native_jobs_preserved": true
+}

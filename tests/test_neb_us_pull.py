@@ -27,6 +27,14 @@ def test_neb_us_pull_keeps_current_diagnostics_and_complete_views(
     source, target = tmp_path / "source", tmp_path / "target"
     keep = [
         "prepared.json",
+        "source_snapshot/scripts/run_neb_umbrella.py",
+        "dispatch/azalea_retry02/source_snapshot/src/nyl12_covalent/jobs.py",
+        "dispatch/sync_source_snapshot/scripts/sync_neb_umbrella_results.py",
+        "dispatch/sync_source_snapshot/source_sha256.json",
+        "dispatch/plan.json",
+        "dispatch/azalea_retry02/plan.json",
+        "dispatch/host_manifests/azalea_prepared.json",
+        "azalea_compatibility_receipt.json",
         "workers/worker_01/status.json",
         "window_001/01_heating_1ps/run.mdin",
         "window_001/03_production_block_01_5ps/acceptance.json",
@@ -36,6 +44,15 @@ def test_neb_us_pull_keeps_current_diagnostics_and_complete_views(
     ]
     reject = [
         "inputs/system.prmtop",
+        "source_snapshot/__pycache__/cached.pyc",
+        "dispatch/sync_source_snapshot/unused.bin",
+        "execution_preflight/azalea/native_probe_attempt1/process.json",
+        "dispatch/preparation_history/ncurses_attempt1/window_jobs/window_053/status.json",
+        "dispatch/incoming/azalea/window_053/observables.csv",
+        "dispatch/azalea_retry02/source_snapshot/unused.json",
+        "dispatch/sync_source_snapshot/unused.json",
+        "dispatch/azalea/worker01/job/command.json",
+        "dispatch/sync_job/command.json",
         "source_snapshot/source.json",
         "analysis_job/source_snapshot/state.json",
         "preparation_history/old/prepared.json",

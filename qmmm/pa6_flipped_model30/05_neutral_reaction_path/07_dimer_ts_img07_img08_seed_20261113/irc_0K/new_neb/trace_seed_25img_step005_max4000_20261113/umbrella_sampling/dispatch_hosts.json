@@ -1,0 +1,10 @@
+{
+  "violet": {
+    "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+    "sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+  },
+  "azalea": {
+    "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+    "sha256": "faf0c7536cc161f6d1a42f917cd06d36710701b2649b2a106d2804279b35ab3d"
+  }
+}

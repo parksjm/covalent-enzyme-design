@@ -1,3 +1,64 @@
+## CURRENT — approved two-host US running, 2026-11-20
+
+This supersedes the older pending-transfer checkpoint. The PI explicitly
+approved transfer, native compatibility testing and up to 24 azalea CPU
+workers. There are now **32 actual native Sander processes**: 8 on violet,
+24 on azalea; positive native steps were verified for every remote window.
+Eight old local queue-controller PIDs alone were retired after exact argv/
+PID-start-time checks. All eight native violet jobs remained unchanged.
+
+The same canonical US directory exists on both hosts beneath the historical
+35.80895 kcal/mol NEB. `status.json` points to current execution records.
+`dispatch/plan.json` assigns 16 windows to violet and 47 to azalea, each once.
+`distributed_launch_acceptance_20261120.json` records verified native PIDs,
+progress, prepared hashes and the 100-step native probe. The probe initial
+EPtot agreed exactly at printed precision; tolerance was 0.001 kcal/mol.
+All 1,046 copied inputs/source files were hash-verified. Azalea uses installed
+native Sander/Python; no binaries or environments were copied. `pmemd.cuda`
+is for classical MD and was not involved in this CPU QM/MM launch.
+
+A remote tmux/libtinfo conflict initially prevented all 24 window processes
+from starting. Those failed controller/window-job artifacts remain under
+`dispatch/preparation_history/ncurses_attempt1/` on azalea. The tested fix
+isolates only tmux's LD_LIBRARY_PATH, retaining inherited/explicit scientific
+library paths in job scripts and metadata. Remote retry source/plan lives in
+`dispatch/azalea_retry02/`; canonical `dispatch/azalea` points to its workers.
+The original plan/local controllers and all frozen scientific inputs remain
+unchanged. No numerical MD samples were lost to that pre-MD failure.
+
+Persistent monitors: `nyl12_neb_us_result_sync_20261120` mirrors compact,
+validated completed-block outputs and endpoint views onto violet every 60 s;
+`nyl12_distributed_neb_us_analysis_20261120` updates CPU-only MBAR/plots.
+Both are configured for seven days. No raw trajectory/restart transfer is
+required for monitoring/laptop inspection. Source/transfer receipts are kept.
+Analysis source remains the qualified CPU/overlap-guard snapshot.
+
+At the latest completed-block refresh, 8/63 windows had one 5 ps production
+block each. Sampled overlap is disconnected, so global PMF generation is
+correctly withheld. `first_block_summary_20261120.json` records competing
+HG1 transfer to Thr Nalpha in middle windows; all valid samples are retained.
+The current `analysis/latest/` contains coverage and overlap plots, not a
+converged barrier. The remaining azalea windows are heating. Initial measured
+remote speed ~2.9 ps/hour is encouraging but does not establish production
+throughput. Provisional minimum-campaign ETA is around two days; revise it
+from complete production blocks and extend if convergence requires it.
+
+The updated pull script includes current diagnostics/portable views with
+workstation-identical layout and includes small active frozen Python snapshots and excludes nested staging,
+compiled caches, job duplicates and historical attempts. Recopy the script to the laptop.
+The user requested roadmap+pull+PMF status+mechanism-agent status+commit/push
+before logging off. Native jobs/monitors continue independently of chat.
+Mechanism-agent remains a private documentation scaffold, with enzyme-general
+profiles/NylC/NylB comparisons and five-case read-only model qualification;
+no local LLM runtime/model service was installed or dispatched.
+
+Verification: 1,643 collectable tests passed and 13 existing tests skipped.
+Full collection remains blocked by missing MDAnalysis in the available test
+environment; standard uv also lacks matplotlib. No dependencies were added.
+Focused launcher/dispatch/sync regressions and actual-rsync pull test pass.
+The native architecture probe and actual 32-process progress checks are
+separate from software tests and sampling convergence.
+
 ## CURRENT — US capacity review and explicit transfer approval pending, 2026-11-19
 
 Eight violet US windows remain in heating, with no production block complete.
@@ -1099,7 +1160,7 @@ Native interpolation redistributes seeds; actual E-S energy -718.2079132Eh
 and subsequent image evaluations verified. No converged barrier claimed.
 
 Tmux `model30_es_acyl_neb_monitor_20261111` runs campaign `monitor.py`:
-energy exports every60s, verified native XYZ reconstruction for first VMD band
+energy exports every 60 s, verified native XYZ reconstruction for first VMD band
 then every10cycles. Entries `plots/neb_profile.svg`, `plots/neb_evolution.png`,
 `vmd_progress/latest/reaction_path.vmd` appear after complete reports.
 Numbered native NetCDF NEB restarts remain INVALID due installed writer defect;

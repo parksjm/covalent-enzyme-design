@@ -1,0 +1,142 @@
+{
+  "timestamp_utc": "2026-11-20T13:14:12.933177+00:00",
+  "analysis_sha256": "dce685b847881f22b161800a2ee45ee826bc9839346f10a9548f846221f3dc87",
+  "analysis_timestamp_utc": "2026-11-20T12:17:34.356872+00:00",
+  "sampled_windows": 8,
+  "total_windows": 63,
+  "minimum_completed_production_ps": 5,
+  "status": "interim_disconnected_overlap",
+  "fes_status": "suppressed_disconnected_sampled_overlap",
+  "frames_censored": 0,
+  "interpretation": "Eight first blocks are not enough for full path overlap. HG1 can occupy Thr Nalpha in middle windows; retain branches and distinguish the sampled biased ensemble from a verified direct-route mechanism. No PMF/barrier claim.",
+  "windows": [
+    {
+      "label": "window_001",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "13916",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_011",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "13916",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_018",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "13916",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_032",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "19929",
+            "13905",
+            "13905"
+          ],
+          "frames": 72
+        },
+        {
+          "owners": [
+            "13905",
+            "13905",
+            "13905"
+          ],
+          "frames": 28
+        }
+      ]
+    },
+    {
+      "label": "window_033",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "13905",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_034",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "13905",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_044",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "19929",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    },
+    {
+      "label": "window_063",
+      "blocks": 1,
+      "raw_frames": 100,
+      "owner_states": [
+        {
+          "owners": [
+            "19929",
+            "13905",
+            "13905"
+          ],
+          "frames": 100
+        }
+      ]
+    }
+  ]
+}

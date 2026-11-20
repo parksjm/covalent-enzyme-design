@@ -48,6 +48,13 @@ def launch_job(
     if not workdir.is_dir():
         raise ValueError(f"cwd is not a directory: {workdir}")
     overrides = dict(env_overrides or {})
+    # Keep scientific libraries in the recorded job environment, while tmux
+    # itself uses system libraries (Amber/Conda libtinfo may be incompatible).
+    if "LD_LIBRARY_PATH" in os.environ and "LD_LIBRARY_PATH" not in overrides:
+        overrides["LD_LIBRARY_PATH"] = os.environ["LD_LIBRARY_PATH"]
+    tmux_environment = {
+        key: value for key, value in os.environ.items() if key != "LD_LIBRARY_PATH"
+    }
     for key, value in overrides.items():
         if not key.isidentifier() or "\x00" in value:
             raise ValueError(f"invalid environment override: {key!r}")
@@ -70,7 +77,7 @@ def launch_job(
     destination = output_dir.expanduser().absolute()
     if destination.exists():
         raise ValueError(f"output directory already exists: {destination}")
-    if subprocess.run([tmux, "has-session", "-t", f"={session_name}"], check=False).returncode == 0:
+    if subprocess.run([tmux, "has-session", "-t", f"={session_name}"], check=False, env=tmux_environment).returncode == 0:
         raise ValueError(f"tmux session already exists: {session_name}")
 
     inputs = {str(path.resolve(strict=True)): _sha256(path) for path in input_paths}
@@ -107,6 +114,7 @@ def launch_job(
         [tmux, "new-session", "-d", "-s", session_name, "-c", str(workdir),
          shlex.join(["bash", str(run_path)])],
         check=False,
+        env=tmux_environment,
     )
     if result.returncode:
         raise RuntimeError(f"tmux failed to launch session {session_name!r}")

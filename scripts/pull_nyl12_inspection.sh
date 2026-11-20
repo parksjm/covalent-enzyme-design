@@ -706,9 +706,16 @@ trace_us_destination="${trace_neb_destination%/vmd_final_24img/final_24img}/umbr
 if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     if [[ $dry_run -eq 0 ]]; then mkdir -p "$trace_us_destination"; fi
     rsync "${vmd_rsync_args[@]}" --copy-links \
-        --exclude='/inputs/' --exclude='/source_snapshot/' \
+        --exclude='/inputs/' \
         --exclude='/analysis_job/' --exclude='/preparation_history/' \
         --exclude='/native_boundary_probe*/' \
+        --exclude='/execution_preflight/' --exclude='**/preparation_history/***' \
+        --exclude='**/__pycache__/***' \
+        --include='**/*source_snapshot/' --include='**/*source_snapshot/**/' \
+        --include='**/*source_snapshot/**/*.py' \
+        --include='**/*source_snapshot/source_sha256.json' \
+        --exclude='**/*source_snapshot/***' \
+        --exclude='**/incoming/***' --exclude='**/job/***' --exclude='**/sync_job/***' \
         --include='/analysis/' --include='/analysis/latest/' \
         --include='/analysis/latest/***' --exclude='/analysis/*/' \
         --include='/window_*/progress/***' \

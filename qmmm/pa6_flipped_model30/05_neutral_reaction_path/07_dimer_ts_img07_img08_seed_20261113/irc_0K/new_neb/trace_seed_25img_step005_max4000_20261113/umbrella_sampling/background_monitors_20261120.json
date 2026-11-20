@@ -1,0 +1,62 @@
+{
+  "scope": "Launch-timeconfiguration; livestatesatjobstatuspaths",
+  "duration_hours": 168,
+  "monitors": {
+    "compact_sync": {
+      "command": [
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/sync_source_snapshot/scripts/sync_neb_umbrella_results.py",
+        "--plan",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/plan.json",
+        "--remote",
+        "azalea",
+        "--interval",
+        "60"
+      ],
+      "env_overrides": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "JAX_PLATFORMS": "cpu",
+        "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-11-20T13:24:36.370108Z",
+      "input_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/plan.json": "8455834c913ba727f933a40d5ad0a2519a5fee525c57f58c4a986cab403f4253",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/sync_source_snapshot/scripts/sync_neb_umbrella_results.py": "7ef4ba75e02c9be8b0c1f6aa6ed08cb830e75ec7bc331754a0d9ab5d6d950801"
+      }
+    },
+    "cpu_analysis": {
+      "command": [
+        "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/cpu_overlap_guard_20261120_034216/source_snapshot/scripts/analyze_neb_umbrella.py",
+        "--prepared",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+        "--plot-python",
+        "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+        "--watch",
+        "--interval",
+        "60",
+        "--hours",
+        "168"
+      ],
+      "env_overrides": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cpu",
+        "JAX_PLATFORM_NAME": "cpu",
+        "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "started_utc": "2026-11-20T13:30:44.469995Z",
+      "input_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/cpu_overlap_guard_20261120_034216/backend_probe.json": "4ee8befd32bc9655d08e99ab1407aa95dc977c6a899bcd652bfbd155676eacad",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/cpu_overlap_guard_20261120_034216/source_manifest.json": "cd97d4fa186850783aacb19e5ae379e20096c0a72a4a4d3702accc8b061b0d9d",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+      }
+    }
+  }
+}

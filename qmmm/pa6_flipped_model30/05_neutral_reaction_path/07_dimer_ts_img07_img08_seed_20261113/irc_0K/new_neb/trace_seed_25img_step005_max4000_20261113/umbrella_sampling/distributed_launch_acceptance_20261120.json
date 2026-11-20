@@ -1,0 +1,311 @@
+{
+  "timestamp_utc": "2026-11-20T13:27:20.118861+00:00",
+  "scope": "Actualnativepositiveprogressandstaticownership; notsamplingconvergence",
+  "violet": {
+    "active_controllers": 8,
+    "native_pids": [
+      4072625,
+      4072629,
+      4072906,
+      4072966,
+      4073792,
+      4073885,
+      4074081,
+      4074424
+    ],
+    "assigned_total_windows": 16,
+    "current": [
+      {
+        "worker": "worker01",
+        "window": "window_001",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker02",
+        "window": "window_063",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker03",
+        "window": "window_033",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker04",
+        "window": "window_032",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker05",
+        "window": "window_034",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker06",
+        "window": "window_018",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker07",
+        "window": "window_044",
+        "mode": "adopt"
+      },
+      {
+        "worker": "worker08",
+        "window": "window_011",
+        "mode": "adopt"
+      }
+    ],
+    "prepared_sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+  },
+  "azalea": {
+    "host": "azalea",
+    "timestamp_utc": "2026-11-20T13:27:20.060206+00:00",
+    "controller_count": 24,
+    "native_sander_pids": [
+      385764,
+      385765,
+      385766,
+      385767,
+      385768,
+      385769,
+      385770,
+      385771,
+      385772,
+      385773,
+      385774,
+      385775,
+      385776,
+      385777,
+      385778,
+      385779,
+      385780,
+      385781,
+      385782,
+      385783,
+      385784,
+      385785,
+      385786,
+      385787
+    ],
+    "windows": [
+      {
+        "worker": "worker01",
+        "window": "window_053",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.48,
+        "estimated_ps_per_hour_initial_heat": 2.883021845112999
+      },
+      {
+        "worker": "worker02",
+        "window": "window_036",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.38,
+        "estimated_ps_per_hour_initial_heat": 2.732216673343142
+      },
+      {
+        "worker": "worker03",
+        "window": "window_041",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.34,
+        "estimated_ps_per_hour_initial_heat": 2.8764289709611313
+      },
+      {
+        "worker": "worker04",
+        "window": "window_030",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.43,
+        "estimated_ps_per_hour_initial_heat": 2.8699992694257417
+      },
+      {
+        "worker": "worker05",
+        "window": "window_023",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.4,
+        "estimated_ps_per_hour_initial_heat": 2.8771554369798107
+      },
+      {
+        "worker": "worker06",
+        "window": "window_013",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.18,
+        "estimated_ps_per_hour_initial_heat": 2.87899336572766
+      },
+      {
+        "worker": "worker07",
+        "window": "window_008",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.77,
+        "estimated_ps_per_hour_initial_heat": 2.9236710855085595
+      },
+      {
+        "worker": "worker08",
+        "window": "window_004",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.24,
+        "estimated_ps_per_hour_initial_heat": 2.869633552099847
+      },
+      {
+        "worker": "worker09",
+        "window": "window_060",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.53,
+        "estimated_ps_per_hour_initial_heat": 2.9278694950970388
+      },
+      {
+        "worker": "worker10",
+        "window": "window_016",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.42,
+        "estimated_ps_per_hour_initial_heat": 2.8823017600687626
+      },
+      {
+        "worker": "worker11",
+        "window": "window_019",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.89,
+        "estimated_ps_per_hour_initial_heat": 2.8755195724396336
+      },
+      {
+        "worker": "worker12",
+        "window": "window_014",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 16.99,
+        "estimated_ps_per_hour_initial_heat": 2.917226753944905
+      },
+      {
+        "worker": "worker13",
+        "window": "window_017",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.87,
+        "estimated_ps_per_hour_initial_heat": 2.8784772625003194
+      },
+      {
+        "worker": "worker14",
+        "window": "window_038",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.57,
+        "estimated_ps_per_hour_initial_heat": 2.878807597892953
+      },
+      {
+        "worker": "worker15",
+        "window": "window_035",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.1,
+        "estimated_ps_per_hour_initial_heat": 2.851541930902292
+      },
+      {
+        "worker": "worker16",
+        "window": "window_037",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.29,
+        "estimated_ps_per_hour_initial_heat": 2.842097828828311
+      },
+      {
+        "worker": "worker17",
+        "window": "window_040",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.15,
+        "estimated_ps_per_hour_initial_heat": 2.909555027201915
+      },
+      {
+        "worker": "worker18",
+        "window": "window_022",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.45,
+        "estimated_ps_per_hour_initial_heat": 2.8937600605889053
+      },
+      {
+        "worker": "worker19",
+        "window": "window_026",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.0,
+        "estimated_ps_per_hour_initial_heat": 2.69881836960619
+      },
+      {
+        "worker": "worker20",
+        "window": "window_020",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.79,
+        "estimated_ps_per_hour_initial_heat": 2.878301111551918
+      },
+      {
+        "worker": "worker21",
+        "window": "window_024",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.27,
+        "estimated_ps_per_hour_initial_heat": 2.852381688793463
+      },
+      {
+        "worker": "worker22",
+        "window": "window_027",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 18.62,
+        "estimated_ps_per_hour_initial_heat": 2.824152098539562
+      },
+      {
+        "worker": "worker23",
+        "window": "window_029",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.43,
+        "estimated_ps_per_hour_initial_heat": 2.830351090665179
+      },
+      {
+        "worker": "worker24",
+        "window": "window_031",
+        "step": 200,
+        "time_ps": 0.1,
+        "temperature_K": 17.92,
+        "estimated_ps_per_hour_initial_heat": 2.897350936746958
+      }
+    ],
+    "prepared_sha256": "faf0c7536cc161f6d1a42f917cd06d36710701b2649b2a106d2804279b35ab3d",
+    "retry_plan_sha256": "f0361bcaf55855a9c0e199d54398dd77f3ddba913b8355f74c303c4e1422c6c0",
+    "production_sampling_converged": false,
+    "assigned_total_windows": 47
+  },
+  "total_unique_windows": 63,
+  "current_native_count": 32,
+  "minimum_production_ps_per_window": 30,
+  "scientific_inputs_changed": false,
+  "native_probe": {
+    "timestamp_utc": "2026-11-20T13:17:18.234725+00:00",
+    "completed_steps": 100,
+    "exit_status": 0,
+    "initial_EPtot_kcal_mol": -1638218.1665,
+    "violet_initial_EPtot_kcal_mol": -1638218.1665,
+    "difference_kcal_mol": 0.0,
+    "agreement_tolerance_kcal_mol": 0.001,
+    "elapsed_seconds_including_startup": 51.079044,
+    "probe_ps": 0.05,
+    "initial_probe_ps_per_hour": 3.5239500567003565,
+    "timing_limit": "Single-worker100-stepinitialprobe;24workerproductionthroughputnotestablished",
+    "prepared_sha256": "faf0c7536cc161f6d1a42f917cd06d36710701b2649b2a106d2804279b35ab3d",
+    "native_sander_sha256": "f8b7e69ed0f45535746b92b7046a45b6630d37e8c34e7ce3ac27dbe544e6b8e4",
+    "source_mdout_sha256": "70d5b8b85766ea649e09443469465f715f52a128d148b36ef29378539e13b0f9",
+    "compatible": true
+  }
+}

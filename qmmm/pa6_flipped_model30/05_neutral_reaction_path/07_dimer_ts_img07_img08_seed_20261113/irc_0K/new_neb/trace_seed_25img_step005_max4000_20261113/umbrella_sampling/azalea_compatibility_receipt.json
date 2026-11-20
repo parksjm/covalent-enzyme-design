@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-11-20T13:17:18.234725+00:00",
+  "completed_steps": 100,
+  "exit_status": 0,
+  "initial_EPtot_kcal_mol": -1638218.1665,
+  "violet_initial_EPtot_kcal_mol": -1638218.1665,
+  "difference_kcal_mol": 0.0,
+  "agreement_tolerance_kcal_mol": 0.001,
+  "elapsed_seconds_including_startup": 51.079044,
+  "probe_ps": 0.05,
+  "initial_probe_ps_per_hour": 3.5239500567003565,
+  "timing_limit": "Single-worker100-stepinitialprobe;24workerproductionthroughputnotestablished",
+  "prepared_sha256": "faf0c7536cc161f6d1a42f917cd06d36710701b2649b2a106d2804279b35ab3d",
+  "native_sander_sha256": "f8b7e69ed0f45535746b92b7046a45b6630d37e8c34e7ce3ac27dbe544e6b8e4",
+  "source_mdout_sha256": "70d5b8b85766ea649e09443469465f715f52a128d148b36ef29378539e13b0f9",
+  "compatible": true
+}

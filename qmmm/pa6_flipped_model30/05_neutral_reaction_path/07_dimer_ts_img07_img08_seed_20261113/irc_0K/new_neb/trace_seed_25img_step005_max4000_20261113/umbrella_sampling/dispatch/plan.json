@@ -1,0 +1,408 @@
+{
+  "hosts": {
+    "violet": {
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+      "sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+    },
+    "azalea": {
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+      "sha256": "faf0c7536cc161f6d1a42f917cd06d36710701b2649b2a106d2804279b35ab3d"
+    }
+  },
+  "local_host": "violet",
+  "remote_host": "azalea",
+  "windows": [
+    "window_001",
+    "window_063",
+    "window_033",
+    "window_032",
+    "window_034",
+    "window_018",
+    "window_044",
+    "window_011",
+    "window_025",
+    "window_039",
+    "window_050",
+    "window_006",
+    "window_015",
+    "window_021",
+    "window_028",
+    "window_047",
+    "window_053",
+    "window_036",
+    "window_041",
+    "window_030",
+    "window_023",
+    "window_013",
+    "window_008",
+    "window_004",
+    "window_060",
+    "window_016",
+    "window_019",
+    "window_014",
+    "window_017",
+    "window_038",
+    "window_035",
+    "window_037",
+    "window_040",
+    "window_022",
+    "window_026",
+    "window_020",
+    "window_024",
+    "window_027",
+    "window_029",
+    "window_031",
+    "window_042",
+    "window_045",
+    "window_043",
+    "window_052",
+    "window_049",
+    "window_007",
+    "window_009",
+    "window_012",
+    "window_010",
+    "window_002",
+    "window_048",
+    "window_046",
+    "window_005",
+    "window_051",
+    "window_003",
+    "window_062",
+    "window_054",
+    "window_057",
+    "window_061",
+    "window_059",
+    "window_055",
+    "window_058",
+    "window_056"
+  ],
+  "assignments": {
+    "violet": [
+      [
+        {
+          "label": "window_001",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_025",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_063",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_039",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_033",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_050",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_032",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_006",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_034",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_015",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_018",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_021",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_044",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_028",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_011",
+          "mode": "adopt"
+        },
+        {
+          "label": "window_047",
+          "mode": "launch"
+        }
+      ]
+    ],
+    "azalea": [
+      [
+        {
+          "label": "window_053",
+          "mode": "launch"
+        },
+        {
+          "label": "window_042",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_036",
+          "mode": "launch"
+        },
+        {
+          "label": "window_045",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_041",
+          "mode": "launch"
+        },
+        {
+          "label": "window_043",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_030",
+          "mode": "launch"
+        },
+        {
+          "label": "window_052",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_023",
+          "mode": "launch"
+        },
+        {
+          "label": "window_049",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_013",
+          "mode": "launch"
+        },
+        {
+          "label": "window_007",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_008",
+          "mode": "launch"
+        },
+        {
+          "label": "window_009",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_004",
+          "mode": "launch"
+        },
+        {
+          "label": "window_012",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_060",
+          "mode": "launch"
+        },
+        {
+          "label": "window_010",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_016",
+          "mode": "launch"
+        },
+        {
+          "label": "window_002",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_019",
+          "mode": "launch"
+        },
+        {
+          "label": "window_048",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_014",
+          "mode": "launch"
+        },
+        {
+          "label": "window_046",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_017",
+          "mode": "launch"
+        },
+        {
+          "label": "window_005",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_038",
+          "mode": "launch"
+        },
+        {
+          "label": "window_051",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_035",
+          "mode": "launch"
+        },
+        {
+          "label": "window_003",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_037",
+          "mode": "launch"
+        },
+        {
+          "label": "window_062",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_040",
+          "mode": "launch"
+        },
+        {
+          "label": "window_054",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_022",
+          "mode": "launch"
+        },
+        {
+          "label": "window_057",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_026",
+          "mode": "launch"
+        },
+        {
+          "label": "window_061",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_020",
+          "mode": "launch"
+        },
+        {
+          "label": "window_059",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_024",
+          "mode": "launch"
+        },
+        {
+          "label": "window_055",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_027",
+          "mode": "launch"
+        },
+        {
+          "label": "window_058",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_029",
+          "mode": "launch"
+        },
+        {
+          "label": "window_056",
+          "mode": "launch"
+        }
+      ],
+      [
+        {
+          "label": "window_031",
+          "mode": "launch"
+        }
+      ]
+    ]
+  },
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/source_snapshot/scripts/dispatch_neb_umbrella.py": "a74a07a58e4237413a858ad4cd955f8ba96be2e03d5d3b90dd4ab0c528f1ba89",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/source_snapshot/src/nyl12_covalent/jobs.py": "8fed4fa052e6e0d8cf92b74af3c51707925028e9e100179ee82815336a5da441",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/source_snapshot/src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/source_snapshot/src/nyl12_covalent/neb_umbrella_dispatch.py": "6b8627f2fd00881cf6e5a7b17a4fdd1090ed238b025b16dcba1a0c4041909923"
+  },
+  "script": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/source_snapshot/scripts/dispatch_neb_umbrella.py"
+}

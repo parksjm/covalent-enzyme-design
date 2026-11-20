@@ -131,3 +131,35 @@ def test_preserves_executable_symlink_path(tmp_path: Path, monkeypatch: pytest.M
     launch_job("symlink_test", output, cwd, [str(link)])
     recorded = json.loads((output / "command.json").read_text(encoding="utf-8"))
     assert recorded["command"][0] == str(link)
+
+
+@pytest.mark.parametrize("explicit_override", [False, True])
+def test_tmux_uses_system_libraries_and_job_retains_scientific_libraries(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, explicit_override: bool
+) -> None:
+    """Keep Amber/Conda libtinfo away from tmux without losing the job setting."""
+    bindir = _fake_tmux(tmp_path)
+    executable = bindir / "tmux"
+    executable.write_text(
+        '#!/bin/sh\n'
+        'if [ -n "${LD_LIBRARY_PATH-}" ]; then exit 86; fi\n'
+        'if [ "$1" = has-session ]; then exit 1; fi\n'
+        'exit 0\n'
+    )
+    monkeypatch.setenv("PATH", f"{bindir}:{os.environ['PATH']}")
+    inherited = str(tmp_path / "parent_amber_lib")
+    requested = str(tmp_path / "explicit_amber_lib")
+    monkeypatch.setenv("LD_LIBRARY_PATH", inherited)
+    cwd = tmp_path / "work"
+    cwd.mkdir()
+    output = tmp_path / "run"
+    overrides = {"LD_LIBRARY_PATH": requested} if explicit_override else {}
+    script = launch_job(
+        "library_isolation", output, cwd,
+        ["/bin/sh", "-c", 'printf "%s" "$LD_LIBRARY_PATH"'], overrides,
+    )
+    expected = requested if explicit_override else inherited
+    recorded = json.loads((output / "command.json").read_text())
+    assert recorded["env_overrides"]["LD_LIBRARY_PATH"] == expected
+    subprocess.run(["bash", str(script)], check=True)
+    assert (output / "job.log").read_text() == expected
