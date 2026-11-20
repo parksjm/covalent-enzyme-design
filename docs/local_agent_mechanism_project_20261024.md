@@ -2,6 +2,12 @@
 
 ## Current recommendation — 2026-11-19
 
+Repository checkpoint: PRIVATE [parksjm/mechanism-agent](https://github.com/parksjm/mechanism-agent)
+was created at `/data/jpc/mechanism-agent` with a documentation-only scaffold.
+Its `docs/DESIGN.md` preserves this proposal at research commit `3bf3d78`;
+future agent-system implementation/design belongs there. The human decision
+workflow is `docs/HUMAN_WORKFLOW.md`. Initial agent repo commit: `fca54b8`.
+
 **A bounded local prototype is worthwhile. Start with evidence auditing and
 job diagnosis, then permit validated workflow execution after qualification.**
 The user authorized a separate `mechanism-agent` repository for this design,

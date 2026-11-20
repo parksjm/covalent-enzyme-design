@@ -49,6 +49,14 @@ archived cases before autonomous submission. The redesigner-agent README was
 read for lessons; its implementation was not adopted. No LLM installation,
 service, model download or new autonomous framework has been launched.
 
+Separate human-in-the-loop repository created at the user's request:
+`/data/jpc/mechanism-agent`, PRIVATE
+https://github.com/parksjm/mechanism-agent (initial commit `fca54b8`,
+branch `codex/initial-scaffold`). Read `docs/HUMAN_WORKFLOW.md` there for
+PI decisions and `docs/DESIGN.md` for six specialist roles plus coordinator.
+This is a documentation-only scaffold, not a deployed agent service.
+Scientific jobs/data remain here; no model/dependency installation occurred.
+
 ## CURRENT — three-condition WT MD launched, 2026-11-19
 
 The authorized matched campaign is
