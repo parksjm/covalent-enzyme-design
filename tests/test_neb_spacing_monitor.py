@@ -127,3 +127,49 @@ def test_explicit_startup_waiting_and_isolated_comparison_plot(tmp_path: Path) -
     stamp = (output / "comparison.png").stat().st_mtime_ns
     refresh(tmp_path, output)
     assert (output / "comparison.png").stat().st_mtime_ns == stamp
+
+
+def test_image_resets_split_reads_and_legacy_cursor_migration(tmp_path: Path) -> None:
+    """Count geometric events once across chunks, saved cursors and old schemas."""
+    path = config(tmp_path)
+    source = path.parent / "calculation/minimized.mdout"
+    output = tmp_path / "monitor"
+    first = native(cycle=1)
+    source.write_bytes(first + b"  Resetting images  5 to 7\nResetting images 8 to")
+    status = update_trial(path, output)
+    assert status["image_reset_count"] == 1
+    assert status["reset_count"] == status["bfgs_memory_reset_count"] == 0
+    cursor_path = output / "cursor.json"
+    cursor = json.loads(cursor_path.read_text())
+    del cursor["image_reset_offsets"]  # An existing pre-patch persisted monitor.
+    cursor_path.write_text(json.dumps(cursor))
+    status = update_trial(path, output)
+    assert status["image_reset_count"] == 1  # Migration excludes incomplete tail.
+    with source.open("ab") as stream:
+        stream.write(b" 8\nResetting L-BFGS memory\n" + native(cycle=2))
+    status = update_trial(path, output, max_bytes=2)
+    while status["bytes_consumed"] < source.stat().st_size:
+        status = update_trial(path, output, max_bytes=71)
+    profile = json.loads((output / "current_profile.json").read_text())
+    assert profile["image_reset_count"] == 2  # Events, not3+1affected images.
+    assert profile["bfgs_memory_reset_count"] == profile["reset_count"] == 1
+    assert update_trial(path, output)["image_reset_count"] == 2
+    assert len((output / "history.jsonl").read_text().splitlines()) == 2
+
+
+def test_old_and_new_history_rows_export_together(tmp_path: Path) -> None:
+    """A live monitor can append new counter columns to its legacy CSV history."""
+    path = config(tmp_path)
+    source = path.parent / "calculation/minimized.mdout"
+    source.write_bytes(native(cycle=1))
+    output = tmp_path / "plots"
+    refresh(tmp_path, output)
+    history = output / path.parent.name / "history.jsonl"
+    old = json.loads(history.read_text())
+    old.pop("image_reset_count")
+    old.pop("bfgs_memory_reset_count")
+    history.write_text(json.dumps(old) + "\n")
+    with source.open("ab") as stream:
+        stream.write(b"Resetting images 5 to 5\n" + native(cycle=2))
+    refresh(tmp_path, output)
+    assert "image_reset_count" in (output / "comparison_history.csv").read_text()

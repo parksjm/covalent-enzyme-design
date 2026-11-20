@@ -1,3 +1,17 @@
+## CURRENT — public repository and NEB/protonation checkpoint, 2026-11-19
+
+The user explicitly requested public visibility; GitHub confirms
+`parksjm/covalent-enzyme-design` is PUBLIC. Existing tracked history is
+included. Credential-pattern screening found no high-confidence matches
+(scope/limitations retained in the action journal). The parameter repository
+was not changed.
+
+The roadmap's new cationic-Thr comparison section records the completed
+charged-N MD evidence and current five-run NEB status. Extended CG is at
+cycle 260, maximum 43.642 kcal/mol and max-force/target 8.093; it is still
+unconverged. Updated plots are in the existing NEB `plots/status_refresh_20261120_021148/`.
+No new MD/QM campaign was launched; all active NEB engines remain untouched.
+
 ## CURRENT — student MD handoff, 2026-11-19
 
 A transferable handoff is in `student_handoff/nyl12_ash274_md/START_HERE.md`.

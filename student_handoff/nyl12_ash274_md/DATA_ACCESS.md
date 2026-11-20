@@ -1,7 +1,7 @@
 # Delivery and optional additional data
 
-The private GitHub repositories contain code, documents and parameter-release
-history. The prepared solvated systems, restart files and inspection movies
+The public `covalent-enzyme-design` GitHub repository contains code and
+documents. The separate parameter repository retains its prior visibility. The prepared solvated systems, restart files and inspection movies
 need the separately generated archive. Choose **one**:
 
 - `core_data.tar.gz`: complete student brief, source snapshot, PA6 parameter
@@ -14,7 +14,7 @@ Both archives and their individual `.sha256` files are published on violet at:
 
 `/data/jpc/covalent-enzyme-design/output_student_handoff/nyl12_ash274_md_20261119/`
 
-After cloning the private code repository, run its fetcher with an authorized
+After cloning the code repository, run its fetcher with an authorized
 SSH alias/account. This command transfers one archive, verifies it and extracts
 it; it does not submit workstation jobs:
 
@@ -52,7 +52,9 @@ roadmap and run scripts. The PI can authorize targeted access to further
 QM/MM directories or legacy raw trajectories when needed; preserve associated
 input manifests, topology/atom maps and hashes when copying them.
 
-`n12c.cif` is the PI's unpublished reference from a coauthored manuscript in
-revision. Final citation is pending. Keep it and unpublished project results
-within the authorized collaboration. Software engines, credentials, Gaussian
-scratch/checkpoints and bulk MD trajectories are not distributed here.
+`n12c.cif` is the PI's reference from a coauthored manuscript in revision;
+its final citation is pending. Its tracked copy became publicly visible with
+the PI's explicit repository-visibility request on 2026-11-19. This release
+does not publish or grant access to all raw workstation data. Software engines,
+credentials, Gaussian scratch/checkpoints and bulk MD trajectories are not
+distributed here.

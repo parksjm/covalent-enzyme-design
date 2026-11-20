@@ -18,6 +18,9 @@ GRADIENT = re.compile(r"(Max|RMS) grad\s+([-+\d.EeDd]+)\s+Target:\s*([-+\d.EeDd]
 RESET = re.compile(
     r"(?:reset|restart).*(?:bfgs|memory|history)|(?:bfgs|memory|history).*reset", re.I
 )
+IMAGE_RESET = re.compile(
+    r"^[ \t]*Resetting images[ \t]+(\d+)[ \t]+to[ \t]+(\d+)[ \t]*\r?\n?$", re.I
+)
 CHECKPOINTS = (50, 100, 250)
 
 
@@ -37,7 +40,9 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     """Atomically write a compact rectangular inspection table."""
     pending = path.with_name(path.name + ".pending")
     with pending.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(
+            stream, fieldnames=list(dict.fromkeys(key for row in rows for key in row))
+        )
         writer.writeheader()
         writer.writerows(rows)
     pending.replace(path)
@@ -134,7 +139,12 @@ def chemical_gaps(trial: Path, cycle: int) -> dict[str, Any]:
 def update_trial(
     config_path: Path, output: Path, max_bytes: int = 8 * 1024 * 1024
 ) -> dict[str, Any]:
-    """Read only new bounded native-output bytes and retain complete-report history.
+    """Read bounded new native bytes and retain complete-report history.
+
+    ``reset_count`` preserves its legacy BFGS-memory meaning and equals
+    ``bfgs_memory_reset_count``. ``image_reset_count`` counts native geometric
+    "Resetting images ... to ..." events, each once, not the images affected.
+    Old cursors migrate with one read of their already-consumed complete lines.
 
     Args:
         config_path: Explicit trial config with regular_images24or48 and4662active.
@@ -173,6 +183,7 @@ def update_trial(
             "report_count": 0,
             "reset_count": 0,
             "reset_offsets": [],
+            "image_reset_offsets": [],
             "first_observed_utc": datetime.now(timezone.utc).isoformat(),
         }
     )
@@ -189,6 +200,13 @@ def update_trial(
             "Native output truncated or replaced; use a new trial directory"
         )
     with native.open("rb") as stream:
+        if "image_reset_offsets" not in state:
+            complete_end = state["offset"] - len(state["event_tail"].encode("ascii"))
+            prefix = stream.read(complete_end).decode("ascii")
+            state["image_reset_offsets"] = [
+                match.end()
+                for match in re.finditer(IMAGE_RESET.pattern, prefix, re.I | re.M)
+            ]
         stream.seek(state["offset"])
         new = stream.read(max_bytes)
     state.update(offset=state["offset"] + len(new), inode=stat.st_ino)
@@ -209,6 +227,8 @@ def update_trial(
         cycle = re.search(r"Testing convergence\s+in cycle\s+(\d+)", line)
         if cycle:
             state["last_event_cycle"] = int(cycle[1])
+        if IMAGE_RESET.fullmatch(line):
+            state["image_reset_offsets"].append(line_offset)
         if RESET.search(line):
             state["reset_offsets"].append(line_offset)
             events.append(
@@ -219,6 +239,8 @@ def update_trial(
                 }
             )
     state["reset_count"] = len(state["reset_offsets"])
+    state["bfgs_memory_reset_count"] = state["reset_count"]
+    state["image_reset_count"] = len(state["image_reset_offsets"])
     if events:
         with (output / "resets.jsonl").open("a") as stream:
             stream.write(
@@ -241,6 +263,14 @@ def update_trial(
             reset_count=sum(
                 offset <= state["offset"] - len(payload) + match.end()
                 for offset in state["reset_offsets"]
+            ),
+            bfgs_memory_reset_count=sum(
+                offset <= state["offset"] - len(payload) + match.end()
+                for offset in state["reset_offsets"]
+            ),
+            image_reset_count=sum(
+                offset <= state["offset"] - len(payload) + match.end()
+                for offset in state["image_reset_offsets"]
             ),
             elapsed_s=elapsed,
             observed_utc=now.isoformat(),
@@ -276,6 +306,8 @@ def update_trial(
         "terminal": job.get("ended_utc") is not None,
         "report_count": state["report_count"],
         "reset_count": state["reset_count"],
+        "bfgs_memory_reset_count": state["bfgs_memory_reset_count"],
+        "image_reset_count": state["image_reset_count"],
         "bytes_consumed": state["offset"],
         "native_size_at_read": stat.st_size,
     }

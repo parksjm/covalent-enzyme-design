@@ -60,6 +60,23 @@ from this prose. Production has no catalytic-contact or positional restraints.
 Use 300 K initially. The assay used 75 °C, 200 mM Tris, pH 8,6 h; temperature of pH
 adjustment is unknown. Assay-temperature work at 348.15 K is a separate arm.
 
+### Competing WT control: cationic Thr233 N termini
+
+Before extending a chosen microstate to mutants, audit the two existing
+100 ns cationic-N/ASP272/ASP274 Model30 replicas. Tier A occupancy was
+4.87% and 6.01%, but the joint Tier/native screen had only 0/1 frame and
+its isolated post-MM seed failed geometry. These are diagnostic comparisons,
+not evidence that cationic N is catalytically superior. Site-E PROPKA estimates
+motivate testing this hypothesis but do not establish an experimental state.
+
+A proposed bounded WT comparison is baseline neutral-N/ASP274, neutral-N/
+ASH274 and cationic-N/ASP274, with Asp272 deprotonated in all copies. Keep
+new run decisions explicit; current portable runner configs accept only their
+declared neutral-N states. Do not relabel one of those configs as charged-N.
+Existing charged boxes/ion counts differ from ASH274; new comparisons require
+matched preparation and explicit terminal-charge validation. See the current
+mechanism roadmap and `docs/md_model30_charged_screen_20261111.md`.
+
 ## Stage 2 — prior single mutants
 
 The verified historical panel is WT plus T53Q, F55N, K59D, K59E, F101E, F101H,

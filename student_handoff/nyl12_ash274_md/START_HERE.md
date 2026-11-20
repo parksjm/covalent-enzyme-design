@@ -23,9 +23,10 @@ No previous ChatGPT conversation is required to understand this subproject.
 
 ## Deliverables and access
 
-The private code/documentation repository is
+The code/documentation repository, made public at the PI's explicit request
+on 2026-11-19, is
 https://github.com/parksjm/covalent-enzyme-design . The authoritative substrate
-parameter project is https://github.com/parksjm/polyamide-amber-ff .
+parameter project (visibility unchanged by this release) is https://github.com/parksjm/polyamide-amber-ff .
 **The code repo alone does not contain the prepared solvated systems or bulk
 trajectory data.** Give the student repository access for updates and choose
 **one** curated archive: `core_data.tar.gz`, or `inspection.tar.gz`, which

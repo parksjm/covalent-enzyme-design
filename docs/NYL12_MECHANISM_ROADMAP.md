@@ -8,6 +8,53 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
+### Cationic Thr233 comparison and NEB checkpoint — 2026-11-19
+
+Cationic Thr233 N termini with ASP272/ASP274 should be retained as a competing
+WT hypothesis, not assumed superior or substituted across all mutants. Existing
+PROPKA site-E estimates (8.93–9.70) motivate this comparison but omit PA6 and
+are conformation/coupling sensitive. NH3+ cannot accept HG1 as a neutral
+amine base would; its reactive pathway must involve prior deprotonation or
+another base/relay. A minority neutral population could still carry catalytic
+flux. No new microstate or MD campaign is authorized by documenting this option.
+
+Two charged-N WT Model30 replicas already completed 100 ns with the same
+PA6 RESP/GAFF2 release and ff19SB/TIP3P. Their Tier A counts are 487/10,000
+and 601/10,000 (4.87%, 6.01%), versus baseline 37 and 238 and ASH274 1,677
+and 0. The charged joint Tier/native screen yielded only 0 and 1 frame, with
+no temporally supported seed; its one diagnostic frame subsequently failed
+post-MM geometry. No charged QM/MM followed. Thus simple Tier A persistence
+is more consistent between those two charged replicas, but improved catalytic
+competence is unestablished. Reuse the cached diagnostics before new runs.
+
+A bounded WT comparison would include neutral-N/ASP274 baseline, neutral-N/
+ASH274 and cationic-N/ASP274, keeping Asp272 deprotonated. The last two have
+the same dry proton count and formal charge, making proton location a useful
+controlled variable. Existing boxes are not identical (118,829 versus 104,934
+atoms; Na/Cl 123/119 versus 110/106), and dry partial charges differ by 0.004 e
+from the neutral-Thr recipe's -0.001 e per copy. Preserve these differences;
+do not call the historical simulations an identical-solvent proton-relocation
+experiment. Validate terminal charge bookkeeping before new matched builds.
+Original cached evidence: `docs/md_model30_charged_screen_20261111.md` and
+`qmmm/pa6_flipped_model30/04_md_screen_20261111/`.
+
+At 2026-11-20 02:12:36 UTC (Nov 19 local), the extended CG NEB reached cycle
+260: physical profile maximum 43.642 kcal/mol, maximum force 8.093 times
+target, RMS force 0.182 times target, and zero geometric image resets. It
+exactly replayed the 79-cycle pilot before advancing. Uniform24 L-BFGS was
+at cycle 426 / 51.405 kcal/mol / 59.842 times max-force target; uniform48 at
+219 / 47.187 / 23.572; adaptive24 at 428 / 44.553 / 44.484. Original NEB
+was at 734 / 49.799 / 71.076. All five engines were verified running.
+None passes the maximum-force criterion; these are provisional PES maxima,
+not verified barriers or PMFs. No calculation settings changed for this audit.
+
+Actual native geometric image-reset counts were 50 for original, 5 for
+uniform24, 11 for uniform48, 9 for adaptive24 and 0 for either CG. The old
+monitor's `reset_count` counts BFGS memory resets and must not be interpreted
+as this geometric-reset count. The explicit corrected audit and frozen plots
+are under the existing `04_neb/plots/status_refresh_20261120_021148/`.
+
+
 ### Active — long CG identical-start replay (2026-11-19)
 
 The user authorized a much larger CG budget, including starting over if needed.
