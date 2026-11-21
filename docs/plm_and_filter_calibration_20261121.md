@@ -56,6 +56,14 @@ central-amide mapping, register, microstate and charge/counterions explicitly.
 The current validated PA6 release does not automatically certify these caps.
 These are future comparisons, not new campaigns or changes to active jobs.
 
+The PI confirmed that many capped and alternative-register Boltz-2 models
+already exist. Reuse those assets first. The local source-linked JSON/CSV
+inventory at `provenance/existing_capped_pa6_models_20261121.*` distinguishes
+actual input chemistry, register, existing relaxation protocol, parameter
+availability and missing metrics. Availability of a model or parameter file
+is separate from its suitability for a matched comparison. Generate new models
+only for a documented gap in the existing library.
+
 ## Bounded retrospective calibration
 
 Freeze the sequence numbering, measured products, assay labels and current
