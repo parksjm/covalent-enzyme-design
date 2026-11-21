@@ -1,5 +1,32 @@
 # Results — working draft
 
+## Preliminary NEB-seeded umbrella sampling (2026-11-21)
+
+An exploratory 300 K DFTB3/MM umbrella campaign seeded from the converged
+regular direct-acylation NEB contained 1,190 ps of accepted production across
+all 63 windows (10–30 ps/window) at this checkpoint. Connected sampled
+overlap permitted a preliminary MBAR marginal along q_acyl = d(C,N_leaving)
+− d(C,OG1). Its maximum was 46.50 kcal/mol relative to a fixed E–S
+free-energy-density bin; the pointwise 95% within-window block-bootstrap
+interval at that fixed maximum bin was 44.54–47.56 kcal/mol. This is not a
+validated activation free energy: pooled target ESS was 28.28, three windows
+showed block drift, and independent-start/hysteresis and slow-branch sampling
+were not established. The 0 K source NEB maximum was 35.80895 kcal/mol;
+these different reference definitions do not isolate an entropic correction.
+
+HG1 was nearest Thr233 N-terminal N in 2,491 of 23,800 raw biased frames,
+principally windows 028–034, rather than nearest the intended leaving N.
+Those counts are not equilibrium populations. The alternative branch closely
+tracked both distance-difference umbrellas: for example, window 031 had
+mean q_H = 0.4417 Å versus target 0.4568 Å while mean HG1–leaving-N was
+1.9161 Å. Thus the present CVs do not uniquely resolve the proton-transfer
+route; merely increasing their force constants would not remove configurations
+with the same CV values. All frames were retained, and sampling continues
+unchanged. The high projected maximum does not presently support a viable
+direct-acylation mechanism. Frozen figures, tables, limitations and hashes are
+in [the preliminary record](../docs/neb_us_preliminary_findings_20261121.md).
+
+
 ## Exploration of acylation pathways
 
 We considered a direct concerted acylation route in which Thr233 OG1 attacks

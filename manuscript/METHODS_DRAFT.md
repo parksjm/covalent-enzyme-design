@@ -1,5 +1,31 @@
 # Methods — working draft
 
+## Preliminary NEB-seeded MBAR analysis — executed 2026-11-21
+
+The 63-window 300 K DFTB3/3ob QM/MM campaign used neutral catalytic Thr
+N-terminus, ASP272/ASP274, a 98-real-atom QM region of charge −2, and the
+original 4,165-atom 12 Å movable selection with fixed exterior. Separate
+native Amber umbrellas biased q_acyl = d(C,N_leaving) − d(C,OG1) and
+q_H = d(OG1,HG1) − d(N_leaving,HG1), with k = 100 kcal mol−1 Å−2
+for each coordinate. Exact native piecewise potentials, including linear
+tails and the V = k(q−q0)² convention without an extra factor of one-half,
+entered MBAR. No proton-branch censoring was applied.
+
+Accepted complete production blocks were frozen for analysis. Of 23,800
+frames, 5,003 statistically thinned samples entered the MBAR reconstruction.
+The primary marginal used 25 equal-width q_acyl bins and the density bin
+containing the initial E–S umbrella center as reference, with edges
+[−1.88410, −1.73231] Å. Fifty within-window 5 ps block-bootstrap MBAR refits
+gave pointwise 95% intervals relative to that fixed reference. This procedure
+does not establish slow-coordinate convergence or include Hamiltonian error.
+Positive-weight direct histogram accumulation was checked against an
+independent two-dimensional marginal and a high-dynamic-range regression.
+Proton nearest-owner assignments and component distances were retained to
+diagnose branch degeneracy. Detailed source hashes and the invalidated initial
+histogram supplement are recorded in the
+[preliminary analysis record](../docs/neb_us_preliminary_findings_20261121.md).
+
+
 ## ASH272 trajectory comparison — executed exploratory analysis
 
 Two 100 ns WT Nyl12–PA6 L4 replicas with Asp272 protonated in all four

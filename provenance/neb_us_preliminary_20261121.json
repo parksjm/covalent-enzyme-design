@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "checkpoint_date": "2026-11-21",
+  "scope": "User-authorized preliminary NEB/US findings; no simulation settings or data changed",
+  "artifacts": [
+    {
+      "source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/primary_q_acyl_pmf.png",
+      "resolved_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/requested_mbar_20261121_stable_hist/compact_export/primary_q_acyl_pmf.png",
+      "versioned_copy": "docs/neb_us_preliminary_20261121_pmf.png",
+      "sha256": "d2d5021b920176067e38b388de4a1b9608971e11f66ce871a80bfb8f2e718214"
+    },
+    {
+      "source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/primary_q_acyl_pmf.csv",
+      "resolved_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/requested_mbar_20261121_stable_hist/compact_export/primary_q_acyl_pmf.csv",
+      "versioned_copy": "docs/neb_us_preliminary_20261121_pmf.csv",
+      "sha256": "99c850f548ab01fe21b7e4ea0ef7351989b3331319aa73f208cf675c018f5a3b"
+    },
+    {
+      "source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/energy_profile.png",
+      "resolved_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/energy_profile.png",
+      "versioned_copy": "docs/neb_us_preliminary_20261121_pes.png",
+      "sha256": "1012be1fae79fed1e6e84215674d8cb7b2d657b04229364781818344731c72c1"
+    },
+    {
+      "source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reactive_distances.csv",
+      "resolved_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reactive_distances.csv",
+      "versioned_copy": "docs/neb_us_preliminary_20261121_neb.csv",
+      "sha256": "2e6664aa62afcb1627f6f32964386d85b611d34698fdef5ebf8e3245b5f98aa6"
+    }
+  ],
+  "source_records": [
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json",
+      "sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/scientific_acceptance.json",
+      "sha256": "9d734bb4d7360b7bd29d678a6108e0c5633b14c16f0a7491a4a76d18241773cc"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/band_snapshot.json",
+      "sha256": "5c37e774519be16f7a91f2fce12e6d0b8105d06b1c9559a7bbaa3220269bf6b3"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/primary_q_acyl_summary.json",
+      "sha256": "0d2a336728f44619d40c4011de58b22428ba52493fb10b459df950604944c2a2"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/primary_scientific_acceptance.json",
+      "sha256": "bbfb24031f8fb041973a3e08558b759712f52450696a2322650a5d1ffc0ba5f6"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/provenance.json",
+      "sha256": "b072094d1ff2a91996794e42d4e0b5533fd512b7dbee004876fef7fe65b953c7"
+    },
+    {
+      "path": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/proton_state_retention.json",
+      "sha256": "896c5b86b0a8e7d3704ac72446029dc0f43caf262c72c4be2ecd68b0dcf24dab"
+    }
+  ],
+  "neb_acceptance": {
+    "process_exit_status": 0,
+    "native_optimizer_converged": true,
+    "native_convergence_cycle": 477,
+    "native_report_index": 477,
+    "native_report_sha256": "31c29fea576658272705f05e09976835dc15aa991ca804bbdc0789446d8b4c49",
+    "method": "0 K DFTB3/3OB periodic QM/MM native Sander/DL-FIND NEB",
+    "qm_atoms": 98,
+    "qm_charge": -2,
+    "electronic_temperature_K": 0.0,
+    "endpoint_policy": "FROZEN",
+    "image_count": 24,
+    "peak_image": 8,
+    "peak_relative_energy_kcal_mol": 35.80895363931246,
+    "coordinate_source_sha256": "23a7d057d63a344d965d39abc66d374a78e13fed2235db5da6b2dae094f31113",
+    "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+    "atom_mapping_zero_based": {
+      "Thr233_OG1": 13915,
+      "Thr233_HG1": 13916,
+      "scissile_C": 19915,
+      "scissile_O": 19916,
+      "leaving_N": 19928,
+      "leaving_N_HN": 19936
+    },
+    "chemistry_checks": {
+      "reactant_C_N_bonded": true,
+      "reactant_Thr_OH_protonated": true,
+      "product_Thr_O_C_bonded": true,
+      "product_C_N_cleaved": true,
+      "product_proton_transferred": true,
+      "carbonyl_C_O_retained": true,
+      "leaving_N_HN_retained": true,
+      "Thr_N_H1_H2_retained": true
+    },
+    "max_adjacent_reactive_distance_delta_A": {
+      "Thr233_OG1_scissile_C_A": 0.3883286657494571,
+      "scissile_C_leaving_N_A": 0.2897727660657854,
+      "Thr233_HG1_leaving_N_A": 0.5151244749781858
+    },
+    "continuity_checks": {
+      "Thr233_OG1_scissile_C_A": true,
+      "scissile_C_leaving_N_A": true,
+      "Thr233_HG1_leaving_N_A": true
+    },
+    "path_identity_accepted": true,
+    "chemical_endpoint_identity_accepted": true,
+    "barrier_claim": false,
+    "barrier_limit": "Regular-band maximum is not a validated PES barrier; no climbing-image refinement or TS Hessian acceptance is included.",
+    "distance_rows": 24,
+    "distance_table": "reactive_distances.csv",
+    "movie": "reaction_path.dcd",
+    "vmd_script": "reaction_path.vmd"
+  },
+  "pmf_summary": {
+    "coordinate": "q_acyl=d(C,N_leaving)-d(C,OG1), Angstrom; native two-CV MBAR marginal over q_H and all remaining sampled coordinates",
+    "reference": "Density of fixed q_acyl histogram bin containing first ES umbrella center; not an integrated ES basin",
+    "reference_bin_edges_A": [
+      -1.8840953211704712,
+      -1.7323050700777893
+    ],
+    "bins": 25,
+    "temperature_K": 300,
+    "Hamiltonian": "DFTB3/3ob, frozen original12A exterior, historical neutral-Thr-N ASP272/ASP274 declared proton inventory",
+    "uncertainty": "50 within-window5ps block-bootstrap refits; fixed original statistical thinning; pointwise95percentile interval; no convergence claim",
+    "bootstrap_connected": 50,
+    "bootstrap_disconnected": 0,
+    "windows_sampled": 63,
+    "windows_total": 63,
+    "overlap_components": 1,
+    "overlap_edge_threshold": 0.001,
+    "accepted_production_ps_total": 1190,
+    "accepted_production_ps_min": 10,
+    "accepted_production_ps_max": 30,
+    "raw_frames": 23800,
+    "decorrelated_frames": 5003,
+    "unbiased_target_ESS": 28.282581976760692,
+    "block_drift_windows": [
+      "window_028",
+      "window_030",
+      "window_032"
+    ],
+    "maximum_relative_ES_bin_kcal_mol": 46.49584295736294,
+    "maximum_q_acyl_A": 0.0132828174880526,
+    "fixed_maximum_bin_bootstrap95_kcal_mol": [
+      44.539387199654534,
+      47.55736323543357
+    ],
+    "unsampled_bins": 0,
+    "sampling_convergence": false,
+    "activation_barrier_claim": false,
+    "numerical_accumulation": "Direct positive np.bincount masses; regression retains weights1,1e-30,1e-50 and sample-order invariance",
+    "input_source_manifest_sha256": "2ac574368bf4eade8ab194f10b4cafc9b34f461d524c84541ac125c8161801b3"
+  },
+  "raw_biased_proton_owner_counts": {
+    "OG1": 9473,
+    "leaving_N": 11836,
+    "Thr_N": 2491
+  },
+  "branch_tracking_examples": [
+    {
+      "window": 29,
+      "frames": 400,
+      "q_H_target_A": 0.287,
+      "q_H_mean_A": 0.2811,
+      "OG1_HG1_mean_A": 2.2453,
+      "Nleave_HG1_mean_A": 1.9642,
+      "q_H_RMSE_A": 0.0521,
+      "mean_H_bias_kcal_mol": 0.271,
+      "q_acyl_mean_error_A": -0.0155
+    },
+    {
+      "window": 31,
+      "frames": 600,
+      "q_H_target_A": 0.4568,
+      "q_H_mean_A": 0.4417,
+      "OG1_HG1_mean_A": 2.3578,
+      "Nleave_HG1_mean_A": 1.9161,
+      "q_H_RMSE_A": 0.0574,
+      "mean_H_bias_kcal_mol": 0.329,
+      "q_acyl_mean_error_A": -0.0087
+    },
+    {
+      "window": 33,
+      "frames": 400,
+      "q_H_target_A": 0.6265,
+      "q_H_mean_A": 0.5992,
+      "OG1_HG1_mean_A": 2.4365,
+      "Nleave_HG1_mean_A": 1.8373,
+      "q_H_RMSE_A": 0.0612,
+      "mean_H_bias_kcal_mol": 0.374,
+      "q_acyl_mean_error_A": -0.0149
+    }
+  ],
+  "branch_source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/requested_mbar_20261121/frozen_inputs",
+  "live_sampling_audit": {
+    "approximate_time_UTC": "2026-11-21T14:32:00Z",
+    "violet_active_workers": 8,
+    "azalea_active_workers": 23,
+    "completed_production_ps_window_counts": {
+      "10": 8,
+      "20": 54,
+      "30": 1
+    },
+    "minimum_planned_ps_per_window": 30,
+    "jobs_changed": false
+  },
+  "invalid_initial_supplement": {
+    "reported_value_kcal_mol": 13.96,
+    "valid": false,
+    "receipt": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/requested_mbar_20261121/INVALID_1D_SUPPLEMENT.json",
+    "retained": true
+  },
+  "interpretation": "Difference-CV degeneracy permits alternative proton ownership while both restrained CVs track targets. Preliminary mixed-branch marginal, not a validated activation barrier."
+}

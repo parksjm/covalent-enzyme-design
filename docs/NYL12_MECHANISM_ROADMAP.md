@@ -8,6 +8,25 @@ execution history. Earlier dated mechanism plans are provenance, not queues.
 
 ## Active queue and next gates
 
+### Current — preliminary NEB-seeded PMF and continued sampling (2026-11-21)
+
+Read [the frozen preliminary findings](neb_us_preliminary_findings_20261121.md).
+All 63 windows have production data (1,190 ps at the frozen checkpoint);
+connected overlap permits a preliminary q_acyl marginal with a 46.50 kcal/mol
+maximum relative to the specified E–S density bin. Target ESS is only 28.28;
+sampling convergence and a mechanism-specific activation free energy remain
+unestablished. The source 0 K regular NEB maximum is 35.80895 kcal/mol at
+image 8, with the acylenzyme endpoint at +4.92846 kcal/mol.
+
+HG1 can bind Thr N while tracking both native distance-difference umbrellas;
+window 031 has mean q_H 0.4417 Å versus target 0.4568 Å despite HG1 binding
+Thr N. This is observed CV degeneracy, not evidence that the same restraints
+need strengthening. Keep all branches and the unchanged 12 Å movable region.
+The PI requested continuation: 31 workers were active across violet/azalea at
+the live audit. Finish the existing minimum 30 ps/window, then assess block
+stability, ESS, overlap and branch exchange before any new campaign or claim.
+
+
 ### Completed — first read-only mechanism-agent pilot (2026-11-20)
 
 The separate private `/data/jpc/mechanism-agent` prototype now uses official

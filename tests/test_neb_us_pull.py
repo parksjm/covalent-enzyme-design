@@ -27,6 +27,9 @@ def test_neb_us_pull_keeps_current_diagnostics_and_complete_views(
     source, target = tmp_path / "source", tmp_path / "target"
     keep = [
         "prepared.json",
+        "analysis/pmf_latest/pmf_1d.png",
+        "analysis/pmf_latest/pmf_1d.csv",
+        "analysis/pmf_latest/README.md",
         "source_snapshot/scripts/run_neb_umbrella.py",
         "dispatch/azalea_retry02/source_snapshot/src/nyl12_covalent/jobs.py",
         "dispatch/sync_source_snapshot/scripts/sync_neb_umbrella_results.py",

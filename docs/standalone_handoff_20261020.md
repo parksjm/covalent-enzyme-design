@@ -1,3 +1,28 @@
+## CURRENT — preliminary NEB-seeded PMF; sampling continues, 2026-11-21
+
+PI requested continuation, documentation and a scoped Git checkpoint.
+See `docs/neb_us_preliminary_findings_20261121.md` and versioned plot/table
+evidence. Frozen MBAR: 63 connected windows, 1,190 ps, target ESS 28.28,
+q_acyl marginal maximum 46.49584 kcal/mol above the fixed E–S density bin
+(pointwise 95% block-bootstrap interval 44.53939–47.55736 at that bin).
+Preliminary mixed-proton-branch projection; not a converged activation barrier.
+Source regular NEB: 35.80895 kcal/mol at image 8, endpoint +4.92846,
+native convergence cycle 477; separate TS verification still required.
+
+HG1-on-Thr-N occurs in windows 028–034 while both imposed CVs closely track
+targets; the distance differences do not uniquely specify proton ownership.
+Do not merely strengthen k, silently filter branches, or change active inputs.
+All samples retained; initial 13.96 supplemental plot is explicitly INVALID
+from weighted-histogram cancellation, with original artifacts preserved.
+Use `umbrella_sampling/analysis/pmf_latest/primary_q_acyl_pmf.png`.
+The laptop pull now includes that compact export.
+
+At ~14:32 UTC, 8 violet and 23 azalea workers were active, with one remote
+worker finished; completed coverage was 8×10 ps, 54×20 ps and 1×30 ps.
+Keep the unchanged campaign running toward its minimum 30 ps/window.
+Current controllers: `dispatch/coverage_first_20261120/{violet,azalea}/`.
+No simulation was stopped, restarted or reconfigured for this checkpoint.
+
 ## CURRENT — read-only mechanism-agent pilot completed, 2026-11-20
 
 The PI approved the user-owned azalea Ollama runtime, official gpt-oss:120b

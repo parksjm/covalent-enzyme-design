@@ -717,7 +717,9 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
         --exclude='**/*source_snapshot/***' \
         --exclude='**/incoming/***' --exclude='**/job/***' --exclude='**/sync_job/***' \
         --include='/analysis/' --include='/analysis/latest/' \
-        --include='/analysis/latest/***' --exclude='/analysis/*/' \
+        --include='/analysis/latest/***' \
+        --include='/analysis/pmf_latest/' --include='/analysis/pmf_latest/***' \
+        --exclude='/analysis/*/' \
         --include='/window_*/progress/***' \
         --include='*/' --include='*.json' --include='*.csv' \
         --include='*.md' --include='*.mdin' --include='*.RST' \
@@ -726,6 +728,7 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
         "$remote:$trace_us_source/" "$trace_us_destination/"
     if [[ $dry_run -eq 0 ]]; then
         echo "NEB-seeded US diagnostics: $trace_us_destination/analysis/latest/"
+        echo "NEB-seeded PMF: $trace_us_destination/analysis/pmf_latest/"
     fi
 fi
 
