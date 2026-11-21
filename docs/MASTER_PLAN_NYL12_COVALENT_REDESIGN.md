@@ -1,7 +1,7 @@
 # Master plan: Nyl12 PA6 mechanism and covalent-enzyme redesign
 
 Status: authoritative working plan
-Version: 0.1 (2026-10-27)
+Version: 0.2 (2026-11-20; optional design-resource update)
 Primary system: mature tetrameric Nyl12 with PA6 L4 in an L4-to-two-L2 register
 Secondary system: poly(MAXA), after the PA6 workflow passes
 
@@ -41,19 +41,19 @@ ultimate test and cannot be guaranteed computationally.
 - Nyl12 is treated as the mature symmetric alpha/beta tetramer. Catalytic
   residue identities, canonical chain mapping, and the N-terminal Thr233 state
   must remain explicit in every manifest.
-- The experimentally relevant PA6 target is L4 cleavage to two L2 products.
-  PA6 L4 and L2 have been detected experimentally. The modeled substrate graph,
-  termini, register, and products must be recorded rather than inferred from a
-  filename.
+- PA6 L4-to-two-L2 cleavage is the chosen modeling hypothesis, not an
+  experimentally established precursor/product assignment. Published Nyl12
+  products are primarily linear L3; L2 and L4 are also observed. Record the
+  modeled substrate graph, termini, register and products explicitly.
 - The primary soluble-oligomer model uses the PA6 L4 zwitterion (NH3+/COO-;
   net charge zero), as expected for solvent-exposed amino and carboxyl termini
   near neutral pH. This is a pH- and environment-dependent modeling hypothesis,
   not a claim that termini buried in bulk or crystalline nylon are always
   charged. A neutral NH2/COOH sensitivity state requires separate charges and
   must not be mixed into the zwitterion RESP fit.
-- `cif/n12c.cif` is a user-supplied unpublished crystallographic reference from
-  a manuscript in revision. It may guide geometry, but its citation must be
-  updated when public.
+- `cif/n12c.cif` is the PI's symmetry-generated tetramer derivative of
+  crystallographic 9Z0B. Possible minor edits and additive removal are not
+  fully documented; preserve its identity separately from the deposited model.
 - Previous WT simulations provide three stable 100-ns PA6 L4 binding replicas
   using AM1-BCC/GAFF-family parameters. They are starting evidence, not proof
   that a new QM/MM Hamiltonian is equilibrated or that chemistry is correct.
@@ -250,18 +250,29 @@ tests before enzyme use.
 
 ### G6 — multistate symmetric design
 
-Begin with fixed-WT-length, focused, symmetry-tied LigandMPNN design. Do not use
-RFD3 or loop-length changes in the first campaign. Add local same-length RFD3
-only if sequence-only designs systematically fail backbone-placement gates;
-consider indels only in a separately validated mapping pipeline.
+Begin with fixed-WT-length, focused, symmetry-tied LigandMPNN design. Backbone
+remodeling remains optional. When justified by backbone-placement gates,
+prioritize evaluating RFD4-Proteina over RFD3 for a local same-length comparison;
+retain existing RFD3 inputs/checkpoints for reproducibility. Consider indels
+only in a separately validated mapping pipeline. RFD4 co-designs sequence and
+structure, so subsequent LigandMPNN is an optional controlled comparison.
+
+The PI's optional resource list also includes standalone tmol, ProLIF/PLIP,
+the existing PA6 RESP/GAFF2 release and AF3 contact-restraint implementation.
+See [the source-checked inventory](redesign_tool_inventory_20261120.md) for
+roles, local presence, scope limitations and qualification gates. Experts may
+recommend a relevant subset; none is a mandatory dependency or new campaign.
 
 Design against ensembles representing open/apo access, E-S, the refined
-acylation TS region, TI1, and later acyl-enzyme/deacylation states. Preserve
+acylation TS region, TI1 if it is a genuine minimum, and later
+acyl-enzyme/deacylation states. Preserve
 tetrameric sequence symmetry while allowing instantaneous conformational
 asymmetry. Rank by gates followed by a diverse Pareto shortlist, not by a single
 weighted score.
 
-Required candidate gates include:
+Candidate assessment includes the following validity checks and observables.
+Chemical identity and structural integrity are hard gates; quantitative
+confidence/geometry/occupancy cutoffs require the control calibration below:
 
 - correct mature assembly, chain mapping, catalytic residue identities, and
   substrate graph;
@@ -278,6 +289,21 @@ AF3/Boltz confidence, sequence likelihood/convergence, geometry, effective
 strain, and optional interface-delta scores measure different things. None may
 rescue failure of a chemistry or structural-integrity gate. Interface-delta
 remains exploratory until calibrated.
+
+**Known-active calibration comes before enlarging the design campaign.** The
+PI reports that experimentally active single mutants were rejected by the
+current model/MD filters. First quantify known-positive retention, individual
+gate failures and replica/pose sensitivity on matched WT/mutant controls.
+Chemical identity, valid preparation and catastrophic clashes remain hard
+checks; unvalidated geometric bins, Tier A occupancy and model confidence
+must not eliminate variants as if they were measured activity. Keep the current
+filter version frozen for that assessment; do not widen cutoffs to rescue
+preferred candidates or restart PA6 parameterization solely because occupancy
+is low. The bounded plan and optional PLM roles are in
+[`plm_and_filter_calibration_20261121.md`](plm_and_filter_calibration_20261121.md).
+ESMC sequence scores are secondary priors; ESMFold2 is a candidate independent
+ligand-aware structure predictor. ESM-IF1 lacks LigandMPNN's explicit ligand
+context by default. No new PLM installation or campaign is implied.
 
 ### G7 — experimental shortlist
 
@@ -332,6 +358,7 @@ established only experimentally.
 | 2026-10-27 | Build a template-conditioned ensemble before considering a Nyl12-to-NylB pivot | One failed seed/global optimization does not establish enzyme intractability. |
 | 2026-10-27 | Treat CB–OG1–C as diagnostic pending calibration | The proposed 105–120-degree range is chemically plausible but not a validated universal gate. |
 | 2026-10-27 | Use fixed-length symmetry-tied LigandMPNN before RFD3 | It minimizes mapping and maturation risk while providing a clear baseline. |
+| 2026-11-20 | Prefer evaluating RFD4 over RFD3 for optional later backbone remodeling; retain the LigandMPNN baseline | PI-selected resource update; Nyl12 symmetry, catalytic conditioning, mapping and runtime remain to qualify. |
 | 2026-10-27 | Map split Boltz alpha/beta query pairs to n12c mmCIF label-asym precursor chains A--D | The installed parser exposes label-asym IDs A--D; author IDs A/F/H/V are not valid template identifiers in this interface. |
 
 ## Detailed records incorporated by reference

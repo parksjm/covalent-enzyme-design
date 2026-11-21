@@ -1,5 +1,11 @@
 # Redesign backbone, symmetry and substrate access — 2026-10-22
 
+**Resource update, 2026-11-20:** RFD4-Proteina is now the preferred candidate
+for an optional local-backbone comparison. The RFD3-specific controls below
+are historical and must not be copied as RFD4 syntax. The length, symmetry,
+maturation, mapping and access requirements still apply. See
+[the current resource inventory](redesign_tool_inventory_20261120.md).
+
 ## User requirements and current decision
 
 The user explicitly requested consideration of whether RFD3 is necessary,
