@@ -40,6 +40,22 @@ substrate/product endpoint before treating computational disagreements as
 force-field or protonation errors. A defined-oligomer assay would distinguish
 this uncertainty if it becomes experimentally practical; none is assumed here.
 
+The PI clarified that the reacting chain is likely much longer than L4; short
+models were chosen because long, flexible polyamides are difficult to model
+with Boltz-2. Neither binding direction nor the distance of a physical polymer
+terminus from the scissile amide is known. Treat L4 as a tractable local polymer
+proxy, not evidence for terminal recognition or isolated-L4 turnover.
+
+For a later bounded sensitivity comparison, two neutral continuation caps
+represent an interior segment, while one free end plus an opposite cap tests
+proximity to the N or C terminus separately. Keep the uncapped L4 model as the
+historical reference. Chemically cap the chain rather than silently changing
+the protonation of its existing ends: capping changes connectivity and can
+change atom counts, total charge and parameter scope. Define cap structures,
+central-amide mapping, register, microstate and charge/counterions explicitly.
+The current validated PA6 release does not automatically certify these caps.
+These are future comparisons, not new campaigns or changes to active jobs.
+
 ## Bounded retrospective calibration
 
 Freeze the sequence numbering, measured products, assay labels and current

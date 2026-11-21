@@ -294,6 +294,11 @@ remains exploratory until calibrated.
 PI reports that experimentally active single mutants were rejected by the
 current model/MD filters. First quantify known-positive retention, individual
 gate failures and replica/pose sensitivity on matched WT/mutant controls.
+The short L4 substrate is a tractable local proxy for a likely longer polymer;
+chain direction and proximity of its physical termini are unresolved. Do not
+require both charged ends as a biological binding assumption. Later interior-
+segment versus near-N/near-C comparisons need explicit cap chemistry, mapping
+and parameter/charge qualification; current systems remain unchanged.
 Chemical identity, valid preparation and catastrophic clashes remain hard
 checks; unvalidated geometric bins, Tier A occupancy and model confidence
 must not eliminate variants as if they were measured activity. Keep the current
