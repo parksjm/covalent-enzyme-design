@@ -1,0 +1,25 @@
+{
+  "observed_utc": "2026-11-22T14:50:44.631292+00:00",
+  "reason": "PI-requested closeout after all 63 windows reached 30 ps; sampling convergence not established",
+  "sampling_workers_interrupted": 0,
+  "monitors": [
+    {
+      "pid": 4100242,
+      "command": "/data/jpc/covalent-enzyme-design/.venv/bin/python /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/cpu_overlap_guard_20261120_034216/source_snapshot/scripts/analyze_neb_umbrella.py --prepared /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json --plot-python /data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python --watch --interval 60 --hours 168 ",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "signal": "SIGTERM",
+      "absent_after_signal": true
+    },
+    {
+      "pid": 4098079,
+      "command": "/data/jpc/code/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/sync_source_snapshot/scripts/sync_neb_umbrella_results.py --plan /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/plan.json --remote azalea --interval 60 ",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+      "signal": "SIGTERM",
+      "absent_after_signal": true
+    }
+  ],
+  "protected_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/prepared.json": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/provenance.json": "8c620fd1399a0ff593de02fafb6c86c664ef75e49f99b5d314f020eb41d63a89"
+  }
+}

@@ -1,0 +1,1093 @@
+{
+  "schema_version": 1,
+  "report": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/accepted_parent/run/results/report.json",
+  "native_pdb": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/accepted_parent/backbones/pa6_l4z_l2_nyl12_wt_model_23/ligandmpnn_input.pdb",
+  "template_yaml_json_source": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/template.json",
+  "ligand_count": 4,
+  "seeds": [
+    2026112201,
+    2026112202,
+    2026112203,
+    2026112204,
+    2026112205
+  ],
+  "candidates": [
+    {
+      "id": "WT",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [],
+      "mutation_count": 0,
+      "lineage": []
+    },
+    {
+      "id": "variant_01",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 4,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:1",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:3",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:5",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:3",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:5"
+      ]
+    },
+    {
+      "id": "variant_02",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 4,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:3",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:1",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:1",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:5",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:1"
+      ]
+    },
+    {
+      "id": "variant_03",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 116,
+          "merged_position": 116,
+          "from": "T",
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 5,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:5",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:6"
+      ]
+    },
+    {
+      "id": "variant_04",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 116,
+          "merged_position": 116,
+          "from": "T",
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 5,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:6"
+      ]
+    },
+    {
+      "id": "variant_05",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 51,
+          "merged_position": 51,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 116,
+          "merged_position": 116,
+          "from": "T",
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 6,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:6"
+      ]
+    },
+    {
+      "id": "variant_06",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 115,
+          "merged_position": 115,
+          "from": "Y",
+          "to": "F"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 116,
+          "merged_position": 116,
+          "from": "T",
+          "to": "V"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 6,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:3"
+      ]
+    },
+    {
+      "id": "variant_07",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 51,
+          "merged_position": 51,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 116,
+          "merged_position": 116,
+          "from": "T",
+          "to": "L"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 6,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:6"
+      ]
+    },
+    {
+      "id": "variant_08",
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutations": [
+        {
+          "family": "alpha",
+          "physical_position": 50,
+          "merged_position": 50,
+          "from": "S",
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 111,
+          "merged_position": 111,
+          "from": "V",
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 112,
+          "merged_position": 112,
+          "from": "I",
+          "to": "L"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 187,
+          "merged_position": 187,
+          "from": "A",
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "physical_position": 188,
+          "merged_position": 188,
+          "from": "V",
+          "to": "T"
+        }
+      ],
+      "mutation_count": 5,
+      "lineage": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:2"
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "variant": "WT",
+      "variant_index": 0,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/WT.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "WT",
+      "variant_index": 0,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/WT.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "WT",
+      "variant_index": 0,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/WT.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "WT",
+      "variant_index": 0,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/WT.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "WT",
+      "variant_index": 0,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/WT.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_01",
+      "variant_index": 1,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_01.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_01",
+      "variant_index": 1,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_01.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_01",
+      "variant_index": 1,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_01.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_01",
+      "variant_index": 1,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_01.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_01",
+      "variant_index": 1,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_01.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_02",
+      "variant_index": 2,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_02.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_02",
+      "variant_index": 2,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_02.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_02",
+      "variant_index": 2,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_02.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_02",
+      "variant_index": 2,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_02.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_02",
+      "variant_index": 2,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_02.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_03",
+      "variant_index": 3,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_03.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_03",
+      "variant_index": 3,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_03.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_03",
+      "variant_index": 3,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_03.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_03",
+      "variant_index": 3,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_03.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_03",
+      "variant_index": 3,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_03.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_04",
+      "variant_index": 4,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_04.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_04",
+      "variant_index": 4,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_04.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_04",
+      "variant_index": 4,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_04.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_04",
+      "variant_index": 4,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_04.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_04",
+      "variant_index": 4,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_04.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_05",
+      "variant_index": 5,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_05.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_05",
+      "variant_index": 5,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_05.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_05",
+      "variant_index": 5,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_05.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_05",
+      "variant_index": 5,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_05.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_05",
+      "variant_index": 5,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_05.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_06",
+      "variant_index": 6,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_06.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_06",
+      "variant_index": 6,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_06.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_06",
+      "variant_index": 6,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_06.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_06",
+      "variant_index": 6,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_06.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_06",
+      "variant_index": 6,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_06.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_07",
+      "variant_index": 7,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_07.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_07",
+      "variant_index": 7,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_07.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_07",
+      "variant_index": 7,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_07.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_07",
+      "variant_index": 7,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_07.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_07",
+      "variant_index": 7,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_07.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_08",
+      "variant_index": 8,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112201,
+      "model_index": 0,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_08.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_08",
+      "variant_index": 8,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112202,
+      "model_index": 1,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_08.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_08",
+      "variant_index": 8,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112203,
+      "model_index": 2,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_08.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_08",
+      "variant_index": 8,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112204,
+      "model_index": 3,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_08.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "variant": "variant_08",
+      "variant_index": 8,
+      "ligand_ids": [
+        "I",
+        "J",
+        "K",
+        "L"
+      ],
+      "seed": 2026112205,
+      "model_index": 4,
+      "yaml_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/inputs/variant_08.yaml",
+      "expected_alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "expected_beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    }
+  ],
+  "calculation_launched": false
+}

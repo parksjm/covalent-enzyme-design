@@ -1,0 +1,37 @@
+{
+  "published_utc": "2026-11-22T14:40:40.565555+00:00",
+  "analysis": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122",
+  "previous_pointer": "pmf_refresh_20261121_190812/compact_export",
+  "input_source_manifest_sha256": "5e6c14ac83f2531576fbfda82769b06b3f2eda3f147daf7b3a6399d5d764e81a",
+  "verifier_sha256": "60b23073a9a09a2f8dd438e029b4ce32a1082887b14882c83b5485bfdd8f2cfb",
+  "checks": [
+    "process_exit_zero",
+    "all_frozen_source_and_input_hashes",
+    "same_ES_density_reference_bin",
+    "fifty_decade_regression",
+    "independent_2D_marginal",
+    "50_connected_block_bootstraps"
+  ],
+  "software": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pymbar": "4.0.3",
+    "matplotlib": "3.10.8"
+  },
+  "artifact_sha256": {
+    "primary_q_acyl_pmf.svg": "329cc101a02883e9864346af743817cbc3f6fb4203e7bf1a43eaf2211cb48082",
+    "primary_q_acyl_summary.json": "a10f628c8185f3004c167c6a9652bcc277e3ea1b1d30b49fb5f54f604181b82e",
+    "primary_q_acyl_pmf.png": "26dd7e5c460ca912be1be7feb2f378c6c2c454cd7ee316f94c33d059ceb471ab",
+    "README.md": "0960b90172c63f22cbb028485e26302ab578f59268dc7e8508cd22ae7d4d1fdf",
+    "execution_status.json": "7b3943517d907e4d8bf6dfd2e05755ef123aa0df94a9a6e4d605173374a1cf4d",
+    "primary_q_acyl_pmf.csv": "afde128557feaf69db6439eea2777bd54e0379dba4183a5e8a0befe04165ae88",
+    "primary_fes.png": "c82fe3c8c2849af355d46f12b4ab1f7d8eae0a5643c8466cd61013ffbf0213e0",
+    "per_window_accepted_coverage.csv": "96e24301d437842d90aaae501f72f4e0b086f6b555b7873234f0db449b362df5",
+    "primary_scientific_acceptance.json": "bbfb24031f8fb041973a3e08558b759712f52450696a2322650a5d1ffc0ba5f6",
+    "mbar_overlap.png": "b88064a425de0b15cc7fa4adf77d326aae8000ba240a3d5af5a2c6b4cba03f57",
+    "execution_command.json": "24f1af9460f2257c3e1cf7e0eb11aea10a177f9ca4d230c6edd790235338d0f3",
+    "histogram_overlap.png": "92af32de478e705a3c7ecf777312d0f833fbe2a36371c890b2f9c8edae39fe25",
+    "diagnostic_fes.png": "6bff24ac87bd776e249f5776b2623ef843d3111694da787955d37ea872f03100",
+    "proton_state_retention.json": "fa363c0c3e10edfcd08991fc833fec2fb858b1c29c5c97d82e6ecaf3869e5b26"
+  }
+}

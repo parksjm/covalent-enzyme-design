@@ -1,0 +1,60 @@
+{
+  "accepted": true,
+  "chain_order": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "chain_lengths": {
+    "A": 232,
+    "B": 232,
+    "C": 232,
+    "D": 232,
+    "E": 96,
+    "F": 96,
+    "G": 96,
+    "H": 96
+  },
+  "residues": 1312,
+  "ligand_heavy_atoms": 33,
+  "accepted_source_coordinates_unchanged": true,
+  "python": "3.11.13",
+  "torch": "2.2.1+cu121",
+  "numpy": "1.23.5",
+  "prody": "2.4.1",
+  "cpu_threads": 1,
+  "cuda_available": false,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "statistics_checks": [
+    {
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "tensor_fasta_agree": true,
+      "seed": 20261122
+    },
+    {
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "tensor_fasta_agree": true,
+      "seed": 20261123
+    },
+    {
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "tensor_fasta_agree": true,
+      "seed": 20261222
+    },
+    {
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "tensor_fasta_agree": true,
+      "seed": 20261223
+    }
+  ]
+}

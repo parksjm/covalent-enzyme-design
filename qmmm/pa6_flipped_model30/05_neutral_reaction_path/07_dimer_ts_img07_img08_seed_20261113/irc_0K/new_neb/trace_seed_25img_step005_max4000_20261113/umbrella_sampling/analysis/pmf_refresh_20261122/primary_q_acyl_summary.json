@@ -1,0 +1,40 @@
+{
+  "coordinate": "q_acyl=d(C,N_leaving)-d(C,OG1), Angstrom; native two-CV MBAR marginal over q_H and all remaining sampled coordinates",
+  "reference": "Density of fixed q_acyl histogram bin containing first ES umbrella center; not an integrated ES basin",
+  "reference_bin_edges_A": [
+    -1.8840953211704712,
+    -1.7323050700777893
+  ],
+  "bins": 25,
+  "temperature_K": 300,
+  "Hamiltonian": "DFTB3/3ob, frozen original12A exterior, historical neutral-Thr-N ASP272/ASP274 declared proton inventory",
+  "uncertainty": "50 within-window5ps block-bootstrap refits; fixed original statistical thinning; pointwise95percentile interval; no convergence claim",
+  "bootstrap_connected": 50,
+  "bootstrap_disconnected": 0,
+  "windows_sampled": 63,
+  "windows_total": 63,
+  "overlap_components": 1,
+  "overlap_edge_threshold": 0.001,
+  "accepted_production_ps_total": 1890,
+  "accepted_production_ps_min": 30,
+  "accepted_production_ps_max": 30,
+  "raw_frames": 37800,
+  "decorrelated_frames": 7871,
+  "unbiased_target_ESS": 7.292797282233219,
+  "block_drift_windows": [
+    "window_028",
+    "window_030",
+    "window_032"
+  ],
+  "maximum_relative_ES_bin_kcal_mol": 47.047517709303534,
+  "maximum_q_acyl_A": 0.013282817488051935,
+  "fixed_maximum_bin_bootstrap95_kcal_mol": [
+    45.40701116436444,
+    47.8696000152655
+  ],
+  "unsampled_bins": 0,
+  "sampling_convergence": false,
+  "activation_barrier_claim": false,
+  "numerical_accumulation": "Direct positive np.bincount masses; regression retains weights1,1e-30,1e-50 and sample-order invariance",
+  "input_source_manifest_sha256": "5e6c14ac83f2531576fbfda82769b06b3f2eda3f147daf7b3a6399d5d764e81a"
+}

@@ -98,6 +98,66 @@ if [[ $dry_run -eq 0 ]]; then
     echo "Download verified. Read $vmd_destination/README.md for VMD instructions."
 fi
 
+# Retrospective control calibration: small tables, plots and reproducible sources.
+calibration_source=/data/jpc/covalent-enzyme-design/analysis/nyl12_filter_calibration
+calibration_destination="$destination/analysis/nyl12_filter_calibration"
+if ssh "$remote" test -f "$calibration_source/report.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$calibration_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/__pycache__/***' --exclude='**/.pytest_cache/***' \
+        --exclude='/plots/initial_annotations/***' \
+        --include='*/' --include='*.json' --include='*.csv' --include='*.md' \
+        --include='*.png' --include='*.svg' --include='*.py' --include='*.sh' \
+        --include='*.xlsx' --include='*.txt' \
+        --include='*.toml' --include='*.lock' --include='*.log' --exclude='*' \
+        "$remote:$calibration_source/" "$calibration_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        echo "WT/mutant calibration: $calibration_destination/README.md"
+        echo "Calibration plots: $calibration_destination/plots/"
+    fi
+fi
+
+# Exploratory sequence-design pilot: preserve the workstation directory layout.
+pilot_source=/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot
+pilot_destination="$destination/design/nyl12_ligandmpnn_pilot"
+if ssh "$remote" test -f "$pilot_source/accepted_parent/preparation_manifest.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$pilot_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/__pycache__/***' --exclude='*.pt' \
+        --exclude='/backbone_audit/***' --exclude='/prepared/***' \
+        --exclude='/preparation_job/***' --exclude='/inputs/relaxed_pdb/***' \
+        --exclude='/native_preflight/canonical_pool/***' \
+        --exclude='/boltz_validation/source_snapshot/boltz/***' \
+        --exclude='/boltz_validation/predictions/runs/***' \
+        --exclude='/boltz_validation/predictions/WT/seed_01/***' \
+        --exclude='/boltz_validation/checks/***' \
+        --exclude='/boltz_validation/models/*/seed_*/relaxation/system/***' \
+        --exclude='/boltz_validation/models/*/seed_*/relaxation/inputs/***' \
+        --exclude='/boltz_validation/models/*/seed_*/relaxation/minimization/***' \
+        --exclude='/boltz_validation/models/*/seed_*/preparation_history/***' \
+        --include='*/' --include='*.json' --include='*.csv' --include='*.md' \
+        --include='*.fasta' --include='*.fa' --include='*.pdb' --include='*.cif' \
+        --include='*.py' --include='*.sh' --include='*.log' \
+        --include='*.yaml' --include='*.txt' --include='*.jsonl' \
+        --include='*.mol2' --include='*.lib' --include='*.frcmod' --exclude='*' \
+        "$remote:$pilot_source/" "$pilot_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        echo "LigandMPNN pilot: $pilot_destination/README.md"
+    fi
+fi
+
+# Current controlling plans, copied directly rather than from an older bundle.
+planning_source=/data/jpc/covalent-enzyme-design/docs
+planning_destination="$destination/docs"
+if [[ $dry_run -eq 0 ]]; then mkdir -p "$planning_destination"; fi
+rsync "${rsync_args[@]}" \
+    --include='MASTER_PLAN_NYL12_COVALENT_REDESIGN.md' \
+    --include='NYL12_MECHANISM_ROADMAP.md' \
+    --include='plm_and_filter_calibration_20261121.md' \
+    --include='nyl12_ligandmpnn_pilot.md' --include='CURRENT_JOBS.md' \
+    --include='standalone_handoff_20261020.md' \
+    --exclude='*' "$remote:$planning_source/" "$planning_destination/"
+
 # Current QM/MM work: a small curated tree, organized by stage and window.
 qmmm_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272
 qmmm_destination="$destination/qmmm/pa6_asp272"
@@ -579,6 +639,20 @@ if [[ $dry_run -eq 0 ]]; then
 fi
 rsync "${vmd_rsync_args[@]}" --copy-links \
     --exclude='source_snapshot/' --exclude='clutter/' \
+    --exclude='/11_leaving_group_relay_screen/coarse/' \
+    --exclude='/11_leaving_group_relay_screen/coarse_nonflipped/' \
+    --exclude='/11_leaving_group_relay_screen/refined/' \
+    --exclude='/11_leaving_group_relay_screen/assisted_refined/' \
+    --exclude='/11_leaving_group_relay_screen/pilot/' \
+    --exclude='/11_leaving_group_relay_screen/selection_revision_02/' \
+    --exclude='/11_leaving_group_relay_screen/source_snapshot_nonflipped/' \
+    --exclude='/11_leaving_group_relay_screen/assisted_source_snapshot/' \
+    --exclude='/11_leaving_group_relay_screen/assisted_review*/ranked_assisted_candidates.json' \
+    --exclude='/10_wt_protonation_md/analysis_after_md/occupancy/*.csv' \
+    --exclude='/10_wt_protonation_md/analysis_after_md/relay/new_four/*_paths.csv' \
+    --include='/10_wt_protonation_md/analysis_after_md/logs/*.log' \
+    --include='/10_wt_protonation_md/analysis_after_md/job/job.log' \
+    --include='/10_wt_protonation_md/analysis_after_md/run_analysis.sh' \
     --exclude='/07_ash274_comparison/09_water_relay_acylation/' \
     --exclude='/07_ash274_comparison/07_water_to_asp272_ti1_like/history/' \
     --exclude='vmd_progress/update_*/' --include='*/' \
@@ -708,6 +782,8 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     rsync "${vmd_rsync_args[@]}" --copy-links \
         --exclude='/inputs/' \
         --exclude='/analysis_job/' --exclude='/preparation_history/' \
+        --exclude='/vmd_dynamic/work/***' \
+        --include='/vmd_dynamic/' --include='/vmd_dynamic/***' \
         --exclude='/native_boundary_probe*/' \
         --exclude='/execution_preflight/' --exclude='**/preparation_history/***' \
         --exclude='**/__pycache__/***' \
@@ -729,6 +805,7 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     if [[ $dry_run -eq 0 ]]; then
         echo "NEB-seeded US diagnostics: $trace_us_destination/analysis/latest/"
         echo "NEB-seeded PMF: $trace_us_destination/analysis/pmf_latest/"
+        echo "NEB-seeded US dynamic movie: $trace_us_destination/vmd_dynamic/view_umbrella.vmd"
     fi
 fi
 

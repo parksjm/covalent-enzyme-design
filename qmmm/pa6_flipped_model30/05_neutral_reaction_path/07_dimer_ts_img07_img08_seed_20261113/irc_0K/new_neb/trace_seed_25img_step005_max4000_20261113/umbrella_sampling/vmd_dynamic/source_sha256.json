@@ -1,0 +1,16 @@
+{
+  "source_snapshot/scripts/assemble_movie.py": "b2bf05a2ca303d5a1c712ad4ef22980d7824b70a992af767dedfb96ab1331ed4",
+  "source_snapshot/scripts/export_neb_us_movie_part.py": "d5160dfc34b92ccaeb8ebe0a5af923187357206fa499b0372c11a45565c870fd",
+  "source_snapshot/src/nyl12_covalent/neb_us_movie.py": "52fa7bd8d7c31675b2ef44c7662c8c6c9191eef080652f714b58a73c4c5144b7",
+  "source_snapshot/src/nyl12_covalent/vmd_reactive_distances.py": "8b4135e090467dae843604d1affa07eb1243e026f404a90b7fe0022c50b0b108",
+  "source_snapshot/src/nyl12_covalent/relay_progress_vmd.py": "7895820479604c94aa69d5451196940e9bc10ea38497f62c956b59003e090e32",
+  "source_snapshot/src/nyl12_covalent/path_publish.py": "ea70c60a6042e87c1722cb157b35633e89fc3218d4eca58c583e8f5d1dca7b2d",
+  "source_snapshot/src/nyl12_covalent/neb_us_movie_vmd.py": "81df42d4fe5799b720c0cffd69514b25254448784b72d40bb21b979466f19e89",
+  "source_snapshot/src/nyl12_covalent/jobs.py": "33f85b98bc31d4fee63bd008138e3a5d5a134de1813af407cc6c2b5245c70f62",
+  "source_snapshot/src/nyl12_covalent/path_inspection.py": "10e53d012ec1b94445c87ffcf7f5fd0fa3d4d277a7e7c3abe2bd7f0a3db868f0",
+  "source_snapshot/src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+  "source_snapshot/src/nyl12_covalent/path_distances.py": "fda1c377ea7b3f5119df0195e4c00ccdfe3ec83cd817b8191a638cf8ef00b638",
+  "source_snapshot/src/nyl12_covalent/path_energies.py": "0595725005b8b1f3cab950699d904a3edfa5a453070fd79e2699d0ef8330ee04",
+  "source_snapshot/src/nyl12_covalent/direct_acyl_bias.py": "78e3d67a9814bc9a7cf7e9eec4988e0366d3a9c4710fdf7d32a28cdeeb942613",
+  "request.json": "dd30e07e28da0551c0c57abe0cc7f52de106522b0d1c1e39aba50671a41f217d"
+}

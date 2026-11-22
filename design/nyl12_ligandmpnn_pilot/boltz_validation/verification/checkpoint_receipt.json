@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "captured_utc": "2026-11-22T14:35:46+00:00",
+  "campaign_status_snapshot": {
+    "source": "design/nyl12_ligandmpnn_pilot/boltz_validation/status.json",
+    "status": "running",
+    "planned_models": 45,
+    "normalized_models": 21,
+    "relaxed_models": 15,
+    "source_sha256": "ae37a8bdc687004f6fb36c4b4504bab7b73da2d75eb1ac7c897b942ac4c5f889"
+  },
+  "verification": {
+    "focused_pytest_passed": 55,
+    "additional_pull_test_passed": 1,
+    "test_count_source": "Lead-reported completed run; this checkpoint did not rerun tests.",
+    "coverage_source_data_file": "/tmp/nyl12_design_validation_coverage",
+    "coverage_source_sha256": "f3f22f029270caae270ce4b0516b3f852a96197cca916a35747d28d80f2129ce",
+    "coverage_json": "design/nyl12_ligandmpnn_pilot/boltz_validation/verification/coverage.json",
+    "coverage_json_sha256": "628db3aaba4eb7384465e353041693f776801959e76e8f3ea73eb615832d3fbe",
+    "total_coverage_percent_raw": 88.89700511322133,
+    "total_coverage_percent_rounded": 89,
+    "module_count": 10,
+    "minimum_module": "src/nyl12_covalent/design_component_normalization.py",
+    "minimum_module_coverage_percent_raw": 81.60919540229885,
+    "minimum_module_coverage_percent_rounded": 82,
+    "module_coverage_note": "All 10 modules display at least 82% when rounded to whole percent; the raw minimum is 81.609%, so a strict unrounded >=82% criterion is not met."
+  },
+  "first_wt_native_preflight": {
+    "model": "WT_seed_01",
+    "seed": 2026112201,
+    "geometry_report": "design/nyl12_ligandmpnn_pilot/boltz_validation/checks/WT_seed_01_analysis/report.json",
+    "geometry_report_sha256": "0f9959b1794dc8923b7435696bed421795aed6003852377a789714e0ac60d654",
+    "minimization_acceptance": "design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/acceptance.json",
+    "minimization_acceptance_sha256": "145b0e8f57d4e95be34b3505784f3e895819abe9119def11a88bdd2cae997cbe",
+    "process_exit_code": 0,
+    "force_converged": true,
+    "final_rms_gradient_kcal_mol_angstrom": 0.048767,
+    "target_rms_gradient_kcal_mol_angstrom": 0.05,
+    "stages": {
+      "raw": {
+        "sites": 4,
+        "tier_a_b_count": 0,
+        "native_pass_count": 4,
+        "joint_pass_count": 0,
+        "tier_counts": {
+          "A": 0,
+          "B": 0,
+          "reject": 4
+        }
+      },
+      "relaxed": {
+        "sites": 4,
+        "tier_a_b_count": 1,
+        "native_pass_count": 2,
+        "joint_pass_count": 0,
+        "tier_counts": {
+          "A": 0,
+          "B": 1,
+          "reject": 3
+        }
+      }
+    },
+    "interpretation_limit": "One matched seed and four nested sites; descriptive geometry only, not variant ranking or activity evidence."
+  },
+  "prediction_runtime": {
+    "source": "design/nyl12_ligandmpnn_pilot/boltz_validation/dispatch/runtime_versions.json",
+    "source_sha256": "de61d9534614b113f1342fa82c9ab2271fe944136130d907ebc70bff66e453bf",
+    "boltz_distribution": "2.2.1",
+    "same_boltz_source": true,
+    "checkpoint_sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+    "violet": {
+      "python": "3.10.19",
+      "torch": "2.9.1+cu128",
+      "rdkit": "2025.09.3"
+    },
+    "tulip": {
+      "python": "3.12.11",
+      "torch": "2.11.0+cu130",
+      "rdkit": "2026.03.1"
+    },
+    "geranium": {
+      "role": "Amberrelaxation",
+      "parmed": "0+unknown",
+      "numpy": "2.4.4"
+    },
+    "architecture_note": "PI confirmed geranium/tulip same architecture as violet"
+  },
+  "scope": "Documentation checkpoint only; no tests, scientific calculations, process control, or host liveness audit were performed here."
+}

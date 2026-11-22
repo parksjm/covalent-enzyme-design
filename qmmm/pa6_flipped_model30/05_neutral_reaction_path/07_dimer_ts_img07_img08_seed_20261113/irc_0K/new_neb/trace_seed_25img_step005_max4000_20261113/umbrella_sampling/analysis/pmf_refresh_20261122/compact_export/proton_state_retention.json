@@ -1,0 +1,23 @@
+{
+  "raw_biased_frame_counts_hg1_owner_atom1based": {
+    "13916": 15402,
+    "19929": 18507,
+    "13905": 3891
+  },
+  "roles_1based": {
+    "carbon": 19916,
+    "og1": 13916,
+    "leaving_n": 19929,
+    "hg1": 13917,
+    "nalpha": 13905,
+    "nalpha_h1": 13906,
+    "nalpha_h2": 13907,
+    "oxygen": 19917,
+    "adjacent_c": 19915,
+    "thr_og": 13916,
+    "proton": 13917,
+    "thr_n": 13905
+  },
+  "unbiased_populations": false,
+  "chemical_frames_censored": 0
+}

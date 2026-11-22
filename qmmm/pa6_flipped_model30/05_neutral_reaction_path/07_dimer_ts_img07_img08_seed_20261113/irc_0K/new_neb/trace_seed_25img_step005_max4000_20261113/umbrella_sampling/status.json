@@ -1,0 +1,35 @@
+{
+  "status": "closed_by_PI_no_further_sampling",
+  "hosts": {
+    "violet": 8,
+    "azalea": 24
+  },
+  "window_count": 63,
+  "production_ps_minimum": 30,
+  "dispatch_plan": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/plan.json",
+  "remote_retry_plan": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/azalea_retry02/plan.json",
+  "verified_receipt": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/distributed_launch_acceptance_20261120.json",
+  "verified_as_of_utc": "2026-11-20T22:20:53.295476+00:00",
+  "status_scope": "Current campaign closeout; historical launch/worker receipts retained unchanged",
+  "live_sync_status": "dispatch/sync_status.json",
+  "current_schedule": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/dispatch/coverage_first_20261120/plan.json",
+  "live_worker_status": "dispatch/coverage_first_20261120/{host}/workerNN/status.json",
+  "scheduling_policy": "Finish current native blocks; all63 first-block gate before extensions; minimum30ps unchanged",
+  "native_blocks_interrupted": 0,
+  "closed_utc": "2026-11-22T14:56:07.731044+00:00",
+  "sampling_complete": true,
+  "sampling_converged": false,
+  "activation_barrier_validated": false,
+  "production_ps_completed_per_window": 30,
+  "windows_complete": 63,
+  "production_ps_total": 1890,
+  "sampling_workers_active": {
+    "violet": 0,
+    "azalea": 0
+  },
+  "monitoring_stopped": true,
+  "further_sampling_planned": false,
+  "closeout_evidence": "dispatch/stop_20261122/",
+  "current_pmf": "analysis/pmf_latest/",
+  "decision": "Low expected value of extending this direct-route hypothesis given persistent high apparent PMF; retain as preliminary negative result, not proof that all mechanisms are infeasible"
+}

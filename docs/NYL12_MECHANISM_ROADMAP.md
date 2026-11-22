@@ -1,14 +1,303 @@
 # Nyl12–PA6 mechanism: decision roadmap
 
-Status: working mechanism subproject plan, updated 2026-11-20. The overarching
+Status: working mechanism subproject plan, updated 2026-11-22. The overarching
 `MASTER_PLAN_NYL12_COVALENT_REDESIGN.md` remains controlling for redesign;
 this document is its **single forward-looking mechanism execution plan**.
 The append-only action journal, run manifests and manuscript source ledger hold
 execution history. Earlier dated mechanism plans are provenance, not queues.
 
+## Closeout — historical neutral Thr/Asp272/Asp274 direct-route NEB-seeded US (2026-11-22)
+
+All 63 windows completed six accepted 5 ps blocks (30 ps/window): eight Violet
+workers exited 0 on November 22 at 10:43–10:47 UTC and 24 Azalea workers exited
+0 on November 21 at 11:55–20:49 UTC. The latest receipts are in
+`umbrella_sampling/dispatch/coverage_first_20261120/{violet,azalea}/` within
+the campaign root stated below.
+Only local analysis PID 4100242 and sync PID 4098079 were stopped with SIGTERM;
+both were absent afterward, as recorded in
+`umbrella_sampling/dispatch/stop_20261122/violet_monitor_stop_receipt.json`.
+No campaign Sander remained active on either host. Completion is not sampling
+convergence.
+
+The refreshed apparent PMF maximum is 47.0475 kcal/mol versus 46.9414 in the
+same E-S density bin. Overlap is connected, target ESS is 7.29, and windows
+028/030/032 have drift flags. This PMF is not converged and is not a validated
+barrier. The scientific decision is to stop further investment in this forced
+direct route; preserve raw trajectories, restarts, source snapshots and the
+negative finding, with no extension queued. This applies only to the historical
+neutral-Thr, ASP272/ASP274 direct-NEB-seeded US under
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/`.
+Other work, redesign and the separate ASH274 NEBs are unaffected.
+
+The verified movie is at
+`umbrella_sampling/vmd_dynamic/view_umbrella.vmd`: 30 frames/window,
+1,890 frames and 19,967 atoms. Every selected frame reproduces the four
+recorded reaction distances within 0.00005 Å; bundle checksums pass.
+Window concatenation is not a continuous dynamical reaction trajectory.
+
+The PI's model-capability and research-efficiency questions are addressed in
+[`mechanism_agent_model_and_strategy_20261120.md`](mechanism_agent_model_and_strategy_20261120.md).
+It records replacement candidates, hardware/license constraints and lessons
+from published scientific agents. These are advisory recommendations; no model
+deployment, new mechanism branch or change to the active queue is implied.
+
+## Current structural validation alongside mechanism work
+
+PI-approved on 2026-11-22: 45 Boltz-2 models (WT + eight unique LigandMPNN
+variants, five seeds each), four zwitterionic PA6 L4 copies per tetramer, then
+fully unrestrained solvated RESP/GAFF2/ff19SB relaxation and all-four-site
+geometry comparison. Violet/tulip predict; geranium relaxes under renewed PI
+host authorization. Existing QM/MM/US jobs are untouched. Details/live counts:
+`design/nyl12_ligandmpnn_pilot/boltz_validation/README.md` and `status.json`.
+This advances the exploratory E-S redesign lane; it does not resolve or replace
+the reaction-mechanism work, certify a TS, or authorize new candidate dynamics.
+
 ## Active queue and next gates
 
-### Current — preliminary NEB-seeded PMF and continued sampling (2026-11-21)
+### Authorized — WT/known-active filter calibration and design planning (2026-11-21)
+
+**Execution update:** PI approved a single-parent, 24-sample LigandMPNN pilot
+using WT Model23, restricted to violet/azalea while current QM/MM/US/MD
+continue. WT40/41 failed occupied-site native-Thr checks; only WT23 passed the
+bounded screen of seven existing Tier A/B WT models. The accepted preparation
+manifest is `design/nyl12_ligandmpnn_pilot/accepted_parent/run/preparation_manifest.json`.
+Completed: 24 samples, eight unique sequences, 16 duplicates, 4-6 substitutions each.
+All sequence-integrity and independent tensor/FASTA checks passed; results are
+in `accepted_parent/run/results/` and the campaign README.
+Retain Model23’s earlier QM/MM deterioration as a negative result. This is an
+exploratory single-parent E-S sequence pilot, not validated-TS design; candidate
+prediction/relaxation, matched MD and activity remain unvalidated. See
+`docs/nyl12_ligandmpnn_pilot.md` for the fixed mask and sampling budget.
+
+The PI authorized a parallel exploratory engineering lane. Start by identifying
+the exact measured WT/mutant labels and reanalyzing existing static/MD outputs
+under their frozen filters. Keep every current QM/MM and US calculation running.
+The initial authorization was retrospective analysis and planning. The later
+approved LigandMPNN pilot above is now complete; new predictions, MD and local-
+backbone generation remain outside that completed pilot. See the updated master plan
+and `plm_and_filter_calibration_20261121.md`.
+
+Keep experimental PA6/polymer labels separate from PA66-only, unmeasured and
+uncertain variants. Absence of activity data is not inactivity. Match comparison
+strata by ligand/register, predictor, relaxation, FF family and protonation;
+do not pool mismatched protocols into a mutation effect. Retain missing fields
+and exclusions explicitly. Report current positive-control retention and
+individual gate failures before considering revised rules. No cutoff tuning
+or claims about specificity/AUC without appropriate independent labels.
+
+The analysis must retain immutable input/source snapshots, experimental-label
+evidence, environments, hashes and process/scientific acceptance. Run persistent
+analysis in a low-priority tmux job using existing dependencies. Use the results
+to plan 24–48 fixed-length, symmetry-tied LigandMPNN variants plus controls,
+protecting maturation, proposed catalytic machinery and essential interfaces.
+The final editable positions and ranking policy depend on calibration; do not
+invent a successful outcome or treat Tier occupancy as measured activity.
+
+PI assay-quality clarification: these are crude-lysate, mass-spectrometry-based
+product measurements, with considerably discordant duplicate experiments for
+**K59E**. Primary workbook:
+`/data/jpc/enzyme-substrate-modeling/config/cb150_nyl12_ssl_sites_1_4_pa6_pa66_pmaxa.xlsx`.
+Retain both experiments and establish replicate type, backgrounds, WT controls
+and normalization before interpreting a fold difference. Do not select one
+run, silently average discordance, or treat a derived positive signal as clean
+ground truth. Existing single-value activity comparisons are provisional;
+the completed structural count/gate audit does not validate an activity ranker.
+Workbook K59E PA6 L2 values are 0 and 1.1465832774; their arithmetic mean is
+the legacy 0.5732916387. The two entries remain separate in the source audit.
+The manuscript reports independently re-screened hits and triplicate MS
+measurements with internal-standard/product calibration, but source rows cannot
+yet be assigned to those replication levels. The PI believes the updated Figure
+7 uses the same data; experimentalist confirmation is deferred a few days.
+Keep that linkage provisional without blocking structural audit or planning.
+
+The first static audit has completed in tmux with 900/900 prespecified models,
+zero Tier A/B parity mismatches and exact historical count reproduction.
+Outputs: `analysis/nyl12_filter_calibration/{report.json,tables/,plots/}`.
+WT PA6 A/B retention is 7/50; V111C 1/50; K59D 18/50. Every variant retains
+at least one A/B model. The Burgi-Dunitz angle is the dominant rejection gate,
+not a validated activity predictor. All thresholds remain unchanged.
+The approved specification is `docs/nyl12_ligandmpnn_pilot.md` and the
+accepted-parent manifest above: 24 raw samples from Model23 at temperatures
+0.1/0.2, with two independent RNG seeds and six samples per job. Sequence ties
+are explicit across A-H with 0.25 weights; fixed-length design uses the declared
+19-position mask and protects maturation/catalytic context. No inference report
+is available yet. These static results do not certify the newer RESP/GAFF2
+mutant-MD filters or an experimental activity ordering.
+
+Exploratory E-S-based sequence engineering no longer waits for a stable TI1 or
+verified TS. TS-directed claims still require verified stationary points; TI1
+is optional if the actual pathway has no corresponding minimum.
+
+The PI's NylB/poly(MAXA)-to-MAXA-selective concept is recorded as a separate
+future hypothesis, with product/cleavage mapping and patent-scope review needed
+before execution. Scaffold-constrained Nyl12 active-site rebuilding is a later
+comparison, not a switch away from the present calibration-first sequence lane.
+Preserve the mature scaffold and assembly rather than physically deleting
+uncharacterized catalytic contributions. Mechanism-agent remains a bounded
+evidence/automation aid: autonomous scientific planning is unqualified by the
+current benchmark; no new model deployment is implied.
+
+### Queued — final matched WT occupancy and relay analysis (2026-11-21)
+
+The PI requested that the remaining WT MD finish and analysis run automatically.
+Tmux `nyl12_final_matched_wt_analysis_20261121` now waits on all twelve accepted
+100 ns replicas under `10_wt_protonation_md/analysis_after_md/`. Initial live
+preflight accepted eight and correctly left four pending. It checks actual stage,
+terminal-job and 100 ns receipts plus production-topology/source hashes; a 10 ns
+completion marker alone is insufficient. Upstream failures stop analysis, never
+resubmit or alter MD. Polling is once per minute with a 48-hour waiting limit.
+
+After completion, two low-priority single-thread CPU stages run in parallel:
+all-frame occupancy/native analysis for the matched twelve replicas, and the
+four newly completed relay screens. The eight previously screened matched
+replicas are reused with verified hashes. Historical unmatched ensembles are
+excluded from the three-state comparison. Grouping explicitly distinguishes
+neutral and cationic Thr N, not just Asp residue names.
+
+Report Tier A, exclusive Tier B, inclusive A-or-B, signed phi and native-Thr
+intersections. Summarize four independent replicas per state with sample SD/range
+and 10 ns block stability; do not treat correlated frames or four enzyme sites
+as independent replicas. Join unique-frame relay counts to the **all-frame**
+native measurements rather than a twenty-frame native shortlist. Fresh trajectory
+hashes must match the reused relay hashes before comparison.
+
+Outputs remain inside the existing MD campaign: `plots/tier_occupancy.png`,
+`tables/occupancy_by_{replica,state}.csv`, `occupancy/summary.json` and
+`relay/comparison/`. Read `waiting/status.json` for progress/errors. These are
+fixed-state structural occupancies, not measured pKas, catalytic rates or a
+validated mechanism. Current MD and NEB-seeded US remain unchanged.
+
+The PI also authorized geranium and tulip on November 21. Initial default-key
+authentication failed; the explicitly authorized aster key subsequently worked
+for both hosts. Use `~/.ssh/id_ed25519_aster` with explicit identity selection.
+Geranium has 48 logical CPUs and tulip 24; both report about 503 GiB RAM and
+two idle RTX 6000 Ada GPUs with 49,140 MiB each at inspection. Amber Sander and
+pmemd executables were located on geranium; tulip's Amber location remains
+unresolved. See `provenance/workstation_resources_20261121.json`. No transfer,
+installation, native compatibility run or job migration was performed. Recheck
+contention and the exact environment before using extra hosts for a specific
+calculation; existing MD/US and post-MD analysis remain on their current hosts.
+PI resource restriction: use geranium and tulip simultaneously only for work
+expected to finish within a few hours. Before every launch, check other users'
+sessions, CPU/GPU workloads and queued work on each proposed host. An earlier
+idle check is not permission to launch later. Ask the PI if availability or
+expected duration is unclear; preserve these shared resources for other users.
+
+### Authorized next step — leaving-group proton-relay screen (2026-11-21)
+
+The PI approved screening existing MD and selecting the best proton-delivery
+configurations before launching another reaction-path campaign. Canonical new
+analysis: `qmmm/pa6_flipped_model30/11_leaving_group_relay_screen/`.
+Keep the current NEB-seeded US and all other scientific jobs running unchanged.
+Nyl12 remains primary; no new NylC or polymer-parameter campaign is implied.
+
+The two initial workers completed fourteen accepted 100 ns replicas. A second
+queue completed two original-pose WT 100 ns replicas, whose cached signed phi
+is negative throughout. Combined coverage is 1.6 μs and 32,000 coarse frames
+at 50 ps spacing. The original-pose files save every 50 ps, so their explicit
+execution stride is one; the fourteen flipped-cohort files save every 10 ps
+and use stride five. Incomplete or unavailable replicas remain excluded.
+
+The first selection/refinement completed successfully but mostly identifies
+zero-intermediate OG1→leaving-N direct-route **controls**, not newly discovered
+relays. Do not treat `selected/selection.json` as evidence for a new mechanism.
+The assisted-only review completed exit zero in tmux
+`nyl12_assisted_relay_candidates_20261121`, with local source-frame refinement.
+Final outputs: `assisted_review_refined/{selection.json,summary.md}` and
+`candidate_readiness.json`. There is **one unique strict assisted Tier B frame**:
+matched NH2/ASP272/ASP274 replica 03, frame 9386, with a
+Lys156→water29282→water4517→leaving-N network. It fails current native-Thr
+displacement gates (OG1 2.396 Å, Nalpha 2.958 Å). A Tier A single-water
+Thr-OG1→water9397→leaving-N nearpass in ASH272 replica 1 frame 7316 misses
+the H–N cutoff by only 0.00964 Å, but also fails native displacement/psi gates.
+
+Twenty diverse shortlisted frames were audited against native Thr; none passed
+all those criteria. Three unchanged restarts were exported for diagnostic
+inspection, **not accepted as new QM/MM seeds**. Automated "joint qualified"
+means hydrogen-bond legs plus Tier A/B only; the explicit readiness record
+adds native/chemical acceptance. Do not count the repeated coarse/refined
+observation of frame 9386 as two independent candidates. The native audit is
+bounded, so this does not prove that every original frame lacks a viable relay.
+Review these geometries and native criteria before another path or MD campaign;
+no automatic relaxation or altered-protonation calculation was launched.
+
+Before any selection ran, review found that per-frame route deduplication
+preceded full-network priority annotation. The corrected selector is retained
+separately in `selection_revision_02/source_snapshot/` with a regression test.
+Only the original orchestration parent was paused; neither data-reading worker
+was interrupted. The replacement retired that parent after both workers finished
+exit zero. Its expected retirement status 143 is execution provenance, not an
+MD/US or coarse-screen crash. Corrected baseline selection/refinement exited zero.
+
+The chemical question is whether an observed configuration supplies a plausible
+complete proton network to the **leaving amide nitrogen**, together with useful
+attack/oxyanion geometry. A persistent TI1 is optional. A distance-difference
+target, favorable Tier score, or hydrogen-bond path alone does not demonstrate
+proton transfer, a stable intermediate, or an acceptable activation barrier.
+
+Execution is deliberately bounded:
+
+1. Inventory completed WT production trajectories and per-topology proton
+   inventories. Reuse original atom maps and geometry implementations; never
+   transfer atom indices across protonation-dependent topologies unchecked.
+   Include the historical neutral/charged-N and ASH272 ensembles and completed
+   matched ASP/ASP, ASH274 and cationic-N replicas where available. Exclude
+   actively written segments and clearly label any partial completed coverage.
+2. Screen the bound active site for zero-, one- and two-water directed paths
+   from Thr OG1, catalytic Nalpha, protonated Asp272/Asp274 and Lys156 to
+   leaving N, using actual topology-owned hydrogens and periodic images.
+   Standard structural criteria are D–A ≤3.5 Å, H–A ≤2.5 Å and D–H–A ≥120°.
+   Keep complete directed networks separate from heavy-atom proximity and
+   orientation nearpasses. Neutral Nalpha donation is conditional on prior
+   activation; amide-N acceptance is a reaction-preparation hypothesis.
+   Never invent a proton, rotate H atoms, or infer a neutral Lys microstate.
+3. Use a 50 ps coarse screen when saved frames are 10 ps apart, then inspect
+   original saved frames around selected events. Report d1/d2/d3, Bürgi–Dunitz
+   angle, **signed** Herschlag phi, substrate N geometry and native Thr
+   displacement/torsion checks. Screen both pose signs; rank chemical pathways
+   within each orientation instead of requiring the historical direct-route
+   sign universally. Rank strict directed paths with Tier A/B geometry first;
+   retain clearly labeled nearpasses and native-gate failures for diagnosis.
+4. Select at most two primary structural candidates plus a small, diverse
+   reserve set, avoiding adjacent correlated frames. Export unchanged source
+   snapshots with topology/frame/time/water identities and full provenance.
+   No new MM, QM/MM or altered-protonation launch is part of this screen.
+5. Review the selected complete acid–base networks. The next separately
+   specified path must allow attack, C–N cleavage and individual proton-site
+   occupancies to vary independently. Do not lock Nalpha in NH3+ while asking
+   it to donate onward, or confuse proton labels with chemical occupancy.
+   Use sparse matched-embedding DFT and one targeted QM-region sensitivity
+   test only on genuinely discriminating new configurations.
+
+Queue CPU-only analysis in tmux with immutable source/config snapshots and
+input hashes. Use a small number of low-priority single-thread workers; do not
+consume GPUs or stop US to make room. Completion, structural acceptance and
+mechanistic validation remain separate records. The completed screen, including
+negative results, determines the next chemistry decision rather than another
+unbounded collection of reaction-path attempts.
+
+### Latest NEB-US MBAR PMF refresh — completed 2026-11-22
+
+The fresh MBAR calculation completed with exit 0 using all 63 windows and six
+accepted 5 ps blocks per window (30 ps/window, 1,890 ps total; 37,800 raw and
+7,871 thinned frames). Sampled overlap is connected and target ESS is 7.2928;
+all 50 connected 5 ps block bootstraps completed. The apparent q_acyl maximum
+is 47.0475 kcal/mol relative to the same fixed E-S density bin as the previous
+46.9414 kcal/mol result (+0.1062 kcal/mol). The fixed-peak-bin bootstrap 95%
+interval is 45.4070–47.8696 kcal/mol; this is not comprehensive PMF uncertainty.
+Windows 028, 030 and 032 are flagged for drift.
+
+Frozen source/input hashes, same-bin numerical-range regression, independent
+2D marginal and publication checks passed. Detailed outputs are in
+`qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/`.
+The stable sibling `analysis/pmf_latest/` now points to its `compact_export/`;
+the prior export is preserved.
+
+Sampling convergence remains false, and this is not a validated activation
+barrier. No sampling jobs were stopped or changed, and no additional sampling
+extension was inferred from this analysis.
+
+### Prior checkpoint — preliminary NEB-seeded PMF and continued sampling (2026-11-21)
 
 Read [the frozen preliminary findings](neb_us_preliminary_findings_20261121.md).
 All 63 windows have production data (1,190 ps at the frozen checkpoint);
@@ -26,6 +315,79 @@ The PI requested continuation: 31 workers were active across violet/azalea at
 the live audit. Finish the existing minimum 30 ps/window, then assess block
 stability, ESS, overlap and branch exchange before any new campaign or claim.
 
+
+### Current — completed Hessian and targeted validation, November 21, 2026
+
+The full matrix completed with one chemically relevant negative mode in the
+stored symmetric Hessian, but numerical consistency and downhill connectivity
+remain unverified. Read the completed-outcome section in
+`nyl12_stationary_validation_loop_20261121.md`. A bounded two-worker directional/
+localized-asymmetry diagnostic is now running with conditional candidate-mode
+descents; the original failed gate is retained. Reuse this matrix rather than
+repeat the full 12,495-column calculation. The diagnostic pointer is alongside
+the original validation current.json, named diagnostic_current.json.
+
+Both local model runs completed. Paired semantic review shows a narrow Mistral
+critical-case improvement but more major scientific errors; neither model is
+qualified for scientific planning or dispatch. Original response text, format
+compliance and scientific grading remain separate in the private paired review.
+
+
+### Authorized — qualified model, stationary-point loop and filter calibration
+
+The PI approved official Apache-2.0 Mistral Small 4 setup on azalea and a
+matched GPT-OSS comparison. The private agent repository holds the frozen
+14-case benchmark: six historical development cases and eight newly authored
+held-out-in-workflow cases, including positive TS/PMF controls. Auditor rubrics
+are excluded from inference. Source, precision and tokenizer/runtime identities
+are retained; downloading/serving is not scientific qualification. Scientific
+jobs are preserved. See the private `benchmarks/mistral_small4_20261120/` and
+`docs/QUALIFIED_SCIENTIFIC_CONTROL.md` for actual status and promotion gates.
+
+The numerical validation loop reuses the existing force-converged, zero-
+smearing direct-route Nyl12 candidate with all 4,165 movable atoms (12 Å).
+The native DL-FIND gradient writer rounded to seven decimal places. An isolated
+precision-only library patch is being verified before a complete movable-region
+Hessian, explicit index/sign uncertainty and conditional both-sign downhill
+minimizations/endpoint checks. Existing installed engines and Hamiltonian are
+unchanged. Read its source-frozen receipts before calling the TS verified;
+this route's unfavorable energy is not being treated as a viable mechanism.
+
+The next design deliverable is retrospective recovery of known-active controls,
+not a larger candidate campaign. Read
+[`plm_and_filter_calibration_20261121.md`](plm_and_filter_calibration_20261121.md).
+Keep L4-to-two-L2 as a model reaction and polymer-powder assay labels distinct.
+Reuse PA6 parameter work and matched protonation ensembles. Calibrate geometry
+and confidence as surrogates before rejecting variants; preserve hard chemical
+validity checks. Optional ESM models do not yet have installation or inference
+approval. No extra mechanism branch or narrowed movable region was introduced.
+
+### Active — complementary pKa qualification and NylC controls (2026-11-20)
+
+The Nyl12 MCCE pilot completed technically, but its quantitative pKas remain
+unqualified. Read `pka_trust_and_active_site_audit_20261120.md`: matched PROPKA
+inputs, saturated/poor titration curves, a contradictory His257 fit label and
+a proline-template inconsistency are recorded. No MD/QM microstate was changed.
+
+The PI now explicitly requested repaired mature5XYG and uncleaved7YU0/7YU1
+MCCE runs. Initial gap reconstruction's soft geometry was inadequate; full
+Amber ff19SB/GBn2 refinement of modeled atoms/H preserves original X-ray heavy
+coordinates and applies strict bond/clash/sequence/true-terminal gates. Mature
+5XYG has separate alpha/beta chains; both mutant precursors retain A/B1–355
+with internal267 and their deposited substitutions. No backmutation is implied.
+
+Three independent persistent controllers are launched under
+`analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/`.
+They wait for exact preparation checkpoints, then refine/audit and run native
+MCCE only on passing models. Use each structure's `current.json`/README/status,
+not a historical run name. Earlier failed attempts and one builder source-history
+gap are retained; authoritative precursor jobs replay from immutable sources.
+The pinned native parameter set is a diagnostic comparison, not yet validated
+quantitative catalytic pKas. No US/GPU MD process was changed.
+
+After completion, review full curves and matched preparation/electrostatic
+assumptions. Do not promote MCCE output merely because the process exits zero.
+The QM/MM and US mechanism objectives remain the project's primary goals.
 
 ### Completed — first read-only mechanism-agent pilot (2026-11-20)
 
@@ -75,24 +437,37 @@ ABI conflict; failed artifacts were preserved. The tested launcher isolates
 tmux's library environment while retaining scientific job library paths.
 The remote retry generation is execution provenance, not a new reaction path.
 
-First 5 ps blocks from the original eight windows are available. At this
-checkpoint only 8/63 windows have completed production blocks and sampled
-overlap is disconnected. **A full-path PMF/barrier is not yet estimable.**
+At 17:18 EST on November 20, 32/63 windows had three accepted 5 ps production
+blocks each and were running block four. The remaining 31 windows were queued;
+the product-side gap includes windows 045–052, which had not started. Sampled
+overlap remains disconnected. **A full-path PMF/barrier is not yet estimable.**
 Current plots are `analysis/latest/{sample_coverage,histogram_overlap,mbar_overlap}.png`.
 Middle-window HG1 occupation of Thr Nalpha is retained as competing chemistry;
 do not label a resulting projected surface a verified direct-route mechanism.
+
+The PI authorized **coverage-first scheduling**. The tested, separately frozen
+controller in `dispatch/coverage_first_20261120/` now waits for each current
+native block to finish normally, then starts the missing windows. No native
+Sander process was signaled or restarted; all 32 original native PID/start
+identities and positive integration steps were verified after handoff.
+Only the old Python queue/window controllers are replaced. Their original
+receipts and all native data remain; intentional controller termination does
+not indicate native-MD failure. Use the new controller/worker status files
+and top-level `status.json` pointer rather than the retired controller jobs.
+An independent tmux gate holds extensions until all 63 windows have accepted,
+diagnostic-ready first 5 ps blocks, then the workers resume balanced extensions
+to the unchanged minimum 30 ps/window. No scientific inputs or seeds changed.
 
 A seven-day CPU-only MBAR/plot watcher and seven-day compact results mirror
 continue in tmux. The mirror publishes validated production observables/bias
 matrices and endpoint views on violet, with acceptance metadata last; raw
 trajectories stay on their execution host. The laptop pull follows this same
 layout and excludes raw trajectories, transfer staging and archived attempts.
-Measured production throughput is about 1.34 ps/hour locally and 2.80
-ps/hour on azalea. The frozen `timing_update_20261120.json` extrapolates first
-azalea blocks near 12:16 EST Nov 20 and all-window first-block coverage near
-10:05 EST Nov 21. Review expanded diagnostics around 12:30 EST today. These
-are receipt estimates, not PMF or convergence promises; connected overlap and
-block stability remain required.
+Measured production throughput is about 1.34 ps/hour locally and 2.80 ps/hour on
+azalea. The frozen `timing_update_20261120.json` describes the superseded
+whole-window queue. Revise its estimates after the newly prioritized windows
+complete heating/equilibration. Full first-block coverage still does not
+guarantee connected overlap or sampling convergence.
 
 Next gates: verify finite/SCC-complete blocks, proton inventories and competing
 branches; obtain coverage across all 63 windows; review connected overlap,

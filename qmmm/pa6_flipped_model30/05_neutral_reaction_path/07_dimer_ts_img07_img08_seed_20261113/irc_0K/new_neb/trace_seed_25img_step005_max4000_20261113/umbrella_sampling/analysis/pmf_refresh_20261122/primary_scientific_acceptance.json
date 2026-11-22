@@ -1,0 +1,8 @@
+{
+  "process_outputs_complete": true,
+  "numerical_dynamic_range_regression_passed": true,
+  "connected_sampled_overlap": true,
+  "all63_sampled": true,
+  "activation_barrier_validated": false,
+  "sampling_converged": false
+}

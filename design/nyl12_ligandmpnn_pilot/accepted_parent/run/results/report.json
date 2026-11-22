@@ -1,0 +1,1104 @@
+{
+  "duplicate_groups": [
+    {
+      "duplicate_samples": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:3",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:5",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:3",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:5"
+      ],
+      "first_sample": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:1",
+      "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN:TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "duplicate_samples": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:1",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:1",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:2",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:4",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:5",
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:1"
+      ],
+      "first_sample": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:3",
+      "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN:TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    },
+    {
+      "duplicate_samples": [
+        "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:6"
+      ],
+      "first_sample": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:5",
+      "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN:TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+    }
+  ],
+  "manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/accepted_parent/run/preparation_manifest.json",
+  "samples": [
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=1, T=0.1, seed=20261122, overall_confidence=0.4521, ligand_confidence=0.4588, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:1",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=2, T=0.1, seed=20261122, overall_confidence=0.4574, ligand_confidence=0.4659, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:2",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=3, T=0.1, seed=20261122, overall_confidence=0.4488, ligand_confidence=0.3717, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:3",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=4, T=0.1, seed=20261122, overall_confidence=0.4588, ligand_confidence=0.4610, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:4",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=5, T=0.1, seed=20261122, overall_confidence=0.4633, ligand_confidence=0.3829, seq_rec=0.7368",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 5,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:5",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=6, T=0.1, seed=20261122, overall_confidence=0.4464, ligand_confidence=0.3023, seq_rec=0.7368",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1",
+      "mutation_count": 5,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r1:6",
+      "seed": 20261122,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=1, T=0.1, seed=20261123, overall_confidence=0.4548, ligand_confidence=0.3740, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:1",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=2, T=0.1, seed=20261123, overall_confidence=0.4546, ligand_confidence=0.4624, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:2",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=3, T=0.1, seed=20261123, overall_confidence=0.4633, ligand_confidence=0.4645, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:3",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=4, T=0.1, seed=20261123, overall_confidence=0.4534, ligand_confidence=0.4487, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:4",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=5, T=0.1, seed=20261123, overall_confidence=0.4543, ligand_confidence=0.4539, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:5",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=6, T=0.1, seed=20261123, overall_confidence=0.4258, ligand_confidence=0.3086, seq_rec=0.6842",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2",
+      "mutation_count": 6,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 51,
+          "physical_position": 51,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.1_r2:6",
+      "seed": 20261123,
+      "temperature": 0.1
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=1, T=0.2, seed=20261222, overall_confidence=0.4500, ligand_confidence=0.3667, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:1",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=2, T=0.2, seed=20261222, overall_confidence=0.4528, ligand_confidence=0.3743, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:2",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDFVPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=3, T=0.2, seed=20261222, overall_confidence=0.4078, ligand_confidence=0.2789, seq_rec=0.6842",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 6,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "Y",
+          "merged_position": 115,
+          "physical_position": 115,
+          "to": "F"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "V"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:3",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=4, T=0.2, seed=20261222, overall_confidence=0.4470, ligand_confidence=0.3729, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:4",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=5, T=0.2, seed=20261222, overall_confidence=0.4446, ligand_confidence=0.3705, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:5",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGATGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYLPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=6, T=0.2, seed=20261222, overall_confidence=0.4175, ligand_confidence=0.3117, seq_rec=0.6842",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1",
+      "mutation_count": 6,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 51,
+          "physical_position": 51,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "L"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r1:6",
+      "seed": 20261222,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=1, T=0.2, seed=20261223, overall_confidence=0.4481, ligand_confidence=0.3902, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "A"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:1",
+      "seed": 20261223,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATLFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=2, T=0.2, seed=20261223, overall_confidence=0.4234, ligand_confidence=0.3932, seq_rec=0.7368",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 5,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "I",
+          "merged_position": 112,
+          "physical_position": 112,
+          "to": "L"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:2",
+      "seed": 20261223,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=3, T=0.2, seed=20261223, overall_confidence=0.4645, ligand_confidence=0.4738, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:3",
+      "seed": 20261223,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=4, T=0.2, seed=20261223, overall_confidence=0.4545, ligand_confidence=0.4614, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:4",
+      "seed": 20261223,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=5, T=0.2, seed=20261223, overall_confidence=0.4487, ligand_confidence=0.4637, seq_rec=0.7895",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 4,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:5",
+      "seed": 20261223,
+      "temperature": 0.2
+    },
+    {
+      "alpha_sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGNVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGATIFDYIPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNSTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta_sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "header": "ligandmpnn_input, id=6, T=0.2, seed=20261223, overall_confidence=0.4669, ligand_confidence=0.3819, seq_rec=0.7368",
+      "job_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2",
+      "mutation_count": 5,
+      "mutations": [
+        {
+          "family": "alpha",
+          "from": "S",
+          "merged_position": 50,
+          "physical_position": 50,
+          "to": "N"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 111,
+          "physical_position": 111,
+          "to": "T"
+        },
+        {
+          "family": "alpha",
+          "from": "T",
+          "merged_position": 116,
+          "physical_position": 116,
+          "to": "I"
+        },
+        {
+          "family": "alpha",
+          "from": "A",
+          "merged_position": 187,
+          "physical_position": 187,
+          "to": "S"
+        },
+        {
+          "family": "alpha",
+          "from": "V",
+          "merged_position": 188,
+          "physical_position": 188,
+          "to": "T"
+        }
+      ],
+      "parent_model": "pa6_l4z_l2_nyl12_wt_model_23",
+      "sample_id": "pa6_l4z_l2_nyl12_wt_model_23_t0.2_r2:6",
+      "seed": 20261223,
+      "temperature": 0.2
+    }
+  ],
+  "summary": {
+    "duplicate_sample_count": 16,
+    "generated_sample_count": 24,
+    "job_count": 4,
+    "mutation_count_max": 6,
+    "mutation_count_min": 4,
+    "native_records_excluded": 4,
+    "unique_sequence_count": 8
+  }
+}

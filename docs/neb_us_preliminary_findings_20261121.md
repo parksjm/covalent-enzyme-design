@@ -1,8 +1,34 @@
 # Direct acylation: preliminary NEB and umbrella-sampling findings
 
-Checkpoint: November 21, 2026. These are exploratory results, not a validated
-activation barrier or an established Nyl12 mechanism. The PI requested that
-the existing sampling continue unchanged.
+Checkpoint: November 22, 2026. These are exploratory results, not a validated
+activation barrier or an established Nyl12 mechanism.
+
+## Campaign closeout — 2026-11-22
+
+For this historical neutral-Thr, ASP272/ASP274 direct-NEB-seeded US only, all
+63 windows finished six accepted 5 ps blocks (30 ps/window). Eight Violet
+workers exited 0 on November 22 at 10:43–10:47 UTC; 24 Azalea workers exited 0
+on November 21 at 11:55–20:49 UTC. Current receipts are under
+`umbrella_sampling/dispatch/coverage_first_20261120/{violet,azalea}/` under the
+canonical campaign root at the end of this report.
+Only local analysis PID 4100242 and sync PID 4098079 were stopped with SIGTERM;
+both were absent afterward; see
+`umbrella_sampling/dispatch/stop_20261122/violet_monitor_stop_receipt.json`.
+No campaign Sander remained active on either host.
+
+Sampling completion does not establish convergence. The 47.0475 kcal/mol
+apparent maximum (46.9414 previously, same E-S density bin) has connected
+overlap, target ESS 7.29 and drift flags in windows 028/030/032. It is not a
+converged PMF or validated barrier. Stop further investment in this forced
+direct route; preserve all raw data, restarts, sources and this negative
+finding. No extension is queued. This decision does not apply to other jobs,
+design work or separate ASH274 NEBs.
+
+The verified movie is at
+`umbrella_sampling/vmd_dynamic/view_umbrella.vmd`: 30 frames/window,
+1,890 frames and 19,967 atoms. Every frame reproduces four stored reaction
+distances within 0.00005 Å; bundle checksums pass. These are sequential
+independently biased windows, not a continuous dynamical reaction movie.
 
 ## Potential-energy path used to seed sampling
 
@@ -21,6 +47,26 @@ saddle point, and the separate TS-validation work remains a separate gate.
 ![Source NEB potential-energy profile](neb_us_preliminary_20261121_pes.png)
 
 ## Preliminary MBAR result
+
+**19:08 UTC refresh:** 1,575 ps of accepted production across all 63 windows
+(15–30 ps/window) gives a q_acyl marginal maximum of **46.94136 kcal/mol**,
+using the original histogram width and exactly the same E–S reference bin.
+The pointwise 95% interval at the maximum bin is **45.24714–47.92707 kcal/mol**
+from 50 connected 5 ps block-bootstrap refits. The earlier estimate below was
+46.49584 kcal/mol. Current target ESS is 6.88; windows 028/030/032 retain drift
+flags, and proton branches remain mixed. This is an updated preliminary profile
+maximum, with unestablished activation free energy and sampling convergence.
+The nominal interval does not capture unresolved slow branch sampling.
+
+The immutable refresh is `analysis/pmf_refresh_20261121_190812/` within the
+campaign described below. `analysis/pmf_latest/primary_q_acyl_pmf.png` now
+exports its verified plot through the unchanged laptop pull script. Inputs,
+actual estimator sources, command, software versions, process status and
+publication checks are retained. Fifty focused exact-bias/MBAR tests passed;
+the independent 2D marginal and fixed reference checks passed. An initial
+publication-only check stopped on regenerated copied Python bytecode; the
+failed check and correction are retained, while all actual source/data hashes
+remain required. No production job, Hamiltonian or restraint was modified.
 
 The frozen analysis contains **63/63 sampled windows**, **1,190 ps** accepted
 production (10–30 ps/window), 23,800 saved frames and 5,003 statistically
@@ -105,7 +151,10 @@ C–O length was not in the frozen scalar observables, no local minimum was
 verified, and the raw frame count is not evidence of appreciable unbiased
 TI1 occupancy.
 
-## Decision and next checks
+## Decision and next checks (superseded by the 2026-11-22 closeout)
+
+The following sampling plan records the pre-completion decision; it is retained
+as history and is no longer an active queue.
 
 1. Continue the existing campaign to its authorized minimum of 30 ps/window;
    preserve all completed blocks and proton branches. Do not change biases,

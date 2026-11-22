@@ -1,0 +1,23 @@
+{
+  "same_boltz_source": true,
+  "boltz_distribution": "2.2.1",
+  "checkpoint_sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+  "checkpoint_bytes": 2286561469,
+  "violet": {
+    "python": "3.10.19",
+    "torch": "2.9.1+cu128",
+    "rdkit": "2025.09.3"
+  },
+  "tulip": {
+    "python": "3.12.11",
+    "torch": "2.11.0+cu130",
+    "rdkit": "2026.03.1"
+  },
+  "geranium": {
+    "role": "Amberrelaxation",
+    "parmed": "0+unknown",
+    "numpy": "2.4.4"
+  },
+  "architecture": "PI confirmed geranium/tulip same architecture as violet",
+  "qualification": "Exploratory structural comparison; keep host/runtime batch factor visible. Same-number seeds do not imply numerically identical cross-build realizations."
+}

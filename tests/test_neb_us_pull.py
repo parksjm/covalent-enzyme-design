@@ -27,6 +27,11 @@ def test_neb_us_pull_keeps_current_diagnostics_and_complete_views(
     source, target = tmp_path / "source", tmp_path / "target"
     keep = [
         "prepared.json",
+        "vmd_dynamic/path.parm7",
+        "vmd_dynamic/path.dcd",
+        "vmd_dynamic/view_umbrella.vmd",
+        "vmd_dynamic/frame_manifest.csv",
+        "vmd_dynamic/MANIFEST.sha256",
         "analysis/pmf_latest/pmf_1d.png",
         "analysis/pmf_latest/pmf_1d.csv",
         "analysis/pmf_latest/README.md",
@@ -47,6 +52,8 @@ def test_neb_us_pull_keeps_current_diagnostics_and_complete_views(
     ]
     reject = [
         "inputs/system.prmtop",
+        "vmd_dynamic/work/azalea/part.dcd",
+        "vmd_dynamic/work/violet/part.dcd",
         "source_snapshot/__pycache__/cached.pyc",
         "dispatch/sync_source_snapshot/unused.bin",
         "execution_preflight/azalea/native_probe_attempt1/process.json",

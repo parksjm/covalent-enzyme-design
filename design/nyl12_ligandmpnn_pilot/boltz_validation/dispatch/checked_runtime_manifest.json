@@ -1,0 +1,22 @@
+{
+  "reason": "frozennamespacefix+nativevalidatedglobalcharge-roundoffgate;chemicalparametersunchanged",
+  "sha256": {
+    "source_snapshot/checked_runtime/scripts/watch_design_relaxation_queue.py": "1076ca6c8080e45c856098df68b5587450eff456c47ad26aee851cd63e1a6c21",
+    "source_snapshot/checked_runtime/scripts/screen_pa6_binding_orientation.py": "82e6b5410f1f3aab841bcf78710229b6cd58b4376d7ef977cee7d5b377c7bfb5",
+    "source_snapshot/checked_runtime/scripts/coordinate_design_validation.py": "80fa97a1a14844f1c944c04eb73621bf353f3d0afe3e204d0d61aad3feff4a02",
+    "source_snapshot/checked_runtime/scripts/run_nyl12_job.py": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_geometry_comparison.py": "6c5add22389fde929b4f7effb79c8308ac285a447bdcfb19f0f99ba7009e0a5f",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/raw_pa6_modular.py": "139ca9ec8120474b97244a59387f4c162d02f99d44a2d306b1cdd1d29bed7897",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/catalytic_alignment.py": "f3f6e33fe7a8f9236dbcb7ede0b02ecbe0e548aaf5c8be60bd69bffadb73d826",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/jobs.py": "33f85b98bc31d4fee63bd008138e3a5d5a134de1813af407cc6c2b5245c70f62",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/active_site_geometry.py": "d7d765924d4fac813151716c0109e3f1897fa0ab3437db4541dc5c7783df208b",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_geometry_plots.py": "1eceb49b61ee1713b29de1b3b67eea8229d4491381424dfbd786e0cd293913d1",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_component_normalization.py": "b1b5127b794491d8edd76014e381cf016579c3c653211f88619deddf939096f0",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/ligandmpnn_pilot_audit.py": "5245b810f72b682b494fabcb6de0fb5f1696a1e6048549167d5995b86267063a",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_model_relaxation.py": "8a96c60a2923dbae3775f39df8fafd987162956ba46061e79dd62c3b43cfdaba",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_relaxation_topology.py": "6d8cbcc66cefbf0ba6a944b7256b15c0a8fa989b7f6c87b610a21e9d63ce1e3c",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6",
+    "source_snapshot/checked_runtime/src/nyl12_covalent/design_pa6_mapping.py": "38f3b4c961c96148cc8ce900429c4b4945c4fb4d2ad3eee263537415f2c0b343"
+  }
+}

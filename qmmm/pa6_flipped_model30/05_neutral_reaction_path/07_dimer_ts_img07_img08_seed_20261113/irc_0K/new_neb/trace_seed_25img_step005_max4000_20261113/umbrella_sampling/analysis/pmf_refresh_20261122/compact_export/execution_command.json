@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "ionice",
+    "-c",
+    "2",
+    "-n",
+    "7",
+    "taskset",
+    "-c",
+    "46,47",
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/source_snapshot/scripts/refresh_primary.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "JAX_ENABLE_X64": "True",
+    "JAX_PLATFORMS": "cpu",
+    "JAX_PLATFORM_NAME": "cpu",
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "MKL_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/input_source_manifest.json": "5e6c14ac83f2531576fbfda82769b06b3f2eda3f147daf7b3a6399d5d764e81a",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/source_snapshot/scripts/refresh_primary.py": "73dbcc4f6007694e562b911a14ab3cb4c85968b334ce8891c19b07ae778423e9"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/job/job.log",
+  "session_name": "nyl12_requested_pmf_refresh_20261122",
+  "started_utc": null
+}

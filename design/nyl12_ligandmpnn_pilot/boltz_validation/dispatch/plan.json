@@ -1,0 +1,29 @@
+{
+  "hosts": {
+    "violet": "prediction GPUs0/1; preserve existingQM/MMUS",
+    "tulip": "prediction GPUs0/1; PIapprovedsharedhost",
+    "geranium": "Amber relaxation GPUs0/1 after predictions",
+    "azalea": "leaveexistingmodelserversuntouched"
+  },
+  "partitions": {
+    "violet_gpu0": 11,
+    "violet_gpu1": 11,
+    "tulip": 22
+  },
+  "sentinel": {
+    "host": "violet",
+    "variant": "WT",
+    "model_index": 0,
+    "seed": 2026112201,
+    "separate_native_run": true
+  },
+  "planned_models": 45,
+  "planned_sequences": 9,
+  "ligands_per_tetramer": 4,
+  "relaxation_protonation": "Thr233 N-terminal NH2; ASP272/ASP274 COO- in all four copies; matched baseline; protonation-sensitive interpretation",
+  "forcefield_release": "pa6_l4_modular_resp_gaff2_v1_20261031",
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/source_snapshot/scripts/run_design_boltz_predictions.py": "8f68fc54fd39f8108b89f7c0ab3a2a9eae4577dba22555d49e8b4ea49e3af741",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/source_snapshot/scripts/run_nyl12_job.py": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3"
+  }
+}

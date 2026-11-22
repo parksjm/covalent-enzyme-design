@@ -59,6 +59,16 @@ the existing topologies for MD or the current coordinates as optimized.
   charges and counterions for protonation changes; never change states silently.
 - Use scripted monitors and meaningful checkpoints, not frequent manual polls.
   Check CPU/GPU contention before stopping work; signal only verified processes.
+- Default science hosts are violet and azalea. On 2026-11-22 the PI explicitly
+  reauthorized geranium and tulip for the bounded 45-model LigandMPNN-variant
+  validation campaign: violet/tulip predict with Boltz-2; geranium relaxes with
+  Amber. This supersedes the earlier two-host restriction for that campaign.
+  Aster and other workstations still require renewed PI authorization.
+- Geranium and tulip are shared: use both simultaneously
+  only for work expected to finish within a few hours. Before each launch,
+  verify that nobody else is
+  using the proposed host (sessions, CPU/GPU processes and queued work), not
+  just that a GPU is idle. Ask the PI when availability or duration is unclear.
 - Keep pathways in their existing logical directories, preserve immutable
   inputs, and record continuations clearly. Archive obsolete data in `clutter`.
 - Preserve references, negative results and decision rationale for publication.

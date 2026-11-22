@@ -1,0 +1,22 @@
+{
+  "closed_utc": "2026-11-22T14:56:07.731044+00:00",
+  "campaign": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling",
+  "sampling_workers_interrupted": 0,
+  "sampling_workers_completed": {
+    "violet": 8,
+    "azalea": 24
+  },
+  "monitors_stopped": 2,
+  "remote_processes_signaled": 0,
+  "raw_trajectories_preserved": true,
+  "restart_files_preserved": true,
+  "sampling_complete": true,
+  "sampling_converged": false,
+  "activation_barrier_validated": false,
+  "further_sampling_planned": false,
+  "apparent_maximum_relative_ES_bin_kcal_mol": 47.047517709303534,
+  "unbiased_target_ESS": 7.292797282233219,
+  "input_prepared_sha256": "3188c7f0f807e19530476ed8a9f6f97a934cdac1f6ed52a40784e1d898b87c9d",
+  "latest_pmf_export": "pmf_refresh_20261122/compact_export",
+  "scope": "Only historical neutral-Thr-N ASP272/ASP274 direct-route NEB/US; unrelated ASH274 NEBs and structure campaign unchanged"
+}

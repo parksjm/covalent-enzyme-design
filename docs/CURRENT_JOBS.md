@@ -1,0 +1,115 @@
+# Current running and queued work
+
+## Campaign-specific receipt snapshot — 2026-11-22
+
+The Nyl12 structural-validation campaign receipt reports `running`, with 21/45
+models normalized and 15/45 relaxed. This is campaign progress only; this update
+did not audit live processes across the workstations. WT seed 01 minimization
+converged, and its one-seed four-site geometry preflight is recorded in
+`design/nyl12_ligandmpnn_pilot/boltz_validation/verification/checkpoint_receipt.json`.
+
+PI authorized Tulip prediction and Geranium Amber relaxation for this campaign
+after their availability check and confirmed both have the same architecture as
+Violet. Existing runtimes sufficed; no dependency installation was needed. Both
+Boltz prediction hosts use the same checkpoint SHA256, with runtime-build details
+in the campaign's `dispatch/runtime_versions.json`. This authorization is scoped
+to the structural campaign; no current host-wide liveness is asserted here.
+
+## Latest NEB-US MBAR refresh — completed 2026-11-22
+
+The requested MBAR refresh completed with exit 0 using 63/63 windows and six
+accepted 5 ps blocks per window (30 ps/window; 1,890 ps aggregate; 37,800 raw
+and 7,871 thinned frames). Sampled overlap is connected; target ESS is 7.2928.
+All 50 connected 5 ps block bootstraps completed. The apparent maximum is
+47.0475 kcal/mol relative to the same fixed E-S density bin as the prior
+46.9414 kcal/mol result (+0.1062 kcal/mol). The fixed-peak-bin bootstrap 95%
+interval is 45.4070–47.8696 kcal/mol and is not comprehensive PMF uncertainty.
+Windows 028, 030 and 032 are flagged for drift.
+
+This PMF remains unconverged and is not a validated activation barrier. The
+refresh changed no sampling jobs and authorized no further extension. Output is
+under `qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/`.
+The stable `analysis/pmf_latest/` pointer now targets its `compact_export/`;
+the previous export is preserved. Frozen source/input hashes, same-bin numeric
+regression and the independent 2D marginal passed publication checks. Updated
+plot: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_latest/primary_q_acyl_pmf.png`.
+
+## Closeout — historical neutral Thr/Asp272/Asp274 direct-route NEB-seeded US — 2026-11-22
+
+Campaign root: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/`.
+
+All 63 windows completed six accepted 5 ps blocks (30 ps/window). Violet's
+eight workers exited 0 on November 22 between 10:43 and 10:47 UTC; azalea's 24
+workers exited 0 on November 21 between 11:55 and 20:49 UTC. The latest
+coverage-first receipts are under
+`umbrella_sampling/dispatch/coverage_first_20261120/{violet,azalea}/`.
+Only the local analysis PID 4100242 and sync PID 4098079 were stopped with
+SIGTERM; both were absent afterward and the receipt is
+`umbrella_sampling/dispatch/stop_20261122/violet_monitor_stop_receipt.json`.
+No campaign Sander remained active on either host. Sampling completed; sampling
+convergence did not.
+
+The refreshed apparent PMF maximum is 47.0475 kcal/mol versus 46.9414 in the
+same E-S density bin, with connected overlap but target ESS 7.29 and drift in
+windows 028/030/032. It is not a converged PMF or validated barrier. Decision:
+stop additional investment in this forced direct route. Preserve raw data,
+restarts, sources and this negative finding; no extension is queued. This
+closeout applies only to the historical neutral-Thr, ASP272/ASP274 direct-NEB-
+seeded US at the long `trace_seed_25img_step005_max4000_20261113/` campaign
+root. Other jobs, design work and ASH274 NEBs are unaffected.
+
+The verified movie is available at
+`umbrella_sampling/vmd_dynamic/view_umbrella.vmd`: 30 frames/window,
+1,890 frames and 19,967 stripped solute atoms. All selected frames reproduce
+the original four reaction distances within 0.00005 Å. Bundle checksums pass;
+the laptop pull includes the final bundle and excludes duplicate host parts.
+
+## Historical host-work snapshot — 2026-11-21 09:22 PM EST
+
+The following inventory is from the last full live-process audit on violet and
+azalea. Treat it as dated history, not current liveness. Machine-readable
+historical receipt: `provenance/current_jobs.json`.
+
+| Work | Status at 2026-11-21 audit | Queued work at that time |
+| --- | --- | --- |
+| Matched WT MD, violet GPUs | 10/12 accepted 100 ns replicas. NH2/ASP/ASP r04 at 33.7 ns; NH3/ASP/ASP r03 at 40.5 ns. | These are the final two replicas; native remaining-time estimates 5.9/5.2 h at inspection, approximately 03:15/02:30 EST November 22. Estimates may change. |
+| Post-MD analysis, violet | Live controller waiting for all 12 accepted replicas. | Tier A/B, native Thr and signed-phi comparisons across four replicas/state, plus new-four relay screening and matched comparison. |
+| NEB-seeded US | Eight violet Sander workers running 5 ps production block 05. No native jobs remain active on azalea. | Eight other violet windows queued (025,039,050,006,015,021,028,047), then unfinished blocks through 30 ps/window. |
+| ASP272/ASH274 NEB | Five live Sander engines on violet: original plus four spacing/optimizer trials. | Continue their existing budgets; no extra paths queued. None has current scientific convergence acceptance. |
+| Background support | US synchronization/MBAR watcher, NEB plot/movie watchers, MD queue/completion controller. | Automatic updates use completed accepted data; monitors are not additional independent scientific campaigns. |
+
+US accepted coverage as of 18:37 EST: **1,770 ps**, all 63 sampled, with 8 windows
+at 20 ps, 8 at 25 ps and 47 at 30 ps. Last separately frozen/plotted primary PMF
+used 1,575 ps and had apparent maximum **46.94 kcal/mol**. It remains preliminary;
+newer accepted sampling is not silently substituted into that frozen figure.
+
+Latest spacing-trial records (PES maxima, not verified barriers):
+
+| Trial | Cycle | Relative peak, kcal/mol | Maximum gradient / target |
+| --- | ---: | ---: | ---: |
+| Uniform 24, L-BFGS | 2069 | 33.922 | 16.0 |
+| Uniform 48, L-BFGS | 1093 | 51.900 | 39.3 |
+| Adaptive 24, L-BFGS | 2076 | 45.645 | 78.5 |
+| Uniform 24, extended CG | 3507 | 42.687 | 2.90 |
+
+Trial chemical-gap acceptance is unavailable because coherent-export cycles
+mismatch the numerical records. The original band's exported profile is stale;
+its native engine is live. Do not claim convergence from these records.
+
+Completed or stopped:
+
+- TS directional follow-up completed exit 0: 26/26 native probes, two
+  optimizer-converged diagnostic descents. Both descent electronic gates failed;
+  **no verified first-order TS or formal IRC**. No further TS calculation queued.
+- NylC MCCE comparison controllers for 5XYG, 7YU0 and 7YU1 all stopped with
+  `ValueError: Unsupported PDB record 'REMARK' on line 1`. No active rerun or
+  accepted new pKas; preparation/parser repair is pending.
+- Mechanism-agent model benchmarks and semantic review completed. Neither
+  model is qualified for autonomous scientific dispatch. Ollama/vLLM servers
+  remain up on azalea; no scientific task is being dispatched by them.
+- Email notifications still await external ORNL relay authorization.
+- No Gaussian, xTB or new parameterization calculation was found running on
+  violet or azalea. No jobs have been assigned by us to geranium or tulip.
+
+Original inputs, outputs and failed attempts are preserved. Resource-use
+restrictions remain in AGENTS.md; this audit did not launch or migrate work.

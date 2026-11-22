@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "status": "completed_24_samples_8_unique_integrity_validated",
+  "updated_utc": "2026-11-22T04:41:12.764005+00:00",
+  "calibration_report": "/data/jpc/covalent-enzyme-design/analysis/nyl12_filter_calibration/report.json",
+  "calibration_report_sha256": "1fc2fb0f2447635e1068b7da8dd7120ea92260ba769b48dbab97df1217f36d4b",
+  "experimental_evidence_update": "/data/jpc/covalent-enzyme-design/analysis/nyl12_filter_calibration/experimental_evidence_update.json",
+  "activity_ranking_policy": "No quantitative activity ordering or hard rejection thresholds may be learned from single-value lysate/MS folds. Preserve both K59E experiments and product-specific endpoints.",
+  "generator_preparation_reference": "/data/jpc/enzyme-substrate-modeling/configs/nyl12_focused_redesign_pa6_20261016.json",
+  "generator_preparation_script": "/data/jpc/enzyme-substrate-modeling/scripts/prepare_nyl12_focused_redesign.py",
+  "raw_sample_budget": 24,
+  "unique_variant_budget_max": 24,
+  "duplicate_policy": "Report duplicates and lineage; do not automatically launch extra sampling.",
+  "symmetry": {
+    "alpha_chains": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "beta_chains": [
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "sites": [
+      "AE",
+      "BF",
+      "CG",
+      "DH"
+    ],
+    "tie_rule": "same mapped position within each chain family only",
+    "per_copy_weight": 0.25,
+    "homo_oligomer": 0,
+    "point_group_claim": "No C4 assumption; explicit sequence-equivalence ties only."
+  },
+  "backbone_preflight": {
+    "pending": false,
+    "original_models": [
+      40,
+      41
+    ],
+    "original_models_accepted": false,
+    "existing_pool_checked": [
+      0,
+      7,
+      8,
+      23,
+      29,
+      40,
+      41
+    ],
+    "accepted_occupied_site_native_parent_models": [
+      23
+    ],
+    "report": "design/nyl12_ligandmpnn_pilot/native_preflight/pool_scientific_acceptance.json",
+    "policy": "design/nyl12_ligandmpnn_pilot/native_preflight/pool_acceptance_policy.json"
+  },
+  "initial_expected_pose_signs": {
+    "40": "+",
+    "41": "-"
+  },
+  "postgeneration_requirements": [
+    "Validate ties and protected identities",
+    "Retain chain lengths 232/96",
+    "Report unique precursor-position mutations",
+    "Release contact restraints for noncovalent validation",
+    "Score all four equivalent sites",
+    "Preserve access/product-release compatibility",
+    "Use confidence/geometry/strain/interface metrics descriptively until calibrated"
+  ],
+  "controls": [
+    "WT",
+    "F101E",
+    "F101H",
+    "F55N",
+    "K59D",
+    "K59E",
+    "P105K",
+    "T53Q",
+    "V111C"
+  ],
+  "prohibited_in_this_stage": [
+    "New protein-prediction/MD campaign",
+    "Backbone rebuilding/indels",
+    "Assuming TI1 exists",
+    "Claiming measured catalytic-rate improvement from lysate fold signals"
+  ],
+  "separate_future_ideas": [
+    "NylB/polyMAXA-to-MAXA selectivity; explicit product mapping and institutional IP review needed",
+    "Local scaffold-constrained Nyl12 active-site rebuilding after a bounded motif/chemistry comparison",
+    "Human-reviewed mechanism-agent workflow; autonomous chemistry planning unqualified"
+  ],
+  "authorization_source": "PI accepted recommended single-Model23 exploratory pilot, then instructed to keep working while signing off.",
+  "selected_runtime_policy": "One low-priority CPU on violet; CUDA hidden and OMP/OpenBLAS/MKL threads1; no new dependencies.",
+  "execution_manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/accepted_parent/run/preparation_manifest.json",
+  "currently_allowed_hosts": [
+    "violet",
+    "azalea"
+  ],
+  "host_priority": "Preserve current QM/MM, US and WT MD; run accepted 24-sample pilot; automatic matched WT analysis after MD; no new mechanism or LLM campaigns.",
+  "historical_rejected_proposed_overrides": {
+    "models": [
+      40,
+      41
+    ],
+    "temperatures": [
+      0.1,
+      0.2
+    ],
+    "sequences_per_temperature_per_backbone": 6,
+    "design_radius_angstrom": 8.0,
+    "protected_alpha_positions": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "protected_beta_positions": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ]
+  },
+  "approved_overrides": {
+    "models": [
+      23
+    ],
+    "temperatures": [
+      0.1,
+      0.2
+    ],
+    "sequences_per_temperature_per_backbone": 6,
+    "design_radius_angstrom": 8.0,
+    "protected_alpha_positions": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "protected_beta_positions": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ],
+    "independent_sampling_seeds_per_temperature": 2
+  },
+  "parent_diversity_limitation": "Only one native-Thr-passing WT parent; no two-pose diversity claim.",
+  "runtime_repair": "Copied existing installed OpenFold support; first failed startup retained, no samples generated or extra dependencies installed.",
+  "results_summary": {
+    "duplicate_sample_count": 16,
+    "generated_sample_count": 24,
+    "job_count": 4,
+    "mutation_count_max": 6,
+    "mutation_count_min": 4,
+    "native_records_excluded": 4,
+    "unique_sequence_count": 8
+  },
+  "results_directory": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/accepted_parent/run/results",
+  "candidate_structure_and_activity_validated": false
+}

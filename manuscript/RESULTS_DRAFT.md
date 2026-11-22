@@ -1,6 +1,42 @@
 # Results — working draft
 
+## Leaving-group relay candidates — exploratory screen, 2026-11-21
+
+Screening sixteen 100 ns WT trajectories and neighboring saved frames identified
+one unique assisted configuration with all directional hydrogen-bond legs and
+Tier B catalytic geometry: matched NH2/ASP272/ASP274 replica 03, frame 9386,
+with Lys156–water29282–water4517–leaving-amide-N connectivity. Its d1/d2/d3
+were 3.287/3.815/2.865 Å, attack angle 86.69° and signed phi +74.06°. However,
+Thr OG1 and Nalpha displacements from the reference were 2.396 and 2.958 Å,
+outside the current native-conformation criteria. This is a structural donor
+network, not evidence that Lys acts as the catalytic acid.
+
+An ASH272 replica 1, frame 7316 nearpass contained an OG1–water9397–leaving-N
+network with Tier A geometry and terminal H–N distance 2.50964 Å, only 0.00964 Å
+above the screening cutoff. It also failed native Thr displacement/psi criteria.
+No frame among the twenty bounded native-audit selections passed all native
+criteria. Three unchanged diagnostic restarts were retained; no accepted new
+QM/MM seed or mechanism was assigned. These results do not exclude other
+frames, water reorganization, or productive conformations outside the sampled
+ensembles. Known direct-route controls were not counted as new assisted relays.
+
 ## Preliminary NEB-seeded umbrella sampling (2026-11-21)
+
+**Closeout, 2026-11-22.** All 63 windows completed six accepted 5 ps
+production blocks (30 ps/window; 1.89 ns aggregate). Using the same native
+two-coordinate bias model, histogram grid and fixed E–S density-reference bin,
+the updated marginal PMF maximum was 47.05 kcal/mol (previously 46.94).
+All 50 within-window 5 ps block-bootstrap refits retained connected overlap;
+the pointwise interval at the maximum bin was 45.41–47.87 kcal/mol. The
+unbiased-target effective sample size remained only 7.29, and windows 028,
+030 and 032 retained block-drift flags. This interval does not account for
+unresolved slow-state sampling or Hamiltonian error. We therefore do not
+interpret the profile maximum as a converged activation free energy. Further
+sampling of this direct-route hypothesis was discontinued because of its
+persistently unfavorable preliminary profile and low expected value relative
+to testing alternative pathways. All trajectories, restarts and analyses were
+retained; this decision does not establish that alternative mechanisms are
+inaccessible or that the enzyme cannot catalyze PA6 hydrolysis.
 
 An exploratory 300 K DFTB3/MM umbrella campaign seeded from the converged
 regular direct-acylation NEB contained 1,190 ps of accepted production across
@@ -21,8 +57,8 @@ tracked both distance-difference umbrellas: for example, window 031 had
 mean q_H = 0.4417 Å versus target 0.4568 Å while mean HG1–leaving-N was
 1.9161 Å. Thus the present CVs do not uniquely resolve the proton-transfer
 route; merely increasing their force constants would not remove configurations
-with the same CV values. All frames were retained, and sampling continues
-unchanged. The high projected maximum does not presently support a viable
+with the same CV values. All frames were retained. Sampling was ongoing at that checkpoint and
+was closed after 30 ps/window, as reported above. The high projected maximum does not presently support a viable
 direct-acylation mechanism. Frozen figures, tables, limitations and hashes are
 in [the preliminary record](../docs/neb_us_preliminary_findings_20261121.md).
 
@@ -492,3 +528,24 @@ preflight before titration. Treating these as a valid independent prediction
 disagreeing with PROPKA would be misleading. Current ASH274 MD comparisons
 therefore test sensitivity to an explicit hypothesis; increased geometric
 occupancy does not establish that microstate's equilibrium population.
+
+
+## Diagnostic MCCE–PROPKA comparison and nearby-site flags (2026-11-20)
+
+The corrected complete-Nyl12 MCCE pilot finished but did not establish reliable
+quantitative catalytic pKas. Most target curves were saturated over pH 0–14.
+A single-sigmoid Asp272 fit disagreed with its observed midpoint, and the
+native His257-E >14 label contradicted an almost entirely neutral-state curve.
+The pinned FTPL proline backbone charges also differed from the bundled legacy
+template; this parameter inconsistency has not been shown to explain the
+anomaly. These findings limit interpretation independently of native exit status.
+
+Matched PROPKA predicted Thr233 N-terminal pKas 7.06–9.70, Asp272 1.02–1.99,
+and Asp274 2.95–4.37 for the HIS-normalized snapshot. Coupled alternatives and
+all four site values are retained separately. The protein copies have different
+MD conformations, so exact pKa symmetry is not expected. Nearby Lys156 had
+PROPKA values 8.46–9.91 versus its model 10.5; His257 4.85–5.22, Tyr267
+14.00–14.57 and Asp45 −1.97 to −0.06 were additional shifted groups.
+These are hypotheses about electrostatics/proton availability, not established
+catalytic roles or a basis for automatic protonation changes. Substrate removal,
+the single structural snapshot and method disagreement remain limitations.

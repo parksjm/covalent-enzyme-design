@@ -1,0 +1,7 @@
+{
+  "catalytic_activity_validated": false,
+  "copy_ties_validated": true,
+  "protected_identities_validated": true,
+  "protein_chain_lengths_validated": true,
+  "untied_positions_unchanged": true
+}

@@ -1,0 +1,29 @@
+{
+  "focused_tests_passed": 93,
+  "focused_test_groups": {
+    "design_validation": 55,
+    "ligandmpnn_parent_and_runner": 13,
+    "new_neb_us_export": 13,
+    "new_neb_us_renderer": 10,
+    "laptop_pull": 2
+  },
+  "editable_whitespace_check": true,
+  "native_movie_bundle_sha256_check": true,
+  "native_movie_finalizer_exit_status": 0,
+  "movie_frames": 1890,
+  "original_reaction_distances_checked_per_frame": 4,
+  "movie_not_committed_due_size_bytes": 453002956,
+  "code_coverage": {
+    "design_total_percent": 88.897,
+    "design_minimum_module_percent": 81.609,
+    "new_export_percent": 87,
+    "new_renderer_percent": 98,
+    "native_assembler_execution_percent": 91.93548387096774
+  },
+  "unmeasured_coverage": [
+    "movie_finalizer_CLI",
+    "LigandMPNN_runner_and_audit_separate_coverage"
+  ],
+  "VMD_GUI_test_performed": false,
+  "scope": "Current structuraldesign scripts/docs and archiveddirectNEB-US closeout; rawMD/topologies/predictionweights leftonworkstations"
+}

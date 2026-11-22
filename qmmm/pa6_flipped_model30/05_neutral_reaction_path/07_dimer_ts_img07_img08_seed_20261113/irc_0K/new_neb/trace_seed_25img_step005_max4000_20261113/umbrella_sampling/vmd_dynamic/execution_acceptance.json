@@ -1,0 +1,36 @@
+{
+  "process_exit_status": 0,
+  "frames": 1890,
+  "windows": 63,
+  "frames_per_window": 30,
+  "atoms": 19967,
+  "dcd_size_bytes": 453002956,
+  "geometry_verification": {
+    "all_frames_matched": true,
+    "distance_columns": [
+      "r_c_n",
+      "r_c_og1",
+      "r_og1_hg1",
+      "r_nleave_hg1"
+    ],
+    "tolerance_A": 0.001,
+    "maximum_absolute_difference_A": 4.9993342109644345e-05
+  },
+  "focused_tests": {
+    "native_export_module": 13,
+    "renderer": 10,
+    "pull_filters_and_dry_run": 2,
+    "export_module_coverage_percent": 87,
+    "renderer_module_coverage_percent": 98
+  },
+  "assembly_native_execution_coverage_percent": 91.93548387096774,
+  "finalizer_CLI_coverage_measured": false,
+  "GUI_VMD_test_performed": false,
+  "sampling_extension_performed": false,
+  "source_jobs": [
+    "nyl12_neb_us_movie_violet_20261122",
+    "nyl12_neb_us_movie_azalea_20261122"
+  ],
+  "finalizer_job": "nyl12_neb_us_movie_finalize_20261122",
+  "trajectory_interpretation": "Concatenated biased MD windows, not continuous reaction kinetics"
+}

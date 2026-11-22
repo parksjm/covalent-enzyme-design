@@ -1,7 +1,7 @@
 # Master plan: Nyl12 PA6 mechanism and covalent-enzyme redesign
 
 Status: authoritative working plan
-Version: 0.2 (2026-11-20; optional design-resource update)
+Version: 0.3 (2026-11-21; control-calibrated engineering proceeds alongside mechanism)
 Primary system: mature tetrameric Nyl12 with PA6 L4 in an L4-to-two-L2 register
 Secondary system: poly(MAXA), after the PA6 workflow passes
 
@@ -17,15 +17,48 @@ The current bounded mechanism execution sequence and manuscript-scope decision
 are in [NYL12_MECHANISM_ROADMAP.md](NYL12_MECHANISM_ROADMAP.md). Its completed
 state is tracked in the handoff and run manifests, not inferred from this plan.
 
-The program has three linked objectives:
+The authorized calibration-first engineering lane and approved Model23
+LigandMPNN pilot are in [nyl12_ligandmpnn_pilot.md](nyl12_ligandmpnn_pilot.md).
+Its initial static audit is complete; lysate/MS activity comparisons remain
+provisional, especially the inconsistent K59E duplicate experiments. The pilot
+is exploratory E-S sequence sampling; candidate prediction/relaxation, matched
+MD and activity are not yet validated, and it does not claim a validated TS.
 
-1. Determine a reproducible, chemically meaningful DFTB3/MM free-energy path
+On November 21 the PI approved a single-parent, 24-sample symmetry-aware
+LigandMPNN pilot using WT Model23. WT40/41 failed native-Thr preflight; only
+WT23 passed among seven existing Tier A/B models. Existing QM/MM and US jobs
+continue unchanged; use violet/azalea only. The pilot is exploratory E-S
+sequence sampling, not TS-directed design. Candidate prediction/relaxation,
+matched MD and activity validation remain future gates; no validated TS or
+catalytic improvement is established. No additional predictor/MD campaign or
+backbone reconstruction is authorized by this pilot.
+
+The pilot completed 24 raw samples/eight unique sequences (4-6 substitutions),
+with symmetry, protected/fixed-site and tensor/FASTA checks passing. See
+`design/nyl12_ligandmpnn_pilot/README.md`; candidate structure/activity remain
+unvalidated and no downstream prediction/MD campaign has launched.
+
+On November 22 the PI authorized structural validation of WT plus all eight
+unique variants, five matched seeds each and four PA6 L4 molecules per tetramer.
+This 45-model Boltz-2/Amber campaign is running; geranium and tulip are explicitly
+reauthorized for it. See `design/nyl12_ligandmpnn_pilot/boltz_validation/README.md`.
+The downstream candidate-MD gate remains unstarted. Native MD and existing
+mechanistic jobs are preserved; geometry is not claimed to predict activity.
+
+The program has four linked objectives:
+
+1. Calibrate existing filters against WT and experimentally characterized
+   Nyl12 mutants, then plan a bounded sequence-engineering experiment on the
+   mature scaffold. This exploratory engineering lane does not require a
+   verified transition state, but cannot claim selective TS stabilization.
+
+2. Determine a reproducible, chemically meaningful DFTB3/MM free-energy path
    for PA6 hydrolysis by wild-type Nyl12, including both acylation and
    deacylation.
-2. Refine important minima and transition structures with embedded DFT/MM and
+3. Refine important minima and transition structures with embedded DFT/MM and
    verify each transition structure as a true first-order saddle connected to
    the intended adjacent states.
-3. Use ensembles of the validated states for symmetry-aware LigandMPNN design,
+4. Use ensembles of the validated states for TS-directed symmetry-aware LigandMPNN design,
    followed by Boltz and/or AlphaFold 3 prediction, physical relaxation,
    geometric filtering, multistate scoring, and experimental selection.
 
@@ -90,16 +123,19 @@ The reference mechanistic study covers:
 2. reactive E-S microstate(s), including declared protonation states;
 3. acylation transition state(s), allowing a proton-transfer intermediate if
    it is a genuine minimum;
-4. tetrahedral intermediate TI1;
+4. tetrahedral intermediate TI1, if it is a genuine minimum;
 5. acyl enzyme plus the first product;
 6. hydrolytic-water/deacylation reactant state;
 7. deacylation transition state(s) and TI2 if present;
 8. product complex.
 
-The first design round may begin after validated E-S, acylation TS ensemble,
-and TI1 ensembles exist. Acyl-enzyme and deacylation states are required before
+The exploratory E-S-based sequence-engineering pilot may be planned after
+retrospective control calibration, without a verified TS or stable TI1.
+TS-directed design requires validated E-S and acylation TS ensembles, plus TI1
+only if it exists. Acyl-enzyme and deacylation states are required before
 claiming a balanced catalytic-cycle design. Apo/open structures are required to
-avoid designing only an inaccessible closed state.
+avoid designing only an inaccessible closed state. Neither an imposed formal
+tetrahedral adduct nor a high-energy path maximum certifies a minimum or TS.
 
 ## Stage gates and measurable acceptance criteria
 
