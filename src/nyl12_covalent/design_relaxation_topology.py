@@ -9,6 +9,8 @@ from typing import Any
 
 import parmed
 
+from .design_charge import protein_formal_charge
+
 LOGGER = logging.getLogger(__name__)
 RELEASE_ID = "pa6_l4_modular_resp_gaff2_v1_20261031"
 PA6_SEQUENCE = ("P6N", "P6I", "P6I", "P6C")
@@ -266,8 +268,31 @@ def validate_four_ligand_topology(
     pa6_atom_count, pa6_charge, pa6_copy_charges = _validate_pa6(residues, release)
     link_count = _validate_links(system)
     inventory = _validate_thr_and_asp(residues)
+    formal_solute_charge = protein_formal_charge(residues)
+    if solvated:
+        sodium_count = 0
+        chloride_count = 0
+        for residue in residues[FIRST_PA6_RESIDUE + 15 :]:
+            if residue.name.strip() not in {"Na+", "Cl-"}:
+                continue
+            expected_ion_charge = 1 if residue.name.strip() == "Na+" else -1
+            if abs(_residue_charge(residue) - expected_ion_charge) > 1.0e-4:
+                raise ValueError(
+                    f"{residue.name.strip()} residue {residue.idx + 1} has "
+                    f"incorrect formal ion charge"
+                )
+            if expected_ion_charge > 0:
+                sodium_count += 1
+            else:
+                chloride_count += 1
+        if sodium_count - chloride_count != -formal_solute_charge:
+            raise ValueError(
+                "Counterion inventory does not neutralize formal solute charge: "
+                f"Na={sodium_count}, Cl={chloride_count}, "
+                f"solute={formal_solute_charge}"
+            )
     total_charge = float(sum(atom.charge for atom in system.atoms))
-    expected_charge = 0.0 if solvated else -8.0
+    expected_charge = 0.0 if solvated else formal_solute_charge
     # Four released L4 copies accumulate about -1.6e-5 e from printed charges.
     # Keep all per-atom/residue chemistry checks tighter; this is system roundoff.
     tolerance = 1.0e-4
@@ -286,6 +311,7 @@ def validate_four_ligand_topology(
         "pa6_charge": pa6_charge,
         "pa6_copy_charges": pa6_copy_charges,
         "pa6_interresidue_link_count": link_count,
+        "formal_solute_charge": formal_solute_charge,
         "total_charge": total_charge,
         "radius_set": radii,
         **inventory,

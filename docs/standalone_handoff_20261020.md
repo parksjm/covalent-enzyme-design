@@ -1,3 +1,79 @@
+## CURRENT — missing laptop movie resolved, 2026-11-22
+
+PI uses `vmd -e view_umbrella.vmd`; the laptop lacked `path.dcd`. The pull
+script's generic `--max-size=100m` silently omitted the 453,002,956-byte
+(433 MiB) movie. The NEB-US bundle now uses a dedicated 500 MiB cap and verifies
+`vmd_dynamic/MANIFEST.sha256` after transfer. A real rsync regression with a
+file exceeding 100 MiB passes. Copy the updated
+`/data/jpc/covalent-enzyme-design/scripts/pull_nyl12_inspection.sh` to the laptop
+and rerun it, then launch VMD from the movie directory. No additional path
+fallback or GUI chooser was introduced. Full trajectory/topology are retained
+on Violet; all previous viewer fixes still apply.
+
+## CURRENT — matched-mask structural campaign finished, 2026-11-22
+
+All 52 new Boltz predictions and Amber minimizations finished; including three
+qualified reused WT controls, all 55 endpoints are force-converged. Geometry
+tables are complete. The last plotting step rejected new cohort names;
+reporting-only recovery is in `ensemble_mask_comparison/validation/reporting_repair/`,
+with original failure receipts preserved and no science rerun.
+
+Joint Tier A/B + native-Thr passes: broader 12/80 sites in 7/20 model seeds,
+focused 8/80 in 4/20, WT 1/20 in 1/5. Restricting to negative signed Herschlag
+phi gives broader 11/80, focused 3/80, WT 0/20. Broader mask_07 has 6/20 joint
+sites in 3/5 seeds, all negative phi. Active controls K59D and V111C have
+0/20 and 7/20 joint sites, respectively, so this is not a validated activity
+classifier. The WT baseline now uses matched Violet runtime for all five
+seeds; two previous mixed-runtime seeds were regenerated. Counts are
+structural observations, not evidence of lower barriers or higher activity.
+See `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/README.md` and
+`validation/analysis/comparison_summary.json` for source-bound tables.
+
+## CURRENT — umbrella VMD display repair, 2026-11-22
+
+The NEB-US `vmd_dynamic/view_umbrella.vmd` was regenerated in place after the
+PI reported a blank VMD display. Fixed invalid three-argument VDW syntax,
+explicitly activated frame zero before labels/camera measurements, and wrapped
+loading in a fail-fast procedure. Original viewer/checksums are retained in
+`viewer_repair/original`; the repair script/source and receipt are alongside.
+The trajectory and topology hashes are unchanged (1,890 frames, 19,967 atoms).
+The existing pull script includes the repaired bundle. Tcl loader regression
+and checksum tests pass; GUI VMD is unavailable here, so laptop display remains
+to be confirmed. Scientific jobs were not changed.
+
+## EARLIER CHECKPOINT — structural pilot and mask comparison launch, 2026-11-22
+
+Live matched comparison: `nyl12_matched_masks_validation_20261122` on Violet.
+Native sequence sampling completed (48 audited, 39 unique; broader24/24unique,
+focused15/24). Eight representatives and K59D/V111C controls are selected.
+`ensemble_mask_comparison/validation/status.json` reports the actual phase: 52
+new Boltz predictions, three eligible reused WT models, then automatic Amber
+relaxation and four-site analysis. Input/protection/hash/native-runtime checks
+passed; postprocessing/startup failures are retained separately.
+
+The 45-model Boltz/Amber campaign finished: all 45 predictions and minimization
+processes completed; **44/45** reached the force tolerance. Variant 05 seed 04
+has RMS gradient 0.1455 kcal/mol/Å and remains diagnostic. After relaxation,
+WT has 3/20 joint Tier A/B+native-Thr sites in 2/5 models. Variants 03/04 each
+have 7/20 in 4/5 models; variant 06 has 8/20 in 3/5 models. Seven of eight
+variants have a joint pass. Across all endpoints there are 40/180 joint sites;
+restricting to force-converged cases gives **38/176 sites in 20 models**.
+Raw models have no Tier A/B sites. Full counts, source hashes and model paths
+are in `design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/comparison_summary.*`.
+These five-seed structural observations are not catalytic-activity estimates.
+
+PI authorized a matched 19-versus-29-position mask test on two accepted WT
+backbones, 48 raw LigandMPNN samples, unchanged catalytic/maturation protections
+and explicit A–D/E–H sequence ties. New mutable positions passed SASA and
+interface checks. At most four distinct sequences per arm plus K59D/V111C
+controls proceed through five Boltz seeds and matched Amber relaxation. New
+work is on Violet; WT reuse requires runtime/input identity. See
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/README.md` and its
+actual job receipts. No TS geometry or activity-trained filter is introduced.
+
+Future laptop pulls exclude Hessian column/displacement trees. The original
+workstation data and already downloaded laptop copies are preserved.
+
 ## CURRENT — NEB-seeded US closeout, 2026-11-22
 
 Only the historical neutral-Thr, ASP272/ASP274 direct-route NEB-seeded US at

@@ -1,0 +1,11 @@
+{
+  "accepted": true,
+  "new_prediction_jobs": 52,
+  "reused_WT_models": 3,
+  "candidate_manifest_sha256": "dd5a5288d7f4485c6b2b86b67ccb9b9536b3799bae05c7761519f4e5298dfbfb",
+  "input_data_unchanged": true,
+  "prior_failure": "HashschematypemismatchbeforeGPUlaunch; failedstatusarchived",
+  "prior_status_sha256": "74da41b1231f3c3b015d504d439085cae077e8375abe327434030cdfb501d7f7",
+  "source_snapshot_sha256": "809de32c3990ed6c0a44cf692b79d3eab7e7802c367cef02f1503ebc154bda29",
+  "focused_controller_tests_passed": 18
+}

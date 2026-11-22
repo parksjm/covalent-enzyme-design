@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "ionice",
+    "-c",
+    "2",
+    "-n",
+    "7",
+    "taskset",
+    "-c",
+    "24-39",
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation_source_snapshot_checked/scripts/resume_prepared_comparison.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-11-22T21:02:34.313637Z",
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "0,1",
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib:/data/jpc/code/pmemd26/lib",
+    "MKL_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation_source_snapshot_checked:/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation_source_snapshot_checked/src",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "exit_status": 1,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/generation/results/acceptance.json": "97434ad0a940cd5b6ef9794763254cf58f897a5773c8e6614776256bccceecf0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/prepared/validation_resume_acceptance.json": "87de4545ddaaa8b13c4533962abaa599ca79dd50f2fe4bfeb949363a53a77d0a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/candidate_manifest.json": "dd5a5288d7f4485c6b2b86b67ccb9b9536b3799bae05c7761519f4e5298dfbfb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation_source_snapshot_checked/scripts/resume_prepared_comparison.py": "c8715594b6df138d804ec56073bddf356e27278f61f5add9d880a968c56b5e1a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation_source_snapshot_checked/source_sha256.json": "809de32c3990ed6c0a44cf692b79d3eab7e7802c367cef02f1503ebc154bda29"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/workflow_job_checked/job.log",
+  "session_name": "nyl12_matched_masks_validation_20261122",
+  "started_utc": "2026-11-22T16:24:15.677157Z"
+}

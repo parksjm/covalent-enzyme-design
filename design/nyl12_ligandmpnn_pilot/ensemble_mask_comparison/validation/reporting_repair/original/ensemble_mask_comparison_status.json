@@ -1,0 +1,5 @@
+{
+  "status": "failed_requires_review",
+  "updated_utc": "2026-11-22T21:02:31.685232+00:00",
+  "error": "ValueError: Unsupported variant/stage in row 18: control_K59D/raw"
+}

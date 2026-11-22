@@ -78,6 +78,12 @@ class System:
                 residue = self._neutral_thr(number)
             elif number in topology_tools.ASP_RESIDUES:
                 residue = self._charged("ASP", number - 1, "ASP", -0.999998)
+            elif number in (100, 332, 564, 796):
+                residue = self._charged("LYS", number - 1, "NZ", 1.0)
+            elif number in (1, 233, 465, 697):
+                residue = self._charged("ALA", number - 1, "CA", 1.0)
+            elif number in (232, 464, 696, 928, 1024, 1120, 1216, 1312):
+                residue = self._charged("ALA", number - 1, "CA", -1.0)
             elif number >= topology_tools.FIRST_PA6_RESIDUE:
                 template_name = topology_tools.PA6_SEQUENCE[(number - 1313) % 4]
                 residue = self._pa6(template_name, number - 1)
@@ -146,6 +152,7 @@ def test_validator_accepts_exact_four_ligand_dry_topology(
     assert result["pa6_charge"] == pytest.approx(-16e-6, abs=1e-8)
     assert result["pa6_copy_charges"] == pytest.approx([-4e-6] * 4, abs=1e-8)
     assert result["total_charge"] == pytest.approx(-8.0)
+    assert result["formal_solute_charge"] == -8
     assert len(result["neutral_thr_residue_charges"]) == 4
     assert result["radius_set"].endswith("mbondi3)")
 
@@ -179,10 +186,24 @@ def test_validator_checks_solvated_neutrality(
     monkeypatch.setattr(topology_tools.parmed, "load_file", lambda _path: system)
     result = topology_tools.validate_four_ligand_topology(path, RELEASE, solvated=True)
     assert result["total_charge"] == pytest.approx(0.0)
+    assert result["formal_solute_charge"] == -8
     assert result["solvated"] is True
 
 
-def test_global_roundoff_does_not_change_chemical_charge_gates(
+def test_validator_rejects_counterions_that_do_not_neutralize_solute(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Require explicit sodium/chloride inventory to cancel formal solute charge."""
+    path = tmp_path / "solvated.prmtop"
+    path.touch()
+    system = System(solvated=True)
+    system.residues.pop()
+    monkeypatch.setattr(topology_tools.parmed, "load_file", lambda _path: system)
+    with pytest.raises(ValueError, match="Counterion inventory"):
+        topology_tools.validate_four_ligand_topology(path, RELEASE, solvated=True)
+
+
+def test_per_residue_charge_gate_remains_tighter_than_global_roundoff(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """Accept the observed four-copy rounding residual but reject a larger error."""
@@ -195,5 +216,5 @@ def test_global_roundoff_does_not_change_chemical_charge_gates(
     result = topology_tools.validate_four_ligand_topology(path, RELEASE, solvated=False)
     assert result["total_charge"] == pytest.approx(-8.000016, abs=1e-8)
     system.residues[0].atoms[0].charge += 0.001
-    with pytest.raises(ValueError, match="System charge"):
+    with pytest.raises(ValueError, match="Protein residue 1 ALA charge"):
         topology_tools.validate_four_ligand_topology(path, RELEASE, solvated=False)

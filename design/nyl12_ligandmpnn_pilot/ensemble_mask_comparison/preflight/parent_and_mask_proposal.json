@@ -1,0 +1,1568 @@
+{
+  "canonical_mapping": {
+    "mapping_source": "WT acceptance report; preserved as explicit map",
+    "protein_chains": {
+      "alpha": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "beta": [
+        "E",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "substrate_chains": {
+      "I": "AE",
+      "J": "BF",
+      "K": "CG",
+      "L": "DH"
+    }
+  },
+  "compatibility": {
+    "existing_frozen_model23_runner_reusable_as_is": false,
+    "reason": "Its preflight and run path hard-code parent model 23, 4 jobs, 24 total samples, exact source/manifest receipts and accepted prepared PDB paths. A next campaign needs a separate versioned adapter/manifest; preserve the frozen runner and audit functions."
+  },
+  "mask_proposal": {
+    "assay_example_distances_angstrom": {
+      "seed_02": {
+        "LYS59": 5.565,
+        "PHE55": 3.899,
+        "THR53": 6.325
+      },
+      "seed_03": {
+        "LYS59": 4.526,
+        "PHE55": 3.743,
+        "THR53": 6.689
+      }
+    },
+    "broader_shell_definition": "Union of residues whose minimum protein-heavy-atom to any of the four bound substrate heavy-atom distances is >6 and <=12 angstrom in either parent; tied identically across equivalent copies in its family. Exclude hard-protected/focused positions from additions and exclude a candidate if any other polypeptide chain has a heavy-atom contact <=4 angstrom in either parent.",
+    "counting_unit": "Residue positions per alpha/beta chain family, tied across four equivalent copies; positions/sites within one parent are not biological replicates.",
+    "distant_12_16": "No 12\u201316 angstrom positions added: reliable surface exposure is unverified. Assayed examples K59, T53, F55 are enumerated by parent in assay_example_distances_angstrom; they fall within the direct 0\u20136 angstrom shell and are not distal surface controls.",
+    "focused_alpha_positions": [
+      50,
+      51,
+      52,
+      73,
+      76,
+      101,
+      111,
+      112,
+      114,
+      115,
+      116,
+      151,
+      152,
+      153,
+      185,
+      187,
+      188
+    ],
+    "focused_beta_positions": [
+      39,
+      41
+    ],
+    "ligand_identity_note": "PDBs preserve normalized raw atom labels; authoritative 33-heavy-atom/32-heavy-bond neutral graph and source\u2192normalized atom labels are recorded from each parent raw mapping.json. Relaxation whole-L4 context mapping is also source-hashed.",
+    "protected_alpha_positions": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "protected_beta_positions": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ],
+    "shell_geometry_and_candidates": {
+      "alpha": {
+        "cross_parent_candidate_intersection": [
+          "ALA148",
+          "ARG118",
+          "ASN120",
+          "ASP160",
+          "ASP68",
+          "GLN100",
+          "GLN163",
+          "GLN94",
+          "GLU81",
+          "GLY149",
+          "GLY155",
+          "GLY161",
+          "GLY30",
+          "GLY74",
+          "GLY79",
+          "ILE107",
+          "LEU164",
+          "LEU67",
+          "LEU80",
+          "LEU90",
+          "MET121",
+          "MET60",
+          "PHE162",
+          "PHE54",
+          "PHE91",
+          "PRO117",
+          "PRO124",
+          "THR29",
+          "TYR123",
+          "VAL154",
+          "VAL87"
+        ],
+        "cross_parent_candidate_union": [
+          "ALA148",
+          "ALA71",
+          "ARG118",
+          "ASN120",
+          "ASP160",
+          "ASP68",
+          "GLN100",
+          "GLN119",
+          "GLN163",
+          "GLN57",
+          "GLN94",
+          "GLU81",
+          "GLU98",
+          "GLY149",
+          "GLY155",
+          "GLY161",
+          "GLY30",
+          "GLY69",
+          "GLY74",
+          "GLY75",
+          "GLY79",
+          "ILE107",
+          "ILE122",
+          "LEU158",
+          "LEU164",
+          "LEU67",
+          "LEU78",
+          "LEU80",
+          "LEU90",
+          "MET121",
+          "MET60",
+          "PHE162",
+          "PHE54",
+          "PHE91",
+          "PRO105",
+          "PRO117",
+          "PRO124",
+          "SER88",
+          "THR29",
+          "THR95",
+          "TYR123",
+          "VAL154",
+          "VAL83",
+          "VAL87"
+        ],
+        "seed_02": {
+          "blocked_interchain_6_12_positions": [
+            "ILE46",
+            "GLN47",
+            "GLY48",
+            "THR53",
+            "THR56",
+            "GLU58",
+            "GLN62",
+            "GLU64",
+            "ALA65",
+            "TYR66",
+            "PHE72",
+            "SER108",
+            "GLY109",
+            "ALA110",
+            "LEU157",
+            "ALA165",
+            "GLY166",
+            "VAL184",
+            "VAL185",
+            "GLY189",
+            "VAL190",
+            "LYS223"
+          ],
+          "candidate_6_12_positions": [
+            {
+              "minimum_other_polypeptide_heavy_A": 11.367,
+              "minimum_substrate_heavy_A": 11.447,
+              "residue": "THR29"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.675,
+              "minimum_substrate_heavy_A": 11.943,
+              "residue": "GLY30"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.941,
+              "minimum_substrate_heavy_A": 9.255,
+              "residue": "PHE54"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.035,
+              "minimum_substrate_heavy_A": 10.151,
+              "residue": "MET60"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.181,
+              "minimum_substrate_heavy_A": 8.827,
+              "residue": "LEU67"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.426,
+              "minimum_substrate_heavy_A": 8.605,
+              "residue": "ASP68"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.631,
+              "minimum_substrate_heavy_A": 11.788,
+              "residue": "GLY69"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.495,
+              "minimum_substrate_heavy_A": 11.863,
+              "residue": "ALA71"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.8,
+              "minimum_substrate_heavy_A": 7.672,
+              "residue": "GLY74"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 9.174,
+              "minimum_substrate_heavy_A": 6.081,
+              "residue": "GLY75"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.801,
+              "minimum_substrate_heavy_A": 6.383,
+              "residue": "LEU78"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 9.65,
+              "minimum_substrate_heavy_A": 8.233,
+              "residue": "GLY79"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.958,
+              "minimum_substrate_heavy_A": 7.302,
+              "residue": "LEU80"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.517,
+              "minimum_substrate_heavy_A": 11.264,
+              "residue": "GLU81"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.444,
+              "minimum_substrate_heavy_A": 11.59,
+              "residue": "VAL83"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.519,
+              "minimum_substrate_heavy_A": 8.51,
+              "residue": "VAL87"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 14.585,
+              "minimum_substrate_heavy_A": 11.789,
+              "residue": "SER88"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.004,
+              "minimum_substrate_heavy_A": 11.532,
+              "residue": "LEU90"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.755,
+              "minimum_substrate_heavy_A": 8.546,
+              "residue": "PHE91"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.613,
+              "minimum_substrate_heavy_A": 8.842,
+              "residue": "GLN94"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.486,
+              "minimum_substrate_heavy_A": 10.074,
+              "residue": "GLN100"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.636,
+              "minimum_substrate_heavy_A": 8.174,
+              "residue": "ILE107"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.056,
+              "minimum_substrate_heavy_A": 8.029,
+              "residue": "PRO117"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.298,
+              "minimum_substrate_heavy_A": 9.893,
+              "residue": "ARG118"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 16.402,
+              "minimum_substrate_heavy_A": 11.817,
+              "residue": "ASN120"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.923,
+              "minimum_substrate_heavy_A": 11.082,
+              "residue": "MET121"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.629,
+              "minimum_substrate_heavy_A": 11.068,
+              "residue": "TYR123"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.343,
+              "minimum_substrate_heavy_A": 10.776,
+              "residue": "PRO124"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.438,
+              "minimum_substrate_heavy_A": 10.048,
+              "residue": "ALA148"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.031,
+              "minimum_substrate_heavy_A": 11.782,
+              "residue": "GLY149"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.208,
+              "minimum_substrate_heavy_A": 8.044,
+              "residue": "VAL154"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.312,
+              "minimum_substrate_heavy_A": 8.373,
+              "residue": "GLY155"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.53,
+              "minimum_substrate_heavy_A": 8.888,
+              "residue": "LEU158"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.135,
+              "minimum_substrate_heavy_A": 9.449,
+              "residue": "ASP160"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.235,
+              "minimum_substrate_heavy_A": 8.164,
+              "residue": "GLY161"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.382,
+              "minimum_substrate_heavy_A": 8.074,
+              "residue": "PHE162"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.905,
+              "minimum_substrate_heavy_A": 10.421,
+              "residue": "GLN163"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.525,
+              "minimum_substrate_heavy_A": 11.843,
+              "residue": "LEU164"
+            }
+          ],
+          "distant_12_16_unselected": [
+            "GLY27",
+            "PRO28",
+            "ILE31",
+            "THR32",
+            "LEU33",
+            "PHE34",
+            "TYR35",
+            "PHE36",
+            "PRO37",
+            "LYS38",
+            "GLY39",
+            "VAL40",
+            "GLN41",
+            "ALA42",
+            "SER43",
+            "VAL44",
+            "ASP45",
+            "GLN61",
+            "GLY63",
+            "VAL70",
+            "ALA82",
+            "ALA84",
+            "GLY85",
+            "ALA86",
+            "SER89",
+            "ALA92",
+            "ASP93",
+            "THR95",
+            "LYS96",
+            "ASN97",
+            "GLU98",
+            "VAL99",
+            "GLN119",
+            "ILE122",
+            "ASP125",
+            "LEU128",
+            "GLY144",
+            "ARG145",
+            "HIS146",
+            "GLY147",
+            "VAL150",
+            "GLN167",
+            "GLY168",
+            "PHE182",
+            "THR183",
+            "ILE191",
+            "TYR200",
+            "GLY201",
+            "LEU202",
+            "LEU211",
+            "VAL215",
+            "LEU218",
+            "PRO222",
+            "LYS231"
+          ],
+          "raw_0_6_count": 28,
+          "raw_12_16_count": 54,
+          "raw_6_12_count": 69
+        },
+        "seed_03": {
+          "blocked_interchain_6_12_positions": [
+            "VAL40",
+            "ALA42",
+            "ILE46",
+            "GLN47",
+            "GLY48",
+            "THR53",
+            "THR56",
+            "GLU58",
+            "GLN61",
+            "GLN62",
+            "GLU64",
+            "ALA65",
+            "TYR66",
+            "PHE72",
+            "SER108",
+            "GLY109",
+            "ALA110",
+            "LEU157",
+            "LEU158",
+            "ALA165",
+            "GLY166",
+            "VAL184",
+            "VAL185",
+            "GLY189",
+            "VAL190",
+            "ILE191",
+            "LYS223"
+          ],
+          "candidate_6_12_positions": [
+            {
+              "minimum_other_polypeptide_heavy_A": 11.504,
+              "minimum_substrate_heavy_A": 11.635,
+              "residue": "THR29"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.828,
+              "minimum_substrate_heavy_A": 11.985,
+              "residue": "GLY30"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.06,
+              "minimum_substrate_heavy_A": 9.351,
+              "residue": "PHE54"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.25,
+              "minimum_substrate_heavy_A": 6.038,
+              "residue": "GLN57"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.189,
+              "minimum_substrate_heavy_A": 9.075,
+              "residue": "MET60"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.249,
+              "minimum_substrate_heavy_A": 8.841,
+              "residue": "LEU67"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.372,
+              "minimum_substrate_heavy_A": 8.833,
+              "residue": "ASP68"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.969,
+              "minimum_substrate_heavy_A": 7.673,
+              "residue": "GLY74"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 9.723,
+              "minimum_substrate_heavy_A": 7.531,
+              "residue": "GLY79"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.939,
+              "minimum_substrate_heavy_A": 7.832,
+              "residue": "LEU80"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.521,
+              "minimum_substrate_heavy_A": 10.855,
+              "residue": "GLU81"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.7,
+              "minimum_substrate_heavy_A": 9.843,
+              "residue": "VAL87"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.186,
+              "minimum_substrate_heavy_A": 11.623,
+              "residue": "LEU90"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.388,
+              "minimum_substrate_heavy_A": 8.209,
+              "residue": "PHE91"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 8.318,
+              "minimum_substrate_heavy_A": 7.795,
+              "residue": "GLN94"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.418,
+              "minimum_substrate_heavy_A": 9.195,
+              "residue": "THR95"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.711,
+              "minimum_substrate_heavy_A": 10.665,
+              "residue": "GLU98"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.934,
+              "minimum_substrate_heavy_A": 8.239,
+              "residue": "GLN100"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.663,
+              "minimum_substrate_heavy_A": 6.087,
+              "residue": "PRO105"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.636,
+              "minimum_substrate_heavy_A": 9.31,
+              "residue": "ILE107"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 11.9,
+              "minimum_substrate_heavy_A": 8.748,
+              "residue": "PRO117"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.149,
+              "minimum_substrate_heavy_A": 10.639,
+              "residue": "ARG118"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 16.121,
+              "minimum_substrate_heavy_A": 11.317,
+              "residue": "GLN119"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 15.145,
+              "minimum_substrate_heavy_A": 11.266,
+              "residue": "ASN120"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 12.818,
+              "minimum_substrate_heavy_A": 11.195,
+              "residue": "MET121"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 14.932,
+              "minimum_substrate_heavy_A": 11.371,
+              "residue": "ILE122"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 13.759,
+              "minimum_substrate_heavy_A": 9.907,
+              "residue": "TYR123"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.537,
+              "minimum_substrate_heavy_A": 10.585,
+              "residue": "PRO124"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.44,
+              "minimum_substrate_heavy_A": 9.9,
+              "residue": "ALA148"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.954,
+              "minimum_substrate_heavy_A": 11.534,
+              "residue": "GLY149"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.313,
+              "minimum_substrate_heavy_A": 7.956,
+              "residue": "VAL154"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.313,
+              "minimum_substrate_heavy_A": 8.669,
+              "residue": "GLY155"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.196,
+              "minimum_substrate_heavy_A": 10.342,
+              "residue": "ASP160"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 9.479,
+              "minimum_substrate_heavy_A": 8.365,
+              "residue": "GLY161"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 10.639,
+              "minimum_substrate_heavy_A": 8.145,
+              "residue": "PHE162"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.167,
+              "minimum_substrate_heavy_A": 10.34,
+              "residue": "GLN163"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.713,
+              "minimum_substrate_heavy_A": 11.979,
+              "residue": "LEU164"
+            }
+          ],
+          "distant_12_16_unselected": [
+            "GLY27",
+            "PRO28",
+            "ILE31",
+            "THR32",
+            "PHE34",
+            "TYR35",
+            "PHE36",
+            "PRO37",
+            "LYS38",
+            "GLY39",
+            "GLN41",
+            "SER43",
+            "VAL44",
+            "ASP45",
+            "GLY63",
+            "GLY69",
+            "VAL70",
+            "ALA71",
+            "ALA82",
+            "VAL83",
+            "ALA84",
+            "GLY85",
+            "ALA86",
+            "SER88",
+            "SER89",
+            "ALA92",
+            "ASP93",
+            "LYS96",
+            "ASN97",
+            "VAL99",
+            "ASP125",
+            "LYS126",
+            "GLY144",
+            "ARG145",
+            "HIS146",
+            "GLY147",
+            "VAL150",
+            "GLN167",
+            "GLY168",
+            "PHE182",
+            "THR183",
+            "TYR200",
+            "GLY201",
+            "LEU202",
+            "LEU211",
+            "VAL215",
+            "LEU218",
+            "PRO222",
+            "PRO230",
+            "LYS231"
+          ],
+          "raw_0_6_count": 28,
+          "raw_12_16_count": 50,
+          "raw_6_12_count": 72
+        }
+      },
+      "beta": {
+        "cross_parent_candidate_intersection": [
+          "ALA36",
+          "ALA58",
+          "GLN23",
+          "GLU64",
+          "HIS16",
+          "LEU20",
+          "PHE71",
+          "SER65",
+          "TYR35"
+        ],
+        "cross_parent_candidate_union": [
+          "ALA13",
+          "ALA36",
+          "ALA58",
+          "GLN23",
+          "GLU64",
+          "HIS16",
+          "LEU20",
+          "PHE71",
+          "SER65",
+          "TYR35"
+        ],
+        "seed_02": {
+          "blocked_interchain_6_12_positions": [
+            "THR2",
+            "LEU3",
+            "THR4",
+            "ALA13",
+            "ARG15",
+            "GLN19",
+            "ARG22",
+            "ILE32",
+            "PRO34",
+            "THR37",
+            "ASP42",
+            "VAL43",
+            "TYR45",
+            "GLY60",
+            "ALA61",
+            "ASP62",
+            "ASN68",
+            "ALA69",
+            "LYS70",
+            "ILE72",
+            "TYR73"
+          ],
+          "candidate_6_12_positions": [
+            {
+              "minimum_other_polypeptide_heavy_A": 5.412,
+              "minimum_substrate_heavy_A": 8.629,
+              "residue": "HIS16"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.111,
+              "minimum_substrate_heavy_A": 11.778,
+              "residue": "LEU20"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.729,
+              "minimum_substrate_heavy_A": 11.466,
+              "residue": "GLN23"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.257,
+              "minimum_substrate_heavy_A": 9.77,
+              "residue": "TYR35"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.398,
+              "minimum_substrate_heavy_A": 9.417,
+              "residue": "ALA36"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.062,
+              "minimum_substrate_heavy_A": 10.923,
+              "residue": "ALA58"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.427,
+              "minimum_substrate_heavy_A": 6.944,
+              "residue": "GLU64"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.14,
+              "minimum_substrate_heavy_A": 7.153,
+              "residue": "SER65"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.813,
+              "minimum_substrate_heavy_A": 8.37,
+              "residue": "PHE71"
+            }
+          ],
+          "distant_12_16_unselected": [
+            "ILE5",
+            "LEU12",
+            "PRO14",
+            "LEU17",
+            "LYS18",
+            "GLY21",
+            "VAL24",
+            "HIS25",
+            "HIS26",
+            "LEU28",
+            "SER29",
+            "VAL31",
+            "HIS33",
+            "LEU44",
+            "ARG50",
+            "ASP55",
+            "LEU56",
+            "TYR57",
+            "PRO59",
+            "LEU74",
+            "GLY75",
+            "MET76",
+            "VAL86",
+            "ALA89",
+            "VAL90"
+          ],
+          "raw_0_6_count": 8,
+          "raw_12_16_count": 25,
+          "raw_6_12_count": 30
+        },
+        "seed_03": {
+          "blocked_interchain_6_12_positions": [
+            "THR2",
+            "LEU3",
+            "THR4",
+            "PRO14",
+            "ARG15",
+            "LEU17",
+            "LYS18",
+            "GLN19",
+            "ARG22",
+            "ILE32",
+            "PRO34",
+            "THR37",
+            "ASP42",
+            "VAL43",
+            "GLY60",
+            "ALA61",
+            "ASP62",
+            "ASN68",
+            "ALA69",
+            "LYS70",
+            "ILE72",
+            "TYR73"
+          ],
+          "candidate_6_12_positions": [
+            {
+              "minimum_other_polypeptide_heavy_A": 4.434,
+              "minimum_substrate_heavy_A": 11.211,
+              "residue": "ALA13"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.503,
+              "minimum_substrate_heavy_A": 6.5,
+              "residue": "HIS16"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 7.125,
+              "minimum_substrate_heavy_A": 10.819,
+              "residue": "LEU20"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 6.939,
+              "minimum_substrate_heavy_A": 10.932,
+              "residue": "GLN23"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.209,
+              "minimum_substrate_heavy_A": 9.41,
+              "residue": "TYR35"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 4.507,
+              "minimum_substrate_heavy_A": 9.414,
+              "residue": "ALA36"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.29,
+              "minimum_substrate_heavy_A": 10.044,
+              "residue": "ALA58"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.106,
+              "minimum_substrate_heavy_A": 7.348,
+              "residue": "GLU64"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.374,
+              "minimum_substrate_heavy_A": 7.085,
+              "residue": "SER65"
+            },
+            {
+              "minimum_other_polypeptide_heavy_A": 5.759,
+              "minimum_substrate_heavy_A": 8.213,
+              "residue": "PHE71"
+            }
+          ],
+          "distant_12_16_unselected": [
+            "ILE5",
+            "LEU12",
+            "GLY21",
+            "VAL24",
+            "HIS25",
+            "HIS26",
+            "LEU28",
+            "SER29",
+            "VAL31",
+            "HIS33",
+            "LEU44",
+            "TYR45",
+            "VAL47",
+            "SER48",
+            "ARG50",
+            "ASP55",
+            "LEU56",
+            "TYR57",
+            "PRO59",
+            "LEU74",
+            "GLY75",
+            "MET76",
+            "VAL86",
+            "ALA89",
+            "VAL90"
+          ],
+          "raw_0_6_count": 8,
+          "raw_12_16_count": 25,
+          "raw_6_12_count": 32
+        }
+      }
+    },
+    "surface_gate": "No FreeSASA executable/module is installed. The <=4 angstrom interchain exclusion is a measured assembly-contact gate, not an SASA or core-packing test. Do not authorize the resulting 6\u201312 angstrom expansion until native-core/burial is checked with an already available validated SASA method or candidates are narrowed by explicit structural review. No new dependency used."
+  },
+  "parent_selection": "Two WT relaxed Boltz-2 model seeds with accepted joint-site evidence; four ligands/sites are nested within each model, not independent replicates.",
+  "parents": [
+    {
+      "canonical_ligand_graph": {
+        "graph": {
+          "exact_isomorphism_count": 1,
+          "formal_charge": 0,
+          "heavy_atom_count": 33,
+          "heavy_bond_count": 32,
+          "heavy_formula": {
+            "C": 24,
+            "N": 4,
+            "O": 5
+          }
+        },
+        "mapping_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/raw/mapping.json",
+        "mapping_sha256": "042b0cc5ef48299a801eb5c9b6a17ba52ea6739c15fc6c9f3bf0afcc53cbb0d8",
+        "normalized_parent_atom_labels": [
+          "C52",
+          "C53",
+          "C54",
+          "C55",
+          "C60",
+          "C61",
+          "C62",
+          "C63",
+          "C64",
+          "C65",
+          "C66",
+          "C67",
+          "C68",
+          "C69",
+          "C70",
+          "C71",
+          "C72",
+          "C73",
+          "C74",
+          "C75",
+          "C76",
+          "C77",
+          "C78",
+          "C79",
+          "N56",
+          "N57",
+          "N58",
+          "N59",
+          "O47",
+          "O48",
+          "O49",
+          "O50",
+          "O51"
+        ],
+        "parent_pdb_chain_I_raw_labels_match_mapping_targets": true,
+        "source_atom_label_count": 33,
+        "source_raw_atom_labels": [
+          "C52",
+          "C53",
+          "C54",
+          "C55",
+          "C59",
+          "C60",
+          "C61",
+          "C62",
+          "C63",
+          "C64",
+          "C65",
+          "C66",
+          "C67",
+          "C68",
+          "C69",
+          "C70",
+          "C71",
+          "C72",
+          "C73",
+          "C74",
+          "C75",
+          "C76",
+          "C77",
+          "C78",
+          "N56",
+          "N57",
+          "N58",
+          "N79",
+          "O47",
+          "O48",
+          "O49",
+          "O50",
+          "O51"
+        ],
+        "status": "accepted_raw_prediction_atom_mapping",
+        "target_atom_label_count": 33
+      },
+      "chains": {
+        "A": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "B": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "C": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "D": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "E": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "F": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "G": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "H": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        }
+      },
+      "joint_pass_count": 2,
+      "ligand_assignment": {
+        "I:1": "AE",
+        "J:1": "BF",
+        "K:1": "CG",
+        "L:1": "DH"
+      },
+      "ligands": {
+        "I": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "J": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "K": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "L": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        }
+      },
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb",
+      "seed": 2026112202,
+      "sha256": "8fbcbdc6ebc630113bc4c7393a1d51a94782152d5c57da0097e831da2515cc68",
+      "tier_a_count": 2,
+      "tier_ab_count": 2
+    },
+    {
+      "canonical_ligand_graph": {
+        "graph": {
+          "exact_isomorphism_count": 1,
+          "formal_charge": 0,
+          "heavy_atom_count": 33,
+          "heavy_bond_count": 32,
+          "heavy_formula": {
+            "C": 24,
+            "N": 4,
+            "O": 5
+          }
+        },
+        "mapping_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/raw/mapping.json",
+        "mapping_sha256": "67ebb9fca6eccf927fbfcc946cebc2ceed547ccc31a7c80126dbd1e023edcb51",
+        "normalized_parent_atom_labels": [
+          "C52",
+          "C53",
+          "C54",
+          "C55",
+          "C60",
+          "C61",
+          "C62",
+          "C63",
+          "C64",
+          "C65",
+          "C66",
+          "C67",
+          "C68",
+          "C69",
+          "C70",
+          "C71",
+          "C72",
+          "C73",
+          "C74",
+          "C75",
+          "C76",
+          "C77",
+          "C78",
+          "C79",
+          "N56",
+          "N57",
+          "N58",
+          "N59",
+          "O47",
+          "O48",
+          "O49",
+          "O50",
+          "O51"
+        ],
+        "parent_pdb_chain_I_raw_labels_match_mapping_targets": true,
+        "source_atom_label_count": 33,
+        "source_raw_atom_labels": [
+          "C52",
+          "C53",
+          "C54",
+          "C55",
+          "C59",
+          "C60",
+          "C61",
+          "C62",
+          "C63",
+          "C64",
+          "C65",
+          "C66",
+          "C67",
+          "C68",
+          "C69",
+          "C70",
+          "C71",
+          "C72",
+          "C73",
+          "C74",
+          "C75",
+          "C76",
+          "C77",
+          "C78",
+          "N56",
+          "N57",
+          "N58",
+          "N79",
+          "O47",
+          "O48",
+          "O49",
+          "O50",
+          "O51"
+        ],
+        "status": "accepted_raw_prediction_atom_mapping",
+        "target_atom_label_count": 33
+      },
+      "chains": {
+        "A": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "B": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "C": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "D": {
+          "length": 232,
+          "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN"
+        },
+        "E": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "F": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "G": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        },
+        "H": {
+          "length": 96,
+          "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+        }
+      },
+      "joint_pass_count": 1,
+      "ligand_assignment": {
+        "I:1": "AE",
+        "J:1": "BF",
+        "K:1": "CG",
+        "L:1": "DH"
+      },
+      "ligands": {
+        "I": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "J": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "K": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        },
+        "L": {
+          "atom_names": [
+            "C52",
+            "C53",
+            "C54",
+            "C55",
+            "C60",
+            "C61",
+            "C62",
+            "C63",
+            "C64",
+            "C65",
+            "C66",
+            "C67",
+            "C68",
+            "C69",
+            "C70",
+            "C71",
+            "C72",
+            "C73",
+            "C74",
+            "C75",
+            "C76",
+            "C77",
+            "C78",
+            "C79",
+            "N56",
+            "N57",
+            "N58",
+            "N59",
+            "O47",
+            "O48",
+            "O49",
+            "O50",
+            "O51"
+          ],
+          "heavy_atom_count": 33,
+          "residue_name": "LIG"
+        }
+      },
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/relaxed.pdb",
+      "seed": 2026112203,
+      "sha256": "2d0ffcc9f99069b6549e3f1133f2df9a73a47dfaa30c61ca70e6da16518c0c8f",
+      "tier_a_count": 0,
+      "tier_ab_count": 2
+    }
+  ],
+  "scope": "Read-only geometric and provenance audit for next LigandMPNN comparison",
+  "sources": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/report.json": "d7add57f3e21e8d492caf474f23bdaa2dcd6f03622b6af36166438fef39b283e",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/raw/mapping.json": "042b0cc5ef48299a801eb5c9b6a17ba52ea6739c15fc6c9f3bf0afcc53cbb0d8",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/inputs/whole_l4_context_mapping.json": "db6d8b337facc94a3813e3898c1ff1ccfab9d68a4bd9289cc439c268c3b9cda0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb": "8fbcbdc6ebc630113bc4c7393a1d51a94782152d5c57da0097e831da2515cc68",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/raw/mapping.json": "67ebb9fca6eccf927fbfcc946cebc2ceed547ccc31a7c80126dbd1e023edcb51",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/inputs/whole_l4_context_mapping.json": "db6d8b337facc94a3813e3898c1ff1ccfab9d68a4bd9289cc439c268c3b9cda0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/relaxed.pdb": "2d0ffcc9f99069b6549e3f1133f2df9a73a47dfaa30c61ca70e6da16518c0c8f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/source_snapshot/execution/scripts/run_nyl12_ligandmpnn_pilot.py": "04da71f5febb9ddafd2a2f93346724756e2f07c0441d6030e2ec01120549dbf0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/source_snapshot/execution/src/nyl12_covalent/ligandmpnn_pilot_audit.py": "5245b810f72b682b494fabcb6de0fb5f1696a1e6048549167d5995b86267063a"
+  },
+  "status": "preflight_proposal_only_not_generator_authorization"
+}

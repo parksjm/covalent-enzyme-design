@@ -1,0 +1,2084 @@
+{
+  "candidate_decisions": {
+    "alpha": {
+      "alpha:100": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.377311,
+        "min_other_chain_heavy_A": 2.7606,
+        "min_rsa_all_copies": 0.147621,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.1926,
+          10.9967
+        ]
+      },
+      "alpha:105": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.007294,
+        "min_other_chain_heavy_A": 3.3176,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          5.8365,
+          6.7749
+        ]
+      },
+      "alpha:107": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.012623,
+        "min_other_chain_heavy_A": 3.7828,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.8371,
+          9.3102
+        ]
+      },
+      "alpha:117": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.312768,
+        "min_other_chain_heavy_A": 8.517,
+        "min_rsa_all_copies": 0.222335,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.9937,
+          9.5327
+        ]
+      },
+      "alpha:118": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.114604,
+        "min_other_chain_heavy_A": 4.6224,
+        "min_rsa_all_copies": 0.038663,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.8929,
+          11.0394
+        ]
+      },
+      "alpha:119": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.614599,
+        "min_other_chain_heavy_A": 2.7743,
+        "min_rsa_all_copies": 0.342805,
+        "rejection_reasons": [
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          10.2422,
+          14.296
+        ]
+      },
+      "alpha:120": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.297057,
+        "min_other_chain_heavy_A": 3.1569,
+        "min_rsa_all_copies": 0.155816,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.5521,
+          12.6239
+        ]
+      },
+      "alpha:121": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.364031,
+        "min_other_chain_heavy_A": 3.1389,
+        "min_rsa_all_copies": 0.141759,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.5528,
+          11.476
+        ]
+      },
+      "alpha:122": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.322255,
+        "min_other_chain_heavy_A": 5.5886,
+        "min_rsa_all_copies": 0.246232,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.0768,
+          12.1449
+        ]
+      },
+      "alpha:123": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.172264,
+        "min_other_chain_heavy_A": 3.0635,
+        "min_rsa_all_copies": 0.127328,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.905,
+          11.8197
+        ]
+      },
+      "alpha:124": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 6.9621,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.252,
+          11.4849
+        ]
+      },
+      "alpha:125": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.271403,
+        "min_other_chain_heavy_A": 2.7274,
+        "min_rsa_all_copies": 0.20517,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6061,
+          14.856
+        ]
+      },
+      "alpha:126": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.202914,
+        "min_other_chain_heavy_A": 2.6801,
+        "min_rsa_all_copies": 0.153255,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.5318,
+          16.355
+        ]
+      },
+      "alpha:128": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.118749,
+        "min_other_chain_heavy_A": 7.305,
+        "min_rsa_all_copies": 0.036934,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.5549,
+          16.6253
+        ]
+      },
+      "alpha:144": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.189832,
+        "min_other_chain_heavy_A": 3.6138,
+        "min_rsa_all_copies": 0.001907,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.08,
+          15.5829
+        ]
+      },
+      "alpha:145": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.576923,
+        "min_other_chain_heavy_A": 5.106,
+        "min_rsa_all_copies": 0.233765,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.727,
+          15.5557
+        ]
+      },
+      "alpha:146": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.298382,
+        "min_other_chain_heavy_A": 7.6986,
+        "min_rsa_all_copies": 0.23968,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.3233,
+          14.6782
+        ]
+      },
+      "alpha:147": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 9.9094,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.3201,
+          13.721
+        ]
+      },
+      "alpha:148": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.011932,
+        "min_other_chain_heavy_A": 6.2242,
+        "min_rsa_all_copies": 0.00179,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.6645,
+          10.0931
+        ]
+      },
+      "alpha:149": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.001429,
+        "min_other_chain_heavy_A": 6.7719,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          11.4076,
+          11.8007
+        ]
+      },
+      "alpha:150": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.126569,
+        "min_other_chain_heavy_A": 8.5344,
+        "min_rsa_all_copies": 0.067491,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.3833,
+          12.8359
+        ]
+      },
+      "alpha:154": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 5.0935,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.7732,
+          8.0442
+        ]
+      },
+      "alpha:155": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.112832,
+        "min_other_chain_heavy_A": 7.2392,
+        "min_rsa_all_copies": 0.03834,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.6267,
+          8.6685
+        ]
+      },
+      "alpha:158": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.246781,
+        "min_other_chain_heavy_A": 3.4819,
+        "min_rsa_all_copies": 0.113285,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.5467,
+          9.6583
+        ]
+      },
+      "alpha:160": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.653914,
+        "min_other_chain_heavy_A": 6.2265,
+        "min_rsa_all_copies": 0.45566,
+        "rejection_reasons": [],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.4491,
+          11.2805
+        ]
+      },
+      "alpha:161": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.433379,
+        "min_other_chain_heavy_A": 9.3115,
+        "min_rsa_all_copies": 0.283999,
+        "rejection_reasons": [],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.8783,
+          8.8196
+        ]
+      },
+      "alpha:162": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.361227,
+        "min_other_chain_heavy_A": 10.3201,
+        "min_rsa_all_copies": 0.308876,
+        "rejection_reasons": [],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.901,
+          8.8251
+        ]
+      },
+      "alpha:163": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.258136,
+        "min_other_chain_heavy_A": 6.9053,
+        "min_rsa_all_copies": 0.209511,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.142,
+          10.5424
+        ]
+      },
+      "alpha:164": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.361526,
+        "min_other_chain_heavy_A": 5.3272,
+        "min_rsa_all_copies": 0.25178,
+        "rejection_reasons": [],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          11.7224,
+          12.2145
+        ]
+      },
+      "alpha:167": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.005212,
+        "min_other_chain_heavy_A": 3.3947,
+        "min_rsa_all_copies": 0.000597,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.1371,
+          13.3984
+        ]
+      },
+      "alpha:168": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.3542,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.907,
+          15.2798
+        ]
+      },
+      "alpha:182": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.003752,
+        "min_other_chain_heavy_A": 2.8469,
+        "min_rsa_all_copies": 0.000254,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.8853,
+          15.555
+        ]
+      },
+      "alpha:183": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.010513,
+        "min_other_chain_heavy_A": 2.7944,
+        "min_rsa_all_copies": 0.004783,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.9716,
+          12.4562
+        ]
+      },
+      "alpha:191": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.3991,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.1164,
+          12.1606
+        ]
+      },
+      "alpha:200": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.287336,
+        "min_other_chain_heavy_A": 3.4114,
+        "min_rsa_all_copies": 0.051606,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.2514,
+          14.1371
+        ]
+      },
+      "alpha:201": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.062845,
+        "min_other_chain_heavy_A": 6.5052,
+        "min_rsa_all_copies": 0.039321,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.9224,
+          12.8925
+        ]
+      },
+      "alpha:202": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.100356,
+        "min_other_chain_heavy_A": 7.5612,
+        "min_rsa_all_copies": 0.058409,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.8875,
+          14.9076
+        ]
+      },
+      "alpha:211": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.023232,
+        "min_other_chain_heavy_A": 3.8934,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.4875,
+          14.9277
+        ]
+      },
+      "alpha:215": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.006213,
+        "min_other_chain_heavy_A": 3.3754,
+        "min_rsa_all_copies": 0.00131,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6932,
+          14.5909
+        ]
+      },
+      "alpha:218": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.27223,
+        "min_other_chain_heavy_A": 3.382,
+        "min_rsa_all_copies": 0.109633,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.4005,
+          15.0294
+        ]
+      },
+      "alpha:222": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.733181,
+        "min_other_chain_heavy_A": 3.4469,
+        "min_rsa_all_copies": 0.60524,
+        "rejection_reasons": [
+          "hard_protected",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.2789,
+          17.1989
+        ]
+      },
+      "alpha:230": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.638171,
+        "min_other_chain_heavy_A": 3.2524,
+        "min_rsa_all_copies": 0.33474,
+        "rejection_reasons": [
+          "hard_protected",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.4377,
+          12.9977
+        ]
+      },
+      "alpha:231": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.824031,
+        "min_other_chain_heavy_A": 6.4253,
+        "min_rsa_all_copies": 0.633635,
+        "rejection_reasons": [
+          "hard_protected"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.4515,
+          15.7479
+        ]
+      },
+      "alpha:27": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.079904,
+        "min_other_chain_heavy_A": 9.2886,
+        "min_rsa_all_copies": 0.003317,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.1567,
+          15.5677
+        ]
+      },
+      "alpha:28": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.356236,
+        "min_other_chain_heavy_A": 11.3678,
+        "min_rsa_all_copies": 0.308472,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.7973,
+          13.4156
+        ]
+      },
+      "alpha:29": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.000682,
+        "min_other_chain_heavy_A": 9.6952,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          11.2137,
+          11.6881
+        ]
+      },
+      "alpha:30": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.008764,
+        "min_other_chain_heavy_A": 8.6746,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          11.6532,
+          12.0709
+        ]
+      },
+      "alpha:31": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.001494,
+        "min_other_chain_heavy_A": 8.8683,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6004,
+          13.9177
+        ]
+      },
+      "alpha:32": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.004012,
+        "min_other_chain_heavy_A": 7.4711,
+        "min_rsa_all_copies": 0.00077,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.9984,
+          14.4514
+        ]
+      },
+      "alpha:33": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.008346,
+        "min_other_chain_heavy_A": 7.6714,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.4035,
+          16.7407
+        ]
+      },
+      "alpha:34": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.006325,
+        "min_other_chain_heavy_A": 3.7161,
+        "min_rsa_all_copies": 0.001743,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.5474,
+          16.0501
+        ]
+      },
+      "alpha:35": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.154677,
+        "min_other_chain_heavy_A": 7.1154,
+        "min_rsa_all_copies": 0.107176,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6754,
+          14.9382
+        ]
+      },
+      "alpha:36": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.017568,
+        "min_other_chain_heavy_A": 3.8641,
+        "min_rsa_all_copies": 0.009698,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.0937,
+          15.6257
+        ]
+      },
+      "alpha:37": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.486763,
+        "min_other_chain_heavy_A": 6.9088,
+        "min_rsa_all_copies": 0.353155,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.7402,
+          16.2978
+        ]
+      },
+      "alpha:38": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.803195,
+        "min_other_chain_heavy_A": 4.4388,
+        "min_rsa_all_copies": 0.719753,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.9363,
+          13.9892
+        ]
+      },
+      "alpha:39": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.096897,
+        "min_other_chain_heavy_A": 2.8528,
+        "min_rsa_all_copies": 0.030577,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.2787,
+          13.6989
+        ]
+      },
+      "alpha:40": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.01354,
+        "min_other_chain_heavy_A": 3.2459,
+        "min_rsa_all_copies": 0.002107,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.3442,
+          13.4208
+        ]
+      },
+      "alpha:41": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.053834,
+        "min_other_chain_heavy_A": 2.8001,
+        "min_rsa_all_copies": 0.022675,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.2831,
+          14.3416
+        ]
+      },
+      "alpha:42": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.5273,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.3963,
+          13.0115
+        ]
+      },
+      "alpha:43": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.013709,
+        "min_other_chain_heavy_A": 2.8265,
+        "min_rsa_all_copies": 0.004011,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.5824,
+          15.1126
+        ]
+      },
+      "alpha:44": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.019688,
+        "min_other_chain_heavy_A": 3.3435,
+        "min_rsa_all_copies": 0.011867,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.2874,
+          14.4296
+        ]
+      },
+      "alpha:45": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.118017,
+        "min_other_chain_heavy_A": 2.7013,
+        "min_rsa_all_copies": 0.04245,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.6601,
+          13.3202
+        ]
+      },
+      "alpha:54": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.003651,
+        "min_other_chain_heavy_A": 3.5633,
+        "min_rsa_all_copies": 0.000216,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.8718,
+          9.5909
+        ]
+      },
+      "alpha:57": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.065031,
+        "min_other_chain_heavy_A": 3.0128,
+        "min_rsa_all_copies": 0.041525,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          4.8674,
+          6.6024
+        ]
+      },
+      "alpha:60": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.002327,
+        "min_other_chain_heavy_A": 3.9865,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.8425,
+          10.1783
+        ]
+      },
+      "alpha:61": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.211402,
+        "min_other_chain_heavy_A": 2.7578,
+        "min_rsa_all_copies": 0.157411,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.6633,
+          13.4916
+        ]
+      },
+      "alpha:63": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.3869,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.7864,
+          13.7061
+        ]
+      },
+      "alpha:67": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.00095,
+        "min_other_chain_heavy_A": 5.1348,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.2838,
+          9.9406
+        ]
+      },
+      "alpha:68": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.036627,
+        "min_other_chain_heavy_A": 6.262,
+        "min_rsa_all_copies": 0.010426,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.4781,
+          9.5419
+        ]
+      },
+      "alpha:69": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.001832,
+        "min_other_chain_heavy_A": 6.3541,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.6023,
+          13.0233
+        ]
+      },
+      "alpha:70": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.8939,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6925,
+          14.8259
+        ]
+      },
+      "alpha:71": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 5.459,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.2561,
+          12.1562
+        ]
+      },
+      "alpha:74": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.006754,
+        "min_other_chain_heavy_A": 6.8004,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.5332,
+          8.3637
+        ]
+      },
+      "alpha:75": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.3108,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          5.0393,
+          7.0338
+        ]
+      },
+      "alpha:78": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.017157,
+        "min_other_chain_heavy_A": 3.4495,
+        "min_rsa_all_copies": 0.0106,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          5.534,
+          7.1091
+        ]
+      },
+      "alpha:79": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 6.6476,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.3737,
+          8.4618
+        ]
+      },
+      "alpha:80": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.004811,
+        "min_other_chain_heavy_A": 3.5633,
+        "min_rsa_all_copies": 0.000289,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.3019,
+          8.2149
+        ]
+      },
+      "alpha:81": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.008616,
+        "min_other_chain_heavy_A": 2.6603,
+        "min_rsa_all_copies": 0.001535,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.6861,
+          11.4695
+        ]
+      },
+      "alpha:82": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 6.0335,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.6102,
+          13.4838
+        ]
+      },
+      "alpha:83": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 6.8964,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.3998,
+          12.2899
+        ]
+      },
+      "alpha:84": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.028085,
+        "min_other_chain_heavy_A": 3.5876,
+        "min_rsa_all_copies": 0.019609,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.8934,
+          12.8182
+        ]
+      },
+      "alpha:85": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 4.4244,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.8917,
+          15.0103
+        ]
+      },
+      "alpha:86": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.002473,
+        "min_other_chain_heavy_A": 6.4928,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.8601,
+          14.5787
+        ]
+      },
+      "alpha:87": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.016801,
+        "min_other_chain_heavy_A": 3.7863,
+        "min_rsa_all_copies": 0.001326,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.0528,
+          9.8428
+        ]
+      },
+      "alpha:88": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.094864,
+        "min_other_chain_heavy_A": 2.6603,
+        "min_rsa_all_copies": 0.037617,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.4886,
+          13.3355
+        ]
+      },
+      "alpha:89": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.13317,
+        "min_other_chain_heavy_A": 6.1191,
+        "min_rsa_all_copies": 0.087117,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.9744,
+          15.2679
+        ]
+      },
+      "alpha:90": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.021291,
+        "min_other_chain_heavy_A": 6.9648,
+        "min_rsa_all_copies": 0.002984,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          11.0596,
+          12.0527
+        ]
+      },
+      "alpha:91": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.079586,
+        "min_other_chain_heavy_A": 3.4495,
+        "min_rsa_all_copies": 0.056118,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.8887,
+          9.5473
+        ]
+      },
+      "alpha:92": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.50103,
+        "min_other_chain_heavy_A": 6.4977,
+        "min_rsa_all_copies": 0.389551,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.7902,
+          14.1454
+        ]
+      },
+      "alpha:93": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.359444,
+        "min_other_chain_heavy_A": 8.9404,
+        "min_rsa_all_copies": 0.228415,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.9712,
+          16.2904
+        ]
+      },
+      "alpha:94": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.277457,
+        "min_other_chain_heavy_A": 6.9019,
+        "min_rsa_all_copies": 0.139974,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          7.3019,
+          10.7475
+        ]
+      },
+      "alpha:95": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.305469,
+        "min_other_chain_heavy_A": 3.5435,
+        "min_rsa_all_copies": 0.056914,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          9.0024,
+          12.6132
+        ]
+      },
+      "alpha:96": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.732637,
+        "min_other_chain_heavy_A": 6.1011,
+        "min_rsa_all_copies": 0.589208,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.3261,
+          16.8498
+        ]
+      },
+      "alpha:97": {
+        "eligible": true,
+        "max_rsa_all_copies": 0.77055,
+        "min_other_chain_heavy_A": 5.822,
+        "min_rsa_all_copies": 0.517622,
+        "rejection_reasons": [],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.7355,
+          17.5772
+        ]
+      },
+      "alpha:98": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.670978,
+        "min_other_chain_heavy_A": 3.3354,
+        "min_rsa_all_copies": 0.299974,
+        "rejection_reasons": [
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          9.7823,
+          12.2544
+        ]
+      },
+      "alpha:99": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.853311,
+        "min_other_chain_heavy_A": 3.1389,
+        "min_rsa_all_copies": 0.625474,
+        "rejection_reasons": [
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.0532,
+          14.0178
+        ]
+      }
+    },
+    "beta": {
+      "beta:12": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.031301,
+        "min_other_chain_heavy_A": 2.8609,
+        "min_rsa_all_copies": 0.01317,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.1002,
+          15.2021
+        ]
+      },
+      "beta:13": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.097714,
+        "min_other_chain_heavy_A": 3.3945,
+        "min_rsa_all_copies": 0.004396,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.7291,
+          12.9677
+        ]
+      },
+      "beta:14": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.103008,
+        "min_other_chain_heavy_A": 3.1682,
+        "min_rsa_all_copies": 0.066307,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.2122,
+          13.4482
+        ]
+      },
+      "beta:16": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.022592,
+        "min_other_chain_heavy_A": 3.7096,
+        "min_rsa_all_copies": 0.014573,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          6.4995,
+          9.4945
+        ]
+      },
+      "beta:17": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.00126,
+        "min_other_chain_heavy_A": 3.6507,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.3507,
+          13.7804
+        ]
+      },
+      "beta:18": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.067027,
+        "min_other_chain_heavy_A": 2.7013,
+        "min_rsa_all_copies": 0.049345,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.078,
+          13.8035
+        ]
+      },
+      "beta:20": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.064803,
+        "min_other_chain_heavy_A": 6.0824,
+        "min_rsa_all_copies": 0.05502,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.688,
+          13.2162
+        ]
+      },
+      "beta:21": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.03729,
+        "min_other_chain_heavy_A": 5.5201,
+        "min_rsa_all_copies": 0.01807,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.3479,
+          15.8974
+        ]
+      },
+      "beta:23": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.027086,
+        "min_other_chain_heavy_A": 3.3585,
+        "min_rsa_all_copies": 0.017163,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.8858,
+          11.5483
+        ]
+      },
+      "beta:24": {
+        "eligible": false,
+        "max_rsa_all_copies": 1.1e-05,
+        "min_other_chain_heavy_A": 5.1238,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.9437,
+          15.8526
+        ]
+      },
+      "beta:25": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.015196,
+        "min_other_chain_heavy_A": 3.5526,
+        "min_rsa_all_copies": 0.001833,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.167,
+          13.0408
+        ]
+      },
+      "beta:26": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.017545,
+        "min_other_chain_heavy_A": 2.8321,
+        "min_rsa_all_copies": 0.005806,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.9305,
+          14.5724
+        ]
+      },
+      "beta:28": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.000628,
+        "min_other_chain_heavy_A": 4.7349,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.5071,
+          13.4607
+        ]
+      },
+      "beta:29": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.002017,
+        "min_other_chain_heavy_A": 2.8421,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.0566,
+          15.289
+        ]
+      },
+      "beta:31": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.037463,
+        "min_other_chain_heavy_A": 2.8642,
+        "min_rsa_all_copies": 0.021788,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.2848,
+          15.1211
+        ]
+      },
+      "beta:33": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.016606,
+        "min_other_chain_heavy_A": 2.8138,
+        "min_rsa_all_copies": 0.006678,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.0399,
+          12.349
+        ]
+      },
+      "beta:35": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.017136,
+        "min_other_chain_heavy_A": 3.5582,
+        "min_rsa_all_copies": 0.008655,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          9.0214,
+          9.7701
+        ]
+      },
+      "beta:36": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 2.7741,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.7715,
+          9.4472
+        ]
+      },
+      "beta:44": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.012705,
+        "min_other_chain_heavy_A": 2.9091,
+        "min_rsa_all_copies": 0.005985,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.3938,
+          12.7007
+        ]
+      },
+      "beta:45": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.2175,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          11.035,
+          12.2316
+        ]
+      },
+      "beta:47": {
+        "eligible": false,
+        "max_rsa_all_copies": 6.4e-05,
+        "min_other_chain_heavy_A": 3.2008,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.3146,
+          17.2816
+        ]
+      },
+      "beta:48": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.007324,
+        "min_other_chain_heavy_A": 2.8001,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          15.7811,
+          18.0628
+        ]
+      },
+      "beta:5": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 2.8469,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.9547,
+          15.7803
+        ]
+      },
+      "beta:50": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.290481,
+        "min_other_chain_heavy_A": 2.6832,
+        "min_rsa_all_copies": 0.202971,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.5673,
+          14.5687
+        ]
+      },
+      "beta:55": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.278739,
+        "min_other_chain_heavy_A": 2.8507,
+        "min_rsa_all_copies": 0.216392,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.1876,
+          14.4403
+        ]
+      },
+      "beta:56": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.011069,
+        "min_other_chain_heavy_A": 4.4609,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.1424,
+          13.7779
+        ]
+      },
+      "beta:57": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.265123,
+        "min_other_chain_heavy_A": 5.3373,
+        "min_rsa_all_copies": 0.223798,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.6061,
+          14.9397
+        ]
+      },
+      "beta:58": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.203101,
+        "min_other_chain_heavy_A": 4.9701,
+        "min_rsa_all_copies": 0.080353,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          10.0443,
+          11.6158
+        ]
+      },
+      "beta:59": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.568321,
+        "min_other_chain_heavy_A": 3.9495,
+        "min_rsa_all_copies": 0.352186,
+        "rejection_reasons": [
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.0547,
+          13.7457
+        ]
+      },
+      "beta:64": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.517684,
+        "min_other_chain_heavy_A": 2.737,
+        "min_rsa_all_copies": 0.322657,
+        "rejection_reasons": [
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          5.6494,
+          7.4788
+        ]
+      },
+      "beta:65": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.145554,
+        "min_other_chain_heavy_A": 4.8779,
+        "min_rsa_all_copies": 0.104103,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          6.9817,
+          7.3196
+        ]
+      },
+      "beta:71": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.067201,
+        "min_other_chain_heavy_A": 3.6419,
+        "min_rsa_all_copies": 0.052229,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "6-12",
+        "substrate_distance_range_A": [
+          8.0647,
+          9.6954
+        ]
+      },
+      "beta:74": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.012879,
+        "min_other_chain_heavy_A": 3.5529,
+        "min_rsa_all_copies": 0.009338,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.636,
+          15.4509
+        ]
+      },
+      "beta:75": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.00499,
+        "min_other_chain_heavy_A": 5.7651,
+        "min_rsa_all_copies": 0.001039,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.4322,
+          15.0331
+        ]
+      },
+      "beta:76": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.020631,
+        "min_other_chain_heavy_A": 3.3026,
+        "min_rsa_all_copies": 0.011826,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          12.4183,
+          14.0823
+        ]
+      },
+      "beta:86": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.0,
+        "min_other_chain_heavy_A": 3.6315,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.5398,
+          14.6149
+        ]
+      },
+      "beta:89": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.020864,
+        "min_other_chain_heavy_A": 3.167,
+        "min_rsa_all_copies": 0.0,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          14.0154,
+          14.6103
+        ]
+      },
+      "beta:90": {
+        "eligible": false,
+        "max_rsa_all_copies": 0.19578,
+        "min_other_chain_heavy_A": 3.4114,
+        "min_rsa_all_copies": 0.000252,
+        "rejection_reasons": [
+          "rsa_below_0.25_in_at_least_one_copy",
+          "interchain_heavy_contact_at_or_below_4_A"
+        ],
+        "source_shell": "12-16",
+        "substrate_distance_range_A": [
+          13.5909,
+          14.4615
+        ]
+      }
+    }
+  },
+  "counts": {
+    "alpha": {
+      "12_16_A_additions": 6,
+      "6_12_A_additions": 4,
+      "expanded_per_copy": 27,
+      "focused": 17,
+      "hard_zero_positions": 14
+    },
+    "beta": {
+      "12_16_A_additions": 0,
+      "6_12_A_additions": 0,
+      "expanded_per_copy": 2,
+      "focused": 2,
+      "hard_zero_positions": 5
+    }
+  },
+  "expanded_positions": {
+    "alpha": [
+      28,
+      37,
+      38,
+      50,
+      51,
+      52,
+      73,
+      76,
+      92,
+      96,
+      97,
+      101,
+      111,
+      112,
+      114,
+      115,
+      116,
+      151,
+      152,
+      153,
+      160,
+      161,
+      162,
+      164,
+      185,
+      187,
+      188
+    ],
+    "beta": [
+      39,
+      41
+    ]
+  },
+  "focused_positions": {
+    "alpha": [
+      50,
+      51,
+      52,
+      73,
+      76,
+      101,
+      111,
+      112,
+      114,
+      115,
+      116,
+      151,
+      152,
+      153,
+      185,
+      187,
+      188
+    ],
+    "beta": [
+      39,
+      41
+    ]
+  },
+  "hard_protected_positions": {
+    "alpha": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "beta": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ]
+  },
+  "hard_zero_positions": {
+    "alpha": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "beta": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ]
+  },
+  "new_positions": {
+    "alpha": [
+      160,
+      161,
+      162,
+      164
+    ],
+    "beta": []
+  },
+  "outer_shell_positions": {
+    "alpha": [
+      28,
+      37,
+      38,
+      92,
+      96,
+      97
+    ],
+    "beta": []
+  },
+  "threshold_rsa_all_eight_copies": 0.25,
+  "zero_protection_violations": []
+}

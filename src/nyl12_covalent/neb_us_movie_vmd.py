@@ -117,9 +117,10 @@ def render_movie_vmd(
     ]
     visible = qm_local | substrate_local
     lines = [
-        "# Concatenated biased windows; not a continuous reaction trajectory.",
-        "set here [file dirname [file normalize [info script]]]; set title {NEB-US movie}",
-        "namespace eval ::neb_us_movie {variable molecule {}}",
+        "set title {NEB-US movie}",
+        "foreach filename {path.parm7 path.dcd} {",
+        ' if {![file readable [file join $here $filename]]} {error "Missing readable movie file: [file join $here $filename]"}',
+        "}",
         "proc ::neb_us_movie::remove {molid} {",
         " foreach kind {Atoms Bonds Angles Dihedrals} {",
         "  set labels [label list $kind]",
@@ -137,6 +138,9 @@ def render_movie_vmd(
         "mol rename $molid $title",
         "mol addfile [file join $here path.dcd] type dcd waitfor all molid $molid",
         'if {[molinfo $molid get numframes] != EXPECTED_FRAMES} {error {Unexpected trajectory frame count}}'.replace("EXPECTED_FRAMES", str(frames)),
+        f'if {{[molinfo $molid get numatoms] != {len(mapping)}}} {{error {{Unexpected topology atom count}}}}',
+        "molinfo $molid set frame 0",
+        'if {[molinfo $molid get frame] != 0} {error {Could not activate trajectory frame zero}}',
         "set ::neb_us_movie::molecule $molid",
         "mol delrep 0 $molid",
         "color Element H white; color Element N blue; color Element O red; label textsize 0.6",
@@ -159,7 +163,7 @@ def render_movie_vmd(
         )
     lines.extend(
         [
-            f"mol representation VDW 0.28 12 12; mol color Element; mol selection {{index {atom['hg1']}}}; mol addrep $molid",
+            f"mol representation VDW 0.28 12; mol color Element; mol selection {{index {atom['hg1']}}}; mol addrep $molid",
             "proc ::neb_us_movie::add_label {kind ids offset} {",
             " set molid $::neb_us_movie::molecule; set specs {}",
             " foreach id $ids {lappend specs $molid/$id}",
@@ -187,14 +191,25 @@ def render_movie_vmd(
     )
     lines.extend(
         [
-            f"set visible [atomselect $molid {{index {_numbers(visible)}}}]",
-            "set bounds [measure minmax $visible]; $visible delete",
+            f"set visible [atomselect $molid {{index {_numbers(visible)}}} frame 0]",
+            'if {[$visible num] == 0} {$visible delete; error {No visible active-site atoms}}',
+            'if {[catch {measure minmax $visible} bounds]} {$visible delete; error "Cannot measure movie frame zero: $bounds"}',
+            "$visible delete",
             "set center [vecscale 0.5 [vecadd [lindex $bounds 0] [lindex $bounds 1]]]",
             "set span [vecsub [lindex $bounds 1] [lindex $bounds 0]]; set extent [tcl::mathfunc::max {*}$span]",
             "if {$extent <= 0} {error {Visible atom extent must be positive}}",
             "set identity {{1 0 0 0} {0 1 0 0} {0 0 1 0} {0 0 0 1}}; set centering $identity; set scaling $identity",
-            "for {set i 0} {$i < 3} {incr i} {lset centering $i 3 [expr {-[lindex $center $i]}]; lset scaling $i $i [expr {2.6/$extent}]} ",
+            "for {set i 0} {$i < 3} {incr i} {lset centering $i 3 [expr {-[lindex $center $i]}]; lset scaling $i $i [expr {2.6/$extent}]}",
             "molinfo $molid set center_matrix [list $centering]; molinfo $molid set rotate_matrix [list $identity]; molinfo $molid set global_matrix [list $identity]; molinfo $molid set scale_matrix [list $scaling]",
+            "mol top $molid; mol on $molid; display update",
+            "return $molid",
         ]
     )
-    return "\n".join(lines) + "\n"
+    header = [
+        "# Concatenated biased windows; not a continuous reaction trajectory.",
+        "namespace eval ::neb_us_movie {variable molecule; if {![info exists molecule]} {set molecule {}}}",
+        "proc ::neb_us_movie::load {here} {",
+    ]
+    return "\n".join(
+        header + lines + ["}", "::neb_us_movie::load [file dirname [file normalize [info script]]]"]
+    ) + "\n"

@@ -1,0 +1,5 @@
+candidate_count,model_count,site_count,tier_a_sites,tier_ab_sites,native_pass_sites,joint_pass_sites,models_any_joint_pass,negative_phi_joint_sites,positive_phi_joint_sites,negative_only_joint_models,group
+4,20,80,7,20,43,12,7,11,1,6,broader_29_positions
+4,20,80,6,24,21,8,4,3,5,2,focused_19_positions
+1,5,20,5,10,5,1,1,0,1,0,baseline
+2,10,40,5,20,22,7,3,7,0,3,matched_positive_control

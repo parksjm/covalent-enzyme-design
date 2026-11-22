@@ -1,0 +1,32 @@
+{
+  "geometry_plot": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/plots/geometry_before_after.png",
+  "fraction_plot": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/plots/tier_native_comparison.png",
+  "planned_models_per_stage": 45,
+  "occupied_geometry_counts": {
+    "raw": {
+      "planned_models": 45,
+      "observed_models": 45,
+      "missing_models": 0
+    },
+    "relaxed": {
+      "planned_models": 45,
+      "observed_models": 45,
+      "missing_models": 0
+    }
+  },
+  "model_fraction_counts": {
+    "raw": {
+      "planned_models": 45,
+      "observed_models": 45,
+      "missing_models": 0
+    },
+    "relaxed": {
+      "planned_models": 45,
+      "observed_models": 45,
+      "missing_models": 0
+    }
+  },
+  "replicate_unit": "model seed; sites within a model are nested, not independent",
+  "signed_herschlag_phi": true,
+  "activity_ranking_or_statistical_test": false
+}

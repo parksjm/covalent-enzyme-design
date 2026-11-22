@@ -71,7 +71,8 @@ def test_render_maps_original_ids_and_builds_reactive_and_qm_bonds() -> None:
     assert "{3 4}" in script  # Static QM H–O bond is removed.
     assert "DynamicBonds 1.85" in script
     assert "DynamicBonds 1.4" in script
-    assert "VDW 0.28" in script
+    assert "VDW 0.28 12;" in script
+    assert "VDW 0.28 12 12" not in script
 
 
 def test_render_sets_requested_colors_labels_angle_and_local_camera() -> None:
@@ -84,9 +85,22 @@ def test_render_sets_requested_colors_labels_angle_and_local_camera() -> None:
     assert script.count("::neb_us_movie::add_label Bonds") == 7
     assert "::neb_us_movie::add_label Angles [list 1 0 3]" in script
     assert "Licorice 0.25 12 12; mol color ColorID 3; mol selection {index 9}" in script
-    assert "set visible [atomselect $molid {index 0 1 2 3 4 5 9}]" in script
+    assert "set visible [atomselect $molid {index 0 1 2 3 4 5 9} frame 0]" in script
     assert "center_matrix" in script and "scale_matrix" in script
     assert "Concatenated biased windows" in script
+
+
+def test_frame_zero_is_selected_before_measurements_and_errors_stop_loading() -> None:
+    script = _render()
+    active_frame = script.index("molinfo $molid set frame 0")
+    assert active_frame < script.index("::neb_us_movie::add_label Bonds")
+    assert active_frame < script.index("measure minmax $visible")
+    assert "Unexpected topology atom count" in script
+    assert "Missing readable movie file" in script
+    assert "proc ::neb_us_movie::load {here}" in script
+    assert script.rstrip().endswith(
+        "::neb_us_movie::load [file dirname [file normalize [info script]]]"
+    )
 
 
 def test_script_cleans_only_labels_owned_by_its_molecule() -> None:

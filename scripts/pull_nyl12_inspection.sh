@@ -637,7 +637,10 @@ if [[ $dry_run -eq 0 ]]; then
     echo "TS search VMD: $destination/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/latest/view_ts_optimization.vmd"
     echo "Converged TS VMD: $destination/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/latest/view_ts_optimization.vmd"
 fi
+# Per-column Hessian displacements and receipts are too fine-grained for laptop inspection.
 rsync "${vmd_rsync_args[@]}" --copy-links \
+    --exclude='**/ts_hessian/columns/***' \
+    --exclude='**/columns/column_*/***' \
     --exclude='source_snapshot/' --exclude='clutter/' \
     --exclude='/11_leaving_group_relay_screen/coarse/' \
     --exclude='/11_leaving_group_relay_screen/coarse_nonflipped/' \
@@ -779,7 +782,10 @@ trace_us_source="${trace_neb_source%/vmd_final_24img/final_24img}/umbrella_sampl
 trace_us_destination="${trace_neb_destination%/vmd_final_24img/final_24img}/umbrella_sampling"
 if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     if [[ $dry_run -eq 0 ]]; then mkdir -p "$trace_us_destination"; fi
-    rsync "${vmd_rsync_args[@]}" --copy-links \
+    # This validated movie trajectory is 433 MiB; the generic VMD pull cap is 100 MiB.
+    trace_us_rsync_args=(-rtpvz --safe-links --max-size=500m)
+    if [[ $dry_run -eq 1 ]]; then trace_us_rsync_args+=(--dry-run); fi
+    rsync "${trace_us_rsync_args[@]}" --copy-links \
         --exclude='/inputs/' \
         --exclude='/analysis_job/' --exclude='/preparation_history/' \
         --exclude='/vmd_dynamic/work/***' \
@@ -803,6 +809,7 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
         --exclude='*' \
         "$remote:$trace_us_source/" "$trace_us_destination/"
     if [[ $dry_run -eq 0 ]]; then
+        (cd "$trace_us_destination/vmd_dynamic" && "${checksum[@]}" MANIFEST.sha256)
         echo "NEB-seeded US diagnostics: $trace_us_destination/analysis/latest/"
         echo "NEB-seeded PMF: $trace_us_destination/analysis/pmf_latest/"
         echo "NEB-seeded US dynamic movie: $trace_us_destination/vmd_dynamic/view_umbrella.vmd"

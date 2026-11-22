@@ -1,0 +1,33 @@
+{
+  "files": {
+    "src/__init__.py": "5951de2336d06fd20ee908825c3faa42d62dc02edb27da29d2ec70c3b52f0e6b",
+    "scripts/run_local_design_validation.py": "562241bb59edbfe316aefa533effd5532cc07a4273771bb4eefd71034f1cd6c4",
+    "scripts/screen_pa6_binding_orientation.py": "82e6b5410f1f3aab841bcf78710229b6cd58b4376d7ef977cee7d5b377c7bfb5",
+    "scripts/resume_prepared_comparison.py": "c8715594b6df138d804ec56073bddf356e27278f61f5add9d880a968c56b5e1a",
+    "scripts/__init__.py": "cad210bebdf9e3cb8d20c75f744e2aff4daeaf239cc857a5140a9f40e5b761f9",
+    "scripts/run_design_boltz_predictions.py": "8f68fc54fd39f8108b89f7c0ab3a2a9eae4577dba22555d49e8b4ea49e3af741",
+    "scripts/run_matched_comparison.py": "c66c8dc69f31d72c1aa5f70dd923e3403809550b860cc17e51ba969677418737",
+    "src/nyl12_covalent/design_charge.py": "0f95512ae8bdfa8facc9c9bc5ee2ce17a61c6f0735607d74af91b6cf9f36e232",
+    "src/nyl12_covalent/local_design_validation_inputs.py": "f817e8c806a4c0ae566b60f766000f1c26016de214e17fc7f4fa46e4fae92abf",
+    "src/nyl12_covalent/design_geometry_comparison.py": "6c5add22389fde929b4f7effb79c8308ac285a447bdcfb19f0f99ba7009e0a5f",
+    "src/nyl12_covalent/raw_pa6_modular.py": "139ca9ec8120474b97244a59387f4c162d02f99d44a2d306b1cdd1d29bed7897",
+    "src/nyl12_covalent/design_mask_validation_inputs.py": "83a8615d4fc6c2893477fc84c09f2cb9a78e1a0cb59f9eb0da462e1f3a294d91",
+    "src/nyl12_covalent/catalytic_alignment.py": "f3f6e33fe7a8f9236dbcb7ede0b02ecbe0e548aaf5c8be60bd69bffadb73d826",
+    "src/nyl12_covalent/active_site_geometry.py": "d7d765924d4fac813151716c0109e3f1897fa0ab3437db4541dc5c7783df208b",
+    "src/nyl12_covalent/design_geometry_plots.py": "1eceb49b61ee1713b29de1b3b67eea8229d4491381424dfbd786e0cd293913d1",
+    "src/nyl12_covalent/design_mask_validation_records.py": "2a101d864a30e23b134425ba7df83905979b0bca5668f6a3419c5b649b779b1d",
+    "src/nyl12_covalent/design_component_normalization.py": "b1b5127b794491d8edd76014e381cf016579c3c653211f88619deddf939096f0",
+    "src/nyl12_covalent/design_mask_selection.py": "4ac41d0232756c499a12df88e307c9cf91fa30c0f1f11a39593185066618d6f7",
+    "src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "src/nyl12_covalent/design_boltz_inputs.py": "9211f0b1f5af501a135be4d7eb57f68bc6b91e178d5c1f55a7375439e73725fd",
+    "src/nyl12_covalent/ligandmpnn_pilot_audit.py": "5245b810f72b682b494fabcb6de0fb5f1696a1e6048549167d5995b86267063a",
+    "src/nyl12_covalent/design_model_relaxation.py": "e897d1817aa556cb06701bbb3fff07ea4e8f9b76567f46297f10aecdcdc95ff3",
+    "src/nyl12_covalent/design_mask_candidates.py": "988c68bff9246d7be8a3f2cbfc8f5468fb1b1fa48694c0395c96c8c604a8f4d3",
+    "src/nyl12_covalent/design_relaxation_topology.py": "9a00eece6575ecc37357176ed0da433248b193615477b909ca49cbf2f5cca301",
+    "src/nyl12_covalent/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6",
+    "src/nyl12_covalent/design_mask_validation_reuse.py": "b2def3a66efbb8068f032c4599f1ab823c8c0d746c743543577ca11b47f86989",
+    "src/nyl12_covalent/local_design_validation_phases.py": "8d8760e7f0537dbe61f1fe35bb9826138ea754a06cb58722e595c7274bc27fcc",
+    "src/nyl12_covalent/design_pa6_mapping.py": "38f3b4c961c96148cc8ce900429c4b4945c4fb4d2ad3eee263537415f2c0b343"
+  },
+  "replaces_initial_snapshot_for": "StrictWTreusehashdictionarycontract; no scientificmethod/inputchange"
+}

@@ -1,3 +1,52 @@
+## Matched sequence-mask structural pilot (2026-11-22)
+
+A matched pilot compared four selected sequences from a 19-position mask and
+four from a nested 29-position mask, alongside WT, K59D and V111C. Each
+sequence was predicted with five seeds and four PA6 L4 ligands per tetramer.
+All 55 model-seed endpoints reached the Amber minimization force tolerance;
+52 were newly computed and three qualified WT controls were reused. Two
+previous WT seeds were regenerated to match the Violet prediction runtime.
+
+| Cohort | Tier A/B sites | Native-Thr sites | Joint-pass sites | Model seeds with ≥1 joint pass |
+| --- | --- | --- | --- | --- |
+| WT | 10/20 | 5/20 | 1/20 | 1/5 |
+| Focused 19-position mask | 24/80 | 21/80 | 8/80 | 4/20 |
+| Broader 29-position mask | 20/80 | 43/80 | 12/80 | 7/20 |
+| K59D control | 10/20 | 6/20 | 0/20 | 0/5 |
+| V111C control | 10/20 | 16/20 | 7/20 | 3/5 |
+
+Joint pass denotes Tier A/B catalytic geometry together with the native-Thr233
+conformation gate. The broader arm retained native-like Thr conformations more
+often but did not improve Tier A/B-only occupancy uniformly. Retaining only
+negative signed Herschlag phi yielded 11/80, 3/80 and 0/20 joint-pass sites
+for broader, focused and WT, respectively. Positive-phi models remain separate
+local binding-pose hypotheses. Broader mask_07 provided six joint-pass sites
+across three of five seeds, all negative phi; focused mask_03 provided three
+across two seeds. The four active sites within a model and the five seeds
+within a sequence are nested observations, not independent activity assays.
+The small pilot establishes neither statistical significance nor improved
+chemical barriers or polymer turnover. K59D's zero joint passes despite
+activity in noisy lysate/MS assays underscores the limited sensitivity of
+these structural gates as activity classifiers. No activity-fitted cutoffs
+were introduced. Source tables, acceptance records and scripts are under
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/`.
+
+## Exploratory E–S sequence-design pilot (2026-11-22)
+
+WT and eight designed sequences were modeled with four bound PA6 L4 molecules
+and five prediction seeds each (45 tetramers). All minimization processes
+completed; 44 achieved the common force tolerance. Raw predictions yielded
+no Tier A/B sites. After relaxation, 76/180 assigned sites met Tier A/B, and
+40/180 also passed the native Thr233 conformation gate. Excluding the single
+unconverged model gave 38/176 joint-passing sites across 20 model seeds. WT
+had three joint sites across two of five models; designed variants 03/04 each
+had seven across four models, and variant 06 had eight across three models.
+All four sites are nested within a model; the small ensemble and mixed original
+prediction-host builds preclude a validated activity ranking. These E–S
+geometry results motivate a controlled broader-mask comparison and matched
+known-active controls, not a claim of transition-state stabilization or
+improved catalysis. All models, failed gates and the unconverged case were retained.
+
 # Results — working draft
 
 ## Leaving-group relay candidates — exploratory screen, 2026-11-21

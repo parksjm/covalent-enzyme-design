@@ -1,0 +1,13 @@
+{
+  "error": "ValueError('Unsupported variant/stage in row 18: control_K59D/raw')",
+  "error_type": "ValueError",
+  "expected_new_models": 52,
+  "expected_reused_models": 3,
+  "expected_total_models": 55,
+  "normalized_models": 52,
+  "phase": "comparison",
+  "predicted_models": 52,
+  "relaxed_models": 52,
+  "reused_models": 3,
+  "status": "failed"
+}

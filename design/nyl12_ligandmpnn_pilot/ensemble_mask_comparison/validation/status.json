@@ -1,0 +1,12 @@
+{
+  "expected_new_models": 52,
+  "expected_reused_models": 3,
+  "expected_total_models": 55,
+  "normalized_models": 52,
+  "phase": "complete",
+  "predicted_models": 52,
+  "relaxed_models": 52,
+  "reporting_repair": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair",
+  "reused_models": 3,
+  "status": "completed"
+}

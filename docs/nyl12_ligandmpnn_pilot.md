@@ -200,3 +200,28 @@ Graph-based ligand renaming precedes parameter assignment. Four site metrics
 are nested within each seed/model. This implements the previously pending
 prediction/relaxation gate, without authorizing new candidate MD or activity
 claims. Existing mechanism/US jobs remain unchanged.
+
+## Activated matched mask comparison — 2026-11-22
+
+The 45-model Boltz/Amber campaign finished: all 45 predictions and minimization
+processes completed; **44/45** reached the force tolerance. Variant 05 seed 04
+has RMS gradient 0.1455 kcal/mol/Å and remains diagnostic. After relaxation,
+WT has 3/20 joint Tier A/B+native-Thr sites in 2/5 models. Variants 03/04 each
+have 7/20 in 4/5 models; variant 06 has 8/20 in 3/5 models. Seven of eight
+variants have a joint pass. Across all endpoints there are 40/180 joint sites;
+restricting to force-converged cases gives **38/176 sites in 20 models**.
+Raw models have no Tier A/B sites. Full counts, source hashes and model paths
+are in `design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/comparison_summary.*`.
+These five-seed structural observations are not catalytic-activity estimates.
+
+PI authorized a matched 19-versus-29-position mask test on two accepted WT
+backbones, 48 raw LigandMPNN samples, unchanged catalytic/maturation protections
+and explicit A–D/E–H sequence ties. New mutable positions passed SASA and
+interface checks. At most four distinct sequences per arm plus K59D/V111C
+controls proceed through five Boltz seeds and matched Amber relaxation. New
+work is on Violet; WT reuse requires runtime/input identity. See
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/README.md` and its
+actual job receipts. No TS geometry or activity-trained filter is introduced.
+
+Future laptop pulls exclude Hessian column/displacement trees. The original
+workstation data and already downloaded laptop copies are preserved.

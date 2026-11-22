@@ -1,0 +1,20 @@
+{
+  "by_arm": {
+    "broader_29_positions": {
+      "samples": 24,
+      "unique_sequences": 24,
+      "mutation_count_min": 5,
+      "mutation_count_median": 8.0,
+      "mutation_count_max": 10
+    },
+    "focused_19_positions": {
+      "samples": 24,
+      "unique_sequences": 15,
+      "mutation_count_min": 3,
+      "mutation_count_median": 5.5,
+      "mutation_count_max": 8
+    }
+  },
+  "all_native_jobs_exit_zero": true,
+  "interpretation": "Sequence-diversityonly; Boltzstructuraldiversity/filteracceptanceandactivityuntestedfornewbatch"
+}

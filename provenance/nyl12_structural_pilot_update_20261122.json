@@ -1,0 +1,61 @@
+{
+  "completed_first_pilot": {
+    "predictions": 45,
+    "minimizations_completed": 45,
+    "force_converged": 44,
+    "joint_sites_all_endpoints": 40,
+    "assigned_sites_all_endpoints": 180,
+    "joint_sites_force_converged": 38,
+    "assigned_sites_force_converged": 176,
+    "model_seeds_with_joint_force_converged": 20,
+    "WT_joint_sites": 3,
+    "WT_sites": 20,
+    "WT_models_with_joint": 2,
+    "WT_models": 5,
+    "top_descriptive_variants": {
+      "variant_03": {
+        "joint_sites": 7,
+        "models_with_joint": 4
+      },
+      "variant_04": {
+        "joint_sites": 7,
+        "models_with_joint": 4
+      },
+      "variant_06": {
+        "joint_sites": 8,
+        "models_with_joint": 3
+      }
+    },
+    "nonconverged_case": "variant_05/seed_04: RMS0.1455 vs0.05target;2jointsitesdiagnosticonly"
+  },
+  "new_matched_sequence_pilot": {
+    "by_arm": {
+      "broader_29_positions": {
+        "samples": 24,
+        "unique_sequences": 24,
+        "mutation_count_min": 5,
+        "mutation_count_median": 8.0,
+        "mutation_count_max": 10
+      },
+      "focused_19_positions": {
+        "samples": 24,
+        "unique_sequences": 15,
+        "mutation_count_min": 3,
+        "mutation_count_median": 5.5,
+        "mutation_count_max": 8
+      }
+    },
+    "all_native_jobs_exit_zero": true,
+    "interpretation": "Sequence-diversityonly; Boltzstructuraldiversity/filteracceptanceandactivityuntestedfornewbatch"
+  },
+  "next_validation": "Atmost4selecteduniqueperarm+K59D/V111C,5predictionseeds;52newmaxplus3eligibleWTreuses; sameVioletBoltzruntime andsamechargedsequence-awareAmberprotocol",
+  "scientific_limits": [
+    "staticESgeometrynottransitionstatestabilization",
+    "foursitesnestedwithinmodelseed",
+    "noactivitytrainedcutoffs",
+    "knownactivelysate/MSlabelsnoisy",
+    "twoboundbackbonesnotopenclosedensemble"
+  ],
+  "laptop_pull_change": "ExcludeHessiancolumn/displacementtreesfromfuturepulls; originaldata/existinglaptopcopiesretained",
+  "dynamic_neb_us_vmd": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd"
+}

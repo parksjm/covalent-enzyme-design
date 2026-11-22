@@ -15,6 +15,7 @@ from typing import Any
 
 import parmed
 
+from .design_charge import ion_counts
 from .design_pa6_mapping import convert_four_ligands, export_canonical_heavy
 from .design_relaxation_topology import leap_input, validate_four_ligand_topology
 
@@ -234,7 +235,7 @@ def relax_model(source: Path, output: Path, config: dict[str, Any]) -> dict[str,
         dry = validate_four_ligand_topology(system / "dry.prmtop", release, False)
         volume = _volume(system / "noions.prmtop", system / "noions.rst7")
         pairs = round(ION_PAIR_FACTOR * volume)
-        sodium, chloride = pairs + 8, pairs
+        sodium, chloride = ion_counts(pairs, dry["formal_solute_charge"])
         stage = "salted_leap"
         _run_leap(
             system,
@@ -305,6 +306,7 @@ def relax_model(source: Path, output: Path, config: dict[str, Any]) -> dict[str,
             "source": str(inputs / copies[0][0]),
             "endpoint": str(pdb),
             "parameter_release_id": dry["release_id"],
+            "formal_solute_charge": dry["formal_solute_charge"],
             "dry_topology": dry,
             "solvated_topology": solvated,
             "salt": dict(

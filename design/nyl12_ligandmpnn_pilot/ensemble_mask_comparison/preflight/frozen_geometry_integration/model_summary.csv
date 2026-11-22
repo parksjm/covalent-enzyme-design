@@ -1,0 +1,3 @@
+variant,seed,stage,path,ligand_count,tier_a_count,tier_ab_count,joint_pass_count,tier_a_fraction,tier_ab_fraction,joint_pass_fraction,assignment
+WT,2026112201,raw,/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/raw/normalized.pdb,4,0,0,0,0.0,0.0,0.0,"{""I:1"": ""AE"", ""J:1"": ""BF"", ""K:1"": ""CG"", ""L:1"": ""DH""}"
+WT,2026112201,relaxed,/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/relaxed.pdb,4,0,1,0,0.0,0.25,0.0,"{""I:1"": ""AE"", ""J:1"": ""BF"", ""K:1"": ""CG"", ""L:1"": ""DH""}"

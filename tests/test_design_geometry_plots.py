@@ -122,3 +122,36 @@ def test_numeric_parser_preserves_signed_phi() -> None:
     assert _numeric({"herschlag_phi": "-120"}, ("herschlag_phi",), 2) == {
         "herschlag_phi": -120.0
     }
+
+
+def test_explicit_mask_and_control_cohort_ids_are_supported(tmp_path: Path) -> None:
+    geometry, summary = _inputs(tmp_path)
+    geometry_rows = list(csv.DictReader(geometry.open(newline="")))
+    summary_rows = list(csv.DictReader(summary.open(newline="")))
+    variants = ("WT", "control_K59D", "mask_01")
+    _write_csv(
+        geometry,
+        GEOMETRY_FIELDS,
+        [{**row, "variant": name} for name in variants for row in geometry_rows],
+    )
+    _write_csv(
+        summary,
+        SUMMARY_FIELDS,
+        [{**row, "variant": name} for name in variants for row in summary_rows],
+    )
+    manifest = plot_comparison(
+        geometry, summary, tmp_path / "plots", planned_models=3, variant_order=variants
+    )
+    assert manifest["variant_order"] == list(variants)
+    assert manifest["model_fraction_counts"]["raw"]["observed_models"] == 3
+    with pytest.raises(ValueError, match="Unsupported variant/stage"):
+        plot_comparison(geometry, summary, tmp_path / "undeclared")
+
+
+@pytest.mark.parametrize("variants", [(), ("WT", "WT"), ("",), (" ",)])
+def test_invalid_cohort_order_fails_before_plotting(
+    tmp_path: Path, variants: tuple[str, ...]
+) -> None:
+    geometry, summary = _inputs(tmp_path)
+    with pytest.raises(ValueError, match="unique nonempty cohort IDs"):
+        plot_comparison(geometry, summary, tmp_path / "plots", variant_order=variants)

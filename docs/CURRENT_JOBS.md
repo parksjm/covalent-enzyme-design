@@ -1,3 +1,46 @@
+## Matched-mask campaign complete — 2026-11-22
+
+All 52 new Boltz predictions and Amber minimizations completed; with three
+qualified reused WT seeds, all 55 endpoints reached the force tolerance.
+Reporting-only recovery completed with exit 0 in tmux
+`nyl12_mask_publish_20261122`; see
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/COMPLETED.json`
+and `validation/reporting_repair/job_final/`. Original wrapper/report failures
+are preserved. No calculations were repeated and no follow-up MD is queued.
+
+## CURRENT — completed structural pilot and matched mask comparison, 2026-11-22
+
+Live matched comparison: `nyl12_matched_masks_validation_20261122` on Violet.
+Native sequence sampling completed (48 audited, 39 unique; broader24/24unique,
+focused15/24). Eight representatives and K59D/V111C controls are selected.
+`ensemble_mask_comparison/validation/status.json` reports the actual phase: 52
+new Boltz predictions, three eligible reused WT models, then automatic Amber
+relaxation and four-site analysis. Input/protection/hash/native-runtime checks
+passed; postprocessing/startup failures are retained separately.
+
+The 45-model Boltz/Amber campaign finished: all 45 predictions and minimization
+processes completed; **44/45** reached the force tolerance. Variant 05 seed 04
+has RMS gradient 0.1455 kcal/mol/Å and remains diagnostic. After relaxation,
+WT has 3/20 joint Tier A/B+native-Thr sites in 2/5 models. Variants 03/04 each
+have 7/20 in 4/5 models; variant 06 has 8/20 in 3/5 models. Seven of eight
+variants have a joint pass. Across all endpoints there are 40/180 joint sites;
+restricting to force-converged cases gives **38/176 sites in 20 models**.
+Raw models have no Tier A/B sites. Full counts, source hashes and model paths
+are in `design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/comparison_summary.*`.
+These five-seed structural observations are not catalytic-activity estimates.
+
+PI authorized a matched 19-versus-29-position mask test on two accepted WT
+backbones, 48 raw LigandMPNN samples, unchanged catalytic/maturation protections
+and explicit A–D/E–H sequence ties. New mutable positions passed SASA and
+interface checks. At most four distinct sequences per arm plus K59D/V111C
+controls proceed through five Boltz seeds and matched Amber relaxation. New
+work is on Violet; WT reuse requires runtime/input identity. See
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/README.md` and its
+actual job receipts. No TS geometry or activity-trained filter is introduced.
+
+Future laptop pulls exclude Hessian column/displacement trees. The original
+workstation data and already downloaded laptop copies are preserved.
+
 # Current running and queued work
 
 ## Campaign-specific receipt snapshot — 2026-11-22

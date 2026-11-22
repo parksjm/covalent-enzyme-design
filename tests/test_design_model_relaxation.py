@@ -104,7 +104,7 @@ def _mock_subprocess(
     return calls
 
 
-def _patch_science(monkeypatch: pytest.MonkeyPatch) -> None:
+def _patch_science(monkeypatch: pytest.MonkeyPatch, formal_charge: int = -8) -> None:
     """Mock topology acceptance and return a deterministic atom inventory."""
     monkeypatch.setattr(
         runner,
@@ -113,6 +113,7 @@ def _patch_science(monkeypatch: pytest.MonkeyPatch) -> None:
             "release_id": "pa6_l4_modular_resp_gaff2_v1_20261031",
             "atom_count": 9000 if solvated else 8000,
             "solvated": solvated,
+            "formal_solute_charge": formal_charge,
         },
     )
     monkeypatch.setattr(runner, "_volume", lambda _top, _coords: 100000.0)
@@ -121,15 +122,16 @@ def _patch_science(monkeypatch: pytest.MonkeyPatch) -> None:
     )
 
 
+@pytest.mark.parametrize("formal_charge", [-8, -16, 5])
 def test_relax_model_records_setup_commands_and_nonconverged_endpoint(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, formal_charge: int
 ) -> None:
     """Run mocked orchestration through endpoint export without claiming convergence."""
     source = tmp_path / "source.pdb"
     source.write_text("source\n")
     config = _config(tmp_path)
     _mock_mapping(monkeypatch)
-    _patch_science(monkeypatch)
+    _patch_science(monkeypatch, formal_charge)
     calls = _mock_subprocess(monkeypatch, rms="0.08")
     output = tmp_path / "run"
     result = runner.relax_model(source, output, config)
@@ -137,7 +139,10 @@ def test_relax_model_records_setup_commands_and_nonconverged_endpoint(
     assert calls[0]["env"]["CUDA_VISIBLE_DEVICES"] == "2"
     assert calls[0]["env"]["OMP_NUM_THREADS"] == "1"
     assert result["force_converged"] is False
-    assert result["salt"]["sodium_count"] == result["salt"]["chloride_count"] + 8
+    pairs = result["salt"]["neutralizing_plus_salt_pairs"]
+    assert result["formal_solute_charge"] == formal_charge
+    assert result["salt"]["sodium_count"] == pairs + max(-formal_charge, 0)
+    assert result["salt"]["chloride_count"] == pairs + max(formal_charge, 0)
     mdin = (output / "minimization/min.in").read_text()
     assert "maxcyc=10000" in mdin and "drms=0.05" in mdin
     assert "ntr=0, nmropt=0, ntc=1, ntf=1" in mdin

@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "parents": [
+    "WT_seed_02",
+    "WT_seed_03"
+  ],
+  "parent_count": 2,
+  "arms": [
+    "focused_19_positions",
+    "broader_29_positions"
+  ],
+  "samples_per_arm": 24,
+  "jobs": 8,
+  "samples_per_job": 6,
+  "samples_total": 48,
+  "sequence_symmetry_groups_per_arm": {
+    "focused_19_positions": 19,
+    "broader_29_positions": 29
+  },
+  "hard_protection_violations": 0,
+  "new_buried_or_interface_positions": 0,
+  "engine_software_unchanged": true,
+  "manifest_sha256": "81a69b366449b0b83679347fde07c7c7fee8bda3279a5ef7eb3fd26843711af9"
+}

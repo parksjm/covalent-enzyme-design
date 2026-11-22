@@ -1,0 +1,720 @@
+{
+  "assignment_audit": {
+    "intended_pairs": "I:AE, J:BF, K:CG, L:DH",
+    "model_stage_swaps": [],
+    "policy": "minimum-total-d1 one-to-one assignment across four ligands/sites",
+    "unexpected_assigned_pairs": 0
+  },
+  "best_joint_passing_models": [
+    {
+      "candidate_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/relaxation/relaxed.pdb",
+      "final_rms_gradient": 0.048485,
+      "force_converged": true,
+      "joint_site_count": 4,
+      "joint_sites": [
+        {
+          "a_bd": 88.49646829930923,
+          "d1": 2.974218216607519,
+          "d2": 2.9296095302958003,
+          "d3": 3.098426213418676,
+          "herschlag_phi": -100.9973982572741,
+          "ligand": "I:1",
+          "scaffold_rmsd": 0.36409952859208505,
+          "site": "AE"
+        },
+        {
+          "a_bd": 91.97167079740223,
+          "d1": 2.974623505588565,
+          "d2": 2.902249472392058,
+          "d3": 2.918530794766432,
+          "herschlag_phi": -97.57017515559981,
+          "ligand": "J:1",
+          "scaffold_rmsd": 0.4069243535491335,
+          "site": "BF"
+        },
+        {
+          "a_bd": 85.14288637738343,
+          "d1": 2.9608868603849023,
+          "d2": 2.9215444545650877,
+          "d3": 2.9648165204612495,
+          "herschlag_phi": -95.59241506427247,
+          "ligand": "K:1",
+          "scaffold_rmsd": 0.3079193404515065,
+          "site": "CG"
+        },
+        {
+          "a_bd": 93.50992216626753,
+          "d1": 2.97542551578761,
+          "d2": 2.8814562290619627,
+          "d3": 2.8363696867651056,
+          "herschlag_phi": -92.7180494739308,
+          "ligand": "L:1",
+          "scaffold_rmsd": 0.2749903691510405,
+          "site": "DH"
+        }
+      ],
+      "matched_wt": {
+        "final_rms_gradient": 0.045537,
+        "force_converged": true,
+        "joint_site_count": 0,
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/relaxation/relaxed.pdb",
+        "seed": "2026112204"
+      },
+      "seed": "2026112204",
+      "variant": "variant_04"
+    },
+    {
+      "candidate_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/relaxation/relaxed.pdb",
+      "final_rms_gradient": 0.048912,
+      "force_converged": true,
+      "joint_site_count": 4,
+      "joint_sites": [
+        {
+          "a_bd": 90.4136050339979,
+          "d1": 3.002564403972046,
+          "d2": 2.8658799695730464,
+          "d3": 2.831803842076637,
+          "herschlag_phi": -100.04677974180719,
+          "ligand": "I:1",
+          "scaffold_rmsd": 0.3942576994324232,
+          "site": "AE"
+        },
+        {
+          "a_bd": 90.17375557842658,
+          "d1": 3.028175358198401,
+          "d2": 2.9736512909216453,
+          "d3": 2.8160316049362852,
+          "herschlag_phi": -99.61685684319818,
+          "ligand": "J:1",
+          "scaffold_rmsd": 0.3794289254706564,
+          "site": "BF"
+        },
+        {
+          "a_bd": 91.96730041321342,
+          "d1": 3.008421679219851,
+          "d2": 2.8545172971975443,
+          "d3": 2.8583860830895382,
+          "herschlag_phi": -100.1195108570363,
+          "ligand": "K:1",
+          "scaffold_rmsd": 0.39476192297037704,
+          "site": "CG"
+        },
+        {
+          "a_bd": 91.87035487930585,
+          "d1": 3.0318675762638403,
+          "d2": 2.9640320511087603,
+          "d3": 2.813039281631164,
+          "herschlag_phi": -99.53859500395546,
+          "ligand": "L:1",
+          "scaffold_rmsd": 0.3943907791135261,
+          "site": "DH"
+        }
+      ],
+      "matched_wt": {
+        "final_rms_gradient": 0.048592,
+        "force_converged": true,
+        "joint_site_count": 2,
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb",
+        "seed": "2026112202"
+      },
+      "seed": "2026112202",
+      "variant": "variant_07"
+    },
+    {
+      "candidate_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/relaxation/relaxed.pdb",
+      "final_rms_gradient": 0.04633,
+      "force_converged": true,
+      "joint_site_count": 3,
+      "joint_sites": [
+        {
+          "a_bd": 94.13703193561673,
+          "d1": 2.944034306865329,
+          "d2": 2.890869246437826,
+          "d3": 2.815085966715756,
+          "herschlag_phi": -99.18337925439447,
+          "ligand": "I:1",
+          "scaffold_rmsd": 0.3576161331556874,
+          "site": "AE"
+        },
+        {
+          "a_bd": 92.27867523359392,
+          "d1": 2.9764063902632585,
+          "d2": 2.863206070124886,
+          "d3": 2.8646306917297433,
+          "herschlag_phi": -97.55390129504137,
+          "ligand": "J:1",
+          "scaffold_rmsd": 0.34448620797670415,
+          "site": "BF"
+        },
+        {
+          "a_bd": 89.43483016130286,
+          "d1": 2.9846420220857297,
+          "d2": 2.9551257164459175,
+          "d3": 2.829094908270134,
+          "herschlag_phi": -99.2795749365313,
+          "ligand": "K:1",
+          "scaffold_rmsd": 0.27828455266894525,
+          "site": "CG"
+        }
+      ],
+      "matched_wt": {
+        "final_rms_gradient": 0.048592,
+        "force_converged": true,
+        "joint_site_count": 2,
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb",
+        "seed": "2026112202"
+      },
+      "seed": "2026112202",
+      "variant": "variant_03"
+    }
+  ],
+  "campaign": {
+    "normalized_models": 45,
+    "planned_models": 45,
+    "relaxed_models": 45,
+    "status": "completed"
+  },
+  "chemistry_validation": "All 90 models and 360 assigned site observations are represented; geometry implementation rejects missing mapped central-amide atoms and inconsistent mapped C54\u2013O49/N59/C62 connectivity. No gate, protonation, or chemistry was refit in this analysis.",
+  "geometry_gates": {
+    "joint": "native pass and Tier A or B.",
+    "native": "OG1 shift <=0.75 A; N shift <=1.25 A; |psi delta| <=35 deg; |chi1 delta| <=20 deg.",
+    "tier_a_b": "Existing source implementation: A/B thresholds on d1, d2, d3, Burgi-Dunitz angle, and absolute Herschlag phi; unchanged."
+  },
+  "historical_900_model_context": {
+    "caveat": "Different variants and structural/protonation protocol; context only, do not pool or calibrate thresholds against this 45-model cohort.",
+    "records": {
+      "K59D": {
+        "n_models": "50",
+        "n_phi_negative": "21",
+        "n_phi_positive": "29",
+        "n_tier_a": "8",
+        "n_tier_ab": "18"
+      },
+      "V111C": {
+        "n_models": "50",
+        "n_phi_negative": "39",
+        "n_phi_positive": "11",
+        "n_tier_a": "1",
+        "n_tier_ab": "1"
+      },
+      "WT": {
+        "n_models": "50",
+        "n_phi_negative": "38",
+        "n_phi_positive": "12",
+        "n_tier_a": "2",
+        "n_tier_ab": "7"
+      }
+    }
+  },
+  "individual_gate_failure_counts": {
+    "raw": {
+      "abs_phi_outside_60_125_deg": 12,
+      "alpha_bd_outside_85_125_deg": 180,
+      "d1_gt_3_5_A": 0,
+      "d2_gt_4_0_A": 0,
+      "d3_gt_4_0_A": 0,
+      "native_abs_chi1_delta_gt_20_deg": 0,
+      "native_abs_psi_delta_gt_35_deg": 0,
+      "native_n_shift_gt_1_25_A": 0,
+      "native_og1_shift_gt_0_75_A": 0
+    },
+    "relaxed": {
+      "abs_phi_outside_60_125_deg": 21,
+      "alpha_bd_outside_85_125_deg": 100,
+      "d1_gt_3_5_A": 3,
+      "d2_gt_4_0_A": 1,
+      "d3_gt_4_0_A": 7,
+      "native_abs_chi1_delta_gt_20_deg": 0,
+      "native_abs_psi_delta_gt_35_deg": 19,
+      "native_n_shift_gt_1_25_A": 9,
+      "native_og1_shift_gt_0_75_A": 63
+    }
+  },
+  "interpretation_limit": "Static ES geometry and minimization are not evidence of catalysis, transition-state formation, or a validated barrier. These 45 model seeds are not 45 independent biological replicates.",
+  "joint_failure_components": {
+    "raw": {
+      "native_fail": 0,
+      "native_only_joint_fail": 0,
+      "tier_and_native_fail": 0,
+      "tier_only_joint_fail": 180,
+      "tier_reject": 180
+    },
+    "relaxed": {
+      "native_fail": 79,
+      "native_only_joint_fail": 36,
+      "tier_and_native_fail": 43,
+      "tier_only_joint_fail": 61,
+      "tier_reject": 104
+    }
+  },
+  "metric_distributions": [
+    {
+      "max": 3.1316155575038254,
+      "median": 2.663809844540264,
+      "metric": "d1",
+      "min": 2.5410255803513673,
+      "n": 180,
+      "stage": "raw"
+    },
+    {
+      "max": 3.561977821379578,
+      "median": 3.0770965906596364,
+      "metric": "d2",
+      "min": 2.682877186902153,
+      "n": 180,
+      "stage": "raw"
+    },
+    {
+      "max": 3.757072530574835,
+      "median": 3.0971386340805855,
+      "metric": "d3",
+      "min": 2.7487253409535115,
+      "n": 180,
+      "stage": "raw"
+    },
+    {
+      "max": 82.44691435083675,
+      "median": 71.26080168896004,
+      "metric": "a_bd",
+      "min": 58.39607358008157,
+      "n": 180,
+      "stage": "raw"
+    },
+    {
+      "max": 103.2992210189419,
+      "median": -114.22066722487115,
+      "metric": "herschlag_phi",
+      "min": -131.84143550909442,
+      "n": 180,
+      "stage": "raw"
+    },
+    {
+      "max": 4.554452107553655,
+      "median": 3.082047217148455,
+      "metric": "d1",
+      "min": 2.8393451709857342,
+      "n": 180,
+      "stage": "relaxed"
+    },
+    {
+      "max": 4.097845897541781,
+      "median": 2.961963746666515,
+      "metric": "d2",
+      "min": 2.802296558182234,
+      "n": 180,
+      "stage": "relaxed"
+    },
+    {
+      "max": 4.878943328221804,
+      "median": 2.9641205298700477,
+      "metric": "d3",
+      "min": 2.792257330548175,
+      "n": 180,
+      "stage": "relaxed"
+    },
+    {
+      "max": 102.68772548357315,
+      "median": 83.25252347479463,
+      "metric": "a_bd",
+      "min": 62.602818276826675,
+      "n": 180,
+      "stage": "relaxed"
+    },
+    {
+      "max": 111.96765534092235,
+      "median": -104.64737831121016,
+      "metric": "herschlag_phi",
+      "min": -134.38709671300379,
+      "n": 180,
+      "stage": "relaxed"
+    }
+  ],
+  "nonconverged_relaxations": [
+    {
+      "acceptance_json": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/relaxation/acceptance.json",
+      "final_rms_gradient": 0.1455,
+      "seed": "2026112204",
+      "variant": "variant_05"
+    }
+  ],
+  "nonfinite_geometry_metrics": 0,
+  "overall_counts": {
+    "raw": {
+      "force_converged_assigned_sites": null,
+      "force_converged_joint_sites": null,
+      "force_converged_models": null,
+      "joint_sites": 0,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 180,
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0
+    },
+    "relaxed": {
+      "force_converged_assigned_sites": 176,
+      "force_converged_joint_sites": 38,
+      "force_converged_models": 44,
+      "joint_sites": 40,
+      "models_with_any_joint": 21,
+      "native_pass_sites": 101,
+      "tier_a_sites": 38,
+      "tier_ab_sites": 76
+    }
+  },
+  "prediction_host_counts_by_variant": {
+    "WT": {
+      "tulip": 2,
+      "violet": 3
+    },
+    "variant_01": {
+      "tulip": 3,
+      "violet": 2
+    },
+    "variant_02": {
+      "tulip": 2,
+      "violet": 3
+    },
+    "variant_03": {
+      "tulip": 3,
+      "violet": 2
+    },
+    "variant_04": {
+      "tulip": 2,
+      "violet": 3
+    },
+    "variant_05": {
+      "tulip": 3,
+      "violet": 2
+    },
+    "variant_06": {
+      "tulip": 2,
+      "violet": 3
+    },
+    "variant_07": {
+      "tulip": 3,
+      "violet": 2
+    },
+    "variant_08": {
+      "tulip": 2,
+      "violet": 3
+    }
+  },
+  "replicate_unit": "model seed; four site observations within each model are nested, not independent replicates",
+  "row_counts": {
+    "all_ligand_site_comparisons": 1440,
+    "assigned_sites": 360,
+    "models": 90,
+    "relaxation_records": 45
+  },
+  "runtime_summary": {
+    "architecture": "PI confirmed geranium/tulip same architecture as violet",
+    "boltz_distribution": "2.2.1",
+    "checkpoint_bytes": 2286561469,
+    "checkpoint_sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+    "geranium": {
+      "numpy": "2.4.4",
+      "parmed": "0+unknown",
+      "role": "Amberrelaxation"
+    },
+    "qualification": "Exploratory structural comparison; keep host/runtime batch factor visible. Same-number seeds do not imply numerically identical cross-build realizations.",
+    "same_boltz_source": true,
+    "tulip": {
+      "python": "3.12.11",
+      "rdkit": "2026.03.1",
+      "torch": "2.11.0+cu130"
+    },
+    "violet": {
+      "python": "3.10.19",
+      "rdkit": "2025.09.3",
+      "torch": "2.9.1+cu128"
+    }
+  },
+  "source_hashes": {
+    "/data/jpc/covalent-enzyme-design/analysis/nyl12_filter_calibration/tables/pa6_static_per_variant.csv": "027865022fced44cc5a5ab8cb4ae79d62653abdf56850319fb01bd794ca9cdd9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/all_sites.csv": "41939d8a4ac8c388b68395937428aeb9870cbce73a396b879c2d04eb2b616d07",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/model_summary.csv": "045b8359b1ae437998deecc2adc06ea44233219db1fdde1a5003d2e38f874612",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/occupied_sites.csv": "8f946731dfc001ed4b2d0ac717b6bbbec443ab8b1e8ce474053d1c3b42e81bf1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/relaxation_acceptance.csv": "9119a9d6fbd7ef320e063be84222092a01065b45bd58c5bbbbd724256f85627f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/report.json": "d7add57f3e21e8d492caf474f23bdaa2dcd6f03622b6af36166438fef39b283e",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/dispatch/prediction_host_assignments.csv": "90ea42c8122d2c183bd229abe9f44cae018bd53be8f0cdf457b0cbd277a62682",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/dispatch/runtime_versions.json": "de61d9534614b113f1342fa82c9ab2271fe944136130d907ebc70bff66e453bf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/execution_provenance.json": "d8a198324bba6e96f4edaeb568dfeece44b9232957c1a10fe1d6beafeb2c6be0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/candidate_manifest.json": "f0bfb92e5a65d08c4891ee50bc85b94977d391f34f965dec2d656b978c816d9f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/source_snapshot/src/nyl12_covalent/design_geometry_comparison.py": "6c5add22389fde929b4f7effb79c8308ac285a447bdcfb19f0f99ba7009e0a5f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/status.json": "2ef7e13c87686b9f68a6f27949ca31555642f30b6fcdb594275265c1dd711cb1",
+    "/data/jpc/covalent-enzyme-design/scripts/screen_pa6_binding_orientation.py": "82e6b5410f1f3aab841bcf78710229b6cd58b4376d7ef977cee7d5b377c7bfb5",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/design_geometry_comparison.py": "6c5add22389fde929b4f7effb79c8308ac285a447bdcfb19f0f99ba7009e0a5f",
+    "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_nma_four_site_geometry.py": "f2774e5fc26afdce892b979ec929b40dbeaf972d155d032a3db7845f7f803a3d"
+  },
+  "summary_rows": [
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "WT"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 3,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 2,
+      "joint_sites": 3,
+      "models": 5,
+      "models_with_any_joint": 2,
+      "native_pass_sites": 9,
+      "stage": "relaxed",
+      "tier_a_sites": 2,
+      "tier_ab_sites": 5,
+      "variant": "WT"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_01"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 4,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 3,
+      "joint_sites": 4,
+      "models": 5,
+      "models_with_any_joint": 3,
+      "native_pass_sites": 12,
+      "stage": "relaxed",
+      "tier_a_sites": 2,
+      "tier_ab_sites": 5,
+      "variant": "variant_01"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_02"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 1,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 1,
+      "joint_sites": 1,
+      "models": 5,
+      "models_with_any_joint": 1,
+      "native_pass_sites": 6,
+      "stage": "relaxed",
+      "tier_a_sites": 1,
+      "tier_ab_sites": 2,
+      "variant": "variant_02"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_03"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 7,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 4,
+      "joint_sites": 7,
+      "models": 5,
+      "models_with_any_joint": 4,
+      "native_pass_sites": 8,
+      "stage": "relaxed",
+      "tier_a_sites": 11,
+      "tier_ab_sites": 15,
+      "variant": "variant_03"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_04"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 7,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 4,
+      "joint_sites": 7,
+      "models": 5,
+      "models_with_any_joint": 4,
+      "native_pass_sites": 14,
+      "stage": "relaxed",
+      "tier_a_sites": 4,
+      "tier_ab_sites": 12,
+      "variant": "variant_04"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_05"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 16,
+      "force_converged_joint_sites": 1,
+      "force_converged_models": 4,
+      "force_converged_models_with_joint": 1,
+      "joint_sites": 3,
+      "models": 5,
+      "models_with_any_joint": 2,
+      "native_pass_sites": 13,
+      "stage": "relaxed",
+      "tier_a_sites": 4,
+      "tier_ab_sites": 8,
+      "variant": "variant_05"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_06"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 8,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 3,
+      "joint_sites": 8,
+      "models": 5,
+      "models_with_any_joint": 3,
+      "native_pass_sites": 18,
+      "stage": "relaxed",
+      "tier_a_sites": 4,
+      "tier_ab_sites": 10,
+      "variant": "variant_06"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_07"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 7,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 2,
+      "joint_sites": 7,
+      "models": 5,
+      "models_with_any_joint": 2,
+      "native_pass_sites": 9,
+      "stage": "relaxed",
+      "tier_a_sites": 9,
+      "tier_ab_sites": 15,
+      "variant": "variant_07"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": "",
+      "force_converged_joint_sites": "",
+      "force_converged_models": "",
+      "force_converged_models_with_joint": "",
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 20,
+      "stage": "raw",
+      "tier_a_sites": 0,
+      "tier_ab_sites": 0,
+      "variant": "variant_08"
+    },
+    {
+      "assigned_sites": 20,
+      "force_converged_assigned_sites": 20,
+      "force_converged_joint_sites": 0,
+      "force_converged_models": 5,
+      "force_converged_models_with_joint": 0,
+      "joint_sites": 0,
+      "models": 5,
+      "models_with_any_joint": 0,
+      "native_pass_sites": 12,
+      "stage": "relaxed",
+      "tier_a_sites": 1,
+      "tier_ab_sites": 4,
+      "variant": "variant_08"
+    }
+  ]
+}

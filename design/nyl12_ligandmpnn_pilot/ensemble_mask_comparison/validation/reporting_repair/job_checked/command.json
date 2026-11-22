@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/finalize_reporting.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "MKL_NUM_THREADS": "1",
+    "MPLBACKEND": "Agg",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design:/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/model_summary.csv": "69e6e5b0365bc7359b87da208888fc6b635f636f7a9dd2ffa66ecd6b15d130f0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/candidate_manifest.json": "dd5a5288d7f4485c6b2b86b67ccb9b9536b3799bae05c7761519f4e5298dfbfb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/design_geometry_plots.py": "4a5507fcd2cb75efbddb3261dddabf84a4d63dba5c423691c0f5fe41e574c8cb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/finalize_reporting.py": "522bc4b4b18dd92797d0d3b0f928fe003f44dda395531db881a8a40bf587b69f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/local_design_validation_phases.py": "616d7b1ae2f9bafcf4c3be4ef7ef89469b7a00e1d41aa9f2a43a5348fdaf0425",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/design_geometry_plots.py": "4a5507fcd2cb75efbddb3261dddabf84a4d63dba5c423691c0f5fe41e574c8cb",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/local_design_validation_phases.py": "616d7b1ae2f9bafcf4c3be4ef7ef89469b7a00e1d41aa9f2a43a5348fdaf0425"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_checked/job.log",
+  "session_name": "nyl12_mask_reporting_checked_20261122",
+  "started_utc": null
+}

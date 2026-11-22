@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "sequences": [
+    {
+      "protein": {
+        "id": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "sequence": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAAGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFKDQTKDEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSATVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNTTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "msa": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/msas/mask_07/alpha.csv"
+      }
+    },
+    {
+      "protein": {
+        "id": [
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "sequence": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+        "msa": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/msas/mask_07/beta.csv"
+      }
+    },
+    {
+      "ligand": {
+        "id": [
+          "I",
+          "J",
+          "K",
+          "L"
+        ],
+        "smiles": "[NH3+]CCCCCC(NCCCCCC(NCCCCCC(NCCCCCC([O-])=O)=O)=O)=O"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "contact": {
+        "token1": [
+          "E",
+          1
+        ],
+        "max_distance": 3.0,
+        "force": true,
+        "token2": [
+          "I",
+          "C54"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "A",
+          186
+        ],
+        "max_distance": 3.2,
+        "force": true,
+        "token2": [
+          "I",
+          "O49"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "F",
+          1
+        ],
+        "max_distance": 3.0,
+        "force": true,
+        "token2": [
+          "J",
+          "C54"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "B",
+          186
+        ],
+        "max_distance": 3.2,
+        "force": true,
+        "token2": [
+          "J",
+          "O49"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "G",
+          1
+        ],
+        "max_distance": 3.0,
+        "force": true,
+        "token2": [
+          "K",
+          "C54"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "C",
+          186
+        ],
+        "max_distance": 3.2,
+        "force": true,
+        "token2": [
+          "K",
+          "O49"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "H",
+          1
+        ],
+        "max_distance": 3.0,
+        "force": true,
+        "token2": [
+          "L",
+          "C54"
+        ]
+      }
+    },
+    {
+      "contact": {
+        "token1": [
+          "D",
+          186
+        ],
+        "max_distance": 3.2,
+        "force": true,
+        "token2": [
+          "L",
+          "O49"
+        ]
+      }
+    }
+  ],
+  "templates": [
+    {
+      "cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+      "chain_id": [
+        "A",
+        "E",
+        "B",
+        "F",
+        "C",
+        "G",
+        "D",
+        "H"
+      ],
+      "template_id": [
+        "A",
+        "A",
+        "B",
+        "B",
+        "C",
+        "C",
+        "D",
+        "D"
+      ]
+    }
+  ]
+}

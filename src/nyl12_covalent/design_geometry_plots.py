@@ -22,8 +22,8 @@ SITES = ("AE", "BF", "CG", "DH")
 METRICS = ("d1", "d2", "d3", "a_bd", "herschlag_phi")
 LABELS = {
     "d1": "Thr OG1–C54 (Å)",
-    "d2": "C54–O49 (Å)",
-    "d3": "C54–N59 (Å)",
+    "d2": "O49–Phe113 N (Å)",
+    "d3": "O49–Asn186 ND2 (Å)",
     "a_bd": "Bürgi–Dunitz angle (°)",
     "herschlag_phi": "Herschlag φ (°; signed)",
 }
@@ -61,12 +61,14 @@ def _numeric(
     return values
 
 
-def _check_duplicates(rows: list[dict[str, str]], *, site: bool) -> None:
+def _check_duplicates(
+    rows: list[dict[str, str]], *, site: bool, variants: tuple[str, ...]
+) -> None:
     """Reject duplicate model-stage records, including duplicate occupied sites."""
     seen: set[tuple[str, int, str, str | None]] = set()
     for index, row in enumerate(rows, 2):
         variant, stage = row["variant"], row["stage"]
-        if variant not in VARIANTS or stage not in STAGES:
+        if variant not in variants or stage not in STAGES:
             raise ValueError(
                 f"Unsupported variant/stage in row {index}: {variant}/{stage}"
             )
@@ -106,10 +108,12 @@ def _stage_counts(
     }
 
 
-def _geometry_plot(rows: list[dict[str, str]], output: Path, planned: int) -> None:
+def _geometry_plot(
+    rows: list[dict[str, str]], output: Path, planned: int, variants: tuple[str, ...]
+) -> None:
     figure, axes = plt.subplots(2, 5, figsize=(19, 8), sharex=True)
     offsets = dict(zip(SITES, (-0.24, -0.08, 0.08, 0.24), strict=True))
-    xpositions = {variant: index for index, variant in enumerate(VARIANTS)}
+    xpositions = {variant: index for index, variant in enumerate(variants)}
     for row_index, stage in enumerate(STAGES):
         stage_rows = [row for row in rows if row["stage"] == stage]
         n_models = len({(row["variant"], int(row["seed"])) for row in stage_rows})
@@ -139,21 +143,26 @@ def _geometry_plot(rows: list[dict[str, str]], output: Path, planned: int) -> No
                     f"{stage} stage\n{LABELS[metric]}\n{n_models}/{planned} models; {missing} missing"
                 )
             if row_index == 1:
-                axis.set_xticks(range(len(VARIANTS)), VARIANTS, rotation=45, ha="right")
+                axis.set_xticks(range(len(variants)), variants, rotation=45, ha="right")
     handles = [
         Line2D([], [], marker="o", linestyle="", color=SITE_COLORS[s], label=s)
         for s in SITES
     ]
-    figure.legend(handles=handles, title="Catalytic site", loc="upper center", ncol=4)
+    figure.legend(
+        handles=handles, title="Catalytic site", loc="upper center",
+        bbox_to_anchor=(0.5, 0.94), ncol=4,
+    )
     figure.suptitle("Occupied-site catalytic geometry by design and stage")
-    figure.tight_layout(rect=(0, 0, 1, 0.92))
+    figure.tight_layout(rect=(0, 0, 1, 0.86))
     figure.savefig(output, dpi=180)
     plt.close(figure)
 
 
-def _fraction_plot(rows: list[dict[str, str]], output: Path, planned: int) -> None:
+def _fraction_plot(
+    rows: list[dict[str, str]], output: Path, planned: int, variants: tuple[str, ...]
+) -> None:
     figure, axes = plt.subplots(1, 2, figsize=(13, 6), sharex=True, sharey=True)
-    xpositions = {variant: index for index, variant in enumerate(VARIANTS)}
+    xpositions = {variant: index for index, variant in enumerate(variants)}
     stage_style = {"raw": ("#0072B2", -0.12), "relaxed": ("#D55E00", 0.12)}
     for axis, metric, title in zip(
         axes,
@@ -186,14 +195,17 @@ def _fraction_plot(rows: list[dict[str, str]], output: Path, planned: int) -> No
                 s=30,
                 alpha=0.75,
             )
-        axis.set_xticks(range(len(VARIANTS)), VARIANTS, rotation=45, ha="right")
+        axis.set_xticks(range(len(variants)), variants, rotation=45, ha="right")
     handles = [
         Line2D([], [], marker="o", linestyle="", color=color, label=stage)
         for stage, (color, _) in stage_style.items()
     ]
-    figure.legend(handles=handles, title="Stage", loc="upper center", ncol=2)
+    figure.legend(
+        handles=handles, title="Stage", loc="upper center",
+        bbox_to_anchor=(0.5, 0.92), ncol=2,
+    )
     figure.suptitle("Model-level geometry pass fractions (sites nested within models)")
-    figure.tight_layout(rect=(0, 0, 1, 0.9))
+    figure.tight_layout(rect=(0, 0, 1, 0.82))
     figure.savefig(output, dpi=180)
     plt.close(figure)
 
@@ -203,6 +215,7 @@ def plot_comparison(
     model_summary_csv: Path,
     output: Path,
     planned_models: int = 45,
+    variant_order: tuple[str, ...] = VARIANTS,
 ) -> dict[str, Any]:
     """Write geometry and model-level pass-fraction plots.
 
@@ -211,11 +224,18 @@ def plot_comparison(
         model_summary_csv: Model-level tier and joint-pass fractions.
         output: Existing or new directory for PNGs and plot manifest.
         planned_models: Expected unique model seeds per stage.
+        variant_order: Explicit allowed cohort IDs in plotting order.
     Returns:
         Plot paths and observed/missing model counts.
     """
     if planned_models < 1:
         raise ValueError("planned_models must be positive")
+    if (
+        not variant_order
+        or any(not isinstance(name, str) or not name.strip() for name in variant_order)
+        or len(set(variant_order)) != len(variant_order)
+    ):
+        raise ValueError("variant_order must contain unique nonempty cohort IDs")
     occupied = _read_rows(occupied_csv, {"variant", "seed", "stage", "site", *METRICS})
     summary = _read_rows(
         model_summary_csv,
@@ -227,17 +247,18 @@ def plot_comparison(
             "joint_pass_fraction",
         },
     )
-    _check_duplicates(occupied, site=True)
-    _check_duplicates(summary, site=False)
+    _check_duplicates(occupied, site=True, variants=variant_order)
+    _check_duplicates(summary, site=False, variants=variant_order)
     output.mkdir(parents=True, exist_ok=True)
     geometry_path = output / "geometry_before_after.png"
     fraction_path = output / "tier_native_comparison.png"
-    _geometry_plot(occupied, geometry_path, planned_models)
-    _fraction_plot(summary, fraction_path, planned_models)
+    _geometry_plot(occupied, geometry_path, planned_models, variant_order)
+    _fraction_plot(summary, fraction_path, planned_models, variant_order)
     manifest: dict[str, Any] = {
         "geometry_plot": str(geometry_path.resolve()),
         "fraction_plot": str(fraction_path.resolve()),
         "planned_models_per_stage": planned_models,
+        "variant_order": list(variant_order),
         "occupied_geometry_counts": _stage_counts(occupied, planned_models),
         "model_fraction_counts": _stage_counts(summary, planned_models),
         "replicate_unit": "model seed; sites within a model are nested, not independent",

@@ -1,0 +1,7 @@
+{
+  "src/nyl12_covalent/design_geometry_plots.py": "aee0c3d1b652848f009a3268e51946828d1f4bf380ab3a8497b40db4ea927ef5",
+  "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+  "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/model_summary.csv": "69e6e5b0365bc7359b87da208888fc6b635f636f7a9dd2ffa66ecd6b15d130f0",
+  "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/geometry_before_after.png": "80c1d7ebcf7a1d70371c62b21d15bf782f74554691fa7d1a61648b4182c17c99",
+  "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png": "e53c01de04221e260a48f45c31d2aa223544bb54ebfe74c9af486f0377883316"
+}

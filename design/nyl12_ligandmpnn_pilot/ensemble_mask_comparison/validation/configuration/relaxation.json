@@ -1,0 +1,10 @@
+{
+  "release": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/parameters",
+  "mol2": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_source.mol2",
+  "mapping": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_context_mapping.json",
+  "tleap": "/data/jpc/code/ambertools26/venv/bin/tleap",
+  "engine": "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP",
+  "amberhome": "/data/jpc/code/ambertools26/venv",
+  "ssh_identity": "/home/jpc/.ssh/id_ed25519_aster",
+  "reference_cif": "/data/jpc/covalent-enzyme-design/cif/n12c.cif"
+}

@@ -1,0 +1,131 @@
+{
+  "campaign": "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison",
+  "status": "completed_after_reporting_repair",
+  "new_models": 52,
+  "reused_WT_models": 3,
+  "model_seeds": 55,
+  "force_converged_models": 55,
+  "joint_sites": {
+    "broader": [
+      12,
+      80
+    ],
+    "focused": [
+      8,
+      80
+    ],
+    "WT": [
+      1,
+      20
+    ]
+  },
+  "negative_phi_joint_sites": {
+    "broader": [
+      11,
+      80
+    ],
+    "focused": [
+      3,
+      80
+    ],
+    "WT": [
+      0,
+      20
+    ]
+  },
+  "best_repeatable_designed_candidate": "mask_07:6/20 joint sites in3/5 seeds,allnegativephi",
+  "known_active_control_joint_sites": {
+    "K59D": [
+      0,
+      20
+    ],
+    "V111C": [
+      7,
+      20
+    ]
+  },
+  "interpretation": "Descriptive structural pilot; nested seeds/sites; activity classifier and chemical barrier improvement unvalidated",
+  "tests": {
+    "focused_passed": 130,
+    "renderer_and_plotter_coverage_percent": 95.45,
+    "ruff": "passed",
+    "shell_syntax": "passed",
+    "standalone_report_CLI_coverage_measured": false,
+    "native_report_receipt_exit": 0
+  },
+  "movie_delivery": {
+    "cause": "100MiB rsynccap silently skipped433MiB DCD",
+    "fix": "500MiB bundlecap and strict manifest verification",
+    "trajectory_bytes": 453002956,
+    "data_modified": false,
+    "GUI_VMD_test_performed": false
+  },
+  "original_failed_receipts_preserved": true,
+  "scientific_calculations_repeated": false,
+  "source_sha256": {
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/README.md": "4d6bb0162e67b33ca8af697633b07574cca260bf268ee7f4da55abe6e4ee0b67",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/status.json": "72dcfb88c9267c352b88871976295cac8058fe0cf95839ea0fd533a5024afcf5",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/COMPLETED.json": "1bc5600a3ed463da8a3099ad216861deab912250fcacf8ed8b1c20bbe5a00af9",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/all_sites.csv": "8bd007a2f17572f18970ae73b23256aef2333586789a2d06df5077d5450f13d4",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/comparison_summary.csv": "8cf1b9ffe8558400f272b0a88c8cbd59573e78c96c769e791b7f0bb770b6326e",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/comparison_summary.json": "8787a26d419c3bea39cfd7b4c4607cc537bf9fdc576329bc70106673aac8f1ff",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/group_summary.csv": "c6d3306823acd875a4ebf6a20535029a74f57d35ceb5298458f8970c68c0bb52",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/model_summary.csv": "69e6e5b0365bc7359b87da208888fc6b635f636f7a9dd2ffa66ecd6b15d130f0",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/geometry_before_after.png": "80c1d7ebcf7a1d70371c62b21d15bf782f74554691fa7d1a61648b4182c17c99",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/plot_manifest.json": "cc96110266f38e487daf973ea347b3a7d942bc5c06193f7b2327feddb480fe18",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png": "e53c01de04221e260a48f45c31d2aa223544bb54ebfe74c9af486f0377883316",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/relaxation_acceptance.csv": "218ebaf843da4de479ea012b6cfdddace02b7ab6a4bb6d970f9d151bf59224c1",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/report.json": "44c3ba4d2b50712cfa76b85cd78c681148bd4d73a6ff509c4ce0b5556ebc18a8",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/summarize_mask_comparison.py": "beffc6ee486a154cab07001f502c6ad1fd005fb8990ac95e265113e2a512d5bd",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/corrected_source/design_geometry_plots.py": "8746e996afde993a7004368bfb18a30d2499f68b4c5a03ef919542af0be27937",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/corrected_source/design_geometry_plots_layout.py": "aee0c3d1b652848f009a3268e51946828d1f4bf380ab3a8497b40db4ea927ef5",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/design_geometry_plots.py": "4a5507fcd2cb75efbddb3261dddabf84a4d63dba5c423691c0f5fe41e574c8cb",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/final_plot_hashes.json": "0120efd4dfede2c21b8f59d36c0c15c35b438b4b32790822c52f66b2e2b1869d",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/finalize_reporting.py": "522bc4b4b18dd92797d0d3b0f928fe003f44dda395531db881a8a40bf587b69f",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job/command.json": "010d4ce3e51b579e8c9b263b717429eb1d325d8ca6a2865d6cb65cc3ec7c1f4a",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job/job.log": "3ac8aadb9fd10e3bc088c4a903ab5e9abeab4a64a3517a392dc3e01d340078b4",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job/run.sh": "f7410c7d0c6d8509b1691004109fe0d89c6851cd3079c1be3266245382a63969",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job/status.json": "55f70c9a152b2bece64dde8388e5fe81e09f35e1553a2e7f35a42a9cce45f9bb",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_checked/command.json": "5d13347f04931a7d840d786efbae27afbee0b8087083b78be97132d51c3fb814",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_checked/job.log": "ffcdda94da16c6455dd6796602f70169a30fc7975b5fa0e0e9e48fba6ae0f75e",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_checked/run.sh": "997c205a15a3e6085e96da3582b5e56da4e1fc485a340f42a2233cd57379b9e7",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_checked/status.json": "ec8d4cdd9624c85d386911f0f8c01a1623e3267d8dd1862998b66f8d99cf49e0",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_final/command.json": "816ef85826dce3974ee0f13ab328c97268a92d53adb0eae0987272056dbd2497",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_final/job.log": "b20bf5bf52ba618a1b7688bbf0cbb08557aed02288be6934d6f911c44d927616",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_final/run.sh": "36ce1ab5bd5b62d5b92899d21540a987ddb5bc91111bfd41760c392a4e2e8011",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/job_final/status.json": "d3600fdcfbfd4d5ddc1a5392d7e0e5731ff7f948ba8a7da563c868f77432c056",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/local_design_validation_phases.py": "616d7b1ae2f9bafcf4c3be4ef7ef89469b7a00e1d41aa9f2a43a5348fdaf0425",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/all_sites.csv": "8bd007a2f17572f18970ae73b23256aef2333586789a2d06df5077d5450f13d4",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/ensemble_mask_comparison_status.json": "04a5cde81dc6174c771e31c2b3f8e05e2cd96f8e6ac3459e2a3f7f8286d0241f",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/model_summary.csv": "69e6e5b0365bc7359b87da208888fc6b635f636f7a9dd2ffa66ecd6b15d130f0",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/report.json": "44c3ba4d2b50712cfa76b85cd78c681148bd4d73a6ff509c4ce0b5556ebc18a8",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/validation_status.json": "e00a93e5fb4a2c29dcd99b3ad4926adbba8829c5c60ae1a82dbf8fd02fafec13",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/original/workflow_job_checked_status.json": "7f8e9fed6a60adeee3fa24a6a5ac192265c8452174c6efc4b6afbfdbe2ff6968",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/publish_existing_comparison.py": "6574964bb6cd895e18a4711cb2d58dd978bad52f036d20c225d2ddb7df963f2b",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/status.json": "89cfffceafdc4339b13b2f4d1573e767e1d2c3621bb5b43420be608fdaf08009",
+    "docs/CURRENT_JOBS.md": "ae5e88f3ad6e0c2ee9e2829125eeb6bd07137e1ff8d318a2ad87096a0ba8a56f",
+    "docs/NYL12_MECHANISM_ROADMAP.md": "72d84c989b812c4c8fe020e404bdf883e175e0b3dd9f5b94b00e0010b72db010",
+    "docs/standalone_handoff_20261020.md": "928d93398271714f05d8fde077e3b789937c560af67f8bef582e9450ba896059",
+    "manuscript/RESULTS_DRAFT.md": "acd4ed543c7241b9abc9e539f33744fd932e891c8dc509cd7a8369a4ad3ca0b1",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/MANIFEST.sha256": "7d1f77d5202bc0a5ad96057735728ac362224e844df3f5e41720aca78b091a41",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/README.md": "734567c200ef4481793800da7b4a3cbee840c914734be1cea0222ff2e3e9ea7f",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/execution_acceptance.json": "72c6acdf2ea915d25380e34805ea6b72c21a04a53cda6edc60407c3a2552e0b0",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/request.json": "dd30e07e28da0551c0c57abe0cc7f52de106522b0d1c1e39aba50671a41f217d",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd": "cbf353202367284eb4f97e29c1ac828edbde7513b5a910bafbfc90aad2c66060",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/viewer_repair/neb_us_movie_vmd.py": "e18a44d70297db5b9eaabb6f9fab0780ab7e875bcdfa5263be1cf5bedbbe23ed",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/viewer_repair/original/MANIFEST.sha256": "421382cc35fc18d2593b6d56bf9325760f21e32933d741bb4791b61325f306f7",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/viewer_repair/original/view_umbrella.vmd": "af502dad595bb93364e5cbbb33cdf18474325391280b6bce7a8443c8ef26972a",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/viewer_repair/refresh_viewer.py": "2084aa356e6ac1a61d2a1cd9a4fca881d3c737a18365629658327e8e0cd3b500",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/viewer_repair/repair_receipt.json": "a49df796fd834bba6a5be5e8923670fabd1e67c1c94eb6a54d92b6a33d473cc6",
+    "scripts/pull_nyl12_inspection.sh": "091bd21a069bacce177d26370cba630dc9a917bad6037736a25467a092540b38",
+    "src/nyl12_covalent/design_geometry_plots.py": "aee0c3d1b652848f009a3268e51946828d1f4bf380ab3a8497b40db4ea927ef5",
+    "src/nyl12_covalent/local_design_validation_phases.py": "616d7b1ae2f9bafcf4c3be4ef7ef89469b7a00e1d41aa9f2a43a5348fdaf0425",
+    "src/nyl12_covalent/neb_us_movie_vmd.py": "e18a44d70297db5b9eaabb6f9fab0780ab7e875bcdfa5263be1cf5bedbbe23ed",
+    "tests/test_design_geometry_plots.py": "c0d5c68d80aaf0db5fd3ff2e070b954b6d8c18d8ef49774a967df4ad2e3042c1",
+    "tests/test_neb_us_movie_loading.py": "0f589ce0524d759b94d84a8c8eb74dd67401c6957d0584d5ecb1fa3df3987bee",
+    "tests/test_neb_us_movie_vmd.py": "0e3cc6f09a0bd20b8a861d96dc6987a8076b669f68804316b2a06570ca58adbc",
+    "tests/test_neb_us_pull.py": "55f3c2078892991d91c1c336bd7751550301f80420fb7ef998f7683a4d482534"
+  }
+}

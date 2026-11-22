@@ -1,0 +1,1350 @@
+{
+  "analysis_definition": {
+    "active_subset": {
+      "active_rmsd_uses_global_fit": true,
+      "alpha_positions_per_A_to_D_copy": [
+        50,
+        51,
+        52,
+        73,
+        76,
+        101,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        151,
+        152,
+        153,
+        156,
+        185,
+        186,
+        187,
+        188
+      ],
+      "beta_positions_per_E_to_H_copy": [
+        1,
+        39,
+        40,
+        41,
+        42
+      ],
+      "ca_atom_count": 100
+    },
+    "global_fit": "proper-rotation Kabsch fit on all 1,312 A-H protein CAs in canonical chain/position order",
+    "pairs": "all ten unordered within-variant seed pairs for each stage; pairwise values are not independent model replicates",
+    "relaxed_outputs": "all completed models included; force-converged-only statistics use pairs where both models meet the recorded force tolerance",
+    "scope": "descriptive static structural variation; no catalytic activity or causal heterogeneity inference"
+  },
+  "fit_validation": {
+    "known_transform_rmsd_angstrom": 7.447602459741819e-16,
+    "rotation_determinant": 1.0
+  },
+  "force_converged_models": 44,
+  "model_count": 45,
+  "models": [
+    {
+      "final_rms_gradient": 0.048767,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/raw/normalized.pdb",
+      "raw_sha256": "0c4ad9d6a74561050171c2423dee858462eb3ea0432cece84c0582ca2c7f4a3c",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "a151500ace60ab35f2c71dc12d51434aab313aafbd10a186e3a8c6569ba87e9a",
+      "seed": 2026112201,
+      "variant": "WT"
+    },
+    {
+      "final_rms_gradient": 0.048592,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/raw/normalized.pdb",
+      "raw_sha256": "a63bfe8f5cbaec7ee2af25149ded6a9879f85169dd2b64bc3b8e047331d994d9",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "8fbcbdc6ebc630113bc4c7393a1d51a94782152d5c57da0097e831da2515cc68",
+      "seed": 2026112202,
+      "variant": "WT"
+    },
+    {
+      "final_rms_gradient": 0.04868,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/raw/normalized.pdb",
+      "raw_sha256": "58ac25029ad1f8ef87f14b79a6d06ed4c123e8d6c4ab0a9ca896f4c5e2300bd0",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "2d0ffcc9f99069b6549e3f1133f2df9a73a47dfaa30c61ca70e6da16518c0c8f",
+      "seed": 2026112203,
+      "variant": "WT"
+    },
+    {
+      "final_rms_gradient": 0.045537,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/raw/normalized.pdb",
+      "raw_sha256": "9a1eefecc636b285e50d695411621cae5992e9195f1f47bd3a409f1963143213",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "6471988e73277d90dbfd0112945c20dfcf955f3e3375ca65601fcc26291b8e73",
+      "seed": 2026112204,
+      "variant": "WT"
+    },
+    {
+      "final_rms_gradient": 0.042789,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/raw/normalized.pdb",
+      "raw_sha256": "52baa99e29319fd774e66b87a49005e20e4cc558a95c0cb30dbe197478419d07",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "3cd6d0c58e3ccceb1e8db3b188c717b8696fc3ced70a32d9fa4d69baee40ede6",
+      "seed": 2026112205,
+      "variant": "WT"
+    },
+    {
+      "final_rms_gradient": 0.047602,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/raw/normalized.pdb",
+      "raw_sha256": "4b15a573f88debea30a60a3778fa91a2a6be1b378dd07effae24f7d8d884bd5c",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "dfd1ce5d7940a4a344917e585027f5523ab37afb15856349520f332bfe862ab0",
+      "seed": 2026112201,
+      "variant": "variant_01"
+    },
+    {
+      "final_rms_gradient": 0.046006,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/raw/normalized.pdb",
+      "raw_sha256": "51aee0959ebc0d0bb54af0768606feed7452e425d0e60dbbfc86882f01e53d02",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "081e894bca570a48594e72ce71cdd7cc157bebcce0f2d0406dff384d7061e8ec",
+      "seed": 2026112202,
+      "variant": "variant_01"
+    },
+    {
+      "final_rms_gradient": 0.045267,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/raw/normalized.pdb",
+      "raw_sha256": "df59f899e40ec2340de612fac4c51c80a6d6d5a3a3b693bc42fa70defe45c673",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "ea93158d9d1dfc8af7590c2ef6f9440912b3a3debf4886badda294cab2db92de",
+      "seed": 2026112203,
+      "variant": "variant_01"
+    },
+    {
+      "final_rms_gradient": 0.049197,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/raw/normalized.pdb",
+      "raw_sha256": "fc58b19e44afbecf971afc180c0ac294fce19df191a0ceddcb46ad27932133cd",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "31fad80660b794d2ad02a26f49a6b7be3a9a84a2d51aca9810a75beb8ef0701d",
+      "seed": 2026112204,
+      "variant": "variant_01"
+    },
+    {
+      "final_rms_gradient": 0.048147,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/raw/normalized.pdb",
+      "raw_sha256": "c044a514d27f689257777429bd6592efd5ff203a0dbfcd10c36db54b30ba8be0",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "05209f52beff0e370c5654a48418ad867e897a2a4f33bc0793f88f8e01c56ce5",
+      "seed": 2026112205,
+      "variant": "variant_01"
+    },
+    {
+      "final_rms_gradient": 0.049816,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/raw/normalized.pdb",
+      "raw_sha256": "3bcbd00a30f0cdfac876d19ae263b77e1017c719fe58ee046e820d0e66467ab1",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "f448b4065de497b9e18e52b01006326c7851508ae5373fb3437ed75aedb92162",
+      "seed": 2026112201,
+      "variant": "variant_02"
+    },
+    {
+      "final_rms_gradient": 0.049979,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/raw/normalized.pdb",
+      "raw_sha256": "1ca0ed9f0523300823c018e8446d77b5019febe2d213189cfd2cb608082a7363",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "9b3dfb8afb18f46aaadbc30128693646fa2f93c6d64214bc96f3c0895dacf740",
+      "seed": 2026112202,
+      "variant": "variant_02"
+    },
+    {
+      "final_rms_gradient": 0.049087,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/raw/normalized.pdb",
+      "raw_sha256": "4947b58732c3825f5fa3ae209e2acecb7c22453a3b5488a7ee6a65993b052e24",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "87f5341249885f1c853ea7cefec38b4a8f15b4817980868d3adae4beb4aab7a6",
+      "seed": 2026112203,
+      "variant": "variant_02"
+    },
+    {
+      "final_rms_gradient": 0.049843,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/raw/normalized.pdb",
+      "raw_sha256": "a570713c6e151b362615204b889f6b76284178c201490bd9df34e1fd98d6f0f0",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "13458e94cb9292713de43118acc1dc050faa2e3e1b582d7557d82ec6fa5a4ec0",
+      "seed": 2026112204,
+      "variant": "variant_02"
+    },
+    {
+      "final_rms_gradient": 0.049025,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/raw/normalized.pdb",
+      "raw_sha256": "bff2e3093ba57cfd359658dcff723ac0e3c70b8a876b5211186dbca97f5edfe9",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "a178d2b3c23a66a07adf38daff504744b71a2f05fa7b5bab42634fdc4c22b563",
+      "seed": 2026112205,
+      "variant": "variant_02"
+    },
+    {
+      "final_rms_gradient": 0.046872,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/raw/normalized.pdb",
+      "raw_sha256": "b3fc1467a52bcb44e056264c0b98063e76cd3cb98badb7fb7f0802339d529696",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "7144413720f1ebe0187d2eec2c2ccf19290130650467340899a3119340f49b68",
+      "seed": 2026112201,
+      "variant": "variant_03"
+    },
+    {
+      "final_rms_gradient": 0.04633,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/raw/normalized.pdb",
+      "raw_sha256": "9025b29211e8f8a269825a9d3f405d25072329ffb541c80a754744f2adf59080",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "da625529e996f4afbd629dc7feabd2e7fa01506a339d4be91157b24c9b7bae90",
+      "seed": 2026112202,
+      "variant": "variant_03"
+    },
+    {
+      "final_rms_gradient": 0.045674,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/raw/normalized.pdb",
+      "raw_sha256": "7b4b612cbc48b1b360289fcfa47717f057ced48e5082cac73a4850f30f18eba3",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "4f915ca3cef4a41880001d1449745ecb6a53a10cf473ca5231206e83791af691",
+      "seed": 2026112203,
+      "variant": "variant_03"
+    },
+    {
+      "final_rms_gradient": 0.047959,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/raw/normalized.pdb",
+      "raw_sha256": "17451c7798af8a6f7a3e7f3e490667211c63d1e181e0267f010bb4633dc39d47",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "27b6fb1fbe0138dcee4f6aac7389b03c466922f529199fda5c363ee3458a88ac",
+      "seed": 2026112204,
+      "variant": "variant_03"
+    },
+    {
+      "final_rms_gradient": 0.048472,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/raw/normalized.pdb",
+      "raw_sha256": "9b01d75090b43049313bf3a229cd8d1924a335bfdf3775ba704330de5a8fd587",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "0d01b0993afc691c04629fd628f9c95e32b319342b1179b5b6ad3c370213e929",
+      "seed": 2026112205,
+      "variant": "variant_03"
+    },
+    {
+      "final_rms_gradient": 0.044957,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/raw/normalized.pdb",
+      "raw_sha256": "8f88de5ecf1e715a66c7a503246824dde9dd3d674b78ddc96cb1cb8d0643758c",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "258d032bbf8f175c60141d3cd31315f9ea967587d2448270b818ff00d696aa98",
+      "seed": 2026112201,
+      "variant": "variant_04"
+    },
+    {
+      "final_rms_gradient": 0.046144,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/raw/normalized.pdb",
+      "raw_sha256": "6e87423f19b79bc50992392259734106d9452cfec1e10a6e742d3ae841a9477a",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "e79a7d68277b597c4c61d13922d39fd77064a61255ef82f2f81a48237c078b97",
+      "seed": 2026112202,
+      "variant": "variant_04"
+    },
+    {
+      "final_rms_gradient": 0.049876,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/raw/normalized.pdb",
+      "raw_sha256": "1821374b3189a551b267ab12b8bab663a36f8cf50d17500c5b3f21a1b4fb43d8",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "b55c8ab2b8aeb1cd64b290d91a3d2d6710b9d2d9813497f7ed3c1a7523df244a",
+      "seed": 2026112203,
+      "variant": "variant_04"
+    },
+    {
+      "final_rms_gradient": 0.048485,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/raw/normalized.pdb",
+      "raw_sha256": "1a563d7253c6e1fdb1cbba723aefb39a5fefe27891429469444fcd7e80d97486",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "26bd22e71eb8d946405ca0e4c356c720c418e12ca6cac5951b8c60d208dae362",
+      "seed": 2026112204,
+      "variant": "variant_04"
+    },
+    {
+      "final_rms_gradient": 0.049277,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/raw/normalized.pdb",
+      "raw_sha256": "9d2d30833cf70e51d8e3d3334a2c5699955297c075560e5f4163b5bd03f8c90c",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "e0ceb94df71227927fddb34c19b3fe6c8a99ca97a71a35fc2bc48458d01976c1",
+      "seed": 2026112205,
+      "variant": "variant_04"
+    },
+    {
+      "final_rms_gradient": 0.048858,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/raw/normalized.pdb",
+      "raw_sha256": "96879f068f6b05d5a2d9702955320bffe4df1303c2bd15b7c8eb8cf37f930e2a",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "c56c579cf194381076dc412a01f84f14bec4ad52387e002b826dcdb0cae83d04",
+      "seed": 2026112201,
+      "variant": "variant_05"
+    },
+    {
+      "final_rms_gradient": 0.04986,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/raw/normalized.pdb",
+      "raw_sha256": "b6b0536c988b5d29f51950f1d4e5e127792321c66229ac12aa9ceae687b30845",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "433aeceee128140fbd0ace3c4421a6d495699a45e09615c1dbef953e99b8e6ee",
+      "seed": 2026112202,
+      "variant": "variant_05"
+    },
+    {
+      "final_rms_gradient": 0.046094,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/raw/normalized.pdb",
+      "raw_sha256": "938bee40984ace103068cc09c27775b65e8d9a40f2757d3678b1db9ed6682d06",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "dd40e30a98a3ebcdba3675c40c152a0dcaacef29ddc745adc5a92d116040cac4",
+      "seed": 2026112203,
+      "variant": "variant_05"
+    },
+    {
+      "final_rms_gradient": 0.1455,
+      "force_converged": false,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/raw/normalized.pdb",
+      "raw_sha256": "d90f8cb62c6b42b79705c87f3c5b329fa84a47550cb93b4d1308ec998ea0cbaf",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "9a0faf20a6b18cdf92187c41c339ef657fabd357850b0507edb3815bec7b70fb",
+      "seed": 2026112204,
+      "variant": "variant_05"
+    },
+    {
+      "final_rms_gradient": 0.045207,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/raw/normalized.pdb",
+      "raw_sha256": "88a305291980e2f3c6e042dd8a73459bc91de8da363c720e0f5a1426105c3991",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "10922dd1defb424d3a6c7a77d0fbaf91628787edb7c442792f569a88cea23073",
+      "seed": 2026112205,
+      "variant": "variant_05"
+    },
+    {
+      "final_rms_gradient": 0.047743,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/raw/normalized.pdb",
+      "raw_sha256": "ba4239291c29baa828f7755c54da4863e431ba4c44573b0f140a320b81c2737f",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "f5ad3a6b13fe7c514740bd91639b21540b49ade6c0c013d9935753180c18fa89",
+      "seed": 2026112201,
+      "variant": "variant_06"
+    },
+    {
+      "final_rms_gradient": 0.045839,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/raw/normalized.pdb",
+      "raw_sha256": "c05d2d2e3cf2e8e0b58f98c3ef955b90b5d90b7e6ee410772cb0b14b5f093629",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "65fdf4ca4cc234d1d402c5c2a41399e76062a646c739842c8345a78d1ad78364",
+      "seed": 2026112202,
+      "variant": "variant_06"
+    },
+    {
+      "final_rms_gradient": 0.049194,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/raw/normalized.pdb",
+      "raw_sha256": "1863b473b93624225083d38b2ed178063ff3d9195040f8b193ce32300eeca231",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "b51f0f3d7b3449b8bccb9f803596ffb3c5fb49153e8bdb90df61b99b789e60aa",
+      "seed": 2026112203,
+      "variant": "variant_06"
+    },
+    {
+      "final_rms_gradient": 0.047441,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/raw/normalized.pdb",
+      "raw_sha256": "559eab997446f539bbf68b75047372f178aa97261fb84c9733643e2925abf4ef",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "e06ca61658357aff52e9cf317db6bb2cdc21e6dbc84ca06a196de79476762c96",
+      "seed": 2026112204,
+      "variant": "variant_06"
+    },
+    {
+      "final_rms_gradient": 0.048704,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/raw/normalized.pdb",
+      "raw_sha256": "00eda8514c1918bee985d5892811286b9dd0463cb9a1a8957cd00581919a771b",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "2097f74148650bee754b79a94408e0c4724dbf22b74ec957c3731c94f69d9468",
+      "seed": 2026112205,
+      "variant": "variant_06"
+    },
+    {
+      "final_rms_gradient": 0.049641,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/raw/normalized.pdb",
+      "raw_sha256": "97dfa1a4f39e3ab0d5b4aeb75be0fe041bf219eb884874516a9fd8ee712abbed",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "62d11ba4c6fb3dae12c3e947d8478566c0e940ddebd15b67da33d20b42a9a9c1",
+      "seed": 2026112201,
+      "variant": "variant_07"
+    },
+    {
+      "final_rms_gradient": 0.048912,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/raw/normalized.pdb",
+      "raw_sha256": "6616d76013f795657ea0735d7289aba39b04329f4cbc01f517487417d58c63a6",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "55d3837480d612989c2b758527763cc85fa1e82ed31efe717abc24177bf2ce40",
+      "seed": 2026112202,
+      "variant": "variant_07"
+    },
+    {
+      "final_rms_gradient": 0.049055,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/raw/normalized.pdb",
+      "raw_sha256": "5a2d1cc185945affc86c7bd5fecdf2c33270bbb28977dcf8eb2e139e0ec4ec20",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "29ae93ac4925022ef9919adfd2b399846d5e0fb81b7172355f9e05e7b62e3644",
+      "seed": 2026112203,
+      "variant": "variant_07"
+    },
+    {
+      "final_rms_gradient": 0.04504,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/raw/normalized.pdb",
+      "raw_sha256": "08b47dc8f1b9bddb8c827b2c53f3408aefad6bdec19f695a686419c111c5194d",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "65231da0d84aafb6aa74ebba6515e4991c41132bf7596389efd71967bc43a7df",
+      "seed": 2026112204,
+      "variant": "variant_07"
+    },
+    {
+      "final_rms_gradient": 0.049738,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/raw/normalized.pdb",
+      "raw_sha256": "fc361822734438ab5c11c8c42459518d47986c784f7b909dab6dc8b1af23db97",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "6741b0fdddbfc812055fe4045ff5434748181c3b13e8d9e42707bb527a31881a",
+      "seed": 2026112205,
+      "variant": "variant_07"
+    },
+    {
+      "final_rms_gradient": 0.046587,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/raw/normalized.pdb",
+      "raw_sha256": "f35a80c20e14894df54171c97a88a352a9e6b90e38fb0dc91fd32ae07f4b4baf",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/relaxation/relaxed.pdb",
+      "relaxed_sha256": "5478e481246fc5a49a5fd5646fff5633be5ad5cb087f24039396704054da9f7f",
+      "seed": 2026112201,
+      "variant": "variant_08"
+    },
+    {
+      "final_rms_gradient": 0.042707,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/raw/normalized.pdb",
+      "raw_sha256": "147d5e9632747f6af3e0f2635753acb2b428269599e14297059ca92d527d8442",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/relaxation/relaxed.pdb",
+      "relaxed_sha256": "396af12aa3ee81da4657acb7d822af9a6912a5a5b6f76c531bdd2ce902912cf3",
+      "seed": 2026112202,
+      "variant": "variant_08"
+    },
+    {
+      "final_rms_gradient": 0.046425,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/raw/normalized.pdb",
+      "raw_sha256": "8322a41cfb3e1a2f9078c419246c45c093856756a055b7f57115f74f0ac8b63d",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/relaxation/relaxed.pdb",
+      "relaxed_sha256": "fd3a077825a7d81b35f03b3f00d077598ae822ccb81b3bc9304a357e53c92d07",
+      "seed": 2026112203,
+      "variant": "variant_08"
+    },
+    {
+      "final_rms_gradient": 0.045786,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/raw/normalized.pdb",
+      "raw_sha256": "9b9480f0c03a9c18294f61fcef1fcccbdd52ec7211c9b0bc1997830897e37a98",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "3cc20fbafdf38b7cbbb1f98823eaae4ee0cd54ef5315cb9c7786ebaadfd7851a",
+      "seed": 2026112204,
+      "variant": "variant_08"
+    },
+    {
+      "final_rms_gradient": 0.047562,
+      "force_converged": true,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/raw/normalized.pdb",
+      "raw_sha256": "5496aa396140d5679945db70ff06b08a5189fa2a9822aaa9f1e066f8db932216",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/relaxation/relaxed.pdb",
+      "relaxed_sha256": "73f05e560a263555306f21e67039821bff79d94aac7fb8faa6fcbbba85b0fcdf",
+      "seed": 2026112205,
+      "variant": "variant_08"
+    }
+  ],
+  "nonconverged_models": [
+    {
+      "final_rms_gradient": 0.1455,
+      "force_converged": false,
+      "raw_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/raw/normalized.pdb",
+      "raw_sha256": "d90f8cb62c6b42b79705c87f3c5b329fa84a47550cb93b4d1308ec998ea0cbaf",
+      "relaxed_path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/relaxation/relaxed.pdb",
+      "relaxed_sha256": "9a0faf20a6b18cdf92187c41c339ef657fabd357850b0507edb3815bec7b70fb",
+      "seed": 2026112204,
+      "variant": "variant_05"
+    }
+  ],
+  "pairwise_record_count": 180,
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/comparison_summary.csv": "ea6a56521920b1b325d5f42344eabc4e59ec732bcf70e315c46542ba6398baf5",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/diversity/analyze_structural_diversity.py": "140ec3cb744f7b9a464e0db61fddac23b863de39077e87192d4510951d843083",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/diversity/diversity_geometry.py": "30bf2e202b42e44b21f851a8818fd4bef88a28c0879ac71ae2d0891e41a806c4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/analysis/diversity/diversity_reporting.py": "10ea3a5f44381926dd34fdba8157e5f41f1699385be2c8f5edbd26a4184fa157",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/completion.json": "3484b38f4f9b2475a223db4ac03d1d39863472d32d3c1a79180f5e091b40f6c2",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/raw/normalized.pdb": "0c4ad9d6a74561050171c2423dee858462eb3ea0432cece84c0582ca2c7f4a3c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/acceptance.json": "145b0e8f57d4e95be34b3505784f3e895819abe9119def11a88bdd2cae997cbe",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/relaxed.pdb": "a151500ace60ab35f2c71dc12d51434aab313aafbd10a186e3a8c6569ba87e9a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/request.json": "ae06fa986bfafb836f6b673f64c58464316933e4203efa72f1c89cfd81a0822c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/raw/normalized.pdb": "a63bfe8f5cbaec7ee2af25149ded6a9879f85169dd2b64bc3b8e047331d994d9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/acceptance.json": "bfe1e666df430a3e6c4a546a6b8026c5f01588f79a2b7a12aebca48383419d5c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb": "8fbcbdc6ebc630113bc4c7393a1d51a94782152d5c57da0097e831da2515cc68",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/request.json": "c14ebd4ddd1d065051312836fd7adb8fa22ad60cbf5b56e1b460ed9cca83e8cf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/raw/normalized.pdb": "58ac25029ad1f8ef87f14b79a6d06ed4c123e8d6c4ab0a9ca896f4c5e2300bd0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/acceptance.json": "c7b397e587ca4702fd410c722144596c86228a3ecc46e74e770ecb0332cd5bd1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/relaxed.pdb": "2d0ffcc9f99069b6549e3f1133f2df9a73a47dfaa30c61ca70e6da16518c0c8f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/request.json": "44a6983ce216de1cf4323d62312cedec7d38f5a37b8d27b82d428bd31f46a1d4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/raw/normalized.pdb": "9a1eefecc636b285e50d695411621cae5992e9195f1f47bd3a409f1963143213",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/relaxation/acceptance.json": "80b8f71c29656ae8ccea0ed34cde9cbd8ecbae40f5bbf71cb8c6c101be6ca0a2",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/relaxation/relaxed.pdb": "6471988e73277d90dbfd0112945c20dfcf955f3e3375ca65601fcc26291b8e73",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_04/request.json": "e28fd65c9a8ea479898312e677a7182555ff09e1700976ae0c265399db77b60b",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/raw/normalized.pdb": "52baa99e29319fd774e66b87a49005e20e4cc558a95c0cb30dbe197478419d07",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/relaxation/acceptance.json": "6afa48a2a823ce451ed6cd9f22541f808c4927d3df16a39e4fe19dfa0b4b00f3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/relaxation/relaxed.pdb": "3cd6d0c58e3ccceb1e8db3b188c717b8696fc3ced70a32d9fa4d69baee40ede6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_05/request.json": "c0fccc82e02bae9f40261d0a6afbc4b24af79cf3c423c88a11b9b183d73c884d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/raw/normalized.pdb": "4b15a573f88debea30a60a3778fa91a2a6be1b378dd07effae24f7d8d884bd5c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/relaxation/acceptance.json": "a22a800d1fc67b4b51ca15e510b722a871cb3e29a222da80f77ece7f19df2036",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/relaxation/relaxed.pdb": "dfd1ce5d7940a4a344917e585027f5523ab37afb15856349520f332bfe862ab0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_01/request.json": "00c33e71e753a258134720d8d1ce7e6959f72f13970cc28b1a8013d8eea42f92",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/raw/normalized.pdb": "51aee0959ebc0d0bb54af0768606feed7452e425d0e60dbbfc86882f01e53d02",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/relaxation/acceptance.json": "d2e6d4912b6d62960acb2fabeed00d645c45934f6ed98ba8a4811b05595971f9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/relaxation/relaxed.pdb": "081e894bca570a48594e72ce71cdd7cc157bebcce0f2d0406dff384d7061e8ec",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_02/request.json": "62c246171107944b68f772c4767d56d1da403c8dae19ab683d4e26d55d7cea37",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/raw/normalized.pdb": "df59f899e40ec2340de612fac4c51c80a6d6d5a3a3b693bc42fa70defe45c673",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/relaxation/acceptance.json": "9ae1122795f5e895fece3f6ceb3d0c91118e207758892f8d8a94d88f22e83ee8",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/relaxation/relaxed.pdb": "ea93158d9d1dfc8af7590c2ef6f9440912b3a3debf4886badda294cab2db92de",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_03/request.json": "09a92805958df672e3e66bb530d72ff6653ae0b19e266d96f4f606855ba597db",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/raw/normalized.pdb": "fc58b19e44afbecf971afc180c0ac294fce19df191a0ceddcb46ad27932133cd",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/relaxation/acceptance.json": "108ca78582de6172dd148b77842ea9a1855559b5bf53f5a796726852422c18d6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/relaxation/relaxed.pdb": "31fad80660b794d2ad02a26f49a6b7be3a9a84a2d51aca9810a75beb8ef0701d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_04/request.json": "5ff3699572ec1ffa4302241c222a790433bbf84c233e8ea7929470f8875aac27",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/raw/normalized.pdb": "c044a514d27f689257777429bd6592efd5ff203a0dbfcd10c36db54b30ba8be0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/relaxation/acceptance.json": "0bcc14e20f46ff90c27a82209982ad63f7e203e23f5e94d0bf634183551202af",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/relaxation/relaxed.pdb": "05209f52beff0e370c5654a48418ad867e897a2a4f33bc0793f88f8e01c56ce5",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_01/seed_05/request.json": "913a69c20e473bfeede219969b0a98e9456cc7c1999504371f826a0fed20e35f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/raw/normalized.pdb": "3bcbd00a30f0cdfac876d19ae263b77e1017c719fe58ee046e820d0e66467ab1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/relaxation/acceptance.json": "01511eaf79783a24a461edfbd0920d65618ec350463acc9a127691d5edb46099",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/relaxation/relaxed.pdb": "f448b4065de497b9e18e52b01006326c7851508ae5373fb3437ed75aedb92162",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_01/request.json": "d73eb3f55965eb0d0a4591e28cdf2df924f9fa8440eadaba6e632d538600b669",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/raw/normalized.pdb": "1ca0ed9f0523300823c018e8446d77b5019febe2d213189cfd2cb608082a7363",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/relaxation/acceptance.json": "d14e321a754c31d227d68ddaae51c32493717cd84acf4748fc247c0c5bdc9a8a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/relaxation/relaxed.pdb": "9b3dfb8afb18f46aaadbc30128693646fa2f93c6d64214bc96f3c0895dacf740",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_02/request.json": "1459b142eba61e798788607231ef2fbd8565fa53722591010878f7500b848f96",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/raw/normalized.pdb": "4947b58732c3825f5fa3ae209e2acecb7c22453a3b5488a7ee6a65993b052e24",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/relaxation/acceptance.json": "333877a4bb300ec69f8f8592aa64b10dee299a168894623f25b2eec981b6cbf0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/relaxation/relaxed.pdb": "87f5341249885f1c853ea7cefec38b4a8f15b4817980868d3adae4beb4aab7a6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_03/request.json": "325a2ffe9bd3af6870fcda0d9a4b77be5491937f618ed281bbbaa25a12ccd799",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/raw/normalized.pdb": "a570713c6e151b362615204b889f6b76284178c201490bd9df34e1fd98d6f0f0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/relaxation/acceptance.json": "98011b86e1c0ff1f4815878b4adabd9a3d41c47c8434d004a078f5b37f8404bc",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/relaxation/relaxed.pdb": "13458e94cb9292713de43118acc1dc050faa2e3e1b582d7557d82ec6fa5a4ec0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_04/request.json": "4e0a1477ebaf90863d11d174580d82e29687d93f5b806b93169a66363e27745e",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/raw/normalized.pdb": "bff2e3093ba57cfd359658dcff723ac0e3c70b8a876b5211186dbca97f5edfe9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/relaxation/acceptance.json": "48134b55d61a868a336ee307ed7ee40100dac3586a9eb7eefa66176bfb4f7702",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/relaxation/relaxed.pdb": "a178d2b3c23a66a07adf38daff504744b71a2f05fa7b5bab42634fdc4c22b563",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_02/seed_05/request.json": "6dd62db7e0f1fc209fcd38c0c2d7ff0241958f5390e3524e3bff95ba0012bb7d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/raw/normalized.pdb": "b3fc1467a52bcb44e056264c0b98063e76cd3cb98badb7fb7f0802339d529696",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/relaxation/acceptance.json": "af8e1a7c92a8468bc2969e8ab931960054de452500bd45304feefb3a9a991ed9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/relaxation/relaxed.pdb": "7144413720f1ebe0187d2eec2c2ccf19290130650467340899a3119340f49b68",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_01/request.json": "42a222e604c3b26ca91e1fa235f15d63b064d66879f646ea3c7c10dcde40c238",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/raw/normalized.pdb": "9025b29211e8f8a269825a9d3f405d25072329ffb541c80a754744f2adf59080",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/relaxation/acceptance.json": "6387daab63ec10e6fc26c8b5060c96fac425e6a17ab26a61dcecab13381f5f63",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/relaxation/relaxed.pdb": "da625529e996f4afbd629dc7feabd2e7fa01506a339d4be91157b24c9b7bae90",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_02/request.json": "249382a1466d914e1e244e0f0b2608cb974808d99683d7a572b2e742fbd8edf0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/raw/normalized.pdb": "7b4b612cbc48b1b360289fcfa47717f057ced48e5082cac73a4850f30f18eba3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/relaxation/acceptance.json": "bc895043d69bf12757aeec90bc6093b0478c391581d23f220511c3878b7dd363",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/relaxation/relaxed.pdb": "4f915ca3cef4a41880001d1449745ecb6a53a10cf473ca5231206e83791af691",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_03/request.json": "d4a5de13acf8f9d77cc6f85d47c2901a8c39219b34e0597119acaf3152ee81af",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/raw/normalized.pdb": "17451c7798af8a6f7a3e7f3e490667211c63d1e181e0267f010bb4633dc39d47",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/relaxation/acceptance.json": "07a9f2805cec35f539c4baf27f4bcd7b14058c5f4535964e5b6eca785034aecf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/relaxation/relaxed.pdb": "27b6fb1fbe0138dcee4f6aac7389b03c466922f529199fda5c363ee3458a88ac",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_04/request.json": "1e25179def9405b72513b6903f3cc0391cc9f9d95e3ed78a1307235b7380b79e",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/raw/normalized.pdb": "9b01d75090b43049313bf3a229cd8d1924a335bfdf3775ba704330de5a8fd587",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/relaxation/acceptance.json": "683945b1294f782338624dde6cfcf2525da27536cbe5bfc6f21fcbccfa74c08c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/relaxation/relaxed.pdb": "0d01b0993afc691c04629fd628f9c95e32b319342b1179b5b6ad3c370213e929",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_03/seed_05/request.json": "dca41f40f02ac4f4f2da5630366a773b19cae197b34f348b6cf33d2f0bf70e01",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/raw/normalized.pdb": "8f88de5ecf1e715a66c7a503246824dde9dd3d674b78ddc96cb1cb8d0643758c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/relaxation/acceptance.json": "4ef6e0ad96e6c6298843b614ea3b179a96b84dc5fc9b47185da6633e82951aab",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/relaxation/relaxed.pdb": "258d032bbf8f175c60141d3cd31315f9ea967587d2448270b818ff00d696aa98",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_01/request.json": "7c7f5e7fd437fe401888e5ef6387bb54d3fa1aec849aa680ee2087c3679000e9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/raw/normalized.pdb": "6e87423f19b79bc50992392259734106d9452cfec1e10a6e742d3ae841a9477a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/relaxation/acceptance.json": "c3ee6bd3b190cdc8ac616224a8d88635dea316149d40998f1d6a379c60eb31e8",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/relaxation/relaxed.pdb": "e79a7d68277b597c4c61d13922d39fd77064a61255ef82f2f81a48237c078b97",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_02/request.json": "228c28388c475400c5910710f4220e0b0182c44a98314e670d772a1ebd980d28",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/raw/normalized.pdb": "1821374b3189a551b267ab12b8bab663a36f8cf50d17500c5b3f21a1b4fb43d8",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/relaxation/acceptance.json": "0bcfa35b9f2bc38bed98cce7d3bcdb8a624c477c30925d52584caa58e4610502",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/relaxation/relaxed.pdb": "b55c8ab2b8aeb1cd64b290d91a3d2d6710b9d2d9813497f7ed3c1a7523df244a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_03/request.json": "a84846db2f9b317d9f7fc5a6043979c42530473d7f2ee0cde96ee0d9b0b0e774",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/raw/normalized.pdb": "1a563d7253c6e1fdb1cbba723aefb39a5fefe27891429469444fcd7e80d97486",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/relaxation/acceptance.json": "b827f8f4d5b1b1e3367e1e4cbe83fe3d90a0f8e29d3ba0c7c69a6ca571d52dda",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/relaxation/relaxed.pdb": "26bd22e71eb8d946405ca0e4c356c720c418e12ca6cac5951b8c60d208dae362",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_04/request.json": "b2fb679daec09d0bef383c3323be36c37849d64a3020c092106d86fb82904b2a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/raw/normalized.pdb": "9d2d30833cf70e51d8e3d3334a2c5699955297c075560e5f4163b5bd03f8c90c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/relaxation/acceptance.json": "a6aa3c94d9dd061b6549cc5e6fa428ab2b0a15c663057b01b351624f14d6a2f3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/relaxation/relaxed.pdb": "e0ceb94df71227927fddb34c19b3fe6c8a99ca97a71a35fc2bc48458d01976c1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_04/seed_05/request.json": "02c13e5975e5b0b6d160460ca4443295b91421e1d09fcc99f2f3dc5d96bd65f4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/raw/normalized.pdb": "96879f068f6b05d5a2d9702955320bffe4df1303c2bd15b7c8eb8cf37f930e2a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/relaxation/acceptance.json": "e788c57b70d1a36ef1142ff7fc1d3c79021555d6edd510a6b8d0117b3a3a37ec",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/relaxation/relaxed.pdb": "c56c579cf194381076dc412a01f84f14bec4ad52387e002b826dcdb0cae83d04",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_01/request.json": "3e50b4ebd5a52e6124fb6c02aa6ae93af614d2f91ba3777a35131ddd3f9d5d17",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/raw/normalized.pdb": "b6b0536c988b5d29f51950f1d4e5e127792321c66229ac12aa9ceae687b30845",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/relaxation/acceptance.json": "2f80f851b69a798ff271ab27b34b4d1e0cfa542e00fd84063227fcc9ffb9eaad",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/relaxation/relaxed.pdb": "433aeceee128140fbd0ace3c4421a6d495699a45e09615c1dbef953e99b8e6ee",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_02/request.json": "445fdeb54d0bd1d1f3781e20a7aa2582543d08160fef3db88e88792c4aef4f17",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/raw/normalized.pdb": "938bee40984ace103068cc09c27775b65e8d9a40f2757d3678b1db9ed6682d06",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/relaxation/acceptance.json": "1167fb3d8a5a63ec48e0b1fad1893aef4c59114ad02661b8599f166896ecceb3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/relaxation/relaxed.pdb": "dd40e30a98a3ebcdba3675c40c152a0dcaacef29ddc745adc5a92d116040cac4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_03/request.json": "d9bcfa9053906f93cc6175584f6a20a548025067594a1ef1d98c94945be81586",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/raw/normalized.pdb": "d90f8cb62c6b42b79705c87f3c5b329fa84a47550cb93b4d1308ec998ea0cbaf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/relaxation/acceptance.json": "12b9bf29bf8318488549cc97d79b7addaff6cfa62a8b48a640e1339339bd84a6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/relaxation/relaxed.pdb": "9a0faf20a6b18cdf92187c41c339ef657fabd357850b0507edb3815bec7b70fb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_04/request.json": "ea303e12599ed7043eea3241ddbb88acd56a185f8b459c3488b8525beda67344",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/raw/normalized.pdb": "88a305291980e2f3c6e042dd8a73459bc91de8da363c720e0f5a1426105c3991",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/relaxation/acceptance.json": "ecfd33a0304ec4543e7f88a2819f07846e943f24c99c1becb2d44f221ab91d95",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/relaxation/relaxed.pdb": "10922dd1defb424d3a6c7a77d0fbaf91628787edb7c442792f569a88cea23073",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_05/seed_05/request.json": "ab0d6963f6b01ca39e0069f15742e27edd5adf04228b19ed8ef0101596833c21",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/raw/normalized.pdb": "ba4239291c29baa828f7755c54da4863e431ba4c44573b0f140a320b81c2737f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/relaxation/acceptance.json": "681031db5a4126cfd234ee5afdc0025f3f0e83588f2730f656f576380bdf4f83",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/relaxation/relaxed.pdb": "f5ad3a6b13fe7c514740bd91639b21540b49ade6c0c013d9935753180c18fa89",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_01/request.json": "9b0c375dcbdcb7b94ad34e28670900455fef47a899a1a5c30dc7dce6d4e15404",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/raw/normalized.pdb": "c05d2d2e3cf2e8e0b58f98c3ef955b90b5d90b7e6ee410772cb0b14b5f093629",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/relaxation/acceptance.json": "8b2c23bd4271dbffb6d5045f4dd43d85314a5a41c6eddc5ffd5ab247e07825a7",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/relaxation/relaxed.pdb": "65fdf4ca4cc234d1d402c5c2a41399e76062a646c739842c8345a78d1ad78364",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_02/request.json": "70edcc0afe5a1ece9a664604b2cb1651e09e2182d8b17cb8ce537f5928983bfe",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/raw/normalized.pdb": "1863b473b93624225083d38b2ed178063ff3d9195040f8b193ce32300eeca231",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/relaxation/acceptance.json": "ec17fdb74960d0d6529ed27bc8ca4328b166db6836b65873effdb72379949854",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/relaxation/relaxed.pdb": "b51f0f3d7b3449b8bccb9f803596ffb3c5fb49153e8bdb90df61b99b789e60aa",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_03/request.json": "2755aaaf181bfc43f27a6449442c4848c50b0cc56a2d8cd2973bbea94d24d152",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/raw/normalized.pdb": "559eab997446f539bbf68b75047372f178aa97261fb84c9733643e2925abf4ef",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/relaxation/acceptance.json": "1fd48a7db92ab706c4b00aa11788a78e624effc0b3c7b5cad045b818c45767c1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/relaxation/relaxed.pdb": "e06ca61658357aff52e9cf317db6bb2cdc21e6dbc84ca06a196de79476762c96",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_04/request.json": "e17afec8aa567427c30a459315129f9e5b90137bd4317edc99e7f4b247aa3814",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/raw/normalized.pdb": "00eda8514c1918bee985d5892811286b9dd0463cb9a1a8957cd00581919a771b",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/relaxation/acceptance.json": "bf0e7f3078287ff37ccb3130f00d67639bad56e6284ef37f6d9b00a1766747e0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/relaxation/relaxed.pdb": "2097f74148650bee754b79a94408e0c4724dbf22b74ec957c3731c94f69d9468",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_06/seed_05/request.json": "ecd8a6309f4b3c9a4c05a70fd1ebdc1b30b369ca22ccaddd29a390d6d6dfbf22",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/raw/normalized.pdb": "97dfa1a4f39e3ab0d5b4aeb75be0fe041bf219eb884874516a9fd8ee712abbed",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/relaxation/acceptance.json": "f0d71583cce850e37a4ccb00d0d0e9c82522aaf8661a9940b603a384636f5eb1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/relaxation/relaxed.pdb": "62d11ba4c6fb3dae12c3e947d8478566c0e940ddebd15b67da33d20b42a9a9c1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_01/request.json": "bf314ef1232cb904bca4160a7b318fc93d16633b79e0cf21a90c192802f8f2bc",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/raw/normalized.pdb": "6616d76013f795657ea0735d7289aba39b04329f4cbc01f517487417d58c63a6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/relaxation/acceptance.json": "da618a03f9f0b7b4b1f3c7c95137385edbe6acbf22c8d68b4621bd64d8a0ab87",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/relaxation/relaxed.pdb": "55d3837480d612989c2b758527763cc85fa1e82ed31efe717abc24177bf2ce40",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_02/request.json": "e68a5d47679540d9361dd4b99f1d2fbd90617312ecddeed5bab70648439a228d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/raw/normalized.pdb": "5a2d1cc185945affc86c7bd5fecdf2c33270bbb28977dcf8eb2e139e0ec4ec20",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/relaxation/acceptance.json": "827c743fef3784f35e27f0631a160cec090a245c5c14766387593bcbd1abea59",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/relaxation/relaxed.pdb": "29ae93ac4925022ef9919adfd2b399846d5e0fb81b7172355f9e05e7b62e3644",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_03/request.json": "994905851499d0cbc24e6638c12538807b7722231ddb069e3d7588c4d12b52a6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/raw/normalized.pdb": "08b47dc8f1b9bddb8c827b2c53f3408aefad6bdec19f695a686419c111c5194d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/relaxation/acceptance.json": "22b38a3a4986002fe053d69890bd6af44eae388d4e8051e7afcf1400c736265f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/relaxation/relaxed.pdb": "65231da0d84aafb6aa74ebba6515e4991c41132bf7596389efd71967bc43a7df",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_04/request.json": "27dcf5dad6f67229e11f3f1df273196e3bb05f67fba12d6e615787090426c525",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/raw/normalized.pdb": "fc361822734438ab5c11c8c42459518d47986c784f7b909dab6dc8b1af23db97",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/relaxation/acceptance.json": "12a40e621a6cb58356a72945616f34d9fa52d1a22335ee75b75e360400c5cb78",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/relaxation/relaxed.pdb": "6741b0fdddbfc812055fe4045ff5434748181c3b13e8d9e42707bb527a31881a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_07/seed_05/request.json": "eb3a62ea1d6e6aaf2e25c0af6d2a5e684a2b5e4edf97641779ef3d8880aa7a90",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/raw/normalized.pdb": "f35a80c20e14894df54171c97a88a352a9e6b90e38fb0dc91fd32ae07f4b4baf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/relaxation/acceptance.json": "907d1a7e2702520f27eb3c744c98077d269854ddf7c008f7cdbd1b173678fdf4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/relaxation/relaxed.pdb": "5478e481246fc5a49a5fd5646fff5633be5ad5cb087f24039396704054da9f7f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_01/request.json": "b0708672ffaa17ac156db19665df58c02172d1acf41275d621138fed9c757ee5",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/raw/normalized.pdb": "147d5e9632747f6af3e0f2635753acb2b428269599e14297059ca92d527d8442",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/relaxation/acceptance.json": "5c6be673a631b7823f142d60afc73bdeaeef665c2ff5ea093c1cda0227b187f3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/relaxation/relaxed.pdb": "396af12aa3ee81da4657acb7d822af9a6912a5a5b6f76c531bdd2ce902912cf3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_02/request.json": "0ba968a50450a0503a51ed881a8b4c9038e090d6d66cc471a63e880ae0134ad1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/raw/normalized.pdb": "8322a41cfb3e1a2f9078c419246c45c093856756a055b7f57115f74f0ac8b63d",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/relaxation/acceptance.json": "5dcfc8f27ecaba35b2110a5636b6ec4e45dd8abb6950c738e7307651ed932540",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/relaxation/relaxed.pdb": "fd3a077825a7d81b35f03b3f00d077598ae822ccb81b3bc9304a357e53c92d07",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_03/request.json": "0a9b549a5c8b2ce69f75286a570bc5fea83fc1dbe8ba241e81e5df22ee0a9c76",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/raw/normalized.pdb": "9b9480f0c03a9c18294f61fcef1fcccbdd52ec7211c9b0bc1997830897e37a98",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/relaxation/acceptance.json": "c1cdcda18461dd9c490dd4c42e593ff477150a8eb2a29db4c1df48dbb4cad021",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/relaxation/relaxed.pdb": "3cc20fbafdf38b7cbbb1f98823eaae4ee0cd54ef5315cb9c7786ebaadfd7851a",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_04/request.json": "3766229135f0399cbea83bd37325a7a6ed1fa4762e11a3f477cc29a71d1c4803",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/raw/normalized.pdb": "5496aa396140d5679945db70ff06b08a5189fa2a9822aaa9f1e066f8db932216",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/relaxation/acceptance.json": "1c2f9ebc289615da8b8ef4852e6ffe2bdf4ef92be0377a1642b159d467d824d4",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/relaxation/relaxed.pdb": "73f05e560a263555306f21e67039821bff79d94aac7fb8faa6fcbbba85b0fcdf",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/variant_08/seed_05/request.json": "a2336630c8c1e74b7022f97fd4507665137d6d05116191ab609c74d25c128950",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/prepared/candidate_manifest.json": "f0bfb92e5a65d08c4891ee50bc85b94977d391f34f965dec2d656b978c816d9f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/status.json": "2ef7e13c87686b9f68a6f27949ca31555642f30b6fcdb594275265c1dd711cb1",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/parent_and_mask_proposal.json": "1560404917a618b8d57b8e0516e09d3a7951bf9a33f5462800ee24c7bafb04a3",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6"
+  },
+  "variant_summaries": [
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.9134653624067,
+        "median": 0.6246083768205182,
+        "pair_count": 10
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.449982514345131,
+        "median": 1.590968163241955,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "WT"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.9079162195152103,
+        "median": 0.7431933461447502,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.9079162195152103,
+          "median": 0.7431933461447502,
+          "pair_count": 10
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.5926086961341044,
+          "median": 1.6945792469155472,
+          "pair_count": 10
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.5926086961341044,
+        "median": 1.6945792469155472,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 3,
+        "joint_sites_of_20": 3,
+        "models_with_any_joint_of_5": 2
+      },
+      "variant": "WT"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.0315410370611606,
+        "median": 0.5840636629640423,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.11807567465446067,
+          "median": -0.040544713856475845
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.532892337002731,
+          "median": -0.09662948566018414
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.9170901773423998,
+        "median": 1.4943386775817709,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_01"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.1149205628598988,
+        "median": 0.7200078663696523,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.1149205628598988,
+          "median": 0.7200078663696523,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.20700434334468854,
+            "median": -0.023185479775097884
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.5600717864778924,
+            "median": -0.07068624172096527
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.032536909656212,
+          "median": 1.623893005194582,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.20700434334468854,
+          "median": -0.023185479775097884
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.5600717864778924,
+          "median": -0.07068624172096527
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.032536909656212,
+        "median": 1.623893005194582,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 4,
+        "joint_sites_of_20": 4,
+        "models_with_any_joint_of_5": 3
+      },
+      "variant": "variant_01"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.0846157801197664,
+        "median": 0.8949602671347383,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.1711504177130665,
+          "median": 0.27035189031422013
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.7843667992634096,
+          "median": -0.31838732835790506
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.6656157150817212,
+        "median": 1.27258083488405,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_02"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.2550604142094024,
+        "median": 1.0290782174241455,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.2550604142094024,
+          "median": 1.0290782174241455,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.3471441946941921,
+            "median": 0.2858848712793953
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.9034970160160603,
+            "median": -0.3061559949134136
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 1.6891116801180441,
+          "median": 1.3884232520021336,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.3471441946941921,
+          "median": 0.2858848712793953
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.9034970160160603,
+          "median": -0.3061559949134136
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.6891116801180441,
+        "median": 1.3884232520021336,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 1,
+        "joint_sites_of_20": 1,
+        "models_with_any_joint_of_5": 1
+      },
+      "variant": "variant_02"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.8211843376505643,
+        "median": 0.5801966545119415,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": -0.09228102475613564,
+          "median": -0.04441172230857671
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.8064804233582212,
+          "median": -0.33309828946050346
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.6435020909869096,
+        "median": 1.2578698737814515,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_03"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.8884805040516106,
+        "median": 0.7711779239608353,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.8884805040516106,
+          "median": 0.7711779239608353,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": -0.01943571546359968,
+            "median": 0.0279845778160851
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.766735918449948,
+            "median": -0.34087651998855373
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 1.8258727776841563,
+          "median": 1.3537027269269934,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": -0.01943571546359968,
+          "median": 0.0279845778160851
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.766735918449948,
+          "median": -0.34087651998855373
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.8258727776841563,
+        "median": 1.3537027269269934,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 7,
+        "joint_sites_of_20": 7,
+        "models_with_any_joint_of_5": 4
+      },
+      "variant": "variant_03"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.1188877701896833,
+        "median": 0.6526911992369754,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.20542240778298337,
+          "median": 0.02808282241645721
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.17848161754798086,
+          "median": -0.31390062454049406
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.27150089679715,
+        "median": 1.277067538701461,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_04"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.1372179437155434,
+        "median": 0.8263263529322413,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.1372179437155434,
+          "median": 0.8263263529322413,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.22930172420033312,
+            "median": 0.08313300678749114
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.2286420081100995,
+            "median": -0.26431284088480056
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.363966688024005,
+          "median": 1.4302664060307466,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.22930172420033312,
+          "median": 0.08313300678749114
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.2286420081100995,
+          "median": -0.26431284088480056
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.363966688024005,
+        "median": 1.4302664060307466,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 7,
+        "joint_sites_of_20": 7,
+        "models_with_any_joint_of_5": 4
+      },
+      "variant": "variant_04"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.7025656072435322,
+        "median": 0.22160448802484034,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": -0.21089975516316772,
+          "median": -0.40300388879567783
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -1.0128590284769912,
+          "median": -0.4246801047045059
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.4371234858681396,
+        "median": 1.166288058537449,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_05"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 0.9041155213032869,
+        "median": 0.511151416943985,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.5214418100248224,
+          "median": 0.45365929384949016,
+          "pair_count": 6
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": -0.3864744094903879,
+            "median": -0.28953405229526
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -1.0172826899891354,
+            "median": -0.5098683164278546
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 1.575326006144969,
+          "median": 1.1847109304876926,
+          "pair_count": 6
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": -0.0038006982119234145,
+          "median": -0.23204192920076516
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -1.0172826899891354,
+          "median": -0.4445576391689303
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 1.575326006144969,
+        "median": 1.2500216077466169,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 1,
+        "joint_sites_of_20": 3,
+        "models_with_any_joint_of_5": 2
+      },
+      "variant": "variant_05"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.1744653255818311,
+        "median": 0.6456990250123849,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.2609999631751312,
+          "median": 0.02109064819186668
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 0.4242798934616201,
+          "median": 0.42915877368755573
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.874262407806751,
+        "median": 2.0201269369295107,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_06"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.2448386807059821,
+        "median": 0.7202101301571202,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.2448386807059821,
+          "median": 0.7202101301571202,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.33692246119077185,
+            "median": -0.02298321598762998
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": 0.3868829945993135,
+            "median": 0.4353732602643974
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.979491690733418,
+          "median": 2.1299525071799446,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.33692246119077185,
+          "median": -0.02298321598762998
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 0.3868829945993135,
+          "median": 0.4353732602643974
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.979491690733418,
+        "median": 2.1299525071799446,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 8,
+        "joint_sites_of_20": 8,
+        "models_with_any_joint_of_5": 3
+      },
+      "variant": "variant_06"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.0111279285152628,
+        "median": 0.749672213299736,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.09766256610856283,
+          "median": 0.12506383647921782
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.24059680116389037,
+          "median": -0.19775471470951556
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.2093857131812404,
+        "median": 1.3932134485324394,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_07"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.0999127485164168,
+        "median": 0.8691139689976302,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.0999127485164168,
+          "median": 0.8691139689976302,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.19199652900120656,
+            "median": 0.12592062285287997
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.3104678906208962,
+            "median": -0.14242108271164788
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.282140805513208,
+          "median": 1.5521581642038993,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.19199652900120656,
+          "median": 0.12592062285287997
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.3104678906208962,
+          "median": -0.14242108271164788
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.282140805513208,
+        "median": 1.5521581642038993,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 7,
+        "joint_sites_of_20": 7,
+        "models_with_any_joint_of_5": 2
+      },
+      "variant": "variant_07"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.1336715546490241,
+        "median": 0.8796633755605335,
+        "pair_count": 10
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.22020619224232418,
+          "median": 0.25505499874001536
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.37041294795900237,
+          "median": 0.262250209662209
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.0795695663861284,
+        "median": 1.853218372904164,
+        "pair_count": 10
+      },
+      "stage": "raw",
+      "variant": "variant_08"
+    },
+    {
+      "active_ca_rmsd_angstrom": {
+        "maximum": 1.3129789242641934,
+        "median": 0.8981691723295515,
+        "pair_count": 10
+      },
+      "both_force_converged_pairs": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 1.3129789242641934,
+          "median": 0.8981691723295515,
+          "pair_count": 10
+        },
+        "delta_vs_WT": {
+          "active_ca_rmsd_angstrom": {
+            "maximum": 0.4050627047489831,
+            "median": 0.15497582618480132
+          },
+          "global_ca_rmsd_angstrom": {
+            "maximum": -0.3208773353161405,
+            "median": 0.3034419502975041
+          }
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": 2.271731360817964,
+          "median": 1.9980211972130513,
+          "pair_count": 10
+        }
+      },
+      "delta_vs_WT": {
+        "active_ca_rmsd_angstrom": {
+          "maximum": 0.4050627047489831,
+          "median": 0.15497582618480132
+        },
+        "global_ca_rmsd_angstrom": {
+          "maximum": -0.3208773353161405,
+          "median": 0.3034419502975041
+        }
+      },
+      "global_ca_rmsd_angstrom": {
+        "maximum": 2.271731360817964,
+        "median": 1.9980211972130513,
+        "pair_count": 10
+      },
+      "stage": "relaxed",
+      "structural_joint_pass_context": {
+        "force_converged_joint_sites": 0,
+        "joint_sites_of_20": 0,
+        "models_with_any_joint_of_5": 0
+      },
+      "variant": "variant_08"
+    }
+  ]
+}

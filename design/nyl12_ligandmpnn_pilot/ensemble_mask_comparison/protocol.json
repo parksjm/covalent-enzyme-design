@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "authorized_preparing_inputs",
+  "hypothesis": "A broader nested mutable mask across more than one observed WT backbone may yield greater sequence/structural diversity and more robust ES geometric acceptance; this is not a transition-state optimization or evidence of higher catalytic activity.",
+  "parents_proposed": [
+    "WT_seed_02_relaxed",
+    "WT_seed_03_relaxed"
+  ],
+  "parent_gate": "Full mature tetramer sequence/graph/chain integrity, force-converged MM, at least one occupied site passing existingTierA/B and nativeThr233criteria; no parent inclusion by activity labels",
+  "arms": [
+    "focused_19_positions",
+    "broader_29_positions"
+  ],
+  "mutable_mask_policy": "Focusedmaskunchanged; broaderadds onlyauditedsecond-shellandsurfaceresidues; retainhardcatalytic/maturationprotections; no newinterfacecontactsorburiedcorepositionswithout evidence; immutableJSONmaskandmappingbeforelaunch",
+  "raw_sequence_budget": 48,
+  "design_job_budget": 8,
+  "samples_per_job": 6,
+  "temperatures": [
+    0.1,
+    0.2
+  ],
+  "rng_policy": "Fourindependent(parent,temperature)seedvalues2026112221\u201324; pairedexactlyacrossmaskarms. Seedsidentifyreplicates,notguaranteeidenticalstochastictrajectoriesacrossdifferentinputsequences/backbones.",
+  "sequence_ties": {
+    "alpha": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "beta": [
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "homo_oligomer": 0,
+    "weight_per_copy": 0.25
+  },
+  "indels": false,
+  "chain_lengths": {
+    "alpha": 232,
+    "beta": 96
+  },
+  "ligands_per_tetramer": 4,
+  "protonation_for_MM_validation": "NeutralThr233NH2withOG1H; ASP272/ASP274anionicinallfourcopies, matchingcompleted45modelcampaign; not a claimthatthisisphysiologicalmicrostate",
+  "force_field": "Same releasedPA6L4modularRESP/GAFF2,ff19SB,TIP3P andcompletelyunrestrained MMprotocol ascompleted45modelcampaign",
+  "selection_budget_max_per_arm": 4,
+  "selection_policy": "One representative per parent-temperature stratum wherepossible; deterministic sequence-diversity selection without experimentalactivityfits; retainall48rawdesignsandalllineage; no extra sampling to replace duplicates",
+  "matched_positive_controls": [
+    "K59D",
+    "V111C"
+  ],
+  "control_evidence_caveat": "Lysate/MS-based product signals are noisy, not normalized intrinsic catalyticrate; retainK59Ediscordancein calibration record, do notuseasnegativecontrol",
+  "prediction_budget_max_new_models": 52,
+  "prediction_seeds": [
+    2026112201,
+    2026112202,
+    2026112203,
+    2026112204,
+    2026112205
+  ],
+  "reuse_policy": "Reuse old predictions only for exactproteinsequence+seed+sameVioletBoltzruntime/scientificinputidentity, with completedunchangedraw/relaxedartifacthashes; existingWTmodelindices1and3wereTulip andwillberepredictedonViolettoremovehostbuildconfounding. Up to3WTcontrolsreused; 2additionalWTpredictionsincludedin52newmax.",
+  "structure_conditioning": "SameWTMSA/n12ccrystaltemplate/contactconditionsacrossmaskarms forfirstmatchedtest; do notsilentlychangeconditioningtoclaimdiversity",
+  "endpoints": [
+    "rawandrelaxedTierA/TierA+Bbyseed",
+    "nativeThr233acceptancebyseed",
+    "jointgeometry+nativepasses",
+    "RMSforceconvergenceseparate",
+    "backboneandactive-siteheterogeneity",
+    "signedHerschlagphistrata",
+    "assemblyintegrityandinterfacecontacts",
+    "mutationnumberandsequencediversity"
+  ],
+  "statistical_unit": "Predictionseed/model; four sites nestedwithinmodel; smallpilotdescriptive,notvalidatedactivityprediction",
+  "chemical_limit": "OnlyESandaccess-compatiblegeometrytested; no stableTI1orverifiedTSusedasconditioning; catalyticbarrierimprovement remainsuntested",
+  "execution_hosts": [
+    "violet",
+    "azalea_if_existingruntimeverified"
+  ],
+  "shared_hosts_new_campaign": false,
+  "dependency_installation_authorized": false,
+  "preflight_outputs_required": [
+    "parent_and_mask_proposal.json",
+    "symmetry_protection_acceptance.json",
+    "source_input_sha256.json"
+  ],
+  "gates_unchanged": true,
+  "mutable_masks": {
+    "focused_19_positions": {
+      "alpha": [
+        50,
+        51,
+        52,
+        73,
+        76,
+        101,
+        111,
+        112,
+        114,
+        115,
+        116,
+        151,
+        152,
+        153,
+        185,
+        187,
+        188
+      ],
+      "beta": [
+        39,
+        41
+      ]
+    },
+    "broader_29_positions": {
+      "alpha": [
+        28,
+        37,
+        38,
+        50,
+        51,
+        52,
+        73,
+        76,
+        92,
+        96,
+        97,
+        101,
+        111,
+        112,
+        114,
+        115,
+        116,
+        151,
+        152,
+        153,
+        160,
+        161,
+        162,
+        164,
+        185,
+        187,
+        188
+      ],
+      "beta": [
+        39,
+        41
+      ]
+    }
+  },
+  "core_protection": "NewpositionsrequireRSA>=0.25inall8copies/twoparents, nootherchainheavycontact<=4A, publishedTien2013normalization; originalfocusedmaskunchanged",
+  "parent_acceptance_verified": true
+}

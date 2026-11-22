@@ -1,0 +1,47 @@
+{
+  "model_count": 2,
+  "occupied_site_count": 8,
+  "comparison_rows": 32,
+  "reference_path": "/data/jpc/covalent-enzyme-design/cif/n12c.cif",
+  "assignment_policy": {
+    "one_ligand": "closest Thr233 OG1\u2013PA6 C54 site",
+    "four_ligands": "minimum-total-distance one-to-one permutation assignment",
+    "intended_pairs": {
+      "I": "AE",
+      "J": "BF",
+      "K": "CG",
+      "L": "DH"
+    }
+  },
+  "replicate_unit": "model seed; sites within a model are nested and not independent replicates",
+  "model_summary": [
+    {
+      "variant": "WT",
+      "seed": 2026112201,
+      "stage": "raw",
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/raw/normalized.pdb",
+      "ligand_count": 4,
+      "tier_a_count": 0,
+      "tier_ab_count": 0,
+      "joint_pass_count": 0,
+      "tier_a_fraction": 0.0,
+      "tier_ab_fraction": 0.0,
+      "joint_pass_fraction": 0.0,
+      "assignment": "{\"I:1\": \"AE\", \"J:1\": \"BF\", \"K:1\": \"CG\", \"L:1\": \"DH\"}"
+    },
+    {
+      "variant": "WT",
+      "seed": 2026112201,
+      "stage": "relaxed",
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_01/relaxation/relaxed.pdb",
+      "ligand_count": 4,
+      "tier_a_count": 0,
+      "tier_ab_count": 1,
+      "joint_pass_count": 0,
+      "tier_a_fraction": 0.0,
+      "tier_ab_fraction": 0.25,
+      "joint_pass_fraction": 0.0,
+      "assignment": "{\"I:1\": \"AE\", \"J:1\": \"BF\", \"K:1\": \"CG\", \"L:1\": \"DH\"}"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "accepted": true,
+  "native_sampling_completed": true,
+  "native_sequence_audit_passed": true,
+  "samples": 48,
+  "unique_sequences": 39,
+  "samples_by_arm": {
+    "broader_29_positions": 24,
+    "focused_19_positions": 24
+  },
+  "source_input_hashes_verified": true,
+  "native_outputs_resampled": false,
+  "original_wrapper_exit_status": 1,
+  "original_failure_scope": "CSVpublicationonly; alldesignjobsfinishedand48samplesaudited",
+  "corrected_export_completed": true,
+  "manifest_sha256": "21eb09c5a6d521fbb6a60fb199aeaecd91773642a71747f05b4096fd9dcbab7a",
+  "corrected_export_source_sha256": "c7a834e2c44e72e30e41acb97aa207fc7f0962abb48b0680f17f5173d31b491e",
+  "report_sha256": "d6e8009264b5e0fb50847484109d2677fdde3c40d656df3cef0e8ffb70d87d30"
+}

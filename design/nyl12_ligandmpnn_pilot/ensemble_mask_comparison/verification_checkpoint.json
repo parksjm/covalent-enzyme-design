@@ -1,0 +1,35 @@
+{
+  "as_of_utc": "2026-11-22T16:26:16.712101+00:00",
+  "native_sequence_samples_accepted": 48,
+  "unique_sequences": 39,
+  "selected_representatives": 8,
+  "positive_controls": [
+    "K59D",
+    "V111C"
+  ],
+  "new_prediction_jobs": 52,
+  "reused_WT_models": 3,
+  "model_seeds_total": 55,
+  "live_phase_receipt": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/status.json",
+  "supervisor_session": "nyl12_matched_masks_validation_20261122",
+  "source_snapshot": "validation_source_snapshot_checked",
+  "source_tests": {
+    "mask_generation": 7,
+    "surface_masks": 6,
+    "mutation_charge_topology_and_orchestration": 26,
+    "candidate_selection_preparation": 6,
+    "local_validation_controller": 18,
+    "hessian_pull_filter": 2
+  },
+  "new_module_coverage": "Allmeasurednewproductionmodules>=80%; CLI/supervisorcoverageunmeasured",
+  "native_preflights": [
+    "48FASTAfullprotection/symmetry/sourcehashaudit",
+    "1312residueSASA2parents",
+    "nativeWTdrycharge\u22128",
+    "52newjobsand3WTreuse(all5hasheseach)",
+    "completed45runtimeandBoltzcheckpoint",
+    "frozenWTgeometryknownbaseline"
+  ],
+  "science_limit": "ESmodeldiversityandfiltercalibration; no claimofimprovedchemicalbarrier/activity",
+  "closed_US_restarted": false
+}

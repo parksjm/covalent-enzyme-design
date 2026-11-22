@@ -1155,3 +1155,36 @@ trajectories remained on their execution hosts; compact structural views
 and analysis products were mirrored separately. Neither the distribution
 nor the control-process library isolation changed the QM/MM Hamiltonian,
 thermostat, seed schedule, frozen exterior or chemical bias definitions.
+
+## Matched sequence-mask and backbone pilot (2026-11-22)
+
+Two fully minimized WT tetramer conformations with four PA6 L4 molecules were
+used for a matched LigandMPNN comparison. The original mask had 17 alpha-chain
+and two beta-chain positions; the broader nested mask added ten alpha-chain
+positions. New positions required relative solvent accessibility of at least
+0.25 in all four equivalent chains of both structures and no protein heavy-atom
+contact to another chain within 4 Å. Exposure was calculated from protein
+coordinates with RDKit-bundled FreeSASA using Lee–Richards/ProtOr radii and a
+1.4 Å probe, normalized by the theoretical allowed-region maxima of
+[Tien et al. (2013)](https://doi.org/10.1371/journal.pone.0080635).
+These conservative design-mask choices were not fitted to activity labels.
+Catalytic/maturation protections and chain lengths were unchanged; explicit
+A–D and E–H sequence ties used equal weights. Two temperatures (0.1/0.2), two
+backbones, two masks and six samples per job yielded 48 sequences; four
+parent/temperature RNG seeds were paired across masks. Every FASTA was checked
+for chain identity, protected and fixed positions, and sequence symmetry.
+All samples and duplicate lineage were retained.
+
+The broader arm produced 24 unique sequences from 24 samples (5–10 changes,
+median 8); the focused arm produced 15 unique sequences from 24 samples
+(3–8 changes, median 5.5). Sequence uniqueness does not establish structural
+heterogeneity or catalytic improvement. Up to four representatives per arm
+were reserved for a deterministic, stratum-balanced sequence-diversity
+selection, with matched WT, K59D and V111C controls and five prediction seeds.
+The same template/contact conditioning and unrestrained Amber protocol were
+retained. WT predictions were reused only under scientific-input/runtime
+identity; mismatched host builds were regenerated on Violet. Protein formal
+charge was derived residue by residue, including the declared neutral beta
+N-termini, and counterions were recalculated for each sequence rather than
+assuming WT charge. No new TS geometry, activity-based threshold or change in
+protonation state was introduced in this comparison.

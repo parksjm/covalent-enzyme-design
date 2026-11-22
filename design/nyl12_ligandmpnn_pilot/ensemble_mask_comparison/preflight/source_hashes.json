@@ -1,0 +1,9 @@
+{
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_02/relaxation/relaxed.pdb": "8fbcbdc6ebc630113bc4c7393a1d51a94782152d5c57da0097e831da2515cc68",
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/models/WT/seed_03/relaxation/relaxed.pdb": "2d0ffcc9f99069b6549e3f1133f2df9a73a47dfaa30c61ca70e6da16518c0c8f",
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/audit_surface_masks.py": "612f55f5dc3236fc20d610b4441c0d343bcae26f53ad2b6d7de460f9b2a18f34",
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/final_masks.json": "de2533bfc20794951e49b9619690ff60a08fada7eccef87ddc92a7a72f50c3ac",
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/parent_and_mask_proposal.json": "1560404917a618b8d57b8e0516e09d3a7951bf9a33f5462800ee24c7bafb04a3",
+  "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/surface_exposure.json": "8d56949765e8f8a225221d22eb02d5fa17368064ad21571535746f5a676d37c8",
+  "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/design_surface_mask.py": "d84ab5b4c6c873292b549b302bf5a063ae9b3fc6d475fdc8e192129abf7ee817"
+}

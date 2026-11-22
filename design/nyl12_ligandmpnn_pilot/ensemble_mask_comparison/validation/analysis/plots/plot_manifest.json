@@ -1,0 +1,45 @@
+{
+  "geometry_plot": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/geometry_before_after.png",
+  "fraction_plot": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png",
+  "planned_models_per_stage": 55,
+  "variant_order": [
+    "WT",
+    "control_K59D",
+    "control_V111C",
+    "mask_01",
+    "mask_02",
+    "mask_03",
+    "mask_04",
+    "mask_05",
+    "mask_06",
+    "mask_07",
+    "mask_08"
+  ],
+  "occupied_geometry_counts": {
+    "raw": {
+      "planned_models": 55,
+      "observed_models": 55,
+      "missing_models": 0
+    },
+    "relaxed": {
+      "planned_models": 55,
+      "observed_models": 55,
+      "missing_models": 0
+    }
+  },
+  "model_fraction_counts": {
+    "raw": {
+      "planned_models": 55,
+      "observed_models": 55,
+      "missing_models": 0
+    },
+    "relaxed": {
+      "planned_models": 55,
+      "observed_models": 55,
+      "missing_models": 0
+    }
+  },
+  "replicate_unit": "model seed; sites within a model are nested, not independent",
+  "signed_herschlag_phi": true,
+  "activity_ranking_or_statistical_test": false
+}

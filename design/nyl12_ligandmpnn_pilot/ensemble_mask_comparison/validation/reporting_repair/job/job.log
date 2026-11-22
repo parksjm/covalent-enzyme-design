@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/reporting_repair/finalize_reporting.py", line 10, in <module>
+    from nyl12_covalent.local_design_validation_phases import _compare
+  File "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/local_design_validation_phases.py", line 20, in <module>
+    from nyl12_covalent.design_geometry_comparison import compare_models  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/design_geometry_comparison.py", line 12, in <module>
+    from scripts import screen_pa6_binding_orientation as screen
+ImportError: cannot import name 'screen_pa6_binding_orientation' from 'scripts' (unknown location)
