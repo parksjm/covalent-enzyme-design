@@ -76,6 +76,7 @@ def test_relay_progress_keeps_complete_bundle_and_excludes_raw_data(
         f"{prefix}/stripped.parm7",
         f"{prefix}/MANIFEST.sha256",
         f"{prefix}/source_snapshot/frames.nc",
+        "ti1_window033/minimum_verification/04_full_hessian/scientific_acceptance.json",
     ]
     reject = [
         "source_snapshot/model.py",
@@ -83,6 +84,7 @@ def test_relay_progress_keeps_complete_bundle_and_excludes_raw_data(
         "ti1_window032/inputs/seed.ncrst",
         "ti1_window032/optimization.nc",
         "ti1_window032/vmd_initial_progress/old.dcd",
+        "ti1_window033/minimum_verification/04_full_hessian/columns/column_00001/plus/receipt.json",
     ]
     for name in keep + reject:
         path = source / name

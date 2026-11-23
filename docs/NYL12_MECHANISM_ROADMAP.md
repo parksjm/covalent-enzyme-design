@@ -12,7 +12,7 @@ inventory, Hamiltonian, QM partition or movable shell changed.
    after relaxation; structural compatibility is not activity validation.
    See `native_thr_gate_calibration_20261123.md`, including reference-fit
    sensitivity, MD scaffold diagnostics and the n12cH A228/P228 edit audit.
-2. **Three relay releases are running on Violet.** Sessions are
+2. **Relay releases on Violet.** Sessions are
    `nyl12_relay_ti1_window032_20261123`,
    `nyl12_relay_ti1_window033_20261123` and
    `nyl12_relay_early_window028_20261123`. Two distinct tetrahedral-like
@@ -25,13 +25,36 @@ inventory, Hamiltonian, QM partition or movable shell changed.
    See `neb_us_nterminal_relay_release_20261123.md`. The campaign is
    `umbrella_sampling/nterminal_relay_releases_20261123/` under the existing
    direct-path root. Verified stripped VMD bundles retain explicit atom maps.
+   Window032 subsequently converged with maximum force 8.50e-6 Eh/bohr:
+   C–OG1 2.661 Å, C–N 1.371 Å, C–O 1.262 Å, HG1–Nalpha 1.079 Å.
+   It is a force-accepted noncovalent NH3+/alkoxide configuration, not the
+   original neutral-N/OG1–H E–S state. Its Hessian has not been evaluated;
+   no extra window032 curvature campaign was launched. Other seeds continue.
 3. **Do not duplicate the 35.81-path campaign.** Its 35.80895 kcal/mol value
    is NEB ΔE, not ΔG‡. That path family already supplied the refined
    46.41-kcal/mol candidate and completed US campaign with apparent PMF
    height 47.0475 kcal/mol. Reference geometries and observables differ.
    Finish the bounded existing-candidate Hessian diagnosis before claiming a
    first-order TS; no duplicate TS/US run or sampling extension is launched.
-4. **Decision after release:** classify all proton occupancies, C–OG1, C–N,
+4. **PI-authorized offline follow-up (23 November):** leave all three original
+   optimizations running to their convergence checks. Persistent tmux session
+   `nyl12_relay_minimum_w033_20261123` passed all 40 prerequisite hashes and
+   is waiting in window033's `minimum_verification/00_queue/`. It starts
+   window033 verification as soon as that seed converges;
+   it does not wait for the other two. If tetrahedral-like geometry survives,
+   freeze the accepted restart and verify repeated analytic gradients,
+   serialization parity and finite-difference step stability before computing
+   the full 12495-DOF active-region Hessian (at most eight low-priority CPU
+   workers, no GPU). Require zero resolved negative eigenvalues and no unresolved
+   signs under the recorded numerical screen before accepting a local minimum
+   in this fixed-exterior model. No QM-only Hessian or smaller movable shell
+   substitutes for that check. Numerical ambiguity is reported as unverified;
+   neither the skew diagnostic nor force convergence alone proves a minimum.
+   No new reaction-path campaign starts automatically. The original 10000-cycle
+   per-seed budgets remain in force; an exhausted budget is a continuation
+   checkpoint, not convergence. See `relay_minimum_queue_20261123.md`.
+
+   **Decision after release:** classify all proton occupancies, C–OG1, C–N,
    C–O and force convergence. Retention warrants further stationary-point
    classification; reversion or onward acylation instead constrains the path.
    A discrete TI1 minimum is optional. HG1→Nalpha followed by another N–H

@@ -875,6 +875,7 @@ if ssh "$remote" test -f "$relay_release_source/prepared.json"; then
     rsync "${relay_release_rsync_args[@]}" \
         --rsync-path="flock --shared -- $relay_release_source/.vmd_export.lock rsync" \
         --exclude='/clutter/***' \
+        --exclude='**/columns/***' \
         --include='/*/vmd_progress_verified/***' \
         --exclude='**/work/***' --exclude='**/__pycache__/***' \
         --exclude='**/source_snapshot/***' --exclude='/parameters_3ob/***' \

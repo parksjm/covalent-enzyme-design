@@ -21,6 +21,14 @@
   Glimmer 30B; no new model server launched.
 - Follow `NYL12_MECHANISM_ROADMAP.md`. A TI1 minimum is optional; proton
   occupancy and connectivity, not labels alone, define chemical states.
+- PI offline instruction: leave all releases to their convergence checks.
+  `nyl12_relay_minimum_w033_20261123` is actually running and waiting after
+  all 40 prerequisite hashes passed. It tests window033 for a minimum only after
+  independent force convergence and tetrahedral-like retention. Repeat/parity
+  and derivative-step checks precede a full 12495-DOF Hessian with expected
+  index zero; keep the original 12 Å movable shell and fixed exterior. No new
+  reaction path is authorized automatically; an inconclusive curvature test
+  remains unverified. See `relay_minimum_queue_20261123.md` and the roadmap.
 
 ## Earlier checkpoint — restored pKa controls and TS gate correction, 2026-11-23
 
