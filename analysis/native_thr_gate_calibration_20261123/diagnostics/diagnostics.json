@@ -1,0 +1,224 @@
+{
+  "source_sha256": {
+    "analysis/native_thr_gate_calibration_20261123/results/calibration.json": "2e32e45b3389db6c7d3b4724ab6a508416f58e54b70353f9a79844b2373bf6eb",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_01.csv": "9dca3c622627334fdb75d39a644e104985d0bc72f031e415196a11b211678e5f",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_02.csv": "826f870f02cda4fd13804cfa81685d512a3939ba58169b5e8f65bbba96e594e3",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_03.csv": "1e20371fac8c7db59d677151e0937e796e6e0cde79769e9fc05d1d151a14921c",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_04.csv": "350ecf016c9ceca441ae47f117d0a30cb15ec569cb6f459198541852074039dd",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_01.csv": "d2a966924c65fea534cdcb890c36a155938e95aef04bf214ca387351ff06293a",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_02.csv": "745aeaebce63176bdb761f0cd8627533b5ece88bdd2dd3995b68d5155872b6b3",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_03.csv": "d9762f6e3e27f6e4428c0af5a9ed8920cb2e4f16213f3276814a345f1f5e8811",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_04.csv": "9c688b810a241a12462cc4ec78b4d15acbd88aca08ddf71cc5c63e4c4ef2758e",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_01.csv": "df298d5df9766096f57ec8d19951aecf5e6bb9ef8ad2c975ec2b3fb8c69b4281",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_02.csv": "5187cecb9308f08d9b3d27f098dec1b243b93a1979b7a4049b2a559dc66d6388",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_03.csv": "6a561f235dcc9941322fd8a0ed08cfe4f3c0e257aacb8f343749b61ff3a4e944",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_04.csv": "35b270821945a6adda8cd3038a4d5a4fc84d0f6c01d2b7a0053448cc8f5a3b61"
+  },
+  "md_existing_scalar_summaries": [
+    {
+      "state": "nh2_asp272_ash274",
+      "frames": 40000,
+      "native_pass": 98,
+      "fit_rmsd_all_q05_q50_q95_A": [
+        0.2945137685441821,
+        0.4605126677469681,
+        0.9480181343237326
+      ],
+      "fit_rmsd_native_fail_q05_q50_q95_A": [
+        0.2944714950522397,
+        0.460523978427481,
+        0.9499563483982474
+      ],
+      "fit_rmsd_native_pass_q05_q50_q95_A": [
+        0.3081264537972575,
+        0.4595815930659902,
+        0.6230639021111317
+      ],
+      "og1_shift_fail": 39472,
+      "og1_shift_q05_q50_q95": [
+        1.2374836740056097,
+        2.721702443785479,
+        4.869285448418361
+      ],
+      "fit_rmsd_vs_og1_shift_pearson_r": -0.3477917423094289,
+      "nterm_shift_fail": 37088,
+      "nterm_shift_q05_q50_q95": [
+        1.1397048741136642,
+        3.403380862591816,
+        4.302238550652178
+      ],
+      "fit_rmsd_vs_nterm_shift_pearson_r": -0.5376513450901094,
+      "psi_delta_fail": 17244,
+      "psi_delta_q05_q50_q95": [
+        -82.04413956328453,
+        -29.83420146126838,
+        1.29414004294333
+      ],
+      "fit_rmsd_vs_psi_delta_pearson_r": 0.3211856224686201,
+      "chi1_delta_fail": 9947,
+      "chi1_delta_q05_q50_q95": [
+        -17.153858095797638,
+        4.774772548489068,
+        104.44182013509464
+      ],
+      "fit_rmsd_vs_chi1_delta_pearson_r": 0.3073896553933144
+    },
+    {
+      "state": "nh2_asp272_asp274",
+      "frames": 40000,
+      "native_pass": 7,
+      "fit_rmsd_all_q05_q50_q95_A": [
+        0.24236643895745974,
+        0.38288255438488306,
+        0.5553602613136612
+      ],
+      "fit_rmsd_native_fail_q05_q50_q95_A": [
+        0.2423616221302154,
+        0.38286415998197015,
+        0.5553457049498574
+      ],
+      "fit_rmsd_native_pass_q05_q50_q95_A": [
+        0.32654379329788963,
+        0.459167130000691,
+        0.5408939915161983
+      ],
+      "og1_shift_fail": 39959,
+      "og1_shift_q05_q50_q95": [
+        1.7433795184821266,
+        2.450179343318438,
+        2.9513041150168826
+      ],
+      "fit_rmsd_vs_og1_shift_pearson_r": -0.31816684463689454,
+      "nterm_shift_fail": 39976,
+      "nterm_shift_q05_q50_q95": [
+        2.2763969100332795,
+        3.019424490300363,
+        3.5681337944897704
+      ],
+      "fit_rmsd_vs_nterm_shift_pearson_r": -0.439695091262697,
+      "psi_delta_fail": 21961,
+      "psi_delta_q05_q50_q95": [
+        -62.38019078261613,
+        -37.17607050961978,
+        -12.750793819280712
+      ],
+      "fit_rmsd_vs_psi_delta_pearson_r": 0.21989560497692714,
+      "chi1_delta_fail": 429,
+      "chi1_delta_q05_q50_q95": [
+        -11.496863325262357,
+        0.8497193056154089,
+        13.03974449363658
+      ],
+      "fit_rmsd_vs_chi1_delta_pearson_r": 0.0028150126285624174
+    },
+    {
+      "state": "nh3_asp272_asp274",
+      "frames": 40000,
+      "native_pass": 0,
+      "fit_rmsd_all_q05_q50_q95_A": [
+        0.3109426350416587,
+        0.4465036172812719,
+        0.9031809950117198
+      ],
+      "fit_rmsd_native_fail_q05_q50_q95_A": [
+        0.3109426350416587,
+        0.4465036172812719,
+        0.9031809950117198
+      ],
+      "fit_rmsd_native_pass_q05_q50_q95_A": null,
+      "og1_shift_fail": 39822,
+      "og1_shift_q05_q50_q95": [
+        1.1994333977829756,
+        2.1036659478647524,
+        2.526240677833453
+      ],
+      "fit_rmsd_vs_og1_shift_pearson_r": -0.6704175498190752,
+      "nterm_shift_fail": 39906,
+      "nterm_shift_q05_q50_q95": [
+        1.7916917134341281,
+        2.7376070343279606,
+        3.130990135447232
+      ],
+      "fit_rmsd_vs_nterm_shift_pearson_r": -0.7091510333310398,
+      "psi_delta_fail": 18072,
+      "psi_delta_q05_q50_q95": [
+        -77.36790074522752,
+        -33.649866815530515,
+        -18.42277264476753
+      ],
+      "fit_rmsd_vs_psi_delta_pearson_r": 0.707340212317852,
+      "chi1_delta_fail": 361,
+      "chi1_delta_q05_q50_q95": [
+        -12.018431046673658,
+        -0.5509171439349672,
+        12.973945345614192
+      ],
+      "fit_rmsd_vs_chi1_delta_pearson_r": 0.24254586560916921
+    }
+  ],
+  "sequence_correspondence_audit": [
+    {
+      "n12c_auth_chain": "A",
+      "9Z0B_auth_chain": "A",
+      "local_backbone_rmsd": 0.005542047784929503,
+      "scaffold_rmsd": 0.005542047784929503,
+      "og1_shift": 0.0032710110906106,
+      "nterm_shift": 0.0016341171118876593,
+      "psi_delta": 0.33866007901843886,
+      "chi1_delta": -0.18272865338050792,
+      "failures": [],
+      "native_pass": true,
+      "shared_observed_residues": 313,
+      "sequence_mismatches": []
+    },
+    {
+      "n12c_auth_chain": "F",
+      "9Z0B_auth_chain": "F",
+      "local_backbone_rmsd": 0.005483497220719577,
+      "scaffold_rmsd": 0.005483497220719577,
+      "og1_shift": 0.0041049626018158526,
+      "nterm_shift": 0.004244240671770503,
+      "psi_delta": 0.22508990274661755,
+      "chi1_delta": -0.4802327575099241,
+      "failures": [],
+      "native_pass": true,
+      "shared_observed_residues": 309,
+      "sequence_mismatches": []
+    },
+    {
+      "n12c_auth_chain": "H",
+      "9Z0B_auth_chain": "H",
+      "local_backbone_rmsd": 0.0043700179337037145,
+      "scaffold_rmsd": 0.0043700179337037145,
+      "og1_shift": 0.00936052387381595,
+      "nterm_shift": 0.002443281940312741,
+      "psi_delta": 0.393751185289716,
+      "chi1_delta": 0.09727521066315603,
+      "failures": [],
+      "native_pass": true,
+      "shared_observed_residues": 314,
+      "sequence_mismatches": [
+        {
+          "auth_residue": "228",
+          "n12c": "ALA",
+          "9Z0B": "PRO"
+        }
+      ]
+    },
+    {
+      "n12c_auth_chain": "V",
+      "9Z0B_auth_chain": "G",
+      "local_backbone_rmsd": 0.0051540468573561884,
+      "scaffold_rmsd": 0.0051540468573561884,
+      "og1_shift": 0.007482471514590672,
+      "nterm_shift": 0.0029541476188727224,
+      "psi_delta": 0.6875374598308781,
+      "chi1_delta": -0.38737899049263547,
+      "failures": [],
+      "native_pass": true,
+      "shared_observed_residues": 312,
+      "sequence_mismatches": []
+    }
+  ],
+  "independence": "Correlated frames pooled descriptively; not independent samples or confidence intervals."
+}

@@ -1,0 +1,12 @@
+{
+  "python_executable": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+  "python_version": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+  "packages": {
+    "numpy": "1.26.4",
+    "biopython": "1.86",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.2"
+  },
+  "new_production_dependencies": false,
+  "coverage": "ephemeral uv --with coverage only"
+}

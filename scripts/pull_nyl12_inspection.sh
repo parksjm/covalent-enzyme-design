@@ -642,6 +642,7 @@ rsync "${vmd_rsync_args[@]}" --copy-links \
     --exclude='**/ts_hessian/columns/***' \
     --exclude='**/columns/column_*/***' \
     --exclude='source_snapshot/' --exclude='clutter/' \
+    --exclude='nterminal_relay_releases_20261123/' \
     --exclude='/11_leaving_group_relay_screen/coarse/' \
     --exclude='/11_leaving_group_relay_screen/coarse_nonflipped/' \
     --exclude='/11_leaving_group_relay_screen/refined/' \
@@ -786,6 +787,7 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     trace_us_rsync_args=(-rtpvz --safe-links --max-size=500m)
     if [[ $dry_run -eq 1 ]]; then trace_us_rsync_args+=(--dry-run); fi
     rsync "${trace_us_rsync_args[@]}" --copy-links \
+        --exclude='/nterminal_relay_releases_20261123/***' \
         --exclude='/inputs/' \
         --exclude='/analysis_job/' --exclude='/preparation_history/' \
         --exclude='/vmd_dynamic/work/***' \
@@ -831,5 +833,58 @@ if ssh "$remote" test -f "$water_path_source/MANIFEST.sha256"; then
         (cd "$water_path_destination" && "${checksum[@]}" MANIFEST.sha256)
         echo "Water-relay VMD: $water_path_destination/view_path.vmd"
         echo "Water-relay energy: $water_path_destination/energy.svg"
+    fi
+fi
+
+# Progress briefing: editable deck, PDF, source JSON and figure provenance.
+briefing_source=/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123
+briefing_destination="$destination/docs/presentations/nyl12_progress_20261123"
+if ssh "$remote" test -f "$briefing_source/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$briefing_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='/rendered/***' --include='*/' \
+        --include='*.pptx' --include='*.pdf' --include='*.png' \
+        --include='*.json' --include='*.md' --include='*.sh' \
+        --include='MANIFEST.sha256' --exclude='*' \
+        "$remote:$briefing_source/" "$briefing_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$briefing_destination" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Nyl12 progress deck: $briefing_destination/Nyl12_PA6_progress_20261123.pptx"
+    fi
+fi
+
+# Frozen native-Thr calibration: compact results and reproducible analysis.
+native_gate_source=/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123
+native_gate_destination="$destination/analysis/native_thr_gate_calibration_20261123"
+if ssh "$remote" test -f "$native_gate_source/results/calibration.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$native_gate_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/__pycache__/***' --include='*/' \
+        --include='*.json' --include='*.csv' --include='*.png' \
+        --include='*.md' --include='*.py' --include='*.sh' --exclude='*' \
+        "$remote:$native_gate_source/" "$native_gate_destination/"
+fi
+
+# Unbiased N-terminal relay releases: verified progress movies, not raw QM data.
+relay_release_source="$trace_us_source/nterminal_relay_releases_20261123"
+relay_release_destination="$trace_us_destination/nterminal_relay_releases_20261123"
+if ssh "$remote" test -f "$relay_release_source/prepared.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$relay_release_destination"; fi
+    relay_release_rsync_args=(-rtpvz --safe-links --max-size=500m)
+    if [[ $dry_run -eq 1 ]]; then relay_release_rsync_args+=(--dry-run); fi
+    rsync "${relay_release_rsync_args[@]}" \
+        --rsync-path="flock --shared -- $relay_release_source/.vmd_export.lock rsync" \
+        --exclude='/clutter/***' \
+        --include='/*/vmd_progress_verified/***' \
+        --exclude='**/work/***' --exclude='**/__pycache__/***' \
+        --exclude='**/source_snapshot/***' --exclude='/parameters_3ob/***' \
+        --exclude='**/inputs/***' --exclude='**/vmd_initial_progress/***' \
+        --include='*/' --include='*.json' --include='*.csv' \
+        --include='*.md' --include='*.png' --include='*.py' --include='*.sh' \
+        --exclude='*' \
+        "$remote:$relay_release_source/" "$relay_release_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        verify_nested_manifests "$relay_release_destination"
+        echo "Relay release movies: $relay_release_destination/SEED/vmd_progress_verified/view_relay.vmd"
     fi
 fi

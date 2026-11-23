@@ -1,4 +1,28 @@
-## CURRENT — restored pKa controls and TS gate correction, 2026-11-23
+## CURRENT — calibrated gate and relay releases, 2026-11-23
+
+- Unchanged native-Thr gate: all ten original 9Z0A/9Z0B sites and four
+  derived n12c sites pass; crystal OG1/N maxima 0.1232/0.0841 Å. Known-active
+  rejection still prevents activity classification. Full calibration:
+  `native_thr_gate_calibration_20261123.md`.
+- Three unbiased DFTB3/MM releases run in Violet tmux:
+  `nyl12_relay_{ti1_window032,ti1_window033,early_window028}_20261123`.
+  Existing direct-path `umbrella_sampling/nterminal_relay_releases_20261123/`
+  holds exact frames, manifests and verified progress VMD bundles. Initial
+  SCC/energy/gradient checks pass; final convergence is not yet claimed.
+  Original 12 Å/4165 movable atoms, fixed exterior, charge −2 and atom map
+  are retained, without positional or reaction-coordinate potentials.
+- 35.81 kcal/mol is existing direct NEB **ΔE**, not ΔG‡. Its TS candidate
+  and 47.05-kcal/mol apparent NEB-US PMF already exist; no duplicate campaign
+  was launched. Existing first-order TS verification remains open.
+- NylC MCCE 5XYG/7YU0/7YU1 reruns completed natively but remain pKa-
+  unqualified; no states assigned. Audit curves and templates before use.
+- Progress PowerPoint/PDF: `docs/presentations/nyl12_progress_20261123/`.
+  The pull script includes it, calibration and relay VMD. Muse means
+  Glimmer 30B; no new model server launched.
+- Follow `NYL12_MECHANISM_ROADMAP.md`. A TI1 minimum is optional; proton
+  occupancy and connectivity, not labels alone, define chemical states.
+
+## Earlier checkpoint — restored pKa controls and TS gate correction, 2026-11-23
 
 - NylC5XYG/7YU0/7YU1 reruns passed native MCCE step1/2 and are in DelPhi
   step3 on Violet. Each case has `rerun_20261123/` and a current pointer in

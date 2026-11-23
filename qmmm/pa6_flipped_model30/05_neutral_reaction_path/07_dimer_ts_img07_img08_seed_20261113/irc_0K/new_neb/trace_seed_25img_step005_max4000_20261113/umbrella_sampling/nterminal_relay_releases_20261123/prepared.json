@@ -1,0 +1,253 @@
+{
+  "seeds": [
+    {
+      "seed": "ti1_window032",
+      "source_trajectory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_032/03_production_block_04_5ps/trajectory.nc",
+      "source_trajectory_sha256": "5308b534058bdf5e2939b0ba1c6925c190c004948fbfa98294b7c5b7660bc983",
+      "window": 32,
+      "block": 4,
+      "frame_1based": 65,
+      "time_ps": 24.25,
+      "full_atom_count": 104922,
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "coordinate_sha256": "b52485614af622edbda7762bd1792ac9ec497c12017046a7bd2441853b7aa7d5",
+      "active_atom_count": 4165,
+      "active_atom_ids_sha256": "2cdbe5a2d210eb529fbf72d3fa71fc752c88f5f2769260cbeadb46b397a5a6b9",
+      "qm_atom_count": 98,
+      "qm_charge": -2,
+      "topology_charge_e": -0.004004953227619741,
+      "qm_mm_link_count": 8,
+      "qm_electrons_with_links": 368,
+      "qm_electron_parity_even": true,
+      "qm_atom_ids_sha256": "831552968095827287aad4c43711c513f173eb3ab2e79b0b99b50bffc6a2cb0e",
+      "initial_geometry": {
+        "distances_A": {
+          "C_O": 1.3073544338147536,
+          "C_OG": 1.5584340813878352,
+          "C_NL": 1.4713824666117141,
+          "C_CA": 1.6406387711740662,
+          "H1_N": 1.0534951266093682,
+          "H1_OG": 3.4455837235590523,
+          "H1_NL": 3.2466774427070146,
+          "H1_O": 3.6984750022513477,
+          "H2_N": 1.098605140993202,
+          "H2_OG": 3.5248969484769264,
+          "H2_NL": 3.3287309692925353,
+          "H2_O": 4.589712691549057,
+          "HG_N": 1.0280786428745132,
+          "HG_OG": 2.4393078382949556,
+          "HG_NL": 1.8407057902253272,
+          "HG_O": 3.012860751925194,
+          "HN_N": 3.4465196970035388,
+          "HN_OG": 2.9120774597984016,
+          "HN_NL": 1.0230718844189224,
+          "HN_O": 3.2066421669481553
+        },
+        "carbon_angles_degrees": {
+          "O_C_OG": 106.36497362192341,
+          "O_C_NL": 114.98525205881789,
+          "O_C_CA": 119.96903202457734,
+          "OG_C_NL": 107.2923744425071,
+          "OG_C_CA": 98.59199343005871,
+          "NL_C_CA": 107.69154692583918
+        },
+        "geometry_label": "TI1_like_geometric_candidate",
+        "proton_bond_cutoff_A": 1.2,
+        "proton_bonds": {
+          "H1": [
+            "N"
+          ],
+          "H2": [
+            "N"
+          ],
+          "HG": [
+            "N"
+          ],
+          "HN": [
+            "NL"
+          ]
+        }
+      }
+    },
+    {
+      "seed": "ti1_window033",
+      "source_trajectory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_033/03_production_block_05_5ps/trajectory.nc",
+      "source_trajectory_sha256": "98ea1bac883503741de3236126786560233094cad73d15a20682e10923287845",
+      "window": 33,
+      "block": 5,
+      "frame_1based": 46,
+      "time_ps": 28.299999237060547,
+      "full_atom_count": 104922,
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "coordinate_sha256": "85b19951d8ce7f0c347cf6f2c71139fb72bc6c67b922831290f3853b4f804106",
+      "active_atom_count": 4165,
+      "active_atom_ids_sha256": "2cdbe5a2d210eb529fbf72d3fa71fc752c88f5f2769260cbeadb46b397a5a6b9",
+      "qm_atom_count": 98,
+      "qm_charge": -2,
+      "topology_charge_e": -0.004004953227619741,
+      "qm_mm_link_count": 8,
+      "qm_electrons_with_links": 368,
+      "qm_electron_parity_even": true,
+      "qm_atom_ids_sha256": "831552968095827287aad4c43711c513f173eb3ab2e79b0b99b50bffc6a2cb0e",
+      "initial_geometry": {
+        "distances_A": {
+          "C_O": 1.3170752752136976,
+          "C_OG": 1.5557301379762358,
+          "C_NL": 1.477901596785867,
+          "C_CA": 1.559399883818474,
+          "H1_N": 1.0198193548310126,
+          "H1_OG": 3.622518601976017,
+          "H1_NL": 3.5989508756850634,
+          "H1_O": 3.9009698211758748,
+          "H2_N": 1.0754962569148052,
+          "H2_OG": 3.5479144093441386,
+          "H2_NL": 3.2529865733865884,
+          "H2_O": 4.484568539544356,
+          "HG_N": 1.0450459594755053,
+          "HG_OG": 2.5616707016786666,
+          "HG_NL": 1.9723519282204138,
+          "HG_O": 2.818984344093332,
+          "HN_N": 3.2287379917855525,
+          "HN_OG": 2.5782302169672056,
+          "HN_NL": 1.0188623676516073,
+          "HN_O": 3.22337486229614
+        },
+        "carbon_angles_degrees": {
+          "O_C_OG": 109.12548692822239,
+          "O_C_NL": 112.7972994004161,
+          "O_C_CA": 113.00990232594613,
+          "OG_C_NL": 101.03398103362561,
+          "OG_C_CA": 105.50537448959577,
+          "NL_C_CA": 114.26756623766097
+        },
+        "geometry_label": "TI1_like_geometric_candidate",
+        "proton_bond_cutoff_A": 1.2,
+        "proton_bonds": {
+          "H1": [
+            "N"
+          ],
+          "H2": [
+            "N"
+          ],
+          "HG": [
+            "N"
+          ],
+          "HN": [
+            "NL"
+          ]
+        }
+      }
+    },
+    {
+      "seed": "early_window028",
+      "source_trajectory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_028/03_production_block_04_5ps/trajectory.nc",
+      "source_trajectory_sha256": "99c37a820731d8c47c00f9de5fcec02ab1eefe64916e5ce31c8b046906cc78a1",
+      "window": 28,
+      "block": 4,
+      "frame_1based": 98,
+      "time_ps": 25.899999618530273,
+      "full_atom_count": 104922,
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "coordinate_sha256": "ac29ed415838c92accc4e33f4748f0b313b9db6caf2e4b890b045140ce93c9ec",
+      "active_atom_count": 4165,
+      "active_atom_ids_sha256": "2cdbe5a2d210eb529fbf72d3fa71fc752c88f5f2769260cbeadb46b397a5a6b9",
+      "qm_atom_count": 98,
+      "qm_charge": -2,
+      "topology_charge_e": -0.004004953227619741,
+      "qm_mm_link_count": 8,
+      "qm_electrons_with_links": 368,
+      "qm_electron_parity_even": true,
+      "qm_atom_ids_sha256": "831552968095827287aad4c43711c513f173eb3ab2e79b0b99b50bffc6a2cb0e",
+      "initial_geometry": {
+        "distances_A": {
+          "C_O": 1.2752325870134449,
+          "C_OG": 1.8965778878742143,
+          "C_NL": 1.4954805041575057,
+          "C_CA": 1.5324180712391426,
+          "H1_N": 1.0841944273390767,
+          "H1_OG": 3.5534213290001064,
+          "H1_NL": 3.5598166985139574,
+          "H1_O": 4.1566570768720785,
+          "H2_N": 1.049296867185694,
+          "H2_OG": 3.291554402277105,
+          "H2_NL": 3.571110682607097,
+          "H2_O": 4.821531576227883,
+          "HG_N": 1.067965494667961,
+          "HG_OG": 2.1875771694409765,
+          "HG_NL": 2.051981085567499,
+          "HG_O": 3.069859589309545,
+          "HN_N": 3.449043453250883,
+          "HN_OG": 2.758714164652406,
+          "HN_NL": 1.0114411668686545,
+          "HN_O": 3.223063577053189
+        },
+        "carbon_angles_degrees": {
+          "O_C_OG": 110.37358581611521,
+          "O_C_NL": 119.19756416238991,
+          "O_C_CA": 119.12202644049944,
+          "OG_C_NL": 97.57690052373913,
+          "OG_C_CA": 91.27365676148962,
+          "NL_C_CA": 112.7049475130057
+        },
+        "geometry_label": "unassigned",
+        "proton_bond_cutoff_A": 1.2,
+        "proton_bonds": {
+          "H1": [
+            "N"
+          ],
+          "H2": [
+            "N"
+          ],
+          "HG": [
+            "N"
+          ],
+          "HN": [
+            "NL"
+          ]
+        }
+      }
+    }
+  ],
+  "qm_aligned_rmsd_A": {
+    "ti1_window032__ti1_window033": 0.7915053340072581,
+    "ti1_window032__early_window028": 0.8022507408642431,
+    "ti1_window033__early_window028": 0.7871721316601956
+  },
+  "local_mm_aligned_rmsd_A": {
+    "ti1_window032__ti1_window033": 1.353275918450868,
+    "ti1_window032__early_window028": 1.234029917842637,
+    "ti1_window033__early_window028": 1.3168020846745894
+  },
+  "hypothesis": "N-terminal-protonated sampled structures may retain a TI1 basin after bias removal",
+  "boundary": "Unrestrained within unchanged 4165-atom 12A movable list; all other atoms frozen; no reaction-coordinate/position potentials",
+  "acceptance": "Native termination, SCC, max force<=1e-5 Eh/bohr, energy decrease, fixed shell and proton geometry recorded independently; no Hessian/minimum claim",
+  "source_sha256": {
+    "scripts/prepare_dimer_continuation.py": "9685dff65bd6f237481cb012040b406df57f9ab97191a43ac55d402c37da533e",
+    "scripts/run_neb_us_relay_release.py": "10fbf4c7f63cbaa1b37f517164bf7ec356120512d2016ce7e8899539e4957195",
+    "scripts/prepare_neb_us_relay_releases.py": "ce62b4e643fa4d39b2d812e3a937bce355ee757efd35bc7a0893f6946e7856f7",
+    "src/nyl12_covalent/stationary_native.py": "31a9f74305479286dd576494b4ea0295ed10a9049d314532c52333509642ee0a",
+    "src/nyl12_covalent/relay_release_run.py": "9c4dece452310a0d617415b51afd142cc6e16ad0da5a08a63392b4fa6a801c14",
+    "src/nyl12_covalent/relay_release.py": "7ca7f79740db138c895d8cb9b70d4cdabca80365a016845fc32aa14f5f1ef30f",
+    "src/nyl12_covalent/native_sander_cli.py": "b89fe2749da50344d5a9a94b2ea9657db82a0a17b2211c551e9c5759f21c6284",
+    "src/nyl12_covalent/dftb_scc_validation.py": "06cbe3afc480b9d9e2e481aa0c1e5c554e13438e18d58e773c794e4259fe908f"
+  },
+  "parameter_sha256": {
+    "N-C.skf": "f0b04e6bcee02be99d4f1b2068488f5e62157d8cd41c8424813b6ce21a6f1257",
+    "O-N.skf": "785a2dcab1575282eb6d5d85eaa65a4157c55edf2e7cd6771340dae4176e72dc",
+    "N-H.skf": "c25aa3eaf8d05f4ee3b97d750b4c37c74b00d44f427750162bee58031f104e03",
+    "O-C.skf": "cbfbf6f0058ca42c9fd8b2ba6db0a3a0e694260abe3f3ea032608d3714212ba0",
+    "H-O.skf": "b77a51b690caccfa00bbbb2c3d83073d04dab59a7853ac96586d13138ebd4891",
+    "O-O.skf": "3b377938f48ebf8b5a1b79da5befcfe42074ec5b4908cc2e6eb1193f9d748a91",
+    "C-H.skf": "8d5c6aabecfc72271e7a3f56a238cb8cc77fb552685c79b9381412d32e5609f1",
+    "H-N.skf": "4782c582e5a39d5f8ef56c3b5bd7b47aee78b43ec421608db8d2cbf930b1d15c",
+    "C-O.skf": "f95f3af65b0f9b7daff8073df90326e795e746e72c91ee7c88792f8b1b684ccc",
+    "H-H.skf": "acdc130b5ac73a9d51c5091b61e448f1de0723648dfb66d4b5cf1ab71bea0b66",
+    "C-N.skf": "3455aea77ce55e836db4165397871726080d52e813a268432f999f4de4ee07cd",
+    "N-N.skf": "f96f6a07430f4d472cc21e0614cda8478c82a25d3d7734331cd65149f0d58906",
+    "H-C.skf": "950f61115cf701988b752960b9a56929b090ca66fe4bbdcea46b3272d20027e0",
+    "N-O.skf": "31ab322d2dc25ae28f1e567d1e25c7485c2d38732327c754db33208022b05bec",
+    "C-C.skf": "dfda7b773cb7891e2275ff284c87daac11167a105ba90bafd783b289715cda0f",
+    "O-H.skf": "911b8644b0a0d6bbd193064ffb962a658c2dc77e911a563194476e5dddf96f45"
+  },
+  "selection_scope": "Locally preserved accepted payloads windows028-034; 17 metadata-only blocks excluded explicitly, not a population estimate"
+}

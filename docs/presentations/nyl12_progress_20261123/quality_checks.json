@@ -1,0 +1,18 @@
+{
+  "slide_count": 40,
+  "pdf_pages": 40,
+  "asset_hashes_pass": true,
+  "visual_review": "40-page contact sheet inspected; tables/captions/figures legible; explicit VMD placeholders",
+  "chemistry_review": "Independent source review plus lead corrections of energy type/reference and invalid asynchronous extension",
+  "report_builder_tests": "8 passed;99% coverage",
+  "native_calibration_tests": "13passedintheexistinganalysisenvironment;97%coverage. Defaultproject10passed3optional-parsertests skipped.",
+  "scientific_claims": "No validated viable barrier, no activity-predictive gate, no final relay outcome claimed",
+  "full_repository_suite": {
+    "command": "uv run pytest -q",
+    "passed": 2060,
+    "skipped": 17,
+    "skip_scope": "13 retained repair-fixture prerequisites;3 optional Biopython parser tests;1 presentation module when python-pptx absent. All13 calibration tests and8 presentation tests passed in explicit existing/isolated tool environments."
+  },
+  "relay_release_tests": "18passed;91%coverage;3nativejobsandshared-lockmovieupdateractive",
+  "laptop_pull_checks": "Actualrsyncfiltersandmockdownloadregressionspassed; all3liveverifiedmoviebundlechecksumsverified"
+}

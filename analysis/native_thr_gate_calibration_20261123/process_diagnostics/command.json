@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+    "analysis/native_thr_gate_calibration_20261123/diagnostic_source_snapshot/scripts/summarize_native_thr_diagnostics.py",
+    "--root",
+    "/data/jpc/covalent-enzyme-design",
+    "--output",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/diagnostics"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/diagnostic_source_snapshot/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/diagnostic_source_snapshot/scripts/summarize_native_thr_diagnostics.py": "b1e435fb9f3341a8c7ee10030b1cdf97bb9cb26bb0cc0dd7f6d758bc90a8582a",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/diagnostic_source_snapshot/src/nyl12_covalent/native_thr_calibration.py": "f13596e4fb47871d1a0ce7c5dc25f2ff29dd3f90c9fc5e766d2eb330b666920f",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/results/calibration.json": "2e32e45b3389db6c7d3b4724ab6a508416f58e54b70353f9a79844b2373bf6eb",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_01.csv": "9dca3c622627334fdb75d39a644e104985d0bc72f031e415196a11b211678e5f",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_02.csv": "826f870f02cda4fd13804cfa81685d512a3939ba58169b5e8f65bbba96e594e3",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_03.csv": "1e20371fac8c7db59d677151e0937e796e6e0cde79769e9fc05d1d151a14921c",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_ash274__replica_04.csv": "350ecf016c9ceca441ae47f117d0a30cb15ec569cb6f459198541852074039dd",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_01.csv": "d2a966924c65fea534cdcb890c36a155938e95aef04bf214ca387351ff06293a",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_02.csv": "745aeaebce63176bdb761f0cd8627533b5ece88bdd2dd3995b68d5155872b6b3",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_03.csv": "d9762f6e3e27f6e4428c0af5a9ed8920cb2e4f16213f3276814a345f1f5e8811",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh2_asp272_asp274__replica_04.csv": "9c688b810a241a12462cc4ec78b4d15acbd88aca08ddf71cc5c63e4c4ef2758e",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_01.csv": "df298d5df9766096f57ec8d19951aecf5e6bb9ef8ad2c975ec2b3fb8c69b4281",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_02.csv": "5187cecb9308f08d9b3d27f098dec1b243b93a1979b7a4049b2a559dc66d6388",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_03.csv": "6a561f235dcc9941322fd8a0ed08cfe4f3c0e257aacb8f343749b61ff3a4e944",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/nh3_asp272_asp274__replica_04.csv": "35b270821945a6adda8cd3038a4d5a4fc84d0f6c01d2b7a0053448cc8f5a3b61"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/process_diagnostics/job.log",
+  "session_name": "native_thr_csv_diagnostic_20261123",
+  "started_utc": null
+}

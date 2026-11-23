@@ -1,0 +1,6 @@
+{
+  "existing_md_frames": 120000,
+  "trajectory_reprocessing": false,
+  "stored_gate_flags_reproduced": true,
+  "sequence_mismatches_explicit": true
+}

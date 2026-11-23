@@ -1,0 +1,153 @@
+{
+  "inventory_date": "2026-11-23",
+  "scope": "Slide-ready source figures and key evidence for a Nyl12/PA6 progress deck. Source paths are absolute; original artifacts remain in place.",
+  "source_figures": [
+    {
+      "id": "neb_pes",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/energy_profile.png",
+      "slide_purpose": "Reaction-coordinate PES profile and qualitative reaction-path context.",
+      "key_values": "35.80895 kcal/mol NEB electronic-energy rise; separate refined TS candidate is +46.41135 kcal/mol versus independently relaxed E-S. Earlier HG1-relay PES barrier was 15.38 kcal/mol; a separate US grid reached 18.035 kcal/mol at 12 ps/window (7 ps target cost 15.49 kcal/mol, different reference).",
+      "interpretation": "The direct route is high-energy in these calculations; show distinct methods and energy references as separate data points, not a single profile or converged barrier.",
+      "caveat": "NEB maximum is not a validated barrier. TS candidate meets the force threshold (maximum gradient 9.24e-5 Eh/bohr versus 1e-4 criterion), but first-order character and IRC remain unverified because of Hessian soft-mode uncertainty. The neutral-Thr/Asp272/Asp274 direct route is not established as viable."
+    },
+    {
+      "id": "neb_reactive_distances",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reactive_distances.png",
+      "slide_purpose": "Show bond formation/breaking coordinates along the sampled NEB band.",
+      "key_values": "Image count/profile is a 24-image NEB export; use the plotted distances as path diagnostics.",
+      "interpretation": "Useful structural context beside the PES plot.",
+      "caveat": "An unconverged NEB profile and chosen image distances do not certify a transition state or a physical free-energy path."
+    },
+    {
+      "id": "pmf_q_acyl",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_q_acyl_pmf.png",
+      "slide_purpose": "Primary apparent PMF result; pair with PMF/FES method label and acceptance caveat.",
+      "key_values": "Apparent PMF maximum 47.0475 kcal/mol versus 46.9414 kcal/mol in the same E-S density bin.",
+      "interpretation": "Completed 63 windows with six accepted 5 ps blocks each (30 ps/window; 1.89 ns aggregate sampling). A connected overlap matrix is present.",
+      "caveat": "Not converged and not a validated barrier: target effective sample size 7.29; windows 028/030/032 have drift flags; density-bin reference is fixed. Do not equate this PMF to the PES maximum."
+    },
+    {
+      "id": "pmf_overlap",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/mbar_overlap.png",
+      "slide_purpose": "Visualize sampling overlap and motivate why the PMF remains provisional.",
+      "key_values": "63-window overlap is connected; target ESS is 7.29.",
+      "interpretation": "An overlap diagnostic, not a convergence certificate.",
+      "caveat": "Several windows drift; no extension was queued for this forced direct route."
+    },
+    {
+      "id": "wt_md_tier_occupancy",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/plots/tier_occupancy.png",
+      "slide_purpose": "Matched WT molecular-dynamics comparison across three protonation states.",
+      "key_values": "Four independent 100 ns replicas per state. Tier A/B occupancy (Tier A OR B): NH2/ASP272/ASP274 27.77%; NH2/ASP272/ASH274 5.18%; NH3+/ASP272/ASP274 28.99%. Native occupancy for those three states: 0.0175%, 0.245%, and 0%, respectively.",
+      "interpretation": "Matched-protocol WT occupancy is strongly state-dependent; structure/relay metrics are distinct from reaction rates.",
+      "caveat": "These are force-field MD structural/occupancy observations, not catalytic activity or protonation-pKa validation. Historical unmatched ASH274 runs are not evidence that ASH274 wins."
+    },
+    {
+      "id": "wt_md_occupancy",
+      "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/occupancy/occupancy.png",
+      "slide_purpose": "Companion view for state/replica occupancy and sampling spread.",
+      "key_values": "Four matched 100 ns replicas per state; refer to source table `tables/occupancy_by_state.csv` for exact bins and replica summaries.",
+      "interpretation": "Can show variance among matched replicas without overstating mechanistic meaning.",
+      "caveat": "Not a free-energy or pKa measurement."
+    },
+    {
+      "id": "design_tier_native",
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png",
+      "slide_purpose": "Exploratory ensemble design comparison using joint Tier A/B geometry and native-Thr criteria.",
+      "key_values": "Broader mask 12/80 sites; focused mask 8/80; WT 1/20. Negative signed Herschlag-phi subset: 11/80, 3/80, and 0/20. K59D 0/20; V111C 7/20.",
+      "interpretation": "Broader mask yields more observed joint structural sites in this bounded sample.",
+      "caveat": "55 relaxed endpoints, including three reused WT models; all 55 force-converged. Counts are structural observations from selected sequences and five seeds, not an activity classifier, barrier estimate, or demonstrated improvement in catalysis."
+    },
+    {
+      "id": "design_geometry_change",
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/geometry_before_after.png",
+      "slide_purpose": "Demonstrate how unrestrained Amber relaxation changes the four-site geometry filters.",
+      "key_values": "Matched design/WT/control structural cohort; per-model records are in `validation/analysis/model_summary.csv`.",
+      "interpretation": "Relaxation changes geometry gates; raw predictions alone did not pass Tier A/B in this cohort.",
+      "caveat": "Static predicted/relaxed models do not establish catalytic function or dynamics."
+    },
+    {
+      "id": "ff_architecture",
+      "path": "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure1_modular_architecture.png",
+      "slide_purpose": "Current modular parameterization architecture: terminal caps and transferable internal repeat.",
+      "key_values": "Released zwitterionic L4 sequence P6N–P6I–P6I–P6C, total formal charge zero.",
+      "interpretation": "One shared P6I residue represents internal repeat chemistry with distinct N/C caps.",
+      "caveat": "Current release is scoped to PA6 L4. Do not imply arbitrary lengths, bulk/crystalline PA6, or catalytic covalent states are certified."
+    },
+    {
+      "id": "ff_bonded_profiles",
+      "path": "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure3_eight_bonded_profiles.png",
+      "slide_purpose": "QM/MM bonded-profile validation for the released PA6 L4 parameter set.",
+      "key_values": "All eight declared bonded-profile gates pass; release uses GAFF2 with three fitted improper overrides.",
+      "interpretation": "Shows the basis for scoped L4 MD readiness.",
+      "caveat": "Does not validate bond-making/breaking or catalytic TI1/acyl-enzyme states. The compact-conformer ESP holdout fails."
+    },
+    {
+      "id": "ff_md_stability",
+      "path": "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure4_md_stability.png",
+      "slide_purpose": "Parameter-release MD stability and geometry evidence.",
+      "key_values": "Three matched 500 ps final-topology L4 replicas passed the recorded temperature, density, geometry, contact, RMSD, and trans-amide checks.",
+      "interpretation": "Supports MD readiness only within the released zwitterionic PA6 L4 scope.",
+      "caveat": "Not bulk polymer validation, arbitrary oligomer-length validation, or catalytic-intermediate validation."
+    },
+    {
+      "id": "ff_charge_independent_comparison",
+      "path": "/data/jpc/polyamide-amber-ff/manuscript/independent_charge_comparison_20261123/independent_charge_comparison.png",
+      "slide_purpose": "Recent independent charge comparison; useful as a current modular-parameter refinement result.",
+      "key_values": "The analysis uses a hash-verified release payload. Check the adjacent `report.json` and `independent_charge_comparison.csv` before quoting a metric.",
+      "interpretation": "Shows an independent charge-method comparison without replacing released charges.",
+      "caveat": "A comparison/diagnostic, not a new release or license to replace the production RESP charges."
+    }
+  ],
+  "pka_outcomes": {
+    "current_mcce_nylc": {
+      "source_pattern": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/{5XYG,7YU0,7YU1}/rerun_20261123/result/prepared/pK.out",
+      "status_source_pattern": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/{5XYG,7YU0,7YU1}/rerun_20261123/result/native_completion.json",
+      "status": "All three native calculations completed, but all are explicitly pKa-unqualified; assigned_states=false and sampling_convergence=false. Six MC runs x 2,000 iterations at 298.15 K. Protein-only, MCCE level-1 conformers, dielectric 4/80; existing FTPL charge template retained.",
+      "known_quality_gate": "Unresolved discrepancy: param/pro.ftpl makes PRO backbone uncharged, while bundled param04/pro.tpl assigns -0.10/+0.10/+0.55/-0.55 to N/CA/C/O. The outputs are diagnostic and are not quantitative protonation assignments.",
+      "mature_5XYG": {
+        "Thr267_NTR_chain_C_and_D": ">14 (outside pH 0-14 grid; bound only)",
+        "Asp306_chain_C_and_D": "<0 (outside grid; bound only)",
+        "Asp308_chain_C_and_D": "<0 (outside grid; bound only)",
+        "interpretation": "Asp sites are predicted deprotonated over the sampled grid in this diagnostic setup, but their exact pKas are unresolved. Thr267 labels conflict with earlier PROPKA estimates and are unqualified."
+      },
+      "uncleaved_precursor_7YU0": {
+        "Asp306_chain_A": "<0 (bound)",
+        "Asp306_chain_B": 2.771,
+        "Asp308_chain_A": 10.085,
+        "Asp308_chain_B": "<0 (bound)",
+        "fit_quality": "For finite labels: Asp306-B slope 0.322, 1000xchi-square 47.926; Asp308-A slope 0.184, 1000xchi-square 58.469; both poor single-sigmoid fits."
+      },
+      "uncleaved_precursor_7YU1": {
+        "Asp306_chain_A_and_B": "<0 (bound)",
+        "Asp308_chain_A": 1.195,
+        "Asp308_chain_B": 7.883,
+        "fit_quality": "Asp308-A slope 0.219, 1000xchi-square 64.212; Asp308-B slope 0.024, 1000xchi-square 993.765; neither is a reliable midpoint."
+      },
+      "interpretation": "Strong chain and structure variation, poor fit quality, one pH grid and unresolved parameter concern preclude an assigned catalytic protonation state. 7YU0/7YU1 are uncleaved continuous precursors with maturation-blocking substitutions; their differences are not isolated cleavage effects."
+    },
+    "propka_complement": {
+      "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/crystal_propka_20261116/attempt{2,3}/results/",
+      "mature_5XYG": "Corrected PROPKA: N+267 6.35-6.55 default, 4.59-4.60 coupled alternative; Asp306 2.19-2.21; Asp308 5.49-6.49 default and 7.24-8.45 coupled alternative.",
+      "precursor_7YU0_default": "Asp306 6.36-6.39; Asp308 4.24-6.53 across chains.",
+      "precursor_7YU1_default": "Asp306 5.01-6.39; Asp308 5.59-6.53 across chains.",
+      "caveat": "PROPKA precursor values are from the deposited-sequence comparison (attempt2), not a rigorously matched rerun on the exact repaired MCCE structures. 7YU0/7YU1 carry a precursor Cys267 substitution; do not treat Cys267 as the mature Thr267 N terminus. Predictions are structure- and coupling-treatment-dependent, not measured assignments."
+    }
+  },
+  "eyring_note": "No validated activation free energy is available from this inventory. NEB PES energies and the unconverged PMF maximum must not be substituted for ΔG‡ in an Eyring rate estimate. Any table derived from them should be explicitly labeled illustrative and not a predicted rate.",
+  "vmd": {
+    "available_script": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+    "available_movie": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/path.dcd",
+    "honest_placeholder": "No GUI-rendered screenshot was located in this source inventory. If unavailable for slide rendering, use an explicitly labeled schematic/placeholder; concatenated umbrella windows are not a continuous dynamical reaction trajectory."
+  },
+  "pa6_ff_release": {
+    "release_id": "pa6_l4_modular_resp_gaff2_v1_20261031",
+    "release_directory": "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031",
+    "release_manifest": "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/manifest.json",
+    "current_status_source": "/data/jpc/polyamide-amber-ff/README.md",
+    "scope": "Released MD-ready standard two-stage multiconformer RESP/GAFF2 parameters for zwitterionic PA6 L4 P6N-P6I-P6I-P6C, net charge zero, three fitted improper overrides; eight bonded-profile gates and three 500 ps L4 replicas accepted.",
+    "limitations": "Compact-conformer electrostatic holdout fails; arbitrary lengths, bulk/crystalline polymer and catalytic TI1/acyl-enzyme are not validated.",
+    "historical_deck": "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/presentation_checkpoints/PA6_L4_VALIDATION_DECISION_20261031_ACTIVE_MD_CHECKPOINT.pptx",
+    "historical_deck_warning": "October 31 deck predates the scoped release decision. It may provide pipeline, charges and torsion-scan graphics, but its old 'production withheld' disposition is superseded by the current release README/manifest; do not report it as current status."
+  }
+}

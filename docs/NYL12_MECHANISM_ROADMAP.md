@@ -1,4 +1,54 @@
-## CURRENT — executable priorities, 2026-11-23
+## CURRENT — calibrated Thr gate and relay releases, 2026-11-23
+
+The PI approved calibration and three unbiased DFTB3/MM releases of the
+N-terminal branch sampled in existing NEB-US data. No thresholds, proton
+inventory, Hamiltonian, QM partition or movable shell changed.
+
+1. **Gate calibration completed in tmux.** All eight cryo 9Z0B sites, both
+   room-temperature 9Z0A sites and four derived n12c sites pass the original
+   gate. The original sites span two diffraction datasets, not ten independent
+   experiments. Maximum OG1/N shifts are 0.1232/0.0841 Å versus fixed limits
+   0.75/1.25 Å. Known-active K59D still has zero joint Tier A/B+native passes
+   after relaxation; structural compatibility is not activity validation.
+   See `native_thr_gate_calibration_20261123.md`, including reference-fit
+   sensitivity, MD scaffold diagnostics and the n12cH A228/P228 edit audit.
+2. **Three relay releases are running on Violet.** Sessions are
+   `nyl12_relay_ti1_window032_20261123`,
+   `nyl12_relay_ti1_window033_20261123` and
+   `nyl12_relay_early_window028_20261123`. Two distinct tetrahedral-like
+   seeds and one earlier-attack seed have actual Nalpha–HG1 bonds with H1/H2
+   also retained on Nalpha. All retain the original 4165 movable atoms in
+   the 12 Å region and fixed exterior; no positional or reaction-coordinate
+   potentials act in the movable region. QM charge −2, topology, 98 real QM
+   atoms and eight link atoms are unchanged. Initial finite energy/gradient
+   and SCC checks passed; force convergence and chemistry remain to assess.
+   See `neb_us_nterminal_relay_release_20261123.md`. The campaign is
+   `umbrella_sampling/nterminal_relay_releases_20261123/` under the existing
+   direct-path root. Verified stripped VMD bundles retain explicit atom maps.
+3. **Do not duplicate the 35.81-path campaign.** Its 35.80895 kcal/mol value
+   is NEB ΔE, not ΔG‡. That path family already supplied the refined
+   46.41-kcal/mol candidate and completed US campaign with apparent PMF
+   height 47.0475 kcal/mol. Reference geometries and observables differ.
+   Finish the bounded existing-candidate Hessian diagnosis before claiming a
+   first-order TS; no duplicate TS/US run or sampling extension is launched.
+4. **Decision after release:** classify all proton occupancies, C–OG1, C–N,
+   C–O and force convergence. Retention warrants further stationary-point
+   classification; reversion or onward acylation instead constrains the path.
+   A discrete TI1 minimum is optional. HG1→Nalpha followed by another N–H
+   donating to the leaving N can be legitimate relay chemistry.
+5. **NylC MCCE reruns completed, still unqualified.** 5XYG/7YU0/7YU1 native
+   completion records retain `assigned_states:false` and
+   `sampling_convergence:false`. Bounds, poor target fits and the known
+   proline-template inconsistency require matched-input curve/parameter QA.
+   This remains mechanism-agent's bounded task. Muse means **Glimmer 30B**;
+   no model installation or benchmark was launched this turn.
+6. **Progress briefing:** editable PowerPoint, PDF, slide JSON, source hashes
+   and key figures are in `docs/presentations/nyl12_progress_20261123/`.
+   The deck includes the current L4-only modular FF release, Eyring table
+   and explicitly marked VMD snapshot placeholders. The laptop pull includes
+   the briefing, calibration and new relay inspection bundles.
+
+## Earlier checkpoint — executable priorities, 2026-11-23
 
 **Scientific conditions remain unchanged:** no new protonation assignment,
 smearing, QM partition, or reduction of the 12 Angstrom movable shell.

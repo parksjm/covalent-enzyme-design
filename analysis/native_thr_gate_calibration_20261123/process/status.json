@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+    "analysis/native_thr_gate_calibration_20261123/source_snapshot/scripts/calibrate_native_thr_gate.py",
+    "--root",
+    "/data/jpc/covalent-enzyme-design",
+    "--output",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/results"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": "2026-11-23T22:17:46.066728Z",
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/src"
+  },
+  "exit_status": 0,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/9Z0A.cif": "9ff516e0ca194d9e9ef57f034c3f8cadffa26d85b707a396cec873ca98101395",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/9Z0B.cif": "e79e8c04c1a844c8ed03c4b6c860d511c41cb5981ce005e6c447f7ec4d7d7354",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/n12c.cif": "e318fddc7142be1efabd6ebbd80ad6d45bf98f6d83f1ea7c1e60add9646d7b8c",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/occupied_sites.csv": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/scripts/calibrate_native_thr_gate.py": "72193b0da35f4876d09d4053f0bf3bc3b912fb3339e62154fef4d6b01d153f28",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/src/nyl12_covalent/catalytic_alignment.py": "f3f6e33fe7a8f9236dbcb7ede0b02ecbe0e548aaf5c8be60bd69bffadb73d826",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/src/nyl12_covalent/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/src/nyl12_covalent/nalpha_water_relay.py": "14480537353db2afe26d11fb75892984b4aea8d6b4a5f7ba0343432b620b0d33",
+    "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/source_snapshot/src/nyl12_covalent/native_thr_calibration.py": "b537abf18a96f16f5217c5cfdb20d8fb6597cd4ba7a2d1de4ac86d7407973a9e"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/process/job.log",
+  "session_name": "native_thr_gate_calibration_20261123",
+  "started_utc": "2026-11-23T22:17:42.710253Z"
+}

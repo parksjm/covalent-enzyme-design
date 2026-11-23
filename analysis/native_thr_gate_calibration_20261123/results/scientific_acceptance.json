@@ -1,0 +1,11 @@
+{
+  "process_complete": true,
+  "scientific_acceptance": {
+    "unchanged_thresholds": true,
+    "all_existing_control_flags_reproduced": true,
+    "all_crystal_metrics_finite": true,
+    "activity_predictivity": "unvalidated",
+    "crystal_native_passes": 14,
+    "crystal_sites_including_derived_n12c": 14
+  }
+}

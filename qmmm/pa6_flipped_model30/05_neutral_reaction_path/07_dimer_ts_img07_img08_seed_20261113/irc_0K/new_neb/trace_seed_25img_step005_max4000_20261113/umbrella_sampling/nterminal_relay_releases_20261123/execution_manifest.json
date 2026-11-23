@@ -1,0 +1,29 @@
+{
+  "environment_overrides": {
+    "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/source_snapshot/src:/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/source_snapshot"
+  },
+  "python": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+  "python_version": "3.12.12",
+  "numpy_version": "1.26.4",
+  "parmed_version": "4.3.0",
+  "netCDF4_version": "1.7.2",
+  "sander_sha256": "66323629c6d540a8038f8f8fe7557acf391f6797d88898844da708989de6a97e",
+  "source_sha256": {
+    "scripts/prepare_dimer_continuation.py": "9685dff65bd6f237481cb012040b406df57f9ab97191a43ac55d402c37da533e",
+    "scripts/run_neb_us_relay_release.py": "10fbf4c7f63cbaa1b37f517164bf7ec356120512d2016ce7e8899539e4957195",
+    "scripts/prepare_neb_us_relay_releases.py": "ce62b4e643fa4d39b2d812e3a937bce355ee757efd35bc7a0893f6946e7856f7",
+    "src/nyl12_covalent/stationary_native.py": "31a9f74305479286dd576494b4ea0295ed10a9049d314532c52333509642ee0a",
+    "src/nyl12_covalent/relay_release_run.py": "9c4dece452310a0d617415b51afd142cc6e16ad0da5a08a63392b4fa6a801c14",
+    "src/nyl12_covalent/relay_release.py": "7ca7f79740db138c895d8cb9b70d4cdabca80365a016845fc32aa14f5f1ef30f",
+    "src/nyl12_covalent/native_sander_cli.py": "b89fe2749da50344d5a9a94b2ea9657db82a0a17b2211c551e9c5759f21c6284",
+    "src/nyl12_covalent/dftb_scc_validation.py": "06cbe3afc480b9d9e2e481aa0c1e5c554e13438e18d58e773c794e4259fe908f"
+  },
+  "launcher": "scripts/run_nyl12_job.py",
+  "threads_per_job": 1
+}

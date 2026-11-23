@@ -1,0 +1,6 @@
+{
+  "script_sha256": "b1ca7ec2c2208478829ee41d726fbb0793f1dea77736ff57ea52aeaafafe062c",
+  "source_snapshot_added_after_job_launch": "scripts/export_neb_us_relay_release_vmd.py",
+  "source_job_manifest_unchanged": true,
+  "first_failed_export_preserved": "ti1_window032/vmd_initial_progress; cpptraj parmstrip after trajectory use; corrected separate invocation passes"
+}
