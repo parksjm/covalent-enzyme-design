@@ -1,0 +1,22 @@
+{
+  "host": "azalea",
+  "time_utc": "2026-11-23T16:30:55.138320+00:00",
+  "requested_by": "PI inthischat",
+  "verified_parent_pid": 737353,
+  "signal": "SIGINT",
+  "verified_parent_exited": true,
+  "original_worker_pids": [
+    737486,
+    737487,
+    737553,
+    737554
+  ],
+  "GPU_compute_processes_after": [],
+  "GPU_free_MiB": [
+    97179,
+    97286
+  ],
+  "remaining_Ollama_GPU_allocation_MiB": 0,
+  "weights_responses_and_deployment_preserved": true,
+  "scientific_jobs_affected": false
+}

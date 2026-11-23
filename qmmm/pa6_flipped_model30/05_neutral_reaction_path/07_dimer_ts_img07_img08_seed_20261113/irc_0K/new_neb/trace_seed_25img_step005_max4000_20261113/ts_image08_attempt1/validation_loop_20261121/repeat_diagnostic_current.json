@@ -1,0 +1,10 @@
+{
+  "root": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_repeat_20261123",
+  "session": "nyl12_ts_same_point_checked_20261123",
+  "job_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_repeat_20261123/job_with_amberhome/status.json",
+  "diagnosis": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_repeat_20261123/results_with_amberhome/diagnosis.json",
+  "verified_ts": false,
+  "full_Hessian_recomputed": false,
+  "gradient_calls_maximum": 5,
+  "previous_failure": "MissingAMBERHOME beforeQM evaluation"
+}

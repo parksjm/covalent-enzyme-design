@@ -1,0 +1,53 @@
+{
+  "root": "/data/jpc/covalent-enzyme-design",
+  "structure": "5XYG",
+  "software": "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha",
+  "software_git_commit": "08066fd303647a1287296bfae702bf4291e3baab",
+  "python": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+  "seed": 20261125,
+  "expected_termini": {
+    "A": {
+      "n": 1,
+      "c": 266
+    },
+    "B": {
+      "n": 1,
+      "c": 266
+    },
+    "C": {
+      "n": 267,
+      "c": 355
+    },
+    "D": {
+      "n": 267,
+      "c": 355
+    }
+  },
+  "termini_path": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/termini.json",
+  "upstream_status": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/status.json",
+  "receipt": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/scientific_acceptance.json",
+  "heavy": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/refined_heavy.pdb",
+  "original": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/5XYG_split_protein_input.pdb",
+  "adoption_contract": "legacy_refinement_without_termini_field",
+  "parameter_model": "unchanged_native_FTPL_diagnostic_comparison",
+  "structure_seed_id": 5,
+  "output": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/rerun_20261123/result",
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/source_metadata_fix_20261123/run_comparison.py": "f3a9802b84a537a7d0147c2f7dc7f395647081462e7043c0a758123bc1e3b8a9",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/source_metadata_fix_20261123/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/source_metadata_fix_20261123/nyl12_covalent/mcce_validation.py": "9634f7cdb54dc22ee468f3ea5846323f135d48359b4a85b23f97a14a3672fe7a",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/source_metadata_fix_20261123/nyl12_covalent/mcce_preparation.py": "69ad33193b30bf28dbd71c8de54d3ced768e6d858b629dbf8a8795fc7b993d8e",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/refined_heavy.pdb": "206a908514bfbdd45b1b1fd60eb3c5c239abeb88b050a56d6b2a52e710ff616a",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/scientific_acceptance.json": "e92e5813355e333e66693f01a108ed7d0376dc0353790f33de5298f29e97c74c",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result/5XYG_split_protein_input.pdb": "abfd8ad5f37f1b0bc00a3f152ad731148cb6d8043d1431236c36733fc18a032b",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/termini.json": "7718a795af7f1a0f4c2b28fcaf11c7bc634b4ea68944b5fa60b288a6379310b2",
+    "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/status.json": "b690fa525979220d46678701c4e4b426f0678010ac054df2279561c55fe720f3",
+    "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha/bin/mcce": "e5155491e90252d00380cacde2b5056acefc1d33707bd39a42a641468f3c7ea5",
+    "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha/bin/delphi": "5abcb25d6e68dc175e6cfadf3dd6012321add626b6dfaa941b52052b2e47a7fe",
+    "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha/bin/step3.py": "d331b3660a2ddffc0718917363400c1a0aa9733c453b901ad233c2540719d3e5"
+  },
+  "upstream_exit_key": "exit_status",
+  "previous_profile": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/profile.json",
+  "rerun_reason": "Accept benignPDBmetadata while preserving allcoordinates/atomidentities/termini",
+  "accepted_refinement_reused": true
+}

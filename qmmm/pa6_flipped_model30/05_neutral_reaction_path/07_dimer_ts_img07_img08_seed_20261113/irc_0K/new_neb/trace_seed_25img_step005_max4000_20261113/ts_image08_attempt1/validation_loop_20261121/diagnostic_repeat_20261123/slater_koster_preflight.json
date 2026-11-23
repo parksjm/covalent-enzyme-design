@@ -1,0 +1,23 @@
+{
+  "AMBERHOME": "/data/jpc/code/ambertools26/venv",
+  "tables": {
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-C.skf": "dfda7b773cb7891e2275ff284c87daac11167a105ba90bafd783b289715cda0f",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-H.skf": "8d5c6aabecfc72271e7a3f56a238cb8cc77fb552685c79b9381412d32e5609f1",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-N.skf": "3455aea77ce55e836db4165397871726080d52e813a268432f999f4de4ee07cd",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-O.skf": "f95f3af65b0f9b7daff8073df90326e795e746e72c91ee7c88792f8b1b684ccc",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-C.skf": "950f61115cf701988b752960b9a56929b090ca66fe4bbdcea46b3272d20027e0",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-H.skf": "acdc130b5ac73a9d51c5091b61e448f1de0723648dfb66d4b5cf1ab71bea0b66",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-N.skf": "4782c582e5a39d5f8ef56c3b5bd7b47aee78b43ec421608db8d2cbf930b1d15c",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-O.skf": "b77a51b690caccfa00bbbb2c3d83073d04dab59a7853ac96586d13138ebd4891",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-C.skf": "f0b04e6bcee02be99d4f1b2068488f5e62157d8cd41c8424813b6ce21a6f1257",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-H.skf": "c25aa3eaf8d05f4ee3b97d750b4c37c74b00d44f427750162bee58031f104e03",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-N.skf": "f96f6a07430f4d472cc21e0614cda8478c82a25d3d7734331cd65149f0d58906",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-O.skf": "31ab322d2dc25ae28f1e567d1e25c7485c2d38732327c754db33208022b05bec",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-C.skf": "cbfbf6f0058ca42c9fd8b2ba6db0a3a0e694260abe3f3ea032608d3714212ba0",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-H.skf": "911b8644b0a0d6bbd193064ffb962a658c2dc77e911a563194476e5dddf96f45",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-N.skf": "785a2dcab1575282eb6d5d85eaa65a4157c55edf2e7cd6771340dae4176e72dc",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-O.skf": "3b377938f48ebf8b5a1b79da5befcfe42074ec5b4908cc2e6eb1193f9d748a91"
+  },
+  "method": "UnchangedDFTB3 3ob-3-1",
+  "all16_tables_present": true
+}

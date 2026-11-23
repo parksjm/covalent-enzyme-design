@@ -1,3 +1,27 @@
+## Reassessment of direct-route TS connectivity (2026-11-23)
+
+Inspection of the installed Amber DFTB implementation showed that 70-cycle
+inner SCC/Broyden trial failures can recover within the overall SCF budget.
+Our previous log gate had rejected these recovered trials. Corrected,
+source-validated history parsing identified five/nine recovered trials in the
+two saved downhill branches, without unrecovered errors or temperature changes.
+Fresh 0 K native gradients independently accepted both endpoints, with maximum
+forces 9.38e-6 and 9.51e-6 Eh/bohr. The minus branch is E-S (OG1-C54=3.123 A,
+OG1-HG1=0.981 A, C54-N59=1.360 A); the plus branch is acylenzyme
+(OG1-C54=1.329 A, HG1-N59=1.019 A, C54-N59=3.062 A).
+The candidate-to-relaxed-E-S potential-energy difference is 46.41 kcal/mol,
+and the acylenzyme is 2.71 kcal/mol above this E-S minimum under the same
+frozen-state Hamiltonian. These values are not a validated activation free
+energy or evidence for a viable catalytic route.
+
+Three independent evaluations at the candidate produced identical gradients;
+its maximum force 9.24e-5 Eh/bohr meets the original 1e-4 criterion. First-order
+saddle certification remains incomplete: the symmetrized Hessian has one
+negative eigenvalue, but the conservative uncertainty screen leaves soft-mode
+signs unresolved. The endpoint results establish diagnostic mode-directed
+connectivity, not a formal IRC. Original data and prior false-negative gates
+are preserved alongside the corrected analysis.
+
 ## Matched sequence-mask structural pilot (2026-11-22)
 
 A matched pilot compared four selected sequences from a 19-position mask and

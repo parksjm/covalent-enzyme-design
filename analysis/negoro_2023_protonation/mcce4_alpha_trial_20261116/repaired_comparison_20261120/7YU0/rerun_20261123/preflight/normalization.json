@@ -1,0 +1,41 @@
+{
+  "atom_count": 5196,
+  "atom_records_preserved": true,
+  "chains": {
+    "A": {
+      "c": 355,
+      "n": 1
+    },
+    "B": {
+      "c": 355,
+      "n": 1
+    }
+  },
+  "changed_atom_names": [],
+  "coordinates_unchanged": true,
+  "expected_termini": {
+    "A": {
+      "c": 355,
+      "n": 1
+    },
+    "B": {
+      "c": 355,
+      "n": 1
+    }
+  },
+  "metadata_records_preserved": {
+    "REMARK": {
+      "count": 1,
+      "sha256": "66f299c4d813fcab6fc7f947e8e551814f84c66aae9bc10f2ec236ee84138b8b"
+    }
+  },
+  "non_atom_records_preserved": true,
+  "original_pdb": "original.pdb",
+  "oxt_records_preserved": true,
+  "prepared_pdb": "protein.pdb",
+  "prepared_sha256": "e2944ecd7117a3b3e831e879130add68c68e75c7d6682163d580dbda41ce377f",
+  "residue_names_unchanged": true,
+  "schema_version": 1,
+  "source": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/7YU0/amber19_gbn2_verified_refine_20261121/result/refined_heavy.pdb",
+  "source_sha256": "e2944ecd7117a3b3e831e879130add68c68e75c7d6682163d580dbda41ce377f"
+}

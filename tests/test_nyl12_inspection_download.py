@@ -340,8 +340,12 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
         'printf "%s\\n" "$@" >> "$CAPTURE_ARGS.details"\n'
         'for arg in "$@"; do destination=$arg; done\n'
         'case " $* " in *" --dry-run "*) ;; *) '
-        'case "$destination" in *qmmm/pa6_asp272/) '
-        'mkdir -p "$destination"; : > "$destination/MANIFEST.sha256";; esac;; esac\n'
+        'case "$destination" in '
+        '*qmmm/pa6_asp272/) mkdir -p "$destination"; '
+        ': > "$destination/MANIFEST.sha256";; '
+        '*umbrella_sampling/) mkdir -p "$destination/vmd_dynamic"; '
+        ': > "$destination/vmd_dynamic/MANIFEST.sha256";; '
+        "esac;; esac\n"
     )
     for name, body in {
         "rsync": rsync_stub,
@@ -430,8 +434,12 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
     rsync_stub = (
         '#!/bin/sh\nprintf "%s\\n" "$@" >> "$CAPTURE_ARGS"\n'
         'for arg in "$@"; do destination=$arg; done\n'
-        'case "$destination" in *qmmm/pa6_asp272/) '
-        'mkdir -p "$destination"; : > "$destination/MANIFEST.sha256";; esac\n'
+        'case "$destination" in '
+        '*qmmm/pa6_asp272/) mkdir -p "$destination"; '
+        ': > "$destination/MANIFEST.sha256";; '
+        '*umbrella_sampling/) mkdir -p "$destination/vmd_dynamic"; '
+        ': > "$destination/vmd_dynamic/MANIFEST.sha256";; '
+        "esac\n"
     )
     for name, body in {
         "rsync": rsync_stub,

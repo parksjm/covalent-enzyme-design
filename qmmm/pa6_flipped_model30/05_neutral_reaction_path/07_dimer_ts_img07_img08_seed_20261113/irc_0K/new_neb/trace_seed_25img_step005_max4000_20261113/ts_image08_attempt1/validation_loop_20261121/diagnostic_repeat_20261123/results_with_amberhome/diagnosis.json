@@ -1,0 +1,181 @@
+{
+  "records": {
+    "TS_repeat_01": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": true,
+      "energy_hartree": -718.1340341,
+      "max_gradient_hartree_per_bohr": 9.242351475778878e-05,
+      "stationary_force_gate_passed": false,
+      "coordinates_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "gradient_sha256": "095cd4a4293a3205da994a94f76cf68377493ff07fc7293d2069760e8af508e1"
+    },
+    "TS_repeat_02": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": true,
+      "energy_hartree": -718.1340341,
+      "max_gradient_hartree_per_bohr": 9.242351475778878e-05,
+      "stationary_force_gate_passed": false,
+      "coordinates_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "gradient_sha256": "095cd4a4293a3205da994a94f76cf68377493ff07fc7293d2069760e8af508e1"
+    },
+    "TS_repeat_03": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": true,
+      "energy_hartree": -718.1340341,
+      "max_gradient_hartree_per_bohr": 9.242351475778878e-05,
+      "stationary_force_gate_passed": false,
+      "coordinates_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "gradient_sha256": "095cd4a4293a3205da994a94f76cf68377493ff07fc7293d2069760e8af508e1"
+    },
+    "minus": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_followup_20261121/candidate_descents/minus/optimized.ncrst",
+      "restart_sha256": "30c53aeab953f01a49de2fa82bee6d87669c9d897c1bf8f8c18647588e3f2509",
+      "original_descent_electronic_history": {
+        "passed": true,
+        "history_observed": true,
+        "verified_scc_history": true,
+        "recovered_trials": [
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          }
+        ],
+        "recovered_trial_count": 5,
+        "unresolved_trials": [],
+        "fatal_markers": [],
+        "temperature_changes": []
+      },
+      "process_accepted": true,
+      "energy_hartree": -718.2079953,
+      "max_gradient_hartree_per_bohr": 9.37650394992542e-06,
+      "stationary_force_gate_passed": true,
+      "coordinates_sha256": "30c53aeab953f01a49de2fa82bee6d87669c9d897c1bf8f8c18647588e3f2509",
+      "gradient_sha256": "1004520da64f4706c9eda88321069c3c957733818dc19efa5c2ac076a5533868",
+      "distances_angstrom": {
+        "OG_C": 3.122773126934157,
+        "OG_H": 0.9813263714437837,
+        "N_H": 2.455009707148334,
+        "C_N": 1.359792717744794,
+        "Nterm_HG1": 2.036859552391315,
+        "Nterm_H1": 1.0222610883777508,
+        "Nterm_H2": 1.0251900193203198,
+        "carbonyl_C_O": 1.2581594550681243
+      },
+      "geometry_class": "reactant_ES",
+      "relative_to_TS_kcal_mol": -46.411353708399496
+    },
+    "plus": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_followup_20261121/candidate_descents/plus/optimized.ncrst",
+      "restart_sha256": "05f2f7dabbdd01c5580a44c3d591fa133f9e8ddb550c72c4dadebb8f4691ef97",
+      "original_descent_electronic_history": {
+        "passed": true,
+        "history_observed": true,
+        "verified_scc_history": true,
+        "recovered_trials": [
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          }
+        ],
+        "recovered_trial_count": 9,
+        "unresolved_trials": [],
+        "fatal_markers": [],
+        "temperature_changes": []
+      },
+      "process_accepted": true,
+      "energy_hartree": -718.2036815,
+      "max_gradient_hartree_per_bohr": 9.509204989302225e-06,
+      "stationary_force_gate_passed": true,
+      "coordinates_sha256": "05f2f7dabbdd01c5580a44c3d591fa133f9e8ddb550c72c4dadebb8f4691ef97",
+      "gradient_sha256": "6a8b5f54918e0edcde02d3ad0ded989b6a884ed5a4d0286ace07411a8bb3cad5",
+      "distances_angstrom": {
+        "OG_C": 1.3289397353434533,
+        "OG_H": 2.4118886509669397,
+        "N_H": 1.0185223793365852,
+        "C_N": 3.0619455290632844,
+        "Nterm_HG1": 3.195395666932266,
+        "Nterm_H1": 1.0194320408283155,
+        "Nterm_H2": 1.0398845005081918,
+        "carbonyl_C_O": 1.249536504371815
+      },
+      "geometry_class": "acyl_enzyme",
+      "relative_to_TS_kcal_mol": -43.70440333947263
+    }
+  },
+  "all_five_native_points_accepted": true,
+  "verified_ts": false,
+  "formal_IRC": false,
+  "global_hessian_acceptance_changed": false,
+  "TS_repeatability": {
+    "max_gradient_difference_hartree_per_angstrom": 0.0,
+    "max_RMS_gradient_difference_hartree_per_angstrom": 0.0,
+    "energy_span_hartree": 0.0,
+    "identical_gradient_hashes": true,
+    "interpretation": "Determinism test only; identical repeats do not bound systematic Hessian error"
+  }
+}

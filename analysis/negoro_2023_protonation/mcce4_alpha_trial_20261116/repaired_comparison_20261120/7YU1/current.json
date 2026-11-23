@@ -1,0 +1,10 @@
+{
+  "profile": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/profile.json",
+  "job_status": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/job/status.json",
+  "controller_status": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/result/controller_status.json",
+  "upstream_status": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/accepted_refinement_status.json",
+  "session": "nylc_mcce_7yu1_metadata_20261123",
+  "previous_current": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/previous_current.json",
+  "accepted_refinement_reused": true,
+  "metadata_preflight": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/preflight/normalization.json"
+}

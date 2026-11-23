@@ -1,0 +1,123 @@
+{
+  "audited_utc": "2026-11-23T16:32:37.364343+00:00",
+  "audited_local": "2026-11-23T11:32:37.364343-05:00",
+  "scope": "Tasks executed/completed November21\u201323; liveprocesses checkedViolet/Azalea",
+  "native_scientific_jobs": {
+    "violet": [
+      {
+        "pid": 3783345,
+        "method": "ASP272/ASH274 extended-CG DFTB3/MM NEB",
+        "latest_audited_cycle": 6336,
+        "latest_coherent_relative_peak_kcal_mol": 44.838,
+        "converged": false
+      }
+    ],
+    "azalea": []
+  },
+  "completed": {
+    "initial_LigandMPNN": {
+      "raw_samples": 24,
+      "unique": 8
+    },
+    "first_structure_campaign": {
+      "models": 45,
+      "force_converged": 44
+    },
+    "mask_generation": {
+      "raw_samples": 48,
+      "unique": 39
+    },
+    "matched_structure_campaign": {
+      "new_models": 52,
+      "reused_WT": 3,
+      "force_converged_total": 55,
+      "joint_sites": {
+        "broader": [
+          12,
+          80
+        ],
+        "focused": [
+          8,
+          80
+        ],
+        "WT": [
+          1,
+          20
+        ]
+      }
+    },
+    "WT_MD": {
+      "replicas": 12,
+      "replicas_per_state": 4,
+      "ns_per_replica": 100,
+      "total_ns": 1200,
+      "analysis_completed": true,
+      "mean_TierAB_percent": {
+        "NH2_ASP272_ASP274": 27.77,
+        "NH2_ASP272_ASH274": 5.18,
+        "NH3_ASP272_ASP274": 28.99
+      },
+      "native_Thr_retention": "Veryrare in allstates; fixedstate sampling/protonation notvalidated"
+    },
+    "NEB_seeded_US": {
+      "windows": 63,
+      "ps_per_window": 30,
+      "aggregate_ps": 1890,
+      "apparent_PMF_max_kcal_mol": 47.0475,
+      "sampling_converged": false,
+      "additional_sampling_queued": false
+    },
+    "relay_screen": {
+      "all12_replicas_screened": true,
+      "strict_assisted_native_TierAB_candidates": 0,
+      "Lys156_two_water_candidate_native_gate_passed": false
+    }
+  },
+  "unresolved": {
+    "TI1_and_mechanism": "No validatedstableTI1/lowbarriermechanism claimed",
+    "TS": "One negative symmetrized eigenvalue;4535softsignsunresolved;native diagnostic descents failed electronicgates; noverifiedfirstordersaddle/formalIRC",
+    "NylC_MCCE": "5XYG and7YU0/7YU1 latestcontrollers stillfail unsupportedREMARK inputrecord; no acceptednewpKas",
+    "Nyl12_MCCE": "Preliminary,quantitativepKas/protonation notvalidated",
+    "email": "ORNLrelay authorization remains pending inlatestrecord",
+    "filter_activity_calibration": "900staticmodels reproduced; knownactiveK59D0joint innewpilot; no validatedactivityclassifier"
+  },
+  "mechanism_agent": {
+    "benchmark_cases_per_model": 14,
+    "chemistry_error_cases": {
+      "GPT_OSS": {
+        "critical": 2,
+        "major": 3
+      },
+      "Mistral": {
+        "critical": 1,
+        "major": 6
+      }
+    },
+    "autonomous_scientific_dispatch_qualified": false,
+    "Mistral_server": "StoppedbyPIrequestNovember23; noGPUprocessesafterward",
+    "Ollama": "RunningwithoutGPUallocation",
+    "azalea_GPU_free_MiB": [
+      97179,
+      97286
+    ]
+  },
+  "queued_new_calculations": [],
+  "tests_last_implementation_checkpoint": {
+    "focused_passed": 130,
+    "renderer_plotter_coverage_percent": 95.45
+  },
+  "last_pushed_commit": "51dbdb17f73c0e454d39a45c3a04d025c56f5555",
+  "evidence_sha256": {
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/scientific_acceptance.json": "01ace82dbec31fb67dcd085c1996e63dd40f092f5c3558a2c7a894cca39c4640",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv": "0462e2c1eb3b1b112ccd09e4bff3a1862b142dd4bd4821bc60764d9aa8c7d6c4",
+    "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/relay/comparison/summary.json": "c2768b8cdc421370d3142236f205a1f37a0d80bb9714a051e4f41f7d4fd1022d",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/COMPLETED.json": "1bc5600a3ed463da8a3099ad216861deab912250fcacf8ed8b1c20bbe5a00af9",
+    "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/comparison_summary.json": "8787a26d419c3bea39cfd7b4c4607cc537bf9fdc576329bc70106673aac8f1ff",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/current.json": "a4da5c707c9545ffea2b98bfea54a7a08213f22f0e376751406263b29e7433e6",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_current.json": "609c76a4499ff2cb158ff7dfcea08f8470facece031335e2920e915821de1a6d",
+    "analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/current.json": "56b88ccbd68276caa96ecbdd60a3cb7ab122267ddb7a55786b740bbe3acdf259",
+    "analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU0/current.json": "5ebc473fa2d853fcaed35fec8a0369b7599c158b04159f88913b7486f4813453",
+    "analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/current.json": "8181cd0ef11e19eb89808285c79f41ed1ee1adc775a40d90c5ccfe7aa047baf0"
+  },
+  "actions_today": "Read-onlyaudits and PI-requested gracefulMistral shutdown only; no scientificjobs started/stopped"
+}

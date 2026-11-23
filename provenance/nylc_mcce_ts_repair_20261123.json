@@ -1,0 +1,141 @@
+{
+  "audited_utc": "2026-11-23T17:15:46.257000+00:00",
+  "MCCE_cases": {
+    "5XYG": {
+      "session": "nylc_mcce_5xyg_metadata_20261123",
+      "profile": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/5XYG/rerun_20261123/profile.json",
+      "state": {
+        "state": "running",
+        "utc": "2026-11-23T16:49:13.151507+00:00",
+        "stage": "step3"
+      },
+      "preparation_accepted": true,
+      "prepared_input_sha256": "206a908514bfbdd45b1b1fd60eb3c5c239abeb88b050a56d6b2a52e710ff616a",
+      "coordinates_changed": false,
+      "refinement_reused": true
+    },
+    "7YU0": {
+      "session": "nylc_mcce_7yu0_metadata_20261123",
+      "profile": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU0/rerun_20261123/profile.json",
+      "state": {
+        "state": "running",
+        "utc": "2026-11-23T16:49:24.201083+00:00",
+        "stage": "step3"
+      },
+      "preparation_accepted": true,
+      "prepared_input_sha256": "e2944ecd7117a3b3e831e879130add68c68e75c7d6682163d580dbda41ce377f",
+      "coordinates_changed": false,
+      "refinement_reused": true
+    },
+    "7YU1": {
+      "session": "nylc_mcce_7yu1_metadata_20261123",
+      "profile": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/rerun_20261123/profile.json",
+      "state": {
+        "state": "running",
+        "utc": "2026-11-23T16:49:15.807378+00:00",
+        "stage": "step3"
+      },
+      "preparation_accepted": true,
+      "prepared_input_sha256": "620d863b2006f8ef6a687d43505547901a766b75d7d2cd2b2ff0c823bab39692",
+      "coordinates_changed": false,
+      "refinement_reused": true
+    }
+  },
+  "TS_diagnosis": {
+    "source_diagnosis_sha256": "0cc5e841861646fb0441f06d1e6b11d4844e3e08261f13332e3c11339c410838",
+    "original_TS_force_tolerance_Eh_per_bohr": 0.0001,
+    "TS_maximum_force_Eh_per_bohr": 9.242351475778878e-05,
+    "TS_meets_original_force_tolerance": true,
+    "audit_1e_minus5_threshold": "Original fivepoint audit applied1e-5uniformly for diagnosticreporting; thiswasnot theoriginalTSstoppingcriterion andmustnotbeused toclaimoriginalforceconvergencefailed",
+    "endpoints_meet_1e_minus5_force_tolerance": true,
+    "endpoint_classes": {
+      "minus": "reactant_ES",
+      "plus": "acyl_enzyme"
+    },
+    "candidate_minus_ES_kcal_mol": 46.411353708399496,
+    "candidate_minus_acylenzyme_kcal_mol": 43.70440333947263,
+    "verified_TS": false,
+    "formal_IRC": false,
+    "remaining_blocker": "Finite-differenceHessianreciprocity/softmodeinertia uncertainty,notfailedoptimizeroreigensolver",
+    "recommended_next_native_budget": 12,
+    "recommended_next_step": "AtunchangedTSgeometryrecomputethreeThr930HBcolumns usingh6.25e-5and3.125e-5Angstrom; eachcolumnneedsplus/minusanalyticgradients. Teststepstability/reciprocity beforeanynewfullHessianorTSoptimization.",
+    "preserve": "0K,QMcharge-2,sameQMselection,all4165movableatoms,12Angstromshell,originalHessianimmutable"
+  },
+  "native_five_point_results": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_repeat_20261123/results_with_amberhome/diagnosis.json",
+  "TS_repeatability": {
+    "max_gradient_difference_hartree_per_angstrom": 0.0,
+    "max_RMS_gradient_difference_hartree_per_angstrom": 0.0,
+    "energy_span_hartree": 0.0,
+    "identical_gradient_hashes": true,
+    "interpretation": "Determinism test only; identical repeats do not bound systematic Hessian error"
+  },
+  "new_code_coverage": {
+    "SCC_history_parser_percent": 97.5,
+    "MCCE_preparation_percent": 86.61,
+    "native_five_point_script_percent": 87.01
+  },
+  "verification": {
+    "full_pytest_passed": 2036,
+    "skipped": [
+      {
+        "test": "tests.test_local_repair_workstation::test_exact_mapping_parameters_and_original_oxygen",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_chemistry_defects_fail_closed[proton]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_chemistry_defects_fail_closed[water_name]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_chemistry_defects_fail_closed[nonfinite]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_chemistry_defects_fail_closed[ligand]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_invalid_stage_input_rejected",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_water_first_reorder_maps_back_and_preserves_fixed_atoms",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_invalid_af3_atom_mapping_fails[duplicate]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_invalid_af3_atom_mapping_fails[residue]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_invalid_af3_atom_mapping_fails[extra]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_invalid_af3_atom_mapping_fails[missing]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_engine_exit_and_scientific_acceptance_are_separate[0]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      },
+      {
+        "test": "tests.test_local_repair_workstation::test_engine_exit_and_scientific_acceptance_are_separate[9]",
+        "reason": "Set NYL12_REPAIR_FIXTURE to retained preparation job directory"
+      }
+    ],
+    "new_code_combined_coverage_percent": 89.22,
+    "new_production_dependencies": []
+  },
+  "method_changes": [],
+  "full_Hessian_recomputed": false,
+  "formal_IRC": false,
+  "verified_TS": false,
+  "mechanism_agent_next": "PI-reviewed NylC MCCE/PROPKA matched-input titrationQA packet;no newLLMbenchmark/server or autonomousdispatch"
+}

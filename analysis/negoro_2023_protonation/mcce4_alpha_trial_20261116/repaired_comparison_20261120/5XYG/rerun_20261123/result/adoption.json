@@ -1,0 +1,38 @@
+{
+  "heavy_sha256": "206a908514bfbdd45b1b1fd60eb3c5c239abeb88b050a56d6b2a52e710ff616a",
+  "upstream_status": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/data/jpc/covalent-enzyme-design/tools/pka-preparation/.venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/scripts/refine_rebuilt_protein_atoms.py",
+      "--candidate",
+      "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/repair_run_20261121/result/5XYG_repaired_protein.pdb",
+      "--original",
+      "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/repair_run_20261121/result/5XYG_split_protein_input.pdb",
+      "--outputdir",
+      "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/result"
+    ],
+    "cwd": "/data/jpc/covalent-enzyme-design",
+    "ended_utc": "2026-11-21T09:37:23.996161Z",
+    "env_overrides": {
+      "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OPENMM_CPU_THREADS": "2"
+    },
+    "exit_status": 0,
+    "input_sha256": {
+      "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/repair_run_20261121/result/5XYG_repaired_protein.pdb": "06e5fd6a1b3a3696ecd125e53ccf0f6a720efabcc8cfa192aee521cd061fea46",
+      "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/repair_run_20261121/result/5XYG_split_protein_input.pdb": "abfd8ad5f37f1b0bc00a3f152ad731148cb6d8043d1431236c36733fc18a032b",
+      "/data/jpc/covalent-enzyme-design/scripts/postflight_nylc_5xyg_repair.py": "f81cb44a779e6f0b0bc48ef4985237c222d11bcaa0fe5abc356745529c93087a",
+      "/data/jpc/covalent-enzyme-design/scripts/refine_rebuilt_protein_atoms.py": "3e5ad71074bf09a41acf5130b1d318c5301381407dbce6e20a3b30c53fcc1d0d",
+      "/data/jpc/covalent-enzyme-design/scripts/repair_nylc_5xyg_pdbfixer.py": "3dbcda320720fcd281a58611d272f2e640935e2c0fc16887b6fdbd67dc2b6848"
+    },
+    "log": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/amber19_gbn2_refine_20261121/job.log",
+    "session_name": "nylc_5xyg_amber19_refine_20261121",
+    "started_utc": "2026-11-21T02:50:11.163887Z"
+  }
+}

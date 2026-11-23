@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=30s",
+    "43200",
+    "/data/jpc/enzyme-substrate-modeling/.pixi/envs/analysis/bin/python",
+    "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha/bin/step3.py",
+    "-s",
+    "delphi",
+    "-d",
+    "4",
+    "-do",
+    "80",
+    "-salt",
+    "0.15",
+    "-p",
+    "2",
+    "-t",
+    "pbe_tmp"
+  ],
+  "started_utc": "2026-11-23T16:49:23.499466+00:00"
+}

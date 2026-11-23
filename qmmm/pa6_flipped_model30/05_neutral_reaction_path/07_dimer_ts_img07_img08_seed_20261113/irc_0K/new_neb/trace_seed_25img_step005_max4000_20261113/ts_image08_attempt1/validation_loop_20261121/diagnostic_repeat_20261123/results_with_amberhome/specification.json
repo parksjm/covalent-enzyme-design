@@ -1,0 +1,13 @@
+{
+  "gradient_calls_maximum": 5,
+  "active_atoms": 4165,
+  "qmcharge": -2,
+  "electronic_temperature_K": 0,
+  "geometry_optimization": false,
+  "full_hessian_recomputed": false,
+  "formal_IRC": false,
+  "verified_ts": false,
+  "source_restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+  "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+  "purpose": "Same-coordinate determinism and endpoint fresh-force/chemical assessment only"
+}

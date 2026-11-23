@@ -1,0 +1,4 @@
+{
+  "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdin', '-p', '/tmp/nyl12_gradient__z7vuota/topology.prmtop', '-c', '/tmp/nyl12_gradient__z7vuota/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdout', '-r', '/tmp/nyl12_gradient__z7vuota/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdinfo']' returned non-zero exit status 1.",
+  "accepted": false
+}

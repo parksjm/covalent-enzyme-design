@@ -1,3 +1,48 @@
+## CURRENT — executable priorities, 2026-11-23
+
+**Scientific conditions remain unchanged:** no new protonation assignment,
+smearing, QM partition, or reduction of the 12 Angstrom movable shell.
+The structural-design pilot remains exploratory; no new design MD is queued.
+
+1. **NylC pKa controls are running.** Repaired 5XYG/7YU0/7YU1 inputs passed
+   native MCCE preparation and conformer generation; three independent Violet
+   tmux jobs are in DelPhi step3. Their accepted coordinates were reused byte
+   for byte. The REMARK failure was our input-parser issue; allowed metadata
+   are now preserved and audited, while unknown/invalid inputs still fail.
+   Native completion must be followed by target-curve/chain/parameter QA;
+   no protonation states are assigned automatically.
+2. **TS electronic gate corrected; endpoints independently accepted.** Amber
+   recovered 5/9 inner SCC trials in the saved minus/plus descents. The old
+   regex misclassified them as terminal failures. Fresh native gradients
+   accept E-S and acylenzyme endpoints. Three fresh TS gradients are identical;
+   maximum force9.24e-5 Eh/bohr meets the original1e-4 criterion. The candidate
+   lies46.41 kcal/mol above the relaxed E-S endpoint; the route remains too
+   unfavorable to establish the desired viable mechanism. No first-order TS
+   or formal IRC is yet certified.
+3. **Next TS calculation: a bounded12-evaluation Hessian diagnostic, not yet
+   launched.** At the unchanged candidate recompute Thr930 HB x/y/z columns
+   at h=6.25e-5 and3.125e-5 Angstrom. Require step stability and improved
+   mixed-derivative reciprocity before forming any separately retained
+   derived Hessian and reassessing the unresolved soft-mode signs. Retain
+   the original matrix and all4165movable atoms. Do not reduce the global
+   uncertainty threshold simply to obtain acceptance. A new full matrix
+   needs a demonstrated precision plateau first.
+4. **Mechanism-agent next:** a human-reviewed, tool-backed NylC pKa QA case.
+   Audit these MCCE curves and run/compare PROPKA on the same prepared inputs;
+   distinguish mature Thr267 NTR (5XYG C/D) from continuous precursor chains
+   (7YU0/7YU1 A/B). Return a source-linked PI decision packet. Keep GPU model
+   servers off between requests; no new model benchmark or autonomous
+   scientific dispatch is queued.
+
+Detailed evidence, tolerances, source diagnosis and caveats are in
+`nyl12_stationary_validation_loop_20261121.md`. Current NylC job pointers are
+`analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/{5XYG,7YU0,7YU1}/current.json`.
+The native five-point check is under
+`.../validation_loop_20261121/diagnostic_repeat_20261123/`;
+`interpretation.json` explicitly distinguishes original from tighter diagnostic
+force criteria. All earlier queues below are dated history when inconsistent
+with this current section.
+
 ## Structural-design checkpoint — 2026-11-22
 
 The bounded 19-versus-29-position mask comparison is complete: 55/55 model

@@ -1,0 +1,130 @@
+{
+  "records": {
+    "TS_repeat_01": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": false,
+      "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient_m5ormxn2/eval_00001.mdin', '-p', '/tmp/nyl12_gradient_m5ormxn2/topology.prmtop', '-c', '/tmp/nyl12_gradient_m5ormxn2/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient_m5ormxn2/eval_00001.mdout', '-r', '/tmp/nyl12_gradient_m5ormxn2/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient_m5ormxn2/eval_00001.mdinfo']' returned non-zero exit status 1."
+    },
+    "TS_repeat_02": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": false,
+      "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdin', '-p', '/tmp/nyl12_gradient__z7vuota/topology.prmtop', '-c', '/tmp/nyl12_gradient__z7vuota/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdout', '-r', '/tmp/nyl12_gradient__z7vuota/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient__z7vuota/eval_00001.mdinfo']' returned non-zero exit status 1."
+    },
+    "TS_repeat_03": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/verified_frame_validation_attempt05/inputs/optimized.ncrst",
+      "restart_sha256": "e6a10b04a6357b3fc733da858641966d01fd86c503a9de65f2b52c3b144ea594",
+      "process_accepted": false,
+      "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient_b_yom80v/eval_00001.mdin', '-p', '/tmp/nyl12_gradient_b_yom80v/topology.prmtop', '-c', '/tmp/nyl12_gradient_b_yom80v/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient_b_yom80v/eval_00001.mdout', '-r', '/tmp/nyl12_gradient_b_yom80v/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient_b_yom80v/eval_00001.mdinfo']' returned non-zero exit status 1."
+    },
+    "minus": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_followup_20261121/candidate_descents/minus/optimized.ncrst",
+      "restart_sha256": "30c53aeab953f01a49de2fa82bee6d87669c9d897c1bf8f8c18647588e3f2509",
+      "original_descent_electronic_history": {
+        "passed": true,
+        "history_observed": true,
+        "verified_scc_history": true,
+        "recovered_trials": [
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          }
+        ],
+        "recovered_trial_count": 5,
+        "unresolved_trials": [],
+        "fatal_markers": [],
+        "temperature_changes": []
+      },
+      "process_accepted": false,
+      "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient_74617mri/eval_00001.mdin', '-p', '/tmp/nyl12_gradient_74617mri/topology.prmtop', '-c', '/tmp/nyl12_gradient_74617mri/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient_74617mri/eval_00001.mdout', '-r', '/tmp/nyl12_gradient_74617mri/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient_74617mri/eval_00001.mdinfo']' returned non-zero exit status 1."
+    },
+    "plus": {
+      "restart": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121/diagnostic_followup_20261121/candidate_descents/plus/optimized.ncrst",
+      "restart_sha256": "05f2f7dabbdd01c5580a44c3d591fa133f9e8ddb550c72c4dadebb8f4691ef97",
+      "original_descent_electronic_history": {
+        "passed": true,
+        "history_observed": true,
+        "verified_scc_history": true,
+        "recovered_trials": [
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          },
+          {
+            "step": 1,
+            "failed_cycles": 70,
+            "recovered_cycles": 96
+          }
+        ],
+        "recovered_trial_count": 9,
+        "unresolved_trials": [],
+        "fatal_markers": [],
+        "temperature_changes": []
+      },
+      "process_accepted": false,
+      "error": "Command '['/data/jpc/code/ambertools26/venv/bin/sander', '-O', '-i', '/tmp/nyl12_gradient_7gj8psk1/eval_00001.mdin', '-p', '/tmp/nyl12_gradient_7gj8psk1/topology.prmtop', '-c', '/tmp/nyl12_gradient_7gj8psk1/eval_00001.input.ncrst', '-o', '/tmp/nyl12_gradient_7gj8psk1/eval_00001.mdout', '-r', '/tmp/nyl12_gradient_7gj8psk1/eval_00001.output.ncrst', '-inf', '/tmp/nyl12_gradient_7gj8psk1/eval_00001.mdinfo']' returned non-zero exit status 1."
+    }
+  },
+  "all_five_native_points_accepted": false,
+  "verified_ts": false,
+  "formal_IRC": false,
+  "global_hessian_acceptance_changed": false
+}

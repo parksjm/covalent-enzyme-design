@@ -1,3 +1,43 @@
+## CURRENT — resumed pKa controls, 2026-11-23
+
+Three NylC MCCE jobs (5XYG,7YU0,7YU1) have passed preparation and conformer
+generation and are running DelPhi step3 on Violet in their per-case
+`rerun_20261123/` directories. Exact sessions/current pointers and acceptance
+gates are in `NYL12_MECHANISM_ROADMAP.md`.
+
+The five-call TS/native endpoint audit finished successfully: recovered SCC
+inner trials were misclassified by the old parser. Fresh endpoint gradients
+pass, and the two minima classify as E-S/acylenzyme. The TS candidate meets
+its original force tolerance but remains unverified because of the Hessian
+soft-mode uncertainty. Twelve targeted column evaluations are recommended,
+not queued. The original extended-CG ASH274 NEB remains untouched. Azalea's
+Mistral server remains stopped; no new mechanism-agent job is queued.
+
+## CURRENT — live audit, 2026-11-23
+
+Machine-readable audit: `provenance/current_jobs_20261123.json`. This section
+supersedes every older running/queued snapshot below.
+
+- **Running science:** one Violet Sander engine, extended-CG ASP272/ASH274
+  NEB. Latest coherent audit: cycle 6336, relative PES peak 44.838 kcal/mol;
+  not converged or a verified activation barrier. No science is active on Azalea.
+- **Finished:** all 12 matched WT MD replicas (4/state × 100 ns) and queued
+  occupancy/relay analyses; original45-model and new55-model structural pilots;
+  63-window NEB-seeded US (30 ps/window), final MBAR and movie exports.
+- **MD result:** mean Tier A/B occupancies are NH2/ASP/ASP 27.77%,
+  NH2/ASP/ASH 5.18%, NH3/ASP/ASP 28.99%. Native-Thr retention is rare in all
+  states; fixed-state occupancy does not assign protonation or validate a mechanism.
+- **Still unresolved:** first-order TS verification (soft-mode/electronic
+  diagnostics failed), qualified assisted proton relay, and NylC MCCE preparation
+  (`REMARK` parser failures remain in current attempts). No new jobs queued.
+- **Model servers:** Mistral/vLLM on Azalea was gracefully stopped at the PI's
+  request after completed benchmarks; both GPU process lists are empty, with
+  about95 GiB free each. Ollama remains running without GPU allocation. Weights,
+  benchmark responses and deployment scripts are preserved.
+- **Delivery/repo:** VMD syntax/frame fixes and 433MiB movie transfer fix are
+  pushed in `51dbdb1`. The last implementation checkpoint passed130focused tests;
+  this audit changed no scientific inputs and required no tests.
+
 ## Matched-mask campaign complete — 2026-11-22
 
 All 52 new Boltz predictions and Amber minimizations completed; with three

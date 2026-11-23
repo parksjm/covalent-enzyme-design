@@ -1,0 +1,20 @@
+{
+  "source_diagnosis_sha256": "0cc5e841861646fb0441f06d1e6b11d4844e3e08261f13332e3c11339c410838",
+  "original_TS_force_tolerance_Eh_per_bohr": 0.0001,
+  "TS_maximum_force_Eh_per_bohr": 9.242351475778878e-05,
+  "TS_meets_original_force_tolerance": true,
+  "audit_1e_minus5_threshold": "Original fivepoint audit applied1e-5uniformly for diagnosticreporting; thiswasnot theoriginalTSstoppingcriterion andmustnotbeused toclaimoriginalforceconvergencefailed",
+  "endpoints_meet_1e_minus5_force_tolerance": true,
+  "endpoint_classes": {
+    "minus": "reactant_ES",
+    "plus": "acyl_enzyme"
+  },
+  "candidate_minus_ES_kcal_mol": 46.411353708399496,
+  "candidate_minus_acylenzyme_kcal_mol": 43.70440333947263,
+  "verified_TS": false,
+  "formal_IRC": false,
+  "remaining_blocker": "Finite-differenceHessianreciprocity/softmodeinertia uncertainty,notfailedoptimizeroreigensolver",
+  "recommended_next_native_budget": 12,
+  "recommended_next_step": "AtunchangedTSgeometryrecomputethreeThr930HBcolumns usingh6.25e-5and3.125e-5Angstrom; eachcolumnneedsplus/minusanalyticgradients. Teststepstability/reciprocity beforeanynewfullHessianorTSoptimization.",
+  "preserve": "0K,QMcharge-2,sameQMselection,all4165movableatoms,12Angstromshell,originalHessianimmutable"
+}

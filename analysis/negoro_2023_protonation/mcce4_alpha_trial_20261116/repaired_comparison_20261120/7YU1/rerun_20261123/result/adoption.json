@@ -1,0 +1,10 @@
+{
+  "heavy_sha256": "620d863b2006f8ef6a687d43505547901a766b75d7d2cd2b2ff0c823bab39692",
+  "upstream_status": {
+    "exit_status": 0,
+    "source_outcome": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120/7YU1/attempt03/result/refinement_process_outcome.json",
+    "source_outcome_sha256": "533bcf8504b42060d2e09d63a046401689ab4cb15d10e3360a1e506e7f822739",
+    "accepted_receipt": "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/pdbfixer_repair_20261120/7YU1/amber19_gbn2_verified_refine_20261121/result/scientific_acceptance.json",
+    "accepted_receipt_sha256": "9aa68d1f80d7bd625020707098ba1e455103b511e077c88158f46917294bb95f"
+  }
+}

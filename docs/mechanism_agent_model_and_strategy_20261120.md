@@ -1,3 +1,20 @@
+## Next tool-validation loop — 2026-11-23
+
+Keep heavyweight GPU model servers off between explicit requests. Neither benchmarked model
+is qualified to select chemistry or dispatch scientific calculations autonomously.
+The next useful tool-validation loop is a PI-reviewed NylC pKa report: ingest
+these three native MCCE outputs, audit terminal/conformer inventories and
+Asp306/Asp308 titration curves, compare equivalent chains and PROPKA on the
+same prepared structures, then produce a source-linked decision packet.
+Mature 5XYG has Thr267 NTR on C/D; precursor 7YU0/7YU1 have continuous A/B
+chains and no NTR at 267. Existing crystal PROPKA reports are reference
+predictions, not a matched-method comparison to the repaired structures.
+The current Nyl12 titration plotting script hardcodes different targets and
+must not be applied unchanged. The PI approves scientific follow-up; validated
+numerical tools and explicit acceptance checks govern execution. No new LLM
+download, inference benchmark, server restart or agent-controlled job launch
+is queued.
+
 # Local model selection and scientific-agent strategy
 
 Advisory checkpoint, 2026-11-20 (America/New_York). This records the PI's

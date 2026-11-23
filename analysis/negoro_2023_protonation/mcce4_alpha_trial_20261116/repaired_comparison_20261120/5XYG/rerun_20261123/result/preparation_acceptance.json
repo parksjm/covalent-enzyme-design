@@ -1,0 +1,90 @@
+{
+  "accepted": true,
+  "criteria": {
+    "exit_code_is_integer": true,
+    "exit_code_zero": true,
+    "log_has_no_errors": true,
+    "input_chain_count_matches": true,
+    "native_chain_count_matches": true,
+    "n_termini_match": true,
+    "c_termini_match": true,
+    "all_original_heavy_atoms_preserved": true,
+    "original_coordinates_within_0_002_angstrom": true,
+    "no_extra_native_heavy_atoms": true,
+    "max_minimum_coordinate_displacement_angstrom": 0.0,
+    "missing_or_moved_atoms": [],
+    "extra_native_heavy_atoms": [],
+    "error_log_lines": []
+  },
+  "expected_termini": {
+    "A": {
+      "n": 1,
+      "c": 266
+    },
+    "B": {
+      "n": 1,
+      "c": 266
+    },
+    "C": {
+      "n": 267,
+      "c": 355
+    },
+    "D": {
+      "n": 267,
+      "c": 355
+    }
+  },
+  "observed_NTR": [
+    {
+      "chain": "A",
+      "residue_number": 1
+    },
+    {
+      "chain": "B",
+      "residue_number": 1
+    },
+    {
+      "chain": "C",
+      "residue_number": 267
+    },
+    {
+      "chain": "D",
+      "residue_number": 267
+    }
+  ],
+  "observed_NTG": [],
+  "observed_CTR": [
+    {
+      "chain": "A",
+      "residue_number": 266
+    },
+    {
+      "chain": "B",
+      "residue_number": 266
+    },
+    {
+      "chain": "C",
+      "residue_number": 355
+    },
+    {
+      "chain": "D",
+      "residue_number": 355
+    }
+  ],
+  "counts": {
+    "input_chains": 4,
+    "expected_chains": 4,
+    "input_heavy_atoms": 5204,
+    "native_heavy_atom_identities": 5204,
+    "missing_or_moved_heavy_atoms": 0,
+    "extra_native_heavy_atom_identities": 0,
+    "error_log_lines": 0
+  },
+  "errors": [],
+  "artifact_sha256": {
+    "protein.pdb": "206a908514bfbdd45b1b1fd60eb3c5c239abeb88b050a56d6b2a52e710ff616a",
+    "step1_out.pdb": "29db21d3b61e8990e4a701aca82f7e638b08df6babbfd4be7aab861b38f1a7a3",
+    "step1.log": "697a250ffa5358e6c6c66d0ee66bb50432837f3dd373d61054421e982cb0cf34",
+    "step1.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

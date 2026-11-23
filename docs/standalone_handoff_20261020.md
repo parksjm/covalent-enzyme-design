@@ -1,3 +1,24 @@
+## CURRENT — restored pKa controls and TS gate correction, 2026-11-23
+
+- NylC5XYG/7YU0/7YU1 reruns passed native MCCE step1/2 and are in DelPhi
+  step3 on Violet. Each case has `rerun_20261123/` and a current pointer in
+  the existing `repaired_comparison_20261120/` campaign. Accepted heavy
+  coordinates are unchanged; the REMARK parser failure is fixed.
+- The old TS electronic gate falsely rejected recovered SCC inner trials.
+  New parsing retains retry evidence and rejects actual fatal/unrecovered
+  events and temperature changes. Fresh native gradients accept both
+  saved endpoints as E-S/acylenzyme. TS repeats are identical and meet the
+  original1e-4 Eh/bohr force criterion. Candidate-to-E-S energy is46.41
+  kcal/mol; it remains a high-energy route, not a certified viable barrier.
+- First-order TS/IRC remain unverified because of Hessian soft-mode error.
+  Next recommended step is12 targeted HB-column evaluations at the same
+  candidate; no full-Hessian redo, optimizer restart or shell reduction is queued.
+- Use `NYL12_MECHANISM_ROADMAP.md` for the concise forward queue and
+  `nyl12_stationary_validation_loop_20261121.md` for detailed diagnosis.
+  The five-point evidence is at `.../validation_loop_20261121/diagnostic_repeat_20261123/`.
+  Mechanism-agent next has a bounded human-reviewed NylC pKa QA task; servers
+  stay off between requests. Original failures/inputs/acceptance are retained.
+
 ## CURRENT — missing laptop movie resolved, 2026-11-22
 
 PI uses `vmd -e view_umbrella.vmd`; the laptop lacked `path.dcd`. The pull

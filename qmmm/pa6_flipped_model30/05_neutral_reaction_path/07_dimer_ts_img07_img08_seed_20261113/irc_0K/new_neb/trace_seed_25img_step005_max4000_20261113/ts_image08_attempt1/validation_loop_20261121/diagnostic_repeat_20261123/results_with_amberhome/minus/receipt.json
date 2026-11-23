@@ -1,0 +1,41 @@
+{
+  "evaluated_coordinate_frame_identity": {
+    "passed": true,
+    "coordinate_frames": 1,
+    "force_frames": 1,
+    "max_error_angstrom": 1.4210854715202004e-14,
+    "source_conversion_scale": 0.999999999068864
+  },
+  "energy_hartree": -718.2079953,
+  "coordinates_sha256": "77278ac7bf977a2d3612e9cd73a006f1b802c9f8546be5573da927870d040189",
+  "gradient_sha256": "1004520da64f4706c9eda88321069c3c957733818dc19efa5c2ac076a5533868",
+  "electronic_gate": "finite DFTBESCF; accepted SCC history; native Run done",
+  "electronic_history": {
+    "passed": true,
+    "history_observed": true,
+    "verified_scc_history": true,
+    "recovered_trials": [],
+    "recovered_trial_count": 0,
+    "unresolved_trials": [],
+    "fatal_markers": [],
+    "temperature_changes": []
+  },
+  "serialization": "es25.16",
+  "evidence": [
+    {
+      "evaluation": 1,
+      "energy_hartree": -718.2079953,
+      "gradient_sha256": "2248c62287db695b880c4cb890d7a6554db1f92dccbccaaf04b714c800737314",
+      "artifacts_sha256": {
+        "eval_00001.input.ncrst": "24b639af9fff41b83ade14be63fba21c85d97b3befc891b911872d836695bfa6",
+        "eval_00001.mdin": "4a52f320446adf591498eafbdaac2a33c0c7074b06f51d45d759b322a5236efa",
+        "eval_00001.mdout": "192fceb649e1571f8a4518be9a3c31e1bab2af3acb3033cd9122a0970131cd3d",
+        "eval_00001.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eval_00001.path_force.xyz": "f331e52680784dc2928283a384656ff3e471ab33cb7d0d90765b88aec26f822e",
+        "eval_00001.path.xyz": "b39cd821f2cbea65070db52e0353cd88ae8eea8d983e622cbc68ba2e0c15ca64",
+        "eval_00001.path_active.xyz": "a705d9da6f419b2db227b17f14ba9bb467042ff05bb8916426b1e20d38776dae"
+      }
+    }
+  ],
+  "scratch_policy": "Transient full-system restart copies discarded only after lossless native force/mdout/input archival and gradient hashing; coordinates reconstruct from immutable state and column displacement."
+}

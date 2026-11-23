@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=30s",
+    "600",
+    "/data/jpc/mechanism-agent/runtime/mcce_preparation_repair_20261120/software/MCCE4-Alpha/bin/mcce"
+  ],
+  "started_utc": "2026-11-23T16:47:28.128484+00:00",
+  "exit_status": 0,
+  "ended_utc": "2026-11-23T16:47:30.257341+00:00"
+}
