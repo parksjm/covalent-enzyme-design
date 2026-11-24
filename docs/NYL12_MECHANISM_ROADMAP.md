@@ -1,5 +1,54 @@
 ## CURRENT — retained window033 candidate; full Hessian running, 2026-11-23
 
+### Proposed one-week finish line — scope for PI review
+
+The PI has approximately one more week of hands-on project time. The full
+scientific endgame remains experimentally improved Nyl12, supported by an
+adequately validated catalytic model. Finishing a calculation, retaining TI1,
+or writing a manuscript is not equivalent to that success.
+
+For this week the proposed primary question is whether an N-terminal proton
+relay can connect the modeled PA6 E–S complex to acylenzyme through a supported
+acylation pathway. A discrete TI1 is optional. A publishable mechanistic claim
+requires chemically mapped endpoints and proton inventory, qualified minima,
+index-one saddles with chemically relevant modes and appropriate downhill
+connectivity, and a bounded Hamiltonian/method-sensitivity assessment. Reference
+energies must use consistent Hamiltonians, boundary coordinates and constraints;
+independently released US frames must not become a spurious barrier by total-
+energy subtraction. PES and PMF claims remain distinct. L4-to-two-L2 cleavage
+and its relevance to a longer polymer remain model hypotheses.
+
+| Deadline | Bounded deliverable and decision |
+|---|---|
+| Days 1–2 | Finish window033 curvature classification. If unstable, follow the resolved negative mode in both directions and classify the endpoints; do not force a TI1 well or repeat full matrices without a demonstrated numerical reason. Finish the existing eight MD trajectories when their queues complete. |
+| Days 2–4 | Pursue one N-terminal-relay acylation branch with compatible endpoints and explicit proton tracking. Refine/verify its saddle(s) using the existing fast Hamiltonian; use already available DFT benchmarks and at most a bounded set of representative new checks. By the end of day 3 require a connected chemically interpretable path and a credible stationary-point verification route to justify further mechanism computation. |
+| Days 4–5 | Analyze all four occupied sites in both independent velocity replicas per sequence. Report block/replicate variation, initial-pose bias, native-Thr failures and retention denominators. Select zero to a few experimental candidates, not a forced winner. |
+| Days 6–7 | Freeze claims, figures, native inputs/receipts and manuscript/SI; perform a reproducibility and uncertainty audit. Explicitly label unverified or incomplete calculations. A review-ready package is achievable; publication or biological improvement is not guaranteed. |
+
+No new broad model generation, protonation survey, LLM deployment, force-field
+development or long umbrella campaign is proposed for this week. Additional
+US is justified only after a connected chemically valid path exists and sampling
+can be assessed by overlap, effective sample size, block stability and relevant
+orthogonal chemistry. US is not mandatory for a paper explicitly restricted to
+potential-energy mechanisms; quantitative kinetic/free-energy claims need
+appropriate free-energy evidence. No smearing, gates or force tolerances are
+changed to meet the calendar. Existing jobs continue; this proposal alone does
+not cancel jobs or authorize a replacement scientific campaign.
+
+The preferred paper centers on a defensible acylation result and its limitations,
+using earlier unsuccessful direct routes as controls. Cite the separate PA6
+parameter release within its validated scope; do not imply that every modular
+polyamide/state has been validated. Treat sequence-design/MD as exploratory or
+a later paper unless a coherent mechanistic connection is demonstrated. If no
+supported pathway emerges by the decision deadline, do not claim the mechanism
+is solved or presume a collection of negative calculations is publishable.
+Assess whether validated parameter/structural results support a distinct,
+novel standalone contribution; otherwise finish an honest handoff/data package.
+The most useful experimental follow-up includes clean, expression/maturation-
+controlled activity measurements and direct testing of the modeled soluble
+substrate/cleavage hypothesis. Current crude-lysate MS results cannot alone
+establish intrinsic catalytic improvement.
+
 The matched MD follow-up uses mask_07 seed 04, mask_03 seed 03, V111C seed 02
 and WT seed 04, two independent 100 ns replicas per sequence. All four initial
 sites per structure have negative projected phi under consistent scissile-amide

@@ -1,12 +1,14 @@
 """Load the two aligned WT sites in PyMOL, with individual and overlay scenes."""
 from pathlib import Path
 import sys
+import numpy as np
 from pymol import cmd
 
 HERE = Path(sys._getframe().f_code.co_filename).resolve().parent
 cmd.reinitialize()
 cmd.bg_color('white')
 cmd.set('ray_opaque_background', 1)
+cmd.set('valence', 0)
 cmd.set('label_color', 'black')
 cmd.set('label_size', 14)
 cmd.set('dash_width', 3)
@@ -29,14 +31,27 @@ for obj, beta, ligand, color in [('flipped', 'E', 'I', 'black'), ('positive', 'F
     cmd.label(nalpha, '"Thr233 Nα"')
     cmd.label(leaving, '"N59"')
     cmd.set('label_position', [1.8, -2.0, 0], nalpha)
-    cmd.set('label_position', [0, 1.3, 0], leaving)
+    cmd.set('label_position', [-1.5, 2.0, 0], leaving)
     cmd.hide('labels', f'{obj}_N_distance')
     for chain, number, name in [(('A' if obj == 'flipped' else 'B'), 113, 'Phe113'), (('A' if obj == 'flipped' else 'B'), 186, 'Asn186'), (beta, 40, 'Asp272'), (beta, 42, 'Asp274')]:
         selection = f'{obj} and chain {chain} and resi {number} and name CA'
         cmd.label(selection, f'"{name}"')
-        cmd.set('label_position', [0, -1.5 if number in (1, 113, 186) else 1.5, 0], selection)
+        cmd.set('label_position', {113: [-1.5, 1.8, 0], 186: [1.5, 1.8, 0], 40: [-2.8, -1.0, 0], 42: [2.8, -1.5, 0]}[number], selection)
 cmd.orient('flipped or positive')
 cmd.zoom('flipped or positive', 4)
+# Use one right-handed basis for both rigidly aligned poses.
+phe = np.array(cmd.get_atom_coords('flipped and chain A and resi 113 and name CA'))
+asn = np.array(cmd.get_atom_coords('flipped and chain A and resi 186 and name CG'))
+thr = np.array(cmd.get_atom_coords('flipped and chain E and resi 1 and name N'))
+x = asn - phe
+x /= np.linalg.norm(x)
+y = (phe + asn) / 2 - thr
+y -= np.dot(y, x) * x
+y /= np.linalg.norm(y)
+z = np.cross(x, y)
+view = list(cmd.get_view())
+view[:9] = np.column_stack((x, y, z)).ravel().tolist()
+cmd.set_view(view)
 cmd.disable('positive')
 cmd.disable('positive_N_distance')
 cmd.scene('flipped', 'store')
