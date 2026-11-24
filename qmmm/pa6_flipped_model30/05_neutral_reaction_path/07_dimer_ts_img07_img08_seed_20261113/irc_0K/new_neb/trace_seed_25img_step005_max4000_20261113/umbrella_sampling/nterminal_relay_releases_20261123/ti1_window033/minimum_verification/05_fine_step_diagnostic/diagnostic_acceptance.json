@@ -1,0 +1,468 @@
+{
+  "numerically_verified_minimum": false,
+  "dimension": 12495,
+  "column_units": "Hartree/(Angstrom^2 amu)",
+  "engineering_relative_column_gate": 0.0001,
+  "adjacent_sampled_step_comparisons": [
+    {
+      "coarse_step_A": 0.001,
+      "fine_step_A": 0.0005,
+      "columns": {
+        "0": {
+          "passed": false,
+          "difference_norm": 5.5389268627392047e-05,
+          "relative_difference": 0.00032417874895798374,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "1": {
+          "passed": false,
+          "difference_norm": 5.575066036809696e-05,
+          "relative_difference": 0.00018761436394736482,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "2": {
+          "passed": false,
+          "difference_norm": 5.5756395417782054e-05,
+          "relative_difference": 0.0001630057935792073,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6585": {
+          "passed": true,
+          "difference_norm": 2.974536093562935e-07,
+          "relative_difference": 8.501226214722031e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6586": {
+          "passed": false,
+          "difference_norm": 0.018675991746373,
+          "relative_difference": 0.031485736408558236,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6587": {
+          "passed": false,
+          "difference_norm": 0.017617825870253907,
+          "relative_difference": 0.01926575770249597,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10449": {
+          "passed": false,
+          "difference_norm": 2.5448418805167566e-05,
+          "relative_difference": 0.0002446531905547238,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10450": {
+          "passed": false,
+          "difference_norm": 0.00021193329284542925,
+          "relative_difference": 0.0017494773055229586,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10451": {
+          "passed": false,
+          "difference_norm": 0.00021315302557976958,
+          "relative_difference": 0.0011542610839194117,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        }
+      },
+      "all_nine_pass": false
+    },
+    {
+      "coarse_step_A": 0.0005,
+      "fine_step_A": 0.000125,
+      "columns": {
+        "0": {
+          "passed": false,
+          "difference_norm": 0.00011154879178860672,
+          "relative_difference": 0.0006526343238892858,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "1": {
+          "passed": true,
+          "difference_norm": 3.2219670098738486e-08,
+          "relative_difference": 1.0842692115500441e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "2": {
+          "passed": true,
+          "difference_norm": 5.9792983085779904e-09,
+          "relative_difference": 1.7480689965091794e-08,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6585": {
+          "passed": true,
+          "difference_norm": 2.390879976699981e-07,
+          "relative_difference": 6.833137178232458e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6586": {
+          "passed": true,
+          "difference_norm": 3.7438022162524505e-07,
+          "relative_difference": 6.311650914584848e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6587": {
+          "passed": true,
+          "difference_norm": 4.460312849312285e-07,
+          "relative_difference": 4.877519763221671e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10449": {
+          "passed": true,
+          "difference_norm": 1.0071515418006974e-07,
+          "relative_difference": 9.682439190353965e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10450": {
+          "passed": true,
+          "difference_norm": 1.124221881520662e-07,
+          "relative_difference": 9.280276641069569e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10451": {
+          "passed": true,
+          "difference_norm": 1.3605918753790547e-07,
+          "relative_difference": 7.367842603693838e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        }
+      },
+      "all_nine_pass": false
+    },
+    {
+      "coarse_step_A": 0.000125,
+      "fine_step_A": 6.25e-05,
+      "columns": {
+        "0": {
+          "passed": true,
+          "difference_norm": 5.025868355200224e-09,
+          "relative_difference": 2.9404658666009123e-08,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "1": {
+          "passed": true,
+          "difference_norm": 1.6141678306693815e-09,
+          "relative_difference": 5.432062057432228e-09,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "2": {
+          "passed": true,
+          "difference_norm": 3.1432485698617374e-10,
+          "relative_difference": 9.189398301636219e-10,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6585": {
+          "passed": true,
+          "difference_norm": 7.45116516191174e-07,
+          "relative_difference": 2.1295429207263527e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6586": {
+          "passed": true,
+          "difference_norm": 6.993926995793231e-07,
+          "relative_difference": 1.1791014582345717e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6587": {
+          "passed": true,
+          "difference_norm": 9.194683066293471e-07,
+          "relative_difference": 1.0054731248053188e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10449": {
+          "passed": true,
+          "difference_norm": 9.86898605415429e-08,
+          "relative_difference": 9.48773371925644e-07,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10450": {
+          "passed": true,
+          "difference_norm": 1.3733329068636286e-07,
+          "relative_difference": 1.1336649926526295e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10451": {
+          "passed": true,
+          "difference_norm": 2.321367607942441e-07,
+          "relative_difference": 1.2570610028646912e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        }
+      },
+      "all_nine_pass": true
+    },
+    {
+      "coarse_step_A": 6.25e-05,
+      "fine_step_A": 3.125e-05,
+      "columns": {
+        "0": {
+          "passed": true,
+          "difference_norm": 1.2679921333405226e-09,
+          "relative_difference": 7.418593782892063e-09,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "1": {
+          "passed": true,
+          "difference_norm": 4.732237794338548e-10,
+          "relative_difference": 1.5925115623592434e-09,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "2": {
+          "passed": true,
+          "difference_norm": 1.807387573499245e-10,
+          "relative_difference": 5.283961458441562e-10,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6585": {
+          "passed": true,
+          "difference_norm": 1.5038743345308357e-06,
+          "relative_difference": 4.2980745983062345e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6586": {
+          "passed": true,
+          "difference_norm": 6.354528018713233e-07,
+          "relative_difference": 1.0713052487425665e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6587": {
+          "passed": true,
+          "difference_norm": 1.9032987556893356e-06,
+          "relative_difference": 2.08132916901641e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10449": {
+          "passed": true,
+          "difference_norm": 3.684911572506098e-07,
+          "relative_difference": 3.54255941364874e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10450": {
+          "passed": true,
+          "difference_norm": 4.304062667455818e-07,
+          "relative_difference": 3.5529366814075976e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10451": {
+          "passed": true,
+          "difference_norm": 5.041496256393898e-07,
+          "relative_difference": 2.7300575431480806e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        }
+      },
+      "all_nine_pass": true
+    },
+    {
+      "coarse_step_A": 3.125e-05,
+      "fine_step_A": 1.5625e-05,
+      "columns": {
+        "0": {
+          "passed": true,
+          "difference_norm": 4.181637839059871e-10,
+          "relative_difference": 2.44653508670737e-09,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "1": {
+          "passed": true,
+          "difference_norm": 3.703662860414532e-10,
+          "relative_difference": 1.2463714173348688e-09,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "2": {
+          "passed": true,
+          "difference_norm": 2.2752888933709659e-10,
+          "relative_difference": 6.651887504789495e-10,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6585": {
+          "passed": true,
+          "difference_norm": 3.5171992206080702e-06,
+          "relative_difference": 1.005216338461775e-05,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6586": {
+          "passed": true,
+          "difference_norm": 3.01201002454732e-06,
+          "relative_difference": 5.077928241776147e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "6587": {
+          "passed": true,
+          "difference_norm": 3.4407531368715084e-06,
+          "relative_difference": 3.7625921984599694e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10449": {
+          "passed": true,
+          "difference_norm": 6.369514286044989e-07,
+          "relative_difference": 6.123454025234286e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10450": {
+          "passed": true,
+          "difference_norm": 9.30553359764037e-07,
+          "relative_difference": 7.681572001444e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        },
+        "10451": {
+          "passed": true,
+          "difference_norm": 8.099133787140408e-07,
+          "relative_difference": 4.385819546210205e-06,
+          "engineering_relative_gate": 0.0001,
+          "limitation": "Selected-column screen only; not a full-matrix error bound"
+        }
+      },
+      "all_nine_pass": true
+    }
+  ],
+  "reciprocity_by_step": [
+    {
+      "step_A": 0.001,
+      "HB_Hzy": -0.3416166523276449,
+      "HB_Hyz": -0.3475020567225447,
+      "HB_yz_absolute_difference": 0.005885404394899818,
+      "HB_yz_relative_difference": 0.0169363152851751,
+      "HB_yz_max_sampled_reciprocity_error": 0.005885404394899818
+    },
+    {
+      "step_A": 0.0005,
+      "HB_Hzy": -0.35624594598362447,
+      "HB_Hyz": -0.35624604971832113,
+      "HB_yz_absolute_difference": 1.0373469666591362e-07,
+      "HB_yz_relative_difference": 2.9118834229301694e-07,
+      "HB_yz_max_sampled_reciprocity_error": 1.0373469666591362e-07
+    },
+    {
+      "step_A": 0.000125,
+      "HB_Hzy": -0.356246022672765,
+      "HB_Hyz": -0.3562460277534122,
+      "HB_yz_absolute_difference": 5.08064718074408e-09,
+      "HB_yz_relative_difference": 1.4261624789991548e-08,
+      "HB_yz_max_sampled_reciprocity_error": 4.3776354277658136e-08
+    },
+    {
+      "step_A": 6.25e-05,
+      "HB_Hzy": -0.35624599556524883,
+      "HB_Hyz": -0.3562460179678445,
+      "HB_yz_absolute_difference": 2.2402595667436742e-08,
+      "HB_yz_relative_difference": 6.288518197404481e-08,
+      "HB_yz_max_sampled_reciprocity_error": 1.801909243204225e-07
+    },
+    {
+      "step_A": 3.125e-05,
+      "HB_Hzy": -0.356246260557422,
+      "HB_Hyz": -0.3562460477168476,
+      "HB_yz_absolute_difference": 2.128405743873074e-07,
+      "HB_yz_relative_difference": 5.974534976290662e-07,
+      "HB_yz_max_sampled_reciprocity_error": 3.242795596908321e-07
+    },
+    {
+      "step_A": 1.5625e-05,
+      "HB_Hzy": -0.3562463390953268,
+      "HB_Hyz": -0.35624595206027165,
+      "HB_yz_absolute_difference": 3.8703505517156955e-07,
+      "HB_yz_relative_difference": 1.0864253543051963e-06,
+      "HB_yz_max_sampled_reciprocity_error": 3.8703505517156955e-07
+    }
+  ],
+  "two_adjacent_fine_pair_passes": true,
+  "HB_yz_reciprocity_improved_at_least_tenfold": true,
+  "status": "ready_for_lead_review",
+  "limitation": "Selected columns only, not a full Hessian or minimum proof; no automatic matrix launch.",
+  "source_column_sha256": {
+    "03_step_probes/h_0p001A/columns/column_00000/column.npy": "7c505f536c3bb7e89e17514a4492aca2f1fedd30429fb4c9d1d3bb2dce38ca1c",
+    "03_step_probes/h_0p001A/columns/column_00001/column.npy": "a0812d3c8a82eecb50d25baa08e3b66807f0738e5f8b41f6f4fde115b35336b9",
+    "03_step_probes/h_0p001A/columns/column_00002/column.npy": "6f435b6ab0a5195ceaf46ecf9a7e742c14da544290af1f84a7324074f25ed6e6",
+    "03_step_probes/h_0p001A/columns/column_06585/column.npy": "b40139f65d6f839ea81fa2c052f0c1c7bc8bc2ded1bd1b3ace04551ea96e33bd",
+    "03_step_probes/h_0p001A/columns/column_06586/column.npy": "e850e2ac85f75fa9af5a522d67371582237bf6a2bb5a04b07cc5cb41a03903b9",
+    "03_step_probes/h_0p001A/columns/column_06587/column.npy": "ace5339d7aa43067bb72a481f32753e4006e662beef925ad50c2b4096417cc88",
+    "03_step_probes/h_0p001A/columns/column_10449/column.npy": "7f3d926609fefa5217abd7fcbf43311f1f8ac672254cf1fcce4ac16c57038719",
+    "03_step_probes/h_0p001A/columns/column_10450/column.npy": "ef01809e96b1f323f65ce65e79489b4dd21c930ac1e1f4414f1a6a9c24545ed6",
+    "03_step_probes/h_0p001A/columns/column_10451/column.npy": "eddc7fdf556e4d836d1695134259fefeec019f9dc124d01c5c377d33fb4a2433",
+    "03_step_probes/h_0p0005A/columns/column_00000/column.npy": "871928310c3bf4303d1822d655fc5105e8200dc100a3201e32d20b83c344c9aa",
+    "03_step_probes/h_0p0005A/columns/column_00001/column.npy": "73e874eccd6096795610650b4a412fbd033d976e609c42d4c1b8fde5fdf70bff",
+    "03_step_probes/h_0p0005A/columns/column_00002/column.npy": "777ecb4b587ac5d6f43a748ffaf1bb0a21092dbecb67c56d96332b36e2903dcd",
+    "03_step_probes/h_0p0005A/columns/column_06585/column.npy": "1ebd40abbc5fa63555aeaaf383146ba588e27f26eaf604d9beafa4e62a7fa806",
+    "03_step_probes/h_0p0005A/columns/column_06586/column.npy": "d5e303a4b3aab889794c375ed79f28fce99e5367a387cc6ce42c2f6bb53f829c",
+    "03_step_probes/h_0p0005A/columns/column_06587/column.npy": "a494aa32189825aeda61b419a48a0f88ea540f035715955bfe02c63fcbe16238",
+    "03_step_probes/h_0p0005A/columns/column_10449/column.npy": "7f5a79b961fe2133c105b9ed91e865bc076b377c36dee2fcb930c18e9a8e39c9",
+    "03_step_probes/h_0p0005A/columns/column_10450/column.npy": "1c2f5dbfeac2996891bea0e4a75cb947a30fa28739e5ff6b3fd1602d5b805d7f",
+    "03_step_probes/h_0p0005A/columns/column_10451/column.npy": "41333536916d2b58f24000859622a5d8f9c5aa8879885bba2d574954014fe8a5",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_00000/column.npy": "436d7356747602cd01689099a4329d2acc2ab63c877c2fe2052816fa964950b6",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_00001/column.npy": "70f236b3c48f2c1cd8d00d22c0dd792221183816087d899dc43083631ca0ce07",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_00002/column.npy": "de8760cdaa66ab7d512df2737131068a5b251826a66f167f83b0db4baed79d21",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_06585/column.npy": "2cc50e0ed583d48fcc5a3019ef88a5c49a07fe65ffe9a49c4048e2c4d341deb4",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_06586/column.npy": "967c13b011abee5594dbf7ffc6cb738afb14547f95b206d3f40bed3431274bae",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_06587/column.npy": "6c58e26d6652fb4d07ebc8296b78bdb69fe0722cc68d76e4535292033c575f7f",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_10449/column.npy": "df19a92722078b52519aab22d1babf3bfd1524362400d81b8630dd51607349c4",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_10450/column.npy": "bc45ed5e56ca6c3d92628ce627522844c3747c17745ae99a75fde6b2416fea29",
+    "05_fine_step_diagnostic/h_0p000125A/columns/column_10451/column.npy": "70218341f8501550c169092c5e3855d6a1a03da1db69a5ff05b699a774593a66",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_00000/column.npy": "887931fca7ada49ddb57c0e05e92fa24a6e3e53321bbe30f0c89972483dc6b3a",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_00001/column.npy": "41cc980360835b83ddb3e60c94f27400a122cad5bf691f4b74be93db15901cbd",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_00002/column.npy": "c6e1823a4d3772627c370c927709bb336c9b2728bfc5e3b408681892675ccc1e",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_06585/column.npy": "602e3938b3d0ceec4b0c4ceb94c69db0285190b2522a5919c5c522fbca5029ef",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_06586/column.npy": "c9c5b61b98e81c7e5d82ae7443ab7675e5c71008bdf8906cf45dd9c48b825c5b",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_06587/column.npy": "2bbb709bd429252f18b42b9d119c58f7fcfa9a51f6be7b5bba8e9f220547c7fc",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_10449/column.npy": "28cd1b7cbdd99ba175f2b06abef3a223c24c425b2fe3c82afc707aa7260bc180",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_10450/column.npy": "1246b98c6ad789c759b295edd53e116d058b1dfdee091010955e317502c6ce22",
+    "05_fine_step_diagnostic/h_0p0000625A/columns/column_10451/column.npy": "786952aa87a7ac42cb7930325910532ac8c5d89af7ed4224db36fc259eb62022",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_00000/column.npy": "26e3e6ebcfa46338388abbb20adadd1e2b25e46999abd4ba43cd597ae7e353c6",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_00001/column.npy": "0b5d831bca55de39f7499178ef228eda9d1cb831ffb221c91ed0f837a884d3d4",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_00002/column.npy": "4832c38deb1a9bb974a22ddb00967b9f6d112153c54fbac1b22f4bf90ae7c0eb",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_06585/column.npy": "80ac36d8632a601107b123735a0ab55f5fcd3722ae671e140f92dafb8ca6fc59",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_06586/column.npy": "83f1744a00ce1fc0496d4cc13bed9fcca2a8780b94eca9d3fb537e0254d3e9a5",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_06587/column.npy": "5235441be4331ad838a7c7a4a1daed5967b8607746f7631f9c2e7d5799b3a13e",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_10449/column.npy": "5136bce03501d3a5b416305666a090f7f18e4e92e8cbcd1e485c8b93f12088af",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_10450/column.npy": "dc18e7d7cf120c9f4ed3b916b8d6585f378a0a087b1b36b24aad8eaa9eed615c",
+    "05_fine_step_diagnostic/h_0p00003125A/columns/column_10451/column.npy": "baeb530fbe7e3f579950ef417e96ea6fba992732fc2128f1b764809f82bb910f",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_00000/column.npy": "f9a714eb317ff03780f11c742b7503836b41463c3eb32a772b249d51e2b70fbd",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_00001/column.npy": "3e25784c0c9afa1dcef81198c8ea433e6fe92bf5b27d6e10c34e6bbc98d22278",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_00002/column.npy": "9cffb0c57071345c053d0b0f7b45ba69e55b8787d38130c853cbb79cda37926e",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_06585/column.npy": "d795b4d723a08440ab477cfe83c46954aaf92c7103b436ffe8b738205dd88805",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_06586/column.npy": "c5d33702853611f490be35d60ef358b34bafc84bdf1db573951749284d8d4023",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_06587/column.npy": "47395e46a9f1473bf5256bd99855c87af2409f0b4d0cdc95e846b8cf6291529f",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_10449/column.npy": "f083abdc5cf574cd146c10472b01c054eba9f033eb577fbaf57804d927a29d59",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_10450/column.npy": "d924957edeca368349b790bc29f76850d7d0813a3a7eff5d72877781a30e08f7",
+    "05_fine_step_diagnostic/h_0p000015625A/columns/column_10451/column.npy": "7f91e726649bbd0b88bcf8707698a78c9561c01edbb90ed5e58a487c3e7d8e2a"
+  }
+}

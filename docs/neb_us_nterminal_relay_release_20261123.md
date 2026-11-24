@@ -1,5 +1,51 @@
 # NEB-US N-terminal relay releases, 2026-11-23
 
+## Completed optimizations and current verification
+
+All three runs independently passed native force/SCC acceptance. Values below
+come from the accepted final restarts, not downsampled movie approximations.
+
+| Seed | C–OG1 | C–N | C–O | HG1–Nalpha | HG1–OG1 | Max force, Eh/bohr |
+|---|---:|---:|---:|---:|---:|---:|
+| Window032 | 2.661 | 1.371 | 1.262 | 1.079 | 1.695 | 8.50e-6 |
+| Window033 | 1.740 | 1.490 | 1.309 | 1.050 | 2.195 | 7.94e-6 |
+| Window028 | 3.286 | 1.366 | 1.254 | 2.002 | 0.981 | 5.29e-6 |
+
+Distances are Å. Window032 is a noncovalent N-terminal-protonated state,
+not original E–S protonation. Window028 returned to E–S-like geometry.
+Window033 retains a distorted tetrahedral-like candidate; its six carbon
+angles span96.08–116.85°. Force convergence alone does not establish a minimum.
+
+Window033's repeat gradients and serialization parity passed. Coarse
+.001/.0005 Å derivative columns failed their step-stability screen. A bounded
+72-gradient follow-up retained the same1e-4 criterion and found three adjacent
+fine-step comparisons passing for all nine tested coordinates. At h=.000125 Å,
+Thr234 HB yz reciprocity improved to5.08e-9 Eh/(Å² amu). This justified the
+full12495-DOF, expected-index-zero Hessian now running in
+`ti1_window033/minimum_verification/06_full_hessian/`, eight nice CPU workers,
+same original movable region and Hamiltonian. Current summary:
+`ti1_window033/minimum_verification/verification_summary.json`.
+No minimum has yet been certified; the failed coarse preflight is retained.
+
+Final VMD bundles were regenerated at their original canonical paths. Each
+contains48 frames: exact seed, endpoint-inclusive saved optimizer snapshots,
+and the exact accepted restart as the last frame. The prior last-selected vs
+last-available NC indices were200/202,344/347 and315/316; these omissions are
+fixed. Last DCD coordinates equal the mapped accepted restart in float32
+(maximum discrepancy0 Å for all three), and every checksum passes. The viewer
+now shows all98 real QM atoms in licorice, hides the protein cartoon by default,
+colors only MM substrate carbons orange, and includes active-site framing,
+oxyanion-hole distances and the Bürgi–Dunitz angle. Tcl completeness passes;
+GUI VMD was not tested on Violet. Source/previous manifests and final checks
+are in `final_movie_evidence/`; no raw coordinates or topology were changed.
+
+Verification checks: fine-step diagnostic8 tests/84% coverage; guarded full-
+Hessian continuation13 tests/98%; endpoint-selection19 tests and actual export
+91%. Existing relay regression12 tests also pass. These checks concern our
+custom workflow and export contracts, not an installation-wide Amber test.
+
+## Launch protocol and retained historical checks
+
 The three approved native DFTB3/MM optimizations started on violet at
 2026-11-23 22:21 UTC (17:21 EST). They test whether sampled N-terminal-protonated
 structures retain a TI1-like basin after removing the umbrella potentials.

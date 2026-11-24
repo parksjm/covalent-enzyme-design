@@ -1,0 +1,32 @@
+[
+  {
+    "seed": "ti1_window032",
+    "frames": 48,
+    "last_frame": "optimized_restart",
+    "last_native_frame0": 202,
+    "max_final_float32_error_A": 0.0,
+    "checksum_pass": true,
+    "tcl_complete": true,
+    "gui_vmd_tested": false
+  },
+  {
+    "seed": "ti1_window033",
+    "frames": 48,
+    "last_frame": "optimized_restart",
+    "last_native_frame0": 347,
+    "max_final_float32_error_A": 0.0,
+    "checksum_pass": true,
+    "tcl_complete": true,
+    "gui_vmd_tested": false
+  },
+  {
+    "seed": "early_window028",
+    "frames": 48,
+    "last_frame": "optimized_restart",
+    "last_native_frame0": 316,
+    "max_final_float32_error_A": 0.0,
+    "checksum_pass": true,
+    "tcl_complete": true,
+    "gui_vmd_tested": false
+  }
+]

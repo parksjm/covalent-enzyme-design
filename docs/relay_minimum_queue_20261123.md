@@ -1,4 +1,15 @@
-# Conditional relay local-minimum verification, 2026-11-23
+# Current — retained candidate and full-shell Hessian, 2026-11-23
+
+All three releases converged; window033 retained tetrahedral-like geometry.
+The original controller's coarse-step preflight was numerically inconclusive.
+Finer-step diagnostics passed three adjacent comparisons and improved mixed-
+derivative reciprocity. Full12495-DOF curvature verification now runs in
+`minimum_verification/06_full_hessian/`, h=.000125 Å, eight nice workers;
+tmux session `nyl12_relay_w033_full_hessian_20261123`.
+Follow `minimum_verification/verification_summary.json` for classification.
+No minimum is yet certified; the earlier diagnostic records remain retained.
+
+## Historical conditional queue
 
 PI-authorized queue: leave all three original unbiased releases running normally.
 Only force-accepted **ti1_window033** triggers curvature verification; other jobs

@@ -1,4 +1,23 @@
-## CURRENT — calibrated gate and relay releases, 2026-11-23
+## CURRENT — three converged releases; window033 curvature running, 2026-11-23
+
+- All three native optimizations force-converged. Window033 retained distorted
+  tetrahedral-like geometry (C–OG1 1.740 Å, C–N 1.490 Å, C–O 1.309 Å;
+  HG1–Nalpha 1.050 Å). Window032 is noncovalent but N-terminal-protonated;
+  window028 reverted to E–S-like geometry with HG1 on OG1.
+- Window033 repeated-gradient and parity checks passed. Coarse .001/.0005 Å
+  curvature probes failed; an additional72-evaluation fine-step diagnostic
+  found a stable plateau without changing thresholds or the Hamiltonian.
+- Full12495-DOF minimum Hessian now runs in tmux
+  `nyl12_relay_w033_full_hessian_20261123`, h=.000125 Å, eight nice workers,
+  unchanged12 Å movable region and fixed exterior. Follow
+  `minimum_verification/06_full_hessian/progress.json` and
+  `minimum_verification/verification_summary.json` under window033.
+  **Minimum order is pending**, not established by force convergence.
+- Canonical VMD exports are being corrected to include the exact final
+  accepted restart and the established QM/substrate display conventions.
+  No new reaction-path or umbrella campaign was launched.
+
+## Earlier checkpoint — calibrated gate and relay releases, 2026-11-23
 
 - Unchanged native-Thr gate: all ten original 9Z0A/9Z0B sites and four
   derived n12c sites pass; crystal OG1/N maxima 0.1232/0.0841 Å. Known-active

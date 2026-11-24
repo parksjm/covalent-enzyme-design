@@ -1,4 +1,36 @@
-## CURRENT — calibrated Thr gate and relay releases, 2026-11-23
+## CURRENT — retained window033 candidate; full Hessian running, 2026-11-23
+
+All three unrestrained 12 Å DFTB3/MM releases independently force-converged.
+Window033 retains distorted tetrahedral-like geometry: C–OG1 1.740 Å,
+C–N 1.490 Å, C–O 1.309 Å, Nalpha–HG1 1.050 Å; maximum force
+7.94e-6 Eh/bohr. Window032 is noncovalent with HG1 on Nalpha
+(C–OG1 2.661 Å), while028 returned to E–S-like geometry with HG1 on OG1
+(C–OG1 3.286 Å). None has yet been certified as a minimum by curvature.
+
+The original window033 controller correctly stopped before a full Hessian:
+exact repeated gradients/serialization parity passed, but .001/.0005 Å
+finite-difference columns failed step stability. The bounded follow-up completed
+72 native analytic-gradient evaluations. All nine sampled coordinates pass the
+unchanged 1e-4 relative screen across three adjacent finer-step comparisons.
+At h=.000125 Å, the problematic Thr234 HB yz reciprocity difference falls to
+5.08e-9 Eh/(Å² amu), versus5.89e-3 at h=.001 Å. These are precision diagnostics,
+not minimum evidence by themselves.
+
+**Full 12495-DOF Hessian is actually running** in tmux
+`nyl12_relay_w033_full_hessian_20261123`, using h=.000125 Å (largest tested
+step on the stable plateau), eight nice single-CPU workers, zero electronic
+temperature and the unchanged 4165-atom movable shell/fixed exterior.
+Results/progress: window033 `minimum_verification/06_full_hessian/`;
+current interpretation pointer: `minimum_verification/verification_summary.json`.
+Require qualified zero-negative-mode inertia before a minimum claim; retain
+unresolved signs honestly. No new reaction path has been started.
+
+Final optimizer VMD bundles retain the canonical paths. Endpoint-inclusive
+downsampling and an explicit accepted-restart frame correct the previous
+omission of the exact endpoint; full raw trajectories/restarts are retained.
+See `neb_us_nterminal_relay_release_20261123.md` for measured export checks.
+
+## Earlier checkpoint — calibrated Thr gate and relay releases, 2026-11-23
 
 The PI approved calibration and three unbiased DFTB3/MM releases of the
 N-terminal branch sampled in existing NEB-US data. No thresholds, proton
