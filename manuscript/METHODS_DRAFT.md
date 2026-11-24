@@ -1210,3 +1210,22 @@ relay directionality or exclusive binding. Production
 has no orientation-holding restraint. Initial structural differences and the
 WT native-Thr gate failures remain explicit comparison limitations. Execution
 status is recorded in `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/queues/`.
+
+## Conditional N-terminal-relay acylation paths (prepared 2026-11-23)
+
+Follow-up paths were conditioned on qualified full-active-region numerical
+minimum verification of the force-converged window033 tetrahedral-like model.
+Two branches were prepared from its exact full-system coordinates and fixed
+exterior: reverse activation toward E–S and forward N-terminal proton delivery
+to the substrate leaving amide nitrogen with C–N cleavage. Composite coordinates
+were d(Nalpha,H)−d(OG1,H)+d(C54,OG1) and
+d(Nalpha,H)−d(N59,H)+d(C54,N59), respectively. Only the composite was restrained,
+so component changes need not be synchronous. All N-terminal protons were
+tracked; no proton-identity or positional restraint was added. The unchanged
+98-real-atom DFTB3 QM region contained no water. Reaction biases were removed
+at candidate endpoints before independent force/connectivity acceptance.
+Eligible interior physical-PES maxima seed native DL-FIND dimer searches;
+force convergence alone is not first-order saddle certification. Full input
+hashes, numerical budgets, runtime and per-window inspection records are in
+`qmmm/pa6_flipped_model30/12_nterminal_relay/`. These preparations and conditional
+queues do not constitute completed reaction paths or validated kinetic barriers.

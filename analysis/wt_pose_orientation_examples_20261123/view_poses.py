@@ -43,11 +43,11 @@ cmd.zoom('flipped or positive', 4)
 phe = np.array(cmd.get_atom_coords('flipped and chain A and resi 113 and name CA'))
 asn = np.array(cmd.get_atom_coords('flipped and chain A and resi 186 and name CG'))
 thr = np.array(cmd.get_atom_coords('flipped and chain E and resi 1 and name N'))
-x = asn - phe
-x /= np.linalg.norm(x)
 y = (phe + asn) / 2 - thr
-y -= np.dot(y, x) * x
 y /= np.linalg.norm(y)
+x = asn - phe
+x -= np.dot(x, y) * y
+x /= np.linalg.norm(x)
 z = np.cross(x, y)
 view = list(cmd.get_view())
 view[:9] = np.column_stack((x, y, z)).ravel().tolist()

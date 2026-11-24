@@ -1,13 +1,14 @@
 ## CURRENT — retained window033 candidate; full Hessian running, 2026-11-23
 
-### Proposed one-week finish line — scope for PI review
+### Approved one-week finish line — 2026-11-23
 
 The PI has approximately one more week of hands-on project time. The full
 scientific endgame remains experimentally improved Nyl12, supported by an
 adequately validated catalytic model. Finishing a calculation, retaining TI1,
 or writing a manuscript is not equivalent to that success.
 
-For this week the proposed primary question is whether an N-terminal proton
+The PI approved the one-week plan and conditional pathway/TS continuation.
+For this week the primary question is whether an N-terminal proton
 relay can connect the modeled PA6 E–S complex to acylenzyme through a supported
 acylation pathway. A discrete TI1 is optional. A publishable mechanistic claim
 requires chemically mapped endpoints and proton inventory, qualified minima,
@@ -26,14 +27,21 @@ and its relevance to a longer polymer remain model hypotheses.
 | Days 6–7 | Freeze claims, figures, native inputs/receipts and manuscript/SI; perform a reproducibility and uncertainty audit. Explicitly label unverified or incomplete calculations. A review-ready package is achievable; publication or biological improvement is not guaranteed. |
 
 No new broad model generation, protonation survey, LLM deployment, force-field
-development or long umbrella campaign is proposed for this week. Additional
+development or long umbrella campaign is included this week. Additional
 US is justified only after a connected chemically valid path exists and sampling
 can be assessed by overlap, effective sample size, block stability and relevant
 orthogonal chemistry. US is not mandatory for a paper explicitly restricted to
 potential-energy mechanisms; quantitative kinetic/free-energy claims need
 appropriate free-energy evidence. No smearing, gates or force tolerances are
-changed to meet the calendar. Existing jobs continue; this proposal alone does
-not cancel jobs or authorize a replacement scientific campaign.
+changed to meet the calendar. Existing jobs continue. The new conditional
+continuation is `qmmm/pa6_flipped_model30/12_nterminal_relay/`, tmux
+`nyl12_w033_relay_after_minimum_20261123`: after qualified full-shell minimum
+acceptance it runs two one-CPU branches from the same window033 exterior,
+back toward E–S and forward toward acylenzyme. Accepted unbiased endpoints and
+interior physical-PES maxima trigger native dimer TS searches. Movies, energies
+and proton/bond-distance plots refresh after each window. Failure or unresolved
+minimum curvature prevents dispatch. First-order TS verification remains a
+subsequent scientific gate. See the campaign README and live watcher receipt.
 
 The preferred paper centers on a defensible acylation result and its limitations,
 using earlier unsuccessful direct routes as controls. Cite the separate PA6

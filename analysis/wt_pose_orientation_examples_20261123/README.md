@@ -11,6 +11,6 @@ These are individual examples, not group averages. Relaxed WT negative φ: 4.65 
 
 The positive structure was rigidly aligned to the flipped structure using 16 N/CA/C/O backbone atoms from canonical Phe113, Asn186, Asp272 and Asp274. Thr233 and PA6 were excluded from fitting. The extracts retain source heavy atoms; the positive pose underwent only a rigid transform and PDB rounding to 0.001 Å, with no added hydrogen or optimization. Alignment RMSD, original and extracted file SHA-256 hashes, exact source paths and full precision measurements are in `manifest.json`. `build.py` reproduces the extraction inside the source checkout using the existing alignment and geometry functions.
 
-Both aligned poses use the same anchor-defined camera: Thr233 Nα below Phe113 and Asn186; bond valence display is disabled. Camera changes do not alter atom coordinates.
+Both aligned poses use the same anchor-defined camera: the vertical axis points from Thr233 Nα toward the Phe113/Asn186 anchor midpoint; bond valence display is disabled. Camera changes do not alter atom coordinates.
 
 The retained calibration and ensemble comparison tables disagree on the flipped example’s tier label; tier classification is omitted from this figure. Their distance and signed φ agree.

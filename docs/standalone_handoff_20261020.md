@@ -1,5 +1,17 @@
 ## CURRENT — three converged releases; window033 curvature running, 2026-11-23
 
+- **One-week plan approved; relay/TS continuation conditionally queued.** Tmux
+  `nyl12_w033_relay_after_minimum_20261123` waits on the original full-Hessian
+  acceptance (zero negative/unresolved modes plus matching source/process
+  evidence). New logical root is `qmmm/pa6_flipped_model30/12_nterminal_relay/`.
+  After a pass, one CPU each drives window033 back toward E–S and forward to
+  acylenzyme using N-terminal proton transfer and bond cleavage. Both use exactly
+  the same window033 fixed exterior; old028/032 endpoints are not energy
+  references. Accepted unbiased endpoints plus an interior PES maximum trigger
+  native dimer searches with5000-cycle budgets. Index-one TS verification is
+  still required afterward. Watcher failure prevents all dispatch; MD continues.
+  Initial VMD/plot export passed real cpptraj/frame/box/mapping checks; before
+  the first window those viewers contain only the accepted window033 frame.
 - **GPU follow-up now active:** two independent 100 ns replicas each of WT,
   broader mask_07, focused mask_03 and V111C, four PA6 L4 ligands per tetramer.
   Violet runs WT/broader first; Azalea runs focused/V111C first; every sequence

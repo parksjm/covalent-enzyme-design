@@ -1,0 +1,10 @@
+{
+  "prepared_utc": "2026-11-24T03:35:44.835882+00:00",
+  "source_seed": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033",
+  "source_frozen_manifest_sha256": "4dd709034f77483eb0b80b3904e592438eb5bac579b207b6230522ed88ce0a3a",
+  "config_sha256": "1842463ddbbfb7e1b0071190240b011235d6de59cdcbd04f4b799dafe82cf5ef",
+  "repository_revision": "d9d49613376be43d72bf64d7124661b82ba24489",
+  "native_calculations_launched": false,
+  "minimum_classification": "Pending actual full-Hessian scientific/process gate",
+  "prelaunch_correction": "Explicit cpptraj namdcell box encoding; prior publication source/config/evidence retained in clutter/cpptraj_cell_preflight; no quantum input changed"
+}
