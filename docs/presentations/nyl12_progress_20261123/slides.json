@@ -551,7 +551,7 @@
     {
       "kind": "table",
       "title": "Current test: unbiased relay-state relaxations",
-      "takeaway": "Three distinct US configurations; unchanged topology, charge and12 Å movable region.",
+      "takeaway": "Relay seed w033: force accepted; full Hessian ongoing, minimum not yet certified.",
       "columns": [
         "Seed",
         "C–OG1 / C–N / C–O (Å)",
@@ -585,8 +585,8 @@
       "sources": [
         "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123"
       ],
-      "notes": "Provisional seed table taken from lead-approved frame extraction; final manifest/acceptance is authoritative. QMcharge−2,98realQMatoms+8links;4165movableatoms, fixedexterior as inoriginal12A model. Atomnames/protoninventoryunchanged. Optimization does not establish a minimum without stationary-point classification. Jobs launched on Violet at 17:21 EST, 23Nov2026; first SCC/energy/gradient evaluations passed. Final force convergence and chemical outcome pending.",
-      "footer": "Running at deck preparation | 23 Nov 2026 | Final outcome pending"
+      "notes": "w033 force acceptance is distinct from stationary-point classification. The full Hessian is ongoing; no minimum is certified. The three configurations preserve the declared N-terminal proton inventory and fixed exterior; no live host or GPU availability is implied.",
+      "footer": "w033 force accepted | full Hessian ongoing | minimum not certified"
     },
     {
       "kind": "image",
@@ -751,6 +751,59 @@
         "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png"
       ],
       "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+    },
+    {
+      "kind": "text",
+      "title": "How the two mutable masks were chosen",
+      "takeaway": "Focused 19 positions are retained; broader 29 adds ten audited alpha sites.",
+      "font_size": 21,
+      "bullets": [
+        "Focused alpha: 50, 51, 52, 73, 76, 101, 111, 112, 114, 115, 116, 151, 152, 153, 185, 187, 188.",
+        "Focused beta: local 39, 41 = canonical precursor 271, 273. These 19 sites form the unchanged base mask.",
+        "Broader adds alpha 28, 37, 38, 92, 96, 97, 160, 161, 162, 164: 27 alpha + 2 beta = 29.",
+        "New sites: RSA ≥ 0.25 in every copy of both WT parents; no other-chain heavy contact ≤ 4 Å."
+      ],
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/protocol.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/final_masks.json"
+      ],
+      "notes": "The focused mask is retained unchanged, not retrospectively subjected to the broader-addition gate. Four additions are in the 6–12 Å shell and six in the 12–16 Å shell. RSA uses Tien 2013 normalization. Parent structures were WT seed 02 and seed 03."
+    },
+    {
+      "kind": "text",
+      "title": "Selected mutations: canonical precursor numbering",
+      "takeaway": "Full substitution lists; beta local L39F is canonical L271F.",
+      "font_size": 22,
+      "bullets": [
+        "mask_03 (focused): S50A, V51A, S153A, A187T, V188I, L271F.",
+        "mask_07 (broader): S50A, V51A, A92K, N97D, S153T, A187T, V188T.",
+        "Equivalent alpha chains A–D share one sequence; beta chains E–H share one sequence.",
+        "Catalytic/maturation protections remain fixed: alpha 113, 156, 186, 222–232; beta local 1–3, 40, 42 (canonical 233–235, 272, 274)."
+      ],
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/candidate_manifest.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/protocol.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/final_masks.json"
+      ],
+      "notes": "Canonical precursor numbering covers alpha residues 1–232 and beta residues 233–328; beta local index is canonical minus 232. Mutation lists describe whole precursor sequences, not individual site substitutions per tetramer."
+    },
+    {
+      "kind": "text",
+      "title": "Why test the flipped PA6 pose?",
+      "takeaway": "Signed φ identifies orientation; it does not establish relay competence.",
+      "font_size": 21,
+      "bullets": [
+        "Flipped-only MD tests the N-terminal relay hypothesis; it does not assume the relay is already positioned.",
+        "WT negative φ: Nα–leaving N mean 4.65 Å (4.24–5.47; n=16). Positive φ: 3.61 Å (3.51–3.67; n=4).",
+        "Current negative-φ poses require reorganization or a water relay; the shorter positive-φ distance alone also proves nothing.",
+        "Proton-transfer direction remains unresolved. Selected starts and finite unrestrained MD cannot establish unbiased binding preference."
+      ],
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/results/control_summary.csv",
+        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/occupied_sites.csv"
+      ],
+      "notes": "The negative signed projected phi denotes flipped orientation only under the consistent scissile-amide mapping. Lead audit of relaxed WT sites: negative n=16, mean 4.65 Å, range 4.24–5.47 Å; positive n=4, mean 3.61 Å, range 3.51–3.67 Å. Selected WT seed04 4.59–4.87 Å, mask_03 4.30–5.19 Å, mask_07 4.30–4.89 Å, V111C 5.26–5.45 Å. Geometric proximity alone establishes neither transfer direction nor relay competence. The PI-selected campaign remains flipped-only."
     },
     {
       "kind": "text",

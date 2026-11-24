@@ -22,8 +22,8 @@ bundles are recorded in slide notes.
 - Crystal calibration retains every native-Thr threshold. All ten original
   crystal sites pass; known-active control rejection still limits activity
   prediction. Derived symmetry/reference copies are not independent experiments.
-- New N-terminal-relay releases are running at deck preparation. Their
-  finite initial gradients are accepted; no final chemical outcome is claimed.
+- Relay seed w033 has met its force criterion. A full Hessian is ongoing;
+  stationary-point classification and minimum certification remain pending.
 - MCCE native completion is separate from pKa validity. Current NylC outputs
   remain unqualified; no protonation states were assigned.
 - The current modular PA6 release is MD-ready within its declared
@@ -51,10 +51,15 @@ or `shasum -a 256 -c MANIFEST.sha256`.
 
 Renderer verification: eight focused tests, 99% coverage; all layout variants,
 source failures, full source notes, image hashes and slide bounds are checked.
-The full deck was rendered through LibreOffice and its 40-page contact sheet
-visually inspected. Those checks do not establish scientific validity of a
+The original deck was rendered through LibreOffice and its 40-page contact sheet
+visually inspected. The updated 43-page deck has its changed slides visually inspected. Those checks do not establish scientific validity of a
 profile or validate a new mechanism.
 
 Calibration verification used the existing Biopython analysis environment:13 passed,97% new-code coverage. The default project environment selectively skips three CIF-parser tests when this optional analysis prerequisite is absent; scalar and control checks still run. No production dependency was added.
 
 Final repository checkpoint: `uv run pytest -q` — **2,060 passed,17 skipped**. Skips comprise13 retained-preparation-fixture prerequisites, three optional CIF-parser tests, and the optional PowerPoint test module in the default environment. All parser/report checks were also run successfully in their explicit tool environments. Relay preparation/export/monitor checks:18 passed,91% coverage.
+
+The 23 November mask update adds slides 36–38 and updates slide 30. The original
+40-slide source, PowerPoint, PDF and build receipt are retained in
+`source_history_before_mask_update/`. The bundled workspace-dependency tool was
+unavailable; the existing isolated `uv` presentation build was used.

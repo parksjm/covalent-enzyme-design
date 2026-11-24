@@ -1,18 +1,18 @@
 {
-  "slide_count": 40,
-  "pdf_pages": 40,
+  "slide_count": 43,
+  "pdf_pages": 43,
   "asset_hashes_pass": true,
-  "visual_review": "40-page contact sheet inspected; tables/captions/figures legible; explicit VMD placeholders",
+  "visual_review": "Original 40-page deck previously inspected; updated slides 30 and 36\u201338 rendered and visually checked for fit.",
   "chemistry_review": "Independent source review plus lead corrections of energy type/reference and invalid asynchronous extension",
   "report_builder_tests": "8 passed;99% coverage",
   "native_calibration_tests": "13passedintheexistinganalysisenvironment;97%coverage. Defaultproject10passed3optional-parsertests skipped.",
-  "scientific_claims": "No validated viable barrier, no activity-predictive gate, no final relay outcome claimed",
+  "scientific_claims": "w033 force accepted; full Hessian ongoing and minimum not certified. Mask provenance and negative-phi interpretation explicitly bounded.",
   "full_repository_suite": {
     "command": "uv run pytest -q",
     "passed": 2060,
     "skipped": 17,
     "skip_scope": "13 retained repair-fixture prerequisites;3 optional Biopython parser tests;1 presentation module when python-pptx absent. All13 calibration tests and8 presentation tests passed in explicit existing/isolated tool environments."
   },
-  "relay_release_tests": "18passed;91%coverage;3nativejobsandshared-lockmovieupdateractive",
+  "relay_release_tests": "Previous 18 tests passed; 91% coverage; live resource status omitted.",
   "laptop_pull_checks": "Actualrsyncfiltersandmockdownloadregressionspassed; all3liveverifiedmoviebundlechecksumsverified"
 }

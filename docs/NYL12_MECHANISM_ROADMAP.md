@@ -1,5 +1,27 @@
 ## CURRENT — retained window033 candidate; full Hessian running, 2026-11-23
 
+The matched MD follow-up uses mask_07 seed 04, mask_03 seed 03, V111C seed 02
+and WT seed 04, two independent 100 ns replicas per sequence. All four initial
+sites per structure have negative projected phi under consistent scissile-amide
+mapping; WT seed 04 has four Tier A sites but zero native-Thr passes. Starting
+poses differ, and no orientation-holding restraint is applied. This tests a
+possible Thr N-terminal relay to the leaving amide nitrogen. It does not assume
+closer N–N proximity: WT negative-phi endpoints average 4.65 Å versus 3.61 Å
+for positive-phi endpoints, so direct transfer from these flipped starts needs
+rearrangement or possible water mediation. A shorter distance alone does not
+prove a mechanism. Historical poses are retained; no additional positive-pose
+MD is launched. Mask lists, canonical mutations and
+selection evidence: `docs/ligandmpnn_mask_site_rationale_20261123.md`.
+Actual job status is in `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/queues/`;
+process completion, geometry retention and sampling convergence remain separate.
+Violet WT/broader replicas and Azalea focused/V111C replicas have passed heating,
+density and weak-restraint stages and entered unrestrained stages; second replicas
+are serially queued with one replica of every sequence on each host. Azalea's
+generic CUDA startup failures were preserved and corrected using the previously
+validated Blackwell build. Read `AMBER_WORKSTATION_RUNTIME.md` before any future
+GPU launch; the campaign host launcher now rejects incorrect executable hashes
+and host-specific configs before launch. The original 12 Å Hessian continues.
+
 All three unrestrained 12 Å DFTB3/MM releases independently force-converged.
 Window033 retains distorted tetrahedral-like geometry: C–OG1 1.740 Å,
 C–N 1.490 Å, C–O 1.309 Å, Nalpha–HG1 1.050 Å; maximum force

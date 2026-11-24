@@ -1,0 +1,22 @@
+{
+  "dataset_manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/systems/broader_mask07/datasets.json",
+  "dataset": "broader_mask07",
+  "amber_home": "/data/jpc/code/ambertools26/venv",
+  "cuda_engine": "/data/jpc/code/pmemd26_blackwell_build_20261005/pmemd26_src/build_sysgcc_cuda128_v2/src/pmemd/src/pmemd.cuda_SPFP",
+  "output": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/md/broader_mask07",
+  "session_prefix": "nyl12_design_broader_mask07_20261123_blackwell",
+  "replicas": [
+    {
+      "name": "replica_01",
+      "seed": 31200001,
+      "gpu": "1",
+      "host": "violet"
+    },
+    {
+      "name": "replica_02",
+      "seed": 31300001,
+      "gpu": "1",
+      "host": "azalea"
+    }
+  ]
+}

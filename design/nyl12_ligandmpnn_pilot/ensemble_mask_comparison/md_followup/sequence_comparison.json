@@ -1,0 +1,102 @@
+{
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/candidate_manifest.json": "dd5a5288d7f4485c6b2b86b67ccb9b9536b3799bae05c7761519f4e5298dfbfb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/generation/results/unique_sequences.fasta": "551a3466e238b4a851485c3632c34187a6fb04df14eebf72de8388b671254fca",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/mask_03/seed_03/relaxation/relaxed.pdb": "c86f5835b97b1220abcba938d3308ab9dde6468b17df4aca11fbcc80f22655ad",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/mask_07/seed_04/relaxation/relaxed.pdb": "79f22fbd3f56e1ffd3707113a6455e37117e205f909ff59bd5ad07b820b0818c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/WT/seed_04/relaxation/relaxed.pdb": "712450b25b0c623d49a380e74b286ec2a873ba6eb3f4220eb3f202c308ff5108"
+  },
+  "numbering": "1-based precursor; alpha 1-232, beta 233-328",
+  "protected_positions": {
+    "alpha": [
+      113,
+      156,
+      186,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ],
+    "beta": [
+      1,
+      2,
+      3,
+      40,
+      42
+    ]
+  },
+  "sequences": {
+    "mask_03": {
+      "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAAGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSAAVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNTIGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATIFDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "precursor": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAAGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSAAVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNTIGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKNTTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATIFDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutation_count": 6,
+      "mutations": [
+        "S50A",
+        "V51A",
+        "S153A",
+        "A187T",
+        "V188I",
+        "L271F"
+      ],
+      "identical_positions": 322,
+      "pdb_sequence_match_all_chains": true,
+      "lineage": [
+        {
+          "arm": "focused_19_positions",
+          "parent": "WT_seed_02",
+          "sample_id": "WT_seed_02_focused_19_positions_t0.1:1",
+          "temperature": 0.1
+        }
+      ]
+    },
+    "mask_07": {
+      "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAAGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFKDQTKDEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSATVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNTTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "precursor": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGAAGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFKDQTKDEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSATVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNTTGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKNTTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutation_count": 7,
+      "mutations": [
+        "S50A",
+        "V51A",
+        "A92K",
+        "N97D",
+        "S153T",
+        "A187T",
+        "V188T"
+      ],
+      "identical_positions": 321,
+      "pdb_sequence_match_all_chains": true,
+      "lineage": [
+        {
+          "arm": "broader_29_positions",
+          "parent": "WT_seed_03",
+          "sample_id": "WT_seed_03_broader_29_positions_t0.1:6",
+          "temperature": 0.1
+        }
+      ]
+    },
+    "WT": {
+      "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+      "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "precursor": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKNTTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP",
+      "mutation_count": 0,
+      "mutations": [],
+      "identical_positions": 328,
+      "pdb_sequence_match_all_chains": true,
+      "lineage": []
+    }
+  },
+  "common_mutations": [
+    "A187T",
+    "S50A",
+    "V51A"
+  ],
+  "wt_seed_04": "all four negative phi; tier A four, native pass zero"
+}

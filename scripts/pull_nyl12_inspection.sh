@@ -124,6 +124,7 @@ if ssh "$remote" test -f "$pilot_source/accepted_parent/preparation_manifest.jso
     if [[ $dry_run -eq 0 ]]; then mkdir -p "$pilot_destination"; fi
     rsync "${vmd_rsync_args[@]}" \
         --exclude='**/__pycache__/***' --exclude='*.pt' \
+        --exclude='**/clutter/***' \
         --exclude='/backbone_audit/***' --exclude='/prepared/***' \
         --exclude='/preparation_job/***' --exclude='/inputs/relaxed_pdb/***' \
         --exclude='/native_preflight/canonical_pool/***' \
@@ -156,7 +157,26 @@ rsync "${rsync_args[@]}" \
     --include='plm_and_filter_calibration_20261121.md' \
     --include='nyl12_ligandmpnn_pilot.md' --include='CURRENT_JOBS.md' \
     --include='standalone_handoff_20261020.md' \
+    --include='AMBER_WORKSTATION_RUNTIME.md' \
+    --include='ligandmpnn_mask_site_rationale_20261123.md' \
     --exclude='*' "$remote:$planning_source/" "$planning_destination/"
+
+# Current manuscript prose, independent of earlier inspection bundles.
+manuscript_source=/data/jpc/covalent-enzyme-design/manuscript
+manuscript_destination="$destination/manuscript"
+if [[ $dry_run -eq 0 ]]; then mkdir -p "$manuscript_destination"; fi
+rsync "${rsync_args[@]}" --include='*/' --include='*.md' --exclude='*' \
+    "$remote:$manuscript_source/" "$manuscript_destination/"
+
+# Actual WT pose examples, including a portable PyMOL session and measurements.
+pose_source=/data/jpc/covalent-enzyme-design/analysis/wt_pose_orientation_examples_20261123
+pose_destination="$destination/analysis/wt_pose_orientation_examples_20261123"
+if ssh "$remote" test -f "$pose_source/manifest.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$pose_destination"; fi
+    rsync "${vmd_rsync_args[@]}" --include='*/' --include='*.pdb' \
+        --include='*.pse' --include='*.png' --include='*.json' --include='*.py' \
+        --include='*.md' --exclude='*' "$remote:$pose_source/" "$pose_destination/"
+fi
 
 # Current QM/MM work: a small curated tree, organized by stage and window.
 qmmm_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_asp272
@@ -842,7 +862,8 @@ briefing_destination="$destination/docs/presentations/nyl12_progress_20261123"
 if ssh "$remote" test -f "$briefing_source/MANIFEST.sha256"; then
     if [[ $dry_run -eq 0 ]]; then mkdir -p "$briefing_destination"; fi
     rsync "${vmd_rsync_args[@]}" \
-        --exclude='/rendered/***' --include='*/' \
+        --exclude='/rendered/***' --exclude='/source_history_before_mask_update/***' \
+        --include='*/' \
         --include='*.pptx' --include='*.pdf' --include='*.png' \
         --include='*.json' --include='*.md' --include='*.sh' \
         --include='MANIFEST.sha256' --exclude='*' \

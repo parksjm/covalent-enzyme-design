@@ -1,0 +1,16 @@
+{
+  "scope": "Protocol-matched conditional binding/preorganization retention; selected starting poses differ; not a test of catalytic activity",
+  "microstate": "NH2/ASP272/ASP274",
+  "temperature_K": 300,
+  "production_ns_per_replica": 100,
+  "replicas_per_sequence": 2,
+  "ligands_per_tetramer": 4,
+  "source_selection": {
+    "broader_mask07": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/mask_07/seed_04/relaxation",
+    "focused_mask03": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/mask_03/seed_03/relaxation",
+    "V111C": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/control_V111C/seed_02/relaxation",
+    "WT": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/WT/seed_04/relaxation"
+  },
+  "selection_limitations": "One geometry-selected seed per sequence; all four initial signed Herschlag phi values negative. WT seed04 has four Tier A sites but zero native-Thr gate passes; initial geometry and native conformation differ. Report per-pose retention and independent velocity replicas, not activity or four-site independence.",
+  "pose_policy": "Flipped-only: all four initially assigned scissile amides must have negative signed projected Herschlag phi; no orientation-holding production restraint."
+}

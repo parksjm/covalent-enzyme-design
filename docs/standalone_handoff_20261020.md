@@ -1,5 +1,22 @@
 ## CURRENT — three converged releases; window033 curvature running, 2026-11-23
 
+- **GPU follow-up now active:** two independent 100 ns replicas each of WT,
+  broader mask_07, focused mask_03 and V111C, four PA6 L4 ligands per tetramer.
+  Violet runs WT/broader first; Azalea runs focused/V111C first; every sequence
+  has its second replica queued on the other host. All starting sites are
+  flipped (negative signed projected phi). WT seed04 has four Tier A sites
+  but zero native-Thr passes; do not discard that known-active control or tune
+  the gate. Follow `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/README.md`.
+- **Mandatory Azalea runtime:** read `AMBER_WORKSTATION_RUNTIME.md` and root
+  `AGENTS.md`. The generic pmemd26 binary lacks Blackwell kernels; the already
+  validated CUDA12.8 build is required. This turn's two failed generic starts
+  are preserved in remote campaign clutter; corrected jobs advance native MD.
+  The reproducible host launcher now rejects the wrong binary/hash/configs.
+- Canonical masks, all substitutions and the testable flipped-pose hypothesis
+  are in `ligandmpnn_mask_site_rationale_20261123.md`, manuscript Methods/Results
+  and slides36–38 of the updated43-slide deck. Current WT negative-phi Nalpha–
+  leaving-N distances are longer on average than positive-phi ones; sign alone
+  is not evidence for a competent proton relay. No new positive-pose MD launched.
 - All three native optimizations force-converged. Window033 retained distorted
   tetrahedral-like geometry (C–OG1 1.740 Å, C–N 1.490 Å, C–O 1.309 Å;
   HG1–Nalpha 1.050 Å). Window032 is noncovalent but N-terminal-protonated;
@@ -13,8 +30,8 @@
   `minimum_verification/06_full_hessian/progress.json` and
   `minimum_verification/verification_summary.json` under window033.
   **Minimum order is pending**, not established by force convergence.
-- Canonical VMD exports are being corrected to include the exact final
-  accepted restart and the established QM/substrate display conventions.
+- Canonical VMD exports now include the exact final accepted restart and
+  the established QM/substrate display conventions; final-coordinate checks pass.
   No new reaction-path or umbrella campaign was launched.
 
 ## Earlier checkpoint — calibrated gate and relay releases, 2026-11-23

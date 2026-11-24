@@ -1168,6 +1168,15 @@ coordinates with RDKit-bundled FreeSASA using Lee–Richards/ProtOr radii and a
 1.4 Å probe, normalized by the theoretical allowed-region maxima of
 [Tien et al. (2013)](https://doi.org/10.1371/journal.pone.0080635).
 These conservative design-mask choices were not fitted to activity labels.
+In full precursor numbering (alpha 1–232, beta 233–328), the focused
+eligible positions were 50, 51, 52, 73, 76, 101, 111, 112, 114, 115,
+116, 151, 152, 153, 185, 187, 188, 271 and 273. The broader mask added
+28, 37, 38, 92, 96, 97, 160, 161, 162 and 164. Beta local positions
+39 and 41 therefore correspond to precursor 271 and 273. The additional
+positions were drawn from 6–12 and 12–16 Å substrate shells; the exposure
+and interface criteria above applied to additions, not retroactively to the
+original pocket mask. Full criteria and source records are in
+`docs/ligandmpnn_mask_site_rationale_20261123.md`.
 Catalytic/maturation protections and chain lengths were unchanged; explicit
 A–D and E–H sequence ties used equal weights. Two temperatures (0.1/0.2), two
 backbones, two masks and six samples per job yielded 48 sequences; four
@@ -1188,3 +1197,16 @@ charge was derived residue by residue, including the declared neutral beta
 N-termini, and counterions were recalculated for each sequence rather than
 assuming WT charge. No new TS geometry, activity-based threshold or change in
 protonation state was introduced in this comparison.
+
+For the follow-up, two independent 100 ns replicas were planned for each of
+mask_07 seed 04, mask_03 seed 03, V111C seed 02 and WT seed 04, with four
+ligands and matched neutral Thr233/ASP272/ASP274 conditions. All four assigned
+sites of each starting structure have negative projected phi under consistent
+scissile-amide mapping. This PI-authorized flipped-pose selection tests a possible
+Thr N-terminal relay to the leaving amide nitrogen, without assuming closer
+nitrogen proximity: current distances require rearrangement or possible water
+mediation for transfer. Neither phi sign nor a shorter distance establishes
+relay directionality or exclusive binding. Production
+has no orientation-holding restraint. Initial structural differences and the
+WT native-Thr gate failures remain explicit comparison limitations. Execution
+status is recorded in `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/queues/`.

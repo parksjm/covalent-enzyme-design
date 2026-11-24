@@ -64,6 +64,14 @@ the existing topologies for MD or the current coordinates as optimized.
   validation campaign: violet/tulip predict with Boltz-2; geranium relaxes with
   Amber. This supersedes the earlier two-host restriction for that campaign.
   Aster and other workstations still require renewed PI authorization.
+- Before any Amber GPU launch, read `docs/AMBER_WORKSTATION_RUNTIME.md`.
+  Azalea's Blackwell GPUs require the already validated CUDA-12.8 executable
+  `/data/jpc/code/pmemd26_blackwell_build_20261005/pmemd26_src/build_sysgcc_cuda128_v2/src/pmemd/src/pmemd.cuda_SPFP`.
+  The generic `/data/jpc/code/pmemd26/bin/pmemd.cuda` works on Violet's Ada GPUs
+  but fails on Azalea with "no kernel image is available". Existence, `ldd`
+  success and an idle GPU do not establish CUDA architecture compatibility.
+  Recover the exact successful host-specific command, hash and environment;
+  never rediscover this by launching another generic-binary campaign.
 - Geranium and tulip are shared: use both simultaneously
   only for work expected to finish within a few hours. Before each launch,
   verify that nobody else is

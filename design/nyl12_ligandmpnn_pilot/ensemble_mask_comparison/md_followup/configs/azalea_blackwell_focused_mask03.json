@@ -1,0 +1,22 @@
+{
+  "dataset_manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/systems/focused_mask03/datasets.json",
+  "dataset": "focused_mask03",
+  "amber_home": "/data/jpc/code/ambertools26/venv",
+  "cuda_engine": "/data/jpc/code/pmemd26_blackwell_build_20261005/pmemd26_src/build_sysgcc_cuda128_v2/src/pmemd/src/pmemd.cuda_SPFP",
+  "output": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/md/focused_mask03",
+  "session_prefix": "nyl12_design_focused_mask03_20261123_blackwell",
+  "replicas": [
+    {
+      "name": "replica_01",
+      "seed": 31400001,
+      "gpu": "0",
+      "host": "azalea"
+    },
+    {
+      "name": "replica_02",
+      "seed": 31500001,
+      "gpu": "0",
+      "host": "violet"
+    }
+  ]
+}

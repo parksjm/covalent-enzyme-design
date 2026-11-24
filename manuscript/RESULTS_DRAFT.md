@@ -55,6 +55,23 @@ these structural gates as activity classifiers. No activity-fitted cutoffs
 were introduced. Source tables, acceptance records and scripts are under
 `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/`.
 
+In canonical full-precursor numbering, mask_03 carries S50A, V51A, S153A,
+A187T, V188I and L271F (beta local L39F); mask_07 carries S50A, V51A,
+A92K, N97D, S153T, A187T and V188T. The shared exact substitutions are
+S50A, V51A and A187T. All declared hard-protected sites remain unchanged;
+candidate, generation and relaxed-chain sequence checks are documented in
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/sequence_comparison.json`.
+For the flipped-only follow-up WT seed 04 has four negative-phi Tier A sites,
+but none passes the native-Thr gate. This does not invalidate WT as a control;
+it limits direct attribution of differences to sequence. Positive-phi results
+above remain separate observations, not evidence of a forbidden binding mode.
+Across five WT relaxed endpoints, Nα–leaving-N distances averaged 4.65 Å
+(4.24–5.47 Å; 16 negative-phi sites) versus 3.61 Å (3.51–3.67 Å; four
+positive-phi sites). Sites are nested within models. These data do not support
+an automatic proximity advantage for the flipped pose; direct transfer would
+require rearrangement, with water mediation another hypothesis. The shorter
+positive-phi distances alone do not establish a relay mechanism either.
+
 ## Exploratory E–S sequence-design pilot (2026-11-22)
 
 WT and eight designed sequences were modeled with four bound PA6 L4 molecules

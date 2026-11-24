@@ -1,0 +1,53 @@
+{
+  "alignment": {
+    "method": "Kabsch; positive onto flipped; no Thr233 or ligand atoms in fit",
+    "residues_canonical": [
+      113,
+      186,
+      272,
+      274
+    ],
+    "atoms_per_residue": [
+      "N",
+      "CA",
+      "C",
+      "O"
+    ],
+    "matched_atoms": 16,
+    "rmsd_angstrom": 0.2339538258013543
+  },
+  "source_csv": "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/occupied_sites.csv",
+  "source_csv_sha256": "457c2d8adf18465980dc3d9ec6334c3403fc77c10c561560652289884b5e1d74",
+  "examples": [
+    {
+      "label": "flipped",
+      "seed": "2026112204",
+      "site": "AE",
+      "source_pdb": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/WT/seed_04/relaxation/relaxed.pdb",
+      "source_pdb_sha256": "712450b25b0c623d49a380e74b286ec2a873ba6eb3f4220eb3f202c308ff5108",
+      "extracted_pdb_sha256": "163ac2c6762eac8b0c7382adf631af33ffed2e562a26d7879bb52322aa54be83",
+      "nalpha_atom": "E:1:N",
+      "leaving_atom": "I:1:N59",
+      "nalpha_to_leaving_n_angstrom": 4.587749884202492,
+      "projected_phi_degrees": -105.48104365237941,
+      "tier": "B",
+      "native_pass": "False",
+      "display_coordinates": "source"
+    },
+    {
+      "label": "positive",
+      "seed": "2026112202",
+      "site": "BF",
+      "source_pdb": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/models/WT/seed_02/relaxation/relaxed.pdb",
+      "source_pdb_sha256": "91dc924fd3b10b909bd085b8a3616a544fbbbb3e5898be74c3c4ed9333853cac",
+      "extracted_pdb_sha256": "aadd3fefd528ebeeb02f4b6308c462a1a9629de239fb16bf3d3bc9d0e0e472a0",
+      "nalpha_atom": "F:1:N",
+      "leaving_atom": "J:1:N59",
+      "nalpha_to_leaving_n_angstrom": 3.618822598580927,
+      "projected_phi_degrees": 96.43525720648603,
+      "tier": "B",
+      "native_pass": "False",
+      "display_coordinates": "rigid Kabsch transform, PDB coordinates rounded to 0.001 A"
+    }
+  ]
+}

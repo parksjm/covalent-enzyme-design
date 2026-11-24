@@ -1,0 +1,23 @@
+{
+  "host": "violet",
+  "gpu": "1",
+  "production_ns_per_replica": 100,
+  "tasks": [
+    {
+      "config": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/broader_mask07.json",
+      "replica": "replica_01"
+    },
+    {
+      "config": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/V111C.json",
+      "replica": "replica_02"
+    }
+  ],
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/source_snapshot/scripts/run_prepared_md_sequence.py": "46c8e64b3b3ce05c612a807639f7ddc121d4d6b80bbd762ec32cd3c626b6ebf6",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/selection.json": "b92ea932dde3a47ef3c36823d08bd6e14445306e3a1a7941a02ad4b7e90c87e7",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/WT.json": "5e2c67c94c4ba6094fc25e6e889617ab665926e69149a35dc28aceae281b9f2e",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/broader_mask07.json": "25b69438e9d9f0bc8fc22d068b1c4f27b90efffa804b8a584718ef93cfc292b8",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/focused_mask03.json": "3b3f76d9e51a44d05cc386366f36d97e6f73fff7b55ec2b6e5a093d19fd07699",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/configs/V111C.json": "28c9de0c712e898d6756e646eed322d0b39875f13268c8b3f816ef24fe4cfeee"
+  }
+}
