@@ -160,6 +160,11 @@ Use a staged screen:
    not a documented joint multistate objective. Cross-backbone scoring and
    selection therefore require an explicit project wrapper; a good score on
    one closed scaffold is insufficient.
+   For the PMF-first comparison of one verified PES saddle against a small
+   finite-temperature transition-region ensemble, follow
+   `design_ranking_and_iteration_20261022.md`, section “PES saddles and
+   transition-region ensembles”. PMF-near-barrier snapshots are not automatically
+   committor-qualified transition states; a stable TI1 minimum is not required.
 3. Independently predict apo and noncovalent ES models with multiple seeds,
    matched WT controls and no imposed active-site contact restraints or
    designed-pocket template. Preserve the separate covalent-state arm.

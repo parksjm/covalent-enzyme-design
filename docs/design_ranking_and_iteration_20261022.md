@@ -34,17 +34,20 @@ arm. Single-sequence AF3 performance for these designs remains untested here.
 
 ## Gates followed by a diverse Pareto shortlist
 
-### Reference states required for the first design round — clarified 2026-10-25
+### Reference states and design readiness — updated 2026-11-25
 
-LigandMPNN can technically condition on a supplied ES or covalent geometry;
-it does not require a complete computed reaction cycle. For the intended
-TS-guided first round, prepare a consistent WT reference set: (1) noncovalent
-ES with its declared protonation; (2) TI1 with tetrahedral connectivity,
-oxyanion and the intended terminal-NH3+ state; and (3) the connecting TS(s).
-If a protonated-Asp/attack intermediate is a separate minimum, retain it and
-the separate saddles rather than force the route into a single TS1 label.
-Bias-stabilized endpoints are templates, not certified minima. Saddle acceptance
-requires the intended unstable mode and downhill connection to adjacent states.
+The current priority is a statistically stable, chemically interpretable WT
+US/MBAR profile. Barrier convergence, coordinate adequacy and method limitations
+must be assessed independently of whether the number looks favorable. This
+supersedes the older requirement to obtain a stable TI1 before TS-guided design.
+Prepare matched noncovalent E–S, each relevant acylation bottleneck, and
+acylenzyme references with explicit atom/proton inventories. Include a relay
+or tetrahedral intermediate only if supported; a discrete TI1 is optional.
+LigandMPNN can use exploratory structural templates before full mechanism
+certification, but such designs must retain their provisional provenance.
+Claims of a true PES TS require force convergence, one chemically relevant
+negative mode in the declared optimization space and downhill connectivity;
+an umbrella frame or a partial-QM Hessian alone does not establish that claim.
 
 Use the existing apo/WT assembly as a structural control. An acyl-enzyme and a
 product-bound/deacylation-water compatibility model should be included before
@@ -52,6 +55,85 @@ final candidate selection; full free-energy pathways for all later steps are
 not prerequisites for exploratory LigandMPNN sampling. Preserve symmetry,
 residue/atom maps, maturation residues and substrate register across states.
 Distinguish early template-based sampling from validated TS-guided design.
+
+### PES saddles and transition-region ensembles — proposed 2026-11-25
+
+Use a hybrid reference set rather than choose one instantaneous frame or one
+optimized geometry as universally best. This is a proposed comparison, not a
+completed design campaign or a claim that multiple snapshots guarantee activity.
+An unfinished PES-saddle certification must not indefinitely block a credible,
+qualified ensemble-based pilot: defer the unavailable single-saddle control and
+retain the narrower transition-region design claim until that control is ready.
+
+| Structural input | Purpose | Qualification and limit |
+|---|---|---|
+| Verified PES first-order saddle | Reference reactive geometry and a single-template control | Method/model-specific stationary point; not itself the finite-temperature transition-state ensemble |
+| Three to five actual representative frames per relevant PMF bottleneck | Preserve sampled protein/substrate/solvent arrangements for an ensemble design arm | Select from equilibrated, decorrelated, reweighted data; call these transition-region templates until dynamical qualification |
+| Matched E–S, acylenzyme and available apo/open/product-compatible models | Check selectivity, turnover compatibility and access | Strong E–S or intermediate stabilization alone is not evidence of a lower activation free energy |
+
+1. **Establish the WT profile first.** Apply the eight sampling gates in
+   `qmmm_umbrella_sampling_and_pmf_protocol_20261109.md`. Examine both chart
+   families, proton coordination/ownership and orthogonal relaxation. A PMF
+   maximum along a selected coordinate need not be the dynamical dividing
+   surface, and a stable profile can still describe an incorrect or unfavorable
+   modeled mechanism. Do not tune the protocol to obtain a target barrier.
+2. **Select a small ensemble.** Identify every kinetically relevant barrier,
+   not merely the highest single sampled energy. Cluster decorrelated frames
+   near each barrier using mapped reactive geometry, backbone/side-chain
+   arrangements and hydrogen-bond/solvent networks; retain three to five actual
+   medoids initially, fewer if no distinct clusters are supported. Record source
+   window/block/frame, sampling weight, chemical inventory and cluster coverage.
+   Raw umbrella frame counts are biased and correlated. Reweighted cluster
+   populations describe the selected coordinate band, not automatically reactive
+   flux or committor-defined TSE weights. Do not average atomic coordinates.
+3. **Qualify chemistry without quenching away diversity.** Use the existing
+   verified PES saddle, or a bounded targeted search from selected representatives,
+   as an anchor. Retain unminimized ensemble parents separately: TS optimization
+   can collapse distinct thermal conformations to the same stationary geometry.
+   Where transition-state-ensemble claims or coordinate adequacy matter, test
+   representative configurations with bias-free QM/MM shooting at the same
+   physical temperature/model. Draw independent thermal momenta and count
+   commitment to explicitly defined adjacent basins. A committor near one half
+   supports a dynamical TS; report binomial uncertainty and uncommitted shots.
+   A small shooting pilot is diagnostic, not proof of a precise committor.
+4. **Compare templates under a matched design budget.** Once the profile is
+   accepted, propose a bounded pilot of 24 raw sequences per chosen bottleneck:
+   12 from one verified saddle, when available, and 12 split among three representative ensemble
+   templates. If five templates are justified, fix an equal total allocation
+   before sampling. Use the same mutation mask, protected catalytic/maturation
+   identities, sampling temperature and matched WT controls. This is a proposal,
+   not authorization to launch a new campaign now. Treat all four sites as
+   nested observations and tie equivalent alpha and beta sequence positions
+   separately; instantaneous conformations need not be identical.
+5. **Evaluate whole sequences across states.** Pool and deduplicate candidates,
+   then score/evaluate every candidate on all retained templates and controls.
+   Compare balanced-state average performance and poor-state failures, retaining
+   a diverse Pareto shortlist. LigandMPNN `--pdb_path_multi` batches independent
+   inputs; it does not implement a joint multistate objective. Do not require
+   identical sampled sequences across templates or splice position-wise consensus
+   residues without evaluating the resulting whole sequence. Its coordinates/
+   element context and likelihoods do not supply QM charge redistribution or
+   an activation energy. Verify that reactive atoms and fixed catalytic context
+   survive parsing; keep proton/bond inventories in explicit metadata [R10].
+6. **Test catalytic improvement physically.** Independent prediction/relaxation
+   and matched replicated MD test structural robustness, not barrier lowering.
+   Reserve matched mutant-versus-WT QM/MM PMFs for a small shortlist, comparing
+   each sequence with its own reactant basin. The target is
+   `DeltaDeltaG‡ = DeltaG‡(mutant) - DeltaG‡(WT)`, not an absolute energy or
+   LigandMPNN-score difference between sequences. Check other relevant barriers,
+   deacylation compatibility and substrate/product access so one improved step
+   does not create a downstream trap. Native-Thr crystal similarity stays a
+   diagnostic, not a hard rejection gate.
+
+**Precedent versus proposal.** Lauko et al. used a QM-derived reactive motif
+and PLACER analysis across catalytic states [R27]; Choi et al. report PLACER
+ensembles for TS1/acyl/TS2/apo states [R29]. These learned structural ensembles
+are not Boltzmann samples or verified QM/MM transition-state ensembles.
+Zoi, Antoniou and Schwartz explicitly analyzed 15 uncorrelated, committor-defined
+TS structures per enzyme in a theoretical enzyme-engineering study [R53]. This
+is direct precedent for multiple TS configurations, but not a demonstration of
+our proposed LigandMPNN workflow or experimental nylon-hydrolysis improvement.
+Use primary links recorded in `../manuscript/REFERENCES.md` for these claims.
 
 Do not compress the following into an arbitrary weighted activity score.
 An attractive secondary score cannot rescue a failed chemistry gate. Missing
@@ -61,7 +143,7 @@ calculations remain incomplete; scientific failures remain in the denominator.
 |---|---|---|
 | Required | Sequence, maturation, assembly and molecular graph | Protected identities; separate alpha/beta ties; correct termini, charges, stereochemistry, covalent state and explicit water H; interpretable complete topology; no severe unresolved clashes |
 | Primary | Independent ES recovery and catalytic geometry | Without covalent enzyme–substrate bonds or imposed catalytic contacts, assess d1/d2/d3, a_BD and projected Herschlag phi after the declared preparation/relaxation; also report Thr chi1/psi, crystal-aligned Thr N/OG1 displacements, and CB–OG1–substrate-C as orientation diagnostics; retain full distributions and raw pass/attempt counts across seeds |
-| Primary as references become available | State compatibility and access | Check TI1 and acyl-enzyme/deacylation-water states as well as apo/ES; use each state's chemistry and geometry; screen substrate entry and product exit rather than optimize only a closed TI1 pocket |
+| Primary as references become available | State compatibility and access | Check supported intermediates and acyl-enzyme/deacylation-water states as well as apo/ES; use each state's chemistry and geometry; screen substrate entry and product exit rather than optimize only a closed intermediate pocket |
 | Supporting | Local AF3 confidence and consistency | Ligand/reacting-group confidence, catalytic-region confidence and ligand–protein/assembly PAE or interface metrics with explicit chain selections; report seed dispersion and pose recovery, not global pLDDT alone |
 | Supporting | Physical quality and structural deformation | Local clashes, packing, unsatisfied polar groups, preserved interfaces; matched WT/self-repeat effective-strain baseline and regional maps; useful deformation is not automatically a failure |
 | Optional, secondary | Noncovalent interface_delta | Include only if a matched WT/mutant pilot shows useful information beyond other metrics; use identical chemistry/scoring conventions and do not call it binding free energy |
@@ -78,9 +160,10 @@ Here, reproducible catalytic geometry primarily means independent **noncovalent
 ES** near-attack recovery, without a covalent bond or imposed catalytic contacts.
 TI1 is a separate conditional test: retaining its imposed covalent linkage is
 insufficient. Check tetrahedral stereochemistry/bond geometry, oxyanion contacts,
-protonation, explicit relay-water geometry and local physical quality with the
-validated TI1 force field, including sensitivity to preparation restraints.
-TS1 has a separate saddle/Hessian/endpoint-connectivity requirement; prediction
+protonation, any explicitly included relay water and local physical quality with
+QM/MM; a classical TI1 test additionally requires validated state-specific
+parameters. Classical TI1 parameters are not a prerequisite for QM/MM sampling.
+A true PES TS1 has a separate saddle/Hessian/endpoint-connectivity requirement; prediction
 agreement alone cannot establish a transition state. These are distinct gates,
 not interchangeable measurements of independent binding.
 

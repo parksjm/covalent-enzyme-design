@@ -1,3 +1,430 @@
+## PRIMARY OBJECTIVE — complete the acylation US/MBAR path, 2026-11-25
+
+The PI prioritizes a converged free-energy profile for the current modeled
+E–S → N-terminal relay/addition-like region → acylenzyme reaction. A discrete
+TI1 minimum and full PES TS certification are not prerequisites for sampling.
+Those diagnostics continue in parallel; the umbrella Hamiltonian, mapped
+chemistry and sampling validation are the critical path.
+
+**Redesign decision, 2026-11-25:** obtain a stable, converged and chemically
+credible WT PMF before the next mechanism-guided sequence campaign. A reasonable
+barrier is a result to evaluate, not a numerical target to force. Afterward,
+compare one verified PES saddle with three to five actual representative
+finite-temperature conformations near each relevant PMF bottleneck. Keep the
+saddle as a chemical anchor and single-template control; retain ensemble
+parents without minimizing away their diversity. Near a PMF maximum is not
+automatically a dynamical TS: use bounded bias-free shooting/committor checks
+where that claim matters. A stable TI1 is optional. The proposed matched-budget
+pilot, explicit alpha/beta sequence ties, cross-state evaluation and primary
+precedents are specified in `design_ranking_and_iteration_20261022.md`, section
+“PES saddles and transition-region ensembles”. No new design campaign is launched
+by this decision; US/MBAR remains the compute priority.
+If saddle certification remains unresolved after the PMF/ensemble is qualified,
+defer the single-saddle control rather than block a provisional ensemble pilot.
+
+**Live launch checkpoint, November 25, 12:38 EST:** 24 one-thread Sander
+workers were verified running on Azalea, with zero worker failures at that
+observation. The full schedule has **57 states: 31 activation + 26 delivery**;
+these include bridges needed to keep each biased-axis increment below 0.15 Å.
+Inputs are frozen in `12_nterminal_relay/umbrella_sampling/full_path_300K/`.
+The authoritative process snapshot is
+`full_path_300K/relay_us_azalea_20261125/runtime_summary.json`.
+All windows receive 1 ps heating, 5 ps equilibration, and their first 5 ps
+production before any production extension. Six retained production blocks
+give the initial 30 ps/window target; duration alone does not establish convergence.
+Both-chart native compatibility and end-to-end MD checks passed. The real
+native-data → independent DUMPAVE-CV parity → compact-copy → strict-loader
+chain also passed for both charts using the actual analysis request. Native
+restraint CVs and trajectory times are aligned using the stage's restart time;
+rounding bounds are explicit. The terminal frame lacks a native DUMPAVE match
+and is retained with parity marked unevaluated, rather than censored or fabricated.
+All failed derived attempts are preserved. A source-frozen 120-hour Azalea
+guardian revalidates even previously completed derived records, repairs only
+derived outputs, and resumes clean analysis-held workers without repeating
+accepted MD. A 120-hour compact sync runs every 60 seconds; raw trajectories
+remain on the execution host. Extensions wait if diagnostic acceptance fails.
+The 72-hour analysis watcher reports missing coverage and attempts MBAR only
+after every state has an accepted first production block. No new PMF exists yet.
+
+1. Finish the generalized native CV/analysis adapter and runnable inputs.
+   Activation windows bias `(q_acyl, q_act)`; delivery windows bias
+   `(q_acyl, q_delivery)`. All three features must be evaluated for every
+   sampled frame and all cross-window biases. Both chart families share one
+   physical Hamiltonian and overlapping relay-state sampling.
+2. Cover the **whole accepted path**, including E–S and acylenzyme, before
+   extending already sampled windows. Place centers no more than 0.15 Å apart
+   in either chart axis, adding bridge windows at the coarse proton-transfer
+   gap. The earlier 18-window local-grid preparation is a protocol fixture,
+   not a reason to delay full-path coverage.
+3. Run short native compatibility/bias-parity checks, one per chart, before
+   dispatch. Prefer idle Azalea CPU capacity; add Violet workers only within
+   measured headroom, preserving current jobs. Use native host-specific Amber
+   binaries/environments, one thread per window, source/input hashes and tmux.
+4. First accumulate an accepted 5 ps production block in every window.
+   Run overlap/MBAR diagnostics once coverage exists; clearly mark gaps or
+   disconnected components. Then extend in retained 5 ps blocks toward at
+   least 30 ps/window and further as required by the eight existing convergence
+   gates. No nominal duration alone establishes convergence.
+5. Evaluate proton inventory/coordination, heavy-atom chemistry and orthogonal
+   environment distributions throughout. Use a common statistical normalization
+   across both chart families; independently zeroed PMFs must not be added.
+   A final barrier also needs a defensible bound-state/conformational reference,
+   method sensitivity and appropriate uncertainty. A desired numerical barrier
+   is not an acceptance criterion.
+
+This campaign stays at **300 K** with the existing 104,922-atom single-substrate
+system, 98 real QM atoms/eight links/charge −2, original 4,165-atom 12 Å mobile
+region/frozen exterior and zero electronic temperature. The separately prepared
+348.15 K full-system WT branch is not substituted silently. The present goal
+is acylation in the modeled bound complex; deacylation/product release remain
+separate mechanistic work.
+
+Current preparation/execution records belong under
+`qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/`.
+The source-bound combined movie is `12_nterminal_relay/vmd_progress/view_path.vmd`.
+Detailed convergence and interpretation requirements remain in
+`docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md`.
+
+## Supporting checkpoint — retained endpoints and TS work, 2026-11-25
+
+**Combined inspection movie:** `qmmm/pa6_flipped_model30/12_nterminal_relay/`
+`vmd_progress/view_path.vmd` contains 39 frames / 19,967 solute atoms, E–S→shared
+relay/TI1-like seed once→acylenzyme. All frame coordinates and periodic cells and
+15 bundle checksums passed, including an independent copied bundle. The pull
+script includes the root bundle; original 39-frame plot numbering is unchanged.
+Reverse windows 012→013 contains a coarsely sampled HG transfer/C–OG change, with smooth
+local torsions/RMSD and no branch-switch evidence. A bounded bidirectional
+4-window refinement per direction is being prepared under the same branch.
+
+**Current follow-up:** plotted images 11–21 are being released without reaction
+bias under the same 12 Å mobile-region protocol. Image20 is the identical,
+already force-converged window033 seed and is reused; ten other images are
+running concurrently in one-CPU tmux sessions, up to 10,000 cycles each, with
+independent force/SCC/exterior checks. Inputs and plot-index mappings are in
+`12_nterminal_relay/03_plateau_releases/prepared.json`. Compare chemical
+retention and distinct endpoints before further curvature calculations; these
+neighboring path starts do not estimate equilibrium basin populations.
+
+The forward candidate's conditional real-QM Hessian has one negative mode
+(−0.06495 Eh/(Å² amu)); its largest displacement is transferring HG1. Both
+finite-difference directional curvatures are negative (−0.10515/−0.10541
+Eh/Å²). The inherited relative precision gate of 1e−4 failed (observed 0.00238),
+and that failed receipt is preserved. A separately documented negative-sign
+gate permits exploratory downhill connectivity only when both estimates are
+negative and differ by<1% of their smaller magnitude, followed by actual
+energy and outward-slope decrease. This does not certify full-active index one
+or relax the original precision qualification for that purpose. Both-sign
+all-mobile downhill jobs passed actual energy and outward-slope checks and are
+minimizing; a bounded 80-HVP full-active Davidson diagnostic is also running.
+Both guarded reverse dimer repairs stopped safely (attack: energy-rise limit;
+PT: SCC guard). Two original-seed partial-QM screens are authorized as
+nonstationary search-direction diagnostics before further reverse attempts.
+Final stationary-force/TS verification gates are unchanged.
+
+**SCC guard correction:** an intermediate “not converged after70cycles” message
+may be followed by valid convergence (the retained window033 release includes
+70→96-cycle recoveries). The first guard incorrectly rejected these recoverable
+warnings. Old aborted attempts are preserved. A new frozen policy allows
+bounded recovery through500actualSCCiterations, still rejects fatal or
+unresolved returned electronic evaluations, and retains the same zero electronic
+temperature, SCF/density tolerances, energy-rise limit and finalforce criterion.
+The minus downhill retry starts from the original independently validated
+0.05 Å displacement, not an interrupted electronic trial. This is warning-
+classification repair, not a change in the Hamiltonian or physical convergence.
+
+**TI1 terminology:** window033 is a retained, force-converged, partially
+addition-like candidate (C–OG1=1.740 Å), not a verified stable TI1 minimum.
+Its source was a biased QM/MM MD frame, followed by bias-free optimization;
+the matched window032 seed lost addition character under the same protocol.
+Conformational/environmental differences are implicated, but no individual
+stabilizing interaction or force-field change has been shown causal. See
+`docs/neb_us_nterminal_relay_release_20261123.md`, section “Why window033 retained
+addition character”, and the updated Results/Methods.
+
+Both exploratory branches reached geometrically appropriate endpoints and
+retained them after removing the reaction bias, within the unchanged 12 Å
+movable model/frozen exterior. Independent maximum gradients are 4.79e−6
+Eh/bohr (E–S) and 9.88e−6 Eh/bohr (acylenzyme). E–S C–OG1/C–Nleave are
+2.963/1.380 Å; acylenzyme values are 1.327/3.019 Å. HG1 is on OG1 in E–S
+and on the leaving nitrogen in acylenzyme; Nalpha retains two hydrogens in
+both endpoints. Atom/proton inventory, topology and exterior are shared.
+
+The combined driven PES maximum is 16.31 kcal/mol above the regenerated E–S
+reference; the forward dimer candidate gives 16.312 kcal/mol from independent
+same-Hamiltonian energies. Acylation endpoint ΔE is −4.15 kcal/mol. These are
+**potential energies**, not a PMF or an established biochemical barrier. The
+forward candidate meets its dimer force tolerance (maximum 3.40e−5 Eh/bohr)
+but still needs curvature/index and downhill-connectivity verification. The
+reverse TS attempt was stopped after thousands of SCC failures/resets, large
+energy/curvature excursions and return to E–S-like geometry; its last checkpoint
+and diagnostics are retained. This does not invalidate the accepted E–S endpoint. Window033 minimum status remains
+unresolved. No new full-shell Hessian or US campaign has been launched.
+
+Updated common-reference plot/table/source hashes:
+`qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.*`.
+Current branch movies remain `BRANCH/vmd_progress/view_path.vmd`.
+
+Hydration completed all accepted blocks through 26 ps (521 saved frames),
+with no annotated near-attack water; closest remains 5.422 Å at 9.7 ps.
+The conditional extension stopped before new native sampling because its
+analysis manifest hashed a lifecycle status file that changed during final
+postprocessing. Repair is limited to stable status/manifest handling; native
+data are accepted and retained. Do not claim that the 51 ps continuation ran.
+
+Four WT/mask_07 local inspection structures and corrected PML scripts are
+available under `md_followup/analysis/structural_followup_20261124/`. Coordinate
+and atom-map readback passed; PyMOL was unavailable for a rendered GUI check.
+Further extraction of all eight existing CSVs found no sampled Tier A/B
+observation with Nalpha–Nleave ≤3.5 Å; conditional medians are 5.99–6.34 Å.
+This is a distance diagnostic, not proof against an induced-fit or water-
+assisted relay. It strengthens the need to establish the reactant-ensemble/
+preorganization reference before treating a low conditional PES/PMF barrier as
+an overall enzyme barrier. Native-Thr similarity remains diagnostic only.
+
+## Previous checkpoint — approved relay exploration, 2026-11-24
+
+This dated block supersedes historical dispatch gates below. The PI explicitly
+approved exploring window033 without full-minimum verification and preparing a
+348.15 K WT branch. Window033 is force-converged (maximum gradient
+7.94e-6 Eh/bohr), with tetrahedral-like geometry, but is **not a verified local
+minimum or chemically accepted TI1**. The reused QM-block Hessian audit did not
+resolve all signs under its uncertainty criteria; no more full Hessian work is
+queued. Original failed minimum-verification receipts remain intact.
+
+1. **Primary: N-terminal-relay acylation.** Two reviewed exploratory branches
+   under `qmmm/pa6_flipped_model30/12_nterminal_relay/` connect window033 toward
+   E–S (`01_activation_reverse`) and toward acylenzyme through N-terminal proton
+   delivery (`02_acylation_forward`). Explicit exploratory dispatch records
+   supersede the old minimum gate only for these branches. The seed has
+   Nalpha–HG1=1.050 Å, HG1–Nleave=1.975 Å and a 179.4° donor–H–acceptor angle.
+   Use the identical DFTB3 Hamiltonian, 98 QM atoms/charge −2, 12 Å movable
+   region and fixed exterior. Each asynchronous driving window is followed by
+   chemical/force checks and updated movie/energy/distance plots. Candidate
+   endpoints receive unbiased optimization; eligible interior maxima may seed
+   dimer searches. Neither branch completion nor force convergence certifies
+   a TS. Actual running/failed status is in each branch's retained job records.
+   Both branches were dispatched at 22:29 EST on November 24 in tmux
+   `nyl12_w033_exploratory_reverse_20261124` and
+   `nyl12_w033_exploratory_forward_20261124`, one nice CPU each. Inspect
+   each branch's `exploratory_job/`, `branch_status.json`, `plots/` and
+   `vmd_progress/view_path.vmd`; derived products update after completed windows.
+2. **Secondary: bounded deacylation hydration.** The existing 300 K run continues
+   toward 26 ps. A detached conditional queue waits for all accepted blocks and
+   a complete water analysis, then adds five 5 ps blocks, to **51 ps total**, only
+   if no near-attack water is found. Any annotated candidate holds the queue for
+   review; failures stop explicitly. No classical acylenzyme parameters or water
+   insertion are introduced. Current accepted analysis: 221 frames through
+   11 ps, closest Ow–acyl-C 5.422 Å at 9.7 ps, angle 47.59°; no combined
+   ≤3.5 Å/95–125° annotation. The current native segment extends beyond this
+   accepted analysis. Movie: `13_deacylation_pilot/hydration_reconnaissance/`
+   `vmd_progress/view_hydration.vmd`. Native MD acceptance and repaired export
+   receipts remain separate; original failed refresh attempts are retained.
+3. **Matched MD finished.** All eight 100 ns WT/mask_03/mask_07/V111C runs passed
+   completion and final-temperature gates; both independent replicas are
+   analyzed at four sites. Mask_07 Tier A is higher than WT in both replicas,
+   but its A-or-B advantage is not reproduced in replica 2. Known-active V111C
+   scores lower than WT: these are geometry-retention diagnostics, not activity
+   predictions. Native-Thr similarity remains diagnostic only. Final table and
+   plot: `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/`
+   `analysis/matched_replica_comparison.{json,csv,md,png}`.
+4. **Temperature: prepared, not launched.** Two independent full-system WT E–S
+   endpoints are staged under the same `md_followup/temperature_348K/` directory:
+   200 ps 300→348.15 K NVT, 1 ns NPT and 2 ns unrestrained NPT, then review.
+   Forty-two staged artifacts passed hash checks. Keep ongoing comparisons and
+   hydration at 300 K. The four-substrate design-MD topology is distinct from
+   the single-substrate legacy QM/MM system; map and equilibrate a selected
+   mechanistic state explicitly before any assay-temperature PMF. Do not heat
+   only a local frozen-shell model and claim full-system thermal equilibration.
+
+**Current PI follow-up (November 24):** further WT/mask_07 structural
+evaluation and an automatic accepted-window connectivity audit are being
+prepared. Both relay branches accepted window001 and continued into window002.
+The required endpoint is an auditable E–S → relay → acylenzyme connection; the
+next PMF coordinates are selected from that chemistry, not from a desired
+barrier. Detailed preregistered gates and candidate local coordinates are in
+`docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md`. No new umbrella
+campaign is dispatched before the chemistry/mapping/coordinate gates pass.
+
+**Barrier strategy and stop rules.** Seek a chemically credible pathway, not an
+artificially low number or an obligatory TI1 minimum. First inspect forward and
+reverse relay paths, proton inventory and distance continuity. Use successful
+paths to choose proton-transfer and heavy-atom progress coordinates for new
+QM/MM umbrella sampling, with connected overlap, effective sampling, block and
+independent-start checks. Track all exchangeable N/O hydrogens. Missing slow
+proton/environment coordinates can distort a projected PMF (Rosta et al., 2009).
+Apply sparse DFT/MM checks to new E–S/TS-region/product configurations; a
+correction requires energy-distribution overlap. Account for protonation-state
+population costs before comparing different microstates. A verified TS still
+requires first-order curvature and downhill connectivity.
+
+At 348.15 K, hypothetical ΔG‡=25 kcal/mol gives k≈1.47e−3 s⁻¹ (κ=1), whereas
+28 kcal/mol gives 1.92e−5 s⁻¹. These are elementary bound-step illustrations,
+not rate estimates from crude-lysate conversion. See
+`analysis/nyl12_mechanism_priority_20261124/eyring_temperature_reference.csv`.
+Neither raising temperature nor more sampling guarantees a lower ΔG‡. The old
+35.81 kcal/mol **potential-energy** path already received umbrella sampling;
+its latest apparent PMF barrier was about 47.05 kcal/mol. Do not repeat that
+high-barrier direct route as the main campaign. Legacy ASH274 NEB may continue
+as authorized, but remains a secondary unconverged diagnostic.
+
+**Remaining controls.** If no attacking water is found by 51 ps, inspect
+retained-product occlusion/solvent access before further extension; any product-
+separation control must preserve atom balance. Keep the matched MD parameter
+release fixed. The newer polyamide force-field release remains a research
+candidate with documented accuracy limitations; consider one bounded WT
+sensitivity test before strong quantitative design/PMF claims, rather than
+silently replacing the force field. Crude MS assays do not determine kcat or a
+unique barrier; L4→L2 remains a modeling hypothesis. Mechanism-agent stays
+stopped, with tested email alerts ready for later authorized runs.
+
+## Historical checkpoints — retained evidence, not current dispatch instructions
+
+## LIVE STATUS — completed hydration pilot, 2026-11-24
+
+The retained-product deacylation hydration reconnaissance completed natively:
+1 ps heating plus 5 ps 300 K NVT DFTB3/MM, 0.5 fs steps, original 12 Å movable
+region and frozen exterior. Final temperature 300.40 K; native
+process, SCC history, finite-state and frozen-boundary checks passed. Acyl
+C–OG1 = 1.310 Å and C–leaving-N = 3.250 Å at the endpoint.
+Nearest existing water O is still 5.786 Å from acyl C (initial 6.246 Å),
+so the final structure has no close attacking water. This short MM-water
+hydration check is not a deacylation pathway or evidence of hydration convergence.
+Retained report: `qmmm/pa6_flipped_model30/13_deacylation_pilot/`
+`hydration_reconnaissance/hydration_endpoint_status_20261124.json`.
+
+Next: inspect the hydration trajectory for transient accessible waters before
+choosing a QM-water model; reoptimize any expanded-QM starting state before
+driving hydrolysis. Do not extend blindly or infer that water cannot enter
+from this 6 ps pilot. The full-window033 minimum remains unqualified after
+the cutoff-column repair failed; neither conditional N-terminal relay path
+is running. Diagnose chemical-subspace curvature separately from unresolved
+full-shell numerical qualification rather than repeat the entire Hessian.
+No new pathway is dispatched on an unresolved gate. Four second-replica GPU
+MD runs and their postcompletion analysis watchers continue. Legacy ASH274
+NEB is still nonconverged (current provisional profile maximum ~46.7 kcal/mol).
+Two Gaussian terminal-pair diagnostics on Violet belong to polyamide-amber-ff,
+not the Nyl12 deacylation pilot.
+
+Mechanism-agent readiness: the PI confirmed email receipt on November 24.
+Completion/error/PI-decision alerts are enabled by default for future run CLI
+commands (152 tests passed). Its idle project Ollama server on Azalea and
+SSH tunnel on Violet are stopped; installed models, environments and ongoing
+scientific jobs are preserved. No review/controller is left running.
+
+## CURRENT — native-Thr diagnostic-only policy and replica-2 analysis, 2026-11-24
+
+The PI approved native-Thr reference similarity as a **diagnostic, not an
+eligibility filter or ranking veto**. Original displacements, torsions,
+thresholds, native_pass and historical joint_pass flags remain available.
+Future eligibility uses original catalytic Tier A/B geometry with unchanged
+chemical integrity, protonation, atom mapping and relevant process/force
+checks. This does not certify activity or lower a mechanistic/TS criterion.
+Native-reference failures alone no longer block MM→QM/MM admission or
+candidate extraction; relay candidates retain their chemical ranking.
+
+Replica 1 findings: mean Tier A/B occupancy WT/mask_03/mask_07 is
+45.7/23.3/69.5%. The old joint native/Tier A/B fractions 0.05/0.30/0.25%
+are descriptive only. Within Tier A/B frames, OG1/Nalpha/psi fail together;
+chi1 is usually retained. Static minimized WT OG1 shifts 0.757–0.880 Å
+barely exceed 0.75 Å, whereas MD median shifts are larger. Alternative
+scaffold fits and unchanged circular torsion definitions were audited.
+The native crystal reference is not a validated activity classifier.
+
+The same four-site, fixed-scissile-amide/PBC analysis is queued for all
+four second replicas at their execution hosts: Violet focused_mask03 and
+V111C; Azalea WT and broader_mask07. Detached sessions verified running:
+`nyl12_replica02_analysis_violet_20261124` and
+`nyl12_replica02_analysis_azalea_20261124`. All four cases are pending MD
+completion at dispatch. Analyze only completed, validated
+100 ns production data, at 100 ps stride with all-frame denominators and
+first/second-half summaries. Native similarity is reported separately.
+One CPU analysis runs at a time per host; MD/QM jobs remain untouched.
+Outputs: existing `md_followup/analysis/replica_02/DATASET/`; persistent
+queue/process/scientific receipts under `replica_02/queues/HOST/` establish
+actual dispatch status. No second-replica outcome is claimed before analysis.
+Compare independent velocity replicas explicitly; four sites and successive
+frames are nested/correlated, not independent replicate experiments.
+
+## CURRENT — window033 cutoff diagnosis and localized repair, 2026-11-24
+
+**Matched MD preliminary analysis is now available:** replica 1 WT/mask03/
+mask07 were sampled every 100 ps at all four fixed sites (1,000 frames/site).
+Mean Tier A/B occupancies are 45.7/23.3/69.5%; joint native-Thr+TierA/B fractions
+are 0.05/0.30/0.25%. Broader-mask geometry retention is encouraging, but this
+is one trajectory per sequence with starting-pose confounding and almost no
+joint gate passes, not evidence of improved catalysis. The four-site adapter
+is implemented/tested and these three analyses completed. Remaining
+replica-2 analyses are now queued as described above. Compact source-bound table:
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/preliminary_comparison.json`.
+
+**Latest repair outcome (November 24):** the localized repair finished but
+54 of 383 columns failed the unchanged adjacent-step stability test. It stopped
+before deriving a new full matrix; no minimum was qualified and neither relay
+path has started. This is a numerical qualification failure, not evidence of a
+negative chemical mode. Original failed receipts and all new columns are retained
+in `07_cutoff_repair/`. No further Hessian evaluations are automatically queued.
+The hydration pilot and matched MD continue independently. Earlier launch
+statements below describe their recorded state at submission.
+
+The full 12495-DOF Hessian finished natively (exit 0). All symmetrized
+matrix eigenvalues are positive, lowest 2.89147e-5 Eh/(Å² amu), but the
+unchanged uncertainty criterion leaves 2339 signs unresolved. Window033 is
+therefore **not formally minimum-verified**. The conditional relay watcher
+stopped at the failed scientific gate; neither new relay branch started.
+Do not interpret the initial-only movies as completed reaction paths.
+
+A bounded native follow-up supports a concrete cause: finite displacements
+crossed the 10 Å nonbonded cutoff. Implicated MM pairs lie at 9.999925 and
+10.000087 Å. TYR115 HH xy nonreciprocity fell from .0040027 to 8.67e-11,
+and WAT10834 H1 yz from .0036062 to 9.70e-10, with smaller displacements.
+All six tested columns pass the unchanged finer-step relative stability gate.
+This supports a numerical cutoff artifact; it is not a minimum classification.
+See window033 `minimum_verification/numerical_diagnosis_20261124/`.
+
+One localized repair is authorized: up to 383 implicated columns (3.1% of the
+full matrix), at h=3.125e-5 and 1.5625e-5 Å, with at most 1,532 native gradient
+calls and eight nice CPU workers. Original failed matrices/receipts remain.
+Every replacement must pass the original 1e-4 relative step test, followed by
+complete-matrix inertia with the same sign/uncertainty/residual criteria.
+No threshold, protonation, Hamiltonian, movable shell or frozen exterior is
+changed. No relay dispatch is authorized on an unresolved result.
+
+The localized repair is now actually running in tmux
+`nyl12_w033_cutoff_repair_20261124`, separate `07_cutoff_repair/`. Its nine
+focused tests passed (93% script coverage); original failure receipts and relay
+stop remain unchanged. Hydration is running in tmux
+`nyl12_deacylation_hydration_20261124`, under `13_deacylation_pilot/`
+`hydration_reconnaissance/`; four focused tests passed (90% combined coverage).
+Native SCC/integration steps advance. A two-gradient same-coordinate diagnostic
+passed: all 4,165 active analytic gradients are identical at retained precision
+with/without native belly pruning. QM energies also match; the MD total-energy
+offset is not a chemical reaction energy. Neither calculation is yet scientifically
+complete; inspect its receipts rather than inferring success from submission.
+
+Matched MD snapshot on November 24 morning: broader_mask07 replica 01,
+focused_mask03 replica 01 and V111C replica 01 completed their 100 ns production
+protocols. WT replica 01 was near 99 ns on Violet; V111C replica 02 had begun
+production there. Azalea runs WT replica 02 (~26.5 ns at 08:40 ET) and broader
+mask07 replica 02 (~29.8 ns). Violet's **retry_01** GPU0 queue is live and will
+start focused_mask03 replica 02 after WT; its retained original failure is
+superseded and must not be mistaken for a blocked active queue. Progress values
+are snapshots, not completion receipts. No new geometry/activity conclusion
+is drawn before the four-site streaming analysis is implemented and run.
+
+Deacylation: the retained-product force-accepted acylenzyme from the old direct
+route has no water O within 6 Å of its acyl carbon. Nearest WAT23286 O is 6.246 Å
+from C and 8.571 Å from neutral Nalpha, so it is not reaction-ready. The approved
+bounded follow-up is1 ps heating plus5 ps NVT hydration reconnaissance using
+existing solvent, original 98-real-atom QM/charge −2, and the 4,165-atom movable
+12 Å region. No water is inserted, no reaction/position bias is applied, and
+the complete amine product is retained. Water is MM during this hydration-only
+stage; a candidate must be promoted to QM and reoptimized before hydrolysis or
+water-mediated proton transfer can be tested. This old endpoint has its own
+frozen exterior: do not splice its energies to window033. Audit and preparation
+are under `qmmm/pa6_flipped_model30/13_deacylation_pilot/`. Check native job
+receipts before calling the pilot running. The existing GPU MD and legacy
+ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
+
 ## CURRENT — retained window033 candidate; full Hessian running, 2026-11-23
 
 ### Approved one-week finish line — 2026-11-23
@@ -42,6 +469,69 @@ interior physical-PES maxima trigger native dimer TS searches. Movies, energies
 and proton/bond-distance plots refresh after each window. Failure or unresolved
 minimum curvature prevents dispatch. First-order TS verification remains a
 subsequent scientific gate. See the campaign README and live watcher receipt.
+
+### Proposed bounded deacylation pilot — not launched
+
+The PI asked whether difficulty retaining TI1 reflects poor adaptation to PA6
+and whether to include acylenzyme hydrolysis. Poor differential stabilization
+of a reactive state is plausible, but loss of a TI1 well does not establish it:
+substrate pose, protonation, hydration, Hamiltonian and environment also matter,
+and hydrolysis need not have a discrete TI1. The force-converged window033
+candidate is currently awaiting curvature classification. Low polymer conversion
+does not by itself identify an elementary rate-limiting step.
+
+Include deacylation in the complete-cycle hypothesis and eventual design
+assessment. Andjelkovic et al. (2023; manuscript R41) found deacylation rate
+limiting for human asparaginase III, with the Thr N-terminal amine activating
+water and subsequently returning a proton to the catalytic oxygen. This is
+a testable Ntn-hydrolase analogy, not an established Nyl12 mechanism. Lauko
+et al. (2025; DOI 10.1126/science.adu2454) also show why an acylation-competent
+design can require further improvement of deacylation.
+
+Keep the accepted one-week acylation path/TS work as the priority. The bounded
+addition proposed here is hydration/acid-base geometry screening and one fast
+QM/MM deacylation feasibility path from an accepted acylenzyme, preferably the
+endpoint generated under the current window033 boundary conditions. Do not
+start a second large PMF campaign or imply that a short hydration simulation
+has converged. Existing accepted acylenzyme coordinates can support a preliminary
+geometry audit, but energies from different frozen exteriors must not be spliced.
+
+1. Retain the full amine-ended PA6 fragment initially; establish the complete
+   proton inventory, endpoint chemistry and product contacts. A retained
+   product can affect water access, electrostatics and proton transfer.
+2. Screen water access and donor/acceptor geometry. A participating water must
+   enter the QM region; the current 98-real-atom QM region contains no water.
+   Use the unchanged 12 Å movable region. Short QM/MM MD avoids inventing
+   classical acylenzyme parameters; it requires explicit preparation and does
+   not automatically provide adequate equilibration. The first base hypothesis
+   is neutral Thr233 Nalpha; Asp272/Asp274 or additional-water alternatives
+   require supporting geometry/protonation evidence.
+3. Test water activation/attack followed by proton return to OG1 and ester
+   cleavage, allowing asynchronous changes. Retain any supported TI2 minimum
+   without requiring one. Qualify endpoints and saddle connectivity using the
+   same scientific gates as acylation before a mechanistic claim.
+4. A product-released acylenzyme is a separate model. Deleting the amine changes
+   composition and possibly charge, QM boundaries and counterions. Its raw PES
+   cannot be joined to the retained-product profile. If product release becomes
+   necessary, define a separate dissociation/free-energy leg with consistent
+   standard state, concentration, solvation and restraint corrections (R48).
+   Do not add a generic gas-phase translational-entropy bonus to a solvated
+   enzyme profile. A retained-product path is conditional on that bound state.
+
+Design should improve activation free energies relative to each corresponding
+basin, rather than maximize TI1 or acylenzyme binding. Initially protect the
+catalytic/maturation residues and tetramer interfaces and vary the existing
+neighboring design positions to tune oxyanion donors, proton-relay geometry
+and water access. Extra positive charge could also over-stabilize E–S, alter
+base pKas or obstruct substrate/water, so no specific substitution is justified
+from electrostatics alone. Use a single symmetry-consistent sequence across
+the E–S, acylation TS, acylenzyme/water, deacylation TS and relevant product/open
+states. LigandMPNN supports weighted tied decoding; alternatively generate
+from individual states and cross-score the same sequences on every state.
+Do not use residuewise majority consensus or interpret model likelihood as
+an activation barrier. Missing TSs currently limit the strength of this design
+assessment. The complete cycle is a stronger eventual narrative; it is not a
+guaranteed additional deliverable within this week.
 
 The preferred paper centers on a defensible acylation result and its limitations,
 using earlier unsuccessful direct routes as controls. Cite the separate PA6
@@ -1736,3 +2226,25 @@ Selected methodological context: Negoro et al., *FEBS J.* 2023,
 DOI 10.1111/febs.16755; Kästner and Sherwood, *J. Chem. Phys.* 2008,
 DOI 10.1063/1.2815812. The manuscript reference ledger controls final
 bibliography and claim verification.
+
+
+### Native-Thr gate diagnosis — 2026-11-24
+
+The rare joint native-Thr/Tier A/B passes are dominated by simultaneous
+OG1/Nalpha displacement and psi deviations, rather than chi1 rotamer changes.
+Among Tier A/B frames, WT versus mask_07 failure rates are 99.89/98.67% for
+OG1, 99.84/99.03% for Nalpha, 83.82/90.21% for psi and 5.47/3.71% for chi1.
+Modest diagnostic relaxation (1.0 Å OG1, 1.5 Å N, 45-degree psi, 30-degree chi1)
+still admits only 2/1829 and 14/2779 frames. The original static WT starts are
+borderline OG1 failures (0.757–0.880 Å versus 0.75 Å); the MD distributions
+show larger real shifts. Independent alpha- and beta-scaffold fits do not
+remove the discrepancy in a bounded WT sample. The original torsion
+definitions/circular differences were verified; N-terminal phi is not used.
+
+No thresholds changed. Native resemblance should be retained as a continuous
+structural diagnostic, not treated as a validated activity classifier. The
+crystal and ligand-bound MD need not have identical ensembles, and known-active
+control rejection already limits hard-filter interpretation. Matched-site
+representative and rare closest-native overlays, initial controls, scalar
+sensitivity and portable PyMOL scenes are in
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124/`.

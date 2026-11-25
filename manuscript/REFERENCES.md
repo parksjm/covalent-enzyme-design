@@ -297,6 +297,14 @@ the older implementation. Do not conflate the two releases.
   published version rather than the earlier 2024 preprint. It does not establish
   the native function or microscopic hydrolysis mechanism of Nyl12.
 
+- **R48.** Gumbart, J. C.; Roux, B.; Chipot, C. *Standard Binding Free Energies
+  from Computer Simulations: What Is the Best Strategy?* J Chem Theory Comput
+  (2013), 9, 794–802. https://doi.org/10.1021/ct3008099 . Primary methodological
+  reference for explicit standard-state and restraint corrections in binding/
+  dissociation free energies. Relevant when comparing product-bound and
+  product-released acylenzyme states; deleting a fragment is not a computed
+  product-release free energy.
+
 Additional primary historical counterexample, retained with limitations:
 Harrison, M. J.; Burton, N. A.; Hillier, I. H.; Gould, I. R. *Mechanism and
 transition state structure for papain catalysed amide hydrolysis, using a
@@ -304,3 +312,44 @@ hybrid QM/MM potential*. Chem Commun (1996), 2769–2770.
 https://doi.org/10.1039/CC9960002769 . Its AM1/MM concerted, no-TI prediction
 is a cysteine/thiol example using an early approximate model, not direct
 validation of hydroxyl-nucleophile Nyl12 chemistry.
+
+
+- **R49.** Rosta, E.; Woodcock, H. L.; Brooks, B. R.; Hummer, G.
+  *Artificial reaction coordinate “tunneling” in free-energy calculations:
+  the catalytic reaction of RNase H*. J Comput Chem (2009), 30, 1634–1641.
+  https://doi.org/10.1002/jcc.21312 . Primary methodological evidence that an
+  omitted slow coordinate can distort a reaction PMF; not direct Nyl12
+  mechanistic precedent.
+- **R50.** Rivas-Fernández et al. *Efficient QM/MM Modeling of Enzymatic
+  Reactions Combining PathCV with OPES*. J Chem Theory Comput (2026), 22,
+  5867–5881. https://doi.org/10.1021/acs.jctc.6c00492 . Potential future
+  pathway/free-energy methodology; not used in the present calculations.
+- **R51.** IUPAC Gold Book. *Transition-state theory*.
+  https://goldbook.iupac.org/terms/view/T06470 . Defines the relationship among
+  elementary rate constants, transmission coefficient and activation free energy.
+- **R52.** Sigma-Aldrich. *TRIS buffer technical data*.
+  https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/142/961/93286dat.pdf .
+  Manufacturer reference for temperature-sensitive Tris pH; not a measurement
+  of the collaborators' assay pH at 75 °C.
+
+- **R53.** Zoi, I.; Antoniou, D.; Schwartz, S. D. *Incorporating Fast Protein
+  Dynamics into Enzyme Design: A Proposed Mutant Aromatic Amine Dehydrogenase*.
+  J Phys Chem B (2017), 121, 7290–7298.
+  https://doi.org/10.1021/acs.jpcb.7b05319 . Primary full text:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC5763476/ . Uses committor analysis and
+  15 uncorrelated TS configurations per enzyme in a theoretical engineering
+  study; does not demonstrate a LigandMPNN workflow or experimental validation
+  of the proposed mutant. Distinguish the 2017 publication from its 2018 PMC
+  availability date. Together with R27/R29, motivates a proposed Nyl12 hybrid
+  PES-reference/transition-region-ensemble comparison, not a claim it has run.
+
+TS-template source recheck (2026-11-25): R27 primary full text distinguishes
+the QM-derived motif from stochastic PLACER ensembles across catalytic states;
+R29's indexed primary Extended Data Fig. 9 reports 50 PLACER models per state.
+These are learned structural ensembles, not measured thermodynamic populations
+or automatically committor-qualified TSEs. The R29 publisher full page was
+inaccessible during this recheck; no additional final-SI claims were made.
+R10 primary model description and the official LigandMPNN README
+(https://github.com/dauparas/LigandMPNN, section `--pdb_path_multi`) distinguish
+coordinate/element conditioning and efficient independent input batching from
+a joint multistate optimization objective.
