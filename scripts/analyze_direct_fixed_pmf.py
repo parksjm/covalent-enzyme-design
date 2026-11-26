@@ -24,11 +24,18 @@ def main() -> None:
     parser.add_argument("--horizon", type=float, required=True)
     parser.add_argument("--replicates", type=int, required=True)
     parser.add_argument("--workers", type=int, required=True)
+    parser.add_argument("--continuation-plan", type=Path)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("Preserve existing PMF evidence")
     config, blocks, sources = load_direct_dataset(
-        args.campaign.resolve(), args.augmented.resolve(), args.relay_request.resolve()
+        args.campaign.resolve(),
+        args.augmented.resolve(),
+        args.relay_request.resolve(),
+        continuation_plan=(
+            args.continuation_plan.resolve() if args.continuation_plan else None
+        ),
+        horizon_ps=args.horizon,
     )
     statistics = run_fixed_statistics(
         config, blocks, args.horizon, replicates=args.replicates, workers=args.workers
@@ -63,6 +70,11 @@ def main() -> None:
         native_heating_ps=1,
         native_equilibration_ps=5,
         additional_production_discard_ps=5,
+        native_scc_policy={
+            "legacy_scfconv": 1e-10,
+            "full_step_scc_success_verified": False,
+            "note": "Acceptance records reject reported SCC failures; the original stage protocol does not record full-step SCC verification.",
+        },
         source_sha256=sources,
         config=config,
         campaign="Mechanism A: direct-NEB-seeded sampling; actual proton channels uncensored",
@@ -84,6 +96,8 @@ def main() -> None:
                 Path(__file__).resolve(),
                 Path(__file__).resolve().parents[1]
                 / "src/nyl12_covalent/direct_us_fixed_io.py",
+                Path(__file__).resolve().parents[1]
+                / "src/nyl12_covalent/direct_us_continuation_io.py",
                 Path(__file__).resolve().parents[1]
                 / "src/nyl12_covalent/fixed_us_statistics.py",
             )

@@ -1,0 +1,15 @@
+{
+  "plan_sha256": "294f868537b937a5130af5f8357837466ec268107862065c50e40639626a802d",
+  "review": "PIauthorized;leadcode/chemistry/restartreviewpassed",
+  "workers": 40,
+  "new_stages": 378,
+  "original_production_ps": 30,
+  "target_production_ps": 60,
+  "native_inputs_change": "igonly;noheating/bias/Hamiltonian/movablechanges",
+  "current_3ob_SKF_files_pinned_to_relay": 16,
+  "code_tests": 15,
+  "new_module_coverage_percent": 86,
+  "raw30psendpoint_preflight_windows": 63,
+  "max_frozen_shift_A": 0,
+  "sampling_converged": false
+}

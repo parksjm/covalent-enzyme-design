@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "a7cb3d2e6c344ee6b7dcd13d480e9e8d080cff57d207a73c48d616663e620838",
+  "reviewer": "lead_agent_under_PI_authorization",
+  "scope": "Ten5psblocks;stopfornearattackwaterorfailednativegate;oneVioletCPU;noHamiltonianchange",
+  "parent_51ps_readiness": true,
+  "all_pinned_sources_verified": true,
+  "temporary_postprocess_analysis_frames": 1021,
+  "temporary_movie_frames": 1021,
+  "temporary_movie_atoms": 19982,
+  "focused_tests": 11,
+  "helper_coverage_percent": [
+    99,
+    100
+  ],
+  "sample_convergence": false
+}

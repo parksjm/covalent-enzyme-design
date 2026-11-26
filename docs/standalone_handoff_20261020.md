@@ -1,3 +1,37 @@
+**Live continuations, 26 November:** verified 43 native Sander processes on
+Violet: 40 direct-US workers plus three acylenzyme hydration runs. Violet has
+24 physical cores / 48 logical CPUs; these 43 single-thread calculations share
+SMT resources, so five unused logical CPUs do not mean five unused physical
+cores. Hydration uses lower scheduling priority than US. Azalea retains
+57 relay-US workers and its queued 60 ps extension. No new NEB; no work on
+verbena/tulip/geranium. Direct production blocks 07–12 extend the original 63
+windows from 30 to 60 ps, without reheating or changing biases/Hamiltonian.
+Control/source/job records: direct campaign `continuation_60ps_20261126/`.
+The derived-only `direct_us_matched_pmf_20261126` watcher uses fixed 5 ps discard,
+all-frame MBAR and 200 contiguous-block refits, analyzes common 35–60 ps checkpoints,
+and plots only when the corresponding relay horizon is available. Current phase
+is waiting for 35 ps. Figures stay in the same `plots/` directory.
+
+Hydration main continues accepted 51 ps→101 ps; two independent stochastic branches
+continue 26 ps→51 ps and 41 ps→66 ps, each adding 25 ps. Their shared prefixes are context,
+not independent samples. New branches are under hydration `replicas/`; each has
+reviewed plan, native/source hashes, `job/status.json`, `replica_execution.json`,
+water analysis and VMD movie. Stops are bounded by candidate geometry or failed
+acceptance. Waters remain MM until an explicit QM promotion/reoptimization.
+Prior 51 ps analysis is archived; no candidate water was found (closest 4.939 Å,
+72.1°). Endpoint Thr N and product amine are neutral NH2; old prose claiming
+protonated Nalpha was stale and is corrected in the new frozen postprocessor.
+
+Primary objective remains a converged relay PMF and defensible TS ensemble for
+LigandMPNN redesign by November 30. Different NEB/RCD seed generation does not
+invalidate US; all 57 relay windows share one global MBAR normalization. Later
+opposite-start checks mean the SAME umbrella center/bias run from two structures
+approached from opposite sides. Choose only problematic windows after extended
+sampling; no new full campaign or NEB is authorized by that diagnostic plan.
+Methods, Results and roadmap are updated. Current jobs persist after logout.
+
+---
+
 **Matched direct-route reanalysis completed, 26 November:** use the common
 fixed 5 ps production discard, all-frame MBAR and 200 contiguous 5 ps block
 refits, with the same 3-CV projection algorithm/bin grid. At matched 25 ps/window,

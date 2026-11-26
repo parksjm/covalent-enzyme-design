@@ -1,0 +1,242 @@
+[
+  {
+    "worker": 0,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker00_20261126\nINFO: launched session direct_us60_worker00_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_00/run.sh\n"
+  },
+  {
+    "worker": 1,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker01_20261126\nINFO: launched session direct_us60_worker01_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_01/run.sh\n"
+  },
+  {
+    "worker": 2,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker02_20261126\nINFO: launched session direct_us60_worker02_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_02/run.sh\n"
+  },
+  {
+    "worker": 3,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker03_20261126\nINFO: launched session direct_us60_worker03_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_03/run.sh\n"
+  },
+  {
+    "worker": 4,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker04_20261126\nINFO: launched session direct_us60_worker04_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_04/run.sh\n"
+  },
+  {
+    "worker": 5,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker05_20261126\nINFO: launched session direct_us60_worker05_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_05/run.sh\n"
+  },
+  {
+    "worker": 6,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker06_20261126\nINFO: launched session direct_us60_worker06_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_06/run.sh\n"
+  },
+  {
+    "worker": 7,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker07_20261126\nINFO: launched session direct_us60_worker07_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_07/run.sh\n"
+  },
+  {
+    "worker": 8,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker08_20261126\nINFO: launched session direct_us60_worker08_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_08/run.sh\n"
+  },
+  {
+    "worker": 9,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker09_20261126\nINFO: launched session direct_us60_worker09_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_09/run.sh\n"
+  },
+  {
+    "worker": 10,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker10_20261126\nINFO: launched session direct_us60_worker10_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_10/run.sh\n"
+  },
+  {
+    "worker": 11,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker11_20261126\nINFO: launched session direct_us60_worker11_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_11/run.sh\n"
+  },
+  {
+    "worker": 12,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker12_20261126\nINFO: launched session direct_us60_worker12_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_12/run.sh\n"
+  },
+  {
+    "worker": 13,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker13_20261126\nINFO: launched session direct_us60_worker13_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_13/run.sh\n"
+  },
+  {
+    "worker": 14,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker14_20261126\nINFO: launched session direct_us60_worker14_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_14/run.sh\n"
+  },
+  {
+    "worker": 15,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker15_20261126\nINFO: launched session direct_us60_worker15_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_15/run.sh\n"
+  },
+  {
+    "worker": 16,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker16_20261126\nINFO: launched session direct_us60_worker16_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_16/run.sh\n"
+  },
+  {
+    "worker": 17,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker17_20261126\nINFO: launched session direct_us60_worker17_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_17/run.sh\n"
+  },
+  {
+    "worker": 18,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker18_20261126\nINFO: launched session direct_us60_worker18_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_18/run.sh\n"
+  },
+  {
+    "worker": 19,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker19_20261126\nINFO: launched session direct_us60_worker19_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_19/run.sh\n"
+  },
+  {
+    "worker": 20,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker20_20261126\nINFO: launched session direct_us60_worker20_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_20/run.sh\n"
+  },
+  {
+    "worker": 21,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker21_20261126\nINFO: launched session direct_us60_worker21_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_21/run.sh\n"
+  },
+  {
+    "worker": 22,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker22_20261126\nINFO: launched session direct_us60_worker22_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_22/run.sh\n"
+  },
+  {
+    "worker": 23,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker23_20261126\nINFO: launched session direct_us60_worker23_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_23/run.sh\n"
+  },
+  {
+    "worker": 24,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker24_20261126\nINFO: launched session direct_us60_worker24_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_24/run.sh\n"
+  },
+  {
+    "worker": 25,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker25_20261126\nINFO: launched session direct_us60_worker25_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_25/run.sh\n"
+  },
+  {
+    "worker": 26,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker26_20261126\nINFO: launched session direct_us60_worker26_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_26/run.sh\n"
+  },
+  {
+    "worker": 27,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker27_20261126\nINFO: launched session direct_us60_worker27_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_27/run.sh\n"
+  },
+  {
+    "worker": 28,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker28_20261126\nINFO: launched session direct_us60_worker28_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_28/run.sh\n"
+  },
+  {
+    "worker": 29,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker29_20261126\nINFO: launched session direct_us60_worker29_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_29/run.sh\n"
+  },
+  {
+    "worker": 30,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker30_20261126\nINFO: launched session direct_us60_worker30_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_30/run.sh\n"
+  },
+  {
+    "worker": 31,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker31_20261126\nINFO: launched session direct_us60_worker31_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_31/run.sh\n"
+  },
+  {
+    "worker": 32,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker32_20261126\nINFO: launched session direct_us60_worker32_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_32/run.sh\n"
+  },
+  {
+    "worker": 33,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker33_20261126\nINFO: launched session direct_us60_worker33_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_33/run.sh\n"
+  },
+  {
+    "worker": 34,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker34_20261126\nINFO: launched session direct_us60_worker34_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_34/run.sh\n"
+  },
+  {
+    "worker": 35,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker35_20261126\nINFO: launched session direct_us60_worker35_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_35/run.sh\n"
+  },
+  {
+    "worker": 36,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker36_20261126\nINFO: launched session direct_us60_worker36_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_36/run.sh\n"
+  },
+  {
+    "worker": 37,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker37_20261126\nINFO: launched session direct_us60_worker37_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_37/run.sh\n"
+  },
+  {
+    "worker": 38,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker38_20261126\nINFO: launched session direct_us60_worker38_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_38/run.sh\n"
+  },
+  {
+    "worker": 39,
+    "launcher_exit": 0,
+    "stdout": "",
+    "stderr": "can't find session: direct_us60_worker39_20261126\nINFO: launched session direct_us60_worker39_20261126; run script: /data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/worker_jobs/worker_39/run.sh\n"
+  }
+]

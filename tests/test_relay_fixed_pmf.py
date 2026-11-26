@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 import pytest
 
@@ -169,7 +171,14 @@ def test_bootstrap_is_deterministic_and_common_reference_stays_fixed() -> None:
     assert first["interval_scope"].startswith("Pointwise conditional")
 
 
-def test_bootstrap_two_workers_matches_one_worker() -> None:
+def test_bootstrap_two_workers_matches_one_worker(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    import nyl12_covalent.relay_fixed_pmf as relay_fixed_pmf
+
+    # Spawned workers must import the same source tree as the parent process.
+    package_source = Path(relay_fixed_pmf.__file__).resolve().parents[1]
+    monkeypatch.syspath_prepend(str(package_source))
     reduced, counts, s = identical_umbrella_data()
     kwargs = dict(
         reduced=reduced,

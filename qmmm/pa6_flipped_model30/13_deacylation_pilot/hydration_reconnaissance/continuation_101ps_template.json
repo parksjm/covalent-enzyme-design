@@ -1,0 +1,168 @@
+{
+  "scope": "20 ps unbiased NVT hydration continuation in four sequential 5 ps segments; no reaction, no position restraints, no water promotion; sampling not presumed converged",
+  "pilot_dir": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance",
+  "journal_repo": "/data/jpc/covalent-enzyme-design",
+  "pilot_config_sha256": "fe7b1a824a2d454edc6a034e125d48fc8f677f016b3e8b17190b66035ac747d6",
+  "endpoint_status_sha256": "a48ffa7db220fb194db27f4bd06b068c7964088d5f832515346e0b3f56ff9981",
+  "endpoint_restart_sha256": "61eb8505d774c0d8c8dee66d0ef844eeb641124e341fa2d16bbe5ba06f76a1b9",
+  "endpoint_restart_path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_09/restart.ncrst",
+  "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+  "native_input_sha256": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+  "original_qmmm": {
+    "atoms": 98,
+    "charge": -2,
+    "links": 8
+  },
+  "active_atoms": 4165,
+  "active_shell_A": 12,
+  "active_mask": ":27-32,34,43-56,61,70-81,83,108-124,141,144-170,181-192,199-201,211,215,222-230,232,277,279,736-738,750-758,760-765,783,787,790,792-805,929-934,946,948-974,1006-1019,1037,1039-1040,1042-1051,1053-1054,1080-1097,1099-1100,1313-1316,1580,1639,1962,2010,2779,2942,3012,3152,3327,3528,4023,4079,4165,4529,4883,4917,4938,5084,5706,5709,5795,6363,6578,6687,6850,7060,7157,7321,7526,7766,8129,8194,8313,8357,8519,8530,8602,8607,8626,8632,8643,8695,8801,8826,8842,9270,9368,9381,9575,9845,9914,9980,10148,10260,10591,10594,10630,10664-10665,10669,10834,10881,11029,11088,11091,11108,11121,11137,11141,11523,11543,11609,11803,11818,12165,12507,12521,12889,13192,13712,13717,14449,14521,14601,14619,14694,14706,14860,15096,15728,15741,15909,15945,16110,16175,16273,16299,16403,16467,16499,16512,16585,16640,16651,16662,16670,16680,16783,16919,17370,17435,17448,17454-17455,17462,17486,17491,17497,17515,17564,17588-17589,17789,17827,18240,18323,18789,19041,19620,19919,20400,20505,21023,21288,21305,21674,21682,21697,21702,21713,21744,21792,21847,21873,21879,22201,22246,22254,22259,22352,22355,22373,22377,22382,22392,22396,22412,22414,22422,22473-22474,22504,22513,22535,22591,22622,22646,22658,22665,22676,22696,22708,22763,23143,23173,23182,23204,23217,23241,23266,23286,23335,23424,25439,25441,25664,25896,25954,26056,26160,26298,26361,26543,26714,26814,26993,26996,27090,27118,27154,27186,27219,27222,27231,27662,28155,28979,29147,29459,29695",
+  "qmmask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+  "sander": {
+    "path": "/data/jpc/code/ambertools26/venv/bin/sander",
+    "sha256": "66323629c6d540a8038f8f8fe7557acf391f6797d88898844da708989de6a97e"
+  },
+  "dftb_parameters_sha256": {
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-C.skf": "dfda7b773cb7891e2275ff284c87daac11167a105ba90bafd783b289715cda0f",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-H.skf": "8d5c6aabecfc72271e7a3f56a238cb8cc77fb552685c79b9381412d32e5609f1",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-N.skf": "3455aea77ce55e836db4165397871726080d52e813a268432f999f4de4ee07cd",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/C-O.skf": "f95f3af65b0f9b7daff8073df90326e795e746e72c91ee7c88792f8b1b684ccc",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-C.skf": "950f61115cf701988b752960b9a56929b090ca66fe4bbdcea46b3272d20027e0",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-H.skf": "acdc130b5ac73a9d51c5091b61e448f1de0723648dfb66d4b5cf1ab71bea0b66",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-N.skf": "4782c582e5a39d5f8ef56c3b5bd7b47aee78b43ec421608db8d2cbf930b1d15c",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/H-O.skf": "b77a51b690caccfa00bbbb2c3d83073d04dab59a7853ac96586d13138ebd4891",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-C.skf": "f0b04e6bcee02be99d4f1b2068488f5e62157d8cd41c8424813b6ce21a6f1257",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-H.skf": "c25aa3eaf8d05f4ee3b97d750b4c37c74b00d44f427750162bee58031f104e03",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-N.skf": "f96f6a07430f4d472cc21e0614cda8478c82a25d3d7734331cd65149f0d58906",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/N-O.skf": "31ab322d2dc25ae28f1e567d1e25c7485c2d38732327c754db33208022b05bec",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-C.skf": "cbfbf6f0058ca42c9fd8b2ba6db0a3a0e694260abe3f3ea032608d3714212ba0",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-H.skf": "911b8644b0a0d6bbd193064ffb962a658c2dc77e911a563194476e5dddf96f45",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-N.skf": "785a2dcab1575282eb6d5d85eaa65a4157c55edf2e7cd6771340dae4176e72dc",
+    "/data/jpc/code/ambertools26/venv/dat/slko/3ob-3-1/O-O.skf": "3b377938f48ebf8b5a1b79da5befcfe42074ec5b4908cc2e6eb1193f9d748a91"
+  },
+  "segment_names": [
+    "extend_10",
+    "extend_11",
+    "extend_12",
+    "extend_13",
+    "extend_14",
+    "extend_15",
+    "extend_16",
+    "extend_17",
+    "extend_18",
+    "extend_19"
+  ],
+  "segment_steps": 10000,
+  "dt_ps": 0.0005,
+  "temperature_K": 300.0,
+  "langevin_gamma_per_ps": 2.0,
+  "seeds": {
+    "extend_10": 2026112610,
+    "extend_11": 2026112611,
+    "extend_12": 2026112612,
+    "extend_13": 2026112613,
+    "extend_14": 2026112614,
+    "extend_15": 2026112615,
+    "extend_16": 2026112616,
+    "extend_17": 2026112617,
+    "extend_18": 2026112618,
+    "extend_19": 2026112619
+  },
+  "seed_provenance": "Use distinct explicit Langevin seeds 2026112402-2026112405 for the four segments; velocities continue through accepted restart files. Each sander process starts a new stochastic stream; this is not claimed as bitwise RNG continuation.",
+  "segment_input_sha256": {
+    "extend_05": {
+      "source.mdin": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+      "segment.mdin": "2cbdff544f09d05ae9171dd410aa6eb2ca455af4b52b6178242f42fdab0702b9",
+      "restart.ncrst": "7bb34711ae69a21cf9d09a5450d86590e53791925d5d0d9f112da7d6ea9c5118",
+      "system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    },
+    "extend_06": {
+      "source.mdin": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+      "segment.mdin": "c6cb9d431a263ffc1b2ebc6ccc2966e7bb24d75ad36c13a3ce530d72605f53be",
+      "system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    },
+    "extend_07": {
+      "source.mdin": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+      "segment.mdin": "11d6bb0bbabbdc78640ce261765da37836dca5f1045e40a78b985f60bf1f015e",
+      "system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    },
+    "extend_08": {
+      "source.mdin": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+      "segment.mdin": "93a5ba7ab3eb68d93d941fefe1b551634e23794a92a5bd0db26192bfbe7b0bae",
+      "system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    },
+    "extend_09": {
+      "source.mdin": "fd9e2ae192059c190aa10b35875a8b730b17f2204551d102c9dd9f24be663daf",
+      "segment.mdin": "46030602ce1639674f0352c257180a52c70e806d220c70ee316f8c8ccf79c1fc",
+      "system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    }
+  },
+  "source_snapshot_sha256": {
+    "nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "nyl12_covalent/deacylation_hydration.py": "b235a3330fc6317eda457b5396a89ff1b69a47377009b2791a5455d6cf3b7e18",
+    "nyl12_covalent/deacylation_hydration_extension.py": "f0f38968d13f91b79a88bab38e7ba59279465a69726790914e4b18d9be4ea932",
+    "nyl12_covalent/deacylation_hydration_prepare.py": "948f114ab587b8b0138456d092117403123c5da714e075c8620adc2fcded3368",
+    "nyl12_covalent/dftb_scc_validation.py": "06cbe3afc480b9d9e2e481aa0c1e5c554e13438e18d58e773c794e4259fe908f",
+    "nyl12_covalent/hydration_continuation_101ps.py": "bdde86571f78af43c10f6892da7447554a08f14bcf2736738300dd8c8405f085",
+    "nyl12_covalent/hydration_followon_gates.py": "ad4a0df6a606bfa6e1f6ad3700a247e84ee7b6f4f154b23cfc8b5aff4a030551",
+    "nyl12_covalent/hydration_followon_queue.py": "664100083efa69c51986a465d2fcab8cc8458a684a97cc55febe75bd4364843d",
+    "nyl12_covalent/neb_umbrella_inputs.py": "af1d8adb8c11466ac3ccce107c269b89e998df23e9b5f7913e30bd7edc626999",
+    "postprocess/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "postprocess/active_site_geometry.py": "d7d765924d4fac813151716c0109e3f1897fa0ab3437db4541dc5c7783df208b",
+    "postprocess/analyze_deacylation_hydration.py": "98ca8bc5e6a94f9899558e651e1f8a43af867e2cea417e9bc6cd9d1e2577c1c6",
+    "postprocess/analyze_nyl12_nma_four_site_geometry.py": "f2774e5fc26afdce892b979ec929b40dbeaf972d155d032a3db7845f7f803a3d",
+    "postprocess/catalytic_alignment.py": "f3f6e33fe7a8f9236dbcb7ede0b02ecbe0e548aaf5c8be60bd69bffadb73d826",
+    "postprocess/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6",
+    "postprocess/deacylation_water_analysis.py": "8af0f9741a1ba5ccab5a94d3de3b60ec000c38769b052e0fbf5525c280694568",
+    "postprocess/deacylation_water_geometry.py": "66c15d570218a24aa42459be61483ecd37387122cc23854950a02d6e710004a7",
+    "postprocess/deacylation_water_measurements.py": "4615ec1442588778759e8e8f63ed0bbfe9e8ccf00180dc1730649aa231baec36",
+    "postprocess/deacylation_water_reporting.py": "c17d5a3ab8c2a4cec78659614e3e7702e43dda650c02360e46360c813d904b9f",
+    "postprocess/design_md_geometry.py": "eb956fbd01fa6e514acd4b03cb493e8ff2ad3bf600ec65b37bebc6c4261f7087",
+    "postprocess/export_hydration_vmd.py": "63beda6125b9a0be1243d133e7c1f26305b27de97f1461088b78b5226e577743",
+    "postprocess/hydration_receipt_adapter.py": "3e8393de57c43a3a2414b92540e5fa7c369a1363d38f276f1bc1e6eec14c0ada",
+    "postprocess/hydration_vmd_export_io.py": "c44aa54461176b55d47fe0b7df16c970732bbb1e0f18de7e6593453a0f7e57f5",
+    "postprocess/hydration_vmd_exporter.py": "dceea86f07bd4b0b0013237cd0a0f17c450ef2d373b8e6ec75b43640168d03b5",
+    "postprocess/hydration_vmd_viewer.py": "323a0ef8c7b6d3ca416863dde97c0fccc190b14c14fdabe98fdab36acea10b94",
+    "postprocess/refresh_deacylation_hydration.py": "af47a884a81353927838f081e10ada815a726d7c6438c6699c713075494111ea",
+    "postprocess/relay_progress_vmd.py": "99d841d90134e61d357b3b94a7681e84f877303ce267a8e451cf8154817d489b",
+    "postprocess/screen_pa6_binding_orientation.py": "82e6b5410f1f3aab841bcf78710229b6cd58b4376d7ef977cee7d5b377c7bfb5",
+    "postprocess/vmd_chain_groups.py": "e8b0bb9467d9cf2588254f50dbf11448071e7d0f03693bc23519050c77e0b2c8",
+    "postprocess/vmd_movie_policy.py": "8a93377586a15709ef01aa3915ec51b1e46ba26260e461748b761a656e269f27",
+    "scripts/run_deacylation_hydration_extension.py": "ea1b66130549521bf16b929da26fb42ad17203737f0eba48702677b8d87dbe93",
+    "scripts/run_hydration_followon_queue.py": "cee914a962226cef031b037d80dcde1b2affa7b76069e32aca512853b6a3f1d3"
+  },
+  "postprocess_argv": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/scripts/refresh_deacylation_hydration.py",
+    "--base",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance",
+    "--project-root",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source"
+  ],
+  "postprocess_source_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/scripts/analyze_deacylation_hydration.py": "98ca8bc5e6a94f9899558e651e1f8a43af867e2cea417e9bc6cd9d1e2577c1c6",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/scripts/export_hydration_vmd.py": "63beda6125b9a0be1243d133e7c1f26305b27de97f1461088b78b5226e577743",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/scripts/refresh_deacylation_hydration.py": "af47a884a81353927838f081e10ada815a726d7c6438c6699c713075494111ea",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/active_site_geometry.py": "d7d765924d4fac813151716c0109e3f1897fa0ab3437db4541dc5c7783df208b",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/catalytic_alignment.py": "f3f6e33fe7a8f9236dbcb7ede0b02ecbe0e548aaf5c8be60bd69bffadb73d826",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/catalytic_alignment_geometry.py": "39ea1cefcda0678bbcdfaf001e289d5dda3b43afba12b75883399f538bb592d6",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/deacylation_water_analysis.py": "8af0f9741a1ba5ccab5a94d3de3b60ec000c38769b052e0fbf5525c280694568",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/deacylation_water_geometry.py": "66c15d570218a24aa42459be61483ecd37387122cc23854950a02d6e710004a7",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/deacylation_water_measurements.py": "4615ec1442588778759e8e8f63ed0bbfe9e8ccf00180dc1730649aa231baec36",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/deacylation_water_reporting.py": "c17d5a3ab8c2a4cec78659614e3e7702e43dda650c02360e46360c813d904b9f",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/design_md_geometry.py": "eb956fbd01fa6e514acd4b03cb493e8ff2ad3bf600ec65b37bebc6c4261f7087",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/hydration_receipt_adapter.py": "3e8393de57c43a3a2414b92540e5fa7c369a1363d38f276f1bc1e6eec14c0ada",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/hydration_vmd_export_io.py": "c44aa54461176b55d47fe0b7df16c970732bbb1e0f18de7e6593453a0f7e57f5",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/hydration_vmd_exporter.py": "dceea86f07bd4b0b0013237cd0a0f17c450ef2d373b8e6ec75b43640168d03b5",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/hydration_vmd_viewer.py": "323a0ef8c7b6d3ca416863dde97c0fccc190b14c14fdabe98fdab36acea10b94",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/relay_progress_vmd.py": "99d841d90134e61d357b3b94a7681e84f877303ce267a8e451cf8154817d489b",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/vmd_chain_groups.py": "e8b0bb9467d9cf2588254f50dbf11448071e7d0f03693bc23519050c77e0b2c8",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_postprocess_source/src/nyl12_covalent/vmd_movie_policy.py": "8a93377586a15709ef01aa3915ec51b1e46ba26260e461748b761a656e269f27"
+  },
+  "postprocess_environment": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/ambertools26/venv/lib",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

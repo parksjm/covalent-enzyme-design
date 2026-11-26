@@ -794,6 +794,19 @@ if ssh "$remote" test -f "$hydration_source/vmd_progress/MANIFEST.sha256"; then
         --exclude='**/clutter/***' --exclude='/analysis/failed_*/***' \
         --exclude='/analysis/*_initial_*.csv' \
         --include='/vmd_progress/***' --include='/analysis/***' \
+        --include='/continuation_101ps_plan.json' \
+        --include='/continuation_101ps_job/' \
+        --include='/continuation_101ps_job/status.json' \
+        --include='/continuation_101ps_job/job.log' \
+        --include='/replicas/' --include='/replicas/README.md' \
+        --include='/replicas/replica_0[23]_*/' \
+        --include='/replicas/replica_0[23]_*/vmd_progress/***' \
+        --include='/replicas/replica_0[23]_*/analysis/' \
+        --include='/replicas/replica_0[23]_*/analysis/report.*' \
+        --include='/replicas/replica_0[23]_*/analysis/nearest_water_geometry.png' \
+        --include='/replicas/replica_0[23]_*/analysis/nearest_water_per_frame.csv' \
+        --include='/replicas/replica_0[23]_*/replica_*.json' \
+        --include='/replicas/replica_0[23]_*/README.md' \
         --include='/README.md' --include='/hydration_endpoint_status_20261124.json' \
         --exclude='*' \
         "$remote:$hydration_source/" "$hydration_destination/"
@@ -801,6 +814,12 @@ if ssh "$remote" test -f "$hydration_source/vmd_progress/MANIFEST.sha256"; then
         (cd "$hydration_destination/vmd_progress" && "${checksum[@]}" MANIFEST.sha256)
         echo "Deacylation hydration VMD: $hydration_destination/vmd_progress/view_hydration.vmd"
         echo "Attacking-water analysis: $hydration_destination/analysis/report.json"
+        for hydration_replica in "$hydration_destination"/replicas/replica_0[23]_*; do
+            if [[ -f "$hydration_replica/vmd_progress/MANIFEST.sha256" ]]; then
+                (cd "$hydration_replica/vmd_progress" && "${checksum[@]}" MANIFEST.sha256)
+                echo "Hydration replica VMD: $hydration_replica/vmd_progress/view_hydration.vmd"
+            fi
+        done
     fi
 fi
 
@@ -981,11 +1000,18 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
         --include='/analysis/pmf_latest/' --include='/analysis/pmf_latest/***' \
         --include='/analysis/fixed_burnin_20261126/' \
         --include='/analysis/fixed_burnin_20261126/direct_*ps_analysis.json' \
+        --include='/analysis/fixed_burnin_20261126/direct_*ps_publication.json' \
+        --include='/analysis/fixed_burnin_20261126/direct_fixed_pmf_watch_status.json' \
         --include='/analysis/fixed_burnin_20261126/physical_model_audit.json' \
         --include='/analysis/fixed_burnin_20261126/comparison_summary.json' \
         --include='/analysis/fixed_burnin_20261126/README.md' \
         --exclude='/analysis/fixed_burnin_20261126/***' \
         --exclude='/analysis/*/' \
+        --include='/continuation_60ps_20261126/' \
+        --include='/continuation_60ps_20261126/plan.json' \
+        --include='/continuation_60ps_20261126/root_review.json' \
+        --include='/continuation_60ps_20261126/README.md' \
+        --exclude='/continuation_60ps_20261126/***' \
         --include='/plots/' --include='/plots/*.png' --include='/plots/*.pdf' \
         --include='/plots/*_source.json' --exclude='/plots/***' \
         --include='/window_*/progress/***' \

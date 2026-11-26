@@ -1,0 +1,11 @@
+{
+  "plan_sha256": "6de399fea4a18575156a2ea478e0e3dce1b5ff3e4b3f0709c2383f5190cdd675",
+  "review": "Lead-reviewed under PI concurrent-hydration authorization",
+  "fork_time_ps": 26,
+  "new_duration_ps": 25,
+  "shared_prefix_not_independent": true,
+  "native_identity_and_qm_topology_preflight": true,
+  "borrowed_prefix_candidate": false,
+  "focused_tests": 6,
+  "helper_coverage_percent": 92
+}

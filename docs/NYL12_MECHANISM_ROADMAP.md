@@ -2,6 +2,70 @@
 
 ## Current checkpoint — 26 November 2026
 
+- **Live launch verification:** Violet has 40 native direct-US workers plus
+  three native hydration runs; Azalea retains 57 native relay-US workers.
+  Violet has 24 physical cores / 48 logical CPUs. These 43 single-thread jobs
+  share SMT resources; hydration has lower scheduling priority than US.
+  Direct windows continue in their existing folders as production blocks
+  07–12, under `continuation_60ps_20261126/plan.json`; no new NEB was started.
+  The derived-only `direct_us_matched_pmf_20261126` watcher analyzes complete
+  35/40/45/50/55/60 ps checkpoints with the common fixed-discard/MBAR/bootstrap
+  method, then publishes comparisons when the matching relay horizon exists.
+  It uses four CPU workers when fitting; current phase is waiting for 35 ps.
+  Native original inputs/30 ps data are retained and new SKF/engine/topology
+  identities are pinned explicitly. Source manifests, reviewed plans and
+  tmux/process/scientific receipts are retained in the same campaign.
+  Hydration now comprises the main 51→101 ps continuation and two additional
+  25 ps stochastic branches from accepted 26/41 ps checkpoints. Their plans,
+  movies and separate new-segment statistics are under hydration
+  `replicas/replica_02_from_26ps_extend04/` and
+  `replicas/replica_03_from_41ps_extend07/`. Shared prehistory is not independent
+  sampling. All three stop for a candidate water or a failed acceptance gate.
+  Earlier hydration blocks took about 4.1 h per 5 ps; the initial timings under
+  the new concurrent load imply roughly 5–8 h per block, with substantial
+  startup uncertainty. No resources are assigned to verbena,
+  tulip or geranium. The pull script includes curated new outputs.
+
+- **PI-approved execution through 30 November:** relay convergence and a
+  defensible transition-state ensemble for redesign remain the primary goals.
+  Keep all 57 relay windows on Azalea and the queued 60 ps continuation running.
+  Extend the 63 existing direct windows from 30 to 60 ps on Violet using at most
+  40 one-CPU workers, prioritizing completion of each common 5 ps checkpoint.
+  Continue accepted coordinates/velocities with the same native biases,
+  proton inventory and Hamiltonian; preserve all earlier inputs and samples.
+  Retain Violet CPU capacity for relay analysis/initialization checks and the
+  three bounded one-CPU hydration streams. No new NEB. Tulip and geranium are unavailable;
+  no work is assigned to verbena while the two existing hosts suffice.
+  Native launches have now been verified above; completion of 60 ps is not
+  the convergence acceptance gate.
+
+- **Initialization checks explained:** direct US used NEB seeds; relay US used
+  two coordinate-driving branches joined at the identical window033 restart.
+  That seed-generation difference is acceptable; we use one global MBAR fit,
+  not independently zeroed PMF pieces. After extended-sampling diagnostics,
+  select a few problematic windows and run each at the SAME bias center from
+  two structures approached from opposite sides. Compare whether both settle
+  into consistent chemical and environmental distributions. This tests memory
+  of initial conditions, not reverse reaction rates. Prioritize the slow
+  activation025/026 region, chart junction and weak acyl basin if those issues
+  persist. Do not launch another full independent campaign automatically.
+
+- **Deacylation hydration:** 51 ps accepted total (1 ps heating + 50 ps at
+  300 K), with acyl chemistry retained. No near-attack water was found; the
+  minimum water-O–acyl-C separation was 4.939 Å at 30 ps, angle 72.1°.
+  The final nearest separation was 6.314 Å. PI approved a one-CPU continuation
+  on Violet to 101 ps total in ten 5 ps blocks, stopping early for a candidate
+  or failed numerical/chemical/boundary gate. Waters remain MM during this
+  reconnaissance; a candidate must be promoted to QM and reoptimized before
+  deacylation chemistry is modeled. At the current endpoint both the Thr
+  N-terminus and product amine are neutral NH2; HG1 resides on the product
+  amine. The earlier derived annotation calling the N-terminus protonated is
+  stale and must be corrected explicitly in the new analysis provenance.
+  If 101 ps produces no candidate, inspect product occlusion/water access
+  before commissioning another blind extension. Completing the second
+  half-reaction by the deadline depends on obtaining a defensible hydrated
+  starting state; do not compromise the primary relay/PMF work to force it.
+
 - **Direct-route reanalysis completed:** both mechanisms now use the shared
   fixed-5-ps-discard/all-frame MBAR estimator, 3-CV projection convention and
   200 contiguous-block bootstrap refits. At the matched 25 ps horizon, sampled

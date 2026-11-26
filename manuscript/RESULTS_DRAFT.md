@@ -693,6 +693,26 @@ sensitivity and portable PyMOL scenes are in
 `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124/`.
 
 
+## Retained-product acylenzyme hydration through 51 ps (2026-11-26)
+
+The accepted trajectory now comprises 1 ps heating and 50 ps at 300 K,
+including nine 5 ps continuation segments. All segments passed recorded
+native/SCC, finite-state, frozen-boundary and acyl-retention checks. No saved
+frame satisfied both near-attack annotations (water-O–acyl-C ≤3.5 Å and
+water-O–C–carbonyl-O angle 95–125°). WAT23286 approached closest at 30 ps:
+4.939 Å and 72.1°. The final nearest separation was 6.314 Å, angle 34.9°.
+Thus an initially closer water did not progress monotonically toward attack.
+This observation does not establish a water-entry barrier or preclude slower
+hydration with the amine product retained.
+
+At the 51 ps endpoint, the Thr233 N-terminus retained H1 and H2 at 1.031 and
+1.059 Å; product N retained HG1 and HN at 1.013 and 1.042 Å. Both groups are
+neutral NH2. The old water-analysis note describing protonated Nalpha was a
+text annotation error, not a change to the native proton inventory. A bounded
+extension to 101 ps total is approved; water remains MM until a suitable
+hydrated QM/MM starting state is selected. No deacylation barrier is reported.
+Source-bound audit: `analysis/deacylation_status_20261126.json`.
+
 ## Initial retained-product acylenzyme hydration screen (2026-11-24)
 
 The initial 6 ps reconnaissance (1 ps heating and 5 ps 300 K NVT) was screened

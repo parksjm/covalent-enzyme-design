@@ -1,0 +1,127 @@
+{
+  "scope": "Prespecified relay acyl endpoint and delivery021..026 accepted25ps checkpoints; no simulations or ensemble claim",
+  "water_count": 28245,
+  "prepared_sha256": "e277568203300c7880694d080568652c228e3717ccc69166fd4a895de84dd923",
+  "script_sha256": "9f47e3007815636fc88d6d4345dba4d1fca53cbb09565c73db2865633b11838b",
+  "records": [
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/seeds/02_acylation_forward_endpoint.ncrst",
+      "source_sha256": "ece2df04e359b78678a9ec58428dffccb712ad0b7f6e7ee8446d7337505bc5e0",
+      "acceptance": null,
+      "C_OG1_A": 1.32703279134014,
+      "C_Nleave_A": 3.0191426870706914,
+      "features": {
+        "q_acyl": 1.6921098957305514,
+        "q_act": 0.40100115730021146,
+        "q_del": 1.2760267679112913,
+        "q_h": 1.6770279252115028
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 5.972235483872903,
+      "nearest_angle_deg": 53.60863874482731,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_021/07_production_5ps/restart.ncrst",
+      "source_sha256": "5b240b0e512ae750b458f0d6f915c25c2d1ca8dc7fabbb96549445e10945297b",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_021/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.3717126251106222,
+      "C_Nleave_A": 2.4338545892476984,
+      "features": {
+        "q_acyl": 1.0621419641370764,
+        "q_act": 0.3909514014466695,
+        "q_del": 1.0466179815758903,
+        "q_h": 1.4375693830225598
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 6.0281903234908905,
+      "nearest_angle_deg": 54.84246289969768,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_022/07_production_5ps/restart.ncrst",
+      "source_sha256": "bfe046696db1f8d8fb48d62f110eaaba35c043377caf45bcad54a8cb67096ac5",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_022/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.3317344999021354,
+      "C_Nleave_A": 2.8695064397943075,
+      "features": {
+        "q_acyl": 1.537771939892172,
+        "q_act": 0.40239084115922497,
+        "q_del": 0.970573277638757,
+        "q_h": 1.372964118797982
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 6.249850470425937,
+      "nearest_angle_deg": 43.790062002761324,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_023/07_production_5ps/restart.ncrst",
+      "source_sha256": "f15b604d019c1ff83ffb901a9cec6c80e191fc6fc6fbf2848d12345cdde51c26",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_023/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.2945803474121034,
+      "C_Nleave_A": 2.6159143087151535,
+      "features": {
+        "q_acyl": 1.32133396130305,
+        "q_act": 0.5040530093248494,
+        "q_del": 0.9271129292827074,
+        "q_h": 1.4311659386075568
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 5.828456924252339,
+      "nearest_angle_deg": 52.29493607402843,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_024/07_production_5ps/restart.ncrst",
+      "source_sha256": "6eeb4eedfec72d635ebff7a1c8cfe2fe81b3deab3920c6011565c8a2ca3b7c4a",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_024/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.3339458699247722,
+      "C_Nleave_A": 2.9814333310828696,
+      "features": {
+        "q_acyl": 1.6474874611580974,
+        "q_act": 0.7213972601782306,
+        "q_del": 1.224862673473285,
+        "q_h": 1.9462599336515156
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 6.409005306155917,
+      "nearest_angle_deg": 46.80284594894175,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_025/07_production_5ps/restart.ncrst",
+      "source_sha256": "3bff857072bb3caf86b23e4fd4656f337d86fc7d547c18c3e8ac34cc947f161f",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_025/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.337434754125119,
+      "C_Nleave_A": 3.042615137792722,
+      "features": {
+        "q_acyl": 1.7051803836676032,
+        "q_act": 0.14313662588635,
+        "q_del": 1.3314854683043347,
+        "q_h": 1.4746220941906847
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 6.030052594388374,
+      "nearest_angle_deg": 53.01681532716726,
+      "candidate_waters": []
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_026/07_production_5ps/restart.ncrst",
+      "source_sha256": "1a28cd261872d24698da5d551aff9e227145192ca8ca2e75451d28ca97cd341b",
+      "acceptance": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_026/07_production_5ps/acceptance.json",
+      "C_OG1_A": 1.372563845904337,
+      "C_Nleave_A": 3.1348763990391197,
+      "features": {
+        "q_acyl": 1.762312553134782,
+        "q_act": 0.422032332934994,
+        "q_del": 1.3056742576291012,
+        "q_h": 1.7277065905640951
+      },
+      "nearest_water_residue": 23286,
+      "nearest_water_OC_A": 5.930307373055823,
+      "nearest_angle_deg": 51.22431971369359,
+      "candidate_waters": []
+    }
+  ]
+}

@@ -1468,7 +1468,36 @@ for five further 5 ps blocks, reaching 51 ps total. The same annotation is
 checked after every block and triggers a hold for review. Original 300 K
 Hamiltonian, retained amine product, QM/MM partition, charges and frozen
 exterior are unchanged. Native failures or invalid provenance stop the queue.
-This is scheduled sampling, not a completed 51 ps trajectory or deacylation PMF.
+At submission this described scheduled sampling. By 26 November, all segments
+had completed and passed their recorded native and chemical gates, yielding
+51 ps total: 1 ps heating and 50 ps at 300 K. No deacylation PMF was calculated.
+
+A further bounded continuation to 101 ps total was approved on 26 November:
+ten sequential 5 ps segments on one Violet CPU, starting from the accepted
+51 ps restart with its velocities and without reheating. Native Hamiltonian,
+partition, bath, mobile region and retained product are unchanged. Water
+geometry and the stripped trajectory are updated after accepted blocks;
+a near-attack candidate or a failed process/SCC/chemical/boundary gate stops
+automatic continuation for review. All waters remain MM in this reconnaissance.
+A candidate water must be included explicitly in a revised QM region and the
+hydrated acylenzyme reoptimized before modeling water attack/proton transfer.
+The 51 ps endpoint has neutral NH2 groups at both the Thr233 N-terminus and
+the amine product; HG1 is attached to the latter. An earlier derived annotation
+calling the N-terminus protonated was identified as stale and is corrected in
+the continuation analysis. These hydration simulations do not substitute for
+a converged deacylation pathway or free-energy profile.
+
+Two additional stochastic hydration branches were initiated from accepted
+26 ps and 41 ps checkpoints, retaining their coordinates and velocities and
+using distinct recorded Langevin seeds. Each branch is bounded at 25 ps of
+new sampling in five 5 ps NVT segments. Hamiltonian, proton inventory, QM/MM
+partition, movable region and retained product match the main continuation.
+Historical trajectory prefixes are referenced as read-only chronological
+context; they are not counted again as independent replica data. New sampling
+statistics are identified by branch-local production segments. All three runs
+are exploratory water-access calculations, with the same candidate/failure
+stop criteria; they are not independent equilibrated estimates of water-entry
+kinetics or deacylation free energies.
 
 Separately, both completed WT noncovalent E–S 100 ns endpoints were staged for
 a prepared-only 348.15 K branch: 200 ps NVT temperature ramp from 300 K, 1 ns
@@ -1714,6 +1743,50 @@ were computed identically. Direct-seeded proton visits to the N-terminus were
 reported explicitly rather than censored to enforce a mechanistic label.
 These projected densities remain conditional on sampled configurations and
 are not, by themselves, a comparison of mechanism-specific kinetic rates.
+
+### Initial structures and initialization-dependence controls
+
+The direct campaign was initialized from the original 24-image NEB path.
+For the N-terminal relay, separate coordinate-driving branches were initiated
+from the same relaxed window033 configuration: one toward E–S and one toward
+acylenzyme. The E–S-directed branch was reversed in order and joined to the
+acylenzyme-directed branch at the identical shared restart, included once in
+the 39-node geometrical reference. Intermediate CV centers were interpolated;
+initial atomic coordinates were selected from accepted restart structures.
+The native umbrellas restrained distance-difference combinations, rather than
+RMSD to an NEB image or a geometrical path. No new NEB refinement was required
+as an initialization prerequisite.
+
+All umbrella distributions were analyzed together with one global MBAR
+normalization. Independently zeroed partial PMFs were not spliced or added.
+Different procedures for generating initial configurations do not invalidate
+an equilibrium comparison, provided that each window samples its intended
+biased equilibrium distribution with adequate overlap. A shared geometrical
+join alone does not establish equilibration of protein, solvent or chemical
+degrees of freedom. The retained reference curves also define route-specific
+plotted projections, which were documented separately from native biases.
+
+**Planned initialization-sensitivity control, not yet completed:** after the
+extended-sampling analysis identifies persistent drift or weak overlap, a
+small number of windows near the relay junction, barrier or product basin will
+be initialized independently from configurations approached from opposite
+sides of the reaction. For each tested window, both initial conditions will
+use the exact same umbrella center and potential, topology, proton inventory,
+QM/MM Hamiltonian, movable region, bath and sampling/analysis protocol.
+Chemical-distance/proton-owner distributions, environmental hydrogen bonding,
+water occupancy and reweighted estimates will be compared after the same
+initial-discard procedure. Persistent dependence on the starting side will be
+treated as unresolved sampling, even if marginal CV histograms overlap or
+bootstrap intervals are narrow. Such controls test initialization hysteresis;
+they are not additional NEB calculations or reverse-rate measurements.
+
+Both existing campaigns are being extended toward 60 ps production per window
+in retained 5 ps segments, without reheating or changing the native biases.
+Direct sampling is assigned to Violet and relay sampling remains on Azalea.
+Equal nominal duration is a matched-checkpoint diagnostic, not a declaration
+of convergence. The fixed-discard, all-frame estimator and correlation-aware
+uncertainty/sensitivity criteria are applied consistently to both campaigns;
+convergence may require unequal final sampling lengths.
 
 ### Archived automatic-truncation sensitivity analysis
 

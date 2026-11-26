@@ -15,6 +15,10 @@ from .relay_umbrella_analysis import KB
 from .relay_umbrella_analysis_io import digest
 from .relay_umbrella_cv import RelayBiasWindow, cross_bias_energies, raw_features
 from .relay_umbrella_projection import project_path
+from .direct_us_continuation_io import (
+    validate_accepted_stage,
+    validate_continuation_plan,
+)
 
 DIAGNOSTICS = [
     "r_c_n",
@@ -62,10 +66,87 @@ def direct_reference(prepared: dict[str, Any]) -> tuple[np.ndarray, dict[str, st
     return np.asarray(points), hashes
 
 
+def _load_block(
+    campaign: Path,
+    augmented: Path,
+    original: dict[str, Any],
+    stage_label: str,
+    window_index: int,
+    prepared: dict[str, Any],
+    bias_objects: list[RelayBiasWindow],
+    sources: dict[str, str],
+) -> dict[str, Any]:
+    """Validate one native/augmented block and return its all-frame samples."""
+    native = campaign / original["label"] / stage_label
+    derived = augmented / original["label"] / stage_label
+    receipt_path = derived / "augmentation.json"
+    receipt = json.loads(receipt_path.read_text())
+    csv_path = derived / "observables.csv"
+    if digest(csv_path) != receipt["csv_sha256"]:
+        raise ValueError("Augmented direct CSV changed")
+    for filename in (
+        "process.json",
+        "acceptance.json",
+        "observables/observables.json",
+        "observables/observables.csv",
+    ):
+        path = native / filename
+        expected = receipt["source_sha256"][str(path)]
+        if digest(path) != expected:
+            raise ValueError("Compact source changed since augmentation: " + str(path))
+    if (native / "umbrella.RST").read_text().strip() != amber_restraints(
+        HarmonicWindow(**original["bias"]), prepared["roles_1based"]
+    ).strip():
+        raise ValueError("Recorded native restraint differs from declared bias")
+    with csv_path.open() as stream:
+        rows = list(csv.DictReader(stream))
+    values = np.array(
+        [
+            [float(row[key]) for key in ["q_acyl", "q_act", "q_del", *DIAGNOSTICS]]
+            for row in rows
+        ]
+    )
+    features = dict(zip(("q_acyl", "q_act", "q_del"), values[:, :3].T, strict=True))
+    features["q_h"] = values[:, 1] + values[:, 2]
+    cross = cross_bias_energies(features, bias_objects)
+    npz_path = native / "samples_and_cross_bias.npz"
+    with np.load(npz_path, allow_pickle=False) as stored:
+        if not np.allclose(
+            stored["cv_values"],
+            np.column_stack([values[:, 0], features["q_h"]]),
+            atol=1e-9,
+            rtol=0,
+        ):
+            raise ValueError("Original direct CV archive differs from coordinates")
+        if not np.allclose(stored["bias_kcal_mol"], cross, atol=1e-7, rtol=0):
+            raise ValueError("All-window direct cross-bias parity failed")
+        if not np.allclose(
+            stored["u_kn_bias_only"],
+            cross / (KB * prepared["temperature_K"]),
+            atol=1e-7,
+            rtol=0,
+        ):
+            raise ValueError("Original reduced-bias units or temperature differ")
+    sources[str(receipt_path)] = digest(receipt_path)
+    sources[str(npz_path)] = digest(npz_path)
+    return dict(
+        window=original["label"],
+        stage=stage_label,
+        values=values,
+        original_rows=rows,
+        sampled_duration_ps=5.0,
+        augmentation_receipt=str(receipt_path),
+        native_bias_kcal_mol=cross[window_index],
+    )
+
+
 def load_direct_dataset(
     campaign: Path,
     augmented: Path,
     relay_request: Path,
+    *,
+    continuation_plan: Path | None = None,
+    horizon_ps: float = 30.0,
 ) -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, str]]:
     """Validate augmented direct data and recorded cross-biases without censoring.
 
@@ -73,6 +154,8 @@ def load_direct_dataset(
         campaign: Existing direct-US campaign root.
         augmented: New sparse-coordinate augmentation root, window/stage ordered.
         relay_request: Frozen relay request defining the shared bins and basin ranges.
+        continuation_plan: Optional immutable production-only extension plan.
+        horizon_ps: Total production horizon requested by the report.
 
     Returns:
         Shared-statistics config, all continuous production blocks, and source hashes.
@@ -111,85 +194,57 @@ def load_direct_dataset(
     )
     topology = campaign / "inputs/system.prmtop"
     sources[str(topology)] = digest(topology)
+    continuation_by_window: dict[str, list[dict[str, Any]]] = {}
+    if continuation_plan is not None:
+        continuation_by_window, plan_sources = validate_continuation_plan(
+            campaign, continuation_plan, horizon_ps, augmented
+        )
+        sources.update(plan_sources)
+        for records in continuation_by_window.values():
+            for record in records:
+                sources.update(validate_accepted_stage(record, augmented))
+    elif horizon_ps > 30.0:
+        raise ValueError("A continuation plan is required for horizons above 30 ps")
+
     for index, original in enumerate(prepared["windows"]):
-        for stage in original["stages"]:
-            if stage["kind"] != "production":
-                continue
-            native = campaign / original["label"] / stage["label"]
-            derived = augmented / original["label"] / stage["label"]
-            receipt_path = derived / "augmentation.json"
-            receipt = json.loads(receipt_path.read_text())
-            csv_path = derived / "observables.csv"
-            if digest(csv_path) != receipt["csv_sha256"]:
-                raise ValueError("Augmented direct CSV changed")
-            # The augmentation checked native trajectory/CSV identities on its
-            # owning host. Recheck all compact originals on the analysis host.
-            for filename in (
-                "process.json",
-                "acceptance.json",
-                "observables/observables.json",
-                "observables/observables.csv",
+        labels = [
+            stage["label"]
+            for stage in original["stages"]
+            if stage["kind"] == "production"
+        ]
+        labels.extend(
+            record["label"]
+            for record in continuation_by_window.get(original["label"], [])
+        )
+        blocks.extend(
+            _load_block(
+                campaign,
+                augmented,
+                original,
+                label,
+                index,
+                prepared,
+                bias_objects,
+                sources,
+            )
+            for label in labels
+        )
+    if continuation_plan is not None:
+        requested_blocks = int(round(horizon_ps / 5.0))
+        for window in prepared["windows"]:
+            rows = [
+                row
+                for block in blocks
+                if block["window"] == window["label"]
+                for row in block["original_rows"]
+            ]
+            times = np.asarray([float(row["time_ps"]) for row in rows])
+            if times.shape != (requested_blocks * 100,) or not np.allclose(
+                np.diff(times), 0.05, atol=1e-4, rtol=0
             ):
-                path = native / filename
-                expected = receipt["source_sha256"][str(path)]
-                if digest(path) != expected:
-                    raise ValueError(
-                        "Compact source changed since augmentation: " + str(path)
-                    )
-            if (native / "umbrella.RST").read_text().strip() != amber_restraints(
-                HarmonicWindow(**original["bias"]), prepared["roles_1based"]
-            ).strip():
-                raise ValueError("Recorded native restraint differs from declared bias")
-            with csv_path.open() as stream:
-                rows = list(csv.DictReader(stream))
-            values = np.array(
-                [
-                    [
-                        float(row[key])
-                        for key in ["q_acyl", "q_act", "q_del", *DIAGNOSTICS]
-                    ]
-                    for row in rows
-                ]
-            )
-            features = dict(
-                zip(("q_acyl", "q_act", "q_del"), values[:, :3].T, strict=True)
-            )
-            features["q_h"] = values[:, 1] + values[:, 2]
-            cross = cross_bias_energies(features, bias_objects)
-            npz_path = native / "samples_and_cross_bias.npz"
-            with np.load(npz_path, allow_pickle=False) as stored:
-                if not np.allclose(
-                    stored["cv_values"],
-                    np.column_stack([values[:, 0], features["q_h"]]),
-                    atol=1e-9,
-                    rtol=0,
-                ):
-                    raise ValueError(
-                        "Original direct CV archive differs from coordinates"
-                    )
-                if not np.allclose(stored["bias_kcal_mol"], cross, atol=1e-7, rtol=0):
-                    raise ValueError("All-window direct cross-bias parity failed")
-                if not np.allclose(
-                    stored["u_kn_bias_only"],
-                    cross / (KB * prepared["temperature_K"]),
-                    atol=1e-7,
-                    rtol=0,
-                ):
-                    raise ValueError(
-                        "Original reduced-bias units or temperature differ"
-                    )
-            sources[str(receipt_path)] = digest(receipt_path)
-            sources[str(npz_path)] = digest(npz_path)
-            blocks.append(
-                dict(
-                    window=original["label"],
-                    values=values,
-                    original_rows=rows,
-                    sampled_duration_ps=5.0,
-                    augmentation_receipt=str(receipt_path),
-                    native_bias_kcal_mol=cross[index],
+                raise ValueError(
+                    f"Native production prefix is not continuous for {window['label']}"
                 )
-            )
     path, reference_sources = direct_reference(prepared)
     sources.update(reference_sources)
     # Preserve the relay histogram grid and extend only its outermost edges.

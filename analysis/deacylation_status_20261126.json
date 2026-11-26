@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-11-26T21:20:15.099794+00:00",
+  "study": "PA6 retained-product acyl-enzyme DFTB3/MM hydration reconnaissance",
+  "scope": "Read-only audit of accepted native status, scientific acceptance, existing hydration summaries, and continuation provenance; no raw trajectory reanalysis.",
+  "status": {
+    "campaign": "completed_51ps_review_required",
+    "queue_exit_status": 0,
+    "total_native_ps_including_heating": 51.0,
+    "heating_ps": 1.0,
+    "accepted_300K_ps": 50.0,
+    "accepted_equil_ps": 5.0,
+    "accepted_extension_ps": 45.0,
+    "accepted_extension_segments": 9,
+    "sampling_converged": false,
+    "all_extension_segments_passed_native_numeric_scc_temperature_boundary_and_acyl_retention": true,
+    "extension_segments": [
+      {
+        "segment": "extend_01",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 298.0,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.3731509626643448,
+        "ended_utc": "2026-11-25T01:12:15.004291+00:00",
+        "restart_sha256": "2ae885137c0d31c3106ee853c06e52daecc4136e4092fd315212c64cf328ca57"
+      },
+      {
+        "segment": "extend_02",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 299.93,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.351260828936091,
+        "ended_utc": "2026-11-25T06:42:23.616845+00:00",
+        "restart_sha256": "6a8ee23f33c9c688769d8cdad88fe9a4a47cb806fecc79bfe4c9f393797964bd"
+      },
+      {
+        "segment": "extend_03",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 301.48,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.2807150128760332,
+        "ended_utc": "2026-11-25T11:04:41.822748+00:00",
+        "restart_sha256": "3a8403cd08c7ca40d3941ca4d191835adadce9b5cf09a2acb63d97a68edb2752"
+      },
+      {
+        "segment": "extend_04",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 299.56,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.3773037494925584,
+        "ended_utc": "2026-11-25T15:15:04.735285+00:00",
+        "restart_sha256": "7bb34711ae69a21cf9d09a5450d86590e53791925d5d0d9f112da7d6ea9c5118"
+      },
+      {
+        "segment": "extend_05",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 304.93,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.376435174258738,
+        "ended_utc": "2026-11-25T20:39:06.358369+00:00",
+        "restart_sha256": "0feabe4149f02788509bb85fea8aafe7009abceea97d6b121ea1f432537e998d"
+      },
+      {
+        "segment": "extend_06",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 299.78,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.2981188661515266,
+        "ended_utc": "2026-11-26T00:49:52.583934+00:00",
+        "restart_sha256": "54ce22b6448f1f8ede49c672e4fbfc7601c5e0a0b5f49bd96ce7d7cf8893da29"
+      },
+      {
+        "segment": "extend_07",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 297.63,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.3251255246070943,
+        "ended_utc": "2026-11-26T04:59:49.344626+00:00",
+        "restart_sha256": "6f1da1bd1d18fdd427c4484d67d4907326df21e1beee0d43c4c2d9f740dce1f7"
+      },
+      {
+        "segment": "extend_08",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 295.71,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.2978198728017099,
+        "ended_utc": "2026-11-26T09:07:35.003261+00:00",
+        "restart_sha256": "a67a8b9e6b18aa05fb143fb14d268c209a3be65179b48ca744777444452b3a12"
+      },
+      {
+        "segment": "extend_09",
+        "status": "accepted",
+        "accepted_steps": 10000,
+        "temperature_K": 303.81,
+        "scc_verified": true,
+        "acyl_retained": true,
+        "C_OG_A": 1.3285892097648497,
+        "ended_utc": "2026-11-26T13:15:03.323580+00:00",
+        "restart_sha256": "61eb8505d774c0d8c8dee66d0ef844eeb641124e341fa2d16bbe5ba06f76a1b9"
+      }
+    ]
+  },
+  "model_and_proton_inventory": {
+    "qm_atoms": 98,
+    "qm_charge_e": -2,
+    "link_atoms": 8,
+    "movable_atoms": 4165,
+    "movable_shell_A": 12,
+    "frozen_exterior": true,
+    "qm_water_promoted": false,
+    "solvent_waters_remain_mm": true,
+    "interpretation": "Hydration dynamics do not model water proton transfer or deacylation chemistry; a candidate attacking water must be added to a reviewed QM region and reoptimized before chemical sampling.",
+    "endpoint_chemical_geometry_A": {
+      "Nalpha_13905_to_H1_13906": 1.019,
+      "Nalpha_13905_to_H2_13907": 1.04,
+      "leaving_N_19929_to_HG1_13917": 1.019,
+      "leaving_N_19929_to_HN_19937": 1.023,
+      "C19916_OG13916": 1.329,
+      "C19916_Nleave19929": 3.062,
+      "C19916_O19917": 1.25
+    },
+    "inventory_note": "Nalpha carries H1/H2; leaving N carries HG1/HN in the retained-product acyl-enzyme endpoint. The C-OG bond is retained, the C-Nleave distance indicates cleavage, and the carbonyl C-O remains short. No protonation state or charge was changed during the extension.",
+    "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+    "endpoint_protonation_review": {
+      "status": "root_measured_extend_09_restart",
+      "Nalpha_13905_H1_13906_A": 1.031,
+      "Nalpha_13905_H2_13907_A": 1.059,
+      "leaving_N_19929_HG1_13917_A": 1.013,
+      "leaving_N_19929_HN_19937_A": 1.042,
+      "interpretation": "Both termini are neutral NH2 at the accepted extend_09 endpoint; acyl-enzyme heavy-atom chemistry is retained and plausible.",
+      "annotation_issue": "The existing hydration report labels Nalpha protonated, which conflicts with these measured endpoint bond lengths. Treat its water-H...Nalpha descriptor as stale/misleading; do not silently rewrite the existing analysis records."
+    }
+  },
+  "attacking_water": {
+    "analysis_criteria": {
+      "near_attack_O_C_A_max": 3.5,
+      "attack_angle_deg": [
+        95,
+        125
+      ],
+      "hbond_DA_A_max": 3.5,
+      "hbond_DHA_deg_min": 135,
+      "interpretation": "exploratory geometry annotation only; does not establish reactivity or proton transfer; water-H...Nalpha is descriptive because Nalpha is protonated"
+    },
+    "frames_analyzed_including_endpoint": 1021,
+    "analyzed_horizon_ps": 51.0,
+    "analysis_report_mtime_utc": "2026-11-26T13:17:21.142424+00:00",
+    "frame_manifest_mtime_utc": "2026-11-26T13:17:36.550171+00:00",
+    "water_oxygens_screened": 28245,
+    "near_attack_water_frame_observations": 0,
+    "near_attack_candidate_count_at_26ps_preflight": 0,
+    "nearest_water_residue_1based": 23286,
+    "nearest_water_oxygen_atom_1based": 85435,
+    "endpoint_O_to_acyl_C_A": 6.246,
+    "minimum_transient_O_to_acyl_C_A": 4.939404098578234,
+    "minimum_transient_time_ps": 30.0,
+    "attack_angle_at_minimum_deg": 72.1095162762779,
+    "final_51ps_O_to_acyl_C_A": 6.314155770823348,
+    "final_51ps_attack_angle_deg": 34.94596004212788,
+    "transient_vs_endpoint": "Closest sampled approach improved from 6.246 A at the initial endpoint to 4.939 A at 30 ps, but its O-C-Ocarbonyl angle was only 72.1 degrees; it then ended at 6.314 A and 34.9 degrees. No frame met the exploratory O-C <=3.5 A and 95-125 degree gate. These transient distances do not identify a near-attack water.",
+    "endpoint_O_C_Ocarbonyl_angle_deg": 46.136274747338746
+  },
+  "analysis_and_movie": {
+    "analysis_scope": [
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/heat/trajectory.nc",
+        "stage": "heat"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/equil/trajectory.nc",
+        "stage": "equil_300K"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_01/trajectory.nc",
+        "stage": "extend_01"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_02/trajectory.nc",
+        "stage": "extend_02"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_03/trajectory.nc",
+        "stage": "extend_03"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_04/trajectory.nc",
+        "stage": "extend_04"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_05/trajectory.nc",
+        "stage": "extend_05"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_06/trajectory.nc",
+        "stage": "extend_06"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_07/trajectory.nc",
+        "stage": "extend_07"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_08/trajectory.nc",
+        "stage": "extend_08"
+      },
+      {
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_09/trajectory.nc",
+        "stage": "extend_09"
+      }
+    ],
+    "vmd_frame_count": 1021,
+    "vmd_accepted_extension_segments": [
+      "extend_01",
+      "extend_02",
+      "extend_03",
+      "extend_04",
+      "extend_05",
+      "extend_06",
+      "extend_07",
+      "extend_08",
+      "extend_09"
+    ],
+    "analysis_report_sha256": "8e2235d7dce86a50006f4b34d5071199ececea9bdf55e2226c3f3a4db7d21e49",
+    "frame_manifest_sha256": "0863d3bfd5d1b831ea145bc4acdc39ba07286e1b6f5f2192f4020800fcc603d4"
+  },
+  "recommendation": {
+    "continue_unbiased_hydration_md": true,
+    "proposed_followon": "Extend accepted 51 ps to 101 ps using ten sequential 5 ps NVT blocks on one CPU, with no reheating and per-block acceptance and refreshed water analysis.",
+    "reason": "No water met the exploratory near-attack screen by 51 ps; another bounded solvent search is warranted to look for a position suitable for a later QM-water model.",
+    "one_MM_water_limitation": "All waters remain MM in this trajectory. Even a close/near-attack water is only a positional candidate; stop/assess it, then separately promote it to QM and reoptimize before any proton-transfer or deacylation chemistry claim.",
+    "safe_continuation_input": {
+      "accepted_restart": "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_09/restart.ncrst",
+      "restart_sha256": "61eb8505d774c0d8c8dee66d0ef844eeb641124e341fa2d16bbe5ba06f76a1b9",
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "prerequisites": [
+        "new versioned 51-to-101 ps plan with ten 5 ps blocks and fresh distinct seeds",
+        "check current Violet session/CPU queue availability before launch; use one CPU",
+        "verify the extend_09 accepted native/SCC/numeric/temperature/boundary/acyl-retention receipts and restart/topology hashes",
+        "continue velocities from the accepted restart without reheating or changing protonation/QM region/Hamiltonian",
+        "retain segmentwise gates and refresh analysis at each block before proceeding"
+      ]
+    },
+    "expected_cost": "Observed 45 ps extension required about 40.5 h wall time; another 50 ps is approximately 45 h on Violet at that throughput, depending on availability.",
+    "execution_status": "Not launched in this read-only audit."
+  },
+  "sources": [
+    "hydration_reconnaissance/README.md",
+    "hydration_reconnaissance/endpoint status hydration_endpoint_status_20261124.json (pilot-only snapshot; superseded by later accepted blocks)",
+    "hydration_reconnaissance/extension_20ps_status.json",
+    "hydration_reconnaissance/extend_01..extend_09/status.json and scientific_acceptance.json",
+    "hydration_reconnaissance/analysis/report.json and report.md",
+    "hydration_reconnaissance/vmd_progress/frame_manifest.json and water_candidates.json",
+    "hydration_reconnaissance/followon_queue_resume_job/preflight.json, recovery_record.json, execution/status.json",
+    "13_deacylation_pilot/endpoint_water_audit.json"
+  ],
+  "audit_limits": [
+    "No raw trajectory frames were scanned or recalculated in this audit.",
+    "The near-attack geometry labels are exploratory screening criteria, not a catalytic acceptance standard.",
+    "No new calculation, test, dependency, or change to existing scientific input was made."
+  ]
+}

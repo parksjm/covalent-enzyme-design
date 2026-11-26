@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-26T22:21:11.956823+00:00",
+  "parent_git_commit": "315b094020472c3787b4c273865f21df5ea82b87",
+  "scope": "Reviewed direct-US30to60ps continuation, three bounded acylenzyme hydration streams, matched MBAR watcher, scientific methods and reproducibility",
+  "running_native_jobs": {
+    "violet_direct_us_workers": 40,
+    "violet_hydration_streams": 3,
+    "azalea_relay_us_workers_unchanged": 57
+  },
+  "violet_hardware": {
+    "physical_cores": 24,
+    "logical_cpus": 48,
+    "single_thread_sander_processes": 43,
+    "hydration_nice": 10,
+    "direct_us_nice": 5,
+    "note": "Logical CPUs share physical cores; lower-priority hydration is bounded to three streams"
+  },
+  "hydration_protocol": {
+    "temperature_K": 300,
+    "movable_radius_A": 12,
+    "waters_remain_MM": true,
+    "main_start_ps": 51,
+    "main_new_ps_cap": 50,
+    "branch_fork_ps": [
+      26,
+      41
+    ],
+    "branch_new_ps_caps": [
+      25,
+      25
+    ],
+    "shared_history_is_independent": false,
+    "stop_for_candidate_review": true,
+    "near_attack_gate": {
+      "owater_cacyl_max_A": 3.5,
+      "owater_cacyl_ocarbonyl_angle_deg": [
+        95,
+        125
+      ]
+    },
+    "chemical_interpretation": "Hydration reconnaissance only; explicit QM water promotion and reoptimization precede deacylation chemistry"
+  },
+  "direct_protocol": {
+    "windows": 63,
+    "existing_ps_per_window": 30,
+    "target_ps_per_window": 60,
+    "block_ps": 5,
+    "changed_biases": false,
+    "changed_proton_inventory": false,
+    "reheated": false,
+    "same_checkpoint_priority_across_windows": true
+  },
+  "analysis_protocol": {
+    "discard_production_once_ps": 5,
+    "bootstrap_replicates": 200,
+    "block_length_ps": 5,
+    "block_length_sensitivity_ps": 2.5,
+    "automatic_direct_horizons_ps": [
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ],
+    "matched_relay_comparison_required": true,
+    "analysis_workers": 4
+  },
+  "tests": {
+    "initial_combined_run": {
+      "passed": 177,
+      "failed": 1,
+      "failure": "Multiprocessing test inherited an ambiguous sys.path from prior CLI test imports; production controllers use explicit frozen source paths"
+    },
+    "test_only_fix": "The multiprocessing parity test explicitly prepends the loaded relay_fixed_pmf package source before spawning; no production file changed for this diagnosis",
+    "final_combined_run": {
+      "command": "uv run pytest -q tests/test_direct_us*.py tests/test_fixed_us_statistics.py tests/test_watch_direct_fixed_pmf.py tests/test_hydration*.py tests/test_deacylation*.py tests/test_relay_fixed*.py tests/test_progress_pull.py -k 'not test_full_analysis_matches_endpoint_and_tracks_all_waters'",
+      "passed": 177,
+      "deselected": 1,
+      "seconds": 20.57,
+      "deselection_reason": "Only the expensive full water-analysis test was excluded from repeat; it already passed in the initial combined run"
+    },
+    "laptop_export_tests_passed": 4,
+    "lint": "Selected Ruff checks passed",
+    "format": "19 new implementation and test files already formatted; changed multiprocessing test Ruff lint/format passed",
+    "shell_syntax": "bash -n scripts/pull_nyl12_inspection.sh passed"
+  },
+  "coverage_percent": {
+    "direct_native_modules_combined": 86,
+    "direct_analysis_adapter": 81,
+    "hydration_continuation_helpers": [
+      99,
+      100
+    ],
+    "hydration_replica_helper": 92
+  },
+  "coverage_limits": "Watcher controller and CLI coverage not measured; tested functional wait/resume, frozen-source child execution and preserved failure status. Native identity and real retained-prefix postprocessing checks passed.",
+  "scientific_acceptance": {
+    "native_startup_verified": true,
+    "new_sampling_convergence": false,
+    "new_attacking_water_verified": false,
+    "new_deacylation_path_or_barrier_claim": false,
+    "new_neb_started": false
+  },
+  "action_journal": {
+    "file": "provenance/agent_actions_us_hydration_extensions_20261126.jsonl.gz",
+    "first_record_one_based": 57051,
+    "last_record_one_based": 57323,
+    "records": 273,
+    "uncompressed_sha256": "abae93a807641c1a047958fd13477249c2b9aebedc2972de92f53d16ce04f129",
+    "preceding_prefix_checkpoint": "provenance/direct_pmf_reanalysis_checkpoint_20261126.json",
+    "active_journal": "output_agent_actions/20261021.jsonl"
+  },
+  "selected_file_sha256": {
+    "docs/NYL12_MECHANISM_ROADMAP.md": "a97ec2a69f639a4a7ad6b4cdc6973e374ff49f59437460ec572e06d94522892f",
+    "docs/standalone_handoff_20261020.md": "a249c889c3f88b988d475163575f577aed63bbded2518a25f655b4fd0426d21a",
+    "manuscript/METHODS_DRAFT.md": "05aa528c2fbf1eab6275aea7efb85eb9dd608a8ee957d691eb1ba44a59f78428",
+    "manuscript/RESULTS_DRAFT.md": "a0deceaba206a900670e2ae1fd03fcca80655e51f5070daecf7ca772297a0866",
+    "scripts/pull_nyl12_inspection.sh": "817258bdc035f887e2c2820bfd251a7c166d290418569032a20052ba9c937ccb",
+    "scripts/analyze_direct_fixed_pmf.py": "6dfb0450516056e49fb68bc1fa4b1615ebb2d98a4381716f14cf67994183e51b",
+    "src/nyl12_covalent/direct_us_fixed_io.py": "3d09589ab069c2b0c892f7ce430f87c65327d6a74c0cb74701958425aa4bedf2",
+    "scripts/continue_direct_us.py": "ef9845fd4fcbb322ad3e76c9994800d40272d73c17728fc0ec991ce88c99e895",
+    "scripts/watch_direct_fixed_pmf.py": "cad99f41655feeced5b95f31c0129aecf83f421a73cabd4cf0ecda2e42ddd4cc",
+    "scripts/prepare_hydration_continuation_101ps.py": "bc68a2df16ead9e1132e66b995dff258086fa00b668107c7751b77f43e029c1b",
+    "scripts/prepare_hydration_replicas.py": "ccd01dd3a167ff7a58b20e04f94f1c86b05cd0ee01c388939067535a36ef30fd",
+    "scripts/run_hydration_replica_worker.py": "544af53415d44903ef61dedf64ffe93bc8564d53fbd214eec250cc0efea37d8e",
+    "analysis/deacylation_status_20261126.json": "20c5d530587965087ca7ba7cfb4395e7e4997a07d5d731c48f0ac93df55f965e",
+    "analysis/direct_us_continuation_checkpoint_preflight_20261126.json": "d243e2ce8d8b6f6de958c71499c27ee7371355f60b0c3d78bae94531bd8d0e35",
+    "src/nyl12_covalent/direct_us_continuation.py": "641f025ac7168469f2f582db7df25bfd2daada5134a66ae44c078299e09ff7b3",
+    "src/nyl12_covalent/direct_us_continuation_worker.py": "77e338ac9c55b5ba2a8293237843775536155f50c1f0d252cc5447f4ebb39d88",
+    "src/nyl12_covalent/direct_us_continuation_scheduler.py": "b9901e3999aae53b6194ccb89403b4767c6b493e543c1d5eaac7285b1b8764b2",
+    "src/nyl12_covalent/direct_us_continuation_runtime.py": "d19f1ce8528df44e6452a8716499f3846d8b17e3a2d9d8afe0fd23ead1635ea1",
+    "src/nyl12_covalent/direct_us_continuation_io.py": "4da8a80f6f7c5fd314a1446c6d49ceb7aeedb54c819113f9e1accb60c642ecd9",
+    "src/nyl12_covalent/direct_fixed_watch_helpers.py": "009af124248d42f605fa3551b58ee5d806d580e2bf32bedac21037a1114cbac4",
+    "src/nyl12_covalent/hydration_continuation_101ps.py": "bdde86571f78af43c10f6892da7447554a08f14bcf2736738300dd8c8405f085",
+    "src/nyl12_covalent/hydration_continuation_sources_101ps.py": "468f5c0b8a81fd28ab273b160fd69cd3deb6e491b8f0e450bde90cbab5a0b1a8",
+    "src/nyl12_covalent/hydration_replicas.py": "6cc2cd45082f4b3fe46dec3ce900094bfa737939780d05eb257685161f8597b5",
+    "tests/test_direct_us_continuation.py": "6da153cf78142a8de3fec38fec7cbf324ddf05f1e7cda3187aa95fae1c73bd50",
+    "tests/test_direct_us_continuation_io.py": "b7f77197795ebc8cca91b2b7c28d4af0d7facdd2d866d11a8e798efe81ff3156",
+    "tests/test_watch_direct_fixed_pmf.py": "7afec032e6ced4b63d2ed0d998279dcd0aef67b90b58307b26cfb9470ed3d796",
+    "tests/test_hydration_continuation_101ps.py": "6dad1a76b334ec45bc446317748c53316ff1e277c42a7b6cd729d363cf33841c",
+    "tests/test_hydration_replicas.py": "a8e5d20b30fc104024260d29ebaa00e199f87a8908048d89589e66cba31518b6",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/plan.json": "294f868537b937a5130af5f8357837466ec268107862065c50e40639626a802d",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/plan.sha256": "b5314b179a237959cd45d88f53f6151508725c293a186008e1a357627d2362be",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/root_review.json": "33ee224a980b1c7bd0eb988e15dff0af3aa4af44b9be4c2f9af24fb0e38639b8",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/README.md": "91f7b573ff748cbb63e9909ddcb42bc892aa5ae0f41f11c0e363acc3a59a3e91",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/native_source_manifest.json": "98ed7c9ae7913888d66646a914a169ad50d728e040aa8498503e62219a909b56",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/analysis_source_manifest.json": "e63054da3f9f569561080de59f3ce70eeb487a9058656df7a94f3e5d36671164",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/continuation_60ps_20261126/launch_receipts.json": "71c72ef8f926e702c0e2469ecc525c09f8fb99864cf2693c074e997705bf3274",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_us_extension_triage_20261126.json": "1347108ee0b110da58e9a2995995a2282e584c519c0100ec23188396b5498cf5",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_plan.json": "a7cb3d2e6c344ee6b7dcd13d480e9e8d080cff57d207a73c48d616663e620838",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_plan.sha256": "8358278749d86cb1c29c1f2d1bd0c09667021ab26f786a873efb90933ef7b208",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_root_review.json": "ba1450cab9f8cd0a243b293a6612aa7aedd49e87eede178d18c9d2fe6a813f53",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_template.json": "65e9380498fddc654e9e61e44c23a8f470cb2d0d5ab69f09692b90ed59f15604",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/continuation_101ps_resource_preflight.json": "067d97083cc4e0791a64f8ddfe747037c5c084f166338af3d7882411bdf36db0",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/README.md": "83eaac6d4581dd22854a7bef8b97d0694b4f76a4461235a46b9d083761b4dde2",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_02_from_26ps_extend04/replica_plan.json": "6de399fea4a18575156a2ea478e0e3dce1b5ff3e4b3f0709c2383f5190cdd675",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_02_from_26ps_extend04/replica_plan.sha256": "f2b0c06a28c168820e980063ee0a333617f023dc76c458285cb17f6cfe847557",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_02_from_26ps_extend04/root_review.json": "387422159c53502c4710dbcebd2b10c1dfa637f55c86e5855978a86357569c15",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_03_from_41ps_extend07/replica_plan.json": "bd9fabe3a57739779989e41d371cf8fe9e125c6e24236156fee2bf9dc54e66db",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_03_from_41ps_extend07/replica_plan.sha256": "1d3ca87487c763e1de538565be87337c454f48f17ab1699efd4f996ee167d50d",
+    "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/replicas/replica_03_from_41ps_extend07/root_review.json": "b69004ab95c4873e0867197cb6ebffc65694067f2cb908c662d5c158295faafa",
+    "analysis/relay_acyl_water_preflight_20261126/inspect_endpoints.py": "9f47e3007815636fc88d6d4345dba4d1fca53cbb09565c73db2865633b11838b",
+    "analysis/relay_acyl_water_preflight_20261126/report.json": "b09277d6886943abd92823a5448fac0df078c2593dacb032e4ad35e4d58288f2",
+    "src/nyl12_covalent/deacylation_hydration_prepare.py": "948f114ab587b8b0138456d092117403123c5da714e075c8620adc2fcded3368",
+    "src/nyl12_covalent/hydration_receipt_adapter.py": "f1d32308df77b5998d10a45ca0dd8c620fc2fef38f98593bb3341c827e81946e",
+    "scripts/run_deacylation_hydration.py": "609f89ea43b38fd31a7528fae9bc079ee54e03b56897b95c0fc55cf8ce304c8f",
+    "scripts/run_deacylation_hydration_extension.py": "ea1b66130549521bf16b929da26fb42ad17203737f0eba48702677b8d87dbe93",
+    "scripts/export_hydration_vmd.py": "63beda6125b9a0be1243d133e7c1f26305b27de97f1461088b78b5226e577743",
+    "scripts/analyze_deacylation_hydration.py": "a66c9686346000e6f41a52643d6084e61af5322d96df5727309cc415abf48405",
+    "scripts/refresh_deacylation_hydration.py": "af47a884a81353927838f081e10ada815a726d7c6438c6699c713075494111ea",
+    "tests/test_hydration_receipt_adapter.py": "7b07fc7354fa4bd2e3bd669bd28fbca09fa784e0bf2c29dd1f3d2955febfb8f8",
+    "tests/test_deacylation_hydration.py": "ec22eadd0f899390dfdfd68910c077e63b70d6fcb5e6248852b091d9e43358d4",
+    "tests/test_deacylation_hydration_extension.py": "09da11995a42ebc59ba71ee35fe135a7e6e20611629092a62eeeb321c48d7703",
+    "tests/test_hydration_followon.py": "2b8907a423c6fd8e0f6a1cce338f9d0b7a94971201978a4d58eaf10982558d6e",
+    "tests/test_hydration_refresh.py": "26358741677a1dcd28054b41cbc6cdbb7994db54186c51fa70f226836126e522",
+    "tests/test_hydration_movie_pull.py": "72fa6a6976b75fd10cf56cb751f043924891cb68292b31b390a3d603809034b4",
+    "tests/test_relay_fixed_pmf.py": "56fbfaa0e9072aef8b0dfd5db60140e0ead37f09143a8b6213872ef566c408be"
+  },
+  "rollback": "Preserve raw data, originals and frozen runtime snapshots. Revert only this checkpoint in a new commit if needed. Stop only verified named jobs when authorized; do not reset unrelated working changes."
+}
