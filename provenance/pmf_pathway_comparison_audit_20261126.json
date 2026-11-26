@@ -1,0 +1,124 @@
+{
+  "status": "partial_recorded_model_and_native_input_audit",
+  "sources": {
+    "relay": {
+      "input": "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_001/03_production_5ps/run.mdin",
+      "sha256": "ba6f1e42f2f1bfa1e9ffea68701b17e72afee81d0f8fa3f28b5eba227b6bae0c",
+      "settings": {
+        "qmmask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+        "qmcharge": "-2",
+        "qm_theory": "DFTB3",
+        "qmmm_int": "1",
+        "adjust_q": "2",
+        "qm_ewald": "1",
+        "qm_pme": "1",
+        "qmcut": "10.0",
+        "scfconv": "1.0d-12",
+        "lnk_dis": "1.09",
+        "lnk_atomic_no": "1",
+        "lnk_method": "1",
+        "dftb_telec": "0.0",
+        "tight_p_conv": "1",
+        "dt": "0.0005000",
+        "ntt": "3",
+        "gamma_ln": "2.0",
+        "temp0": "300.0",
+        "ntr": "0",
+        "ibelly": "1",
+        "bellymask": ""
+      },
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    },
+    "direct_seeded_legacy": {
+      "input": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/window_001/03_production_block_01_5ps/run.mdin",
+      "sha256": "202b06d36b5c8bed7d40b31db723e6fbdb27247a24fbee86f007b28c907d0a59",
+      "settings": {
+        "qmmask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+        "qmcharge": "-2",
+        "qm_theory": "DFTB3",
+        "qmmm_int": "1",
+        "adjust_q": "2",
+        "qm_ewald": "1",
+        "qm_pme": "1",
+        "qmcut": "10.0",
+        "scfconv": "1.0d-10",
+        "lnk_dis": "1.09",
+        "lnk_atomic_no": "1",
+        "lnk_method": "1",
+        "dftb_telec": "0.0",
+        "tight_p_conv": null,
+        "dt": "0.0005000",
+        "ntt": "3",
+        "gamma_ln": "2.0",
+        "temp0": "300.0",
+        "ntr": "0",
+        "ibelly": "1",
+        "bellymask": ""
+      },
+      "topology_sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63"
+    }
+  },
+  "matching_recorded_settings": {
+    "qmmask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+    "qmcharge": "-2",
+    "qm_theory": "DFTB3",
+    "qmmm_int": "1",
+    "adjust_q": "2",
+    "qm_ewald": "1",
+    "qm_pme": "1",
+    "qmcut": "10.0",
+    "lnk_dis": "1.09",
+    "lnk_atomic_no": "1",
+    "lnk_method": "1",
+    "dftb_telec": "0.0",
+    "dt": "0.0005000",
+    "ntt": "3",
+    "gamma_ln": "2.0",
+    "temp0": "300.0",
+    "ntr": "0",
+    "ibelly": "1",
+    "bellymask": ""
+  },
+  "differing_recorded_settings": {
+    "scfconv": {
+      "relay": "1.0d-12",
+      "direct_seeded_legacy": "1.0d-10"
+    },
+    "tight_p_conv": {
+      "relay": "1",
+      "direct_seeded_legacy": null
+    }
+  },
+  "umbrella_policy": {
+    "legacy_features": [
+      "q_acyl",
+      "q_H"
+    ],
+    "legacy_force_constants": [
+      100,
+      100
+    ],
+    "relay_chart_features": [
+      [
+        "q_acyl",
+        "q_act"
+      ],
+      [
+        "q_acyl",
+        "q_del"
+      ]
+    ],
+    "relay_force_constants": [
+      25,
+      25
+    ],
+    "units": "Amber rk convention; kcal mol^-1 A^-2; U=rk*(q-q0)^2"
+  },
+  "limitations": [
+    "Physical-Hamiltonian hash equivalence is not established: legacy lacks the current full identity record.",
+    "Frozen exterior coordinate equality and every3ob parameter identity were not verified by this bounded audit.",
+    "Distinct bias potentials are removed by correct reweighting; differences do not alone invalidate converged PMFs.",
+    "Actual channel identity, common endpoint basins, postprocessing and convergence must be audited before mechanistic comparison."
+  ],
+  "science_jobs_changed": false
+}

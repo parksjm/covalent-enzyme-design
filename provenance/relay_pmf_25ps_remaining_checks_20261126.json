@@ -1,0 +1,121 @@
+{
+  "all_frame_path_histogram": {
+    "acyl_basin": {
+      "boundary_candidate": false,
+      "bounds": [
+        0.9,
+        1.1
+      ],
+      "center": 1.0375,
+      "index": 51,
+      "interior_with_occupied_neighbors": true,
+      "neighbor_centers": [
+        1.0125,
+        1.0375,
+        1.0625
+      ],
+      "neighbor_indices": [
+        50,
+        51,
+        52
+      ],
+      "neighbor_occupied": [
+        true,
+        true,
+        true
+      ],
+      "neighbor_raw_frame_counts": [
+        305,
+        27,
+        1
+      ],
+      "pmf_kcal_mol": -3.359178714813314
+    },
+    "es_basin": {
+      "boundary_candidate": false,
+      "bounds": [
+        -0.1,
+        0.1
+      ],
+      "center": -0.0125,
+      "index": 9,
+      "interior_with_occupied_neighbors": true,
+      "neighbor_centers": [
+        -0.037500000000000006,
+        -0.0125,
+        0.0125
+      ],
+      "neighbor_indices": [
+        8,
+        9,
+        10
+      ],
+      "neighbor_occupied": [
+        true,
+        true,
+        true
+      ],
+      "neighbor_raw_frame_counts": [
+        2,
+        193,
+        563
+      ],
+      "pmf_kcal_mol": -0.2844233067292117
+    },
+    "intervening_bins_occupied": true,
+    "numerical_reference_bracketing_passes": true
+  },
+  "checkpoint_analysis_request_sha256": "7adb2f0ab6a71a94ba075c129f9668e5abc4478200759d035a7573a30d0d0568",
+  "checkpoint_request_hash_matches": true,
+  "checkpoint_request_sha256": "7adb2f0ab6a71a94ba075c129f9668e5abc4478200759d035a7573a30d0d0568",
+  "estimator": "fixed-burn-in MBAR PMF using every retained frame from 5 to 25 ps/window",
+  "fixed_burnin_selected_estimator": {
+    "acyl_minimum_bin_frames": 27,
+    "acyl_minimum_bin_weighted_ess": 1.2410317380301452,
+    "acyl_minimum_kcal_mol": -3.359178714813314,
+    "acyl_minimum_s": 1.0375,
+    "acyl_next_bin_frames": 1,
+    "acyl_next_bin_weighted_ess": 1.0,
+    "early_late_acyl_minima": {
+      "early_half": {
+        "acyl_minimum_kcal_mol": -5.732356265796854,
+        "acyl_minimum_s": 1.0375
+      },
+      "late_half": {
+        "acyl_minimum_kcal_mol": 0.24621226411226127,
+        "acyl_minimum_s": 1.0125
+      }
+    },
+    "es_density_minimum_s": -0.0125,
+    "horizon_ps": 25.0,
+    "reference_plot_bin_s": 0.0125
+  },
+  "fixed_report_sha256": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+  "generated_by": "scripts/audit_relay_pmf_support.py",
+  "horizon_ps": 25.0,
+  "input_sha256": {
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_25ps/analysis.json": "843e4a021f23a9b9e4061d26a405f0b1f402c06f5085beb677d79a57754f8c56",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_25ps/analysis_request.json": "7adb2f0ab6a71a94ba075c129f9668e5abc4478200759d035a7573a30d0d0568",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/parallel_source/src/nyl12_covalent/relay_umbrella_projection.py": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc"
+  },
+  "interpretation": "The exact path_histogram geometric bracketing predicate passes for the saved 25 ps fixed-burn-in profile: both density minima are interior, each minimum and both neighboring bins are occupied, and the intervening bins are occupied. The acyl basin remains statistically weak (weighted ESS 1.24 at its minimum and one raw frame in its next bin), so geometric bracketing does not establish a reliable basin free energy or accepted barrier. All findings are conditional on the modeled pathway, saved weights, and retained 5\u201325 ps/window frames.",
+  "older_parent_gate_status_not_applicable_to_all_frame_estimator": {
+    "effective_samples": false,
+    "neighbor_histogram_overlap": false,
+    "note": "These values describe the old checkpoint estimator only."
+  },
+  "schema_version": 1,
+  "scope": "Derived audit of saved estimators; no refit, new job, or changed reference.",
+  "search_bounds": {
+    "acyl": [
+      0.9,
+      1.1
+    ],
+    "es": [
+      -0.1,
+      0.1
+    ]
+  },
+  "temperature_K": 300
+}

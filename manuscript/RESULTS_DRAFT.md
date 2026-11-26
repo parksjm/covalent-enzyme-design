@@ -639,3 +639,386 @@ PROPKA values 8.46–9.91 versus its model 10.5; His257 4.85–5.22, Tyr267
 These are hypotheses about electrostatics/proton availability, not established
 catalytic roles or a basis for automatic protonation changes. Substrate removal,
 the single structural snapshot and method disagreement remain limitations.
+
+
+## Matched-design MD: two independent replicas (2026-11-24)
+
+All eight WT, focused mask_03, broader mask_07 and V111C production runs
+completed 100 ns and passed native completion/final-temperature gates. Each
+was analyzed at 1,000 times (100 ps spacing) across four fixed substrate/site
+assignments, giving 4,000 site-frame observations per replica. The two velocity
+replicas are independent units; sites and time-correlated frames are nested.
+Native-Thr similarity is reported separately and does not censor these values.
+
+| Sequence | Replica 1 Tier A / A-or-B (%) | Replica 2 Tier A / A-or-B (%) |
+|---|---:|---:|
+| WT | 10.3 / 45.7 | 12.6 / 55.8 |
+| Broader mask_07 | 30.5 / 69.5 | 17.4 / 46.4 |
+| Focused mask_03 | 4.8 / 23.3 | 10.9 / 38.7 |
+| V111C | 5.7 / 33.5 | 4.7 / 35.6 |
+
+Mask_07 had more Tier A frames than WT in both replicas, but its broader
+A-or-B advantage did not reproduce in replica 2. Conditional Tier A among
+A-or-B observations was 43.9/37.5% for mask_07 and 22.5/22.6% for WT.
+Focused mask_03 and the known-active V111C control retained these geometries
+less often than WT. These results support mask_07 as a structural follow-up,
+not a prediction of improved catalysis or justification for experimental
+spending by themselves. Only two replicas per sequence were analyzed, starting
+poses differ, and none of these nonreactive simulations measures a reaction
+barrier. Source-bound tables, first/second-half summaries, native receipts and
+plot are retained under `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/`
+`md_followup/analysis/matched_replica_comparison.{json,csv,md,png}`.
+
+
+## Native-Thr gate sensitivity and structural interpretation (2026-11-24)
+
+The rare joint native-Thr/Tier A/B passes are dominated by simultaneous
+OG1/Nalpha displacement and psi deviations, rather than chi1 rotamer changes.
+Among Tier A/B frames, WT versus mask_07 failure rates are 99.89/98.67% for
+OG1, 99.84/99.03% for Nalpha, 83.82/90.21% for psi and 5.47/3.71% for chi1.
+Modest diagnostic relaxation (1.0 Å OG1, 1.5 Å N, 45-degree psi, 30-degree chi1)
+still admits only 2/1829 and 14/2779 frames. The original static WT starts are
+borderline OG1 failures (0.757–0.880 Å versus 0.75 Å); the MD distributions
+show larger real shifts. Independent alpha- and beta-scaffold fits do not
+remove the discrepancy in a bounded WT sample. The original torsion
+definitions/circular differences were verified; N-terminal phi is not used.
+
+No numerical thresholds changed. Following the diagnostic audit and PI
+approval, native resemblance is retained as a continuous structural diagnostic
+and does not reject or rank candidates; it is not a validated activity classifier.
+The crystal and ligand-bound MD need not have identical ensembles, and known-active
+control rejection already limits hard-filter interpretation. Matched-site
+representative and rare closest-native overlays, initial controls, scalar
+sensitivity and portable PyMOL scenes are in
+`design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124/`.
+
+
+## Initial retained-product acylenzyme hydration screen (2026-11-24)
+
+The initial 6 ps reconnaissance (1 ps heating and 5 ps 300 K NVT) was screened
+at every saved frame, including its exact starting endpoint: 121 configurations
+and 28,245 water molecules. The closest observed water-O–acyl-C distance was
+5.662 Å for WAT23286; its Ow–C–Ocarbonyl angle at that closest approach was
+37.24°. No saved configuration met the exploratory combined near-attack
+annotation (Ow–C≤3.5 Å and angle 95–125°). The final nearest distance was 5.786 Å,
+compared with 6.246 Å initially. The acylenzyme remained covalent at the accepted
+endpoint (C–OG1=1.310 Å; C–leaving-N=3.250 Å).
+
+This is a limited hydration observation with the amine product retained and a
+fixed exterior, not evidence that catalytic water cannot enter or that
+hydrolysis is unfavorable. Water remains MM and therefore does not carry out
+QM bond changes in this pilot. Heating and 300 K trajectory fractions are
+reported separately. The PI authorized an additional 20 ps in four checkpointed
+5 ps blocks to examine further approach before selecting any expanded-QM state.
+No deacylation barrier or sampling-convergence claim is made.
+
+The first accepted 5 ps continuation brought the analyzed trajectory to 11 ps
+(221 saved configurations including heating and the exact initial endpoint).
+WAT23286 reached a closest Ow–acyl-C distance of 5.422 Å at 9.7 ps, with an
+Ow–C–Ocarbonyl angle of 47.59°. No water met the exploratory combined
+near-attack annotation. The accepted 11 ps endpoint retained the acyl bond
+(C–OG1=1.373 Å). These are interim hydration observations; sampling continues.
+
+
+## N-terminal-relay acylation: retained endpoints and TS candidate (2026-11-25)
+
+The reverse-activation and forward-acylation branches reached E–S-like and
+acylenzyme-like states, respectively. Removing their reaction-coordinate
+biases retained the respective connectivities in the same 12 Å movable model
+with its original frozen exterior. Independent maximum gradients were
+4.79e−6 and 9.88e−6 Eh/bohr. E–S C–OG1/C–Nleave distances were 2.963/1.380 Å,
+whereas acylenzyme distances were 1.327/3.019 Å. The proton HG1 resided on OG1
+in E–S and on the leaving nitrogen in acylenzyme, while Nalpha retained two
+hydrogens at both endpoints. The shared window 033 source remained minimum-
+unverified; its role here was a common exploratory relay-like seed.
+
+Relative to the regenerated E–S endpoint, the combined driven physical PES
+maximum was 16.31 kcal/mol, and the acylenzyme endpoint was 4.15 kcal/mol lower.
+The forward dimer search converged to a candidate 16.312 kcal/mol above E–S
+using independent same-Hamiltonian energies (−718.1008556 versus
+−718.1268512 Eh). Its independent maximum gradient was 3.40e−5 Eh/bohr.
+First-order curvature and downhill connectivity remain unverified. These PES
+values are not activation free energies. The subsequent sampling status is
+reported below.
+The conformational reference/fast-QM accuracy and sampling qualifications in
+the Methods still apply. The reverse candidate search was stopped after repeated SCC failures/resets,
+large energy/curvature excursions and an E–S-like saved geometry. Its
+SCC-contaminated curvature is not used for TS qualification.
+
+A complementary extraction of the eight matched classical-MD CSVs found no
+Tier A/B site-frame observation with Nalpha–Nleave ≤3.5 Å. Medians conditional
+on Tier A/B were 5.99–6.34 Å. These descriptive distances reinforce that the
+original attack/oxyanion-hole geometry filters do not establish proton-relay
+preorganization; they are not new hard selection thresholds or evidence that
+induced-fit/water-mediated pathways are impossible.
+
+
+## Origin and limits of the retained TI1-like candidate (2026-11-25)
+
+The retained window 033 candidate was selected from an existing biased QM/MM
+MD trajectory (window 033, block 05, frame 46; recorded time 28.30 ps), then
+released from the umbrella potential and optimized with the unchanged DFTB3
+Hamiltonian, QM partition/proton inventory and 12 Å movable-region protocol.
+C–OG1 lengthened from 1.556 to 1.740 Å, C–Nleave remained 1.490 Å and C–O
+remained elongated at 1.309 Å; HG1 stayed on Nalpha at 1.050 Å. The independent
+maximum gradient was 7.94e−6 Eh/bohr. Full-minimum curvature qualification was
+unresolved, and the geometry-only classifier returned `unassigned`. We therefore
+report a retained partially tetrahedral/addition-like candidate, rather than a
+verified stable TI1 minimum or a finite-temperature intermediate lifetime.
+
+A matched release from window 032 lost the addition contact (C–OG1=2.661 Å,
+C–Nleave=1.371 Å, C–O=1.262 Å), although HG1 remained on Nalpha at 1.079 Å.
+Its geometry-only `reactant_like` label describes loss of addition character,
+not return to the neutral-Thr protonation microstate. Similar initial addition
+distances and the same model/proton inventory led to different outcomes.
+The results support conformational/environmental sensitivity; they do not
+identify a unique stabilizing contact or demonstrate that an altered force
+field, Asp protonation state or QM water caused retention. Reactive-state-
+conditioned QM/MM sampling supplied a useful alternative starting arrangement,
+but it did not itself establish an unbiased intermediate population.
+
+### Bias-free release of coordinate-driving plateau images (2026-11-26)
+
+Ten additional plateau-image releases (images 11–19 and 21) reached native
+force convergence and passed independent maximum-gradient checks, all below
+9.1×10⁻⁶ Eh/bohr. Image 20 reused the retained window 033 structure. Reaction-
+coordinate biases were removed; the common 12 Å movable region and frozen
+exterior were retained. The releases converged into two groups of addition-
+like geometries rather than returning to the noncovalent E–S geometry.
+
+| Starting images | C–OG1 (Å) | C–Nleave (Å) | Carbonyl C–O (Å) | Relative potential energy (kcal/mol) |
+| --- | --- | --- | --- | --- |
+| 11–15 | 1.808–1.811 | 1.476–1.477 | 1.300 | 0–0.012 |
+| 16–19, 21 | 1.739–1.743 | 1.490 | 1.309 | 1.386–1.392 |
+
+HG1 remained on Nalpha at approximately 1.050 Å in both groups. Energies
+are relative to the lowest released endpoint (image 12) under the common
+Hamiltonian and fixed exterior; they are neither free energies nor estimates
+of basin populations. The elongated C–OG1 contacts support partially
+tetrahedral/addition-like character but do not establish a conventional fully
+formed covalent TI1. The geometry classifier remains `unassigned`.
+No endpoint in this release series has been qualified as a local minimum.
+Window033's full-Hessian verification remains inconclusive because of
+unresolved eigenvalue signs; its subsequent selected-column repair failed
+the numerical step-stability gate. Native acceptance and endpoint structures
+are retained in `qmmm/pa6_flipped_model30/12_nterminal_relay/03_plateau_releases/`.
+
+### Relay umbrella-sampling progress (2026-11-26)
+
+All 57 windows completed 20 ps of production each (1.14 ns aggregate) by the
+26 November observation. The first completed MBAR checkpoint used only the
+first 5 ps/window: its highest sampled bin was 20.61 kcal/mol above the E–S
+reference, with unsampled projection bins and insufficient effective sampling.
+No global activation free energy is assigned. Later accepted native blocks
+were temporarily excluded by a derived trajectory-time validation failure.
+Analysis-only recovery regenerates their compact records with corrected time
+serialization handling, preserving native inputs, trajectories and scientific
+acceptance gates. The recovered cumulative 10–20 ps profiles filled the
+earlier internal projection gap. At 15 and 20 ps, however, the sampled
+reactant minimum lacked occupied neighboring bins, so the predeclared
+reference-resolution gate withheld a global barrier. Local overlap and
+effective-sampling gates also remained unmet. These estimates remain
+preliminary; neither apparent shoulders nor a favorable maximum establish
+a converged activation free energy.
+
+## Why the N-terminal relay is a plausible lower-energy route (2026-11-25)
+
+The relay offers a chemically plausible division of acid/base catalysis.
+The neutral Thr233 alpha-amine can accept the hydroxyl proton, increasing
+OG1 nucleophilicity, and the resulting alpha-ammonium group can subsequently
+protonate the leaving nitrogen as addition disrupts amide conjugation and
+C–N cleavage becomes favorable. This is consistent with the substrate-
+hydrolysis mechanism calculated for human asparaginase III (R41), and with
+an N-terminal proton donor in the cysteine Ntn-hydrolase study R54. These are
+analogies, not evidence that Nyl12 shares every intermediate or rate-limiting
+step. A neutral amide nitrogen has a resonance-delocalized lone pair and is a
+poorer proton acceptor than an ordinary amine; proton delivery can become
+more favorable after carbonyl addition changes that electronic structure.
+
+Unlike direct OG1-to-leaving-N transfer during attack, a relay need not satisfy
+a compressed OG1–H–Nleave–C four-center arrangement while preserving a useful
+carbonyl-attack angle. The retained window 033 candidate provides direct
+geometric evidence for delivery preorganization: Nalpha–HG1=1.050 Å,
+HG1–Nleave=1.975 Å and Nalpha–HG1–Nleave=179.44 degrees. The released
+acylenzyme instead has HG1–Nleave=1.026 Å and C–Nleave=3.019 Å. These distances
+are consistent with the mapped relay connectivity; they do not determine
+electronic bond orders, transmission coefficients or a TS ensemble. The
+source-hashed measurements are in
+`qmmm/pa6_flipped_model30/12_nterminal_relay/proton_relay_geometry_20261125.json`.
+
+Formation of an OG1-anion/alpha-ammonium pair still has an energetic cost.
+Local electrostatics and hydrogen bonding may offset that cost, while the
+Phe113 backbone NH/Asn186 side-chain NH donors can stabilize developing
+carbonyl-oxygen charge. Our present calculations have not isolated their
+individual energetic contributions or established that a discrete ion-pair
+minimum is necessary. Earlier direct paths and the present relay also have
+different conformational histories and E–S references: their apparent PES
+maxima cannot be subtracted to assign a relay-specific catalytic free-energy
+advantage. The ongoing jointly normalized US/MBAR campaign is the next test;
+for identical endpoints, a different route can lower the activation barrier
+but cannot change the overall reaction free energy.
+Hamiltonian accuracy, orthogonal sampling and conformational reference remain
+independent qualifications. No additional chemical restraint or target barrier
+was introduced to support this interpretation.
+# PMF statistical reporting checkpoint, 26 November 2026
+
+The preliminary N-terminal-relay PMF at 300 K contains 20 ps of accepted
+production sampling in each of 57 umbrella windows (1.14 ns aggregate), with
+3,150 configurations retained by the existing blockwise equilibration and
+decorrelation procedure. Pointwise statistical uncertainty was assessed using
+200 within-window resamples of complete 5 ps production blocks, retaining the
+original blockwise selections and refitting MBAR for each resample. Histogram
+edges and the sampled E–S reference bin were held fixed. All 43 occupied bins
+were supported in all resamples. The largest sampled PMF value was
+22.15 kcal mol⁻¹ relative to the fixed reference bin, with pointwise 95%
+percentile limits of 20.64–23.33 kcal mol⁻¹ at that coordinate. These limits
+describe a fixed-bin free-energy difference; they are not confidence limits
+for a selected activation barrier. Basin-reference and sampling-convergence
+criteria remain unresolved.
+
+The visibly irregular profile coincides with uneven effective support.
+For example, the bin centered at normalized path coordinate s=0.3125 contains
+81 selected configurations but a bin-local weight effective sample size of
+approximately 1.02; at s=0.1125, only five configurations are selected, with
+weight effective sample size approximately 2.56. Statistical intervals are
+conditional on the sampled configurations and do not exclude slower protein,
+solvent or proton-transfer relaxation. The previous direct-seeded campaign
+used 30 ps per window, 7,871 selected configurations and a different primary
+coordinate and histogram grid; its smoother appearance alone does not imply
+better convergence or permit a quantitative comparison of activation barriers.
+
+In a selection sensitivity check, the same equilibration/correlation estimator
+was applied once to each continuous 20 ps window rather than independently to
+four successive 5 ps segments. The median statistical inefficiency increased
+from 3.08 to 6.73 (maximum 11.73 versus 33.23); 2,840 configurations were
+selected compared with 3,150 in the archived analysis. Thus the short-segment
+procedure may miss correlations spanning segment boundaries, even though it
+discards more configurations as putative equilibration. This diagnostic did
+not replace the archived PMF or its selections; whole-window reanalysis and
+time stability are required before quantitative barrier acceptance.
+
+## Continuous-window sensitivity of the preliminary relay PMF
+
+At the same 20 ps/window checkpoint, we concatenated the four continuous
+production segments of each umbrella window before estimating equilibration
+and correlation times. This procedure selected 2,840 configurations, compared
+with 3,150 from segmentwise analysis. The largest sampled PMF value, located at
+s=0.6875 under both analyses, increased from 22.15 to 25.32 kcal mol⁻¹ relative
+to the same fixed E–S plotting reference. Using matched PyMBAR asymptotic
+covariance estimates, the pointwise 95% intervals at that coordinate were
+20.92–23.38 and 23.92–26.72 kcal mol⁻¹, respectively. The largest absolute
+difference between profiles over their common occupied bins was
+4.52 kcal mol⁻¹. Since both estimates use the same trajectory data, their
+intervals do not constitute independent-replicate significance tests.
+
+The continuous-window estimate used fewer configurations but had a larger
+global target-weight effective sample size (29.29 versus 6.73). This does not
+establish convergence: 46 of 57 windows retained fewer than 100 selected
+configurations, and eight retained less than 5 ps after equilibration removal.
+Two hundred within-window bootstrap refits of the globally decorrelated frames
+gave pointwise percentile limits of 24.12–26.76 kcal mol⁻¹ at s=0.6875.
+These resampling units differ from the archived five-ps block bootstrap;
+matched analytical intervals were therefore used for the main comparison.
+The sensitivity to selection policy and unresolved endpoint references
+preclude a validated activation-free-energy claim at this checkpoint.
+
+## Audit of extreme automatic production-data truncation
+
+Time-series inspection of the eight latest automatic cutoffs showed that
+extreme discards were not uniformly attributable to a sustained initial
+transient. In activation window 002, the proton-coordination progress metric
+had five-ps means of −0.0434, −0.0477, −0.0441 and −0.0461. Nonetheless, the
+default lag-summation approximation selected a 17 ps discard; using full lag
+summation moved the maximum cutoff to 6.85 ps. Window023 showed a substantial
+initial change around5–6 ps and a later excursion; its 18.2 ps cutoff isolated
+the final quieter suffix. Window024 exhibited a late change in the biased
+acylation coordinate, so neither universal early truncation nor the automatic
+latest-cutoff rule was established as a validated choice.
+
+The latest-of-thirteen individual optima, followed by maximum-g thinning of
+their common suffix, did not maximize the final common sample count. A
+diagnostic 5 ps discard retained 18 configurations in window 023 versus 6 under
+its automatic choice, and 18 versus 9 in window 002. These larger counts do
+not establish equilibration and were not substituted into the reported PMF.
+HG1 ownership and the two original N-terminal N–H bonds remained intact
+throughout these eight trajectories, indicating that the cutoff-driving
+fluctuations were not transfers of those protons between bonded owners.
+The observed sensitivity requires further temporal and burn-in checks before
+quantitative free-energy barriers can be accepted.
+
+These observations qualify interpretation of the automatic discards. Chodera's
+criterion maximizes an estimated effective sample count after truncation [R55];
+it does not establish a unique physical equilibration time. Clark, Cole and
+Michel showed that noisy correlation estimates can create spurious late
+optima and that their tested truncation heuristics did not reliably identify
+insufficient sampling [R56]. Their benchmark used synthetic series modeled
+on protein–ligand free-energy data, providing methodological context rather
+than system-specific validation for Nyl12 QM/MM trajectories. Our additional
+latest-of-thirteen aggregation is a separate source of sensitivity identified
+by the present audit. Neither the 18.2 ps automatic choice nor a universal
+5 ps replacement is therefore established as a validated policy. The current
+confidence intervals describe conditional statistical uncertainty and do not
+resolve incomplete conformational sampling or uncertainty in burn-in selection
+[R57].
+
+## Fixed-burn-in reanalysis of the 25 ps relay checkpoint
+
+All 57 windows completed 25 ps of production. Native heating and equilibration
+were excluded, and an additional fixed 5 ps production discard retained 20 ps
+and 400 consecutive configurations per window (22,800 frames total). This
+source-bound reanalysis used identical physical Hamiltonian, umbrella biases,
+projection, histogram edges and E–S plotting reference. No configurations
+were excluded by proton ownership or catalytic geometry.
+
+The highest sampled PMF value was **24.807 kcal/mol at s = 0.6875**, relative
+to the fixed sampled E–S reference bin. The pointwise 95% percentile interval
+at that coordinate was **23.938–25.553 kcal/mol**, from 200 full MBAR refits
+resampling contiguous 5 ps chunks within each window. This is a conditional
+interval at the reported bin, not a confidence interval for a selected global
+activation barrier. Each window provided only four such chunks. All 200
+bootstrap fits remained connected; 43 of 45 populated bins had support in
+every draw. Intervals were not plotted for the two incompletely supported
+terminal bins. Resampling 2.5 ps chunks gave 24.151–25.449 kcal/mol at the same
+coordinate, but agreement between these block sizes does not exclude slower
+relaxation.
+
+| Production burn-in | Highest sampled PMF, kcal/mol |
+|---|---:|
+| 0 ps | 24.458 |
+| 2.5 ps | 24.546 |
+| 5 ps, provisional primary analysis | 24.807 |
+| 10 ps | 25.495 |
+
+The temporal comparison was more concerning than the initial-discard
+sensitivity: the 5–15 ps and 15–25 ps profiles reached **23.008** and
+**26.318 kcal/mol**, respectively. The late profile differed from the combined
+profile by up to 4.302 kcal/mol over common populated bins. Thus the relatively
+narrow conditional bootstrap band did not establish temporal convergence.
+The largest estimated g × frame interval was 5.326 ps in activation window026
+for the HG1–leaving-N distance (5.192 ps in window025), further cautioning
+against interpreting 5 ps chunks as fully independent. These estimates are
+themselves uncertain on short records [R56–R58].
+
+The global target-weight Kish ESS was 1.72 before accounting for temporal
+correlation; the corresponding bin-local weight ESS values at the displayed
+reference and maximum were 114.2 and 167.8. These measure different aspects of
+reweighting concentration and are not independent-sample counts. No converged
+activation free energy was accepted. The older automatically thinned estimate
+had an unresolved basin-reference gate; its gate labels were not transferred
+to the all-frame estimate. In the new histogram, the candidate E–S and acyl
+minima lie inside the declared search intervals at s = −0.0125 and 1.0375,
+respectively, with occupied neighboring bins. However, the acyl minimum has
+only 27 frames and bin-local Kish ESS 1.24, and the next bin has one frame.
+Numerical occupancy therefore does not establish a well-sampled product basin.
+Its early/late minimum also shifts in position and free energy. Further sampling
+and basin/initialization checks remain necessary; neither a low sampled
+maximum nor narrow conditional intervals justify adjusting the model to
+match a desired rate.
+
+The existing US trajectories and queued extension to 60 ps/window were left
+running. The new analysis publisher applies this fixed protocol at subsequent
+complete 5 ps checkpoints. Evidence is in
+`full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json`, with
+PMF, burn-in/temporal and block-size sensitivity figures in the campaign's
+existing `plots/` directory. Methods and bibliography provide the statistical
+and recent QM/MM precedents [R55–R60].

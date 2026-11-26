@@ -1,0 +1,15 @@
+{
+  "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json",
+  "source_sha256": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+  "plot_source_sha256": "7a542e6e9c0df46a6a9a523d514a589e80f440a3f4b611fe0f577e19bb71fde2",
+  "plots": [
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_pmf.png",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_pmf.pdf",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_sensitivity.png",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_sensitivity.pdf",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_block_sensitivity.png",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/relay_25ps_fixed_burnin_20261126_block_sensitivity.pdf"
+  ],
+  "confidence_method": "Within-window nonoverlapping contiguous-block bootstrap; full MBAR refit",
+  "no_smoothing": true
+}

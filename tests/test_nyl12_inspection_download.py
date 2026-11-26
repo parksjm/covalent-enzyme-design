@@ -345,9 +345,15 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
         ': > "$destination/MANIFEST.sha256";; '
         '*umbrella_sampling/) mkdir -p "$destination/vmd_dynamic"; '
         ': > "$destination/vmd_dynamic/MANIFEST.sha256";; '
-        '*nterminal_relay_releases_20261123/) '
+        "*nterminal_relay_releases_20261123/) "
         'mkdir -p "$destination/ti1_window032/vmd_progress_verified"; '
         ': > "$destination/ti1_window032/vmd_progress_verified/MANIFEST.sha256";; '
+        '*hydration_reconnaissance/) mkdir -p "$destination/vmd_progress"; '
+        ': > "$destination/vmd_progress/MANIFEST.sha256";; '
+        '*nyl12_progress_20261123/) mkdir -p "$destination"; '
+        'printf "0000000000000000000000000000000000000000000000000000000000000000  '
+        'Nyl12_PA6_progress_20261123.pptx\\n" > "$destination/MANIFEST.sha256"; '
+        ': > "$destination/Nyl12_PA6_progress_20261123.pptx";; '
         "esac;; esac\n"
     )
     for name, body in {
@@ -442,9 +448,15 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
         ': > "$destination/MANIFEST.sha256";; '
         '*umbrella_sampling/) mkdir -p "$destination/vmd_dynamic"; '
         ': > "$destination/vmd_dynamic/MANIFEST.sha256";; '
-        '*nterminal_relay_releases_20261123/) '
+        "*nterminal_relay_releases_20261123/) "
         'mkdir -p "$destination/ti1_window032/vmd_progress_verified"; '
         ': > "$destination/ti1_window032/vmd_progress_verified/MANIFEST.sha256";; '
+        '*hydration_reconnaissance/) mkdir -p "$destination/vmd_progress"; '
+        ': > "$destination/vmd_progress/MANIFEST.sha256";; '
+        '*nyl12_progress_20261123/) mkdir -p "$destination"; '
+        'printf "0000000000000000000000000000000000000000000000000000000000000000  '
+        'Nyl12_PA6_progress_20261123.pptx\\n" > "$destination/MANIFEST.sha256"; '
+        ': > "$destination/Nyl12_PA6_progress_20261123.pptx";; '
         "esac\n"
     )
     for name, body in {

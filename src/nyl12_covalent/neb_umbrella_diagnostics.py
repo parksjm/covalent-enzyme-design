@@ -7,6 +7,9 @@ import os
 from pathlib import Path
 from typing import Any
 
+from .vmd_chain_groups import display_chain_groups
+from .vmd_movie_policy import mapped_cc_bonds, render_movie_policy
+
 import numpy as np
 from parmed.amber import Rst7
 from scipy.io import netcdf_file
@@ -254,6 +257,16 @@ def export_view(
             + '"',
             "mol addrep $molid",
         ]
+    lines.append(
+        render_movie_policy(
+            [mapping[index] for index in qm],
+            [mapping[index] for index in substrate],
+            mapped_cc_bonds(topology, mapping),
+            chain_groups=display_chain_groups(
+                topology, {old + 1: new for old, new in mapping.items()}
+            ),
+        )
+    )
     (generation / "view_umbrella.vmd").write_text("\n".join(lines) + "\n")
     write_json(
         generation / "manifest.json",

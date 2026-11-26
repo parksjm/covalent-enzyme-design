@@ -697,13 +697,39 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         --include='/umbrella_sampling/full_path_300K/README.md' \
         --include='/umbrella_sampling/full_path_300K/plots/' \
         --include='/umbrella_sampling/full_path_300K/plots/*.png' \
+        --include='/umbrella_sampling/full_path_300K/plots/*.pdf' \
         --include='/umbrella_sampling/full_path_300K/plots/*.json' \
+        --include='/umbrella_sampling/full_path_300K/plots/*.csv' \
         --include='/umbrella_sampling/full_path_300K/plots/*.py' \
         --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/' \
         --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/runtime_summary.json' \
         --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/plan.json' \
         --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/launch_argv.json' \
         --include='/umbrella_sampling/full_path_300K/analysis/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/*.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/README.md' \
+        --include='/umbrella_sampling/full_path_300K/analysis/pmf_uncertainty_20261126/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/pmf_uncertainty_20261126/uncertainty_*.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/pmf_uncertainty_20261126/checkpoint_*.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/pmf_uncertainty_20261126/selection_sensitivity.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/continuous_*ps_analysis.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/continuous_*ps_uncertainty.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/continuous_*ps_publication.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/blockwise_*ps_uncertainty.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/cutoff_audit_20261126/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/cutoff_audit_20261126/*.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/cutoff_audit_20261126/*.npz' \
+        --include='/umbrella_sampling/full_path_300K/analysis/continuous_window_20261126/cutoff_audit_20261126/*.py' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/README.md' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/plan.json' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/prepared.json' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/preparation_provenance.json' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/preflight.json' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/root_review.json' \
+        --include='/umbrella_sampling/full_path_300K/continuation_60ps_20261126/gate_status.json' \
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_mbar_progression_20261125.md' \
         --include='/umbrella_sampling/full_path_300K/analysis/direct_relay_compatibility_20261125.json' \
         --include='/umbrella_sampling/full_path_300K/analysis/readiness_*.json' \
@@ -723,6 +749,9 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/progression.png' \
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/source.json' \
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/analysis_request.json' \
+        --include='/umbrella_sampling/full_path_300K/vmd_progress/' \
+        --include='/umbrella_sampling/full_path_300K/vmd_progress/current/***' \
+        --include='/umbrella_sampling/full_path_300K/vmd_progress/relay_us_movie_5ps_20261126/***' \
         --include='/vmd_progress/***' --include='/*/vmd_progress/***' \
         --include='/*/plots/' --include='/*/plots/*.png' \
         --include='/*/plots/*.json' --include='/*/plots/*.csv' \
@@ -739,10 +768,17 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         if [[ -f "$nterminal_relay_destination/vmd_progress/SHA256SUMS.txt" ]]; then
             (cd "$nterminal_relay_destination/vmd_progress" && "${checksum[@]}" SHA256SUMS.txt)
         fi
+        current_us_movie="$nterminal_relay_destination/umbrella_sampling/full_path_300K/vmd_progress/current"
+        if [[ -f "$current_us_movie/SHA256SUMS.txt" ]]; then
+            (cd "$current_us_movie" && "${checksum[@]}" SHA256SUMS.txt)
+        fi
         echo "Combined relay movie: $nterminal_relay_destination/vmd_progress/view_path.vmd"
         echo "N-terminal relay movies: $nterminal_relay_destination/BRANCH/vmd_progress/view_path.vmd"
         echo "N-terminal relay plots: $nterminal_relay_destination/BRANCH/plots/"
         echo "Cumulative PMF progression (when available): $nterminal_relay_destination/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/latest_progression.png"
+        echo "Continuous-window PMF with 95% statistical intervals: $nterminal_relay_destination/umbrella_sampling/full_path_300K/plots/pmf_latest.png"
+        echo "Neighbor-pair overlap: $nterminal_relay_destination/umbrella_sampling/full_path_300K/plots/neighbor_overlap_latest.png"
+        echo "Current relay US movie: $current_us_movie/view_path.vmd"
     fi
 fi
 

@@ -360,7 +360,12 @@ def test_export_portable_endpoints(
     top = parmed.Structure()
     elements = [6, 7, 8, 1, 7, 1, 1]
     for i, element in enumerate(elements):
-        top.add_atom(parmed.Atom(name=f"A{i}", atomic_number=element), "P6N", 1)
+        top.add_atom(
+            parmed.Atom(name=f"A{i}", atomic_number=element),
+            "ALA" if i == 6 else "P6N",
+            2 if i == 6 else 1,
+            chain="A",
+        )
     for a, b in [(0, 1), (0, 2), (2, 3), (4, 5), (4, 6)]:
         top.bonds.append(parmed.Bond(top.atoms[a], top.atoms[b]))
     coords = np.arange(21, dtype=float).reshape(7, 3)
@@ -386,6 +391,10 @@ def test_export_portable_endpoints(
     output = folder / "progress/latest"
     assert (output / "endpoints.xyz").is_file()
     assert "DynamicBonds 1.4 0.1 12" in (output / "view_umbrella.vmd").read_text()
+    assert (
+        "::nyl12_movie_policy::apply $molid"
+        in (output / "view_umbrella.vmd").read_text()
+    )
     assert json.loads((output / "manifest.json").read_text())["frames"] == 2
     for line in (output / "MANIFEST.sha256").read_text().splitlines():
         checksum, name = line.split()

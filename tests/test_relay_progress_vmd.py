@@ -9,6 +9,7 @@ import numpy as np
 import pytest
 
 from nyl12_covalent.relay_progress_vmd import substrate_indices, vmd_script
+from nyl12_covalent import relay_progress_vmd
 
 
 def scene() -> tuple[dict, dict, SimpleNamespace, np.ndarray]:
@@ -35,7 +36,10 @@ def scene() -> tuple[dict, dict, SimpleNamespace, np.ndarray]:
     elements = [6, 1, 8, 7, 6, 1, 6, 8, 7, 1, 8, 1, 1, 7, 7, 1, 6]
     atoms = [
         SimpleNamespace(
-            idx=i, atomic_number=z, residue=SimpleNamespace(name=name), bond_partners=[]
+            idx=i,
+            atomic_number=z,
+            residue=SimpleNamespace(name=name, chain="A", idx=i),
+            bond_partners=[],
         )
         for i, (name, z) in enumerate(zip(names, elements, strict=True))
     ]
@@ -91,11 +95,16 @@ def test_substrate_component_and_invalid_mapping() -> None:
 
 @pytest.mark.parametrize("adopt_old", [False, True])
 def test_headless_view_scoping_labels_and_coordinates(
-    tmp_path: Path, adopt_old: bool
+    tmp_path: Path, adopt_old: bool, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     tclsh = shutil.which("tclsh")
     if tclsh is None:
         pytest.skip("Headless Tcl interpreter unavailable")
+    # The shared Tcl policy has its own stateful tests; this harness isolates
+    # ownership, labels and camera commands from the policy's richer VMD API.
+    monkeypatch.setattr(
+        relay_progress_vmd, "render_movie_policy", lambda *args, **kwargs: ""
+    )
     manifest, case, topology, xyz = scene()
     text = vmd_script(manifest, case, topology)
     assert "residue 1311" not in text and "label show Bonds all" not in text
@@ -307,3 +316,12 @@ proc vecsub {a b} {set out {}; foreach x $a y $b {lappend out [expr {$x-$y}]}; r
 proc vecscale {scale a} {set out {}; foreach x $a {lappend out [expr {$scale*$x}]}; return $out}
 proc trans {command args} {return [list $command {*}$args]}
 """
+
+
+def test_policy_receives_mapped_qm_substrate_and_original_cc_edges() -> None:
+    manifest, case, topology, _ = scene()
+    text = vmd_script(manifest, case, topology)
+    assert (
+        "::nyl12_movie_policy::apply $molid {0 2 3 4 5 7 8 9 10 11 14} {3 4 5 12 13 15} {{5 13}}"
+        in text
+    )

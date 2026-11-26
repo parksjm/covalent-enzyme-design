@@ -26,7 +26,7 @@ def context() -> tuple:
             SimpleNamespace(
                 idx=original_count + i,
                 atomic_number=1 if i < 51 else (8 if i == 90 else 6),
-                residue=SimpleNamespace(name="THR"),
+                residue=SimpleNamespace(name="THR", chain="A", idx=original_count + i),
                 bond_partners=[],
             )
         )
@@ -95,12 +95,69 @@ def test_legacy_adapter_seven_route_labels_and_strict_tcl(
     script.parent.mkdir(parents=True)
     script.write_text(text)
     xyz = " ".join(f"{{{i / 100} 0 0}}" for i in range(len(keep)))
+    element_names = " ".join(
+        {1: "H", 6: "C", 7: "N", 8: "O", 15: "P", 16: "S"}.get(
+            topology.atoms[old_index].atomic_number, "X"
+        )
+        for old_index in keep
+    )
     harness = tmp_path / "legacy07_stub.tcl"
     harness.write_text(
         _STUB
         + f"""
+proc colorinfo {{query args}} {{
+    if {{$query eq "colors"}} {{
+        return {{cyan orange white blue red yellow tan green purple silver}}
+    }}
+    if {{$query eq "category" && [lindex $args 0] eq "Type"}} {{return {{}}}}
+    error "Unsupported colorinfo query: $query $args"
+}}
+proc display {{command value}} {{
+    if {{$command ne "depthcue" || $value ne "off"}} {{
+        error "Unsupported display command: $command $value"
+    }}
+}}
+rename molinfo ::strict_molinfo
+proc molinfo {{molid args}} {{
+    if {{[lindex $args 0] eq "get"}} {{
+        set attribute [lindex $args 1]
+        if {{$attribute eq "numreps"}} {{return 1}}
+        if {{$attribute eq {{"rep 0"}}}} {{return [list [list NewCartoon 0.3 10 4.1 0]]}}
+        if {{$attribute eq {{"selection 0"}}}} {{return [list protein]}}
+    }}
+    return [::strict_molinfo $molid {{*}}$args]
+}}
 set xyz {{{xyz}}}
+set mock_elements {{{element_names}}}
 set initial_bonds [lrepeat {len(keep)} {{}}]
+proc atom_selection {{command args}} {{
+    global selection_text xyz mock_elements initial_bonds current_bonds
+    set indices {{}}
+    if {{$selection_text eq "all"}} {{
+        for {{set i 0}} {{$i < [llength $xyz]}} {{incr i}} {{lappend indices $i}}
+    }}
+    switch -- $command {{
+        get {{
+            set field [lindex $args 0]
+            if {{$field eq "index"}} {{return $indices}}
+            if {{$field eq "element"}} {{
+                set values {{}}
+                foreach i $indices {{lappend values [lindex $mock_elements $i]}}
+                return $values
+            }}
+            if {{$field in {{residue name}}}} {{return {{}}}}
+            if {{$field eq "type"}} {{return [lrepeat [llength $indices] C]}}
+            if {{$field eq "bonds"}} {{return $initial_bonds}}
+            error "Unsupported atom selection field: $field"
+        }}
+        getbonds {{return $initial_bonds}}
+        set {{if {{[lindex $args 0] ne "type"}} {{error "Unsupported atom selection set"}}}}
+        setbonds {{set current_bonds [lindex $args 0]}}
+        num {{return [llength $indices]}}
+        delete {{return}}
+        default {{error "Unsupported atom selection command: $command"}}
+    }}
+}}
 source [lindex $argv 0]
 check {{[llength [dict get $labels Bonds]] == 8}} {{Expected seven07labels plus foreign label}}
 check {{[llength [dict get $labels Angles]] == 1}} {{Expected BDangle}}

@@ -1,4 +1,126 @@
-## PRIMARY OBJECTIVE — complete the acylation US/MBAR path, 2026-11-25
+**Primary PMF reanalysis, 26 November:** the PI authorized replacing the
+latest-of-thirteen automatic truncation with a transparent provisional
+5 ps production discard once per continuous window and all subsequent
+frames. Native 1 ps heating and 5 ps equilibration are already excluded.
+Use 200 within-window contiguous 5 ps block-bootstrap MBAR refits for
+pointwise 95% intervals, with burn-in, temporal-half and 2.5 ps block-length
+sensitivities. No IID analytical interval is assigned to correlated frames.
+The frozen derived watcher `relay_fixed_pmf_parallel_20261126` uses eight
+idle Violet CPUs for complete checkpoints from 25 ps onward. At 14:15 EST all
+57 Azalea windows were in stage08 and all stage07 derived records were
+complete. New evidence is under `full_path_300K/analysis/fixed_burnin_20261126/`.
+The previous publishers are intentionally retired; native US, source receipt
+validation, compact synchronization and 60 ps continuation remain unchanged.
+Earlier automatic-truncation profiles below remain sensitivity evidence;
+none establishes a converged global barrier. Read the roadmap and Methods.
+
+The 25 ps reanalysis is complete: 22,800 post-cut frames, sampled maximum
+24.807 kcal/mol at s=0.6875, conditional pointwise 95% interval 23.938–25.553.
+The 5–15 versus 15–25 ps maxima are 23.008 versus 26.318 kcal/mol, so temporal
+convergence remains unproven. `plots/pmf_latest.png` is the new fixed-cutoff
+profile; the `_sensitivity.png` figure exposes this drift. Do not report the
+sampled maximum as an accepted global activation barrier. All 57 native US
+workers were running in stage08 at the last host check; no native input,
+restraint, charge, topology, timestep or queued 60 ps continuation changed.
+
+---
+
+**Cutoff audit, 26 November:** extreme 15–18.2 ps automatic discards are
+uncertain truncation choices, not verified physical equilibration times.
+The project's latest-of-13 rule is overly aggressive in several windows and
+does not maximize the final shared effective sample count. Window002's
+coordination progress has stable five-ps means but cuts at 17 ps with the fast
+lag summation and 6.85 ps with full lag summation. Window023 has an initial
+5–6 ps rearrangement plus a later excursion; its 18.2 ps cut retains a final
+quiet suffix. Window024 has an actual late change in the biased coordinate,
+so simply imposing an early cutoff everywhere is also unqualified. Read
+`docs/RELAY_EQUILIBRATION_AUDIT_20261126.md` and inspect
+`full_path_300K/plots/equilibration_worst_windows_20ps_20261126.png`.
+The previous PMFs remain sensitivity estimates. Native jobs, queued extensions
+and the current automatic analysis policy were left unchanged. Before a
+quantitative barrier claim, compare prespecified burn-in sensitivities and
+temporal/orthogonal stability in the extended data. Full 25 ps coverage was
+forecast around 14:10 EST from the 13:41 EST progress observation.
+
+---
+
+**Archived automatic continuous-window PMF; extension remains queued, 26 November:**
+the PI authorized concatenating uninterrupted production segments before one
+burn-in/correlation estimate per window. On the identical 20 ps/window data,
+the selected count is 2,840 versus 3,150 previously. The largest sampled PMF
+value is 25.320 versus 22.154 kcal/mol at s=0.6875, relative to the same E–S
+plotting reference. Matched analytical pointwise 95% intervals are
+23.919–26.721 versus 20.924–23.384 kcal/mol. No global activation barrier is
+accepted. The complete comparison and supplementary configuration-bootstrap
+results are in `full_path_300K/analysis/continuous_window_20261126/` and
+`full_path_300K/plots/comparison_20ps_continuous_vs_blockwise_20261126.png`.
+The source-frozen derived watcher `relay_continuous_pmf_dynamic_20261126` on
+Violet published this analysis and has since been deliberately retired.
+Its labels derive the actual sampled horizon. Previous plot watchers' exit143
+records are superseded, not science failures. Use the fixed-burn-in publisher
+at the beginning of this handoff for current inspection plots.
+
+The original 57 Azalea Sander processes remain running. An extension to
+60 ps/window is prepared in the same campaign/window directories, with new
+native stages 09–14. All 342 new inputs and 342 historical lineages passed preflight.
+Azalea session `relay_us_cont60_wait_20261126` waits for all 57 accepted 30 ps
+endpoints and zero overlapping campaign Sander processes before launching
+the 57 continuation workers. Check `full_path_300K/continuation_60ps_20261126/`
+`gate_status.json`, `plan.json`, `root_review.json` and `preflight.json`.
+The native model, topology, charges, biases, frozen region and 0.5 fs timestep
+are unchanged; no reheating or new campaign is introduced. A separate
+derived-only guardian handles extended-stage receipts, and existing compact
+sync/cumulative MBAR have no 30 ps cap. The frozen runtime inspector retains
+its baseline controller pointer; extension controls are authoritative.
+Allow roughly another 24 h after the baseline finishes. This is a bounded
+sampling extension, not an assertion that 60 ps will converge.
+
+---
+
+**Earlier 26 November PMF diagnostic update:** the 20 ps relay checkpoint had
+pointwise 95% intervals from 200 complete-5 ps block-bootstrap MBAR refits,
+with its original frames, bins and fixed E–S reference unchanged. Use
+`qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/pmf_latest.png`
+and `neighbor_overlap_latest.png` in the same directory. The 31→57 overlap
+connector was a plot-order artifact involving an appended state30–32 comparison;
+new overlap plots use unconnected points and identify that pair explicitly.
+The derived-only session `relay_pmf_standard_figures_20261126` watches later
+completed checkpoints and publishes the same plots/intervals for 72 hours,
+using at most two local CPU processes for refits. Existing scientific jobs and
+acceptance gates were not changed. The laptop pull includes these figures and
+curated uncertainty JSON, excluding worker/source internals.
+
+Interpret sparse bins using both counts and bin-local weight ESS: one bin has
+81 selected configurations but weight ESS≈1.02. A non-adopted correlation audit
+using continuous 20 ps windows instead of four separate blocks retained 2,840
+frames instead of 3,150 and increased median g from 3.08 to 6.73. Current
+intervals remain conditional statistical estimates, not convergence evidence.
+Before accepting a final barrier, refit with a documented whole-window
+equilibration/correlation policy and examine sensitivity; do not silently
+replace the archived baseline. Full evidence and immutable source snapshots:
+`full_path_300K/analysis/pmf_uncertainty_20261126/`.
+
+---
+
+## PRIMARY OBJECTIVE — complete the acylation US/MBAR path, 2026-11-26
+
+**Current checkpoint, 26 November:** 57/57 relay windows have completed
+**20 ps production each (1.14 ns aggregate)**. Cumulative MBAR has now caught up
+through 20 ps; the original internal gap filled, but reactant-neighbor support,
+overlap and effective sampling remain inadequate for a converged barrier.
+The corrected postprocessing guardian had stopped on live queue
+claims. Its tested replacement, `relay_us_analysis_only_20261126` on Azalea,
+repairs derived receipts without native queue access; existing sync/MBAR will
+consume later cumulative blocks automatically. Native MD remains unchanged.
+A portable 1,140-frame US movie now spans 20 ps/window in the stable
+`full_path_300K/vmd_progress/current/` bundle; the old 5 ps viewer redirects
+there. The Type-prefix coloring bug is fixed in policy `20261126-typeprefix3`,
+the 21 other current viewers and their replacement watcher. Run the updated
+laptop pull before opening its viewer. Extend existing windows to 30 ps before
+adding bridges; current weak pairs and bracketing limits lead the roadmap. All ten
+new plateau releases converged and retained addition-like geometry, with
+C–OG1 near 1.81 or 1.74 Å and HG1 on Nalpha; none is curvature-verified as a
+minimum. See the current mechanism roadmap for paths, limits and priorities.
 
 **Sampling-support correction, 25 November 22:49 EST:** the displayed high-energy hole was a weighted-histogram roundoff error, now repaired with stable per-bin accumulation. The remaining empty estimator bin has 21 full-frame visits, 3 post-equilibration frames and 0 decorrelated samples. Highest sampled value 20.61 kcal/mol; no accepted barrier. Original outputs are archived. The replacement frozen analysis watcher resumes shared 5 ps MBAR checkpoints; native MD is unchanged. See [sampling support and next-window criteria](RELAY_US_SAMPLING_SUPPORT_20261125.md).
 
@@ -229,7 +351,7 @@ local torsions/RMSD and no branch-switch evidence. A bounded bidirectional
 
 **Current follow-up:** plotted images 11–21 are being released without reaction
 bias under the same 12 Å mobile-region protocol. Image20 is the identical,
-already force-converged window033 seed and is reused; ten other images are
+already force-converged window 033 seed and is reused; ten other images are
 running concurrently in one-CPU tmux sessions, up to 10,000 cycles each, with
 independent force/SCC/exterior checks. Inputs and plot-index mappings are in
 `12_nterminal_relay/03_plateau_releases/prepared.json`. Compare chemical
@@ -253,7 +375,7 @@ nonstationary search-direction diagnostics before further reverse attempts.
 Final stationary-force/TS verification gates are unchanged.
 
 **SCC guard correction:** an intermediate “not converged after70cycles” message
-may be followed by valid convergence (the retained window033 release includes
+may be followed by valid convergence (the retained window 033 release includes
 70→96-cycle recoveries). The first guard incorrectly rejected these recoverable
 warnings. Old aborted attempts are preserved. A new frozen policy allows
 bounded recovery through500actualSCCiterations, still rejects fatal or
@@ -263,13 +385,13 @@ The minus downhill retry starts from the original independently validated
 0.05 Å displacement, not an interrupted electronic trial. This is warning-
 classification repair, not a change in the Hamiltonian or physical convergence.
 
-**TI1 terminology:** window033 is a retained, force-converged, partially
+**TI1 terminology:** window 033 is a retained, force-converged, partially
 addition-like candidate (C–OG1=1.740 Å), not a verified stable TI1 minimum.
 Its source was a biased QM/MM MD frame, followed by bias-free optimization;
-the matched window032 seed lost addition character under the same protocol.
+the matched window 032 seed lost addition character under the same protocol.
 Conformational/environmental differences are implicated, but no individual
 stabilizing interaction or force-field change has been shown causal. See
-`docs/neb_us_nterminal_relay_release_20261123.md`, section “Why window033 retained
+`docs/neb_us_nterminal_relay_release_20261123.md`, section “Why window 033 retained
 addition character”, and the updated Results/Methods.
 
 Both exploratory branches reached geometrically appropriate endpoints and
@@ -315,7 +437,7 @@ an overall enzyme barrier. Native-Thr similarity remains diagnostic only.
 ## Previous checkpoint — approved relay exploration, 2026-11-24
 
 This dated block supersedes historical dispatch gates below. The PI explicitly
-approved exploring window033 without full-minimum verification and preparing a
+approved exploring window 033 without full-minimum verification and preparing a
 348.15 K WT branch. Window033 is force-converged (maximum gradient
 7.94e-6 Eh/bohr), with tetrahedral-like geometry, but is **not a verified local
 minimum or chemically accepted TI1**. The reused QM-block Hessian audit did not
@@ -323,7 +445,7 @@ resolve all signs under its uncertainty criteria; no more full Hessian work is
 queued. Original failed minimum-verification receipts remain intact.
 
 1. **Primary: N-terminal-relay acylation.** Two reviewed exploratory branches
-   under `qmmm/pa6_flipped_model30/12_nterminal_relay/` connect window033 toward
+   under `qmmm/pa6_flipped_model30/12_nterminal_relay/` connect window 033 toward
    E–S (`01_activation_reverse`) and toward acylenzyme through N-terminal proton
    delivery (`02_acylation_forward`). Explicit exploratory dispatch records
    supersede the old minimum gate only for these branches. The seed has
@@ -369,7 +491,7 @@ queued. Original failed minimum-verification receipts remain intact.
 
 **Current PI follow-up (November 24):** further WT/mask_07 structural
 evaluation and an automatic accepted-window connectivity audit are being
-prepared. Both relay branches accepted window001 and continued into window002.
+prepared. Both relay branches accepted window 001 and continued into window 002.
 The required endpoint is an auditable E–S → relay → acylenzyme connection; the
 next PMF coordinates are selected from that chemistry, not from a desired
 barrier. Detailed preregistered gates and candidate local coordinates are in
@@ -426,7 +548,7 @@ Retained report: `qmmm/pa6_flipped_model30/13_deacylation_pilot/`
 Next: inspect the hydration trajectory for transient accessible waters before
 choosing a QM-water model; reoptimize any expanded-QM starting state before
 driving hydrolysis. Do not extend blindly or infer that water cannot enter
-from this 6 ps pilot. The full-window033 minimum remains unqualified after
+from this 6 ps pilot. The full-window 033 minimum remains unqualified after
 the cutoff-column repair failed; neither conditional N-terminal relay path
 is running. Diagnose chemical-subspace curvature separately from unresolved
 full-shell numerical qualification rather than repeat the entire Hessian.
@@ -476,7 +598,7 @@ actual dispatch status. No second-replica outcome is claimed before analysis.
 Compare independent velocity replicas explicitly; four sites and successive
 frames are nested/correlated, not independent replicate experiments.
 
-## CURRENT — window033 cutoff diagnosis and localized repair, 2026-11-24
+## CURRENT — window 033 cutoff diagnosis and localized repair, 2026-11-24
 
 **Matched MD preliminary analysis is now available:** replica 1 WT/mask03/
 mask07 were sampled every 100 ps at all four fixed sites (1,000 frames/site).
@@ -510,7 +632,7 @@ crossed the 10 Å nonbonded cutoff. Implicated MM pairs lie at 9.999925 and
 and WAT10834 H1 yz from .0036062 to 9.70e-10, with smaller displacements.
 All six tested columns pass the unchanged finer-step relative stability gate.
 This supports a numerical cutoff artifact; it is not a minimum classification.
-See window033 `minimum_verification/numerical_diagnosis_20261124/`.
+See window 033 `minimum_verification/numerical_diagnosis_20261124/`.
 
 One localized repair is authorized: up to 383 implicated columns (3.1% of the
 full matrix), at h=3.125e-5 and 1.5625e-5 Å, with at most 1,532 native gradient
@@ -551,12 +673,12 @@ existing solvent, original 98-real-atom QM/charge −2, and the 4,165-atom movab
 the complete amine product is retained. Water is MM during this hydration-only
 stage; a candidate must be promoted to QM and reoptimized before hydrolysis or
 water-mediated proton transfer can be tested. This old endpoint has its own
-frozen exterior: do not splice its energies to window033. Audit and preparation
+frozen exterior: do not splice its energies to window 033. Audit and preparation
 are under `qmmm/pa6_flipped_model30/13_deacylation_pilot/`. Check native job
 receipts before calling the pilot running. The existing GPU MD and legacy
 ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
 
-## CURRENT — three converged releases; window033 curvature running, 2026-11-23
+## CURRENT — three converged releases; window 033 curvature running, 2026-11-23
 
 - **Logout readiness audit:** the current full Hessian, conditional relay/TS
   watcher and four matched GPU MD queues are persistent. Violet's active
@@ -574,14 +696,14 @@ ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
   `nyl12_w033_relay_after_minimum_20261123` waits on the original full-Hessian
   acceptance (zero negative/unresolved modes plus matching source/process
   evidence). New logical root is `qmmm/pa6_flipped_model30/12_nterminal_relay/`.
-  After a pass, one CPU each drives window033 back toward E–S and forward to
+  After a pass, one CPU each drives window 033 back toward E–S and forward to
   acylenzyme using N-terminal proton transfer and bond cleavage. Both use exactly
-  the same window033 fixed exterior; old028/032 endpoints are not energy
+  the same window 033 fixed exterior; old028/032 endpoints are not energy
   references. Accepted unbiased endpoints plus an interior PES maximum trigger
   native dimer searches with5000-cycle budgets. Index-one TS verification is
   still required afterward. Watcher failure prevents all dispatch; MD continues.
   Initial VMD/plot export passed real cpptraj/frame/box/mapping checks; before
-  the first window those viewers contain only the accepted window033 frame.
+  the first window those viewers contain only the accepted window 033 frame.
 - **GPU follow-up now active:** two independent 100 ns replicas each of WT,
   broader mask_07, focused mask_03 and V111C, four PA6 L4 ligands per tetramer.
   Violet runs WT/broader first; Azalea runs focused/V111C first; every sequence
@@ -602,7 +724,7 @@ ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
 - All three native optimizations force-converged. Window033 retained distorted
   tetrahedral-like geometry (C–OG1 1.740 Å, C–N 1.490 Å, C–O 1.309 Å;
   HG1–Nalpha 1.050 Å). Window032 is noncovalent but N-terminal-protonated;
-  window028 reverted to E–S-like geometry with HG1 on OG1.
+  window 028 reverted to E–S-like geometry with HG1 on OG1.
 - Window033 repeated-gradient and parity checks passed. Coarse .001/.0005 Å
   curvature probes failed; an additional72-evaluation fine-step diagnostic
   found a stable plateau without changing thresholds or the Hamiltonian.
@@ -610,7 +732,7 @@ ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
   `nyl12_relay_w033_full_hessian_20261123`, h=.000125 Å, eight nice workers,
   unchanged12 Å movable region and fixed exterior. Follow
   `minimum_verification/06_full_hessian/progress.json` and
-  `minimum_verification/verification_summary.json` under window033.
+  `minimum_verification/verification_summary.json` under window 033.
   **Minimum order is pending**, not established by force convergence.
 - Canonical VMD exports now include the exact final accepted restart and
   the established QM/substrate display conventions; final-coordinate checks pass.
@@ -641,7 +763,7 @@ ASH274 NEB remain unchanged; the four-site MD analysis adapter is still pending.
   occupancy and connectivity, not labels alone, define chemical states.
 - PI offline instruction: leave all releases to their convergence checks.
   `nyl12_relay_minimum_w033_20261123` is actually running and waiting after
-  all 40 prerequisite hashes passed. It tests window033 for a minimum only after
+  all 40 prerequisite hashes passed. It tests window 033 for a minimum only after
   independent force convergence and tetrahedral-like retention. Repeat/parity
   and derivative-step checks precede a full 12495-DOF Hessian with expected
   index zero; keep the original 12 Å movable shell and fixed exterior. No new
@@ -1811,7 +1933,7 @@ The band has24regularimages plus one disabled climbing slot (`neb_nimage=25`),
 13trace-derived controls, `maxstep=0.05`bohr, `maxcycle=16000` and the installed
 adapter's112,000energy-evaluation budget (7×maxcycle). Source50frames are38
 force-converged endpoint structures plus12accepted checkpoints bridging
-window025. Exact unbiased E–S and acyl endpoint ancestry, all H identities,
+window 025. Exact unbiased E–S and acyl endpoint ancestry, all H identities,
 native slot placement, predicted24images and23midpoints passed preflight.
 No control was dropped. Native alignment changes the QM atoms by ≤0.00390Å.
 An earlier draft trace-order error was caught before any engine launch; that
@@ -1852,8 +1974,8 @@ at both endpoints and the peak. Thr Nalpha remains near NH2. Thus this scan
 has not demonstrated the proposed Nalpha–water–leaving-N relay. The high
 sampled maximum remains a concern for this branch.
 
-No campaign job remains running. Next: inspect/refine window24→25 and assess
-window020 as a saddle candidate with curvature/downhill tests. Preserve the
+No campaign job remains running. Next: inspect/refine window 24→25 and assess
+window 020 as a saddle candidate with curvature/downhill tests. Preserve the
 new product endpoint; a stable TI1 is not required. All evidence and the final
 VMD movie/plots are in the same `09_water_relay_acylation/` campaign described
 below; compact results are `overnight_summary_20261119.json`. The laptop pull
@@ -2612,7 +2734,7 @@ images plus reserved CI slot), no climbing and no image freezing during
 optimization. OneCPU DFTB3/3OB periodic QM/MM,98QM+8links,charge-2;
 same4165 movable atoms, exterior fixed. `nebk=0.01`,maxstep0.1,maxcycle1000,
 tol1e-4,tole1e-5,ntr0,nmropt0,neb_climb_test0,neb_freeze_test0.
-Initial path uses original E-S, directed windows02,04,...20, then accepted
+Initial path uses original E-S, directed windows 02,04,...20, then accepted
 product; failed21 excluded. All12 seed images have identical box/atom order,
 zero frozen-exterior mismatch, original ThrH1/H2 and substrateHN retained.
 Native interpolation redistributes seeds; actual E-S energy -718.2079132Eh
@@ -2631,7 +2753,7 @@ new artifact-script coverage unmeasured. Monitor launches no candidate releases.
 ## PREVIOUS — endpoint-first acylenzyme hypothesis optimizing, 2026-11-11
 
 User authorized endpoint-first construction after the direct composite coordinate
-became chemically degenerate. Pinned source: direct path window20 SHA256
+became chemically degenerate. Pinned source: direct path window 20 SHA256
 `d57540b6bd5ede95c360174ea4d1bd92c80625355d3c2ccd13f321443b9674ad`.
 New isolated directory: `qmmm/pa6_flipped_model30/05_neutral_reaction_path/04_direct_acylenzyme/acylenzyme_endpoint`.
 Fourteen cheap deterministic geometry candidates preserved; selected C-N2.85A,
@@ -3757,7 +3879,7 @@ ten finer windows. Session `nyl12_asp272_phase1_extend_20261025`; existing run
 `output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/` is unchanged.
 Targets (attack Å, q1 Å):17=(1.4505601244,0.9124292155),
 18=(1.3511202488,1.0248584310). Start is original stage1_16, not the reverted
-unrestrained checkpoint. The window17 and16 minimize.mdin hashes match exactly;
+unrestrained checkpoint. The window 17 and16 minimize.mdin hashes match exactly;
 only the harmonic targets advance by the original increments. No rotation,
 Hamiltonian, restraint strength, MM reference or convergence tolerance change.
 
@@ -3824,7 +3946,7 @@ Latest plots/movie remain qmmm/pa6_asp272/ (17 endpoint frames).
 User challenged repeated arbitrary tracking cutoffs. Same run directory,
 new frozen controller run_relay_warning_only.py, tmux
 `nyl12_phase1_warning_only_20261025`: resume from convergedwindow13 and finish
-windows14–16. Tracking warns above0.15 Å and has no hard stop. Convergence,
+windows 14–16. Tracking warns above0.15 Å and has no hard stop. Convergence,
 finite/box and chemical endpoint checks remain unchanged. Phase2 is held for
 amine/Asp-OH orientation review. Status/policy history is preserved; active
 policy is warning_only_tracking_policy.json. Read status.json for live progress.
@@ -3839,11 +3961,11 @@ See latest section of docs/asp272_relay_pilot_20261025.md. Analyses are exposed
 in qmmm/pa6_asp272/data/amine_orientation.json and relay_energy_component_audit.json.
 Earlier stopped/running statements below are history.
 
-## LATEST — energy plot published; relay stopped at window13
+## LATEST — energy plot published; relay stopped at window 13
 
 Energy plot: `qmmm/pa6_asp272/plots/energies.png`; numerical data:
 `data/energies.csv` and `.json`. Includes all14 displayed endpoints, with
-window13 explicitly marked rejected. The optimizer converged there, but
+window 13 explicitly marked rejected. The optimizer converged there, but
 tracking exceeded0.20 Å. No further scientific continuation is queued.
 The package publisher now regenerates energy plots whenever a new finalized
 inspection snapshot appears. Original calculation files remain unchanged.
@@ -3865,7 +3987,7 @@ User authorized warning at 0.150 Å and stop at 0.200 Å, explicitly keeping the
 same run directory. Continuation began 18:37 EDT at stage1_11 in tmux
 `nyl12_asp272_continue_20261025`. Run remains
 `output_nyl12_pa6_dftb_pilot_20261024/asp272_relay_attempt2/`.
-Original window10 acceptance and inputs are preserved; reassessment and source
+Original window 10 acceptance and inputs are preserved; reassessment and source
 hashes are in continuation_tracking_policy.json; prior status is preserved.
 No force constant, Hamiltonian, target schedule, optimizer tolerance or stage-end
 chemical gate changed. This is not a TS/barrier claim.
@@ -3876,7 +3998,7 @@ Stable files in `output_vmd_inspection_20261024/`: reaction_path.vmd,
 reaction_path.dcd and reaction_distances.png/.csv/.json. All are included in
 the no-argument laptop pull. Reload the VMD viewer to see newly added frames.
 A 0.25 Å adjacent-window jump is a review warning, not automatic rejection or
-an instruction to add constraints. No such jump occurred through window10.
+an instruction to add constraints. No such jump occurred through window 10.
 Detailed notes, expert references and execution protocol:
 `docs/asp272_relay_pilot_20261025.md`. Read live status for actual progress.
 
@@ -4169,7 +4291,7 @@ references, machine-readable BibTeX and both research documents.
 ## Mechanistic interpretation extended — 2026-10-24
 
 User reconsiders frontwater and requests literature beyondNylC. Found positive
-primaryproteasome QM/MM example Wei2013 DOI10.1021/jp405337v and competing
+primaryproteasome QM/MM example Wei2013 DOI 10.1021/jp405337v and competing
 water-free protontransfer model in penicillinacylase Chilov2007. NylC2023
 FEBS DOI10.1111/febs.16755 proposes Asp-Asp-Thr network for maturehydrolysis;
 its precursorwater/autocleavage figures must not be conflated with catalysis.
@@ -4266,7 +4388,7 @@ Source snapshots, input hashes and action journal retained. Job manifest pins
 launched assessor; separate assessment_source_hash_at_checkpoint.json discloses
 preformat digest in earlier staging source_manifest. No method silently changed.
 
-Literature: Meadows etal2026 JCTC22,4012--4025 DOI10.1021/acs.jctc.6c00162
+Literature: Meadows etal2026 JCTC22,4012--4025 DOI 10.1021/acs.jctc.6c00162
 explicitly uses implicit water to stabilize glycine zwitterion for GAFF/RESP
 parameter variants: https://pmc.ncbi.nlm.nih.gov/articles/PMC13130867/ .
 Enzyme SMD dielectric4 precedent: https://doi.org/10.3389/fchem.2018.00249

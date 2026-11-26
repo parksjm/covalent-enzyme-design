@@ -1,0 +1,44 @@
+{
+  "horizon": 25.0,
+  "frames": 22800,
+  "retained_ps": 20.0,
+  "peak_s": 0.6875,
+  "peak": 24.80666687432341,
+  "pointwise_interval_at_peak": [
+    23.937602781617844,
+    25.552776153355303
+  ],
+  "supported_CI_bins": 43,
+  "occupied_bins": 45,
+  "disconnected_bootstrap": 0,
+  "chunk_count": 4,
+  "global_weight_ess": 1.722356333331987,
+  "sensitivity": {
+    "burn_0ps": {
+      "peak": 24.458055354121264,
+      "max_difference_from_primary": 1.458226685069056
+    },
+    "burn_2.5ps": {
+      "peak": 24.546282600030217,
+      "max_difference_from_primary": 1.543170054343609
+    },
+    "burn_10ps": {
+      "peak": 25.495364941411413,
+      "max_difference_from_primary": 2.4008015542945476
+    },
+    "early_half": {
+      "peak": 23.00841196765629,
+      "max_difference_from_primary": 2.3766641676162785
+    },
+    "late_half": {
+      "peak": 26.317761585693027,
+      "max_difference_from_primary": 4.30229752092135
+    }
+  },
+  "block2.5_interval_at_peak": [
+    24.150763034798203,
+    25.448694027190747
+  ],
+  "max_g_times_dt_ps": 5.326314024700956,
+  "windows_gdt_exceeds5ps": 2
+}

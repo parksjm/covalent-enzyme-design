@@ -5,6 +5,9 @@ from __future__ import annotations
 from collections.abc import Iterable, Sequence
 from typing import Any
 
+from .vmd_chain_groups import display_chain_groups
+from .vmd_movie_policy import mapped_cc_bonds, render_movie_policy
+
 
 VMD_API_REFERENCES = (
     "https://www.ks.uiuc.edu/Research/vmd/doxygen/cmd__label_8C-source.html",
@@ -282,4 +285,12 @@ def vmd_script(
         "molinfo $molid set global_matrix [list $identity]",
         "molinfo $molid set scale_matrix [list $scaling]",
     ]
+    lines.append(
+        render_movie_policy(
+            qm,
+            [mapping[index + 1] for index in substrate],
+            mapped_cc_bonds(topology, {old - 1: new for old, new in mapping.items()}),
+            chain_groups=display_chain_groups(topology, mapping),
+        )
+    )
     return "\n".join(lines) + "\n"

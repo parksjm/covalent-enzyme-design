@@ -1,5 +1,198 @@
 # Nyl12 QM/MM umbrella-sampling and PMF protocol
 
+## Matched pathway comparisons and publication acceptance (2026-11-26)
+
+This section governs comparisons of the direct proton-transfer mechanism and
+the N-terminal proton-relay mechanism. Apply one versioned preparation,
+sampling, postprocessing and acceptance protocol to both. Earlier PMFs remain
+historical controls until their compatibility is audited; differences between
+unmatched calculations are not evidence for a mechanistic preference.
+
+The initial source-hashed audit is
+`provenance/pmf_pathway_comparison_audit_20261126.json`. Recorded native
+production inputs match in topology, QM mask/charge, DFTB3, electronic
+temperature, embedding, link treatment, 300 K Langevin bath, timestep and
+movable-mask settings. SCC tolerance is 1e-12 in the relay input and 1e-10
+in the legacy direct-seeded input; the former also requests tight population
+convergence. The umbrella CV combinations and strengths differ (Amber
+rk = 25 versus rk = 100 kcal mol⁻¹ Å⁻²). Correct reweighting removes the biases; equal rk is not a
+mathematical requirement, but convergence and channel checks are mandatory.
+Full parameter/exterior-coordinate identity remains to be established, rather
+than inferred solely from matching topology and settings. No new MD was
+launched by this audit.
+
+**Terminology.** Burn-in is the initial part of a continuous trajectory omitted
+from equilibrium statistical estimation while its distribution adjusts to the
+starting structure and applied bias. It is an analysis exclusion, not deletion
+of native data, a repeated restart procedure or proof that subsequent frames
+are equilibrated. In the current relay calculation, 1 ps heating and 5 ps
+dedicated equilibration were excluded first; the additional 5 ps production
+discard leaves 20 ps analyzed out of a 25 ps production trajectory. Restarted
+5 ps production files are concatenated before applying that single discard.
+
+**Controls that must match:** enzyme/substrate identity and atom mapping,
+proton inventory and modeled protonation microstate, total/QM charges,
+force-field and QM method/parameters, QM partition/link treatment, physical
+temperature, embedding/electrostatics, boundary/movable-region treatment,
+integration settings, bath protocol and physical endpoint-basin definitions.
+Changing any of these defines a separate controlled comparison. The 300 K and
+348.15 K branches must not be pooled. Microstate-population and conformational
+preorganization penalties are separate from conditional chemical barriers.
+
+**Route-dependent choices that must be explicit:** geometrical reference path,
+active coordinate combinations, umbrella centers and necessary bridge windows.
+Use consistent physical coordinate definitions, units, cross-bias conventions
+and bias-strength policy. A scientifically different path need not have the
+same numerical window centers or window count. Validate energies and coordinate
+mapping independently. Analyze actual proton-transfer behavior; a direct-seeded
+trajectory sampling the N-terminal relay is not a pure direct-mechanism sample.
+
+**Common current analysis specification:**
+
+- Exclude heating/dedicated equilibration, concatenate accepted continuous
+  production segments per window, then discard an additional fixed 5 ps once.
+- Fit MBAR to every subsequent frame using actual per-window counts, identical
+  bias conventions, a documented common physical endpoint reference and
+  consistent density/bin conventions. Do not assign IID analytical errors to
+  correlated frames or remove configurations based on desired chemistry.
+- Use 200 within-window contiguous 5 ps block-bootstrap refits and pointwise
+  95% intervals, retaining missing-reference/support and disconnected draws.
+  Evaluate 2.5 ps blocks, production discards of 0/2.5/10 ps and temporal halves
+  in both pathways. These block sizes/discards remain provisional.
+- Compare matched sampled horizons as a diagnostic and final independently
+  qualified profiles as the scientific result. Different windows may need
+  different sampling lengths to meet the same convergence criteria. Equal
+  runtime does not establish equal precision or adequate equilibration.
+- If evidence requires changing burn-in, block length, binning, reference or
+  another estimator setting, version the revision and reanalyze every pathway
+  in the comparison. Do not tune one pathway to obtain a desired barrier.
+
+**Publication gate:** require connected and adequate local overlap in physical
+CV space, resolved/bracketed E–S and product basins, temporal and orthogonal
+stability, correlation-aware uncertainty and independent-initialization checks.
+Agreement of PMFs from extended sampling to approximately 1 kcal/mol in the
+barrier region is a prospective practical target, not a universal convergence
+theorem. A narrow bootstrap interval cannot establish these other requirements.
+Use committor/downhill connectivity checks before identifying a transition-state
+ensemble. Preserve method/model uncertainty separately from sampling error.
+
+**Current priority:** finish the already authorized 60 ps relay sampling;
+inspect slow leaving-N–HG1 behavior in windows 025/026 and resolve endpoint
+bracketing before adding windows or launching independent-start tests. Audit
+the direct campaign against these controls before commissioning a matched
+rerun or presenting a direct-versus-relay free-energy difference. No new
+mechanistic branch or altered Hamiltonian is authorized by this protocol note.
+
+Retain the exact inputs, environments/lockfiles, random seeds, source hashes,
+accepted trajectory lineage, analysis requests, all failed/superseded attempts,
+uncertainty replicates and plotting source. The code checkpoint and curated
+evidence are versioned in Git; native trajectories and full source records
+remain on the workstations. A publication archive must provide the required
+inputs and analysis data, with its persistent identifier recorded in the
+manuscript; a Git commit alone does not reproduce unarchived trajectory data.
+
+## Execution priority: full-path coverage first (2026-11-25)
+
+The PI has prioritized completing the current acylation US/MBAR profile.
+Accepted unbiased E–S and acylenzyme endpoints and their source-bound driven
+connection permit preparation/sampling while PES stationary-point verification
+continues independently. Do not make full-Hessian TS certification or a stable
+TI1 well a prerequisite for umbrella dynamics. Native CV/bias correctness,
+chemical mapping, source integrity and sampling acceptance remain mandatory.
+
+Use activation `(q_acyl, q_act)` and delivery `(q_acyl, q_delivery)` charts over
+the whole path, including both released endpoints. Densify centers to at most
+0.15 Å in each biased axis, including the coarse activation proton-transfer
+bracket. The 18-window near-relay grid is an input/compatibility fixture, not
+the full campaign. First obtain one accepted 5 ps production block in every
+window, then extend least-sampled windows in retained 5 ps blocks toward at
+least30 ps/window and the eight convergence gates below. Analyze incomplete
+coverage diagnostically; do not invent a continuous PMF across disconnected
+components. Use all three proton/acyl features for cross-bias evaluation and
+one shared MBAR normalization across the chart families.
+
+## Current decision: N-terminal-relay connectivity before a new PMF (2026-11-24)
+
+The PI authorized further structural evaluation and E–S → relay → acylenzyme
+connectivity work, with the requirement for a credible, rigorously obtained
+barrier. A value near an expected kinetic range is not an acceptance test.
+The historical 35.81 kcal/mol PES path and approximately 47.05 kcal/mol apparent
+PMF are retained negative results; this authorization does not restart that
+campaign. The old campaign status sections below remain historical evidence.
+
+**Connectivity gate.** Join the reverse-activation branch in reverse order to
+the forward-acylation branch at the identical window033 restart. Verify every
+accepted predecessor/restart hash, atom and proton inventory, topology, QM/MM
+Hamiltonian, frozen exterior and energy reference. Require the released E–S
+and acylenzyme endpoints to pass unbiased force/chemical retention checks.
+Inspect all four tracked protons and the remaining QM N/O hydrogen pool, the
+C–OG1/C–Nleave/C–O distances, oxyanion-hole contacts and discontinuities. A
+reproducible geometric connection does not establish a minimum-energy path or
+TS. Window033 full-minimum status stays unresolved; an obligatory TI1 minimum
+is not a prerequisite for proceeding.
+
+**Coordinate decision, after observed paths.** The candidate heavy-atom
+coordinate is q_acyl = r(C,Nleave) − r(C,OG1). Resolve activation and delivery
+separately when they exhibit distinct slow modes. Existing distance-difference
+coordinates, q_act = r(OG1,H) − r(Nalpha,H) and
+q_delivery = r(Nalpha,H) − r(Nleave,H), can support two local 2D patches with
+q_acyl, provided proton identity remains adequate. Their joint distributions
+must overlap in a common relay region before considering patch stitching.
+Separate one-dimensional PMFs cannot be added using independently chosen zeros.
+If the relay is not a basin, or the local charts exhibit hysteresis, use a
+single connected multidimensional/path-coordinate description of the full
+reaction rather than inventing two elementary rate constants.
+
+Exchangeable hydrogens are chemically interchangeable. Reuse the implemented
+smooth all-QM-N/O hydrogen-pool coordination diagnostics: CN(Nalpha), CN(OG1)
+and CN(Nleave), plus CN(Nleave)−CN(OG1). These identify hidden proton relays
+and label swaps; a label swap is not automatically an invalid configuration.
+These quantities are presently analysis observables. Do not claim that Amber's
+distance-restraint interface biases nonlinear coordination functions. Any new
+coordination-number bias requires an explicitly verified energy/analytic-force
+implementation and correct MBAR cross-bias evaluation before sampling. Do not
+add arbitrary proton-identity walls or fix C–OG1 at 1.55 Å to obtain a result.
+
+**Sampling and interpretation gate.** Retain all eight numerical convergence
+gates below: overlap/connectivity, correlation-aware effective sample size,
+block/independent-start stability, confidence intervals, estimator agreement,
+and stationary orthogonal chemical/environment distributions. Thirty ps is an
+allocation, not proof of convergence. Start with a bounded overlap/equilibration
+pilot after connectivity; extend sampling based on these diagnostics. Examine
+Nalpha coordination, both Asp oxygens, oxyanion-hole contacts, Thr orientation,
+substrate register and relevant waters as possible slow coordinates. Plan a
+small staged committor test near any candidate PMF saddle, with unbiased
+shooting, independently drawn thermal velocities, explicit basin definitions
+and unresolved trajectories retained. A PMF maximum alone does not prove that
+the chosen collective variables identify a transition-state ensemble.
+
+Before a quantitative mechanism claim, compare sparse matched embedded DFT/MM
+energies/forces for new E–S, relay/TS-region and product structures; use exactly
+the same partition, electrostatics and exterior. A free-energy correction needs
+overlap of the reference/target energy-difference distributions; arbitrary
+energy offsets are not corrections. Report method sensitivity if reweighting
+is not supported. A true PES TS additionally needs first-order curvature and
+downhill connectivity. Report protonation-conditional barriers explicitly;
+include microstate-population costs before claiming an overall assay barrier.
+The same requirement applies to conformational preorganization: a PMF started
+from a rare relay-ready E–S pose is conditional on that pose unless the sampled
+reactant ensemble connects to the dominant bound conformations. Monitor
+Nalpha–Nleave distance/orientation and substrate register as candidate slow
+coordinates. A population penalty −RT ln(p_ready) can only be used with an
+adequately sampled, consistently defined bound-state probability; representative
+snapshots or Tier occupancy alone do not supply that probability.
+
+**Temperature/state provenance.** Keep current 300 K comparisons unchanged.
+The authorized 348.15 K WT branch is prepared, not launched, for full-system
+thermal adaptation/review. The 130,815-atom four-substrate design MD system and
+104,922-atom one-substrate legacy QM/MM system are different systems. Any new
+assay-temperature mechanistic state requires explicit preparation/mapping and
+bath equilibration; it cannot be obtained by heating only the movable shell.
+The pH-adjustment temperature of the 75 °C Tris assay is unknown. Neither the
+assay's conversion nor heating a simulation determines a unique activation
+free energy. A high but converged barrier remains a valid negative result and
+must trigger an explicit mechanism/model decision rather than relaxed gates.
+
 ## Status and interpretation of the initial campaigns
 
 The 20-window direct-proton-transfer and 25-window asynchronous E--S-to-TI1
@@ -62,6 +255,35 @@ coordinates with proton-ownership diagnostics, followed by a targeted 2D
 umbrella patch or a path/string coordinate in the affected region.
 
 ## Sampling plan
+
+### NEB-seeded campaign: coverage-first scheduling (2026-11-20)
+
+The PI authorized reprioritizing the existing 63-window, 32-worker campaign:
+finish each active 5 ps native block, then run the queued windows through
+their unchanged heating, equilibration and first 5 ps production block.
+Extensions are held until all 63 windows have accepted, diagnostic-ready
+first blocks. Thereafter, each worker extends its least-sampled assigned
+window one block at a time until every window reaches at least 30 ps.
+Host ownership, the two CV biases, temperature, proton inventory, Hamiltonian,
+movable region, native stage inputs and Langevin seeds are unchanged.
+
+The historical runner has no cooperative pause/resume interface. Its queue
+controllers are replaced using verified process identities. Only the Python
+window driver is suspended while its child Sander finishes normally; Sander
+is never signaled. A separate controller records the native exit status,
+preserves the original process metadata, validates the completed checkpoint
+using the original acceptance gates, and starts the next unattempted stage.
+Completed stages are never rerun or overwritten. Native coordinates,
+velocities, trajectories and existing source/input snapshots are retained.
+The scheduling-only source snapshot, process identities, actions and release
+receipts remain under the existing campaign's
+`dispatch/coverage_first_20261120/` directory.
+
+Complete first-block coverage permits an earlier overlap assessment; it does
+not establish connected overlap, a converged PMF or a viable mechanism.
+The existing MBAR connectivity and sampling-convergence gates still apply.
+
+### Earlier direct-proton-transfer and asynchronous campaigns
 
 Retain the current pilots. After their overlap and structural diagnostics pass:
 

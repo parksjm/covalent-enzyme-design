@@ -9,6 +9,7 @@ import sys
 from types import ModuleType
 
 import numpy as np
+import pytest
 
 
 class _FakeAxis:
@@ -51,7 +52,7 @@ class _FakeFigure:
         path.write_bytes(b"plot")
 
 
-def _install_fake_matplotlib() -> None:
+def _install_fake_matplotlib(monkeypatch: pytest.MonkeyPatch) -> None:
     """Install a minimal pyplot module for dependency-free plot testing."""
     matplotlib = ModuleType("matplotlib")
     pyplot = ModuleType("matplotlib.pyplot")
@@ -61,8 +62,8 @@ def _install_fake_matplotlib() -> None:
     )
     pyplot.close = lambda figure: None
     matplotlib.pyplot = pyplot
-    sys.modules["matplotlib"] = matplotlib
-    sys.modules["matplotlib.pyplot"] = pyplot
+    monkeypatch.setitem(sys.modules, "matplotlib", matplotlib)
+    monkeypatch.setitem(sys.modules, "matplotlib.pyplot", pyplot)
 
 
 def _load_script(name: str) -> ModuleType:
@@ -124,10 +125,12 @@ def test_rotation_handles_parallel_opposite_and_general_vectors() -> None:
         assert np.allclose(rotation.T @ rotation, np.eye(3), atol=1.0e-10)
 
 
-def test_analyze_matched_outputs(tmp_path: Path) -> None:
+def test_analyze_matched_outputs(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     """Parse synthetic successful engine outputs and write comparison artifacts."""
     generator = _load_script("generate_benchmark")
-    _install_fake_matplotlib()
+    _install_fake_matplotlib(monkeypatch)
     analyzer = _load_script("analyze_benchmark")
     generated = tmp_path / "generated"
     generator.generate(generated)
@@ -155,9 +158,5 @@ def test_analyze_matched_outputs(tmp_path: Path) -> None:
     assert (output / "matched_energies.csv").is_file()
     assert (output / "proton_transfer_method_comparison.png").is_file()
     first = metrics["thr_to_terminal_amine/R2.5"]
-    assert np.isclose(
-        first["dftb3"]["endpoint_reaction_energy_error_kcal_mol"], -4.0
-    )
-    assert np.isclose(
-        first["gfn2_xtb"]["endpoint_reaction_energy_error_kcal_mol"], 4.0
-    )
+    assert np.isclose(first["dftb3"]["endpoint_reaction_energy_error_kcal_mol"], -4.0)
+    assert np.isclose(first["gfn2_xtb"]["endpoint_reaction_energy_error_kcal_mol"], 4.0)

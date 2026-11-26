@@ -353,3 +353,72 @@ R10 primary model description and the official LigandMPNN README
 (https://github.com/dauparas/LigandMPNN, section `--pdb_path_multi`) distinguish
 coordinate/element conditioning and efficient independent input batching from
 a joint multistate optimization objective.
+
+- **R54.** Lodola, A.; Branduardi, D.; De Vivo, M.; Capoferri, L.; Mor, M.;
+  Piomelli, D.; Cavalli, A. *A Catalytic Mechanism for Cysteine N-Terminal
+  Nucleophile Hydrolases, as Revealed by Free Energy Simulations*.
+  PLoS ONE (2012), 7, e32397. https://doi.org/10.1371/journal.pone.0032397 .
+  Primary QM/MM free-energy study with an N-terminal proton donor and
+  chair-like transition-region geometry; the tetrahedral adduct is metastable
+  rather than a well-defined free-energy minimum. This cysteine/thioester
+  system is mechanistic precedent, not quantitative validation of the
+  threonine/ester Nyl12 pathway. Full text:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC3289653/ .
+
+## Equilibration, truncation and sampling uncertainty (verified 2026-11-26)
+
+- **R55.** Chodera, J. D. *A Simple Method for Automated Equilibration Detection
+  in Molecular Simulations*. J. Chem. Theory Comput. **2016**, 12 (4),
+  1799–1805. https://doi.org/10.1021/acs.jctc.5b00784 .
+  Primary method for choosing a truncation time by maximizing an estimated
+  effectively uncorrelated sample count; implemented in PyMBAR's
+  `timeseries.detect_equilibration`. This does not validate our additional
+  latest-of-thirteen/common-maximum-g aggregation. Full text:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC4945107/ .
+- **R56.** Clark, F.; Cole, D. J.; Michel, J. *Robust Automated Truncation Point
+  Selection for Molecular Simulations*. J. Chem. Theory Comput. **2025**,
+  21 (1), 88–101. https://doi.org/10.1021/acs.jctc.4c01359 .
+  Online 23 December 2024; issue date 14 January 2025. Primary comparison
+  documenting late/variable truncation and spurious optima from noisy
+  correlation estimates. Distinguishes truncation selection from detecting
+  insufficient sampling. Synthetic series modeled on protein–ligand
+  free-energy calculations; not direct validation of Nyl12 QM/MM sampling.
+  Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC11736681/ .
+- **R57.** Grossfield, A.; Patrone, P. N.; Roe, D. R.; Schultz, A. J.;
+  Siderius, D. W.; Zuckerman, D. M. *Best Practices for Quantification of
+  Uncertainty and Sampling Quality in Molecular Simulations*, Article v1.0.
+  Living J. Comput. Mol. Sci. **2019**, 1 (1), 5067.
+  https://doi.org/10.33011/livecoms.1.1.5067 .
+  General guidance on statistical uncertainty and sampling-quality assessment;
+  not the source of the Chodera truncation objective or our aggregation rule.
+  The journal places this article in the 2019 issue; its landing-page metadata
+  gives online publication/citation year 2018, while the downloadable v1.0
+  guide gives 2019. The issue-year convention is used here, retaining this
+  metadata distinction for final reference-manager reconciliation. Publisher:
+  https://livecomsjournal.org/index.php/livecoms/article/view/v1i1e5067 .
+
+- **R58.** Lu, X.; Fang, D.; Ito, S.; Okamoto, Y.; Ovchinnikov, V.; Cui, Q.
+  *QM/MM free energy simulations: recent progress and challenges*.
+  Mol. Simul. **2016**, 42 (13), 1056–1078.
+  https://doi.org/10.1080/08927022.2015.1132317 .
+  QM/MM-specific review emphasizing environmental sampling, enhanced sampling,
+  collective-variable choice and limitations of approximate Hamiltonians.
+  Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC4993472/ .
+- **R59.** Jäckering, A.; van der Kamp, M.; Strodel, B.; Zinovjev, K.
+  *Influence of Wobbling Tryptophan and Mutations on PET Degradation Explored
+  by QM/MM Free Energy Calculations*. J. Chem. Inf. Model. **2024**, 64 (19),
+  7544–7554. https://doi.org/10.1021/acs.jcim.4c00776 .
+  Adaptive-string/DFTB3/MM polymer-hydrolase study including an orientation
+  coordinate and umbrella integration; used a TS-region 95% confidence interval
+  criterion of less than 1 kcal/mol. Also illustrates QM-method sensitivity of
+  proton-transfer and tetrahedral-state energetics. This criterion is theirs,
+  not sufficient alone to qualify the present MBAR calculation. Primary PDF:
+  https://juser.fz-juelich.de/record/1031817/files/j%C3%A4ckering-et-al-2024-influence-of-wobbling-tryptophan-and-mutations-on-pet-degradation-explored-by-qm-mm-free-energy.pdf .
+- **R60.** Zheng, M.; Chen, J.; Dong, W.; Wei, R.; Chen, J.; Tang, X.;
+  Zhang, Q.; Wang, Q.; Wang, W.; Wang, G.; Li, Y.
+  *Dynamic shift of internal electric field accelerates enzymatic polyethylene
+  terephthalate depolymerization*. Commun. Chem. **2026**, 9, 85.
+  https://doi.org/10.1038/s42004-026-01888-w .
+  QM/MM US example using 30 ps/window, the last 15 ps for WHAM, 100 bootstrap
+  data sets, profile-convergence checks and committor analysis. Protocol example,
+  not a universal equilibration or sampling-time recommendation for Nyl12.

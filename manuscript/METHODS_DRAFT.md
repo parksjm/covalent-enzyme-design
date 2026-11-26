@@ -535,9 +535,12 @@ The multiple-PDB option is batching, not built-in joint multistate design [R10].
 LigandMPNN context/likelihoods do not encode a computed reaction barrier or
 substitute for QM charge redistribution. Quantitative improvement will require
 matched mutant/WT activation free energies referenced to each enzyme's own
-reactant basin, plus checks for impaired later chemistry or access. Published
-multistate/PLACER workflows [R27,R29] and committor-based TS ensemble analysis
-[R53] motivate this proposal; none constitutes a validation of Nyl12 activity.
+reactant basin, plus checks for impaired later chemistry or access. Lauko et al.
+combined QM-derived reactive motifs with multistate PLACER analysis [R27];
+Zoi, Antoniou and Schwartz analyzed 15 uncorrelated, committor-defined TS
+configurations per enzyme in a theoretical engineering study [R53]. These
+precedents and related multistate work [R29] motivate our proposed comparison;
+they do not demonstrate this LigandMPNN workflow or validate Nyl12 activity.
 No new redesign or shooting campaign was launched by this documentation update.
 
 Independent noncovalent ES
@@ -1322,7 +1325,7 @@ status is recorded in `design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md
 ## Conditional N-terminal-relay acylation paths (prepared 2026-11-23)
 
 Follow-up paths were conditioned on qualified full-active-region numerical
-minimum verification of the force-converged window033 tetrahedral-like model.
+minimum verification of the force-converged window 033 tetrahedral-like model.
 On November 24 the PI explicitly authorized exploratory pathway generation
 while full-minimum qualification remained unresolved. The original failed
 minimum gate was retained; a separate source/input-hash- and force-acceptance-
@@ -1501,13 +1504,13 @@ uncertainty must accompany comparisons of barriers from different states.
 ## Relay connectivity and prospective PMF qualification (2026-11-24)
 
 Exploratory reverse activation and forward N-terminal-relay acylation share the
-same force-converged window033 restart, atom/proton inventory, Hamiltonian and
+same force-converged window 033 restart, atom/proton inventory, Hamiltonian and
 frozen exterior. The reverse branch must be read from its released E–S endpoint
-back to window033 before joining the forward branch. A dedicated postprocessing
+back to window 033 before joining the forward branch. A dedicated postprocessing
 audit was commissioned to verify accepted-window lineage, topology/mapping,
 chemical retention, force acceptance, tracked and unlabeled proton ownership,
 component-distance continuity, and unbiased endpoint identities. Initial
-window033 minimum qualification remains unresolved. A stitched geometric path
+window 033 minimum qualification remains unresolved. A stitched geometric path
 or force-converged endpoint does not certify a minimum-energy path, TS or PMF.
 
 The candidate acyl coordinate is r(C,Nleave)−r(C,OG1). Proton-transfer and
@@ -1536,9 +1539,35 @@ a preorganization free-energy correction.
 These qualification steps are prospective, not completed results.
 
 
-## Provenance and nomenclature of window033 (2026-11-25)
+## Planned matched comparison of acylation mechanisms (2026-11-25)
 
-The window033 relay/addition-like seed was drawn from
+The direct Thr233-OG1-to-substrate-N proton-transfer mechanism (A) and the
+Thr233 alpha-amino-mediated proton relay (B) will be evaluated with matched
+chemical/proton inventories, substrate binding register/direction, force field,
+QM/MM partition and Hamiltonian, temperature, movable/frozen environment,
+equilibration, bias conventions and sampling-convergence criteria. Actual
+identity hashes, rather than atom counts alone, establish comparability.
+Reaction coordinates/window centers may differ to cover the channels, but
+shared component-distance/proton-coordination observables, a common free-energy
+measure and one E–S basin reference are required for quantitative comparison.
+Exact sampling biases will be removed with MBAR; WHAM provides an estimator
+cross-check where appropriate. Correlation-aware block/independent-start tests
+and bootstrap uncertainty, including reference uncertainty, are required.
+
+The completed direct-seeded dataset will first be reanalyzed for reusable
+support. Its preliminary `q_acyl` marginal mixed proton-transfer channels and
+was nonconverged; it is not a pure-direct barrier and cannot be subtracted
+from a separately normalized relay path-arclength profile. Channel switching
+will be retained and reported rather than suppressed with proton-identity
+walls. Where a common multidimensional reconstruction is supported, channel
+bottlenecks will be compared in that common normalization. Conformational
+preorganization or additional sampling-restraint costs must be included or
+explicitly identified as limitations of conditional barriers. This section is
+a prospective protocol; no new matched direct/relay result is claimed.
+
+## Provenance and nomenclature of window 033 (2026-11-25)
+
+The window 033 relay/addition-like seed was drawn from
 `window_033/03_production_block_05_5ps/trajectory.nc`, frame 46 (one-based),
 recorded time 28.299999 ps, SHA-256
 `98ea1bac883503741de3236126786560233094cad73d15a20682e10923287845`.
@@ -1557,7 +1586,7 @@ The full same-protocol comparison and limitations are documented in
 
 Intermediate SCC nonconvergence/reset messages were distinguished from final
 unresolved electronic evaluations. An initial conservative guard incorrectly
-aborted at a recoverable70-cycle warning; the accepted window033 history itself
+aborted at a recoverable70-cycle warning; the accepted window 033 history itself
 contained70→96-cycle recoveries. Original aborted attempts are retained. The
 corrected isolated guard permits bounded recovery through500actualSCCiterations,
 rejects fatal/unresolved final evaluations, and leaves electronic temperature,
@@ -1565,3 +1594,156 @@ SCF/density tolerance and final force criteria unchanged. The repaired downhill
 attempt starts from its original independently validated displacement. Guard
 completion or a recovered SCC trial does not establish chemical retention or
 transition-state index.
+## Pointwise uncertainty and sampling support for relay PMFs
+
+For cumulative relay PMF checkpoints, the cross-window MBAR analysis,
+three-coordinate path projection, histogram edges, original equilibration
+discards and statistical thinning were retained unchanged. PyMBAR 4.0.3
+histogram covariance estimates provided asymptotic standard errors for
+free-energy differences relative to a fixed sampled E–S reference bin.
+The displayed pointwise 95% intervals were calculated from 200 bootstrap
+replicates. In each replicate, completed 5 ps production blocks were resampled
+with replacement independently within each umbrella window, retaining each
+block's original selected configurations; MBAR was then refitted to the
+resampled cross-evaluated bias energies. The histogram grid and reference bin
+were fixed across replicates. Thus uncertainty in the MBAR normalization was
+re-estimated rather than holding frame weights fixed. Replicate bin/reference
+support was recorded explicitly; percentile intervals were displayed only for
+bins supported by every replicate. These are pointwise percentile intervals,
+not simultaneous bands or uncertainty estimates for an optimized maximum.
+
+Support diagnostics included the number of selected configurations, the number
+of contributing umbrella windows, and the bin-local weight effective sample
+size, `(sum_i w_i)^2 / sum_i w_i^2`, with sums restricted to configurations in
+the bin. The latter diagnoses weight concentration and is distinct from the
+number of statistically thinned configurations. Statistical intervals remain
+conditional on the sampled configurations and estimated correlation times;
+four completed blocks per window cannot exclude slower structural or chemical
+relaxation. Sampling-convergence and stationary-point acceptance were assessed
+separately. The implementation follows the
+[PyMBAR histogram-FES uncertainty interface](https://pymbar.readthedocs.io/en/stable/fes_with_pymbar.html)
+and the MBAR framework of
+[Shirts and Chodera (2008)](https://doi.org/10.1063/1.2978177).
+
+## Continuous-window equilibration and correlation analysis
+
+### Revised primary analysis: fixed burn-in and correlated-block uncertainty
+
+The following protocol supersedes the latest-of-thirteen truncation rule for
+new relay PMF publications; the earlier estimates remain archived below as
+analysis-sensitivity results. Statistical truncation procedures apply to QM/MM
+and classical trajectories alike, but their reliability depends on sampled
+relaxation times and transitions rather than on the Hamiltonian or trajectory
+duration alone [R55–R58]. Short trajectories can provide noisy autocorrelation
+estimates and cannot reveal unvisited states. No universal equilibration or
+production duration was assumed.
+
+Each umbrella window had a separate 1 ps heating and 5 ps equilibration stage.
+These stages were excluded from all PMFs. Uninterrupted production segments
+were concatenated in timestamp order. We provisionally discarded an additional
+5 ps of production once per window, specified before examining the new PMF,
+and retained every subsequent configuration through the latest common complete
+sampling horizon. This transparent analysis choice was motivated by the
+time-series audit and is not a demonstrated equilibration time for every
+window. No late excursion or undesired chemical configuration was selectively
+removed. Fixed production discards of 0, 2.5 and 10 ps and early/late halves of
+the post-discard interval were evaluated as sensitivity checks.
+
+All retained frames contributed to the MBAR point estimate using their actual
+window counts. Consecutive frames were not treated as independent for error
+estimation: 200 bootstrap data sets resampled nonoverlapping contiguous 5 ps
+chunks with replacement separately within each window, retained the full
+chunk chronology and observables, and refitted MBAR for every data set.
+Resampling 2.5 ps chunks assessed block-length sensitivity. The Hamiltonian,
+cross-evaluated umbrella potentials, path projection, histogram edges and
+fixed E–S reference bin were identical across these analyses. Pointwise 95%
+percentile intervals were reported only for bins supported in every bootstrap
+refit; missing reference support or a disconnected overlap graph invalidated
+that draw rather than being silently omitted. No IID analytical confidence
+interval was assigned to the correlated all-frame estimate. Weight-based ESS
+was labeled as weight concentration, without implying temporal independence.
+
+Correlation estimates for the three reaction coordinates and ten additional
+chemical diagnostics were retained for diagnosis only, alongside 5 ps means,
+temporal PMF comparisons, overlap and per-bin support. A few resampled chunks
+cannot establish that the block length exceeds all relevant relaxation times.
+These intervals therefore describe conditional statistical precision, not
+systematic uncertainty from initial conformations, hidden slow coordinates,
+QM/MM model error or incomplete equilibration [R56–R58]. Persistent temporal
+drift calls for further equilibration/sampling or independent initialization,
+rather than increasingly late automatic discards. Statistical criteria were
+not adjusted to favor a lower activation barrier.
+
+Recent QM/MM precedents illustrate complementary checks rather than a fixed
+sampling prescription. Jäckering et al. combined an adaptive string, explicit
+substrate-orientation coordinates, umbrella integration and a TS-region
+confidence criterion [R59]. Zheng et al. analyzed the last 15 ps of 30 ps/window
+QM/MM sampling, assessed profile convergence and performed committor analysis
+[R60]. Those choices do not establish adequate sampling for Nyl12/PA6.
+
+### Archived automatic-truncation sensitivity analysis
+
+For the revised relay analysis, accepted production records were concatenated
+in physical-time order for each umbrella window, verifying a continuous output
+schedule across segment boundaries. The same three reaction coordinates and
+ten additional distance/coordination diagnostics were used as in the initial
+analysis. A candidate truncation point was estimated for each nonconstant
+observable using PyMBAR 4.0.3's implementation of Chodera's automated
+truncation-point selection procedure [R55]. Candidate discard times were
+ranked by the estimated effective sample count, approximately
+`N_retained(t0) / g(t0)`, where `g` is statistical inefficiency estimated from
+the observable's time autocorrelation. The exact installed implementation
+and its index convention were retained in the source-bound audit.
+
+We used a **study-specific aggregation rule**: the largest individual discard
+index among the thirteen observables defined one shared suffix per window.
+Statistical inefficiencies were then re-estimated over that suffix, and their
+largest value set the conservative integer subsampling interval, `ceil(g)`.
+The latest-of-thirteen rule and common-suffix maximum-g selection are
+additional choices in this study, not procedures prescribed or validated by
+Chodera's single-observable method. The resulting one discard and correlation
+estimate per window replaced independent treatment of each 5 ps segment;
+no production segments were reclassified as new simulations.
+
+The unbiased histogram PMF was refitted with identical physical Hamiltonian,
+umbrella potentials, path projection, histogram edges and fixed sampled E–S
+reference. Matched analytical PyMBAR pointwise intervals were used to compare
+selection policies. Supplementary uncertainty was assessed with 200
+window-stratified resamples of the selected, whole-window-decorrelated
+configurations, refitting MBAR in every replicate. Those intervals assume
+effective independence after thinning and condition on the estimated burn-in
+and correlation time; they exclude uncertainty in those estimates themselves.
+They are distinguished from the archived complete-five-ps block bootstrap.
+Automatic truncation was treated as a bias–variance heuristic, not as a test
+that equilibrium or adequate configurational sampling had been achieved.
+Clark, Cole and Michel [R56] demonstrate that correlation-estimation noise
+can produce late, variable truncation points and distinguish this problem
+from detecting insufficient sampling. Accordingly, the time-series audit and
+burn-in sensitivity were recorded separately; temporal stability remained a
+required acceptance check. Statistical intervals remain conditional on the sampled
+configurations and analysis choices; broader sampling-quality limitations
+were interpreted following Grossfield et al. [R57].
+
+Production continuations were prepared from the existing 30 ps checkpoints
+to a bounded total of 60 ps/window in 5 ps segments. Restart coordinates,
+velocities, thermostat settings, restraints, QM/MM model and frozen environment
+were retained without reheating. Stage-specific Langevin seeds were distinct
+and recorded. Original accepted-stage identities remained tied to the original
+execution plan; the new stage identities were tied to a separately reviewed,
+hashed continuation plan.
+
+## Diagnostic audit of automatic truncation choices
+
+For the eight windows with the largest automatic production discards, all
+thirteen observables, the driving observable's raw and 0.5 ps display-averaged
+time series, and the effective-sample objective as a function of discard were
+retained. Objective curves were checked against the installed PyMBAR 4.0.3
+API. Both the default approximate lag summation and the full lag summation
+were evaluated. Fixed initial-discard sensitivity was assessed diagnostically
+using the same maximum-g conservative subsampling rule; these counts did not
+replace the source PMFs or establish an accepted equilibration time. This
+distinction between truncation selection and a demonstration of sufficient
+equilibrium sampling follows Chodera [R55], the methodological reassessment
+by Clark, Cole and Michel [R56], and the sampling-quality guidance of
+Grossfield et al. [R57]. Full bibliographic entries and DOIs are retained in
+`manuscript/REFERENCES.md` and `manuscript/recent_design_and_relay_references.bib`.

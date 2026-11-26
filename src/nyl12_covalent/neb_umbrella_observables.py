@@ -86,6 +86,17 @@ def frame_observables(
     changed = [
         int(hid) for hid in hydrogen_pool if owners[hid]["owner"] != initial_owners[hid]
     ]
+    owner_distances = {
+        int(hid): {
+            int(owner): float(distances[i, j]) for j, owner in enumerate(owner_atom_ids)
+        }
+        for i, hid in enumerate(hydrogen_pool)
+    }
+    ambiguous = [
+        int(hid)
+        for hid in hydrogen_pool
+        if sum(distance <= 1.30 for distance in owner_distances[int(hid)].values()) > 1
+    ]
     return {
         "r_c_n": cn,
         "r_c_og1": co,
@@ -105,7 +116,46 @@ def frame_observables(
         "owner_changed": bool(changed),
         "changed_hydrogen_ids": changed,
         "hydrogen_owners": owners,
+        "hydrogen_owner_distances_A": owner_distances,
+        "ambiguous_hydrogens_within_1_30_A": ambiguous,
     }
+
+
+def topology_proton_pool(
+    topology: Path, qm_atom_ids: Sequence[int]
+) -> tuple[list[int], dict[int, int], list[int]]:
+    """Return real QM N/O-bound hydrogens and ownership atoms from topology.
+
+    Args:
+        topology: Amber topology containing the full atom inventory.
+        qm_atom_ids: One-based real QM atom IDs, excluding link atoms.
+
+    Returns:
+        Sorted hydrogen pool, initial H-to-parent map, and sorted N/O owners.
+    """
+    data = AmberFormat(str(topology)).parm_data
+    natom = int(data["POINTERS"][0])
+    z = data["ATOMIC_NUMBER"]
+    qm = set(int(atom) for atom in qm_atom_ids)
+    if not qm or min(qm) < 1 or max(qm) > natom:
+        raise ValueError("QM IDs outside topology")
+    owners: dict[int, int] = {}
+    for flag in ("BONDS_INC_HYDROGEN", "BONDS_WITHOUT_HYDROGEN"):
+        bonds = data[flag]
+        for i in range(0, len(bonds), 3):
+            a, b = int(bonds[i]) // 3 + 1, int(bonds[i + 1]) // 3 + 1
+            for hydrogen, parent in ((a, b), (b, a)):
+                if hydrogen in qm and z[hydrogen - 1] == 1 and z[parent - 1] in (7, 8):
+                    if hydrogen in owners:
+                        raise ValueError("Hydrogen has multiple initial N/O parents")
+                    owners[hydrogen] = parent
+    pool = sorted(owners)
+    owner_ids = sorted(
+        {atom for atom in qm if z[atom - 1] in (7, 8)} | set(owners.values())
+    )
+    if not pool:
+        raise ValueError("QM topology contains no N/O-bound real hydrogen")
+    return pool, owners, owner_ids
 
 
 def _hash(path: Path) -> str:
@@ -129,24 +179,9 @@ def extract_observables(
     Numeric invalidity is an error; valid chemical branches remain in the CSV.
     """
     output_dir.mkdir(parents=True, exist_ok=False)
-    data = AmberFormat(str(topology)).parm_data
-    natom = data["POINTERS"][0]
-    z = data["ATOMIC_NUMBER"]
+    pool, owners, hetero = topology_proton_pool(topology, qm_atom_ids)
     qm = set(qm_atom_ids)
-    if not qm or min(qm) < 1 or max(qm) > natom:
-        raise ValueError("QM IDs outside topology")
-    owners = {}
-    for flag in ("BONDS_INC_HYDROGEN", "BONDS_WITHOUT_HYDROGEN"):
-        bonds = data[flag]
-        for i in range(0, len(bonds), 3):
-            a, b = bonds[i] // 3 + 1, bonds[i + 1] // 3 + 1
-            for h, parent in ((a, b), (b, a)):
-                if h in qm and z[h - 1] == 1 and z[parent - 1] in (7, 8):
-                    if h in owners:
-                        raise ValueError("Hydrogen has multiple initial N/O parents")
-                    owners[h] = parent
-    pool = sorted(owners)
-    hetero = sorted({a for a in qm if z[a - 1] in (7, 8)} | set(owners.values()))
+    natom = int(AmberFormat(str(topology)).parm_data["POINTERS"][0])
     tracked = [roles[k] for k in ("hg1", "nalpha_h1", "nalpha_h2")]
     if not set(tracked) <= set(pool):
         raise ValueError("Tracked protons must belong to real QM N/O proton pool")
