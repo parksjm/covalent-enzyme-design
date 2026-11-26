@@ -1,0 +1,23 @@
+{
+  "direct_report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_25ps_analysis.json",
+  "direct_report_sha256": "4ccf2d168cf41c4857c6f8f8c6584c71e45fd4d206061faae95713098e0a7452",
+  "relay_report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json",
+  "relay_report_sha256": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+  "plot_script": "/data/jpc/covalent-enzyme-design/scripts/plot_direct_fixed_pmf.py",
+  "plot_script_sha256": "0798c62212dee75a83ac0670c87c4a78bfffb0718ba9372177e77c651a2c2e91",
+  "direct_horizon_ps": 25.0,
+  "relay_horizon_ps": 25.0,
+  "horizons_matched": true,
+  "horizon_comparison": "matched25both",
+  "arclength_note": "Route-specific normalized arclength uses the same 3-CV metric and projection, bin width, and fixed reference.",
+  "sampling_converged": false,
+  "no_smoothing": true,
+  "plots": [
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_pmf.png",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_pmf.pdf",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_sensitivity.png",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_sensitivity.pdf",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/comparison_25ps_vs_relay_25ps_20261126.png",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/comparison_25ps_vs_relay_25ps_20261126.pdf"
+  ]
+}

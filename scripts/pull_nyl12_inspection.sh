@@ -979,7 +979,15 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
         --include='/analysis/' --include='/analysis/latest/' \
         --include='/analysis/latest/***' \
         --include='/analysis/pmf_latest/' --include='/analysis/pmf_latest/***' \
+        --include='/analysis/fixed_burnin_20261126/' \
+        --include='/analysis/fixed_burnin_20261126/direct_*ps_analysis.json' \
+        --include='/analysis/fixed_burnin_20261126/physical_model_audit.json' \
+        --include='/analysis/fixed_burnin_20261126/comparison_summary.json' \
+        --include='/analysis/fixed_burnin_20261126/README.md' \
+        --exclude='/analysis/fixed_burnin_20261126/***' \
         --exclude='/analysis/*/' \
+        --include='/plots/' --include='/plots/*.png' --include='/plots/*.pdf' \
+        --include='/plots/*_source.json' --exclude='/plots/***' \
         --include='/window_*/progress/***' \
         --include='*/' --include='*.json' --include='*.csv' \
         --include='*.md' --include='*.mdin' --include='*.RST' \
@@ -989,7 +997,8 @@ if ssh "$remote" test -f "$trace_us_source/prepared.json"; then
     if [[ $dry_run -eq 0 ]]; then
         (cd "$trace_us_destination/vmd_dynamic" && "${checksum[@]}" MANIFEST.sha256)
         echo "NEB-seeded US diagnostics: $trace_us_destination/analysis/latest/"
-        echo "NEB-seeded PMF: $trace_us_destination/analysis/pmf_latest/"
+        echo "Historical marginal q_acyl PMF: $trace_us_destination/analysis/pmf_latest/"
+        echo "Matched fixed-discard PMFs and comparison: $trace_us_destination/plots/"
         echo "NEB-seeded US dynamic movie: $trace_us_destination/vmd_dynamic/view_umbrella.vmd"
     fi
 fi

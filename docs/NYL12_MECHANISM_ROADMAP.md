@@ -2,14 +2,35 @@
 
 ## Current checkpoint — 26 November 2026
 
+- **Direct-route reanalysis completed:** both mechanisms now use the shared
+  fixed-5-ps-discard/all-frame MBAR estimator, 3-CV projection convention and
+  200 contiguous-block bootstrap refits. At the matched 25 ps horizon, sampled
+  maxima are 50.920 kcal/mol for direct-NEB-seeded sampling versus 24.807 for
+  relay-seeded sampling. The full 30 ps direct estimate is 50.947 kcal/mol.
+  The direct maximum has only 15 frames; bootstrap support is 194/200 at 25 ps
+  and 195/200 at 30 ps, so no finite 95% band is assigned at that bin. Neither
+  curve is a converged activation barrier. Direct HG1–Nα nearest-owner visits
+  occur in about 11% of its retained biased frames; this is not a pure direct
+  mechanism ensemble. The old 47.05 kcal/mol direct result used a q_acyl
+  marginal and is historical, not a like-for-like path-density estimate.
+  Compare `plots/comparison_25ps_vs_relay_25ps_20261126.png`, available in both
+  campaign plot directories; the direct `plots/pmf_latest.png` shows all 30 ps.
+  Source-bound reports, model audit and summary are under the direct campaign's
+  `analysis/fixed_burnin_20261126/`. Native US and its 60 ps continuation were
+  untouched. Next: assess the extended relay data and independent/basin support;
+  do not restart the expensive historical direct campaign solely for a smooth
+  figure or interpret these maxima as a mechanism-specific rate ratio.
+
 - **PI-required matched comparison:** both mechanisms must use the same
   versioned preparation, physical model, analysis rules and acceptance gates.
   Burn-in means an initial analysis discard; native data are preserved. At the
   current checkpoint, 25 ps production minus 5 ps additional discard gives
   20 ps analyzed per window, after separately excluded heating/equilibration.
   Changing the postprocessing rule requires reanalyzing every compared path.
-  The direct campaign is a historical comparison until model/protonation,
-  coordinates, endpoint references and actual sampled channels are audited.
+  The direct campaign remains a historical control with matched postprocessing:
+  topology, selections and frozen-coordinate identity have now been checked,
+  but historical direct-era 3ob hashes are unavailable and SCC tolerances differ.
+  Each route retains its physical reference path; sampled channels are mixed.
   Different numerical paths/window counts can be necessary; equal runtime
   alone is not matched convergence. The controlling specification is
   `qmmm_umbrella_sampling_and_pmf_protocol_20261109.md`, section "Matched pathway

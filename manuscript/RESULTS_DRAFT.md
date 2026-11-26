@@ -961,6 +961,50 @@ confidence intervals describe conditional statistical uncertainty and do not
 resolve incomplete conformational sampling or uncertainty in burn-in selection
 [R57].
 
+## Direct-route umbrella sampling reanalyzed with the common protocol
+
+The existing direct-NEB-seeded data were reanalyzed with the same fixed 5 ps
+production discard, all-frame MBAR estimator, three-CV projection algorithm,
+histogram grid, fixed E–S reference and contiguous-block bootstrap procedure as
+the relay data. The 25 ps comparison retained 25,200 direct and 22,800 relay frames;
+the full 30 ps direct analysis retained 31,500 frames. Bias energies were evaluated
+using each campaign's actual native restraints. All 378 direct production
+segments passed source, timing, distance and cross-bias parity checks.
+
+| Sampling campaign | Production/window | Sampled maximum, kcal/mol | Pointwise 95% interval at maximum |
+|---|---:|---:|---|
+| Direct-NEB-seeded | 25 ps | 50.920 | Unresolved (194/200 draws support bin) |
+| Direct-NEB-seeded | 30 ps | 50.947 | Unresolved (195/200 draws support bin) |
+| N-terminal-relay-seeded | 25 ps | 24.807 | 23.938–25.553 |
+
+The direct maximum occurs at s=0.4125 and contains only 15 frames, including no
+additional visits in the final 5 ps. Missing-bin draws were retained as unsupported
+and no finite interval was assigned. This is not evidence of a converged
+50.9 kcal/mol activation barrier. At 25 ps, varying the initial discard from 0 to
+10 ps changes the direct maximum from 49.229 to 52.670 kcal/mol; early/late halves
+peak at 50.333 and 48.540 kcal/mol. The corresponding relay temporal maxima are
+23.008 and 26.318 kcal/mol. Connected MBAR networks and relatively narrow bands
+elsewhere do not remove this sampling sensitivity.
+
+Direct-seeded sampling also visits the N-terminal proton channel: HG1 is nearest
+to Nα in 2,763/25,200 retained frames at 25 ps and 3,463/31,500 at 30 ps. These are
+biased-ensemble nearest-owner counts, not equilibrium populations or covalent
+assignments. No such frames were censored. The comparison therefore does not
+isolate a pure direct mechanism or establish a mechanism-specific rate ratio.
+
+The historical 47.05 kcal/mol direct profile was a q_acyl marginal, whereas this
+revision uses the same three-CV projection convention as the relay. Its changed
+height must not be attributed to new MD sampling alone. Each path retains its
+own reference geometry, so identical s labels do not mean identical molecular
+states. The physical audit found identical topology bytes, QM/active selections,
+charge and boxes; exterior positions agree within 6.32 × 10⁻⁶ Å. SCC tolerances differ
+(10⁻¹⁰ direct, 10⁻¹² relay with tight population convergence). Current 3ob hashes
+match the relay record, but historical direct-era hashes were not recorded.
+These limitations preclude calling this a fully qualified matched kinetic
+comparison. The ongoing relay sampling and queued 60 ps continuation were left
+unchanged. Figures, numerical reports and source identities are in the direct
+campaign's `plots/` and `analysis/fixed_burnin_20261126/` directories.
+
 ## Fixed-burn-in reanalysis of the 25 ps relay checkpoint
 
 All 57 windows completed 25 ps of production. Native heating and equilibration

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "parent_git_commit": "1511acda9e6acb85edb2ca919594f9d70c405faa",
+  "scope": "Matched direct-route25ps/sharedrelaystatistics,full30psdirectestimate,physicalauditandcuratedevidence",
+  "protocol": "fixed5ps_once_per_continuous_production_window_all_frames",
+  "statistics": 200,
+  "tests": {
+    "command": "uv run pytest -q tests/test_relay*.py tests/test_neb_umbrella*.py tests/test_direct_us*.py tests/test_fixed_us_statistics.py tests/test_progress_pull.py",
+    "passed": 661,
+    "warnings": 18,
+    "exit_status": 0,
+    "new_module_coverage_percent": {
+      "direct_us_coordinates": 89,
+      "direct_us_fixed_io": 97,
+      "fixed_us_statistics": 91,
+      "combined": 92
+    },
+    "cli_coverage": "Not measured; extraction and25/30psanalysis/plot CLIs exercised against real scientific data",
+    "lint": "SelectedRufflint/format andshellsyntax passed"
+  },
+  "native_scientific_jobs_changed": false,
+  "scientific_simulations_launched": false,
+  "derived_tmux_jobs": {
+    "direct_fixed25ps_20261126": "exit0",
+    "direct_fixed30ps_20261126": "exit0"
+  },
+  "summary": {
+    "profiles": {
+      "direct_25ps": {
+        "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_25ps_analysis.json",
+        "report_sha256": "4ccf2d168cf41c4857c6f8f8c6584c71e45fd4d206061faae95713098e0a7452",
+        "horizon_ps": 25.0,
+        "windows": 63,
+        "retained_frames": 25200,
+        "peak_s": 0.41249999999999987,
+        "sampled_maximum_0to1_kcal_mol": 50.920355727536204,
+        "pointwise_95_at_peak_kcal_mol": [
+          null,
+          null
+        ],
+        "peak_frames": 15,
+        "peak_weight_ess": 10.475069794225995,
+        "peak_bootstrap_support": 0.97,
+        "connected": true,
+        "global_weight_ess": 31.84888082268927,
+        "bootstrap_disconnected": 0,
+        "fully_supported_bins": 50,
+        "occupied_bins": 54,
+        "sensitivity_peaks_0to1": {
+          "burn_0ps": 49.228954371138855,
+          "burn_2.5ps": 49.72018509836992,
+          "burn_10ps": 52.67023712536924,
+          "early_half": 50.333405094278135,
+          "late_half": 48.54007099863588
+        },
+        "nearest_hg1_counts": {
+          "frames": 25200,
+          "hg1_nearest_nalpha_frames": 2763,
+          "hg1_nearest_og1_frames": 10265,
+          "hg1_nearest_leaving_n_frames": 12172
+        }
+      },
+      "direct_30ps": {
+        "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_30ps_analysis.json",
+        "report_sha256": "39ebfe1f3c3c40a64e84d0cd64956ab1ba73a5f33562b3c34748a46a6bf4fa56",
+        "horizon_ps": 30.0,
+        "windows": 63,
+        "retained_frames": 31500,
+        "peak_s": 0.41249999999999987,
+        "sampled_maximum_0to1_kcal_mol": 50.946607752881675,
+        "pointwise_95_at_peak_kcal_mol": [
+          null,
+          null
+        ],
+        "peak_frames": 15,
+        "peak_weight_ess": 10.432142855051373,
+        "peak_bootstrap_support": 0.975,
+        "connected": true,
+        "global_weight_ess": 40.38207324369968,
+        "bootstrap_disconnected": 0,
+        "fully_supported_bins": 50,
+        "occupied_bins": 54,
+        "sensitivity_peaks_0to1": {
+          "burn_0ps": 49.372370646539586,
+          "burn_2.5ps": 49.80931014609287,
+          "burn_10ps": 52.64564876942687,
+          "early_half": 50.36542032798647,
+          "late_half": 48.760482269237066
+        },
+        "nearest_hg1_counts": {
+          "frames": 31500,
+          "hg1_nearest_nalpha_frames": 3463,
+          "hg1_nearest_og1_frames": 12827,
+          "hg1_nearest_leaving_n_frames": 15210
+        }
+      },
+      "relay_25ps": {
+        "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json",
+        "report_sha256": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+        "horizon_ps": 25.0,
+        "windows": 57,
+        "retained_frames": 22800,
+        "peak_s": 0.6875,
+        "sampled_maximum_0to1_kcal_mol": 24.80666687432341,
+        "pointwise_95_at_peak_kcal_mol": [
+          23.937602781617844,
+          25.552776153355303
+        ],
+        "peak_frames": 305,
+        "peak_weight_ess": 167.84225882872906,
+        "peak_bootstrap_support": 1.0,
+        "connected": true,
+        "global_weight_ess": 1.722356333331987,
+        "bootstrap_disconnected": 0,
+        "fully_supported_bins": 43,
+        "occupied_bins": 45,
+        "sensitivity_peaks_0to1": {
+          "burn_0ps": 24.458055354121264,
+          "burn_2.5ps": 24.546282600030217,
+          "burn_10ps": 25.495364941411413,
+          "early_half": 23.00841196765629,
+          "late_half": 26.317761585693027
+        }
+      }
+    },
+    "protocol": "fixed5ps_once_per_continuous_production_window_all_frames",
+    "confidence_method": "200full MBAR refits,5pscontiguouswithinwindowblocks;2.5psblocklength sensitivity",
+    "same_projection_algorithm": true,
+    "reference_paths_are_route_specific": true,
+    "sampling_converged": false,
+    "global_barrier_accepted": false,
+    "native_scientific_jobs_changed": false
+  },
+  "action_journal": {
+    "file": "provenance/agent_actions_direct_pmf_20261126.jsonl.gz",
+    "first_record_one_based": 56889,
+    "last_record_one_based": 57050,
+    "records": 162,
+    "uncompressed_sha256": "d6139de618b31638a924c6c45f76c04419916faa5c5ef7ac2af19bf85a75ea80",
+    "preceding_prefix_checkpoint": "provenance/pmf_analysis_checkpoint_20261126.json",
+    "active_journal": "output_agent_actions/20261021.jsonl"
+  },
+  "selected_file_sha256": {
+    "src/nyl12_covalent/direct_us_coordinates.py": "354f6d169f4c7c89bb7217ae8f381967f64149bad5d6ce797cd10f5544ca56dc",
+    "src/nyl12_covalent/direct_us_fixed_io.py": "df81fff5fade4b7a7059d9dd2b3457d3cebbd39e7080af936bf71c6f94a003e8",
+    "src/nyl12_covalent/fixed_us_statistics.py": "d65a9e5e3fb147cd51ccd9eeceea909dde6d1299788d045a940c1e95f2fc3c7f",
+    "scripts/extract_direct_us_coordinates.py": "2888a9be147fd346ac15e7fe73bab6a44bac09b3ad0e2ed2ec465ad5cac2bc71",
+    "scripts/analyze_direct_fixed_pmf.py": "9913e35e1c77905a5de5b9c955e6a91d8283866ba3aa1f56b90dd4cd07ae6430",
+    "scripts/analyze_relay_fixed_pmf.py": "0c3fdb6b2b86496b2a799f456ef55959851871f96c20b5904cce1401d380f52b",
+    "scripts/plot_direct_fixed_pmf.py": "0798c62212dee75a83ac0670c87c4a78bfffb0718ba9372177e77c651a2c2e91",
+    "scripts/pull_nyl12_inspection.sh": "cd10e7b36a3a29cb122b1da1117a19855d69c728cbfd56f908d153f81d1f1800",
+    "tests/test_direct_us_coordinates.py": "72530709db373cb84364f6e03939971ba26c0eca66c99d73f06b867a2bb2deaf",
+    "tests/test_direct_us_fixed_io.py": "1a748a0b07641dd77cd6027afbf9f0df4c08c8596f5d0f566e3f2e95345a7537",
+    "tests/test_fixed_us_statistics.py": "b9ccb6135e88c186d22bcd10e8ac88aed5300a06790a04f3be1ac6270955a391",
+    "docs/NYL12_MECHANISM_ROADMAP.md": "7acd0e7b2ebca4895c6a8ba335e25ecbfe59a24f6a82056699d940574d805cf7",
+    "docs/standalone_handoff_20261020.md": "0e354edea4042db628809e573a49c70df50c213386b5fdf66ae08d2f383e1733",
+    "docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md": "f14fe4bff74b5c8925c7e01123ba6ae4d2713dd52805d6ab2b22a1975a557b6e",
+    "manuscript/METHODS_DRAFT.md": "3a4477707be31a9e0ab7c374c6455eb1d0f4d760415e383a58dfab88827af127",
+    "manuscript/RESULTS_DRAFT.md": "2a273a845347558af5d34eb86c9078cc47e02a576a03b52ff2a96f3203471b92",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/README.md": "2d6ef3ccad397a88be347a517d27bfc5bc2f9e6ee8b5b98969cce87c6c5ac6e2",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_25ps_analysis.json": "4ccf2d168cf41c4857c6f8f8c6584c71e45fd4d206061faae95713098e0a7452",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_30ps_analysis.json": "39ebfe1f3c3c40a64e84d0cd64956ab1ba73a5f33562b3c34748a46a6bf4fa56",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/comparison_summary.json": "59001e191e5017f1302132b3c48c7a6e3d3a64a1893e1dc736a60cc4a3a9dfda",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/physical_model_audit.json": "e3c2c0094a06ba42789e78ad802a0e570a52e840deb263bd4eb0c7cb5097a425",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/coordinate_source_manifest.json": "72328f22be442770b9e8bb84b47a2e75d5e20d2d8299e2e7ed5f01b180383c06",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/analysis_source_manifest.json": "38ffafda0031efaf5ed478d61d52baed44531ad89ebb1924095051b91f972dc9",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_sensitivity.pdf": "e4b0492645b1bd1b88711ecb966d92e9566799487835d8c31e5c2dc3958ccd0d",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_30ps_fixed_20261126_pmf.png": "e553a65b14f4c94f29ed1e4d21910e2291413d1665b58d877a67d1276cdd0cdd",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_30ps_fixed_20261126_pmf.pdf": "c310135ea93b5a1d9bf82e1a5ed22a4db7189b4b42c85963f820e5a486a63491",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_pmf.pdf": "6de7bb8ef3816bd23c96327466a39856226790cfcd9fec65322865479a21fac4",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_pmf.png": "467b19926a0bcd6663f103f69013295c3edbf6e47b6492078482dc0de02c48bd",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_25ps_fixed_20261126_sensitivity.png": "4fc131577491a810b6dc58e0900a48134fdbf809150130c02c51747c18649b5d",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_30ps_fixed_20261126_sensitivity.pdf": "7e5190554bf0169c7d93018f8580e87b3cc9a587cb9987dbf62c353ec16ca746",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/direct_30ps_fixed_20261126_sensitivity.png": "5882fb21955da662d098a8429d0256a30e0203bda3cc310186de138f57dc3f19",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/comparison_25ps_vs_relay_25ps_20261126.pdf": "b11938e6e661b4050d2a3f979f2cf4cd1b6b43e0f049bb1f486a80eed66a636e",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/comparison_25ps_vs_relay_25ps_20261126_source.json": "3d97ffe3fe658a2db3c45c18d1e0362cece155364f3d581f34b8a1110098765d",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/plots/comparison_25ps_vs_relay_25ps_20261126.png": "2323993ecf4304de5b6c3e7c9010f3ac2d0b75411b4af99d9781d5883733e3f6",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/comparison_25ps_vs_relay_25ps_20261126.pdf": "b11938e6e661b4050d2a3f979f2cf4cd1b6b43e0f049bb1f486a80eed66a636e",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/comparison_25ps_vs_relay_25ps_20261126_source.json": "3d97ffe3fe658a2db3c45c18d1e0362cece155364f3d581f34b8a1110098765d",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/plots/comparison_25ps_vs_relay_25ps_20261126.png": "2323993ecf4304de5b6c3e7c9010f3ac2d0b75411b4af99d9781d5883733e3f6",
+    "provenance/agent_actions_direct_pmf_20261126.jsonl.gz": "bae8221464711eac6c5fce08d90fca2f1d2e81b8c44db0bde62a5ce7947ee17d"
+  }
+}

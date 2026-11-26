@@ -1,3 +1,28 @@
+**Matched direct-route reanalysis completed, 26 November:** use the common
+fixed 5 ps production discard, all-frame MBAR and 200 contiguous 5 ps block
+refits, with the same 3-CV projection algorithm/bin grid. At matched 25 ps/window,
+the direct-seeded sampled maximum is 50.920 kcal/mol versus relay 24.807
+(23.938–25.553 pointwise conditional 95%). Full 30 ps direct gives 50.947 kcal/mol.
+The direct peak has 15 frames and lacks full bootstrap support (194/200 at 25 ps,
+195/200 at 30 ps), so its interval is unresolved. No accepted activation barrier
+or pure mechanism-specific rate difference is established. About 11% of direct
+retained biased frames place HG1 nearest Nalpha. All original data are retained.
+
+The earlier 47.05 direct result is a q_acyl marginal, not the revised 3-CV path
+PMF. Native biases remain unchanged. Topology/QM/active selections and boxes
+match; frozen coordinates agree within 6.32 × 10⁻⁶ Å. Historical direct 3ob
+hashes remain unavailable and SCC tolerances differ. The physical model audit,
+25/30 ps reports and comparison_summary.json are under the direct campaign's
+`analysis/fixed_burnin_20261126/`. See matched 25/25 ps figures in both campaigns'
+`plots/`; direct `plots/pmf_latest.png` is the full 30 ps plot. The pull script now
+includes these curated outputs without copying augmentation/raw data. Both
+analysis tmux jobs exited 0; all 57 relay Sander workers and queued 60 ps continuation
+were left running. Relevant regression tests: 661 passed; new module coverage
+89%/97%/91% (92% combined). Main next action remains extended relay convergence,
+slow-coordinate and acyl-basin/independent-start checks, not another broad scan.
+
+---
+
 **Primary PMF reanalysis, 26 November:** the PI authorized replacing the
 latest-of-thirteen automatic truncation with a transparent provisional
 5 ps production discard once per continuous window and all subsequent

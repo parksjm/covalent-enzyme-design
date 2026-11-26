@@ -1681,6 +1681,40 @@ confidence criterion [R59]. Zheng et al. analyzed the last 15 ps of 30 ps/window
 QM/MM sampling, assessed profile convergence and performed committor analysis
 [R60]. Those choices do not establish adequate sampling for Nyl12/PA6.
 
+### Matched analysis of direct-NEB-seeded and N-terminal-relay sampling
+
+The fixed-discard and contiguous-block MBAR procedure was applied to both
+campaigns through a shared statistical implementation. All 63 direct-seeded
+windows had 30 ps production. A matched 25 ps analysis retained 400 frames
+per window after the single additional 5 ps discard; a separate full-data
+30 ps analysis retained 500 per window. Native heating and equilibration
+were excluded independently. Actual q_acyl/q_H umbrella potentials were
+retained for the direct data; the relay's different coordinate combinations
+and force constants were not substituted during reweighting.
+
+The archived direct PMF was a marginal along q_acyl, whereas the relay PMF
+used a three-dimensional reaction-coordinate path. To apply consistent density
+conventions, distances were recovered from the native direct trajectories for
+five reactive atoms, using periodic minimum-image coordinates. Source hashes,
+times, all four previously recorded distances, q_H = q_act + q_del, and
+archived cross-evaluated bias energies were verified for every production
+segment. No frames were removed by proton ownership or catalytic geometry.
+
+Both data sets were projected in (q_acyl, q_act, q_del), with equal Angstrom
+weighting and the same extended-terminal-tangent arclength algorithm. Each
+retained its physical geometrical reference path; the direct reference used
+the original 24 NEB images, verified against their recorded restart hashes.
+Normalized arclength therefore parameterizes different reference curves and
+does not identify identical molecular configurations between pathways. The
+histogram grid width was 0.025, with a fixed reference at s = 0.0125. The direct
+grid was extended by one terminal bin to preserve fluctuations beyond the
+relay plotting range; interior bins and reference were unchanged. Pointwise
+95% intervals, block-length/discard sensitivities and temporal-half profiles
+were computed identically. Direct-seeded proton visits to the N-terminus were
+reported explicitly rather than censored to enforce a mechanistic label.
+These projected densities remain conditional on sampled configurations and
+are not, by themselves, a comparison of mechanism-specific kinetic rates.
+
 ### Archived automatic-truncation sensitivity analysis
 
 For the revised relay analysis, accepted production records were concatenated

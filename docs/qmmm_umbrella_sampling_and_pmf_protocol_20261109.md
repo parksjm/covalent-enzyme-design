@@ -17,9 +17,13 @@ in the legacy direct-seeded input; the former also requests tight population
 convergence. The umbrella CV combinations and strengths differ (Amber
 rk = 25 versus rk = 100 kcal mol⁻¹ Å⁻²). Correct reweighting removes the biases; equal rk is not a
 mathematical requirement, but convergence and channel checks are mandatory.
-Full parameter/exterior-coordinate identity remains to be established, rather
-than inferred solely from matching topology and settings. No new MD was
-launched by this audit.
+The follow-up physical-model audit verified identical active/QM atom selections
+and boxes; frozen-exterior positions differ by at most 6.32 × 10⁻⁶ Å, consistent
+with ASCII/NetCDF coordinate precision. Current 3ob parameter hashes match the
+relay record, but the historical direct campaign did not pin their hashes;
+direct-era parameter identity remains unverified. Representative native stage
+controls were compared, rather than certifying every historical input. These
+qualifications remain explicit. No new MD was launched by this audit.
 
 **Terminology.** Burn-in is the initial part of a continuous trajectory omitted
 from equilibrium statistical estimation while its distribution adjusts to the
@@ -75,6 +79,23 @@ barrier region is a prospective practical target, not a universal convergence
 theorem. A narrow bootstrap interval cannot establish these other requirements.
 Use committor/downhill connectivity checks before identifying a transition-state
 ensemble. Preserve method/model uncertainty separately from sampling error.
+
+**Direct-route reanalysis, 26 November:** the archived 47.05 kcal/mol direct
+profile is a marginal density along q_acyl, whereas the relay profile is a
+three-CV path density. Matching only their discard and error estimator is
+insufficient. Reconstruct q_act and q_del from the native direct trajectories,
+verify q_H = q_act + q_del and the original cross-bias arrays, and apply the
+same equal-Angstrom three-CV projection with extended terminal tangents.
+Retain each route's original physical reference path: the direct reference
+consists of its 24 source-hashed NEB images. Normalized s labels are therefore
+route-specific and are not identical molecular states across panels. Use
+the same 0.025 bin grid and fixed s = 0.0125 E–S reference; extend outer edges
+on that grid when necessary to retain terminal fluctuations, without changing
+interior bins, clipping or chemical censoring. Analyze the matched 25 ps
+horizon and the full available 30 ps direct horizon with the shared estimator.
+Use actual native biases, not substituted relay biases. Report direct-seeded
+N-terminal proton visits explicitly. These projections alone cannot yield a
+mechanism-specific rate ratio or remove unequilibrated orthogonal sampling.
 
 **Current priority:** finish the already authorized 60 ps relay sampling;
 inspect slow leaving-N–HG1 behavior in windows 025/026 and resolve endpoint

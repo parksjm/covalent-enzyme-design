@@ -8,20 +8,14 @@ import json
 import logging
 from pathlib import Path
 
-import numpy as np
-
-from nyl12_covalent.relay_fixed_burnin import fixed_window_data
-from nyl12_covalent.relay_fixed_pmf import contiguous_bootstrap, fit_samples
-from nyl12_covalent.relay_umbrella_analysis import KB
+from nyl12_covalent.fixed_us_statistics import fit_fixed_data, run_fixed_statistics
 from nyl12_covalent.relay_umbrella_analysis_io import digest, load_block
-from nyl12_covalent.relay_umbrella_cv import RelayBiasWindow, cross_bias_energies
-from nyl12_covalent.relay_umbrella_projection import project_path
 
 
 def prepare_fit(
     config: dict, blocks: list[dict], burn_in_ps: float, end_ps: float
 ) -> tuple[dict, tuple, list[dict]]:
-    """Assemble unchanged physical-bias reweighting inputs after a fixed cut.
+    """Compatibility wrapper for shared fixed-window statistical preparation.
 
     Args:
         config: Hash-validated source request.
@@ -32,24 +26,7 @@ def prepare_fit(
     Returns:
         Point estimate, arguments for full MBAR refits, and selection summaries.
     """
-    values, counts, summaries = fixed_window_data(
-        config["windows"], blocks, burn_in_ps=burn_in_ps, end_ps=end_ps
-    )
-    biases = [RelayBiasWindow(**window["bias"]) for window in config["windows"]]
-    features = dict(zip(("q_acyl", "q_act", "q_del"), values[:, :3].T, strict=True))
-    reduced = cross_bias_energies(features, biases) / (KB * config["temperature_K"])
-    projection = project_path(values[:, :3], np.array(config["path_3cv_A"]))
-    arguments = (
-        reduced,
-        counts,
-        projection["s"],
-        np.array(config["s_bin_edges"]),
-        config["temperature_K"],
-        config["fixed_reference_s"],
-    )
-    report = fit_samples(*arguments)
-    report.update(burn_in_ps=burn_in_ps, end_ps=end_ps)
-    return report, arguments, summaries
+    return fit_fixed_data(config, blocks, burn_in_ps, end_ps)
 
 
 def main() -> None:
@@ -90,41 +67,17 @@ def main() -> None:
     if horizon < 20:
         raise ValueError("This prespecified analysis requires at least20ps/window")
     config["fixed_reference_s"] = parent["checkpoint"]["plot_common_es_reference_s"]
-    report, arguments, summaries = prepare_fit(config, blocks, 5.0, horizon)
-    if not report["connected"]:
-        raise ValueError("Central MBAR network is disconnected; no global PMF")
-    dt = {round(row["frame_interval_ps"], 8) for row in summaries}
-    if len(dt) != 1:
-        raise ValueError("Common sampling interval required for chunk resampling")
-    interval = dt.pop()
-    bootstraps = {}
-    for chunk in (5.0, 2.5):
-        logging.info("Starting %gps block bootstrap: %s refits", chunk, args.replicates)
-        ratio = chunk / interval
-        if not np.isclose(ratio, round(ratio), atol=1e-6):
-            raise ValueError("Chunk size does not match sample spacing")
-        result = contiguous_bootstrap(
-            *arguments,
-            chunk_frames=round(ratio),
-            replicates=args.replicates,
-            workers=args.workers,
-            seed=20261126,
-        )
-        bootstraps[f"{chunk:g}ps"] = result | dict(chunk_ps=chunk)
-    sensitivities = {}
-    for cut in (0.0, 2.5, 10.0):
-        fit, _, _ = prepare_fit(config, blocks, cut, horizon)
-        sensitivities[f"burn_{cut:g}ps"] = fit
-    midpoint = (5.0 + horizon) / 2
-    for name, lower, upper in (
-        ("early_half", 5.0, midpoint),
-        ("late_half", midpoint, horizon),
-    ):
-        fit, _, _ = prepare_fit(config, blocks, lower, upper)
-        sensitivities[name] = fit
+    statistics = run_fixed_statistics(
+        config, blocks, horizon, args.replicates, args.workers
+    )
+    logging.info("Completed fixed-window block bootstraps: %s refits", args.replicates)
     files = [request_path, parent_path, Path(__file__)] + [
         Path(__file__).resolve().parents[1] / "src/nyl12_covalent" / filename
-        for filename in ("relay_fixed_burnin.py", "relay_fixed_pmf.py")
+        for filename in (
+            "relay_fixed_burnin.py",
+            "relay_fixed_pmf.py",
+            "fixed_us_statistics.py",
+        )
     ]
     result = dict(
         protocol="fixed5ps_once_per_continuous_production_window_all_frames",
@@ -139,11 +92,11 @@ def main() -> None:
         source_sha256={str(path.resolve()): digest(path) for path in files},
         checkpoint=str(args.checkpoint.resolve()),
         accepted_sources=actual,
-        window_selection=summaries,
+        window_selection=statistics["window_selection"],
         diagnostic_columns=["q_acyl", "q_act", "q_del"] + config["diagnostic_columns"],
-        primary=report,
-        bootstrap=bootstraps,
-        sensitivity=sensitivities,
+        primary=statistics["primary"],
+        bootstrap=statistics["bootstrap"],
+        sensitivity=statistics["sensitivity"],
         caveat=(
             "Burn-in is a transparent provisional analysis choice, not proven equilibration. "
             "All-frame MBAR point estimate assumes stationary ergodic windows. "

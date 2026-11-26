@@ -1,0 +1,107 @@
+{
+  "profiles": {
+    "direct_25ps": {
+      "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_25ps_analysis.json",
+      "report_sha256": "4ccf2d168cf41c4857c6f8f8c6584c71e45fd4d206061faae95713098e0a7452",
+      "horizon_ps": 25.0,
+      "windows": 63,
+      "retained_frames": 25200,
+      "peak_s": 0.41249999999999987,
+      "sampled_maximum_0to1_kcal_mol": 50.920355727536204,
+      "pointwise_95_at_peak_kcal_mol": [
+        null,
+        null
+      ],
+      "peak_frames": 15,
+      "peak_weight_ess": 10.475069794225995,
+      "peak_bootstrap_support": 0.97,
+      "connected": true,
+      "global_weight_ess": 31.84888082268927,
+      "bootstrap_disconnected": 0,
+      "fully_supported_bins": 50,
+      "occupied_bins": 54,
+      "sensitivity_peaks_0to1": {
+        "burn_0ps": 49.228954371138855,
+        "burn_2.5ps": 49.72018509836992,
+        "burn_10ps": 52.67023712536924,
+        "early_half": 50.333405094278135,
+        "late_half": 48.54007099863588
+      },
+      "nearest_hg1_counts": {
+        "frames": 25200,
+        "hg1_nearest_nalpha_frames": 2763,
+        "hg1_nearest_og1_frames": 10265,
+        "hg1_nearest_leaving_n_frames": 12172
+      }
+    },
+    "direct_30ps": {
+      "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/fixed_burnin_20261126/direct_30ps_analysis.json",
+      "report_sha256": "39ebfe1f3c3c40a64e84d0cd64956ab1ba73a5f33562b3c34748a46a6bf4fa56",
+      "horizon_ps": 30.0,
+      "windows": 63,
+      "retained_frames": 31500,
+      "peak_s": 0.41249999999999987,
+      "sampled_maximum_0to1_kcal_mol": 50.946607752881675,
+      "pointwise_95_at_peak_kcal_mol": [
+        null,
+        null
+      ],
+      "peak_frames": 15,
+      "peak_weight_ess": 10.432142855051373,
+      "peak_bootstrap_support": 0.975,
+      "connected": true,
+      "global_weight_ess": 40.38207324369968,
+      "bootstrap_disconnected": 0,
+      "fully_supported_bins": 50,
+      "occupied_bins": 54,
+      "sensitivity_peaks_0to1": {
+        "burn_0ps": 49.372370646539586,
+        "burn_2.5ps": 49.80931014609287,
+        "burn_10ps": 52.64564876942687,
+        "early_half": 50.36542032798647,
+        "late_half": 48.760482269237066
+      },
+      "nearest_hg1_counts": {
+        "frames": 31500,
+        "hg1_nearest_nalpha_frames": 3463,
+        "hg1_nearest_og1_frames": 12827,
+        "hg1_nearest_leaving_n_frames": 15210
+      }
+    },
+    "relay_25ps": {
+      "report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_25ps_analysis.json",
+      "report_sha256": "d310873423ea28acc0d04a08e8edd6e7ea92542b04b628892d6a95621ad7b79b",
+      "horizon_ps": 25.0,
+      "windows": 57,
+      "retained_frames": 22800,
+      "peak_s": 0.6875,
+      "sampled_maximum_0to1_kcal_mol": 24.80666687432341,
+      "pointwise_95_at_peak_kcal_mol": [
+        23.937602781617844,
+        25.552776153355303
+      ],
+      "peak_frames": 305,
+      "peak_weight_ess": 167.84225882872906,
+      "peak_bootstrap_support": 1.0,
+      "connected": true,
+      "global_weight_ess": 1.722356333331987,
+      "bootstrap_disconnected": 0,
+      "fully_supported_bins": 43,
+      "occupied_bins": 45,
+      "sensitivity_peaks_0to1": {
+        "burn_0ps": 24.458055354121264,
+        "burn_2.5ps": 24.546282600030217,
+        "burn_10ps": 25.495364941411413,
+        "early_half": 23.00841196765629,
+        "late_half": 26.317761585693027
+      }
+    }
+  },
+  "protocol": "fixed5ps_once_per_continuous_production_window_all_frames",
+  "confidence_method": "200full MBAR refits,5pscontiguouswithinwindowblocks;2.5psblocklength sensitivity",
+  "same_projection_algorithm": true,
+  "reference_paths_are_route_specific": true,
+  "sampling_converged": false,
+  "global_barrier_accepted": false,
+  "native_scientific_jobs_changed": false
+}
