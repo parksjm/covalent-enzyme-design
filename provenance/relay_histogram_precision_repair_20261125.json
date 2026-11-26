@@ -1,0 +1,23 @@
+{
+  "name": "stable_per_bin_probability_accumulation",
+  "corrected_utc": "2026-11-26T03:47:28.195967+00:00",
+  "previous_report_sha256": "3d296e5f9fc68dcae066236bbcc3cf428378bca24ef240300b19a54475e67cbc",
+  "previous_report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/before_weighted_histogram_precision/analysis.json",
+  "projection_source_sha256": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc",
+  "reconstructed_weights_sha256": "1a015dfaded3bd3e95bff8612f808c5c3badc4b0a6678c24fd3d1aaba5fdeb86",
+  "native_data_states_bins_selection_unchanged": true,
+  "all_other_analysis_fields_unchanged": true,
+  "completed": true,
+  "initial_process_exit": 1,
+  "initial_process_note": "Numerical repair and standard figures completed; readable plot correctly rejected changed source hash. Original process retained; this explicit revision rebound the plot and completed publication.",
+  "pmf_status": "gapped_no_global_barrier",
+  "highest_sampled_bin_kcal_mol": 20.609087441998067,
+  "global_barrier_kcal_mol": null,
+  "corrected_report_sha256": "b6ad0883f8e726023b967e8961119604ef1fb930317b62e24d1e466de71fbfd6",
+  "readable_plot_source_sha256": "1066911cb7bd8aff452cfd7ad22c6592b799d8633935fb2aa3401d541fa0048c",
+  "watcher_job": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/histogram_precision_correction_20261125/watcher_job",
+  "watcher_source_manifest_sha256": "846b83bf2ba82028a2be216241d87d0e99c7fddeb832fdcfe38f16804cd8789b",
+  "watcher_command_sha256": "6aedf1bcffad06e8b00324c51b350d718ebae34e1cfedc937242e5d120ca4637",
+  "native_MD_interrupted": false,
+  "published_report": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/analysis.json"
+}

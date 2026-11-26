@@ -1,0 +1,157 @@
+{
+  "audit_id": "relay_us_gap_audit_20261125",
+  "decision": {
+    "add_bridge_window_if": "At both fully covered 10 ps and 15 ps checkpoints, after checking 3-CV-to-path mapping, the same local CV-space neighbor pair(s) still fail the existing 0.2 histogram-intersection gate and independent coverage does not improve under continued sampling. Rare correlated full-frame visits do not by themselves rule out a bridge; a projected-s gap alone does not justify one.",
+    "at_10ps_and_15ps_use_same_fixed_bins_and_states": true,
+    "continue_existing_windows_if": "At 10 ps, the same fixed-CV analysis shows improved independent sample coverage or overlap for the currently weak local activation_full_007/008 pair (5 ps histogram intersection 0.0833), with distributions remaining consistent with their declared restraint centers. Reassess cumulatively at 15 ps; distinguish full-frame visits from post-equilibration and decorrelated support.",
+    "current_read": "Continue existing windows to the 10 ps checkpoint before deciding on bridges. The s=0.1125 bin has 21 full-frame visits, 3 post-equilibration frames before thinning, and zero decorrelated estimator samples. At s=0.6875, the apparent zero is numerical; stable accumulation gives nonzero mass and a sampled PMF of 20.6091 kcal/mol. Neither 1D bin alone establishes a need for a bridge.",
+    "no_probabilities_or_guarantees": true,
+    "projection_ambiguity": "Near s=0.1125, the 11 decorrelated samples in s=0.075..0.15 have alternative-segment ambiguity margins 0.0027..0.0499 A (median 0.0195 A). Check the underlying 3-CV mapping before any bridge decision; do not use a new ambiguity cutoff.",
+    "promotion_limits": "The 5 ps checkpoint fails histogram overlap and per-window effective-sample gates (N_k 3\u201349 vs minimum 100), has global unbiased ESS 12.66, and leaves orthogonal stationarity unresolved. A connected MBAR graph is not evidence of a converged PMF or validated barrier.",
+    "treat_as_target_drift_if": "Compare each window's biased-CV distributions with its declared centers across the recorded split blocks at 10 ps and 15 ps. Flag target drift when the shift exceeds the corresponding block-bootstrap 95% interval; retarget from observed CV-space distributions before deciding where a bridge belongs."
+  },
+  "full_trajectory_and_stable_reanalysis": {
+    "decorrelated_estimator_frame_count": 749,
+    "equilibration_discarded_raw_frames": 3327,
+    "maximum_finite_sampled_pmf_kcal_mol": 20.609087441998067,
+    "npz_sha256": "1a015dfaded3bd3e95bff8612f808c5c3badc4b0a6678c24fd3d1aaba5fdeb86",
+    "projection_ambiguity_near_0_1125_A": {
+      "ambiguity_margin_A_min_median_max": [
+        0.0026678083636179073,
+        0.019521005276097014,
+        0.04985495111388916
+      ],
+      "decorrelated_sample_count_in_range_0_075_0_15": 11
+    },
+    "raw_full_frame_count": 5700,
+    "reanalysis_json": "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/diagnostics/stable_projection_reanalysis_20261125.json",
+    "reanalysis_json_sha256": "8099861f766caf85800450d1619b97e71bbd7be7745b0c790a5e0ad010cda83e",
+    "replot_npz": "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/diagnostics/stable_projection_inputs_20261125.npz",
+    "s_0_1125_after_equilibration_before_thinning_count": 3,
+    "s_0_1125_decorrelated_count": 0,
+    "s_0_1125_raw_full_frame_count": 21,
+    "s_0_6875_decorrelated_count": 17,
+    "s_0_6875_raw_full_frame_count": 69,
+    "stable_barrier_s": null,
+    "stable_minimum_to_barrier_kcal_mol": null,
+    "stable_path_histogram_status": "gapped_no_global_barrier"
+  },
+  "implementation_sha256": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc",
+  "internal_gap_evidence": {
+    "decorrelated_estimator_empty_bin": {
+      "center_s": 0.1125,
+      "current_windows_with_samples_in_adjacent_range_s_0.075_to_0.15": {
+        "activation_full_005": 2,
+        "activation_full_006": 2,
+        "activation_full_007": 5,
+        "activation_full_008": 1,
+        "activation_full_010": 1
+      },
+      "interpretation": "No decorrelated estimator sample falls in this bin. The bin has 21/5700 full-frame visits and 3 samples after the existing equilibration discard but before thinning. It is sparse post-equilibration estimator support, not absent from the retained MD trajectory. Nearby projection ambiguity is reported separately; this 1D bin is not connectivity evidence.",
+      "post_equilibration_pre_thinning_count": 3,
+      "raw_count_in_adjacent_range": 11,
+      "raw_decorrelated_count": 0,
+      "raw_frame_count_before_equilibration_discard": 21,
+      "stored_probability_mass": 0.0
+    },
+    "grid": {
+      "bin_width_s": 0.025,
+      "internal_centers_s": [
+        0.0125,
+        1.0125
+      ],
+      "outside_observed_endpoints_excluded": true
+    },
+    "stored_zero_but_sampled_bin": {
+      "center_s": 0.6875,
+      "interpretation": "Numerical cancellation in weighted histogram accumulation, not a raw support gap. The source projection implementation uses np.histogram(s, edges, weights=weights), which loses this small mass in the presence of much larger bins.",
+      "per_window_raw_counts": {
+        "delivery_full_006": 1,
+        "delivery_full_007": 8,
+        "delivery_full_008": 5,
+        "delivery_full_009": 3
+      },
+      "raw_decorrelated_count": 17,
+      "raw_frame_count_before_equilibration_discard": 69,
+      "stable_pmf_kcal_mol": 20.609087441998067,
+      "stable_probability_mass_bincount": 1.0491574733895156e-20,
+      "stored_probability_mass_histogram": 0.0
+    }
+  },
+  "overlap_and_orthogonal_channels": {
+    "ESS_gate": false,
+    "ESS_gate_minimum_per_window": 100,
+    "all_frames_retained_without_owner_censoring": "All supplied frames; no proton-owner censoring",
+    "checkpoint_status": "preliminary_connected_not_converged",
+    "chemical_owner_changed_frames": 0,
+    "chemical_review_hold": true,
+    "connected_mbar_edge_threshold": 0.001,
+    "connected_mbar_gate": true,
+    "neighbor_histogram_overlap_gate": false,
+    "neighbor_histogram_overlap_threshold": 0.2,
+    "orthogonal_stationarity_gate": null,
+    "worst_neighbor_intersections": [
+      {
+        "intersection": 0.0,
+        "windows": [
+          "activation_full_003",
+          "activation_full_004"
+        ]
+      },
+      {
+        "intersection": 0.0,
+        "windows": [
+          "activation_full_013",
+          "activation_full_014"
+        ]
+      },
+      {
+        "intersection": 0.0,
+        "windows": [
+          "activation_full_015",
+          "activation_full_016"
+        ]
+      },
+      {
+        "intersection": 0.0,
+        "windows": [
+          "activation_full_021",
+          "activation_full_022"
+        ]
+      },
+      {
+        "intersection": 0.0,
+        "windows": [
+          "delivery_full_021",
+          "delivery_full_022"
+        ]
+      }
+    ]
+  },
+  "reproduction": {
+    "N_k_min_max": [
+      3,
+      49
+    ],
+    "method": "Reloaded all 57 accepted immutable production receipts; reran recorded select_uncorrelated selection and common MBAR using the locked project environment; verified N_k exactly equals analysis.json; projected the resulting 749 samples on the exact recorded 3-CV path.",
+    "observed_s_range": [
+      -0.00823899850059518,
+      1.0256471107793548
+    ],
+    "stable_accumulation": "Per-bin np.bincount over original projected samples and MBAR weights; compared with stored np.histogram result.",
+    "unbiased_ESS": 12.657854180998546
+  },
+  "scope": "Read-only audit of cumulative full_path_300K checkpoint_05ps; no bins, restraints, states, windows, inputs, or jobs changed.",
+  "source_hashes": {
+    "accepted_receipt_and_source_hash_manifest_sha256": "d227dc5f6a059a0c170dae0f30a641ea7051f9dc8ca9b910484f09a737b9ee5e",
+    "accepted_receipt_count": 57,
+    "analysis_json_sha256": "3d296e5f9fc68dcae066236bbcc3cf428378bca24ef240300b19a54475e67cbc",
+    "analysis_request_json_sha256": "d40369d69be7302a165f9ef048a0238e506a179b9cb8bc55e78702061d6ef53f",
+    "analysis_request_sha256_recorded": "d40369d69be7302a165f9ef048a0238e506a179b9cb8bc55e78702061d6ef53f",
+    "path_3cv_sha256": "2c6838215b96f038c2fb6eaf604b2e5664fc722381fda0613664db3a1073dc93",
+    "physical_hamiltonian_sha256": "927a6e26d45b5db018db2dbb2b9bf5ce12b4f25e4b7e91b10a4d615903f9f5f0",
+    "source_identity_sha256": "0ec8ed47c1c2f28a5715b6f00dbb299c621dfe139b06105d34e1510d4f3ef716",
+    "source_json_sha256": "a7f4bca96a80aa1a344cd9faa8b577ef9281573512c2dca0852dab870bfaa89f",
+    "temperature_K": 300
+  }
+}

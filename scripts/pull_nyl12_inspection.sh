@@ -127,6 +127,7 @@ if ssh "$remote" test -f "$pilot_source/accepted_parent/preparation_manifest.jso
         --exclude='**/clutter/***' \
         --exclude='/backbone_audit/***' --exclude='/prepared/***' \
         --exclude='/preparation_job/***' --exclude='/inputs/relaxed_pdb/***' \
+        --exclude='/ensemble_mask_comparison/md_followup/analysis/structural_followup_20261124/coordinate_evidence/***' \
         --exclude='/native_preflight/canonical_pool/***' \
         --exclude='/boltz_validation/source_snapshot/boltz/***' \
         --exclude='/boltz_validation/predictions/runs/***' \
@@ -138,12 +139,30 @@ if ssh "$remote" test -f "$pilot_source/accepted_parent/preparation_manifest.jso
         --exclude='/boltz_validation/models/*/seed_*/preparation_history/***' \
         --include='*/' --include='*.json' --include='*.csv' --include='*.md' \
         --include='*.fasta' --include='*.fa' --include='*.pdb' --include='*.cif' \
+        --include='*.pml' \
         --include='*.py' --include='*.sh' --include='*.log' \
         --include='*.yaml' --include='*.txt' --include='*.jsonl' \
-        --include='*.mol2' --include='*.lib' --include='*.frcmod' --exclude='*' \
+        --include='*.mol2' --include='*.lib' --include='*.frcmod' \
+        --include='*.png' --exclude='*' \
         "$remote:$pilot_source/" "$pilot_destination/"
     if [[ $dry_run -eq 0 ]]; then
         echo "LigandMPNN pilot: $pilot_destination/README.md"
+    fi
+fi
+
+# Native-Thr MD diagnostic: portable overlays, figures and scalar evidence.
+thr_diag_source="$pilot_source/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124"
+thr_diag_destination="$pilot_destination/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124"
+if ssh "$remote" test -f "$thr_diag_source/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$thr_diag_destination"; fi
+    rsync "${vmd_rsync_args[@]}" --exclude='/coordinate_evidence/***' \
+        --include='*/' --include='*.pdb' --include='*.pse' --include='*.png' \
+        --include='*.pdf' --include='*.json' --include='*.csv' --include='*.py' \
+        --include='*.md' --include='MANIFEST.sha256' --exclude='*' \
+        "$remote:$thr_diag_source/" "$thr_diag_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$thr_diag_destination" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Native-Thr overlays: $thr_diag_destination/view_native_thr.py"
     fi
 fi
 
@@ -154,6 +173,9 @@ if [[ $dry_run -eq 0 ]]; then mkdir -p "$planning_destination"; fi
 rsync "${rsync_args[@]}" \
     --include='MASTER_PLAN_NYL12_COVALENT_REDESIGN.md' \
     --include='NYL12_MECHANISM_ROADMAP.md' \
+    --include='VMD_MOVIE_CONVENTIONS.md' \
+    --include='PRESENTATION_AND_FIGURE_STYLE.md' \
+    --include='MOL_BLENDER_RUNTIME.md' \
     --include='plm_and_filter_calibration_20261121.md' \
     --include='nyl12_ligandmpnn_pilot.md' --include='CURRENT_JOBS.md' \
     --include='standalone_handoff_20261020.md' \
@@ -650,6 +672,102 @@ rsync "${vmd_rsync_args[@]}" \
     "$remote:/data/jpc/covalent-enzyme-design/docs/direct_pt_umbrella_stop_20261110.md" \
     "$destination/docs/"
 
+# N-terminal relay: both branch movies, plots and compact controlling metadata.
+nterminal_relay_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay
+nterminal_relay_destination="$destination/qmmm/pa6_flipped_model30/12_nterminal_relay"
+if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$nterminal_relay_destination"; fi
+    nterminal_relay_rsync_args=(-rtpvz --safe-links --max-size=500m)
+    if [[ $dry_run -eq 1 ]]; then nterminal_relay_rsync_args+=(--dry-run); fi
+    rsync "${nterminal_relay_rsync_args[@]}" \
+        --exclude='**/source_snapshot/***' --exclude='**/clutter/***' \
+        --exclude='**/columns/***' --exclude='**/hessian*/***' \
+        --exclude='/model/***' --exclude='**/coordinate_drive/***' \
+        --exclude='**/native/***' --exclude='**/__pycache__/***' \
+        --include='/01_activation_reverse/' --include='/02_acylation_forward/' \
+        --include='/connectivity_audit/' --include='/connectivity_audit/*.json' \
+        --include='/connectivity_audit/*.md' \
+        --include='/plots/' --include='/plots/*.png' \
+        --include='/plots/*.json' --include='/plots/*.csv' --include='/plots/*.py' \
+        --include='/umbrella_sampling/' \
+        --include='/umbrella_sampling/README.md' \
+        --include='/umbrella_sampling/full_path_300K/' \
+        --include='/umbrella_sampling/full_path_300K/*.json' \
+        --include='/umbrella_sampling/full_path_300K/*.sha256' \
+        --include='/umbrella_sampling/full_path_300K/README.md' \
+        --include='/umbrella_sampling/full_path_300K/plots/' \
+        --include='/umbrella_sampling/full_path_300K/plots/*.png' \
+        --include='/umbrella_sampling/full_path_300K/plots/*.json' \
+        --include='/umbrella_sampling/full_path_300K/plots/*.py' \
+        --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/' \
+        --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/runtime_summary.json' \
+        --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/plan.json' \
+        --include='/umbrella_sampling/full_path_300K/relay_us_azalea_20261125/launch_argv.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_mbar_progression_20261125.md' \
+        --include='/umbrella_sampling/full_path_300K/analysis/direct_relay_compatibility_20261125.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/readiness_*.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/readiness_*.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/first_coverage_20261125/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/first_coverage_20261125/checkpoint_*/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/first_coverage_20261125/checkpoint_*/analysis.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/first_coverage_20261125/checkpoint_*/analysis.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/first_coverage_20261125/checkpoint_*/analysis_request.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/latest_progression.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/latest_checkpoint.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/analysis.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/analysis.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/pmf_05ps_readable.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/progression.png' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/source.json' \
+        --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/analysis_request.json' \
+        --include='/vmd_progress/***' --include='/*/vmd_progress/***' \
+        --include='/*/plots/' --include='/*/plots/*.png' \
+        --include='/*/plots/*.json' --include='/*/plots/*.csv' \
+        --include='/*.json' --include='/README.md' \
+        --include='/*/config.json' --include='/*/*plan*.json' \
+        --include='/*/*approval*.json' --include='/*/*authorization*.json' \
+        --include='/*/*status*.json' --include='/*/progress.json' \
+        --include='/*/progress.csv' \
+        --include='/00_conditional_queue/' --include='/00_conditional_queue/job/' \
+        --include='/00_conditional_queue/job/status.json' \
+        --include='/00_conditional_queue/job/command.json' --exclude='*' \
+        "$remote:$nterminal_relay_source/" "$nterminal_relay_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        if [[ -f "$nterminal_relay_destination/vmd_progress/SHA256SUMS.txt" ]]; then
+            (cd "$nterminal_relay_destination/vmd_progress" && "${checksum[@]}" SHA256SUMS.txt)
+        fi
+        echo "Combined relay movie: $nterminal_relay_destination/vmd_progress/view_path.vmd"
+        echo "N-terminal relay movies: $nterminal_relay_destination/BRANCH/vmd_progress/view_path.vmd"
+        echo "N-terminal relay plots: $nterminal_relay_destination/BRANCH/plots/"
+        echo "Cumulative PMF progression (when available): $nterminal_relay_destination/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/latest_progression.png"
+    fi
+fi
+
+# Deacylation hydration: transfer the complete curated movie with its topology,
+# plus water-analysis tables/figures. Raw full-system MD segments stay on Violet.
+hydration_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance
+hydration_destination="$destination/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance"
+hydration_rsync_args=(-rtpvz --safe-links --max-size=500m)
+if [[ $dry_run -eq 1 ]]; then hydration_rsync_args+=(--dry-run); fi
+if ssh "$remote" test -f "$hydration_source/vmd_progress/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$hydration_destination"; fi
+    rsync "${hydration_rsync_args[@]}" \
+        --exclude='**/clutter/***' --exclude='/analysis/failed_*/***' \
+        --exclude='/analysis/*_initial_*.csv' \
+        --include='/vmd_progress/***' --include='/analysis/***' \
+        --include='/README.md' --include='/hydration_endpoint_status_20261124.json' \
+        --exclude='*' \
+        "$remote:$hydration_source/" "$hydration_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$hydration_destination/vmd_progress" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Deacylation hydration VMD: $hydration_destination/vmd_progress/view_hydration.vmd"
+        echo "Attacking-water analysis: $hydration_destination/analysis/report.json"
+    fi
+fi
+
 # Flipped model30: compact coordinates, run inputs and the complete latest VMD
 # bundle. Materialize latest symlinks; skip immutable historical movie copies.
 if [[ $dry_run -eq 0 ]]; then
@@ -659,6 +777,8 @@ if [[ $dry_run -eq 0 ]]; then
 fi
 # Per-column Hessian displacements and receipts are too fine-grained for laptop inspection.
 rsync "${vmd_rsync_args[@]}" --copy-links \
+    --exclude='/12_nterminal_relay/' \
+    --exclude='/13_deacylation_pilot/' \
     --exclude='**/ts_hessian/columns/***' \
     --exclude='**/columns/column_*/***' \
     --exclude='source_snapshot/' --exclude='clutter/' \
@@ -862,15 +982,23 @@ briefing_destination="$destination/docs/presentations/nyl12_progress_20261123"
 if ssh "$remote" test -f "$briefing_source/MANIFEST.sha256"; then
     if [[ $dry_run -eq 0 ]]; then mkdir -p "$briefing_destination"; fi
     rsync "${vmd_rsync_args[@]}" \
-        --exclude='/rendered/***' --exclude='/source_history_before_mask_update/***' \
+        --exclude='/source_history_before_mask_update/***' \
+        --exclude='/assets/mol_blender/***' \
         --include='*/' \
         --include='*.pptx' --include='*.pdf' --include='*.png' \
         --include='*.json' --include='*.md' --include='*.sh' \
+        --include='*.svg' --include='*.py' --include='*.pse' --include='*.txt' \
         --include='MANIFEST.sha256' --exclude='*' \
         "$remote:$briefing_source/" "$briefing_destination/"
     if [[ $dry_run -eq 0 ]]; then
         (cd "$briefing_destination" && "${checksum[@]}" MANIFEST.sha256)
-        echo "Nyl12 progress deck: $briefing_destination/Nyl12_PA6_progress_20261123.pptx"
+        briefing_name=$(awk '$2 ~ /^Nyl12_PA6_progress_[0-9]+[.]pptx$/ {print $2}' \
+            "$briefing_destination/MANIFEST.sha256")
+        if [[ -z "$briefing_name" || "$briefing_name" == *$'\n'* || ! -f "$briefing_destination/$briefing_name" ]]; then
+            echo "Expected one current dated PowerPoint in the briefing manifest." >&2
+            exit 1
+        fi
+        echo "Nyl12 progress deck: $briefing_destination/$briefing_name"
     fi
 fi
 

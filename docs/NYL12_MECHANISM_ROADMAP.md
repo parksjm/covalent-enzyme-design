@@ -1,5 +1,238 @@
 ## PRIMARY OBJECTIVE — complete the acylation US/MBAR path, 2026-11-25
 
+## Current checkpoint — 25 November 2026, 22:49 EST
+
+- **Sampling:** continue the existing 57-window relay campaign through at least 30 ps/window. Automatic MBAR repeats at shared 5 ps boundaries. The first 5 ps overlap graph is connected, but local overlap, effective sampling and chemical/stationary-point validation remain unresolved.
+- **Gap audit:** both visible gaps have full-trajectory visits. At s=0.1125, 21 frames become 3 after equilibration removal and 0 after decorrelation; at s=0.6875, 17 decorrelated samples were incorrectly assigned zero mass by weighted-histogram cancellation. Stable per-bin accumulation removes that numerical zero; the highest sampled bin is 20.61 kcal/mol, with **no accepted global barrier**. Original reports are archived; native inputs/sampling are unchanged.
+- **Next sampling decision:** inspect 10 ps and 15 ps support in the actual CVs and the projection. Extend existing windows first; add targeted bridges only for persistent weak independent coverage/overlap after checking channel/projection behavior. Keep the fixed grid and predeclared gates.
+- **Model policy:** retain GPT/PI scientific leadership; Nemotron remains a read-only evidence/citation assistant. We have no matched GPT-6.1 Sol Ultra versus Nemotron benchmark. The live RAG pilot and factual-count audit continue independently of science.
+
+See [the sampling-support audit](RELAY_US_SAMPLING_SUPPORT_20261125.md) for exact counts, numerical correction, historical comparison, overlap figure and evidence paths.
+
+## Human-guided mechanism-agent handoff — 25 November 2026
+
+The PI requests mechanism-agent to continue the study after November 30 as a
+**human-in-the-loop** system. Its governing staged plan is now
+`/data/jpc/mechanism-agent/docs/ROADMAP.md`: finish/grade Nemotron vs Mistral;
+qualify a better model for a small read-only retrieval pilot; then validate PI
+decisions, persistent state and typed scientific adapters before enabling
+bounded execution. Scope includes literature, Nyl12/PA6 mechanism work,
+transition-region/verified-TS templates, symmetry-aware design and validation,
+PI-reviewed experimental shortlists, and evidence-linked manuscript drafts.
+Access the existing repositories through an artifact index and analysis tools,
+preserving negative results, provenance and scientific limitations; do not
+bulk-copy trajectories or treat every installed program as an enabled tool.
+Existing US/MBAR science and the technical redesign control remain independent
+of model qualification. The November 30 target is a tested handoff, not a claim
+that autonomous science is already implemented or a deadline for a desired barrier.
+
+## Operational corrections and authorized control — 25 November, 19:24 EST
+
+- **Relay-US timing correction:** native inputs use `dt=0.0005 ps` and
+  `nstlim=10000`: a 5 ps block requires 10,000 steps. Earlier status reports
+  incorrectly used 1 fs to convert step counts to ps. At 19:20 EST the
+  slowest window's native `mdinfo` reported 2,700/10,000 steps (1.35 ps),
+  with about 2 h 55 min remaining at its observed rate. The corrected first
+  all-window boundary is approximately **22:15 EST**, followed by receipt
+  acceptance, synchronization and automatic MBAR. The earlier 20:15 forecast
+  is superseded. The 65-minute production-start stagger and similar SCC/rates
+  remain valid. No MD inputs, timesteps or running jobs were changed.
+- **Automatic PMF:** all 57 workers and both sync/analysis services were
+  verified live. The watcher requires all 57 accepted production receipts
+  through a shared 5 ps horizon, then repeats at 10, 15, ... ps. A preliminary
+  plot remains distinct from converged sampling.
+- **GPU 0 technical redesign control is running:** WT and the accepted
+  LigandMPNN sequence S50N/V111T/A187S/V188T receive two matched-seed Boltz-2
+  predictions, followed automatically by existing parameterized Amber
+  preparation, OpenMM CUDA minimization and raw/relaxed four-site geometry.
+  No new sequence sampling, TS claims, activity claims or MD. GPU 1 and US
+  remain untouched. Use `design/nyl12_ligandmpnn_pilot/pipeline_control/` and
+  its `current_execution.json`. The initial waiting adapter used the wrong
+  launcher-status field; it was interrupted before scientific postprocessing,
+  retained, corrected to native `exit_status`, tested and requeued.
+- **Nano benchmark:** the previous Mistral startup failed during FlashInfer
+  autotuning, before any test cases; the controller then stopped Nemotron.
+  No confirmed OOM or chemistry comparison exists. One bounded retry disables
+  that autotuning option for both models, preserving weights and test cases.
+  The retry controller `mechanism_nano_autotune_off_20261125` and both owned
+  Nano server jobs were launched at approximately 19:31 EST. No completed cases
+  or measured inference ETA yet; plan for overnight and grade chemistry before
+  selecting a read-only assistant. The mechanism-agent receipt records live state.
+
+Evidence: `provenance/relay_us_timing_correction_20261125.json` retains the
+correction to the earlier timing receipt; the original observation artifacts
+remain on disk. Control checks: 14 focused tests, 90% combined coverage, each
+new module at least 81%; Ruff passes. This timestamp supersedes live-state
+claims in the earlier checkpoint below.
+
+## Verified execution checkpoint — 25 November, 18:56 EST
+
+**US timing audit, 19:04 EST:** the production starts span 64 min 51 s
+(17:09:56–18:14:47 EST), explaining almost all of the 2,048–4,848-step progress
+spread (1.024–2.424 ps with the verified 0.5 fs timestep).
+Current rates differ by only ~7% (1.379–1.477 s/step), with 20–21 SCC
+iterations and no unresolved warning markers. Azalea has 28 physical cores /
+56 logical CPUs; 57 workers share these resources, but the observed sampling
+gap reflects staggered starts rather than a persistently slow worker. The
+initial 20:12–20:17 EST forecast used the wrong timestep and is superseded by
+the correction above. Receipt validation, synchronization and MBAR must finish
+after the true boundary before a preliminary plot exists. Evidence:
+`provenance/relay_us_timing_audit_20261125.json` and its correction receipt.
+
+- **Azalea relay US:** 57/57 windows have accepted the 5 ps equilibration and
+  are running their first 5 ps production block. Native production progress is
+  1,704–4,496 steps/window (0.852–2.248 ps with the corrected conversion);
+  zero accepted production blocks and zero reported live
+  worker failures at this observation. Heating is no longer the active stage.
+- **First new PMF:** not available yet. The cumulative MBAR watcher is active
+  and waits for all 57 accepted first production blocks, then updates after
+  each shared 5 ps increment. MD process health is not sampling convergence.
+- **Violet:** one CPU Sander hydration run (`extend_06`, native time 34.9 ps)
+  continues. GPU 1 runs the separate polyamide-amber-ff WT RC1/RC2 parameter
+  comparison: the first RC1 replica is in 20 ns production, with six 20 ns runs
+  total queued. GPU 0 is idle. US compact-sync/MBAR, VMD, MD-analysis and Nano
+  controller processes are monitors, not additional simulation workers.
+- **Marigold/lavender:** both verified checkpoints are loaded; first-use CUDA
+  kernel compilation continues. No model inference requests or completed
+  benchmark cases were observed yet. The 32 passing software tests do not
+  establish Nemotron/Mistral scientific performance. Controller retry01 is
+  active, with completion/error email and owned-service shutdown scripted.
+- **Next decisions:** inspect the first complete relay PMF with overlap,
+  chemistry and uncertainty diagnostics; grade paired local-model responses
+  only after actual inference. Keep the matched Mechanism-A/B comparison and
+  30 November technical design pilot as the existing priorities. No new
+  scientific campaign or parameter change was launched by this audit.
+
+Evidence: `provenance/four_host_status_20261125_evening.json`, the US
+`current_execution.json`/live runtime summary, and mechanism-agent's
+`benchmarks/nemotron_mistral_nano_20261125/controller_retry01_job/`.
+
+## Matched mechanism comparison and redesign target: 25–30 November 2026
+
+The PI requests a defensible comparison of two proposed acylation mechanisms
+and a working LigandMPNN → Boltz-2 → OpenMM redesign pipeline by **30 November
+2026**. The technical pilot is a deadline target; converged free energies,
+verified first-order saddles and increased catalytic efficiency remain outcomes
+to establish. Current QM/MM, MD and US jobs continue unchanged. This roadmap
+update does not launch or silently extend any campaign.
+
+**Mechanism A — direct proton transfer:** Thr233 OG1 attacks the scissile
+carbonyl, with transfer of its hydroxyl proton directly to the substrate amide
+nitrogen and C–N cleavage to form the acylenzyme. **Mechanism B — N-terminal
+proton relay:** the Thr233 alpha-amino group first accepts the hydroxyl proton
+and subsequently supplies a proton to the leaving nitrogen during acylation.
+Neither description requires a stable, discrete tetrahedral intermediate.
+
+### Common protocol and reference state
+
+- Match the substrate length/register and direction, enzyme assembly,
+  proton inventory/microstate, solvent/ions, atom mapping, force-field release,
+  QM atom identities/link boundaries/charge, DFTB3 parameters/electrostatics,
+  physical and electronic temperatures, mobile atoms and fixed exterior.
+  Identical atom counts alone do not establish a match. Compare the actual
+  frozen-coordinate and input hashes before reusing a reference.
+- Use one equilibrated E–S ensemble and common basin definitions. If a
+  relay-ready conformation is selected, quantify its preorganization cost or
+  label its barrier conditional; do not give it a separately favorable zero.
+  Prefer a shared accepted E–S endpoint and frozen environment for the bounded
+  comparison, then assess sensitivity to additional independent starts.
+- Apply the same heating/equilibration, timestep, thermostat, bias-potential
+  convention, output cadence, SCC/force validity rules and production-block
+  analysis. Start with 30 ps/window in retained 5 ps blocks, and extend based
+  on the same convergence gates. Equal window counts or equal elapsed times
+  are not required: coverage and statistical precision are the matching goals.
+- Record a common set of acylation/proton-transfer coordinates and all relevant
+  component distances/proton coordination in both campaigns. Window centers
+  can follow different channels; their exact native biases must be evaluated
+  and removed consistently. Keep both elementary reactions asynchronous.
+- Reconstruct a common multidimensional free-energy description where sampled
+  support permits, then compare channels using the same coordinate measure,
+  binning/metric, normalization and E–S basin reference. A marginal in
+  `q_acyl` and a density along normalized path arclength are different
+  observables; their maxima cannot simply be subtracted. Separately zeroed
+  path PMFs also cannot establish a route preference without compatible
+  reactant/channel normalization and any necessary restraint corrections.
+- Monitor all exchangeable protons, not only HG1. If direct-seeded windows
+  follow the N-terminal relay, report channel interconversion rather than
+  calling their marginal a pure Mechanism-A PMF. Do not introduce artificial
+  proton-identity walls merely to preserve a pathway label. With a common
+  Hamiltonian and fully equilibrated common observables, seed-dependent global
+  PMFs should agree; mechanism differences must be resolved as physical
+  channels and bottlenecks, not as an unexplained disagreement between runs.
+- Require connected overlap, correlation-aware effective sample sizes,
+  block/independent-start stability, stationary orthogonal observables,
+  chemical retention and bootstrap uncertainty. Use MBAR consistently, with
+  WHAM as an estimator cross-check when the chosen coordinates support it.
+  Report uncertainty in the route comparison, including reference uncertainty;
+  sparse matched DFT/MM checks remain necessary for fast-QM interpretation.
+
+The existing Mechanism-A-seeded campaign is valuable evidence, but its
+approximately 47.05 kcal/mol `q_acyl` marginal is nonconverged and mixes direct
+and relay configurations (low target ESS and drift flags). It is not a
+matched pure-direct activation free energy. First reanalyze its retained data
+in the common observables and audit physical identities. Reuse valid evidence;
+prepare a matched direct-channel control only for the missing support. Keep
+the present relay campaign running. No high barrier is discarded or lowered
+to meet the deadline.
+
+**Compatibility audit, 25 November:** retained direct and relay records have
+identical topology, QM/mobile selections, 3ob parameter trees, native QM/MM
+electrostatics and 300 K physical/0 K electronic temperatures. Five direct
+seeds compared with the relay source have exactly matching cell parameters;
+100,757 frozen atoms differ by at most 3.81×10⁻⁶ Å per Cartesian component
+(RMS 1.56×10⁻⁶ Å), consistent with restart serialization precision. No fit or
+periodic realignment was used. The direct calculation used `scfconv=1e-10`
+versus `1e-12` for the relay. Check this numerical/exterior precision effect
+on representative common configurations before any pooling. The next bounded
+step is common-observable reanalysis and support assessment, not an automatic
+full direct-route rerun. Matching physical inputs does not fix mixed channels,
+reactant normalization, low ESS or lack of convergence.
+Source-bound comparison evidence is retained in
+`qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/direct_relay_compatibility_20261125.json`
+and included by the existing laptop pull script.
+
+### Work sequence and measurable deliverables
+
+| Target dates | Priority | Deliverable and acceptance |
+| --- | --- | --- |
+| 25–26 Nov | Relay sampling and comparison definition | Retain automatic 5 ps MBAR checkpoints; audit overlap/chemistry as soon as all windows have production. Freeze the direct/relay match table, common reference and channel observables. Prepare a tested continuation before requesting sampling beyond the current six-block MD limit. |
+| 26–27 Nov | Direct-channel comparison | Reanalyze existing direct-seeded frames first. Prepare missing matched seeds/inputs and resource plan using Violet/Azalea headroom. Launch a control only after topology, frozen exterior, CV/bias parity and restart checks pass. |
+| 27–29 Nov | Mechanistic qualification | Compare common-reference free-energy channels with uncertainty; resolve coverage/hysteresis failures. In parallel, finish bounded TS-curvature/downhill tests and select representative barrier-region structures without claiming an unverified structure is a true TS. |
+| 25–29 Nov, parallel | Design-pipeline commissioning | Verify reactive-atom mapping, protected-site manifest and separate alpha/beta sequence ties; run a small existing-structure/WT control through LigandMPNN, Boltz-2, OpenMM and geometric reporting. This is an engineering test, not evidence for a new catalytic design. |
+| By 30 Nov | End-to-end pilot and decision | Deliver reproducible scripts, current slide deck, matched-PMF status table and a complete technical pilot. Start a bounded scientific design campaign when the WT PMF/template gates below pass; otherwise deliver a runnable pipeline with explicit scientific holds and the next resolving calculation. |
+
+Use the mechanism with supported chemistry and a qualified WT free-energy
+profile for the first scientific design pilot. Prefer a verified PES saddle
+as the chemical anchor/control and three to five representative near-barrier
+conformations for ensemble testing. A PMF maximum is not automatically a
+dynamical TS; retain that distinction and use appropriate connectivity or
+committor diagnostics. If only a qualified transition-region ensemble is
+available, the previously approved provisional ensemble pilot may proceed
+with that label; do not invent a verified saddle to meet 30 November.
+
+The design pilot preserves catalytic/maturation context and assembly symmetry
+using the reviewed protected-site/alpha-beta tie manifests. Boltz-2 predictions
+and OpenMM relaxation test structural plausibility, not activation barriers.
+Use validated parameters for noncovalent E–S relaxation. Do not relax a TS or
+covalent intermediate with the E–S bond topology/charges: retain explicitly
+declared motif constraints for structural tests or use QM/MM refinement.
+Evaluate whole sequences across E–S and reactive-state templates, with WT and
+known-active controls; native-Thr similarity remains a diagnostic. Reserve
+matched mutant/WT barrier calculations and experiments for a small shortlist.
+No new force-field-development, large substrate-modeling or assay-temperature
+campaign is added to this deadline's critical path.
+
+### Presentation narrative
+
+Explain experiment and ultimate catalytic-efficiency goal first, then the
+parameterization/MD/protonation/QM-MM workflow and the two proposed mechanisms.
+Define geometric criteria before showing structural classifications. Refer to
+both substrate directions, and show the position of the scissile amide N
+relative to Thr233's amino group rather than relying on the word “flipped”.
+Use Mechanism A/B consistently; include pending-result placeholders and keep
+PES maxima, preliminary PMFs and verified TS barriers distinct. The current
+presentation filename and visible date must reflect the actual build date.
+
 The PI prioritizes a converged free-energy profile for the current modeled
 E–S → N-terminal relay/addition-like region → acylenzyme reaction. A discrete
 TI1 minimum and full PES TS certification are not prerequisites for sampling.
@@ -22,7 +255,29 @@ by this decision; US/MBAR remains the compute priority.
 If saddle certification remains unresolved after the PMF/ensemble is qualified,
 defer the single-saddle control rather than block a provisional ensemble pilot.
 
-**Live launch checkpoint, November 25, 12:38 EST:** 24 one-thread Sander
+**Current US recovery checkpoint, November 25, 13:26 EST:** all 24 initial
+Sander heating jobs completed normally (2,000 steps each, exit 0, resolved SCC),
+but the workflow wrongly required an equilibrated temperature after the 1 ps
+25→300 K ramp. Their final temperatures were 172.79–182.21 K. All 48,000 steps
+and checkpoints were preserved and independently adopted as heating data;
+none counts as production. Heating now has an explicit ramp-only acceptance
+role; the existing 5 ps constant-300 K equilibration follows from those exact
+checkpoints, with the stricter equilibrium/production gates retained.
+
+The recovered campaign now has **57 actual Sander workers / 57 windows / zero
+worker failures** at the stated observation. Azalea has 28 physical cores and
+56 logical CPUs. All windows can progress concurrently with slight CPU time
+sharing; no window was removed just to match hardware. A source-frozen staged
+28→40→57 worker benchmark and reversible all-logical/physical-core affinity
+comparison measure aggregate throughput while preserving MD/RNG/checkpoints.
+Sampling convergence remains unestablished. The stable status files are
+`12_nterminal_relay/umbrella_sampling/full_path_300K/current_execution.json`
+and `runtime_summary.json`; these supersede the earlier failed-run summary
+and are included by the curated pull. Exact recovery plan, retained failures,
+acceptances and resource results are under `full_path_300K/relay_us_heat_recovery_v2_20261125/`
+and `full_path_300K/recovery_operations_v2_20261125/`.
+
+**Earlier launch checkpoint, November 25, 12:38 EST:** 24 one-thread Sander
 workers were verified running on Azalea, with zero worker failures at that
 observation. The full schedule has **57 states: 31 activation + 26 delivery**;
 these include bridges needed to keep each biased-axis increment below 0.15 Å.
@@ -43,8 +298,15 @@ guardian revalidates even previously completed derived records, repairs only
 derived outputs, and resumes clean analysis-held workers without repeating
 accepted MD. A 120-hour compact sync runs every 60 seconds; raw trajectories
 remain on the execution host. Extensions wait if diagnostic acceptance fails.
-The 72-hour analysis watcher reports missing coverage and attempts MBAR only
-after every state has an accepted first production block. No new PMF exists yet.
+The replacement seven-day analysis watcher (`nyl12_relay_us_analysis_20261125_c03`)
+waits for matched accepted 5 ps production increments across all 57 states,
+then retains each cumulative MBAR report and a common-reference progression
+plot under `full_path_300K/analysis/cumulative_progression_20261125/`. Disconnected
+overlap cannot produce a global PMF. No accepted production receipts existed
+at replacement, so no new PMF exists yet. The watcher can analyze horizons
+beyond 30 ps, but the current MD runner stops at six blocks; a tested native
+continuation must be prepared before extending that allocation. See the stable
+`12_nterminal_relay/umbrella_sampling/README.md` for the exact scope and gates.
 
 1. Finish the generalized native CV/analysis adapter and runnable inputs.
    Activation windows bias `(q_acyl, q_act)`; delivery windows bias

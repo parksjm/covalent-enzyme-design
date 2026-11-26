@@ -1,5 +1,110 @@
 ## PRIMARY OBJECTIVE — complete the acylation US/MBAR path, 2026-11-25
 
+**Sampling-support correction, 25 November 22:49 EST:** the displayed high-energy hole was a weighted-histogram roundoff error, now repaired with stable per-bin accumulation. The remaining empty estimator bin has 21 full-frame visits, 3 post-equilibration frames and 0 decorrelated samples. Highest sampled value 20.61 kcal/mol; no accepted barrier. Original outputs are archived. The replacement frozen analysis watcher resumes shared 5 ps MBAR checkpoints; native MD is unchanged. See [sampling support and next-window criteria](RELAY_US_SAMPLING_SUPPORT_20261125.md).
+
+**Agent-workflow overnight checkpoint, 25 November 22:21 EST:** the bounded Nemotron RAG pilot is generating answers on marigold. Five responses currently have valid citations and matching request/response/source hashes; factual review remains pending. The separate 12 h audit `mechanism_rag_overnight_audit_20261125` records actual counts and will retain a morning report, with at most one factual follow-up on incomplete/error outcomes. No local-model scientific submission is enabled. Scientific planning limits and the three benchmark follow-up errors are explained in `/data/jpc/mechanism-agent/docs/QUALIFIED_SCIENTIFIC_CONTROL.md`. Existing scientific jobs continue.
+
+**Latest checkpoint, 25 November 21:52 EST:** both 20-case model runs and lead review are complete. Nemotron is approved for a supervised read-only RAG pilot; Mistral is disqualified; scientific dispatch remains disabled. The US float32-time reader was repaired and passed a real 5 ps/native-hash smoke; the derived guardian and automatic cumulative MBAR watcher are active. Scientific runs were not changed. The first 5 ps MBAR profile is now available: connected sampled network, but empty projection bins and low effective sampling; highest sampled bin 20.46 kcal/mol, global barrier deliberately unset. Approved US continuation workers have launched automatically. Current counts, repair evidence and scope restrictions lead [the mechanism roadmap](NYL12_MECHANISM_ROADMAP.md).
+
+**PI-guided agent handoff, 25 November:** mechanism-agent is intended to
+continue literature/mechanism/design/validation/manuscript work after November 30,
+with the PI retaining scientific direction and decisions. The staged plan now
+leads `/data/jpc/mechanism-agent/docs/ROADMAP.md`: benchmark first, then conditional
+read-only RAG, then qualified state/decision and scientific adapters. Full evidence
+access uses source/artifact indices and existing tools, not duplicated raw data.
+Existing research-job authorizations remain valid; no RAG dependencies or general
+scientific submission tools were enabled by this documentation update.
+
+**Correction/current execution, 25 November 19:24 EST:** US uses **0.5 fs**,
+10,000 steps per 5 ps; earlier progress-to-ps/ETA reports incorrectly used 1 fs.
+At 19:20 the slowest window had 2,700 steps (1.35 ps), implying approximately
+**22:15 EST** for the first shared 5 ps boundary, before validation and automatic
+MBAR. All 57 workers and sync/MBAR monitors remain active. Native scientific
+inputs were correct and unchanged. See `provenance/relay_us_timing_correction_20261125.json`;
+the earlier timing notes/receipts below are retained as superseded evidence.
+
+Violet GPU 0 now runs the two-model WT/LigandMPNN technical control under
+`design/nyl12_ligandmpnn_pilot/pipeline_control/`: fresh matched-seed Boltz-2
+predictions, queued OpenMM minimization and four-site geometry reporting. No
+new MD or TS/activity claim. `current_execution.json` identifies the corrected
+postprocessing source/job. GPU 1 and US were left unchanged. The Nano comparison
+had zero completed cases after Mistral startup failed; one runtime-only retry
+disables FlashInfer autotuning for both models. Consult the mechanism-agent
+controller receipt for actual retry state, rather than the older compiling note.
+
+**US timing follow-up, 25 November 19:04 EST:** production starts were staggered
+by 64 min 51 s; current step rates differ by only ~7%, with SCC counts 20–21.
+This explains the progress spread. The first forecast used an incorrect 1 fs
+step-to-time conversion; use the corrected native 0.5 fs forecast above.
+See `provenance/relay_us_timing_audit_20261125.json` and its correction. No jobs changed.
+
+**Latest verified execution, 25 November 18:56 EST:** all 57 Azalea US windows
+are in their first production block (1,704–4,496 steps, or 0.852–2.248 ps/window);
+none has an accepted
+5 ps production block yet, so the automatic MBAR watcher is still waiting.
+Violet runs one hydration Sander and one RC1/RC2 force-field MD GPU job.
+The Nano models are compiling first-use CUDA kernels; model-case inference
+has not begun. The current operational checkpoint leads
+`NYL12_MECHANISM_ROADMAP.md`; all existing science jobs were left unchanged.
+
+**PI priority, 25 November; target 30 November 2026:** compare direct substrate-N
+protonation (Mechanism A) with the Thr233 N-terminal relay (Mechanism B) using
+matched chemical systems, Hamiltonians, frozen environment, sampling criteria
+and common reactant/reference-coordinate definitions. The existing direct-
+seeded PMF mixes channels and is nonconverged; its `q_acyl` marginal cannot be
+subtracted from the relay path-arclength PMF. Reanalyze retained data first and
+prepare only the missing matched control. Continue current jobs unchanged.
+Commission LigandMPNN → Boltz-2 → OpenMM in parallel with a small WT/structure
+engineering test; scientific design remains conditional on qualified WT
+PMF/reactive templates. Deliver a runnable pilot and explicit scientific status
+by 30 November; the date does not relax convergence or TS-verification gates.
+The dated work table and acceptance criteria lead `NYL12_MECHANISM_ROADMAP.md`.
+
+**Current presentation (25 November):**
+`docs/presentations/nyl12_progress_20261123/Nyl12_PA6_progress_20261125.pptx`
+and the matching PDF. The asset-directory date remains stable; the deliverable
+filename and visible build date are current. The pull script exports both.
+
+**Presentation style:** follow `PRESENTATION_AND_FIGURE_STYLE.md`: declarative
+titles, minimal on-slide text, large correctly symbolled plots, detailed speaker
+notes and clean PyMOL molecular images. Render/review every slide and preserve
+obsolete decks/data in central clutter. Remove irrelevant failed-scan plots from
+the main story without discarding the underlying negative evidence.
+
+**Viewer defaults:** use `VMD_MOVIE_CONVENTIONS.md` and the shared inline policy
+for all reaction movies: connected QM/MM substrate C–C and QM-residue CA/CB
+context, 0.2 Licorice/DynamicBonds, orange substrate carbons with normal H/N/O
+colors, depth cueing off, and separate hidden A–D cartoons with paired mature
+beta chains in matching colors. This changes display artifacts only.
+
+**Current VMD repair, 2026-11-25:** the PI's actual VMD console exposed an
+invalid `brown` color that the earlier mocks failed to reject. The original
+published SHA `1f678ad6f7f3886b523afbf2d8a0221639db6ceb2cb12072d5906771358084d3`
+matched the laptop: transfer was correct, execution stopped before styling.
+The fixed palette uses valid `tan`, validates the real 33-name vocabulary
+before mutation, and reports `NYL12 DISPLAY OK version=20261125-palette2 ...
+radius=0.2` on success. Combined viewer SHA is now
+`8a6683ac9ea506fa0df865ad885de5c1c91b5b8558def03aeb794d281b534d9b`.
+All 21 viewers/checksums were refreshed; 42 native DCD/topology files stayed
+byte-identical. Exact original/repaired full-script Tcl and actual pull-filter
+checks are in `provenance/vmd_palette_failure_repair_20261125.json`; actual
+GUI readback still comes from the laptop. The current source-frozen view
+watcher is `nyl12_vmd_palette_watch_20261125`, with status under
+`output_vmd_palette_repair_20261125/watcher_events/`. Earlier acceptance below
+is retained as superseded evidence, not a claim the first palette worked.
+
+**Earlier display rollout (superseded palette validation):** 21 current reaction/optimization/umbrella viewers were
+updated in place; native trajectories/topologies were not regenerated. Final
+acceptance and rollback paths are in `provenance/vmd_style_acceptance_20261125.json`
+and `provenance/vmd_style_execution_plan_20261125.json`; originals are retained
+under `clutter/vmd_style_20261125/`. The view-only tmux watcher
+`nyl12_vmd_style_watch_20261125` runs every 60 seconds for 72 hours, following
+12 logical latest aliases plus nine direct paths. It accepts a re-export only
+when the pinned physical topology identity matches, otherwise holds explicitly.
+Its status is `output_vmd_style_watch_20261125/events/watch_status.json`.
+Headless Tcl and actual-map/checksum checks passed; graphical VMD is unavailable
+on Violet, so visual inspection remains on the laptop after pulling.
+
 The PI prioritizes a converged free-energy profile for the current modeled
 E–S → N-terminal relay/addition-like region → acylenzyme reaction. A discrete
 TI1 minimum and full PES TS certification are not prerequisites for sampling.
@@ -19,7 +124,29 @@ launched, and no desired barrier value is an acceptance criterion.
 Pending PES-saddle certification does not indefinitely block a qualified
 ensemble pilot; defer that control and retain explicit template provenance.
 
-**Live launch checkpoint, November 25, 12:38 EST:** 24 one-thread Sander
+**Current US recovery checkpoint, November 25, 13:26 EST:** all 24 initial
+Sander heating jobs completed normally (2,000 steps each, exit 0, resolved SCC),
+but the workflow wrongly required an equilibrated temperature after the 1 ps
+25→300 K ramp. Their final temperatures were 172.79–182.21 K. All 48,000 steps
+and checkpoints were preserved and independently adopted as heating data;
+none counts as production. Heating now has an explicit ramp-only acceptance
+role; the existing 5 ps constant-300 K equilibration follows from those exact
+checkpoints, with the stricter equilibrium/production gates retained.
+
+The recovered campaign now has **57 actual Sander workers / 57 windows / zero
+worker failures** at the stated observation. Azalea has 28 physical cores and
+56 logical CPUs. All windows can progress concurrently with slight CPU time
+sharing; no window was removed just to match hardware. A source-frozen staged
+28→40→57 worker benchmark and reversible all-logical/physical-core affinity
+comparison measure aggregate throughput while preserving MD/RNG/checkpoints.
+Sampling convergence remains unestablished. The stable status files are
+`12_nterminal_relay/umbrella_sampling/full_path_300K/current_execution.json`
+and `runtime_summary.json`; these supersede the earlier failed-run summary
+and are included by the curated pull. Exact recovery plan, retained failures,
+acceptances and resource results are under `full_path_300K/relay_us_heat_recovery_v2_20261125/`
+and `full_path_300K/recovery_operations_v2_20261125/`.
+
+**Earlier launch checkpoint, November 25, 12:38 EST:** 24 one-thread Sander
 workers were verified running on Azalea, with zero worker failures at that
 observation. The full schedule has **57 states: 31 activation + 26 delivery**;
 these include bridges needed to keep each biased-axis increment below 0.15 Å.
@@ -40,8 +167,15 @@ guardian revalidates even previously completed derived records, repairs only
 derived outputs, and resumes clean analysis-held workers without repeating
 accepted MD. A 120-hour compact sync runs every 60 seconds; raw trajectories
 remain on the execution host. Extensions wait if diagnostic acceptance fails.
-The 72-hour analysis watcher reports missing coverage and attempts MBAR only
-after every state has an accepted first production block. No new PMF exists yet.
+The replacement seven-day analysis watcher (`nyl12_relay_us_analysis_20261125_c03`)
+waits for matched accepted 5 ps production increments across all 57 states,
+then retains each cumulative MBAR report and a common-reference progression
+plot under `full_path_300K/analysis/cumulative_progression_20261125/`. Disconnected
+overlap cannot produce a global PMF. No accepted production receipts existed
+at replacement, so no new PMF exists yet. The watcher can analyze horizons
+beyond 30 ps, but the current MD runner stops at six blocks; a tested native
+continuation must be prepared before extending that allocation. See the stable
+`12_nterminal_relay/umbrella_sampling/README.md` for the exact scope and gates.
 
 1. Finish the generalized native CV/analysis adapter and runnable inputs.
    Activation windows bias `(q_acyl, q_act)`; delivery windows bias

@@ -1,0 +1,217 @@
+{
+  "answer": "No retained matched all-window 5 ps direct-NEB seeded PMF was found. Prior direct-PT 2 ps and asynchronous nominal 5 ps one-dimensional summaries report fully populated bins and all their listed windows sampled. The direct-NEB seeded campaign initially had incomplete, disconnected sampled-window coverage; once all windows were eventually sampled, its 20x20 weighted 2D projection still had many zero-weight bins at 20 and 30 ps/window. The 5 ps relay checkpoint has all 57 retained windows represented and connected MBAR, but 19/60 path-PMF bins are unoccupied; this is a projection support issue, not missing window coverage.",
+  "asynchronous_5ps_snapshots": [
+    {
+      "adjacent_overlap_min": 0.07912942012608963,
+      "decorrelated_samples": 2591,
+      "finite_pmf_bins": 80,
+      "interpretation": "pipeline smoke test; not a converged or promotable PMF",
+      "pmf_bins": 80,
+      "raw_samples": 5125,
+      "raw_samples_per_window_min_max": [
+        205,
+        205
+      ],
+      "stage": "03_production_block_01_5ps",
+      "windows": 25,
+      "zero_sample_windows": 0
+    },
+    {
+      "adjacent_overlap_min": 0.10031800237451462,
+      "decorrelated_samples": 7236,
+      "finite_pmf_bins": 80,
+      "interpretation": "pipeline smoke test; not a converged or promotable PMF",
+      "pmf_bins": 80,
+      "raw_samples": 15375,
+      "raw_samples_per_window_min_max": [
+        615,
+        615
+      ],
+      "stage": "03_production_block_01_5ps",
+      "windows": 25,
+      "zero_sample_windows": 0
+    }
+  ],
+  "comparability_limits": [
+    "Direct PT and asynchronous summaries are one-dimensional reaction-coordinate PMFs with different coordinates/hamiltonians and data-derived histogram supports; fully finite listed bins do not establish that they had no unsupported regions outside the reported edges.",
+    "The direct-NEB campaign has no retained checkpoint with all 63 windows at exactly 5 ps/window. Earliest 5 ps blocks cover only subsets and MBAR is disconnected; the first connected result still has 17/63 windows absent.",
+    "The NEB projected FES reports zero weighted-mass bins; retained JSON does not provide per-bin raw-frame counts to separate no frames from weights numerically vanishing to zero.",
+    "Relay uses explicit path-coordinate edges and weighted np.histogram; current concern about cumulative-sum cancellation in that method is independent of historical window coverage. Historical comparisons do not adjudicate numerical zeros in relay output.",
+    "The two asynchronous records are labeled production_block_01_5ps but report 205 and 615 raw samples per window respectively; their JSON does not state elapsed duration_ps. Treat them as nominal stage-labeled snapshots, not a verified matched 5 ps comparison."
+  ],
+  "created_utc": "2026-11-25",
+  "current_relay_5ps": {
+    "duration_ps_unique": [
+      5.0
+    ],
+    "effective_samples_gate": false,
+    "full_5ps_coverage": true,
+    "mbar_Nk_min_max": [
+      3,
+      49
+    ],
+    "mbar_Nk_zero": 0,
+    "mbar_connected": true,
+    "neighbor_histogram_overlap_gate": false,
+    "pmf_path_bins": 60,
+    "pmf_path_bins_empty": 19,
+    "pmf_path_bins_occupied": 41,
+    "pmf_status": "gapped_no_global_barrier",
+    "status": "preliminary_connected_not_converged",
+    "unbiased_ESS": 12.657854180998546,
+    "window_count": 57
+  },
+  "direct_neb_seeded_updates": {
+    "neb_all_sampled": {
+      "blocks_per_window": {
+        "1": 31,
+        "4": 32
+      },
+      "connected": true,
+      "date": "2026-11-21T08:22:12.868312+00:00",
+      "fes_status": "interim_connected_overlap_not_convergence",
+      "primary_fes_grid": [
+        20,
+        20
+      ],
+      "reported_zero_weight_bins": 311,
+      "unbiased_ESS": 37.6648823594576,
+      "windows_sampled": 63,
+      "windows_total": 63
+    },
+    "neb_early_2windows": {
+      "blocks_per_window": {
+        "1": 2
+      },
+      "connected": false,
+      "date": "2026-11-20T12:10:25.902808+00:00",
+      "fes_status": "suppressed_disconnected_sampled_overlap",
+      "unbiased_ESS": 2.834271613334044,
+      "windows_sampled": 2,
+      "windows_total": 63
+    },
+    "neb_final_30ps": {
+      "blocks_per_window": {
+        "6": 63
+      },
+      "connected": true,
+      "date": "2026-11-22T10:47:36.933434+00:00",
+      "fes_status": "interim_connected_overlap_not_convergence",
+      "primary_fes_grid": [
+        20,
+        20
+      ],
+      "reported_zero_weight_bins": 309,
+      "unbiased_ESS": 7.292797282233219,
+      "windows_sampled": 63,
+      "windows_total": 63
+    },
+    "neb_first_connected": {
+      "blocks_per_window": {
+        "1": 14,
+        "4": 32
+      },
+      "connected": true,
+      "date": "2026-11-21T02:27:53.755023+00:00",
+      "fes_status": "interim_connected_overlap_not_convergence",
+      "primary_fes_grid": [
+        20,
+        20
+      ],
+      "reported_zero_weight_bins": 314,
+      "unbiased_ESS": 27.299347455012093,
+      "windows_sampled": 46,
+      "windows_total": 63
+    }
+  },
+  "direct_pt_2ps": {
+    "adjacent_overlap_min": 0.16364457866738735,
+    "decorrelated_samples": 4268,
+    "finite_pmf_bins": 78,
+    "interpretation": "pipeline smoke test; not a converged or promotable PMF",
+    "pmf_bins": 78,
+    "raw_samples": 8000,
+    "raw_samples_per_window_min_max": [
+      400,
+      400
+    ],
+    "stage": "03_production_2ps",
+    "windows": 20,
+    "zero_sample_windows": 0
+  },
+  "direct_pt_7ps": {
+    "adjacent_overlap_min": 0.20353357016763177,
+    "cumulative_progression": [
+      {
+        "decorrelated_sample_count": 4268,
+        "mbar_overlap_scalar": 0.013676425389092084,
+        "minimum_bidirectional_adjacent_overlap": 0.16364457866738735,
+        "pmf_range_kcal_mol": 17.51396381522314,
+        "raw_sample_count": 8000,
+        "source_count": 1
+      },
+      {
+        "change_from_previous": {
+          "common_point_count": 77,
+          "maximum_absolute_change_kcal_mol": 1.1032139210371157,
+          "mean_absolute_change_kcal_mol": 0.5089156261371915,
+          "rms_change_kcal_mol": 0.5534443864873538
+        },
+        "decorrelated_sample_count": 16268,
+        "mbar_overlap_scalar": 0.01268622861964075,
+        "minimum_bidirectional_adjacent_overlap": 0.20353357016763177,
+        "pmf_range_kcal_mol": 17.2527753807938,
+        "raw_sample_count": 28000,
+        "source_count": 2
+      }
+    ],
+    "decorrelated_samples": 16268,
+    "finite_pmf_bins": 80,
+    "interpretation": "interim multi-block PMF; convergence requires additional independent sampling and stability across cumulative blocks",
+    "pmf_bins": 80,
+    "raw_samples": 28000,
+    "raw_samples_per_window_min_max": [
+      1400,
+      1400
+    ],
+    "stage": null,
+    "windows": 20,
+    "zero_sample_windows": 0
+  },
+  "histogram_method_notes": {
+    "direct_neb": "Retained source uses np.histogram2d(points, bins, weights), then counts zero weighted bins as unsampled; raw per-bin counts are not retained.",
+    "older_1d": "Stored MBAR summary outputs only the final provisional_pmf rows and common bin edges; per-bin raw counts are not retained.",
+    "relay": "Current source uses np.histogram(s, explicit_edges, weights=weights) in path_histogram; no claim about numerical cancellation is tested here."
+  },
+  "report": "Historical US/MBAR gap comparison; source record only, no PMF rerun",
+  "source_paths": {
+    "async_5ps_2003": "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/06_asynchronous_umbrella_30ps_azalea/analysis/pipeline_smoke_block01_partial_20261109T2003EST/result/mbar_smoke_summary.json",
+    "async_5ps_2109": "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/06_asynchronous_umbrella_30ps_azalea/analysis/pipeline_pmf_block01_partial_20261109T2109EST/result/mbar_smoke_summary.json",
+    "direct_pt_2ps": "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/04_direct_pt_umbrella_initial/analysis/04_mbar_pipeline_smoke_2ps/mbar_smoke_summary.json",
+    "direct_pt_7ps": "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/07_direct_pt_umbrella_30ps_violet/analysis/mbar_7ps_complete/result/mbar_summary.json",
+    "direct_pt_7ps_progression": "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/07_direct_pt_umbrella_30ps_violet/analysis/mbar_7ps_complete/result/cumulative_convergence.json",
+    "neb_all_sampled": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00058/analysis.json",
+    "neb_early_2windows": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00005/analysis.json",
+    "neb_final_30ps": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00143/analysis.json",
+    "neb_first_connected": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00046/analysis.json",
+    "neb_histogram_source": "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/source_snapshot/src/nyl12_covalent/neb_umbrella_analysis.py",
+    "preliminary_findings": "docs/neb_us_preliminary_findings_20261121.md",
+    "relay_5ps": "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/analysis.json",
+    "relay_histogram_source": "src/nyl12_covalent/relay_umbrella_projection.py"
+  },
+  "source_sha256": {
+    "docs/neb_us_preliminary_findings_20261121.md": "215c28f5ac38bbe6797e7724b1c3f7065e573eafae17d8389ea0e56fdc00c76b",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00005/analysis.json": "a3a639aa84b58ca00cbae1393b16df5e9a33c2f3d43e3a736c90a4622a994692",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00046/analysis.json": "4c632c7e9be14aa8cb846d760709af5357c80a74500cfa17b9dc35788d35cf4b",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00058/analysis.json": "36cfd16aaefc842029d7fb7ef7c81a31ea6787920e7854f7eb915f5f61356237",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/update_00143/analysis.json": "3a0dcf3bc3c8f067047727dae5a604f6a20435406887755119e4410309de0717",
+    "qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis_job/source_snapshot/src/nyl12_covalent/neb_umbrella_analysis.py": "632ad499beddd89be68662c30527328fcb5ac3243e0bb8a3996da8384c45381c",
+    "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_05ps/analysis.json": "3d296e5f9fc68dcae066236bbcc3cf428378bca24ef240300b19a54475e67cbc",
+    "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/04_direct_pt_umbrella_initial/analysis/04_mbar_pipeline_smoke_2ps/mbar_smoke_summary.json": "d8c938dc703378245e89fe939321c7a32c3ad64bc385936c94a5889d856e5c0c",
+    "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/06_asynchronous_umbrella_30ps_azalea/analysis/pipeline_pmf_block01_partial_20261109T2109EST/result/mbar_smoke_summary.json": "12152cc05dac2853de3db0d838f7f288746f1d7685767bc3eb44c6969db9317f",
+    "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/06_asynchronous_umbrella_30ps_azalea/analysis/pipeline_smoke_block01_partial_20261109T2003EST/result/mbar_smoke_summary.json": "a9ca2e4eefd2d1babf11c06ddce217e865d94276981d8e0937e83113efb0045a",
+    "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/07_direct_pt_umbrella_30ps_violet/analysis/mbar_7ps_complete/result/cumulative_convergence.json": "63430a3973a095143473e0681195c45460a8bfe1ec6348dcba2a75a57854f93c",
+    "qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/07_direct_pt_umbrella_30ps_violet/analysis/mbar_7ps_complete/result/mbar_summary.json": "7def73c38b8b4ff01f2f8cbd265a812813048b5272773caab84733f3bbd56586",
+    "src/nyl12_covalent/relay_umbrella_projection.py": "be216bdf8e912615dd4ef68f466ddf24ec4dd7bb213f751cda6f964e1dd5353e"
+  }
+}
