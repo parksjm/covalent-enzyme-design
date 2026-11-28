@@ -1097,3 +1097,18 @@ in `analysis/reaction_distances_20261128/distance_statistics.json`,
 `bin_diagnostics.json` and `diagnostic_interpretation.json` within the relay
 campaign. MBAR remains the primary estimator; the WHAM comparison above is
 retained as an estimator diagnostic.
+
+To test the identified reactant-side coverage gap, six additional histories
+were initialized at (q_acyl,q_act)=(-2.0,-1.0), (-2.0,-0.8) and
+(-2.0,-0.6) Å, each from the original E–S geometry and the provenance-checked
+rare E–S geometry. Both starts have the same proton inventory. Native Amber
+coefficients are 25 kcal mol⁻¹ Å⁻² on each restrained coordinate, with no
+one-half factor; q_del is unrestrained. These histories retain the same physical
+Hamiltonian and frozen exterior. Fresh velocities at 300 K are followed by
+1 ps equilibration, 4 ps continued equilibration and 30 ps planned production.
+A separate diagnostic collector retains the fixed 5 ps production discard once
+per history and compares common 10/15/20/25/30 ps new-history prefixes with
+the frozen original 100-history pool. This registers 106 histories and 95
+distinct bias potentials. Execution and registration are not sampling-convergence
+results; short-prefix diagnostics do not supply qualified pooled confidence
+intervals. The unchanged primary PMF retains every accepted observation.

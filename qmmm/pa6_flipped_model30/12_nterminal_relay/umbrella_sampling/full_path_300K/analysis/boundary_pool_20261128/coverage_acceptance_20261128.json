@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-28T16:04:10.502658+00:00",
+  "focused_tests_passed": 6,
+  "prior_native_parity_fixed_discard_tests_passed": 20,
+  "ruff": "passed",
+  "new_core": {
+    "covered_statements": 79,
+    "total_statements": 85,
+    "percent": 92.94117647058823,
+    "requirement80percent_met": true
+  },
+  "by_module": {
+    "boundary_collect.py": {
+      "covered_lines": 39,
+      "num_statements": 43,
+      "percent_covered": 90.69767441860465,
+      "percent_covered_display": "91",
+      "missing_lines": 4,
+      "excluded_lines": 0,
+      "percent_statements_covered": 90.69767441860465,
+      "percent_statements_covered_display": "91"
+    },
+    "diagnostics.py": {
+      "covered_lines": 40,
+      "num_statements": 42,
+      "percent_covered": 95.23809523809524,
+      "percent_covered_display": "95",
+      "missing_lines": 2,
+      "excluded_lines": 0,
+      "percent_statements_covered": 95.23809523809524,
+      "percent_statements_covered_display": "95"
+    },
+    "watch.py": {
+      "covered_lines": 18,
+      "num_statements": 59,
+      "percent_covered": 30.508474576271187,
+      "percent_covered_display": "31",
+      "missing_lines": 41,
+      "excluded_lines": 0,
+      "percent_statements_covered": 30.508474576271187,
+      "percent_statements_covered_display": "31"
+    }
+  },
+  "orchestration_scope": "watch31percent import/definition coverage; running wait state separatelyverified; future accepted-data fit/publication not yet exercised",
+  "frozen_manifest_verified_unchanged": true,
+  "tmux_verified_alive": true,
+  "release_receipt_modified": false
+}

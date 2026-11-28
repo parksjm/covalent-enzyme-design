@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-11-28T16:02:45.772311+00:00",
+  "session": "relay_boundary106_mbar_20261128",
+  "tmux_verified": true,
+  "monitor_state": {
+    "status": "waiting_for_accepted_boundary_stages",
+    "waiting_for_common_new_production_ps": 10,
+    "frozen_baseline_main_ps": 70,
+    "completed": [],
+    "poll_seconds": 300,
+    "native_changes": false
+  },
+  "registration": {
+    "baseline": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100/checkpoint_032_main70ps_supplement43",
+    "baseline_inventory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/baseline_inventory.json",
+    "boundary_prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+    "boundary_prepared_sha256": "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d",
+    "baseline_histories": 100,
+    "baseline_unique_biases": 92,
+    "additional_histories": 6,
+    "additional_unique_biases": 3,
+    "novel_biases": 3,
+    "pooled_unique_biases": 95,
+    "minimum_new_production_checkpoints_ps": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "discard_once_production_ps": 5,
+    "frames_per_ps": 20,
+    "baseline_main_horizon_ps": 70,
+    "automatic_primary_promotion": false,
+    "poll_seconds": 300,
+    "timeout_hours": 72
+  },
+  "inputs_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/registration.json": "f134c8cd982f0a9fb2d85a8d97de7077c4e066d50ad659036254fad7d21553f4",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/baseline_inventory.json": "9c17ddc6abc6d2233bf9ec35fe9717486effde2d334d825cd0d8256022983dbe",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/baseline_diagnostics.json": "20dba1b1d27c2737d1b02e4039578915f11e8e342cb9dcd99dccf3b55c7a2f11",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/source_manifest.json": "116d773a3c793ca79b46371483ac13753bf8995ce6734cdc930b0cc05b238347",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/job/command.json": "46e23f3fbd5852815861a746db9fd91e84c318389fb473adcc4a7c84d99e2032"
+  },
+  "checks": {
+    "ruff": "passed",
+    "focused_boundary_tests": 4,
+    "native_parity_fixed_discard_tests": 20,
+    "baseline_geometry_rows": 82000,
+    "baseline_geometry_histories": 100,
+    "three_CV_identity_checks": "passed",
+    "code_coverage": "Not measured; focused unit regressions plus full82000-row geometry acceptance"
+  },
+  "current_symlinks_created": false,
+  "scientific_convergence_accepted": false,
+  "notes": [
+    "Frozen main70ps sensitivity pool; existing primary75ps monitor unchanged.",
+    "106 independent histories,95 unique biases; all6 newly approved starts remain distinct.",
+    "New10ps retains1x5ps block;15ps retains2x5ps blocks; pooledCI unqualified."
+  ]
+}

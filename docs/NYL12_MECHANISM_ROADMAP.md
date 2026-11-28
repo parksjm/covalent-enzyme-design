@@ -32,13 +32,20 @@ support gap. Six additional histories are running under
 and (-2,-0.6) Å, each from two geometric E–S starts (ordinary and rare-frame
 E–S), not two protonation states. Each uses native Amber no-half-factor
 coefficients of 25 kcal mol⁻¹ Å⁻² on both coordinates, unrestrained q_del,
-1 ps heating, 4 ps equilibration and 30 ps production. The PI-authorized
+1 ps of fresh-velocity equilibration at 300 K, 4 ps continued equilibration
+and 30 ps production. The PI-authorized
 Geranium launch began at 15:56 UTC (10:56 EST), with six single-thread CPU
 workers in tmux `nyl12_es_boundary6_20261128`; no existing jobs were stopped.
 Measured prior throughput suggests approximately 8 h to 10 ps production and
 20 h to 30 ps, subject to runtime variation. The hashed launch evidence is
 `analysis/reactant_coverage_plan_20261128/preparation/launch_evidence_20261128.json`.
-Assess repeated
+Violet's accepted-stage return monitor runs every 300 s. The independent
+`relay_boundary106_mbar_20261128` monitor is also running, comparing the
+106-history/95-bias pool against the frozen original 70 ps baseline at common
+new-production checkpoints of 10/15/20/25/30 ps. Its first checkpoint retains
+one 5 ps chunk per new history and supplies point/mixing diagnostics, not a
+qualified pooled confidence interval. It cannot promote a primary current
+link automatically. Assess repeated
 geometric/chemical coverage, reweighted support and initialization consistency;
 smoother curves alone do not establish convergence. MBAR remains primary;
 WHAM is retained as the archived estimator cross-check. Source diagnostics:

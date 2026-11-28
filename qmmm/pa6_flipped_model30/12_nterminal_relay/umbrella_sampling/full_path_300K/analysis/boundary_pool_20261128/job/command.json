@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/source/watch.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "MKL_NUM_THREADS": "1",
+    "MPLCONFIGDIR": "/tmp/relay_boundary106_mpl",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/source/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/source_manifest.json": "116d773a3c793ca79b46371483ac13753bf8995ce6734cdc930b0cc05b238347"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/job/job.log",
+  "session_name": "relay_boundary106_mbar_20261128",
+  "started_utc": null
+}

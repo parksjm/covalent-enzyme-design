@@ -1,0 +1,17 @@
+{
+  "first_stage_input": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_dominant_es/01_equilibration_1ps/run.mdin",
+  "sha256": "f0e85a9862c808f4ebcd1539007b9c3c899996c87d8d4c18c2584268a8f5a05f",
+  "verified_controls": {
+    "irest": 0,
+    "ntx": 1,
+    "tempi_K": 300,
+    "temp0_K": 300,
+    "nstlim": 2000,
+    "dt_ps": 0.0005
+  },
+  "correct_description": "1ps fresh-velocity equilibration at300K, followed by4ps continued equilibration, then30ps production; no temperature ramp",
+  "clarifies_prior_text": "heating was an inaccurate label for initialization, not actual input behavior",
+  "health_field_clarification": "first_steps_health.json and release receipt contain a misleading scc_failure_markers field name: recorded lines say SCC converged and are informational, not failures",
+  "scientific_inputs_changed": false,
+  "original_receipts_preserved": true
+}

@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-11-28T16:00:52.542627+00:00",
+  "authorization": "PI explicitly approved Geranium sixCPU approximately20h; other logged-in users acknowledged",
+  "host": "Geranium",
+  "native_tmux": "nyl12_es_boundary6_20261128",
+  "native_controller_status": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/controller_job/status.json",
+  "native_started_utc": "2026-11-28T15:56:52.256689Z",
+  "native_sander_pids": [
+    3581014,
+    3581015,
+    3581016,
+    3581017,
+    3581018,
+    3581019
+  ],
+  "native_process_health": {
+    "utc": "2026-11-28T16:00:09.248155+00:00",
+    "native_status": [
+      {
+        "window": "activation_boundary_01_dominant_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "299.55"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   187 converged in  20 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   188 converged in  21 cycles."
+        ]
+      },
+      {
+        "window": "activation_boundary_02_original_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "301.71"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   186 converged in  21 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   187 converged in  21 cycles."
+        ]
+      },
+      {
+        "window": "activation_boundary_03_dominant_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "304.77"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB: SCC-DFTB for step   185 converged in  21 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   186 converged in  20 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: "
+        ]
+      },
+      {
+        "window": "activation_boundary_03_original_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "297.03"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  20 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: "
+        ]
+      },
+      {
+        "window": "activation_boundary_02_dominant_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "302.09"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  20 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: "
+        ]
+      },
+      {
+        "window": "activation_boundary_01_original_es",
+        "last_native_record": [
+          "100",
+          "0.050",
+          "301.11"
+        ],
+        "fatal_marker": false,
+        "scc_failure_markers": [
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+          " QMMM SCC-DFTB:  SCC convergence criteria: ",
+          " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  21 cycles."
+        ]
+      }
+    ],
+    "scientific_acceptance": "pending; these are first-step process-health observations, not completed equilibration or convergence"
+  },
+  "scientific_acceptance": "Pending first completed equilibration; early native progress is not acceptance or convergence",
+  "return_host": "Violet",
+  "return_tmux": "nyl12_boundary6_return_20261128",
+  "return_controller_status": {
+    "command": [
+      "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/return_accepted.py"
+    ],
+    "cwd": "/data/jpc/covalent-enzyme-design",
+    "ended_utc": null,
+    "env_overrides": {
+      "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+      "PYTHONUNBUFFERED": "1"
+    },
+    "exit_status": null,
+    "input_sha256": {
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/return_accepted.py": "7efb654af60ca207beff14e6b3d41c75309326551cfdf43bbab2d2c7a319d85d"
+    },
+    "log": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/return_job/job.log",
+    "session_name": "nyl12_boundary6_return_20261128",
+    "started_utc": "2026-11-28T15:59:28.844482Z"
+  },
+  "return_state": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/return_state.json",
+  "return_poll_seconds": 300,
+  "return_publication": "Completed native-stage payload first; CSV/process checked; analysis_acceptance marker last. No deletions; originals retained on Geranium.",
+  "analysis_handoff": "boundary_mbar_queue owns frozen common10/15ps and later30ps MBAR on exact local returned paths; expected100frames/5ps flagged for adapter validation.",
+  "validation": {
+    "ruff": "passed",
+    "focused_tests": 8,
+    "return_collector_coverage_percent": 94,
+    "prepared_and_external_remote_hashes_verified": 1386,
+    "no_other_jobs_stopped": true,
+    "no_dependencies_added": true
+  },
+  "artifact_sha256": {
+    "return_accepted.py": "7efb654af60ca207beff14e6b3d41c75309326551cfdf43bbab2d2c7a319d85d",
+    "test_return_accepted.py": "a0c5eb98ff336f48e501d49cf567c9a93d5ac9b36ce2c3dc8ad6242f0765a7f3",
+    "launch_evidence_20261128.json": "ec91ea255b20774cc64513beb06bdbe87d5a7f38d79ee6865a9f3cfa7714f6a7",
+    "first_steps_health.json": "f7cdead2c7b0e5866957134deebf05215f255a562cddbead947d2a1e30247ffa"
+  }
+}

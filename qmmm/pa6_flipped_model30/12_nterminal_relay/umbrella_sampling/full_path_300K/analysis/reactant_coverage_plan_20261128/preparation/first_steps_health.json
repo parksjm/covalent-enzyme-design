@@ -1,0 +1,96 @@
+{
+  "utc": "2026-11-28T16:00:09.248155+00:00",
+  "native_status": [
+    {
+      "window": "activation_boundary_01_dominant_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "299.55"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   187 converged in  20 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   188 converged in  21 cycles."
+      ]
+    },
+    {
+      "window": "activation_boundary_02_original_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "301.71"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   186 converged in  21 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   187 converged in  21 cycles."
+      ]
+    },
+    {
+      "window": "activation_boundary_03_dominant_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "304.77"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB: SCC-DFTB for step   185 converged in  21 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   186 converged in  20 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: "
+      ]
+    },
+    {
+      "window": "activation_boundary_03_original_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "297.03"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  20 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: "
+      ]
+    },
+    {
+      "window": "activation_boundary_02_dominant_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "302.09"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  20 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: "
+      ]
+    },
+    {
+      "window": "activation_boundary_01_original_es",
+      "last_native_record": [
+        "100",
+        "0.050",
+        "301.11"
+      ],
+      "fatal_marker": false,
+      "scc_failure_markers": [
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   189 converged in  21 cycles.",
+        " QMMM SCC-DFTB:  SCC convergence criteria: ",
+        " QMMM SCC-DFTB: SCC-DFTB for step   190 converged in  21 cycles."
+      ]
+    }
+  ],
+  "scientific_acceptance": "pending; these are first-step process-health observations, not completed equilibration or convergence"
+}

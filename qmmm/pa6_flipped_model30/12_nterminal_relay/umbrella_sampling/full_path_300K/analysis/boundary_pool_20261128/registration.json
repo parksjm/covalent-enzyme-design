@@ -1,0 +1,25 @@
+{
+  "baseline": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100/checkpoint_032_main70ps_supplement43",
+  "baseline_inventory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/boundary_pool_20261128/baseline_inventory.json",
+  "boundary_prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+  "boundary_prepared_sha256": "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d",
+  "baseline_histories": 100,
+  "baseline_unique_biases": 92,
+  "additional_histories": 6,
+  "additional_unique_biases": 3,
+  "novel_biases": 3,
+  "pooled_unique_biases": 95,
+  "minimum_new_production_checkpoints_ps": [
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "discard_once_production_ps": 5,
+  "frames_per_ps": 20,
+  "baseline_main_horizon_ps": 70,
+  "automatic_primary_promotion": false,
+  "poll_seconds": 300,
+  "timeout_hours": 72
+}

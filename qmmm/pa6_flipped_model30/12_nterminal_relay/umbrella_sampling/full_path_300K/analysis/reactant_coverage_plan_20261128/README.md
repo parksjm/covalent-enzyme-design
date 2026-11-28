@@ -1,5 +1,16 @@
 # Reactant coverage proposal, 28 November 2026
 
+**Execution update:** the PI approved Geranium and all six histories launched
+at 15:56 UTC on 28 November in tmux `nyl12_es_boundary6_20261128`.
+The accepted-stage return monitor and separate 106-history MBAR checkpoint
+monitor are running. See `preparation/release_receipt_20261128.json` and
+`../boundary_pool_20261128/release_receipt_20261128.json`. All native input
+hashes and original proposal evidence are retained. The first 1 ps initializes
+fresh velocities at 300 K; it is followed by 4 ps continued equilibration and
+30 ps production, with no heating ramp.
+
+**Original pre-approval proposal:**
+
 Proposal only; no MD launched and no scientific inputs changed. `plan.json` is authoritative.
 
 The 33-state grid reaches the dominant ES frame, but samples it as an acyl-coordinate tail: q_acyl=-2.0018 is 2.31 harmonic sigmas beyond the closest center -1.75. Of 82,000 retained frames, only two lie within ±0.15 Å of it in all three CVs; both belong to activation_support_3_03. There are 32 within the same two biased CVs. Thus two-coordinate coverage does not establish unrestrained q_del mixing.

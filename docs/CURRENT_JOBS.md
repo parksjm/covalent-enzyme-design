@@ -4,7 +4,8 @@ Six additional DFTB3/MM umbrella histories started on Geranium at 15:56 UTC
 (10:56 EST), in tmux `nyl12_es_boundary6_20261128`. Six native Sander PIDs
 were verified against their exact working directories. They use three new
 reactant-side centers and two E–S starting geometries per center, with 30 ps
-production after 1 ps heating + 4 ps equilibration. This is running sampling,
+production after 1 ps fresh-velocity equilibration at 300 K + 4 ps continued
+equilibration. This is running sampling,
 not completed or scientifically accepted sampling. Estimated wall time is
 about 20 hours from measured prior throughput; no GPU is allocated.
 
@@ -12,8 +13,12 @@ All existing Violet/Azalea relay US jobs are preserved. The new branch is
 `qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/`.
 Its hashed launch receipt is under
 `analysis/reactant_coverage_plan_20261128/preparation/launch_evidence_20261128.json`
-in the same campaign. Separate automatic checkpoint analysis is being prepared;
-the original primary collector and original scientific inputs are unchanged.
+in the same campaign. Separate automatic checkpoint analysis is running in Violet tmux
+`relay_boundary106_mbar_20261128`, with common new-production checkpoints at
+10/15/20/25/30 ps. It compares 106 histories/95 biases with a frozen original
+70 ps baseline and preserves the primary collector and current links. The
+first new checkpoint retains one 5 ps chunk per new history; it is a point
+and mixing diagnostic, without a qualified pooled confidence interval.
 See `NYL12_MECHANISM_ROADMAP.md` for current scientific priorities. Entries
 below are historical snapshots, not a fresh full-host status audit.
 

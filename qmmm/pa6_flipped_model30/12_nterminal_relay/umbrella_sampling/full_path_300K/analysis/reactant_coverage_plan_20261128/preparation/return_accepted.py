@@ -8,7 +8,6 @@ import logging
 import subprocess
 import time
 from pathlib import Path
-from typing import Any
 
 ROOT = Path("/data/jpc/covalent-enzyme-design")
 BASE = (
