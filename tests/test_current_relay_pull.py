@@ -165,3 +165,10 @@ def test_current_publication_filters(tmp_path: Path, kind: str) -> None:
         )
         assert "--max-size" not in text
         assert "additional_sampling_20261126/vmd_progress/current" in text
+
+
+def test_removed_legacy_movie_variable_is_not_referenced() -> None:
+    """Do not leave an unbound set-u variable after removing the legacy block."""
+    script = Path("scripts/pull_nyl12_inspection.sh").read_text()
+    assert "$current_us_movie" not in script
+    assert 'echo "Current relay VMD: $movie_destination/view_path.vmd"' in script

@@ -774,7 +774,6 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         echo "Cumulative PMF progression (when available): $nterminal_relay_destination/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/latest_progression.png"
         echo "Continuous-window PMF with 95% statistical intervals: $nterminal_relay_destination/umbrella_sampling/full_path_300K/plots/pmf_latest.png"
         echo "Neighbor-pair overlap: $nterminal_relay_destination/umbrella_sampling/full_path_300K/plots/neighbor_overlap_latest.png"
-        echo "Current relay US movie: $current_us_movie/view_path.vmd"
     fi
 fi
 
