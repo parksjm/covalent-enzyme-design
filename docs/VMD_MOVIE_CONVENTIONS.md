@@ -4,6 +4,18 @@ PI-requested defaults, 2026-11-25. Apply to reaction-path, NEB, umbrella and
 optimization movies. Ordered umbrella windows and optimized endpoints are not
 continuous reactive dynamics; preserve each movie's provenance and ordering.
 
+## Default active-site camera — PI requirement, 2026-11-27
+
+Unless the PI explicitly requests another view, place Thr233 below the
+reactive substrate amide, Phe113 upper left and Asn186 upper right, with the
+Thr N-terminus on the right as in the approved reference image. Use the same
+protein-anchored orientation across states and models, with proper rotations
+only; never mirror coordinates or rotate substrates independently to conceal
+opposite poses. The desired Boltz pose is positive phi under the existing
+projected-angle convention. Screen-left/right is not the angle definition;
+Thr Nα is not an atom in phi. Preserve route-specific measurements and
+frame ordering. See `PRESENTATION_AND_FIGURE_STYLE.md` for the exact atom order.
+
 ## Shared implementation
 
 Use `nyl12_covalent.vmd_movie_policy.render_movie_policy` with verified physical
@@ -88,6 +100,12 @@ atom selections. The helper does not rewrite native topology chain attributes.
    previously published viewer paths. PMF and movie scopes must each be explicit.
 5. Pull complete curated viewer/topology/trajectory bundles. Exclude native
    Hessian columns, raw full-system MD and archived display backups.
+   A curated DCD may exceed general rsync size limits: transfer the explicitly
+   selected movie payload without that cap before validating its checksums.
+   Never publish new viewer dimensions alongside a silently skipped older DCD.
+   Keep a newly loaded molecule hidden until dimensions/style/camera checks
+   succeed; on failure delete only that incomplete movie and report the error.
+   A default all-protein Lines scene is not a successful fallback display.
 
 The corrected viewer prints `NYL12 DISPLAY OK version=20261126-typeprefix3 ...
 radius=0.2` after successful application. An explicit DISPLAY FAILED message is

@@ -1,0 +1,32 @@
+01. Mechanism-guided redesign of the nylon hydrolase Nyl12
+02. Transition-state models will guide Nyl12 redesign
+03. Nyl12 hydrolyzes PA6 with limited conversion
+04. Mature Nyl12 exposes Thr233 as the β-chain N terminus
+05. Acylation and deacylation complete the catalytic cycle
+06. Substrate orientation sets the geometry for proton delivery
+07. A four-repeat PA6 oligomer defines the classical model scope
+08. PA6 L4 bonded profiles pass all eight force-field checks
+09. Three 500 ps molecular-dynamics replicas support the L4 model
+10. The NylC catalytic-triad proposal motivated Asp protonation tests
+11. Static pKa calculations do not identify a unique active-site microstate
+12. Matched wild-type (WT) simulations compare three protonation states
+13. Attack geometry and oxyanion contacts define the structural screen
+14. Asp274 protonation did not improve matched WT geometry occupancy
+15. The quantum region contains 98 atoms in a 12 Å mobile environment
+16. Fixed-geometry QM benchmarks test distinct transformations
+17. MM and QM/MM minimization refine MD-derived E–S structures
+18. Reaction-path optimization and free-energy sampling
+19. Two proposed acylation mechanisms differ in proton transfer
+20. Direct proton transfer: DFTB3/MM NEB profile
+21. Direct-seeded umbrella sampling reveals competing proton-transfer channels
+22. Bias-free optimization retained an addition-like structure
+23. Proton-relay acylation: DFTB3/MM potential-energy profile
+24. Umbrella sampling tests the Mechanism B free-energy profile
+25. Matched free-energy calculations will compare the two mechanisms
+26. Transition-state verification requires curvature and downhill connectivity
+27. Transition-state templates guide symmetry-aware sequence design
+28. Priorities through 30 November: matched PMFs and a redesign pilot
+29. Mechanism comparison sets the next redesign decision
+30. Appendix: Eyring rates illustrate barrier sensitivity to temperature
+31. Appendix: PROPKA estimates depend on structure and cleavage state
+32. Appendix: sources, coordinate definitions, and interpretation limits

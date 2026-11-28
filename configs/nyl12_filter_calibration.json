@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "metrics_pa6": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/final/full_metrics.csv",
+    "metrics_pa66": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa66_l2z_l1_variants_smiles_ds20_20260903/final/full_metrics.csv",
+    "activity": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/interface_delta_relative_activity_regression_data_20260921.csv",
+    "historical_summary": "/data/jpc/enzyme-substrate-modeling/output_nyl12_balanced_static_analysis_20261011/ensemble_summary.csv",
+    "tier_reference": "/data/jpc/enzyme-substrate-modeling/src/geometry_tiers.py",
+    "selection_reference": "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_balanced_static.py",
+    "assay_context": "/data/jpc/covalent-enzyme-design/docs/assay_conditions_and_temperature_20261111.md"
+  },
+  "cohorts": [
+    {
+      "id": "pa6_static",
+      "system": "PA6",
+      "register": "PA6_L4z_to_L2",
+      "experimental_comparison": "PA6 L4 → L2",
+      "model_input": "metrics_pa6",
+      "prefix": "pa6_l4z_l2_nyl12_",
+      "score_source": "amber_openmm",
+      "expected_models": 50,
+      "variants": [
+        "WT",
+        "F101E",
+        "F101H",
+        "F55N",
+        "K59D",
+        "K59E",
+        "P105K",
+        "T53Q",
+        "V111C"
+      ],
+      "thresholds": {
+        "d1_max": 3.5,
+        "oxyanion_max": 4.0,
+        "a1_min": 85.0,
+        "a1_max": 125.0,
+        "herschlag_phi_min": 60.0,
+        "herschlag_phi_max": 125.0
+      }
+    },
+    {
+      "id": "pa66_static",
+      "system": "PA6,6",
+      "register": "PA66_L2z_to_L1z",
+      "experimental_comparison": "PA6,6 L2z → L1z",
+      "model_input": "metrics_pa66",
+      "prefix": "pa66_l2z_l1_nyl12_",
+      "score_source": "amber_openmm",
+      "expected_models": 50,
+      "variants": [
+        "WT",
+        "F101E",
+        "F101H",
+        "F55N",
+        "K59D",
+        "K59E",
+        "P105K",
+        "T53Q",
+        "V111C"
+      ],
+      "thresholds": {
+        "d1_max": 3.5,
+        "oxyanion_max": 4.0,
+        "a1_min": 85.0,
+        "a1_max": 125.0,
+        "herschlag_phi_min": 60.0,
+        "herschlag_phi_max": 125.0
+      }
+    }
+  ],
+  "scope": {
+    "analysis": "Retrospective balanced static Boltz-2 models, 50 model indices 0-49 per variant and modeled register; nine variants per stratum.",
+    "protocol": "Historical Boltz-2 plus reported Amber/OpenMM relaxation and post-relaxation interface scores. Keep PA6 and PA66 campaigns separate. This is not MD or the newer RESP/GAFF2 protonation campaign.",
+    "matching_limits": "Predictor/register/model budget/reported relaxation source are matched within each source campaign. Per-model topology, proton inventory and parameter-file identity are not certified by a metrics CSV.",
+    "gate_policy": "Historical inclusive Tier B geometry thresholds are frozen. Herschlag phi sign is reported separately; no new orientation rejection gate is introduced retrospectively.",
+    "chemical_integrity": "This summary reuses published internal metrics; it does not independently certify model valence, maturation, topology or structural integrity.",
+    "model_denominators": "Models and equivalent sites are not independent experimental variants. No model-level binomial interval is interpreted as assay uncertainty.",
+    "activity_direction": "Product-specific fold values are descriptive reported signals, not measured kcat or total conversion. No threshold tuning, classifier training or ROC/AUC is authorized."
+  },
+  "assay_caveats": [
+    "Actual experimental substrates were polymer powders. Legacy comparison strings describe modeled registers and product endpoints, not proof of isolated L4 or L2 substrate turnover.",
+    "Derived curated WT-relative activity table is available; primary assay replicates, numerical uncertainty, detection limits and complete construct sequences have not been located.",
+    "A reported zero product signal is not confirmed enzyme inactivity. F101E/F101H have positive alternative PA6 product signals.",
+    "WT activity=1 is a normalization convention, not an additional raw measurement. Never combine fold values for different products into a total activity.",
+    "Crude lysate assays were reported at 75 degrees C for 6 h in 200 mM Tris reported pH 8; MD is approximately 300 K. Active-enzyme abundance, maturation and substrate accessibility can affect endpoints.",
+    "PI identifies K59E discordant duplicate experiments in cb150_nyl12_ssl_sites_1_4_pa6_pa66_pmaxa.xlsx. Keep experiments separate, establish replicate type, and treat all fold rankings as provisional; do not select/average one observation silently."
+  ]
+}

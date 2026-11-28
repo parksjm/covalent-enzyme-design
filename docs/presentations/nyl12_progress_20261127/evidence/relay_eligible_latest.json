@@ -1,0 +1,372 @@
+{
+  "main_horizon_ps": 55,
+  "independent_lineages": 61,
+  "supplemental_lineages": 4,
+  "retained_frames": 57400,
+  "unique_bias_potentials": 59,
+  "supplemental_inventory": [
+    {
+      "group": "old_targets4",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/prepared.json",
+      "window": "activation_021_from_022",
+      "horizon_ps": 10,
+      "eligible": true,
+      "receipt_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/activation_021_from_022/03_production_5ps/analysis_acceptance.json": "d2b06ec36274bfe60a35138dc3e1179c8be3dad7301ac8aeae7db328f639f7ab",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/activation_021_from_022/04_production_5ps/analysis_acceptance.json": "46e4da49dc18f81621866f0ae4af0cfb6a4fdf00fa10aa4e18736196dd765ddd"
+      }
+    },
+    {
+      "group": "old_targets4",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/prepared.json",
+      "window": "activation_022_from_021",
+      "horizon_ps": 10,
+      "eligible": true,
+      "receipt_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/activation_022_from_021/03_production_5ps/analysis_acceptance.json": "ddfb86472e73330bbc2963b94e3a51da70647b0b7e89abd7c41b4a30d46ccc3c",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/activation_022_from_021/04_production_5ps/analysis_acceptance.json": "8f41115e0a58b40ed7c0ceddbc9cd579f622045510a6f924c9108bb696927a16"
+      }
+    },
+    {
+      "group": "old_targets4",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/prepared.json",
+      "window": "delivery_027_qdel_1p50",
+      "horizon_ps": 10,
+      "eligible": true,
+      "receipt_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_027_qdel_1p50/03_production_5ps/analysis_acceptance.json": "2d7494e3a2a7a98cf620330e34dd76c2059af6131c8374495bc90684a8db3707",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_027_qdel_1p50/04_production_5ps/analysis_acceptance.json": "967bba4f02d4a9e3dd23e3f413a4fec8a70ef388c8919e8014adc0c322fafaf0"
+      }
+    },
+    {
+      "group": "old_targets4",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/prepared.json",
+      "window": "delivery_028_qdel_1p75",
+      "horizon_ps": 10,
+      "eligible": true,
+      "receipt_sha256": {
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_028_qdel_1p75/03_production_5ps/analysis_acceptance.json": "ea6a161cb247a3ccb4fc0d7964a9f0737ce69b8e5e112a1bb1f42511d914226d",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_028_qdel_1p75/04_production_5ps/analysis_acceptance.json": "83932b3a574894adbb7f19c15f9a83f8b187e8254faf35a6770efa8c8001bc66"
+      }
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_01",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_02",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_03",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_04",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_05",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_06",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_07",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_08",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_09",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_10",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_1_11",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_01",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_02",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_03",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_04",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_05",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_06",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_07",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_08",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_09",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_10",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_2_11",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_01",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_02",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_03",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_04",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_05",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_06",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_07",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_08",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_09",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_10",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "activation_grid33",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/prepared.json",
+      "window": "activation_support_3_11",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "A026_original",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "A026_late",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "A028_original",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "A028_late",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "D008_from_D010",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    },
+    {
+      "group": "geranium_mixing6",
+      "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/prepared.json",
+      "window": "D009_from_D007",
+      "horizon_ps": 0,
+      "eligible": false,
+      "receipt_sha256": {}
+    }
+  ],
+  "discarded_ps_once_per_lineage": 5,
+  "pooled_maximum_kcal_mol": 26.005413691284627,
+  "pooled_maximum_s": 0.6875,
+  "CI_status": "POINT ONLY; pooled uncertainty not computed; original57 band explicitly conditional",
+  "primary_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_55ps_analysis.json",
+  "sampling_converged": false,
+  "primary_replacement": false
+}

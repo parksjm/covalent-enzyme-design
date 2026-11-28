@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-21",
+  "scope": "Existing curated-document/table evidence only; no labels inferred from modeling.",
+  "sources": [
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/interface_delta_relative_activity_regression_data_20260921.csv",
+      "sha256": "fd39e0d9bb1866357cf0acf216f7bf92eb45bf078ae9f900ac221ffbaaf9d498",
+      "role": "numeric product-specific relative-activity table"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/docs/assay_conditions_and_temperature_20261111.md",
+      "sha256": "d0b9d3552a96516fc0ce895881d600bc891af1fe0fd81b2b2142e0898daba22e",
+      "role": "assay-condition note"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_PA6_PA66_FINAL_INTERPRETATION_AND_NEXT_PLAN_20260928.md",
+      "sha256": "724e0b48bfb026536ddcb9019b2ba69e66999a604b8458d54a3905fc8b617609",
+      "role": "interpretive discussion/counterexample context"
+    },
+    {
+      "path": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/interface_delta_relative_activity_regression_stats_20260921.csv",
+      "sha256": "90c58ed2fac245f66aa955899d4c282e3fc1c8d0b7c62d12d9e6113ef0fa29c5",
+      "role": "derived regression statistics; n=8 variants for PA6 L4 to L2 and PA6,6 L3 to L1; not raw assay evidence"
+    }
+  ],
+  "assay_context": {
+    "source": "/data/jpc/covalent-enzyme-design/docs/assay_conditions_and_temperature_20261111.md",
+    "reported": "User-provided crude-lysate assay: variants expressed in E. coli; PA6 or PA66 polymer powder, 5 mg/well in 96-well PCR plates; enzyme-containing lysate in 200 mM Tris, reported pH 8.0; 75 °C for 6 h.",
+    "substrate_class": "Actual polymer powder, according to the assay note; PA6 and PA66 must remain separate. Product-specific assay labels in the activity table are L2 for PA6 and L1 for PA6,6.",
+    "normalization": "relative_activity values are relative to WT (WT baseline implied as 1 by associated manuscript analyses); units not supplied.",
+    "unknown": [
+      "reaction volume",
+      "pH measured/adjusted at assay temperature",
+      "replicate count and uncertainty",
+      "detection/quantification limits and handling of zero",
+      "enzyme concentration/loading and lysate normalization",
+      "raw absorbance/chromatograms or per-replicate results"
+    ]
+  },
+  "sequence_identity": {
+    "available": "Variant identifiers encode single substitutions (e.g. F101H); full amino-acid sequences or FASTA accessions are not present in the inspected curated evidence. The manuscript methods/results treat the listed variants as single-site mutants.",
+    "position_numbering": "As recorded in manuscript variant labels; no independent sequence-number mapping was located.",
+    "do_not_infer": "Do not infer unlisted sequence background, construct boundaries, or numbering offsets."
+  },
+  "labels": [
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "F101E",
+      "mutation": "F101E",
+      "relative_activity": 0.0,
+      "label_status": "zero reported; detection-limit semantics unknown",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "F101H",
+      "mutation": "F101H",
+      "relative_activity": 0.0,
+      "label_status": "zero reported; detection-limit semantics unknown",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "F55N",
+      "mutation": "F55N",
+      "relative_activity": 0.7880209003620049,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "K59D",
+      "mutation": "K59D",
+      "relative_activity": 3.79475990430285,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "K59E",
+      "mutation": "K59E",
+      "relative_activity": 0.5732916387148949,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "P105K",
+      "mutation": "P105K",
+      "relative_activity": 0.6189726394878128,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "T53Q",
+      "mutation": "T53Q",
+      "relative_activity": 0.8523487379699639,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6",
+      "product_assay": "PA6 L4 → L2",
+      "product": "L2",
+      "variant": "V111C",
+      "mutation": "V111C",
+      "relative_activity": 4.767712613803862,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa6_diagnostics_20260811/results/pa6_policy_directionality.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "F101E",
+      "mutation": "F101E",
+      "relative_activity": 12.973806,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "F101H",
+      "mutation": "F101H",
+      "relative_activity": 15.741037,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "F55N",
+      "mutation": "F55N",
+      "relative_activity": 0.423978,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "K59D",
+      "mutation": "K59D",
+      "relative_activity": 0.799662,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "K59E",
+      "mutation": "K59E",
+      "relative_activity": 0.252569,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "P105K",
+      "mutation": "P105K",
+      "relative_activity": 19.32605,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "T53Q",
+      "mutation": "T53Q",
+      "relative_activity": 1.376912,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    },
+    {
+      "system": "PA6,6",
+      "product_assay": "PA6,6 L3 → L1",
+      "product": "L1",
+      "variant": "V111C",
+      "mutation": "V111C",
+      "relative_activity": 6.015037,
+      "label_status": "detected positive",
+      "raw_replicates_available": false,
+      "source_file": "output_nyl12_pa66_l3z_l1_interface_delta_all_carbon_20260911/final/filtered_metrics.csv"
+    }
+  ],
+  "interpretive_limits": [
+    "CSV is an analysis/regression table, not a primary assay record; original raw data were not located in the permitted curated documentation search.",
+    "Do not treat PA66-only positive labels as PA6 positives.",
+    "A table value of 0.0 is recorded as zero-reported, not proven biochemical inactivity; detection limits are absent.",
+    "The variant names specify single substitutions, but complete sequence strings are not provided.",
+    "Assay-note conditions are user-provided and do not establish batch-level protocol details or replicate statistics."
+  ]
+}

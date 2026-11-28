@@ -12,6 +12,9 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+from .vmd_chain_groups import display_chain_groups
+from .vmd_movie_policy import mapped_cc_bonds, render_movie_policy
+
 import numpy as np
 from parmed.amber import AmberParm, NetCDFTraj
 
@@ -149,7 +152,7 @@ def _viewer_text(
     ]
     # The transferred proton is always included in QM and has an explicit small-sphere highlight.
     proton_index = remap[13916]
-    lines[-1] = (
+    lines.append(
         "mol representation VDW 0.32 16; mol color ColorID 7; "
         f'mol selection "index {proton_index}"; mol addrep $::stage2_mol'
     )
@@ -192,6 +195,21 @@ def _viewer_text(
     )
     lines.append(
         'puts "Loaded [molinfo $::stage2_mol get numframes] stage2 optimizer frames; reactive bond labels update with frame."'
+    )
+    lines.append(
+        render_movie_policy(
+            mapped,
+            [
+                remap[index]
+                for index in remap
+                if topology.atoms[index].residue.name == "LIG"
+            ],
+            mapped_cc_bonds(topology, remap),
+            molecule="$::stage2_mol",
+            chain_groups=display_chain_groups(
+                topology, {old + 1: new for old, new in remap.items()}
+            ),
+        )
     )
     return "\n".join(lines) + "\n"
 

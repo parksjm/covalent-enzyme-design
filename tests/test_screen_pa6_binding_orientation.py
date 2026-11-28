@@ -44,6 +44,26 @@ def test_model23_signed_geometry_regression(atoms: dict, reference: dict) -> Non
     assert row["native_pass"] and row["joint_pass"]
     assert row["og1_shift"] == pytest.approx(0.18836, abs=0.001)
     assert row["psi_delta"] == pytest.approx(-30.0904, abs=0.001)
+    assert row["selection_eligible"] is True
+
+
+def test_native_failure_cannot_veto_valid_catalytic_geometry(
+    atoms: dict, reference: dict, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Keep the pose while recording native similarity as a failed diagnostic."""
+    original = screen.state_metrics
+
+    def changed_native(ref: dict, aligned: dict) -> dict:
+        result = original(ref, aligned)
+        result["thr233_held_out"]["heavy_atom_displacements_angstrom"]["OG1"] = 3.0
+        return result
+
+    monkeypatch.setattr(screen, "state_metrics", changed_native)
+    ligand = {name: atoms[("I", 1, name)][1] for name in ("C54", "O49", "N59", "C62")}
+    row = screen.measure(screen.layout_site(atoms, 0), ligand, reference)
+    assert row["tier"] == "A"
+    assert row["native_pass"] is False and row["joint_pass"] is False
+    assert row["selection_eligible"] is True
 
 
 @pytest.mark.parametrize("layout", ["split", "flat_amber"])

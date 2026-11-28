@@ -1,0 +1,22 @@
+{
+  "status": "sequential_relaxation_active",
+  "completed": {
+    "WT_seed_20261126": {
+      "final_rms_gradient": 0.049985,
+      "force_converged": true,
+      "target_before_count": 0,
+      "target_after_count": 0,
+      "target_after_pass": false,
+      "postprocess": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/amber_relaxation/WT_seed_20261126/postprocess"
+    },
+    "WT_seed_20261127": {
+      "final_rms_gradient": 0.049171,
+      "force_converged": true,
+      "target_before_count": 0,
+      "target_after_count": 2,
+      "target_after_pass": true,
+      "postprocess": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/amber_relaxation/WT_seed_20261127/postprocess"
+    }
+  },
+  "protocol": "ff19SB/TIP3P150mM/modRESP-GAFF2,neutralNH2Thr/anionicASPASP4sites,allmovable,norestraints,max10000,targetRMS0.05"
+}

@@ -1,0 +1,153 @@
+{
+  "audited_utc": "2026-11-22T02:22:15.199000+00:00",
+  "audited_local": "2026-11-21T21:22:15.199000-05:00",
+  "timezone": "America/New_York",
+  "read_only_job_audit": true,
+  "scientific_jobs_changed": false,
+  "wt_md": {
+    "host": "violet",
+    "accepted_100ns_replicas": 10,
+    "required_replicas": 12,
+    "running": [
+      {
+        "state": "nh2_asp272_asp274",
+        "replica": 4,
+        "total_ns_at_audit": 33.706,
+        "remaining_hours_native_estimate": 5.9,
+        "gpu": 1
+      },
+      {
+        "state": "nh3_asp272_asp274",
+        "replica": 3,
+        "total_ns_at_audit": 40.488,
+        "remaining_hours_native_estimate": 5.2,
+        "gpu": 0
+      }
+    ],
+    "additional_replicas_queued": 0,
+    "analysis_status": "waiting for all 12 accepted replicas; then occupancy/native geometry and new-four proton relay screening"
+  },
+  "neb_us": {
+    "live_workers_violet": 8,
+    "live_native_workers_azalea": 0,
+    "active_block": "05",
+    "active_windows": [
+      34,
+      11,
+      63,
+      33,
+      18,
+      1,
+      32,
+      44
+    ],
+    "queued_windows": [
+      25,
+      39,
+      50,
+      6,
+      15,
+      21,
+      28,
+      47
+    ],
+    "accepted_as_of_utc": "2026-11-21T23:37:31.112476+00:00",
+    "windows_total": 63,
+    "accepted_ps_total": 1770,
+    "windows_by_accepted_ps": {
+      "20": 8,
+      "25": 8,
+      "30": 47
+    },
+    "last_frozen_pmf_maximum_kcal_mol": 46.94135556484136,
+    "last_frozen_pmf_input_ps": 1575,
+    "sampling_converged": false
+  },
+  "ash274_neb": {
+    "host": "violet",
+    "live_native_workers": 5,
+    "all_have_current_scientific_acceptance": false,
+    "base_profile_export": "stale; native sander process active",
+    "spacing_trials": [
+      {
+        "label": "01_uniform_24_lbfgs",
+        "cycle": 2069,
+        "relative_peak_kcal_mol": 33.922,
+        "max_gradient": 0.0016003,
+        "max_gradient_over_target": 16.0
+      },
+      {
+        "label": "02_uniform_48_lbfgs",
+        "cycle": 1093,
+        "relative_peak_kcal_mol": 51.9,
+        "max_gradient": 0.003933,
+        "max_gradient_over_target": 39.3
+      },
+      {
+        "label": "03_adaptive_24_lbfgs",
+        "cycle": 2076,
+        "relative_peak_kcal_mol": 45.645,
+        "max_gradient": 0.0078542,
+        "max_gradient_over_target": 78.5
+      },
+      {
+        "label": "04_uniform_24_cg_long",
+        "cycle": 3507,
+        "relative_peak_kcal_mol": 42.687,
+        "max_gradient": 0.00028961,
+        "max_gradient_over_target": 2.9
+      }
+    ],
+    "coherent_chemical_export": "Trial receipts report coherent export cycle mismatch; chemical gap acceptance unavailable."
+  },
+  "ts_followup": {
+    "process_exit": 0,
+    "probes_completed": 26,
+    "probes_failed": 0,
+    "conditional_descents_completed": 2,
+    "descents_native_optimizer_converged": true,
+    "descents_electronic_gate": false,
+    "verified_ts": false,
+    "formal_irc": false,
+    "running_or_queued": false
+  },
+  "mcce_nylc_comparisons": {
+    "running_or_queued": false,
+    "failed_structures": [
+      "5XYG",
+      "7YU0",
+      "7YU1"
+    ],
+    "error": "ValueError: Unsupported PDB record 'REMARK' on line 1",
+    "new_pkas_accepted": false
+  },
+  "mechanism_agent": {
+    "benchmark": "completed and semantically reviewed; neither model qualified for autonomous scientific dispatch",
+    "servers_on_azalea": [
+      "Ollama",
+      "vLLM"
+    ],
+    "active_scientific_dispatch": false,
+    "email_notifications": "waiting for external ORNL relay authorization"
+  },
+  "other_native_calculations": {
+    "gaussian_violet_azalea_running": false,
+    "xtb_violet_azalea_running": false,
+    "new_parameterization_running": false
+  },
+  "shared_hosts": {
+    "geranium": "no jobs launched by us",
+    "tulip": "no jobs launched by us",
+    "policy": "Use both simultaneously only for jobs lasting a few hours; verify no other users before every launch and ask PI when uncertain."
+  },
+  "evidence": {
+    "md_gate": "qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/waiting/status.json",
+    "mcce_current_root": "analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120",
+    "delegated_audits": [
+      "status_wt_md_20261121_evening",
+      "status_us_remote_20261121_evening",
+      "status_neb_ts_20261121_evening"
+    ],
+    "journal": "output_agent_actions/20261021.jsonl"
+  }
+}

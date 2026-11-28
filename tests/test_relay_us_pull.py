@@ -1,6 +1,7 @@
 """Check that relay US downloads contain compact results without raw sampling."""
 
 from pathlib import Path
+import os
 import shlex
 import shutil
 import subprocess
@@ -60,3 +61,36 @@ def test_relay_us_export_keeps_summaries_without_raw_windows(tmp_path: Path) -> 
     subprocess.run([rsync, "-rt", *options, f"{source}/", f"{target}/"], check=True)
     assert all((target / campaign / name).is_file() for name in keep)
     assert all(not (target / campaign / name).exists() for name in reject)
+
+
+def test_current_movie_dcd_pull_is_uncapped_and_checksum_forced(
+    tmp_path: Path,
+) -> None:
+    """Refresh a same-sized stale DCD using the dedicated rsync arguments."""
+    rsync = shutil.which("rsync")
+    if rsync is None:
+        pytest.skip("Actual rsync is needed to exercise trajectory transfer args")
+    script = Path("scripts/pull_nyl12_inspection.sh").read_text()
+    transfer = script.split("current_us_movie_rsync_args=(", 1)[1].split(")", 1)[0]
+    options = shlex.split(transfer)
+    assert "--checksum" in options
+    assert not any(option.startswith("--max-size") for option in options)
+    assert (
+        '"$remote:$nterminal_relay_source/umbrella_sampling/full_path_300K/'
+        'vmd_progress/current/path.dcd"'
+    ) in script
+    assert '"$current_us_movie/path.dcd"' in script
+    assert "Checksum verification failed for current relay US movie at:" in script
+
+    source = tmp_path / "source" / "current" / "path.dcd"
+    target = tmp_path / "target" / "current" / "path.dcd"
+    source.parent.mkdir(parents=True)
+    target.parent.mkdir(parents=True)
+    source.write_bytes(b"new published trajectory")
+    target.write_bytes(b"old published trajectory")
+    source_stat = source.stat()
+    target.touch()
+    target.chmod(source_stat.st_mode)
+    os.utime(target, ns=(source_stat.st_atime_ns, source_stat.st_mtime_ns))
+    subprocess.run([rsync, *options, str(source), str(target)], check=True)
+    assert target.read_bytes() == source.read_bytes()

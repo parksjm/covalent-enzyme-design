@@ -1,0 +1,264 @@
+{
+  "utc": "2026-11-27T16:47:54.106494+00:00",
+  "commands": {
+    "filesystems": {
+      "returncode": 0,
+      "stdout": "Filesystem                                                               Type      Size  Used Avail Use% Mounted on\ntmpfs                                                                    tmpfs     101G   61M  101G   1% /run\nefivarfs                                                                 efivarfs  128K   24K  100K  20% /sys/firmware/efi/efivars\n/dev/md0                                                                 ext4      1.8T  1.7T   17G  99% /\ntmpfs                                                                    tmpfs     504G     0  504G   0% /dev/shm\ntmpfs                                                                    tmpfs     5.0M     0  5.0M   0% /run/lock\n/dev/md1                                                                 ext4       14T  9.8T  3.4T  75% /raid\n/dev/nvme5n1p1                                                           vfat      511M  6.2M  505M   2% /boot/efi\nbiovault.ornl.gov:/mnt/tank/Hot/Biosciences/APPL/APPL-dev                nfs4      216T  166T   50T  77% /mnt/APPL-dev\nbiovault.ornl.gov:/mnt/tank/Hot/Biosciences/APPL/FileStorage2            nfs4      216T  166T   50T  77% /mnt/APPL-level0\nixbionas.ornl.gov:/mnt/tank/Cold/user_archive                            nfs       1.8P  116T  1.7P   7% /mnt/Archive\n160.91.186.134:/export/DGX01                                             nfs       113T   92T   21T  82% /mnt/DGX01\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/29527\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/34617\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/40521\ntmpfs                                                                    tmpfs     101G   20K  101G   1% /run/user/70001\ntmpfs                                                                    tmpfs     101G   24K  101G   1% /run/user/12937\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/22187\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/36453\n160.91.186.134:/export/DGX01/.zfs/snapshot/__spectra_repl_iafzrpx3f1_120 nfs       113T   92T   21T  82% /mnt/DGX01/.zfs/snapshot/__spectra_repl_iafzrpx3f1_120\n160.91.186.134:/export/DGX01/.zfs/snapshot/__spectra_repl_iafzrpx3f1_119 nfs       157T  136T   21T  87% /mnt/DGX01/.zfs/snapshot/__spectra_repl_iafzrpx3f1_119\ntmpfs                                                                    tmpfs     101G   20K  101G   1% /run/user/31399\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/36331\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/27160\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/34641\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/13638\ntmpfs                                                                    tmpfs     101G   16K  101G   1% /run/user/11702\n",
+      "stderr": ""
+    },
+    "cuda": {
+      "returncode": 0,
+      "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2023 NVIDIA Corporation\nBuilt on Fri_Jan__6_16:45:21_PST_2023\nCuda compilation tools, release 12.0, V12.0.140\nBuild cuda_12.0.r12.0/compiler.32267302_0\n",
+      "stderr": ""
+    },
+    "gpu_topology": {
+      "returncode": 0,
+      "stdout": "\t\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tGPU4\tGPU5\tGPU6\tGPU7\tNIC0\tNIC1\tNIC2\tNIC3\tNIC4\tNIC5\tNIC6\tNIC7\tNIC8\tNIC9\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t48-63,176-191\t3\t\tN/A\nGPU1\tNV12\t X \tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t48-63,176-191\t3\t\tN/A\nGPU2\tNV12\tNV12\t X \tNV12\tNV12\tNV12\tNV12\tNV12\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t16-31,144-159\t1\t\tN/A\nGPU3\tNV12\tNV12\tNV12\t X \tNV12\tNV12\tNV12\tNV12\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t16-31,144-159\t1\t\tN/A\nGPU4\tNV12\tNV12\tNV12\tNV12\t X \tNV12\tNV12\tNV12\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\t112-127,240-255\t7\t\tN/A\nGPU5\tNV12\tNV12\tNV12\tNV12\tNV12\t X \tNV12\tNV12\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\t112-127,240-255\t7\t\tN/A\nGPU6\tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\t X \tNV12\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\t80-95,208-223\t5\t\tN/A\nGPU7\tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\tNV12\t X \tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\t80-95,208-223\t5\t\tN/A\nNIC0\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC1\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\t X \tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC2\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC3\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\t X \tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC4\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \tPXB\tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC5\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\t X \tSYS\tSYS\tSYS\tSYS\t\t\t\t\nNIC6\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \tPXB\tSYS\tSYS\t\t\t\t\nNIC7\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\tPXB\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPXB\t X \tSYS\tSYS\t\t\t\t\nNIC8\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\t X \tPIX\t\t\t\t\nNIC9\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tSYS\tPIX\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n  NIC1: mlx5_1\n  NIC2: mlx5_2\n  NIC3: mlx5_3\n  NIC4: mlx5_4\n  NIC5: mlx5_5\n  NIC6: mlx5_6\n  NIC7: mlx5_7\n  NIC8: mlx5_8\n  NIC9: mlx5_9\n\n",
+      "stderr": ""
+    },
+    "cpu_topology": {
+      "returncode": 0,
+      "stdout": "# The following is the parsable format, which can be fed to other\n# programs. Each different item in every column has an unique ID\n# starting usually from zero.\n# CPU,Core,Socket,Node\n0,0,0,0\n1,1,0,0\n2,2,0,0\n3,3,0,0\n4,4,0,0\n5,5,0,0\n6,6,0,0\n7,7,0,0\n8,8,0,0\n9,9,0,0\n10,10,0,0\n11,11,0,0\n12,12,0,0\n13,13,0,0\n14,14,0,0\n15,15,0,0\n16,16,0,1\n17,17,0,1\n18,18,0,1\n19,19,0,1\n20,20,0,1\n21,21,0,1\n22,22,0,1\n23,23,0,1\n24,24,0,1\n25,25,0,1\n26,26,0,1\n27,27,0,1\n28,28,0,1\n29,29,0,1\n30,30,0,1\n31,31,0,1\n32,32,0,2\n33,33,0,2\n34,34,0,2\n35,35,0,2\n36,36,0,2\n37,37,0,2\n38,38,0,2\n39,39,0,2\n40,40,0,2\n41,41,0,2\n42,42,0,2\n43,43,0,2\n44,44,0,2\n45,45,0,2\n46,46,0,2\n47,47,0,2\n48,48,0,3\n49,49,0,3\n50,50,0,3\n51,51,0,3\n52,52,0,3\n53,53,0,3\n54,54,0,3\n55,55,0,3\n56,56,0,3\n57,57,0,3\n58,58,0,3\n59,59,0,3\n60,60,0,3\n61,61,0,3\n62,62,0,3\n63,63,0,3\n64,64,1,4\n65,65,1,4\n66,66,1,4\n67,67,1,4\n68,68,1,4\n69,69,1,4\n70,70,1,4\n71,71,1,4\n72,72,1,4\n73,73,1,4\n74,74,1,4\n75,75,1,4\n76,76,1,4\n77,77,1,4\n78,78,1,4\n79,79,1,4\n80,80,1,5\n81,81,1,5\n82,82,1,5\n83,83,1,5\n84,84,1,5\n85,85,1,5\n86,86,1,5\n87,87,1,5\n88,88,1,5\n89,89,1,5\n90,90,1,5\n91,91,1,5\n92,92,1,5\n93,93,1,5\n94,94,1,5\n95,95,1,5\n96,96,1,6\n97,97,1,6\n98,98,1,6\n99,99,1,6\n100,100,1,6\n101,101,1,6\n102,102,1,6\n103,103,1,6\n104,104,1,6\n105,105,1,6\n106,106,1,6\n107,107,1,6\n108,108,1,6\n109,109,1,6\n110,110,1,6\n111,111,1,6\n112,112,1,7\n113,113,1,7\n114,114,1,7\n115,115,1,7\n116,116,1,7\n117,117,1,7\n118,118,1,7\n119,119,1,7\n120,120,1,7\n121,121,1,7\n122,122,1,7\n123,123,1,7\n124,124,1,7\n125,125,1,7\n126,126,1,7\n127,127,1,7\n128,0,0,0\n129,1,0,0\n130,2,0,0\n131,3,0,0\n132,4,0,0\n133,5,0,0\n134,6,0,0\n135,7,0,0\n136,8,0,0\n137,9,0,0\n138,10,0,0\n139,11,0,0\n140,12,0,0\n141,13,0,0\n142,14,0,0\n143,15,0,0\n144,16,0,1\n145,17,0,1\n146,18,0,1\n147,19,0,1\n148,20,0,1\n149,21,0,1\n150,22,0,1\n151,23,0,1\n152,24,0,1\n153,25,0,1\n154,26,0,1\n155,27,0,1\n156,28,0,1\n157,29,0,1\n158,30,0,1\n159,31,0,1\n160,32,0,2\n161,33,0,2\n162,34,0,2\n163,35,0,2\n164,36,0,2\n165,37,0,2\n166,38,0,2\n167,39,0,2\n168,40,0,2\n169,41,0,2\n170,42,0,2\n171,43,0,2\n172,44,0,2\n173,45,0,2\n174,46,0,2\n175,47,0,2\n176,48,0,3\n177,49,0,3\n178,50,0,3\n179,51,0,3\n180,52,0,3\n181,53,0,3\n182,54,0,3\n183,55,0,3\n184,56,0,3\n185,57,0,3\n186,58,0,3\n187,59,0,3\n188,60,0,3\n189,61,0,3\n190,62,0,3\n191,63,0,3\n192,64,1,4\n193,65,1,4\n194,66,1,4\n195,67,1,4\n196,68,1,4\n197,69,1,4\n198,70,1,4\n199,71,1,4\n200,72,1,4\n201,73,1,4\n202,74,1,4\n203,75,1,4\n204,76,1,4\n205,77,1,4\n206,78,1,4\n207,79,1,4\n208,80,1,5\n209,81,1,5\n210,82,1,5\n211,83,1,5\n212,84,1,5\n213,85,1,5\n214,86,1,5\n215,87,1,5\n216,88,1,5\n217,89,1,5\n218,90,1,5\n219,91,1,5\n220,92,1,5\n221,93,1,5\n222,94,1,5\n223,95,1,5\n224,96,1,6\n225,97,1,6\n226,98,1,6\n227,99,1,6\n228,100,1,6\n229,101,1,6\n230,102,1,6\n231,103,1,6\n232,104,1,6\n233,105,1,6\n234,106,1,6\n235,107,1,6\n236,108,1,6\n237,109,1,6\n238,110,1,6\n239,111,1,6\n240,112,1,7\n241,113,1,7\n242,114,1,7\n243,115,1,7\n244,116,1,7\n245,117,1,7\n246,118,1,7\n247,119,1,7\n248,120,1,7\n249,121,1,7\n250,122,1,7\n251,123,1,7\n252,124,1,7\n253,125,1,7\n254,126,1,7\n255,127,1,7\n",
+      "stderr": ""
+    },
+    "glibc": {
+      "returncode": 0,
+      "stdout": "ldd (Ubuntu GLIBC 2.39-0ubuntu8.12) 2.39\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Roland McGrath and Ulrich Drepper.\n",
+      "stderr": ""
+    }
+  },
+  "directories": {
+    "/home/jpc": [
+      ".Xauthority",
+      ".bash_history",
+      ".bash_logout",
+      ".bashrc",
+      ".cache",
+      ".codex",
+      ".conda",
+      ".config",
+      ".cpan",
+      ".dgl",
+      ".forward",
+      ".keras",
+      ".lesshst",
+      ".local",
+      ".mamba",
+      ".nv",
+      ".pdbremix.config",
+      ".profile",
+      ".python_history",
+      ".ssh",
+      ".sudo_as_admin_successful",
+      ".tmux.conf",
+      ".vim",
+      ".viminfo",
+      ".wget-hsts",
+      "Nyl12_refine13_no_tail.cif",
+      "bin",
+      "cif",
+      "cif_dimer",
+      "cif_tetramer",
+      "code",
+      "projects",
+      "results",
+      "test_colabfold_ss.sh",
+      "test_with_dimer_template.txt"
+    ],
+    "/home/jpc/code": [
+      ".conda",
+      "BindCraft",
+      "Miniforge3-25.3.1-0-Linux-x86_64.sh",
+      "RFdiffusion",
+      "alphafold3",
+      "boltz",
+      "install_colabbatch_linux.sh",
+      "localcolabfold",
+      "miniforge3",
+      "rDock"
+    ],
+    "/home/jpc/projects": [
+      ".phenix",
+      "4zvu_mut",
+      "4zvu_wt",
+      "4zvu_wt.tgz",
+      "8olz_amber",
+      "H_adhaerans_hydrolase",
+      "acrab",
+      "adea_adeb",
+      "adeb3_templates",
+      "amyloids",
+      "androgen_receptor",
+      "coty_fusion",
+      "ecp2",
+      "ftsa",
+      "hgcab_selenoproteins",
+      "intron",
+      "laccases",
+      "mpro",
+      "n12c_af2",
+      "n66",
+      "narval_af2",
+      "nosz",
+      "nyl12",
+      "nyl12_custom_template",
+      "nylc",
+      "ruchika",
+      "trp_synthase"
+    ],
+    "/home/jpc/.cache": [
+      "conda",
+      "fontconfig",
+      "matplotlib",
+      "motd.legal-displayed",
+      "pip",
+      "torch"
+    ],
+    "/raid": [
+      "3bn",
+      "4pz",
+      "AmirZ",
+      "Shared_LDRD_DiffusiveINR",
+      "cache",
+      "colabfold-local-shared",
+      "colony-tracker-backups",
+      "docker-data",
+      "gis",
+      "graveyard",
+      "h8b",
+      "kpm",
+      "lost+found",
+      "models",
+      "msk",
+      "nqh",
+      "pan_benchmarks"
+    ],
+    "/opt": [
+      "Elastic",
+      "MicronTechnology",
+      "containerd",
+      "knem-1.1.4.91mlnx1",
+      "mellanox",
+      "nessus_agent"
+    ],
+    "/usr/local": [
+      "bin",
+      "cuda-11.8",
+      "cuda-12.9",
+      "cuda-13.0",
+      "dcgm",
+      "etc",
+      "games",
+      "include",
+      "lib",
+      "linkml_model",
+      "man",
+      "n",
+      "sbin",
+      "share",
+      "src"
+    ],
+    "/mnt": [
+      "APPL-dev",
+      "APPL-level0",
+      "Archive",
+      "DGX01",
+      "warp-msk"
+    ]
+  },
+  "path_metadata": {
+    "/home/jpc": {
+      "exists": true,
+      "realpath": "/home/jpc",
+      "uid": 11702,
+      "gid": 100,
+      "mode": "0o755",
+      "writable": true,
+      "free_GiB": 16.73
+    },
+    "/home/jpc/code": {
+      "exists": true,
+      "realpath": "/home/jpc/code",
+      "uid": 11702,
+      "gid": 100,
+      "mode": "0o755",
+      "writable": true,
+      "free_GiB": 16.73
+    },
+    "/home/jpc/projects": {
+      "exists": true,
+      "realpath": "/home/jpc/projects",
+      "uid": 11702,
+      "gid": 100,
+      "mode": "0o755",
+      "writable": true,
+      "free_GiB": 16.73
+    },
+    "/home/jpc/.cache": {
+      "exists": true,
+      "realpath": "/home/jpc/.cache",
+      "uid": 11702,
+      "gid": 100,
+      "mode": "0o700",
+      "writable": true,
+      "free_GiB": 16.73
+    },
+    "/home/jpc/miniforge3": {
+      "exists": false
+    },
+    "/home/jpc/mambaforge": {
+      "exists": false
+    },
+    "/raid": {
+      "exists": true,
+      "realpath": "/raid",
+      "uid": 0,
+      "gid": 999,
+      "mode": "0o775",
+      "writable": false,
+      "free_GiB": 3450.95
+    },
+    "/raid/jpc": {
+      "exists": false
+    },
+    "/raid/users/jpc": {
+      "exists": false
+    },
+    "/scratch": {
+      "exists": false
+    },
+    "/scratch/jpc": {
+      "exists": false
+    },
+    "/opt": {
+      "exists": true,
+      "realpath": "/opt",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "writable": false,
+      "free_GiB": 16.73
+    },
+    "/usr/local": {
+      "exists": true,
+      "realpath": "/usr/local",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "writable": false,
+      "free_GiB": 16.73
+    },
+    "/mnt": {
+      "exists": true,
+      "realpath": "/mnt",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "writable": false,
+      "free_GiB": 16.73
+    },
+    "/mnt/jpc": {
+      "exists": false
+    }
+  }
+}

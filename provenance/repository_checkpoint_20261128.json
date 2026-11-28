@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-28T05:30:28.436393+00:00",
+  "purpose": "PI-requested development checkpoint of remaining project source, documentation and curated presentation updates",
+  "core_python_ruff": {
+    "status": "passed",
+    "files": 208
+  },
+  "staged_json_syntax": {
+    "status": "passed",
+    "files": 76
+  },
+  "shell_syntax": {
+    "status": "passed",
+    "files": 5
+  },
+  "whitespace_check": "passed",
+  "credential_pattern_scan": "no matches",
+  "presentations": "Both original MANIFEST.sha256 files verified; exact manifest-bound packages retained",
+  "archived_recipe_lint": "Three style findings in render_structures_initial_camera.py retained without altering the published package",
+  "full_pytest": {
+    "status": "running",
+    "job_status_path": "output_agent_checkpoints/20261128_pending_changes/status.json",
+    "session": "nyl12_repo_checks_20261128",
+    "exit_status": null
+  },
+  "coverage": "Not remeasured for this broad checkpoint; existing focused qualification receipts remain authoritative",
+  "scope_exclusions": [
+    "raw MD/QM/MM trajectories and restarts",
+    "native Hessian scratch",
+    "vendor checkouts and environments",
+    "unselected generated analysis/campaign artifacts"
+  ],
+  "scientific_acceptance": "This Git checkpoint does not establish force convergence, sampling convergence or catalytic validity",
+  "active_jobs": "No scientific jobs interrupted or their immutable inputs modified"
+}

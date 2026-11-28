@@ -1,0 +1,29 @@
+{
+  "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_replica.csv",
+  "cases": {
+    "nh2_asp272_ash274": [
+      "nh2_asp272_ash274__replica_01",
+      "nh2_asp272_ash274__replica_02",
+      "nh2_asp272_ash274__replica_03",
+      "nh2_asp272_ash274__replica_04"
+    ],
+    "nh2_asp272_asp274": [
+      "nh2_asp272_asp274__replica_01",
+      "nh2_asp272_asp274__replica_02",
+      "nh2_asp272_asp274__replica_03",
+      "nh2_asp272_asp274__replica_04"
+    ],
+    "nh3_asp272_asp274": [
+      "nh3_asp272_asp274__replica_01",
+      "nh3_asp272_asp274__replica_02",
+      "nh3_asp272_asp274__replica_03",
+      "nh3_asp272_asp274__replica_04"
+    ]
+  },
+  "n_per_state": {
+    "nh2_asp272_ash274": 4,
+    "nh2_asp272_asp274": 4,
+    "nh3_asp272_asp274": 4
+  },
+  "independent_unit": "replica trajectory; not individual enzyme copy"
+}

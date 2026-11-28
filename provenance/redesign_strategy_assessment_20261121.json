@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-11-22T02:53:19.980018+00:00",
+  "kind": "advisory scientific strategy, pending PI direction",
+  "note": "docs/plm_and_filter_calibration_20261121.md",
+  "active_jobs_changed": false,
+  "new_campaign_authorized": false,
+  "sources": [
+    "https://doi.org/10.1126/science.adu2454",
+    "https://doi.org/10.1002/cssc.202500257",
+    "https://pubmed.ncbi.nlm.nih.gov/41889879/",
+    "https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/46.html",
+    "https://patents.google.com/patent/WO2024156025A1/en"
+  ],
+  "legal_scope": "Public patent evidence only; no freedom-to-operate or infringement determination."
+}

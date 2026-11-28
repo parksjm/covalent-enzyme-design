@@ -1,0 +1,585 @@
+{
+  "paths": {
+    "/home/jpc/code/miniforge3/envs": {
+      "exists": true,
+      "uid": 11702,
+      "gid": 100,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "BindCraft",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "boltz-env",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/home/jpc/code/boltz": {
+      "exists": true,
+      "uid": 11702,
+      "gid": 100,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "boltz2_aff.ckpt",
+          "dir": false,
+          "bytes": 2062139170
+        },
+        {
+          "name": "boltz2_conf.ckpt",
+          "dir": false,
+          "bytes": 2286561469
+        },
+        {
+          "name": "mols",
+          "dir": true,
+          "bytes": 1064960
+        },
+        {
+          "name": "mols.tar",
+          "dir": false,
+          "bytes": 1855662080
+        }
+      ]
+    },
+    "/home/jpc/code/alphafold3": {
+      "exists": true,
+      "uid": 11702,
+      "gid": 100,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": ".conda",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": ".git",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": ".github",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": ".gitignore",
+          "dir": false,
+          "bytes": 223
+        },
+        {
+          "name": "CMakeLists.txt",
+          "dir": false,
+          "bytes": 2870
+        },
+        {
+          "name": "LICENSE",
+          "dir": false,
+          "bytes": 20849
+        },
+        {
+          "name": "OUTPUT_TERMS_OF_USE.md",
+          "dir": false,
+          "bytes": 13036
+        },
+        {
+          "name": "README.mamba_jmp",
+          "dir": false,
+          "bytes": 232
+        },
+        {
+          "name": "README.md",
+          "dir": false,
+          "bytes": 12812
+        },
+        {
+          "name": "WEIGHTS_PROHIBITED_USE_POLICY.md",
+          "dir": false,
+          "bytes": 7080
+        },
+        {
+          "name": "WEIGHTS_TERMS_OF_USE.md",
+          "dir": false,
+          "bytes": 16209
+        },
+        {
+          "name": "androgen_receptor",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "as9",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "bxpb",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "dev-requirements.txt",
+          "dir": false,
+          "bytes": 40124
+        },
+        {
+          "name": "docker",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "docs",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "examples",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "fetch_databases.sh",
+          "dir": false,
+          "bytes": 1714
+        },
+        {
+          "name": "hgcab_2026",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "legal",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "models",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "nosz2_del21",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "pyproject.toml",
+          "dir": false,
+          "bytes": 1034
+        },
+        {
+          "name": "requirements.txt",
+          "dir": false,
+          "bytes": 40062
+        },
+        {
+          "name": "run",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "run_alphafold.py",
+          "dir": false,
+          "bytes": 29901
+        },
+        {
+          "name": "run_alphafold_data_test.py",
+          "dir": false,
+          "bytes": 9656
+        },
+        {
+          "name": "run_alphafold_test.py",
+          "dir": false,
+          "bytes": 14839
+        },
+        {
+          "name": "split_intein",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "src",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/home/jpc/code/RFdiffusion": {
+      "exists": true,
+      "uid": 11702,
+      "gid": 100,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": ".git",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": ".github",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": ".gitignore",
+          "dir": false,
+          "bytes": 231
+        },
+        {
+          "name": ".rosetta-ci",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "LICENSE",
+          "dir": false,
+          "bytes": 1749
+        },
+        {
+          "name": "README.md",
+          "dir": false,
+          "bytes": 44942
+        },
+        {
+          "name": "config",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "docker",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "env",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "examples",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "helper_scripts",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "img",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "jmp",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "models",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "outputs",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "pdbs",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "rfdiffusion",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "rfdiffusion.egg-info",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "schedules",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "scripts",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "secondary_structure",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "setup.py",
+          "dir": false,
+          "bytes": 406
+        },
+        {
+          "name": "test_outputs",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "tests",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/home/jpc/.cache/torch": {
+      "exists": true,
+      "uid": 11702,
+      "gid": 100,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "kernels",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/home/jpc/.cache/torch/hub/checkpoints": {
+      "exists": false
+    },
+    "/home/jpc/.boltz": {
+      "exists": false
+    },
+    "/raid/cache": {
+      "exists": true,
+      "uid": 0,
+      "gid": 0,
+      "writable": false,
+      "mode": "0o700",
+      "error": "[Errno 13] Permission denied: '/raid/cache'"
+    },
+    "/raid/models": {
+      "exists": true,
+      "uid": 24856,
+      "gid": 100,
+      "writable": false,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "huggingface",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "ollama",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "vllm",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/raid/colabfold-local-shared": {
+      "exists": true,
+      "uid": 34641,
+      "gid": 100,
+      "writable": false,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "README.txt",
+          "dir": false,
+          "bytes": 6729
+        },
+        {
+          "name": "bin",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "db",
+          "dir": true,
+          "bytes": 4096
+        },
+        {
+          "name": "grant_peer_read.sh",
+          "dir": false,
+          "bytes": 544
+        }
+      ]
+    },
+    "/mnt/DGX01": {
+      "exists": true,
+      "uid": 0,
+      "gid": 0,
+      "writable": false,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": ".zfs",
+          "dir": true,
+          "bytes": 3
+        },
+        {
+          "name": "2l0",
+          "dir": true,
+          "bytes": 12
+        },
+        {
+          "name": "AmirZ",
+          "dir": true,
+          "bytes": 27
+        },
+        {
+          "name": "Dan",
+          "dir": true,
+          "bytes": 3
+        },
+        {
+          "name": "Personal",
+          "dir": true,
+          "bytes": 62
+        },
+        {
+          "name": "User_Archive",
+          "dir": true,
+          "bytes": 45
+        },
+        {
+          "name": "backup",
+          "dir": true,
+          "bytes": 3
+        },
+        {
+          "name": "du_logs",
+          "dir": true,
+          "bytes": 39
+        },
+        {
+          "name": "io_tests",
+          "dir": true,
+          "bytes": 6
+        },
+        {
+          "name": "msk",
+          "dir": true,
+          "bytes": 26
+        },
+        {
+          "name": "pan_benchmarks",
+          "dir": true,
+          "bytes": 2
+        },
+        {
+          "name": "wrk",
+          "dir": true,
+          "bytes": 3
+        }
+      ]
+    },
+    "/mnt/DGX01/jpc": {
+      "exists": false
+    },
+    "/mnt/APPL-dev": {
+      "exists": true,
+      "uid": 0,
+      "gid": 0,
+      "writable": true,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "APPL_Experiments_Analysis_Complete",
+          "dir": true,
+          "bytes": 8
+        },
+        {
+          "name": "APPL_Experiments_Ready_For_Analysis",
+          "dir": true,
+          "bytes": 16
+        },
+        {
+          "name": "data_products",
+          "dir": true,
+          "bytes": 2
+        },
+        {
+          "name": "level0",
+          "dir": true,
+          "bytes": 2
+        },
+        {
+          "name": "personal",
+          "dir": true,
+          "bytes": 8
+        },
+        {
+          "name": "shared",
+          "dir": true,
+          "bytes": 2
+        }
+      ]
+    },
+    "/usr/local/cuda-12.9": {
+      "exists": true,
+      "uid": 0,
+      "gid": 0,
+      "writable": false,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "samples",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    },
+    "/usr/local/cuda-13.0": {
+      "exists": true,
+      "uid": 0,
+      "gid": 0,
+      "writable": false,
+      "mode": "0o755",
+      "children": [
+        {
+          "name": "samples",
+          "dir": true,
+          "bytes": 4096
+        }
+      ]
+    }
+  },
+  "repos": {
+    "/home/jpc/code/boltz": {
+      "returncode": 128,
+      "stdout": "",
+      "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+    },
+    "/home/jpc/code/alphafold3": {
+      "returncode": 0,
+      "stdout": "6075812783cf1da2267ce1af47bf318944785aae",
+      "stderr": ""
+    },
+    "/home/jpc/code/RFdiffusion": {
+      "returncode": 0,
+      "stdout": "820bfdfaded8c260b962dc40a3171eae316b6ce0",
+      "stderr": ""
+    }
+  },
+  "files": {
+    "/home/jpc/code/alphafold3/pyproject.toml": "[build-system]\nrequires = [\n    \"scikit_build_core\",\n    \"pybind11\",\n    \"cmake>=3.28\",\n    \"ninja\",\n    \"numpy\",\n]\nbuild-backend = \"scikit_build_core.build\"\n\n[project]\nname = \"alphafold3\"\nversion = \"3.0.1\"\nrequires-python = \">=3.11\"\nreadme = \"README.md\"\nlicense = {file = \"LICENSE\"}\ndependencies = [\n    \"absl-py\",\n    \"chex\",\n    \"dm-haiku==0.0.13\",\n    \"dm-tree\",\n    \"jax==0.4.34\",\n    \"jax[cuda12]==0.4.34\",\n    \"jax-triton==0.2.0\",\n    \"jaxtyping==0.2.34\",\n    \"numpy\",\n    \"rdkit==2024.3.5\",\n    \"triton==3.1.0\",\n    \"tqdm\",\n    \"typeguard==2.13.3\",\n    \"zstandard\",\n]\n\n[project.optional-dependencies]\ntest = [\"pytest>=6.0\"]\n\n[tool.scikit-build]\nwheel.exclude = [\n    \"**.pyx\",\n    \"**/CMakeLists.txt\",\n    \"**.cc\",\n    \"**.h\"\n]\nsdist.include = [\n    \"LICENSE\",\n    \"OUTPUT_TERMS_OF_USE.md\",\n    \"WEIGHTS_PROHIBITED_USE_POLICY.md\",\n    \"WEIGHTS_TERMS_OF_USE.md\",\n]\n\n[tool.cibuildwheel]\nbuild = \"cp3*-manylinux_x86_64\"\nmanylinux-x86_64-image = \"manylinux_2_28\"\n\n[project.scripts]\nbuild_data = \"alphafold3.build_data:build_data\"\n"
+  }
+}

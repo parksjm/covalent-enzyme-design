@@ -1,0 +1,39 @@
+{
+  "observed_native_utc": "2026-11-26T00:20:06Z",
+  "supersedes": [
+    "provenance/relay_us_timing_audit_20261125.json",
+    "progresspsconversioninprovenance/four_host_status_20261125_evening.json"
+  ],
+  "correction": "Earlier status/forecast used1fs;nativeMDinputis0.5fs. Stepcounts/starttimes/rateswerecorrect;psconversionandETAwerewrong. Originalreceiptsretained.",
+  "dt_ps": 0.0005,
+  "nstlim": 10000,
+  "block_duration_ps": 5.0,
+  "slow_window": {
+    "name": "delivery_full_011",
+    "native_mdinfo_completed_steps": 2700,
+    "production_ps": 1.35,
+    "remaining_steps": 7300,
+    "last100_s_per_step": 1.4337,
+    "whole_run_s_per_step": 1.4393
+  },
+  "fast_window": {
+    "name": "activation_full_010",
+    "native_mdinfo_completed_steps": 5500,
+    "production_ps": 2.75
+  },
+  "native_evidence_root": "azalea:/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/",
+  "native_evidence_files": [
+    "delivery_full_011/03_production_5ps/run.mdin",
+    "delivery_full_011/03_production_5ps/mdinfo",
+    "activation_full_010/03_production_5ps/run.mdin",
+    "activation_full_010/03_production_5ps/mdinfo"
+  ],
+  "corrected_allwindow_first5ps_forecast_est": "2026-11-25about22:15EST",
+  "forecast_excludes": [
+    "receiptvalidation",
+    "synchronization",
+    "MBARanalysis"
+  ],
+  "forecast_conditional_on": "Currentratespersistandjobsremainhealthy",
+  "scientific_jobs_modified": false
+}

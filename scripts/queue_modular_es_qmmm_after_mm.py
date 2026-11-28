@@ -31,6 +31,7 @@ from nyl12_covalent.modular_es_qm_region import build_modular_es_region  # noqa:
 from nyl12_covalent.modular_es_snapshot_selection import classify_geometry  # noqa: E402
 from nyl12_covalent.ti1_checks import check_convergence  # noqa: E402
 from nyl12_covalent.unrestrained_relay import native_converged  # noqa: E402
+from nyl12_covalent.native_thr_policy import geometry_eligible, policy_metadata  # noqa: E402
 
 LOGGER = logging.getLogger(__name__)
 
@@ -126,12 +127,15 @@ def mm_acceptance_decision(
     og1_displacement_max: float | None,
     override_reason: str | None,
 ) -> dict[str, Any]:
-    """Build standard and explicitly overridden MM-to-QM/MM decisions."""
+    """Use convergence/geometry for admission and retain native diagnostics."""
     reason = validate_override_options(og1_displacement_max, override_reason)
-    standard_accepted = (
+    legacy_native_filtered_accepted = (
         convergence["accepted"]
         and geometry["tier"] in {"A", "B"}
         and native["accepted"]
+    )
+    standard_accepted = bool(convergence["accepted"]) and geometry_eligible(
+        geometry["tier"]
     )
     override_failures: list[str] = []
     override_accepted = False
@@ -154,6 +158,10 @@ def mm_acceptance_decision(
             override_failures.append("OG1_displacement_exceeds_override_max")
         override_accepted = not override_failures
     return {
+        "selection_policy": policy_metadata(),
+        "legacy_native_filtered_accepted": legacy_native_filtered_accepted,
+        "native_similarity_accepted": native["accepted"],
+        "override_role": "Historical diagnostic; no effect on admission",
         "standard_accepted_for_qmmm": standard_accepted,
         "override": {
             "requested": og1_displacement_max is not None,
@@ -162,7 +170,7 @@ def mm_acceptance_decision(
             "og1_displacement_max_angstrom": og1_displacement_max,
             "failed_conditions": override_failures,
         },
-        "accepted_for_qmmm": standard_accepted or override_accepted,
+        "accepted_for_qmmm": standard_accepted,
     }
 
 
@@ -232,7 +240,7 @@ def main() -> None:
         json.dumps(mm_acceptance, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     if not mm_acceptance["accepted_for_qmmm"]:
-        raise RuntimeError("MM endpoint failed standard and explicit QM/MM gates")
+        raise RuntimeError("MM endpoint failed convergence or Tier A/B geometry")
 
     region = args.output / "qm_region.json"
     build_modular_es_region(
@@ -266,15 +274,14 @@ def main() -> None:
     final_geometry = endpoint_geometry(args.topology.resolve(), optimized)
     final_native = native_gate(final_alignment)
     acceptance = {
+        "selection_policy": policy_metadata(),
         "native_converged": native_converged(qmmm_dir / "minimized.mdout"),
         "geometry": final_geometry,
         "native_thr233": final_native,
     }
-    acceptance["catalytically_competent_es"] = (
-        acceptance["native_converged"]
-        and final_geometry["tier"] in {"A", "B"}
-        and final_native["accepted"]
-    )
+    acceptance["catalytically_competent_es"] = acceptance[
+        "native_converged"
+    ] and geometry_eligible(final_geometry["tier"])
     (args.output / "qmmm_acceptance.json").write_text(
         json.dumps(acceptance, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )

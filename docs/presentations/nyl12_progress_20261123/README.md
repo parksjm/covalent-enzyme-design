@@ -1,65 +1,58 @@
-# Nyl12–PA6 research progress briefing
+# Nyl12 mechanism and redesign briefing
 
-Prepared 23 November 2026. Open **Nyl12_PA6_progress_20261123.pptx** for the
-editable 40-slide deck, or the matching PDF for convenient viewing.
+The editable source is `slides.json`. This build contains 29 main slides and 3
+appendices. Scientific evidence is current through **25 November 2026**; the
+cover and footer build date is generated from the machine's
+`America/New_York` date.
 
-The deck groups the work by scientific question: experimental baseline,
-parameterization, structural sampling and protonation, reaction paths and
-free energies, structural design, and the next decisions. The Eyring table
-includes 300 K, 65 °C and 75 °C. Four atomic-view panels are explicitly marked
-VMD placeholders; they are not fabricated molecular renderings. Their source
-bundles are recorded in slide notes.
+The dated outputs for this build are
+`Nyl12_PA6_progress_20261125.pptx`, matching PDF and hashed build receipt.
+Numbered slide renders and a contact sheet are in `rendered/`. The stable
+working-asset directory remains `nyl12_progress_20261123/` so existing source
+references continue to resolve.
 
-## Scientific interpretation
+## Scientific status
 
-- **35.81 kcal/mol is a NEB potential-energy maximum, ΔE, not ΔG‡.**
-  The associated path family has already supplied a refined TS candidate
-  and the NEB-seeded US campaign. Their different reactant references,
-  relaxation and sampling prohibit treating their numerical differences as
-  a pure entropy correction.
-- The 47.05-kcal/mol PMF maximum is an apparent projected height. Sampling
-  convergence and a validated activation free energy remain unestablished.
-- Crystal calibration retains every native-Thr threshold. All ten original
-  crystal sites pass; known-active control rejection still limits activity
-  prediction. Derived symmetry/reference copies are not independent experiments.
-- Relay seed w033 has met its force criterion. A full Hessian is ongoing;
-  stationary-point classification and minimum certification remain pending.
-- MCCE native completion is separate from pKa validity. Current NylC outputs
-  remain unqualified; no protonation states were assigned.
-- The current modular PA6 release is MD-ready within its declared
-  zwitterionic L4 scope. The dated October parameterization deck was consulted;
-  current architecture/profile/MD figures supersede its historical hold status.
-  Compact-conformer electrostatics and extension to other states remain limited.
+- PA6 is nylon-6. The force-field release is checked for a zwitterionic,
+four-repeat PA6 L4 model; it does not validate reactive states or arbitrary
+polymer lengths.
+- Matched wild-type protonation-state simulations found no geometry-occupancy
+advantage for the Asp274-COOH state. These fixed-charge structural occupancies
+are not activity or pKa populations.
+- The direct-transfer umbrella dataset is a preliminary mixed-channel,
+unconverged q_acyl marginal. The N-terminal proton-relay campaign has no PMF
+yet.
+- A coordinate-driven relay path has a physical potential-energy maximum of
+about 16.31 kcal/mol. This is ΔE, not ΔG‡. Saddle curvature and downhill
+connectivity are unverified.
+- The addition-like relay structure came from direct-seeded umbrella MD with
+relay-like configurations, then bias removal and QM/MM optimization. It is not
+an established stable tetrahedral intermediate.
+- A compatibility audit found the A/B physical models and frozen references
+agree within restart precision; numerical tolerance checks and shared-coordinate
+free-energy reanalysis remain pending.
+- Water-mediated deacylation and complete product release remain a separate
+follow-up. The 30 November redesign pilot is a planning target; activity is
+untested.
 
-## Sources and rebuilding
+Every slide carries detailed scientific notes, definitions, sources and
+limitations. `asset_sources.json` maps each used figure to its retained source
+and SHA-256. The build receipt records slide, source, builder, figure and output
+hashes. `MANIFEST.sha256` covers the current dated deliverables, used figures,
+source files and all slide previews.
 
-`slides.json` is the editable scientific narrative. `asset_sources.json` maps
-each copied figure to its original path and SHA-256 digest. Full references
-and caveats are also embedded in the PowerPoint speaker notes.
-`evidence_inventory.json` records the independent source audit.
+## Rebuild
 
-From the repository checkout, run `bash docs/presentations/nyl12_progress_20261123/rebuild.sh`.
-The builder uses an isolated `uv run --no-project --with python-pptx==1.0.2`
-report environment; it does not add project production dependencies. PDF
-rendering requires the existing LibreOffice executable. The build JSON records
-the source, renderer, PowerPoint and asset hashes.
+From the repository root, run:
 
-The editable deck, PDF, JSON sources and figures are included in
-`scripts/pull_nyl12_inspection.sh`, retaining the workstation directory layout
-on the laptop. Verify the downloaded bundle with `sha256sum -c MANIFEST.sha256`
-or `shasum -a 256 -c MANIFEST.sha256`.
+```bash
+bash docs/presentations/nyl12_progress_20261123/rebuild.sh
+```
 
-Renderer verification: eight focused tests, 99% coverage; all layout variants,
-source failures, full source notes, image hashes and slide bounds are checked.
-The original deck was rendered through LibreOffice and its 40-page contact sheet
-visually inspected. The updated 43-page deck has its changed slides visually inspected. Those checks do not establish scientific validity of a
-profile or validate a new mechanism.
-
-Calibration verification used the existing Biopython analysis environment:13 passed,97% new-code coverage. The default project environment selectively skips three CIF-parser tests when this optional analysis prerequisite is absent; scalar and control checks still run. No production dependency was added.
-
-Final repository checkpoint: `uv run pytest -q` — **2,060 passed,17 skipped**. Skips comprise13 retained-preparation-fixture prerequisites, three optional CIF-parser tests, and the optional PowerPoint test module in the default environment. All parser/report checks were also run successfully in their explicit tool environments. Relay preparation/export/monitor checks:18 passed,91% coverage.
-
-The 23 November mask update adds slides 36–38 and updates slide 30. The original
-40-slide source, PowerPoint, PDF and build receipt are retained in
-`source_history_before_mask_update/`. The bundled workspace-dependency tool was
-unavailable; the existing isolated `uv` presentation build was used.
+The script archives prior dated deck outputs and renders in central `clutter`,
+uses the existing offline `uv` report environment for `python-pptx`, and
+converts the editable PowerPoint to PDF with LibreOffice. It also exports every
+PDF page to PNG and creates the contact sheet. The filename date is computed
+on each build in `America/New_York`; it is not hardcoded in the builder. The
+scientific `as_of` date in `slides.json` changes only when evidence is reviewed.
+No production dependency or scientific calculation is added by this workflow.

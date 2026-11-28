@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from scripts import screen_pa6_binding_orientation as screen
+from nyl12_covalent.native_thr_policy import geometry_eligible, policy_metadata
 
 LOGGER = logging.getLogger(__name__)
 SITE_NAMES = ("AE", "BF", "CG", "DH")
@@ -117,6 +118,7 @@ def compare_models(
             d1_by_ligand[ligand_id] = {}
             for site_name in SITE_NAMES:
                 metrics = screen.measure(site_atoms[site_name], ligand, reference)
+                metrics["selection_eligible"] = geometry_eligible(metrics["tier"])
                 d1_by_ligand[ligand_id][site_name] = float(metrics["d1"])
                 row = {
                     **entry,
@@ -151,6 +153,9 @@ def compare_models(
                 "ligand_count": count,
                 "tier_a_count": sum(row["tier"] == "A" for row in selected),
                 "tier_ab_count": sum(row["tier"] in {"A", "B"} for row in selected),
+                "selection_eligible_count": sum(
+                    row["selection_eligible"] for row in selected
+                ),
                 "joint_pass_count": sum(bool(row["joint_pass"]) for row in selected),
                 "tier_a_fraction": sum(row["tier"] == "A" for row in selected) / count,
                 "tier_ab_fraction": sum(row["tier"] in {"A", "B"} for row in selected)
@@ -166,6 +171,7 @@ def compare_models(
     _write_csv(output / "occupied_sites.csv", occupied_rows)
     _write_csv(output / "model_summary.csv", model_rows)
     report = {
+        "selection_policy": policy_metadata(),
         "model_count": len(model_rows),
         "occupied_site_count": sum(row["ligand_count"] for row in model_rows),
         "comparison_rows": len(all_rows),

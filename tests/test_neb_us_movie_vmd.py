@@ -26,7 +26,9 @@ def _topology() -> Any:
     atoms: list[_Atom] = []
     for index in range(11):
         residue_name = "P6N" if 1 <= index <= 6 or index == 10 else "ALA"
-        atoms.append(_Atom(index, 6, SimpleNamespace(name=residue_name)))
+        atoms.append(
+            _Atom(index, 6, SimpleNamespace(name=residue_name, chain="A", idx=index))
+        )
     atoms[0].atomic_number = 6  # Omitted unrelated atom shifts every local index.
     atoms[1].atomic_number = 6  # Scissile carbon, original ID 2.
     atoms[2].atomic_number = 8  # Thr OG1, ID 3.
@@ -64,27 +66,30 @@ def _render() -> str:
 
 def test_render_maps_original_ids_and_builds_reactive_and_qm_bonds() -> None:
     script = _render()
-    assert "mol selection {index 0 1 2 3 4 5 9}" in script
+    assert "{0 1 2 3 4 5 9}" in script
     assert "Unexpected trajectory frame count" in script
     assert "get numframes] != 1890" in script
     assert "foreach pair {{1 0} {0 2}}" in script
     assert "{3 4}" in script  # Static QM H–O bond is removed.
-    assert "DynamicBonds 1.85" in script
-    assert "DynamicBonds 1.4" in script
-    assert "VDW 0.28 12;" in script
-    assert "VDW 0.28 12 12" not in script
+    assert (
+        "::nyl12_movie_policy::apply $molid {0 1 2 3 4 5} {0 1 2 3 4 5 9} {{0 9}}"
+        in script
+    )
+    assert "DynamicBonds 1.85 0.2 12" in script
+    assert "DynamicBonds 1.4 0.2 12" in script
+    assert "VDW 0.2 12;" in script
 
 
 def test_render_sets_requested_colors_labels_angle_and_local_camera() -> None:
     script = _render()
-    assert "color Element H white" in script
-    assert "color Element N blue" in script
-    assert "color Element O red" in script
-    assert "color change rgb 3 1.0 0.5 0.0" in script
-    assert "ColorID 3" in script
+    assert "NYL12 DISPLAY OK version=20261126-typeprefix3" in script
+    assert "Licorice 0.2 12 12" in script
+    assert "DynamicBonds 1.85 0.2 12" in script
+    assert "DynamicBonds 1.4 0.2 12" in script
+    assert "VDW 0.2 12" in script
     assert script.count("::neb_us_movie::add_label Bonds") == 7
     assert "::neb_us_movie::add_label Angles [list 1 0 3]" in script
-    assert "Licorice 0.25 12 12; mol color ColorID 3; mol selection {index 9}" in script
+    assert "color change rgb 3" not in script
     assert "set visible [atomselect $molid {index 0 1 2 3 4 5 9} frame 0]" in script
     assert "center_matrix" in script and "scale_matrix" in script
     assert "Concatenated biased windows" in script
@@ -94,6 +99,9 @@ def test_frame_zero_is_selected_before_measurements_and_errors_stop_loading() ->
     script = _render()
     active_frame = script.index("molinfo $molid set frame 0")
     assert active_frame < script.index("::neb_us_movie::add_label Bonds")
+    assert script.index("::nyl12_movie_policy::palette\n") < script.index(
+        "mol delrep 0 $molid"
+    )
     assert active_frame < script.index("measure minmax $visible")
     assert "Unexpected topology atom count" in script
     assert "Missing readable movie file" in script
@@ -128,7 +136,9 @@ proc ::label {command args} {
 """
     run = subprocess.run(
         [tclsh],
-        input=stub + script[start:end] + "\n::neb_us_movie::add_label Bonds {1 2} {0.04 0.08}\nputs $::calls\n",
+        input=stub
+        + script[start:end]
+        + "\n::neb_us_movie::add_label Bonds {1 2} {0.04 0.08}\nputs $::calls\n",
         text=True,
         capture_output=True,
         check=True,
@@ -145,10 +155,22 @@ proc ::label {command args} {
         ([3, 2], [2], {}, 4, "sorted"),
         ([2, 3], [2, 9], {}, 4, "QM atom IDs"),
         ([2, 3], [2], {"carbon": 99}, 4, "Missing required role"),
-        ([2, 3, 4, 5, 6, 7, 8, 9, 10], [2, 3], {
-            "carbon": 2, "og1": 3, "leaving_n": 4, "hg1": 7,
-            "thr_n": 8, "oxygen": 5, "phe_n": 9, "asn_nd2": 10,
-        }, 0, "positive"),
+        (
+            [2, 3, 4, 5, 6, 7, 8, 9, 10],
+            [2, 3],
+            {
+                "carbon": 2,
+                "og1": 3,
+                "leaving_n": 4,
+                "hg1": 7,
+                "thr_n": 8,
+                "oxygen": 5,
+                "phe_n": 9,
+                "asn_nd2": 10,
+            },
+            0,
+            "positive",
+        ),
     ],
 )
 def test_invalid_inputs_fail_explicitly(
@@ -164,8 +186,14 @@ def test_invalid_inputs_fail_explicitly(
 
 def test_role_must_be_retained_and_in_topology_range() -> None:
     roles = {
-        "carbon": 2, "og1": 3, "leaving_n": 4, "hg1": 7,
-        "thr_n": 8, "oxygen": 5, "phe_n": 9, "asn_nd2": 10,
+        "carbon": 2,
+        "og1": 3,
+        "leaving_n": 4,
+        "hg1": 7,
+        "thr_n": 8,
+        "oxygen": 5,
+        "phe_n": 9,
+        "asn_nd2": 10,
     }
     with pytest.raises(ValueError, match="included in kept"):
         render_movie_vmd(_topology(), [2, 3, 4, 5, 6, 7, 8, 9], [2], roles, 1)

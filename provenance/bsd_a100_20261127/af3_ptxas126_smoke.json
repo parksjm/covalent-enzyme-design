@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-27T17:18:37.791445+00:00",
+  "compiler": "/home/jpc/code/alphafold3/.conda/envs/af3/bin/ptxas",
+  "compiler_sha256": "b27302a71f49bc36562e5cf4f7f9b8a139da5d1907bbb7233d1ee5037932b9e7",
+  "PATH": "/home/jpc/code/alphafold3/.conda/envs/af3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "assembly_returncode": 255,
+  "assembly_stderr": "ptxas fatal   : SM version specified by .target is higher than default SM version assumed\n"
+}

@@ -1,0 +1,38 @@
+{
+  "slides": 30,
+  "rendered_slide_count": 30,
+  "notes_all_present": true,
+  "ruff": "lint and format pass",
+  "visual_review": "All30slides were rendered and inspected on a contact sheet; key scientific figures were checked fullsize. Final bounded wording changes on26/27 were regenerated and checked fullsize: TierA title and positive-phi public caption. Earlier incorrectnegative-onlyrule withdrawal remains in speaker notes and QA, not the publiccaption. Positive orientation6 approved by root unchanged. All five molecularPNGs retain their validatedhashes; no coordinates or numerical signs changed. Mainbody24pt, titles34pt, captions20pt/footer10pt. Final alignment qualification added to campaign notes/QA and row28; only slide28 re-rendered and checked fullsize. No images, phi values or scientific inputs changed; no jobs launched.",
+  "tests": "No scientific or shared infrastructure changes; no pytest run. New renderer/plot coverage unmeasured; actual30slide LibreOffice/PDF render reviewed.",
+  "science_limitations": [
+    "Pooled61 PMF has no calculated CI; band is original57 only.",
+    "No free-energy convergence or verified transition state claimed.",
+    "NewWT terminal3|4 is distinct from relay2|2.",
+    "24 sequence proposals are not activity validated.",
+    "All six native predictions complete; WT effective template alignment differs at loop boundary; relaxation results provisional for matched comparison.",
+    "Target orientation is explicit +1 with reference calibration; no model was rejected by the mistaken previous negative-only advice."
+  ],
+  "scientific_correction": "PI-confirmed positive phi is the approved orientation under the current ordered formula; earlier negative-only target advice withdrawn. No measured phi signs, coordinates, distances or gate thresholds changed.",
+  "approved_pose_reference": "evidence/approved_positive_pose_reference_20261127.json",
+  "molecular_input_hash_check": "All5atomic PNG digests equal figure_acceptance source hashes; no coordinates or numerical phi signs changed.",
+  "campaign_qualification": {
+    "native_predictions_completed": 6,
+    "fully_matched_template_comparison": false,
+    "limitation": "Both WT seeds map alpha query103 to template94 at the mask boundary; all four design cases align exactly. Coordinates95\u2013103/223\u2013232 were removed, but native WT alignment reused94.",
+    "masked_WT_seed26": {
+      "rms_gradient": 0.049985,
+      "force_converged": true,
+      "positive_AB_before": 0,
+      "positive_AB_after": 0
+    },
+    "masked_WT_seed27": {
+      "rms_gradient": 0.049171,
+      "force_converged": true,
+      "positive_AB_before": 0,
+      "positive_AB_after": 2
+    },
+    "remaining_relaxations": "Not all complete at the snapshotted checkpoint.",
+    "historical_control": "Earlier full-template Boltz WT four positive TierA endpoints unchanged."
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "utc": "2026-11-27T17:06:16.901822+00:00",
+  "jobs": [
+    {
+      "seed": 20261126,
+      "status": {
+        "command": [
+          "/usr/bin/taskset",
+          "-c",
+          "16-23",
+          "/home/jpc/code/miniforge3/envs/boltz-env/bin/boltz",
+          "predict",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/wt_seed_20261126.yaml",
+          "--model",
+          "boltz2",
+          "--output_format",
+          "mmcif",
+          "--cache",
+          "/home/jpc/code/boltz",
+          "--checkpoint",
+          "/home/jpc/code/boltz/boltz2_conf.ckpt",
+          "--recycling_steps",
+          "3",
+          "--sampling_steps",
+          "200",
+          "--diffusion_samples",
+          "1",
+          "--seed",
+          "20261126",
+          "--out_dir",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/runs/wt_seed_20261126",
+          "--no_kernels",
+          "--num_workers",
+          "0",
+          "--devices",
+          "1"
+        ],
+        "cwd": "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127",
+        "ended_utc": null,
+        "env_overrides": {
+          "CUDA_VISIBLE_DEVICES": "GPU-a752cdba-475a-6afe-14c5-4a58ea101a56",
+          "MKL_NUM_THREADS": "2",
+          "NUMEXPR_NUM_THREADS": "2",
+          "OMP_NUM_THREADS": "2",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "exit_status": null,
+        "input_sha256": {
+          "/home/jpc/code/boltz/boltz2_conf.ckpt": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/commands.json": "9ee6265bb554d9b52dc88a63a691cd2259db8a716cd0f8e575484f4ed35485b4",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/cpu_parser_acceptance_20261126.json": "17b8b4f4475bb9e74246ffdd592f31a6a68f6c1fdc5339ec9ca84dda4b5a6b89",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/msas/alpha_query.a3m": "9d6cc2fd517ef5ed992031e166801d6f00be683e265bbb068f6f6964f25ac6eb",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/msas/beta_query.a3m": "876442d9ad4e8985be3ee0fd2f3aa6c5ae10a53c06ea8bfc7aeceb8117f6f290",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/scripts/run_nyl12_job.py": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/src/nyl12_covalent/jobs.py": "33f85b98bc31d4fee63bd008138e3a5d5a134de1813af407cc6c2b5245c70f62",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/wt_seed_20261126.yaml": "7dd590a0df25311ddbbade0ca2ffb9c42cde442981ce4caafe06856ac79fa251"
+        },
+        "log": "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/jobs/wt_seed_20261126/job.log",
+        "session_name": "nyl12_boltz_wt_seed_20261126",
+        "started_utc": "2026-11-27T17:05:41.568162Z"
+      },
+      "log_tail": "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.15it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.15it/s]\nUsing bfloat16 Automatic Mixed Precision (AMP)\nGPU available: True (cuda), used: True\nTPU available: False, using: 0 TPU cores\nHPU available: False, using: 0 HPUs\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default\nRunning structure prediction for 1 input.\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0\nYou are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision\nLOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [GPU-a752cdba-475a-6afe-14c5-4a58ea101a56]\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.\n\nPredicting: |          | 0/? [00:00<?, ?it/s]"
+    },
+    {
+      "seed": 20261127,
+      "status": {
+        "command": [
+          "/usr/bin/taskset",
+          "-c",
+          "24-31",
+          "/home/jpc/code/miniforge3/envs/boltz-env/bin/boltz",
+          "predict",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/wt_seed_20261127.yaml",
+          "--model",
+          "boltz2",
+          "--output_format",
+          "mmcif",
+          "--cache",
+          "/home/jpc/code/boltz",
+          "--checkpoint",
+          "/home/jpc/code/boltz/boltz2_conf.ckpt",
+          "--recycling_steps",
+          "3",
+          "--sampling_steps",
+          "200",
+          "--diffusion_samples",
+          "1",
+          "--seed",
+          "20261127",
+          "--out_dir",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/runs/wt_seed_20261127",
+          "--no_kernels",
+          "--num_workers",
+          "0",
+          "--devices",
+          "1"
+        ],
+        "cwd": "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127",
+        "ended_utc": null,
+        "env_overrides": {
+          "CUDA_VISIBLE_DEVICES": "GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee",
+          "MKL_NUM_THREADS": "2",
+          "NUMEXPR_NUM_THREADS": "2",
+          "OMP_NUM_THREADS": "2",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "exit_status": null,
+        "input_sha256": {
+          "/home/jpc/code/boltz/boltz2_conf.ckpt": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/commands.json": "9ee6265bb554d9b52dc88a63a691cd2259db8a716cd0f8e575484f4ed35485b4",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/cpu_parser_acceptance_20261127.json": "abd8c70fe32c919e9a38bff866099d1376efbf0d047ba3e16096d062ae9a31aa",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/msas/alpha_query.a3m": "9d6cc2fd517ef5ed992031e166801d6f00be683e265bbb068f6f6964f25ac6eb",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/msas/beta_query.a3m": "876442d9ad4e8985be3ee0fd2f3aa6c5ae10a53c06ea8bfc7aeceb8117f6f290",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/scripts/run_nyl12_job.py": "0598d2f0283b7f8f5729e235325c762140442c20c2cd18a81fafb1acab0d97b3",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/src/nyl12_covalent/jobs.py": "33f85b98bc31d4fee63bd008138e3a5d5a134de1813af407cc6c2b5245c70f62",
+          "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/wt_seed_20261127.yaml": "7dd590a0df25311ddbbade0ca2ffb9c42cde442981ce4caafe06856ac79fa251"
+        },
+        "log": "/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/jobs/wt_seed_20261127/job.log",
+        "session_name": "nyl12_boltz_wt_seed_20261127",
+        "started_utc": "2026-11-27T17:05:43.271547Z"
+      },
+      "log_tail": "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.14it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.14it/s]\nUsing bfloat16 Automatic Mixed Precision (AMP)\nGPU available: True (cuda), used: True\nTPU available: False, using: 0 TPU cores\nHPU available: False, using: 0 HPUs\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:76: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `pytorch_lightning` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default\nRunning structure prediction for 1 input.\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/utilities/migration/utils.py:56: The loaded checkpoint was produced with Lightning v2.5.0.post0, which is newer than your current Lightning version: v2.5.0\nYou are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision\nLOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee]\n/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=7` in the `DataLoader` to improve performance.\n\nPredicting: |          | 0/? [00:00<?, ?it/s]"
+    }
+  ],
+  "GPU_processes": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\nGPU-fe7a4229-2d95-cb21-8bf6-8d95c1c12568, 3515380, /raid/kpm/Work/Antibody-VHH-dgx-20261119/.venv/bin/python, 21052 MiB\nGPU-8478a8b6-2d29-c5e9-10b7-7c2750982230, 3515449, /raid/kpm/Work/Antibody-VHH-dgx-20261119/.venv/bin/python, 21354 MiB\nGPU-a752cdba-475a-6afe-14c5-4a58ea101a56, 3169995, /home/jpc/code/miniforge3/envs/boltz-env/bin/python3.11, 2600 MiB\nGPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee, 3170001, /home/jpc/code/miniforge3/envs/boltz-env/bin/python3.11, 2600 MiB\n"
+}

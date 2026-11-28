@@ -14,18 +14,24 @@ from typing import Any
 
 from PIL import Image
 from pptx import Presentation
-from pptx.dml.color import RGBColor
-from pptx.enum.shapes import MSO_SHAPE
-from pptx.util import Inches, Pt
+from pptx.util import Inches
+
+from scripts.presentation_layouts import NAVY, add_cover, add_footer, build_date
+from scripts.presentation_shapes import (
+    box as _box,
+    cards as _cards,
+    annotated_image as _annotated_image,
+    picture as _picture,
+    placeholder as _placeholder,
+    process as _process,
+    rect as _rect,
+    table as _table,
+)
 
 LOGGER = logging.getLogger(__name__)
-NAVY = "17324D"
 TEAL = "008C95"
 INK = "223548"
 MUTED = "526577"
-PALE = "EFF5F8"
-WHITE = "FFFFFF"
-FONT = "DejaVu Sans"
 
 
 def validate_source(source: dict[str, Any], base: Path) -> None:
@@ -38,14 +44,29 @@ def validate_source(source: dict[str, Any], base: Path) -> None:
     slides = source.get("slides", [])
     if not slides:
         raise ValueError("The deck must contain slides")
-    supported = {"title", "text", "image", "split", "table", "cards", "snapshots"}
+    supported = {
+        "title",
+        "text",
+        "image",
+        "annotated_image",
+        "split",
+        "table",
+        "cards",
+        "snapshots",
+        "process",
+        "placeholder",
+    }
     for index, spec in enumerate(slides, 1):
         if not spec.get("title") or spec.get("kind") not in supported:
             raise ValueError(f"Invalid slide {index}")
-        if spec["kind"] in {"image", "split"}:
+        if spec["kind"] in {"image", "annotated_image", "split"} or (
+            spec["kind"] == "title" and spec.get("image")
+        ):
             path = base / spec["image"]
             with Image.open(path) as figure:
                 figure.verify()
+        if spec["kind"] == "annotated_image" and not spec.get("callouts"):
+            raise ValueError(f"Annotated figure on slide {index} needs callouts")
         if spec["kind"] == "table":
             rows = [spec["columns"], *spec["rows"]]
             if not rows[0] or any(len(row) != len(rows[0]) for row in rows):
@@ -53,129 +74,12 @@ def validate_source(source: dict[str, Any], base: Path) -> None:
         if spec["kind"] in {"cards", "snapshots"}:
             if not 1 <= len(spec.get("cards", [])) <= 4:
                 raise ValueError(f"Invalid card count on slide {index}")
-
-
-def _box(
-    slide: Any,
-    text: str,
-    x: float,
-    y: float,
-    width: float,
-    height: float,
-    size: float = 22,
-    color: str = INK,
-    bold: bool = False,
-) -> Any:
-    shape = slide.shapes.add_textbox(
-        Inches(x), Inches(y), Inches(width), Inches(height)
-    )
-    frame = shape.text_frame
-    frame.clear()
-    frame.word_wrap = True
-    for index, line in enumerate(text.split("\n")):
-        paragraph = frame.paragraphs[0] if index == 0 else frame.add_paragraph()
-        paragraph.text = line
-        paragraph.font.name = FONT
-        paragraph.font.size = Pt(size)
-        paragraph.font.bold = bold
-        paragraph.font.color.rgb = RGBColor.from_string(color)
-        paragraph.space_after = Pt(12)
-    return shape
-
-
-def _rect(
-    slide: Any, x: float, y: float, width: float, height: float, color: str
-) -> None:
-    shape = slide.shapes.add_shape(
-        MSO_SHAPE.RECTANGLE,
-        Inches(x),
-        Inches(y),
-        Inches(width),
-        Inches(height),
-    )
-    shape.fill.solid()
-    shape.fill.fore_color.rgb = RGBColor.from_string(color)
-    shape.line.fill.background()
-
-
-def _picture(slide: Any, path: Path, area: tuple[float, ...]) -> None:
-    x, y, width, height = area
-    with Image.open(path) as figure:
-        ratio = figure.width / figure.height
-    actual_w, actual_h = width, width / ratio
-    if actual_h > height:
-        actual_h, actual_w = height, height * ratio
-    slide.shapes.add_picture(
-        str(path),
-        Inches(x + (width - actual_w) / 2),
-        Inches(y + (height - actual_h) / 2),
-        width=Inches(actual_w),
-        height=Inches(actual_h),
-    )
-
-
-def _table(slide: Any, spec: dict[str, Any]) -> None:
-    rows = [spec["columns"], *spec["rows"]]
-    shape = slide.shapes.add_table(
-        len(rows),
-        len(rows[0]),
-        Inches(0.55),
-        Inches(1.65),
-        Inches(12.2),
-        Inches(spec.get("table_height", 3.8)),
-    )
-    table = shape.table
-    if "widths" in spec:
-        for column, width in zip(table.columns, spec["widths"], strict=True):
-            column.width = Inches(width)
-    for i, row in enumerate(rows):
-        for j, value in enumerate(row):
-            cell = table.cell(i, j)
-            cell.text = str(value)
-            cell.margin_left = Inches(0.12)
-            cell.margin_top = Inches(0.1)
-            cell.fill.solid()
-            cell.fill.fore_color.rgb = RGBColor.from_string(
-                NAVY if i == 0 else WHITE if i % 2 == 0 else PALE
-            )
-            for paragraph in cell.text_frame.paragraphs:
-                paragraph.font.name = FONT
-                paragraph.font.size = Pt(spec.get("font_size", 19))
-                paragraph.font.bold = i == 0
-                paragraph.font.color.rgb = RGBColor.from_string(
-                    WHITE if i == 0 else INK
-                )
-
-
-def _cards(slide: Any, spec: dict[str, Any]) -> None:
-    cards = spec["cards"]
-    columns = 2 if len(cards) in {2, 4} else len(cards)
-    width = (12.2 - 0.3 * (columns - 1)) / columns
-    height = 2.15 if len(cards) == 4 else 4.2
-    for index, card in enumerate(cards):
-        x = 0.55 + (index % columns) * (width + 0.3)
-        y = 1.72 + (index // columns) * (height + 0.2)
-        _rect(slide, x, y, width, height, PALE)
-        _box(
-            slide,
-            card["title"],
-            x + 0.2,
-            y + 0.15,
-            width - 0.4,
-            0.5,
-            size=20,
-            color=TEAL,
-            bold=True,
-        )
-        _box(
-            slide,
-            card["text"],
-            x + 0.2,
-            y + 0.72,
-            width - 0.4,
-            height - 0.82,
-            size=spec.get("font_size", 19),
-        )
+        if spec["kind"] == "process":
+            lanes = spec.get("lanes", [])
+            if not lanes or any(not lane.get("steps") for lane in lanes):
+                raise ValueError(f"Invalid process lanes on slide {index}")
+        if spec["kind"] == "placeholder" and not spec.get("status"):
+            raise ValueError(f"Placeholder slide {index} needs an explicit status")
 
 
 def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
@@ -190,21 +94,37 @@ def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
     """
     source = json.loads(source_path.read_text())
     validate_source(source, source_path.parent)
+    today = build_date()
+    date_label = today.strftime("%d %B %Y").lstrip("0")
     presentation = Presentation()
     presentation.slide_width = Inches(13.333)
     presentation.slide_height = Inches(7.5)
     assets = {}
     for index, spec in enumerate(source["slides"], 1):
         slide = presentation.slides.add_slide(presentation.slide_layouts[6])
+        if spec["kind"] == "title":
+            cover_image = (
+                str(source_path.parent / spec["image"]) if spec.get("image") else None
+            )
+            if cover_image:
+                assets[cover_image] = hashlib.sha256(
+                    Path(cover_image).read_bytes()
+                ).hexdigest()
+            add_cover(
+                slide, spec["title"], spec.get("subtitle", ""), date_label, cover_image
+            )
+            notes = [spec.get("notes", ""), "Sources:", *spec.get("sources", [])]
+            slide.notes_slide.notes_text_frame.text = "\n".join(notes)
+            continue
         _rect(slide, 0, 0, 13.333, 0.12, TEAL)
         _box(
             slide,
             spec["title"],
             0.55,
-            0.35,
+            0.28,
             12.2,
-            0.8,
-            size=spec.get("title_size", 29),
+            0.82,
+            size=spec.get("title_size", 26),
             color=NAVY,
             bold=True,
         )
@@ -216,17 +136,20 @@ def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
                 1.15,
                 12.2,
                 0.5,
-                size=17,
+                size=24,
                 color=TEAL,
                 bold=True,
             )
         kind = spec["kind"]
         if kind in {"title", "text"}:
             text = "\n".join(spec.get("bullets", []))
-            _box(slide, text, 0.65, 1.95, 11.9, 4.55, size=spec.get("font_size", 24))
-        elif kind in {"image", "split"}:
+            _box(slide, text, 0.65, 1.95, 11.9, 4.55, size=spec.get("font_size", 28))
+        elif kind in {"image", "split", "annotated_image"}:
             path = source_path.parent / spec["image"]
-            area = (0.55, 1.75, 12.2, 4.75)
+            area = (0.55, 1.75, 12.2, 4.3)
+            if kind == "annotated_image":
+                _annotated_image(slide, path, spec["callouts"])
+                area = None
             if kind == "split":
                 _box(
                     slide,
@@ -237,8 +160,9 @@ def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
                     4.55,
                     size=spec.get("font_size", 20),
                 )
-                area = (5.35, 1.75, 7.4, 4.75)
-            _picture(slide, path, area)
+                area = (5.35, 1.75, 7.4, 4.3)
+            if area is not None:
+                _picture(slide, path, area)
             assets[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
         elif kind == "table":
             _table(slide, spec)
@@ -252,13 +176,20 @@ def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
                 size=16,
                 color=MUTED,
             )
-        else:
+        elif kind in {"cards", "snapshots"}:
             _cards(slide, spec)
-        footer = spec.get("footer", "Nyl12–PA6 | Research progress | 23 Nov 2026")
-        _box(slide, footer, 0.55, 7.05, 11.6, 0.25, size=10, color=MUTED)
-        _box(slide, str(index), 12.35, 7.05, 0.4, 0.25, size=10, color=MUTED)
-        if kind in {"image", "split"} and spec.get("caption"):
-            _box(slide, spec["caption"], 0.65, 6.55, 12.0, 0.4, size=13, color=MUTED)
+        elif kind == "process":
+            _process(slide, spec)
+        elif kind == "placeholder":
+            _placeholder(slide, spec)
+        add_footer(
+            slide,
+            spec.get("footer", "Nyl12–PA6 | Research progress"),
+            index,
+            date_label,
+        )
+        if kind in {"image", "split", "annotated_image"} and spec.get("caption"):
+            _box(slide, spec["caption"], 0.65, 6.18, 12.0, 0.52, size=16, color=MUTED)
         notes = [spec.get("notes", ""), "Sources:", *spec.get("sources", [])]
         slide.notes_slide.notes_text_frame.text = "\n".join(notes)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -272,6 +203,7 @@ def build_deck(source_path: Path, destination: Path) -> dict[str, Any]:
         "pptx_sha256": hashlib.sha256(destination.read_bytes()).hexdigest(),
         "assets_sha256": assets,
         "scientific_status": source.get("scientific_status"),
+        "build_date": today.date().isoformat(),
     }
     destination.with_suffix(".build.json").write_text(
         json.dumps(receipt, indent=2) + "\n"

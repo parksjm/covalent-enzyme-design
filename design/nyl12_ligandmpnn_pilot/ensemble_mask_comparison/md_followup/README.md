@@ -82,9 +82,13 @@ before launching anything. A missing or incorrect profile fails explicitly.
 The analysis deliverable is per-site signed phi, d1/d2/d3, Bürgi–Dunitz angle,
 native-Thr conformation, and substrate-retention time/block distributions, with
 all-frame and bound-frame denominators reported separately. Also assess assembly
-integrity and Asp contacts. The required four-ligand streaming analysis adapter
-is a follow-up implementation task; no existing single-ligand result is reused
-as a four-site analysis, and analysis is not yet automatically queued.
+integrity and Asp contacts. The four-site streaming adapter is implemented and replica-1 WT/mask_03/
+mask_07 results are available. Native-Thr similarity is diagnostic-only by PI
+approval on November 24; it does not veto eligibility or ranking. Original
+numeric criteria and legacy joint flags remain in the output. The same
+analysis is queued in detached tmux for every second replica after verified completion;
+see `analysis/replica_02/queues/` for actual persistent-job receipts. No
+single-ligand result is reused as a four-site analysis.
 
 See `selection.json` for exact source paths and `sequence_comparison.fasta` for
 full precursor and processed-chain sequences. New reaction-path work still

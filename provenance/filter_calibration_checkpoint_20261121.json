@@ -1,0 +1,16 @@
+{
+  "updated_utc": "2026-11-22T03:49:45.468708+00:00",
+  "analysis": "analysis/nyl12_filter_calibration",
+  "scientific_scope": "Retrospective static geometry/count audit; no validated activity predictor",
+  "process_exit": 0,
+  "models": 900,
+  "cohorts": 2,
+  "variants_per_cohort": 9,
+  "tests_passed": 16,
+  "analysis_combined_coverage_percent": 92,
+  "workbook_extraction_coverage": "not measured; actual cells/source hashes independently checked",
+  "known_experimental_uncertainty": "K59E duplicate entries, crude-lysate/MS noise, per-experiment replication metadata absent",
+  "prototype_plan": "configs/nyl12_ligandmpnn_pilot_plan.json",
+  "sequence_generation_launched": false,
+  "existing_scientific_jobs_signaled_or_reconfigured": false
+}

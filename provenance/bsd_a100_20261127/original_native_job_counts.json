@@ -1,0 +1,14 @@
+[
+  {
+    "host": "violet",
+    "returncode": 0,
+    "stdout": "{\"native_counts\": {\"('sander', 'T')\": 42, \"('sander', 'R')\": 38}}\n",
+    "stderr": ""
+  },
+  {
+    "host": "azalea",
+    "returncode": 0,
+    "stdout": "{\"native_counts\": {\"('sander', 'R')\": 57}}\n",
+    "stderr": ""
+  }
+]

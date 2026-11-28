@@ -66,6 +66,18 @@ only for a documented gap in the existing library.
 
 ## Bounded retrospective calibration
 
+**PI update, November 21:** K59E has considerably discordant duplicate lysate/MS
+experiments. The primary workbook is
+`/data/jpc/enzyme-substrate-modeling/config/cb150_nyl12_ssl_sites_1_4_pa6_pa66_pmaxa.xlsx`.
+Preserve the two experiments independently and audit their matching WT/blank
+controls and measurement type. The curated single-value fold table is derived,
+noisy evidence, not clean experimental ground truth. Descriptive correlations
+and reported fold changes must not determine hard thresholds or establish
+improved intrinsic catalysis. The first static audit's `known_positive` machine
+keys count nonzero derived signals, not independently verified phenotypes.
+Read `analysis/nyl12_filter_calibration/experimental_evidence_update.json` and
+the workbook audit before using those labels for any design decision.
+
 Freeze the sequence numbering, measured products, assay labels and current
 filter version before looking at alternative thresholds. Use every existing
 matched experimental control, rather than inventing inactive labels for
@@ -214,3 +226,87 @@ LigandMPNN baseline), `docs/redesign_backbone_symmetry_and_access_20261022.md`
 (ensemble and symmetry controls), and `manuscript/RESULTS_DRAFT.md` (barrier
 scale and assay interpretation). This note changes no scientific acceptance
 record and certifies no existing topology or trajectory.
+
+
+## PI objective review: redesign can proceed while mechanism remains unresolved
+
+Status: advisory proposal from the November 21 discussion, pending PI direction.
+This does not authorize a new design/MD/QM/MM campaign or change active jobs.
+The master plan still contains stricter TS/TI1 entry gates; reconcile those
+explicitly before implementing this proposed engineering branch.
+
+The ultimate objective is improved Nyl12 nylon hydrolysis. A verified pathway
+is necessary for strong claims about selective transition-state stabilization,
+but should not be an absolute prerequisite for a bounded, experimentally tested
+sequence-engineering campaign. Failure of the modeled routes does not establish
+failure of the enzyme, prove absence of TI1, or identify its actual rate-limiting
+step. Low polymer conversion alone does not isolate intrinsic chemical catalysis
+from substrate accessibility, mature active-enzyme abundance or other limitations.
+
+Preserve the mature Nyl12 fold, cleavage region, essential assembly contacts,
+N-terminal Thr, oxyanion-hole machinery and suspected catalytic residues in an
+initial sequence-only design campaign. Retain symmetry ties. Improving an
+existing self-processing scaffold does not require designing self-processing
+de novo; maturation must nevertheless be checked experimentally for each hit.
+Baker's transferable lesson is multistate ensemble preorganization. The 2025
+serine-hydrolase study used activated ester substrates, so its chemistry is not
+direct validation of nylon amide hydrolysis.
+
+The Nyl12 structural study reports an access tunnel at the protomer interface
+and evidence that a third protomer contributes active-site architecture. This
+supports retaining the tetramer initially; it is not proof that every interface
+is chemically essential. The local planning notes had not captured this
+specific interprotomer structural evidence clearly.
+
+A directly relevant engineering precedent is Puetz et al. (2025): mutagenesis,
+substrate-contact MD and recombination produced a NylC variant with a reported
+6.9-fold increase in PA6 specific activity. This supports a testable Nyl12
+engineering route without first solving the full target-enzyme reaction path;
+it does not validate our current geometry metrics as predictors of activity.
+
+Proposed bounded sequence, after PI direction:
+
+1. Re-evaluate WT and known-active mutants (plus lower-activity controls where
+   available) with matched protocols. Identify which gates reject active controls;
+   treat unvalidated confidence/strain/Tier occupancy as descriptive or soft
+   ranking terms, not established activity predictors. Preserve chemical validity.
+2. Use existing mature-state structures/MD ensembles for one small symmetry-tied,
+   fixed-backbone LigandMPNN pilot, initially protecting processing and proposed
+   catalytic machinery. Focus changes on substrate-contact and second-shell
+   positions while preserving substrate access and product release. A proposed
+   first library is 24–48 variants; this size is not an approved launch.
+3. Screen polymer product release and maturation. Confirm selected hits using
+   purified-enzyme initial-rate measurements. Defined-oligomer product assays
+   would separately test the L4-to-two-L2 modeling hypothesis.
+4. Keep mechanistic inference bounded and separate; use verified stationary
+   points for a later explicitly TS-focused design round when available.
+
+NylB is a useful simpler comparator, but native exo-type oligomer hydrolysis is
+not interchangeable with Nyl12 polymer/oligomer endohydrolysis. Engineered NylB
+may extend that range. Samsara's WO2024156025A1 explicitly describes NylB-related
+variants and sequence-identity claims. This establishes a relevant patent
+landscape, not infringement or freedom to operate. Any scaffold decision should
+use institution-led claim/sequence/use/jurisdiction review; neither NylB nor
+Nyl12 should be assumed automatically excluded or clear. No patent-status
+conclusion is drawn from a search-service family/status summary.
+
+Primary sources checked:
+
+- Lauko et al., *Computational design of serine hydrolases*, Science (2025),
+  https://doi.org/10.1126/science.adu2454 ; full text
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC12288761/ .
+- Puetz et al., *KnowVolution of an Efficient Polyamidase through Molecular
+  Dynamics Simulations of Incrementally Docked Oligomeric Substrates*,
+  ChemSusChem 18, e202500257 (2025), https://doi.org/10.1002/cssc.202500257 ;
+  author/institution-hosted full text
+  https://publications.rwth-aachen.de/record/1016045/files/1016045.pdf .
+- Capra et al., *Structural and oligomeric characterization of substrate- and
+  product-selective nylon hydrolases*, indexed structural study/preprint,
+  https://pubmed.ncbi.nlm.nih.gov/41889879/ ;
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC13015463/ . Use the final accepted
+  publication metadata when confirmed; do not confuse this with the separate
+  Bourgery ACS Materials Letters review.
+- IUBMB EC 3.5.1.46, native NylB reaction and substrate scope,
+  https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/46.html .
+- Samsara Eco, WO2024156025A1, published application and claims,
+  https://patents.google.com/patent/WO2024156025A1/en .

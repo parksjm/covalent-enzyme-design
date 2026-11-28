@@ -1,0 +1,57 @@
+{
+  "audit_timestamp_utc": "2026-11-21T03:14:53Z",
+  "host": "azalea",
+  "gpu_snapshot": {
+    "gpus": [
+      {
+        "name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "memory_total_mib": 97887,
+        "memory_free_mib": 97179,
+        "driver_version": "620.70.06"
+      },
+      {
+        "name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+        "memory_total_mib": 97887,
+        "memory_free_mib": 97286,
+        "driver_version": "620.70.06"
+      }
+    ],
+    "topology": "nvidia-smi topo -m reports NODE between GPU0 and GPU1 (same NUMA node, PCIe host bridge path); no NVLink is shown.",
+    "gpu_memory_used_mib": [123, 25],
+    "model_resident_at_snapshot": false
+  },
+  "runtime": {
+    "name": "Ollama",
+    "version": "0.30.10",
+    "endpoint": "http://127.0.0.1:11435",
+    "verification": "Read-only /api/version, /api/ps, /api/tags; /api/ps returned no resident models. Bare CLI was not on PATH; documented binary path was absent, so version was obtained from the active endpoint."
+  },
+  "model": {
+    "name": "gpt-oss:120b",
+    "origin": "OpenAI gpt-oss official model family per mechanism-agent design; no Chinese-origin model or derivative used.",
+    "digest": "714d86958b6e870a9320e78126ac1ce3477727a1cd9bf7194b8ace0d84c62fd8",
+    "parameter_size": "116.8B",
+    "quantization": "MXFP4",
+    "format": "GGUF",
+    "model_metadata_context_length": 131072,
+    "review_request_settings": {
+      "num_ctx": 65536,
+      "num_predict": 32768,
+      "num_thread": 2,
+      "temperature": 0
+    },
+    "source": "/data/jpc/mechanism-agent/review_results/pathway_review_20261120/provenance.json"
+  },
+  "review_critique": {
+    "critical_corrections": [
+      "Require a true TS optimization before higher-level single-point refinement because the current NEB geometry is not an accepted stationary point/barrier.",
+      "Label the ~50.9 kcal/mol biased-window maximum as potentially overestimating the true barrier, not a settled activation free energy.",
+      "Label N-terminal amine-assisted activation as homolog-based hypothesis; no Nyl12 Thr N deprotonation evidence is present.",
+      "Acknowledge computed 0 K/300 K versus assay 75 C temperature mismatch.",
+      "Treat Lys156 catalytic-base role as unsupported hypothesis; substrate-bound geometry is also unavailable for validating direct Oγ-to-leaving-N distances."
+    ],
+    "execution_permitted": false,
+    "source": "/data/jpc/mechanism-agent/review_results/pathway_review_20261120/critic/report.json"
+  },
+  "recommendation_basis": "A single RTX PRO 6000 Blackwell Max-Q 96-GB-class card has sufficient nominal VRAM for the already-provisioned 65.4-GB MXFP4 model artifact; serve the 120B model on one card with the recorded 64k context/32k output limits and retain the second card for independent work. The two GPUs are not an NVLink-pooled 192-GB device. Hardware fit does not establish pathway-review scientific reliability; critic flagged five corrections and review remains pending PI decision."
+}

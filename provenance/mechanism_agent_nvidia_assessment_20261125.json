@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-25",
+  "scope": "Initial resource assessment followed by PI-authorized bounded Nemotron/Mistral Nano benchmark. Isolated native runtimes and verified checkpoints are installed; automatic local-only comparison is queued. Existing scientific jobs unchanged.",
+  "nemotron": {
+    "candidate": "NVIDIA Nemotron 3.5 Super VL 120B-A12B, official NVFP4",
+    "observed": "NVIDIA model card documents 120B total/12B active, text/image/video, configurable reasoning, OpenMDW-1.1; official HF card provides single-DGX-Spark serving recipes.",
+    "organizational_eligibility": "PI reports Nemotron Super3 models approved; subsequently says3.5SuperVL should be on the ORNL list but may not yet be listed. Agent could not access authenticated SharePoint list. No independent formal approval of3.5 is claimed; PI explicitly authorizes the bounded Nano comparison.",
+    "approval_source": "User: Nemotron Super3 models approved. Later:3.5SuperVL should also be on the list but it has not been updated. Explicit test authorization: Go ahead and use marigold and lavender to test nemotron vs mistral.",
+    "assessment": "Benchmark against frozen project regression cases plus fresh blind multimodal/chemistry cases before assigning scientific dispatch.",
+    "older_model_provenance": "Official Nemotron3Super120B model card also lists DeepSeek/Qwen synthetic datasets. This training provenance is not unique to3.5 and does not itself establish a runtime data-transmission path."
+  },
+  "nemotron_for_science": {
+    "observed": "November16 announcement bundles Nemotron3.5SuperVL, LitmusBench v0.2 and adaptation recipes. Examples include task-specific post-training and a KTH GROMACS setup-repair agent with independent executable validation.",
+    "assessment": "Relevant architecture and validation pattern; no demonstrated Nyl12 mechanism expertise or TS/PMF qualification."
+  },
+  "bionemo": {
+    "observed": "NIM/model catalog includes Boltz2, OpenFold3, MSA search, ProteinMPNN and RFD4-Proteina. Public BioNeMo Agent Toolkit offers instructions/scripts/evaluation patterns and native open-model skills.",
+    "assessment": "Selectively reuse model/workflow adapters; retain validated Amber/QM-MM/PyMBAR chemistry and artifact contracts. ProteinMPNN availability does not replace ligand-aware LigandMPNN."
+  },
+  "genesis": {
+    "public_project_id": 683,
+    "verified_primary_files": [
+      "README.md",
+      "skills/literature-search/SKILL.md",
+      "skills/academy/SKILL.md"
+    ],
+    "available_relevant": [
+      "literature-search",
+      "academy",
+      "skill-search",
+      "slurm"
+    ],
+    "assessment": "Literature guidance useful now; Academy distributed middleware later; Slurm not needed for existing workstation tmux jobs. Delegated SKILL.md path inventory found no dedicated QM-MM/MD/pKa/enzyme-mechanism skill.",
+    "upstream": "https://github.com/AI-ModCon/genesis-skills"
+  },
+  "zgx_nano": {
+    "observed": "PI confirms both marigold/lavender GB10 with128GB; SSH and nvidia-smi verified ARM64/GB10 and about121GiB system RAM each. Both GPUs idle at benchmark preflight.",
+    "pi_confirmed_hosts": {
+      "marigold": "GB10, 128 GB unified memory",
+      "lavender": "GB10, 128 GB unified memory"
+    },
+    "ssh_verified_20261125": "SSH succeeded as jpc on both hosts with existing aster key. Native ARM64/GB10 and about121GiB RAM independently verified; official CUDA13 runtime/tensor validation passed on both. See benchmark technical_acceptance.json and job receipts.",
+    "assessment": "Use separate local /data/jpc/projects benchmark roots, isolated native ARM64 uv/vLLM environments, and official publisher NVFP4 weights. Existing shared-home uv is x86 and Docker requires a password. No shared-home or global/system changes."
+  },
+  "sources": [
+    "https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents",
+    "https://build.nvidia.com/nvidia/nemotron-3.5-super-vl-120b-a12b/modelcard",
+    "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+    "https://github.com/NVIDIA-BioNeMo/bionemo-agent-toolkit",
+    "https://build.nvidia.com/nvidia/agent-for-life-sciences/blueprintcard",
+    "https://gitlab.osti.gov/genesis/genesis-skills",
+    "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09212373"
+  ],
+  "benchmark_checkpoint": {
+    "authoritative_root": "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125",
+    "controller_session": "mechanism_nano_compare_20261125",
+    "cases_per_model": 20,
+    "technical_acceptance": "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/technical_acceptance.json",
+    "scientific_qualification": "ungraded",
+    "new_production_dependencies": "none outside isolated benchmark environments"
+  }
+}

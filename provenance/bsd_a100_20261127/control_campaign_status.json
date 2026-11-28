@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-27T17:11:11.495197+00:00",
+  "jobs": [
+    {
+      "job": "wt_seed_20261126",
+      "session": "nyl12_boltz_wt_seed_20261126",
+      "exit_status": 0,
+      "started_utc": "2026-11-27T17:05:41.568162Z",
+      "ended_utc": "2026-11-27T17:11:00.019677Z",
+      "tail": "Predicting: |          | 0/? [00:00<?, ?it/s]\nPredicting:   0%|          | 0/1 [00:00<?, ?it/s]\nPredicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]\nPredicting DataLoader 0: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [04:38<00:00,  0.00it/s]Number of failed examples: 0\n\nPredicting DataLoader 0: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [04:38<00:00,  0.00it/s]"
+    },
+    {
+      "job": "wt_seed_20261127",
+      "session": "nyl12_boltz_wt_seed_20261127",
+      "exit_status": 0,
+      "started_utc": "2026-11-27T17:05:43.271547Z",
+      "ended_utc": "2026-11-27T17:11:01.264322Z",
+      "tail": "Predicting: |          | 0/? [00:00<?, ?it/s]\nPredicting:   0%|          | 0/1 [00:00<?, ?it/s]\nPredicting DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]\nPredicting DataLoader 0: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [04:37<00:00,  0.00it/s]Number of failed examples: 0\n\nPredicting DataLoader 0: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [04:37<00:00,  0.00it/s]"
+    },
+    {
+      "job": "af3_seed_20261126",
+      "session": "nyl12_af3_wt_seed_20261126",
+      "exit_status": null,
+      "started_utc": "2026-11-27T17:10:31.077350Z",
+      "ended_utc": null,
+      "tail": "2026-11-27 12:10:31,208 INFO GPU 2 occupied by PIDs [3169995]; waiting\n2026-11-27 12:11:01,320 INFO GPU 2 is idle; launching: ['/usr/bin/env', 'CUDA_VISIBLE_DEVICES=GPU-a752cdba-475a-6afe-14c5-4a58ea101a56', 'OMP_NUM_THREADS=2', 'OPENBLAS_NUM_THREADS=1', 'MKL_NUM_THREADS=2', 'NUMEXPR_NUM_THREADS=2', 'XLA_PYTHON_CLIENT_PREALLOCATE=false', '/usr/bin/taskset', '-c', '16-23', '/home/jpc/code/alphafold3/.conda/envs/af3/bin/python', '/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/af3/run_alphafold.py', '--json_path=/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/input_seed20261126.json', '--output_dir=/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/output_seed20261126', '--model_dir=/home/jpc/code/alphafold3/models', '--num_recycles=3', '--num_diffusion_samples=1', '--buckets=1536', '--gpu_device=0', '--norun_data_pipeline', '--run_inference=true']\nI1127 12:11:02.973346 136602421237248 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'\nI1127 12:11:02.974370 136602421237248 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"
+    },
+    {
+      "job": "af3_seed_20261127",
+      "session": "nyl12_af3_wt_seed_20261127",
+      "exit_status": null,
+      "started_utc": "2026-11-27T17:10:31.896890Z",
+      "ended_utc": null,
+      "tail": "2026-11-27 12:10:32,025 INFO GPU 3 occupied by PIDs [3170001]; waiting\n2026-11-27 12:11:02,180 INFO GPU 3 is idle; launching: ['/usr/bin/env', 'CUDA_VISIBLE_DEVICES=GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee', 'OMP_NUM_THREADS=2', 'OPENBLAS_NUM_THREADS=1', 'MKL_NUM_THREADS=2', 'NUMEXPR_NUM_THREADS=2', 'XLA_PYTHON_CLIENT_PREALLOCATE=false', '/usr/bin/taskset', '-c', '24-31', '/home/jpc/code/alphafold3/.conda/envs/af3/bin/python', '/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/source_snapshot/af3/run_alphafold.py', '--json_path=/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/input_seed20261127.json', '--output_dir=/home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/output_seed20261127', '--model_dir=/home/jpc/code/alphafold3/models', '--num_recycles=3', '--num_diffusion_samples=1', '--buckets=1536', '--gpu_device=0', '--norun_data_pipeline', '--run_inference=true']\nI1127 12:11:03.691515 126195200775680 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'\nI1127 12:11:03.692543 126195200775680 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory"
+    }
+  ],
+  "GPU_usage": "index, uuid, memory.used [MiB], utilization.gpu [%]\n0, GPU-fe7a4229-2d95-cb21-8bf6-8d95c1c12568, 21061 MiB, 99 %\n1, GPU-8478a8b6-2d29-c5e9-10b7-7c2750982230, 21363 MiB, 99 %\n2, GPU-a752cdba-475a-6afe-14c5-4a58ea101a56, 2493 MiB, 0 %\n3, GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee, 2493 MiB, 0 %\n4, GPU-c4b8ddc8-c642-7d2e-d3eb-734cc5795070, 0 MiB, 0 %\n5, GPU-0da267ec-e9a1-1c77-e1ee-16deb10034cf, 0 MiB, 0 %\n6, GPU-a3d6ee7c-fd17-3fa8-b99a-59e06accefa2, 0 MiB, 0 %\n7, GPU-eec455e2-1f07-fe43-56d3-9ecc859a2a20, 0 MiB, 0 %\n"
+}

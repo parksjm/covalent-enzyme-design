@@ -7,6 +7,7 @@ when converting planned methods to past tense.
 - [Introduction](INTRODUCTION_DRAFT.md)
 - [Mechanism execution roadmap and paper scope](../docs/NYL12_MECHANISM_ROADMAP.md)
 - [Methods: completed work and planned extensions](METHODS_DRAFT.md)
+- [Supporting information: relay construction, bias protocol and sampling diagnostics](SUPPORTING_INFORMATION_DRAFT.md)
 - The force-field parameterization section in the Methods draft covers the
   planned ff19SB/GAFF2/RESP workflow, state definitions and validation gates.
   It is included with the bibliography in the zero-argument laptop pull.

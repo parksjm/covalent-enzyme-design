@@ -1,5 +1,14 @@
 # LigandMPNN mask rationale and flipped-pose follow-up, 2026-11-23
 
+**Current-policy update, 27 November:** the text below records the historical
+mask/pose campaign. The PI-approved target is now explicitly positive signed
+phi under the unchanged metric; earlier negative-only target wording is
+withdrawn. For the corrected broad pilot, K156 is variable. Its previous
+protection relied on NylC Lys189 analogy rather than demonstrated Nyl12
+essentiality. L235 remains a conservative mature beta N-terminal-context
+protection, not an established catalytic residue. See the active short plan
+and current generated protection receipt before preparing new designs.
+
 All positions below use the 328-residue full precursor: alpha 1–232 and beta 233–328. Beta local 39 and 41 are precursor 271 and 273. The focused mask is the previously specified local binding-pocket design set, retained unchanged for this comparison; it is a design hypothesis, not a claim that each residue is catalytic. Its historical position-level prior includes the modeled 7 Å pocket described in `docs/nyl12_ligandmpnn_pilot.md`, not a newly applied uniform 7 Å cutoff.
 
 - **Focused 19 eligible positions:** 50, 51, 52, 73, 76, 101, 111, 112, 114, 115, 116, 151, 152, 153, 185, 187, 188, 271, 273.

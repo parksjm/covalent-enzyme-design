@@ -80,6 +80,20 @@ theorem. A narrow bootstrap interval cannot establish these other requirements.
 Use committor/downhill connectivity checks before identifying a transition-state
 ensemble. Preserve method/model uncertainty separately from sampling error.
 
+**Projection and endpoint reporting gate:** for every reported path-coordinate
+PMF, inspect and report coordinate-projection pileup (including exact or near
+corner mass and its *reweighted* per-bin contribution), and retain a physical-CV
+view. For each bin report raw count, Kish weight ESS, largest normalized frame
+weight, bootstrap support, and whether it lies within or beyond a reference
+endpoint; flag bins whose estimate is carried by one or a few frames. Assess
+time-block and independent-start/replica stability, local overlap, and declared
+bin-edge and projection-coordinate sensitivities. State the coordinate and
+reference convention for each sensitivity; do not choose a projection, binning,
+or smoothing rule for a preferred-looking profile. A conditional bootstrap CI
+quantifies resampling variation under the sampled states, coordinate, and
+resampling units only; it is not total uncertainty and cannot establish
+equilibration, endpoint support, or convergence.
+
 **Direct-route reanalysis, 26 November:** the archived 47.05 kcal/mol direct
 profile is a marginal density along q_acyl, whereas the relay profile is a
 three-CV path density. Matching only their discard and error estimator is
@@ -373,6 +387,19 @@ Use `pymbar==4.0.3`, pinned through `uv`, for MBAR analysis rather than a
 project-local reimplementation. Treat PMF stability, effective sample sizes,
 autocorrelation and adjacent-window overlap as scientific acceptance criteria;
 the presence of a reconstructed PMF alone is insufficient.
+
+Every PMF plot/report must expose endpoint support and projection diagnostics,
+not only the profile and confidence band: show or tabulate per-bin raw counts,
+Kish weight ESS and maximum normalized frame weight; identify exact/near
+projection-corner contributions by reweighted mass; mark reference endpoints
+and tangent-extrapolation bins; and report bootstrap support. Include temporal
+block and independent-start/replica comparisons plus predeclared bin-offset,
+bin-width and, where relevant, differentiable-projection sensitivities. Keep
+alternate coordinates separately labeled with their coordinate measure and
+reference; retain the primary profile unchanged until a prospectively reviewed
+analysis revision is applied consistently to all compared pathways. Conditional
+bootstrap intervals must be described as conditional sampling uncertainty,
+never as total uncertainty or a substitute for these support checks.
 
 `scripts/analyze_umbrella_overlap.py` accepts either one production-stage
 directory or a stage glob such as `*production*`. It concatenates only stages

@@ -1,0 +1,42 @@
+{
+  "observed_at_est": "25 November 2026, 18:56 EST",
+  "recorded_utc": "2026-11-25T23:58:36.258588+00:00",
+  "azalea": {
+    "relay_us_windows": 57,
+    "sander_processes": 57,
+    "accepted_equilibration_windows": 57,
+    "production_windows_active": 57,
+    "native_production_ps_min": 1.704,
+    "native_production_ps_max": 4.496,
+    "accepted_production_blocks": 0,
+    "reported_live_worker_failures": 0,
+    "first_5ps_pmf": "not_available",
+    "mbar_watcher": "active_waiting_for_all57accepted_first_blocks"
+  },
+  "violet": {
+    "sander_jobs": 1,
+    "sander_task": "deacylation_hydration_extend06",
+    "native_hydration_time_ps": 34.9,
+    "pmemd_gpu_jobs": 1,
+    "pmemd_task": "PA6 RC1/RC2 controlled WT force-field comparison, RC1replica01 currently in20ns production; six20ns runs queued",
+    "gpu0": "idle",
+    "gpu1": "pmemd active",
+    "other": "compact US sync, MBAR watcher, VMD watcher, MD analysis queue and Nano controller"
+  },
+  "nano_benchmark": {
+    "models": [
+      "Nemotron3.5SuperVL120B NVFP4 on marigold",
+      "MistralSmall4 NVFP4 on lavender"
+    ],
+    "cases_per_model": 20,
+    "cases_completed_per_model": 0,
+    "observed_inference_requests": 0,
+    "phase": "weights_loaded_first_use_CUDA_kernel_compilation",
+    "current_failure": "none_detected",
+    "controller": "controller_retry01_job",
+    "software_tests_passed": 32,
+    "software_coverage_percent": 88
+  },
+  "sampling_convergence_claimed": false,
+  "scientific_jobs_modified": false
+}

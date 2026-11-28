@@ -1,0 +1,37 @@
+{
+  "utc": "2026-11-27T17:26:56.630431+00:00",
+  "jobs": [
+    {
+      "seed": 20261126,
+      "exit_status": 0,
+      "started_utc": "2026-11-27T17:20:18.481483Z",
+      "ended_utc": "2026-11-27T17:25:54.809003Z",
+      "traceback": false,
+      "cifs": [
+        "af3/output_seed20261126_ptxas126_retry01/wt_control_seed20261126/wt_control_seed20261126_model.cif",
+        "af3/output_seed20261126_ptxas126_retry01/wt_control_seed20261126/seed-20261126_sample-0/wt_control_seed20261126_seed-20261126_sample-0_model.cif"
+      ],
+      "tail": [
+        "Fold job wt_control_seed20261126 done, output written to /home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/output_seed20261126_ptxas126_retry01/wt_control_seed20261126",
+        "",
+        "Done running 1 fold jobs."
+      ]
+    },
+    {
+      "seed": 20261127,
+      "exit_status": 0,
+      "started_utc": "2026-11-27T17:20:19.317940Z",
+      "ended_utc": "2026-11-27T17:25:55.601426Z",
+      "traceback": false,
+      "cifs": [
+        "af3/output_seed20261127_ptxas126_retry01/wt_control_seed20261127/wt_control_seed20261127_model.cif",
+        "af3/output_seed20261127_ptxas126_retry01/wt_control_seed20261127/seed-20261127_sample-0/wt_control_seed20261127_seed-20261127_sample-0_model.cif"
+      ],
+      "tail": [
+        "Fold job wt_control_seed20261127 done, output written to /home/jpc/projects/nyl12_relay_redesign/host_qualification_20261127/af3/output_seed20261127_ptxas126_retry01/wt_control_seed20261127",
+        "",
+        "Done running 1 fold jobs."
+      ]
+    }
+  ]
+}

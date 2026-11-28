@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-11-26T15:05:05Z",
+  "agent": "current_jobs_audit",
+  "permission_mode": "escalated",
+  "scope": [
+    "violet",
+    "azalea",
+    "local mechanism-agent receipts"
+  ],
+  "observations": [
+    {
+      "campaign": "Relay-US 57-window continuation",
+      "host": "azalea",
+      "status": "running; 29/57 windows in block 5, 28 paused at block boundary at 15:05:05 UTC; all 57 at 20 ps",
+      "reason_or_attention": "sampling_converged=false; parent subsequently reported all windows at 20 ps with block 5 launching and is handling analysis-only receipt repair",
+      "next_action": "Root-owned authorized derived-analysis repair; no native MD action by this audit",
+      "evidence": [
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/current_execution.json",
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/runtime_summary.json",
+        "Azalea tmux relay_us_continuation_00_20261125 through relay_us_continuation_56_20261125; 57 Sander processes observed"
+      ]
+    },
+    {
+      "campaign": "Deacylation hydration reconnaissance",
+      "host": "violet",
+      "status": "extend_09 completed 2026-11-26T13:15:03Z, exit 0; analysis covers 1,021 frames through 51 ps. Zero near-attack water frames; closest sampled O-C was 4.939 \u00c5 (angle 72.1\u00b0), and the final nearest water was 6.314 \u00c5 from the acyl carbon. Acyl retention and SCC verified; sampling not converged",
+      "reason_or_attention": "The report calls Nalpha protonated, but inspected explicit records show Nalpha-H1/H2 distance metrics and total QM charge -2 without an unambiguous neutral-versus-NH3+ assignment. Do not infer charge from reactive-region topology bonds; the protonation/mapping annotation needs review",
+      "next_action": "No further simulation from this audit. Review the Nalpha proton inventory/mapping and clarify the annotation without changing the scientific state",
+      "evidence": [
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_09/process.json",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/extend_09/scientific_acceptance.json",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/analysis/report.md",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/analysis/report.json",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/endpoint_water_audit.json",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/config.json",
+        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/hydration_endpoint_status_20261124.json"
+      ],
+      "protonation_annotation_review": "Unclear from current explicit records whether \u201cNalpha is protonated\u201d means an NH3+ state. Records include Nalpha-H1/H2 distances and QM charge -2; neither is sufficient here to assign the state. Resolve mapping/protonation annotation only; do not silently change chemical state."
+    },
+    {
+      "campaign": "WT, focused-mask03, broader-mask07 MD and structural analysis",
+      "host": "violet",
+      "status": "Inspected MD replicas completed by 2026-11-25T00:15:04Z, exit 0; preliminary comparison, matched 100 ns replica comparison, native-Thr gate audit, and structural follow-up are already present",
+      "reason_or_attention": "Existing results describe retention/preorganization and native-Thr diagnostics; they are not activity or sampling-convergence evidence",
+      "next_action": "Review existing matched tables for the planned comparison; propose more analysis only if a specific evidence gap remains",
+      "evidence": [
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/md/WT/replica_01/job/status.json",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/md/focused_mask03/replica_02/job/status.json",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/md/broader_mask07/replica_01/job/status.json",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/matched_replica_comparison.json",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124/README.md",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/native_thr_md_gate_audit_20261124/scalar_gate_report.json",
+        "design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/md_followup/analysis/structural_followup_20261124/structural_followup.md"
+      ]
+    },
+    {
+      "campaign": "LigandMPNN to Boltz-2 to OpenMM technical control",
+      "host": "violet",
+      "status": "completed 2026-11-26T00:37:21Z; prediction and corrected OpenMM postprocessing exited 0; COMPLETED.json and geometry report present",
+      "reason_or_attention": "Technical control only; no TS or activity claim",
+      "next_action": "Review report as pilot evidence; no execution remains queued",
+      "evidence": [
+        "design/nyl12_ligandmpnn_pilot/pipeline_control/current_execution.json",
+        "design/nyl12_ligandmpnn_pilot/pipeline_control/COMPLETED.json",
+        "design/nyl12_ligandmpnn_pilot/pipeline_control/analysis/report.json"
+      ]
+    },
+    {
+      "campaign": "Relay TS repair and downhill diagnostics",
+      "host": "violet",
+      "status": "recent checks ended; two reverse TS repairs and downhill recovery exited 1; full-active Davidson Hessian job exited 0",
+      "reason_or_attention": "No accepted force candidate: guarded trials failed energy-allowance or SCC-validity checks; Hessian completion is not TS certification",
+      "next_action": "Retain failures and review before any new diagnostic attempt",
+      "evidence": [
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/04_ts_repair_attack_20261125/job/status.json",
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/05_ts_repair_pt_20261125/job/status.json",
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/08_downhill_minus_scc_recovery_20261125/job/status.json",
+        "qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/07_full_active_davidson_20261125/job/status.json"
+      ]
+    },
+    {
+      "campaign": "Legacy ASH274 water-relay NEB",
+      "host": "violet",
+      "status": "tmux server still listed, but no child calculation process; recorded job ended 2026-11-22T16:47:12Z, exit 0",
+      "reason_or_attention": "Stale session name may be mistaken for active calculation",
+      "next_action": "No action taken; preserve completed job and session evidence",
+      "evidence": [
+        "qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/04_neb/job/status.json",
+        "tmux session nyl12_ash274_acyl_neb_20261119"
+      ]
+    },
+    {
+      "campaign": "Nemotron/Mistral paired 20-case benchmark and lead qualification",
+      "host": "mechanism-agent qualification receipts; parent additionally checked Marigold live; Lavender unverified",
+      "status": "Both model-specific 20-case sets completed and were lead-reviewed; Nemotron main conclusions were correct (11 correct, 6 minor, 3 major), Mistral had 7 correct, 9 minor, 3 major, and 1 critical finding",
+      "reason_or_attention": "Nemotron is limited to supervised read-only RAG because of three major follow-up-planning errors; Mistral is disqualified after an external-proton formal-charge error plus stationary-point and overlap errors. The controller_retry01_job exit-1 receipt is a stale superseded startup attempt, not the benchmark result",
+      "next_action": "No benchmark retry is needed absent a new decision; keep RAG factual review separate. Scientific planning, job dispatch, and execution remain unauthorized. If a new model run is later approved, resolve Lavender access through a previously validated SSH configuration; do not bypass host-key verification.",
+      "evidence": [
+        "/data/jpc/mechanism-agent/docs/NEMOTRON_MISTRAL_QUALIFICATION_20261125.md",
+        "/data/jpc/mechanism-agent/docs/QUALIFIED_SCIENTIFIC_CONTROL.md",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/results/nemotron.completion.json",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/mistral_immediate_compat_retry01/benchmark_resume/mistral_recovery_completion.json",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/grading_private/full_review_20261125/LEAD_REVIEW.md",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/grading_private/full_review_20261125/lead_nemotron_review.json",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/grading_private/full_review_20261125/lead_mistral_review.json",
+        "/data/jpc/mechanism-agent/benchmarks/nemotron_mistral_nano_20261125/controller_retry01_job/status.json"
+      ],
+      "qualification_note": "The authoritative lead reviews cover all 20 cases for each model; process completion and scientific qualification are separately recorded.",
+      "current_runtime_check": {
+        "source": "Parent agent live-check report during this audit; not queried directly by current_jobs_audit",
+        "marigold": "Read-only SSH process check found no vllm, EngineCore, ollama, llama-server, or mechanism-controller matches",
+        "lavender": "SSH returned exit 255, Host key verification failed; runtime status remains unverified",
+        "host_key_bypass_or_reconfiguration": "not performed"
+      }
+    },
+    {
+      "campaign": "Supervised read-only RAG pilot and overnight audit",
+      "host": "mechanism-agent local status receipts; inference host listed as marigold",
+      "status": "pilot and audit completed with exit 0; 20/20 responses validated, citations/provenance 20/20, no pending calls",
+      "reason_or_attention": "Factual acceptance remains not assessed; scientific submission disabled",
+      "next_action": "Complete factual review before treating pilot as scientifically qualified",
+      "evidence": [
+        "/data/jpc/mechanism-agent/benchmarks/read_only_rag_20261125/paired_run_01/process_acceptance.json",
+        "/data/jpc/mechanism-agent/benchmarks/read_only_rag_20261125/overnight_audit_20261125/state/final_report.json",
+        "/data/jpc/mechanism-agent/benchmarks/read_only_rag_20261125/overnight_audit_20261125/job/status.json"
+      ]
+    }
+  ],
+  "host_snapshot": {
+    "violet_observed_utc": "2026-11-26T15:03:52Z",
+    "violet_tmux": [
+      "nyl12_relay_us_analysis_hist_precision_20261125",
+      "nyl12_vmd_palette_watch_20261125",
+      "relay_us_recovery_compact_sync_20261125"
+    ],
+    "violet_gpu": [
+      {
+        "index": 0,
+        "utilization_percent": 0,
+        "memory_used_MiB": 38
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0,
+        "memory_used_MiB": 15
+      }
+    ],
+    "violet_local_llm": "ollama serve process present; no local inference job evidenced in the process snapshot",
+    "azalea_observed_utc": "2026-11-26T15:05:03Z",
+    "azalea_gpu": [
+      {
+        "index": 0,
+        "utilization_percent": 0,
+        "memory_used_MiB": 124
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0,
+        "memory_used_MiB": 25
+      }
+    ]
+  },
+  "audit_limits": [
+    "No jobs were started, stopped, or modified.",
+    "This audit directly queried only Violet and Azalea; Nano and RAG evidence was read locally. Parent additionally reported a read-only Marigold process check; Lavender remains unverified because SSH host-key verification failed.",
+    "No host-key bypass or host reconfiguration was attempted; older unrelated job histories were not exhaustively searched."
+  ]
+}

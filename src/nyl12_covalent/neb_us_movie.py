@@ -11,6 +11,7 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 from parmed.amber import AmberParm
 from scipy.io import netcdf_file
 
@@ -51,18 +52,36 @@ def _sample_frames(frame_count: int, frames_per_block: int) -> list[int]:
 
 
 def _validate_block(
-    block: Path, topology_hash: str, topology_atoms: int
+    block: Path,
+    topology_hash: str,
+    topology_atoms: int,
+    sampled_frames_1based: list[int],
 ) -> tuple[Path, dict[str, Any]]:
     process = _load_json(block / "process.json")
     acceptance = _load_json(block / "acceptance.json")
     if type(process.get("exit_status")) is not int or process["exit_status"] != 0:
         raise ValueError(f"Production process did not succeed: {block}")
+    if "every_integration_step_SCC_converged" in acceptance:
+        history = acceptance.get("electronic_history")
+        scc_accepted = (
+            acceptance.get("accepted") is True
+            and acceptance["every_integration_step_SCC_converged"] is True
+            and isinstance(history, dict)
+            and history.get("passed") is True
+            and history.get("verified_scc_history") is True
+            and history.get("unresolved_trials") == []
+            and history.get("fatal_markers") == []
+        )
+    elif "SCC_error_detected" in acceptance:
+        scc_accepted = acceptance["SCC_error_detected"] is False
+    else:
+        raise ValueError(f"Unknown production acceptance schema: {block}")
     temperature = acceptance.get("final_temperature_K")
     temperature_gate = acceptance.get("temperature_gate_K")
     if (
         acceptance.get("completed_steps") != 10000
         or acceptance.get("finite_energy_temperature") is not True
-        or acceptance.get("SCC_error_detected") is not False
+        or not scc_accepted
         or not isinstance(temperature, (int, float))
         or not isinstance(temperature_gate, list)
         or len(temperature_gate) != 2
@@ -94,6 +113,18 @@ def _validate_block(
             or time.shape != (100,)
         ):
             raise ValueError(f"Expected 100 NetCDF frames: {trajectory}")
+        for frame in sampled_frames_1based:
+            xyz = np.asarray(coordinates[frame - 1, :, :]).copy()
+            if (
+                xyz.shape != (topology_atoms, 3)
+                or not np.isfinite(xyz).all()
+                or float(np.max(np.abs(xyz))) < 1.0
+                or float(np.ptp(xyz, axis=0).max()) < 1.0
+            ):
+                raise ValueError(
+                    f"Sampled trajectory coordinates are invalid in frame {frame}: "
+                    f"{trajectory}"
+                )
         time_values = time[:].copy().tolist()
         time_units = getattr(time, "units", b"")
         del coordinates, time
@@ -116,6 +147,7 @@ def _validate_block(
     }
     return trajectory, {
         "observables": observables,
+        "roles_1based": observables.get("roles_1based"),
         "times": time_values,
         "time_units": "ps",
         "trajectory_sha256": hashes[str(trajectory)],
@@ -151,6 +183,8 @@ def export_part(
     cpptraj: Path,
     output: Path,
     frames_per_block: int = 5,
+    production_blocks: int = 6,
+    prepared_manifest: Path | None = None,
 ) -> dict[str, Any]:
     """Export selected production frames from a native two-CV NEB-US campaign.
 
@@ -160,13 +194,22 @@ def export_part(
         cpptraj: AmberTools cpptraj executable.
         output: New output directory; existing paths are rejected.
         frames_per_block: Number of evenly spaced frames sampled from each block.
+        production_blocks: Number of completed production blocks selected from
+            the start of each window's declared production stages.
+        prepared_manifest: Explicit continuation preparation; defaults to the
+            original campaign manifest. Native inputs are never rewritten.
 
     Returns:
         Manifest mapping source frames to the exported DCD frames.
     """
     campaign = campaign.resolve()
-    config = _load_json(campaign / "prepared.json")
-    topology = Path(config["topology"])
+    prepared_path = (prepared_manifest or campaign / "prepared.json").resolve(
+        strict=True
+    )
+    config = _load_json(prepared_path)
+    if type(production_blocks) is not int or production_blocks < 1:
+        raise ValueError("Production block count must be a positive integer")
+    topology = (campaign / config["topology"]).resolve(strict=True)
     topology_hash = _sha256(topology)
     parm = AmberParm(str(topology))
     natom = len(parm.atoms)
@@ -185,24 +228,26 @@ def export_part(
     output.mkdir(parents=True, exist_ok=False)
 
     qm_ids: list[int] = []
+    expected_roles: dict[str, int] | None = None
     block_records: list[dict[str, Any]] = []
-    prepared_path = campaign / "prepared.json"
     source_hashes: dict[str, str] = {
         str(topology): topology_hash,
         str(prepared_path): _sha256(prepared_path),
     }
     plan: list[dict[str, Any]] = []
     for window in ordered:
-        stages = [
+        available_stages = [
             stage for stage in window["stages"] if stage.get("kind") == "production"
         ]
-        if len(stages) != 6:
+        if len(available_stages) < production_blocks:
             raise ValueError(
-                f"Expected exactly six production blocks: {window['label']}"
+                f"Not enough declared production blocks: {window['label']}"
             )
+        stages = available_stages[:production_blocks]
         for stage in stages:
             block = campaign / window["label"] / stage["label"]
-            trajectory, metadata = _validate_block(block, topology_hash, natom)
+            frames = _sample_frames(100, frames_per_block)
+            trajectory, metadata = _validate_block(block, topology_hash, natom, frames)
             observables = metadata["observables"]
             ids = observables.get("qm_atom_ids")
             if (
@@ -214,11 +259,41 @@ def export_part(
             if qm_ids and qm_ids != ids:
                 raise ValueError("QM atom IDs differ between production blocks")
             qm_ids = ids
-            frames = _sample_frames(100, frames_per_block)
+            roles = metadata["roles_1based"]
+            required_roles = {"carbon", "leaving_n", "og1", "hg1", "nalpha"}
+            if (
+                not isinstance(roles, dict)
+                or required_roles - roles.keys()
+                or any(
+                    type(value) is not int or not 1 <= value <= natom
+                    for value in roles.values()
+                )
+                or not set(roles.values()).issubset(qm_ids)
+            ):
+                raise ValueError(f"Invalid observable role mapping: {block}")
+            if expected_roles is not None and expected_roles != roles:
+                raise ValueError("Observable role mappings differ between blocks")
+            expected_roles = roles
             trajectory_hash = metadata["trajectory_sha256"]
             source_hashes[str(trajectory)] = trajectory_hash
             source_hashes.update(metadata["control_sha256"])
             block_records.append({"trajectory": trajectory, "frames": frames})
+            feature_names = window["bias"].get("feature_names")
+            centers = window["bias"].get("centers_A")
+            if (
+                not isinstance(feature_names, list)
+                or len(feature_names) != 2
+                or len(set(feature_names)) != 2
+                or not isinstance(centers, list)
+                or len(centers) != 2
+                or not set(feature_names).issubset({"q_acyl", "q_act", "q_del"})
+                or "q_acyl" not in feature_names
+                or not any(name in feature_names for name in ("q_act", "q_del"))
+            ):
+                raise ValueError(
+                    f"Invalid two-CV relay bias metadata: {window['label']}"
+                )
+            bias_centers = dict(zip(feature_names, map(float, centers), strict=True))
             for frame in frames:
                 time_values = metadata["times"]
                 time_ps = float(time_values[frame - 1])
@@ -226,13 +301,13 @@ def export_part(
                     {
                         "output_frame0based": len(plan),
                         "window": window["label"],
+                        "chart": window["chart"],
                         "block": stage["label"],
                         "source": str(trajectory),
                         "source_frame1based": frame,
                         "window_time_ps": time_ps,
                         "time_basis": "NetCDF time (ps)",
-                        "q_acyl_center": window["bias"]["q_acyl_center"],
-                        "q_h_center": window["bias"]["q_h_center"],
+                        "bias_centers_A": bias_centers,
                     }
                 )
 
@@ -292,6 +367,8 @@ def export_part(
 
     manifest = {
         "windows": [item["label"] for item in ordered],
+        "window_charts": {item["label"]: item["chart"] for item in ordered},
+        "roles_1based": expected_roles,
         "frames": len(plan),
         "atoms": len(kept),
         "original_atom_ids_1based": kept,

@@ -1,0 +1,28 @@
+{
+  "local": [
+    {
+      "path": "/data/jpc/code/boltz/boltz2_conf.ckpt",
+      "bytes": 2286561469,
+      "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1"
+    },
+    {
+      "path": "/data/jpc/code/alphafold3/models/af3.bin.zst",
+      "bytes": 1020543979,
+      "sha256": "333320e3cb2532b07541ee165e554a3bc45a12f0faab2f374a0e37520185a685"
+    }
+  ],
+  "DGX": [
+    {
+      "path": "/home/jpc/code/boltz/boltz2_conf.ckpt",
+      "bytes": 2286561469,
+      "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1"
+    },
+    {
+      "path": "/home/jpc/code/alphafold3/models/af3.bin.zst",
+      "bytes": 1020543979,
+      "sha256": "333320e3cb2532b07541ee165e554a3bc45a12f0faab2f374a0e37520185a685"
+    }
+  ],
+  "Boltz_conf_match": true,
+  "AF3_match": true
+}

@@ -1,0 +1,23 @@
+{
+  "observed_est": "2026-11-25T20:45:37.980523-05:00",
+  "models": {
+    "nemotron": {
+      "complete_responses": 4,
+      "attempt_receipts": 4,
+      "infrastructure_or_incomplete": 0,
+      "scientific": "ungraded"
+    },
+    "mistral": {
+      "complete_responses": 0,
+      "attempt_receipts": 20,
+      "infrastructure_or_incomplete": 20,
+      "scientific": "ungraded"
+    }
+  },
+  "repair_queue": {
+    "exit_status": null,
+    "log_tail": "INFO:root:Waiting for the original benchmark to finish before runtime repair\n"
+  },
+  "new_dependencies": false,
+  "scientific_jobs_modified": false
+}

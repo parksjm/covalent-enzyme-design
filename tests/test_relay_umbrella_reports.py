@@ -148,16 +148,32 @@ def test_local_watcher_detects_all_window_coverage(tmp_path: Path) -> None:
     cfg = dict(windows=[dict(label="a"), dict(label="b")])
     assert module.discover(cfg, tmp_path, "analysis_acceptance.json") == ([], False)
     for label in ("a", "b"):
-        folder = tmp_path / label
-        folder.mkdir()
+        folder = tmp_path / label / "03_production_5ps"
+        folder.mkdir(parents=True)
         (folder / "analysis_acceptance.json").write_text(
             json.dumps(dict(window=label, accepted=True, sampled_duration_ps=5))
         )
     assert module.discover(cfg, tmp_path, "analysis_acceptance.json")[1]
-    with pytest.raises(ValueError, match="Unexpected"):
-        module.discover(
-            dict(windows=[dict(label="a")]), tmp_path, "analysis_acceptance.json"
+    rogue = tmp_path / "targeted_sampling" / "activation_021_from_022"
+    rogue.mkdir(parents=True)
+    (rogue / "analysis_acceptance.json").write_text(
+        json.dumps(
+            dict(window="activation_021_from_022", accepted=True, sampled_duration_ps=5)
         )
+    )
+    receipts, ready = module.discover(cfg, tmp_path, "analysis_acceptance.json")
+    assert ready and len(receipts) == 2
+    assert all("targeted_sampling" not in str(path) for path in receipts)
+    receipts, ready = module.discover(
+        dict(windows=[dict(label="a")]), tmp_path, "analysis_acceptance.json"
+    )
+    assert ready and len(receipts) == 1
+    mislabeled = tmp_path / "a" / "03_production_5ps" / "analysis_acceptance.json"
+    mislabeled.write_text(
+        json.dumps(dict(window="unexpected", accepted=True, sampled_duration_ps=5))
+    )
+    with pytest.raises(ValueError, match="Unexpected"):
+        module.discover(cfg, tmp_path, "analysis_acceptance.json")
 
 
 def test_watcher_once_writes_readiness_and_completion(

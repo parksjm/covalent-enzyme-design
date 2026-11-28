@@ -1,0 +1,42 @@
+{
+  "directory": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/relay_us_heat_recovery_v2_20261125/postprocessing_analysis_only_20261126",
+  "source_manifest_sha256": "8a4a8445d148e8d2acf08eac40a0d87826f30c8800d29bd4c8bcd1439e4f1e91",
+  "files": 259,
+  "guard_sha256": "e2e0a7f471c2d3dfdf92480a973eedae84858f1d857dc387cde50e6e30e88f36",
+  "validation": {
+    "observed_utc": "2026-11-26T15:43:10.721818+00:00",
+    "all_57_windows_analyzed_through_ps": 20,
+    "checkpoints": {
+      "5": {
+        "status": "preliminary_connected_not_converged",
+        "projection_status": "gapped_no_global_barrier",
+        "unbiased_ESS": 12.657854180998546,
+        "converged": false
+      },
+      "10": {
+        "status": "preliminary_connected_not_converged",
+        "projection_status": "supported",
+        "unbiased_ESS": 14.340616340374957,
+        "converged": false
+      },
+      "15": {
+        "status": "preliminary_connected_not_converged",
+        "projection_status": "reference_unresolved_no_global_barrier",
+        "unbiased_ESS": 21.180626335288384,
+        "converged": false
+      },
+      "20": {
+        "status": "preliminary_connected_not_converged",
+        "projection_status": "reference_unresolved_no_global_barrier",
+        "unbiased_ESS": 6.7314978055298,
+        "converged": false
+      }
+    },
+    "native_hash_check_example": "activation_full_001/04_production_5ps",
+    "archived_original_and_repaired_native_hashes_match": true,
+    "current_native_files_match_repaired_native_hashes": true,
+    "test_count": 20,
+    "new_executable_lines_covered": 6,
+    "new_executable_lines_total": 6
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "build_date_local": "2026-11-27",
+  "science_snapshot": "Relay55ps PMF; PIapprovedpositivephi; sixnativepredictionscomplete; WTboundaryalignmentqualification; Ambercheckpointfrozeninevidence",
+  "target_phi_sign": 1,
+  "source_phi_math_changed": false,
+  "sources": {
+    "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md": {
+      "sha256": "8d3b32e8a59bb420ae21fae57fff1728a9e70e49a984f93897a82508d8381078",
+      "bytes": 234260
+    },
+    "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md": {
+      "sha256": "e0228bb5968d8e7cea0d9fa7eb6be53e1b1f8d43d65e403ac143635b57c25429",
+      "bytes": 83608
+    },
+    "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mol_blender/attempt_20261125_1620_retry01/relay_candidate_white_greyH.png": {
+      "sha256": "27441b76d47e4701f2b7ad5d7003abd60697f64119882a93a4b1361140d140fc",
+      "bytes": 194087
+    },
+    "/data/jpc/covalent-enzyme-design/docs/evidence/commercial_polyamides_20261127/source_1_paragraphs.txt": {
+      "sha256": "0162e7455ec2df13cf9b9ee19a749d574c8c8c1b16cf64b5cc9f74a0fd0d04be",
+      "bytes": 71263
+    },
+    "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/nyl12_mature_assembly_mapping.json": {
+      "sha256": "23b28d27aa2d3b241c771b6fe4b2bdbb781b9a8fb21eea8efc8dd405b14f9b1f",
+      "bytes": 20524
+    },
+    "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261127/assets/structures/provenance.json": {
+      "sha256": "6c5dfdeb1afb84f740988b11d0d4ceb35dda7aa2b99396de1fd390e002ece545",
+      "bytes": 9379
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_source.mol2": {
+      "sha256": "77785fae1b6d4cf4173b28cde5113faddfa8d47a581b109aa526618887c8da61",
+      "bytes": 8041
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_context_mapping.json": {
+      "sha256": "db6d8b337facc94a3813e3898c1ff1ccfab9d68a4bd9289cc439c268c3b9cda0",
+      "bytes": 113731
+    },
+    "/data/jpc/covalent-enzyme-design/analysis/wt_pose_orientation_examples_20261123/side_by_side.png": {
+      "sha256": "ab5480f95eea47c2ce45eadf5df3585271408c34ba800e2d11490fb1f36f2850",
+      "bytes": 191883
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json": {
+      "sha256": "5bc37927aff643d7fb69610bb5c0491e6a83c154a0ff99658adf8eeeafb62efd",
+      "bytes": 6024
+    },
+    "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure3_eight_bonded_profiles.png": {
+      "sha256": "32f46f6374bcbad767fb95704150662d7f3acedc8c8e6ef5e1aa2f06c9349622",
+      "bytes": 891756
+    },
+    "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md": {
+      "sha256": "0651874cfbc4b0f06063faac027fb62d2bc67c74a042ef735d1f09d0639f2267",
+      "bytes": 465
+    },
+    "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure4_md_stability.png": {
+      "sha256": "568919accc5dfb14682d9cf7738815c160ee1e8ae404abc800871ca1d9c8fb31",
+      "bytes": 566717
+    },
+    "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md": {
+      "sha256": "125ea56e46f7c8c37c4faba375be3b95b295ac7cb8998baee69109d9f534004c",
+      "bytes": 11518
+    },
+    "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md": {
+      "sha256": "870484da09d1c819a0b40aa5be854ee757612cf33e66ab9ada0f0d4557a85d40",
+      "bytes": 8183
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv": {
+      "sha256": "0462e2c1eb3b1b112ccd09e4bff3a1862b142dd4bd4821bc60764d9aa8c7d6c4",
+      "bytes": 3048
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/plots/tier_occupancy.png": {
+      "sha256": "72500901b2f8a50b15c8d3dc574e099b89f0bd34a9cca91f8fdd11630f7e1bea",
+      "bytes": 67704
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/scientific_acceptance.json": {
+      "sha256": "01ace82dbec31fb67dcd085c1996e63dd40f092f5c3558a2c7a894cca39c4640",
+      "bytes": 1042
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_replica.csv": {
+      "sha256": "75f7eb8d6994356c06964e4984724413e1618548e1b6aacb2c565b8b7c409516",
+      "bytes": 13032
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/dimer.mdin": {
+      "sha256": "9261a571ab4cc284a8fc968d7583ed696cdddf5a9daa83cc5c49fb3616aa7f5d",
+      "bytes": 2772
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/system.prmtop": {
+      "sha256": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+      "bytes": 22279567
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis_request.json": {
+      "sha256": "5326881cb655c846d10b01401ea7d66323eb40322c5a9f5d55114570ffda42ef",
+      "bytes": 33199
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/benchmarks/04_coupled_path_method_panel/analysis/method_errors.png": {
+      "sha256": "c9bff19b86d020639049ec106fef1d71d3978931a8b6ffa66ec48ee74646f6cc",
+      "bytes": 102595
+    },
+    "/data/jpc/covalent-enzyme-design/docs/coupled_method_panel_results_20261110.md": {
+      "sha256": "c8b4a744733d8c70cc48dbe0737adec0fd4cdaa4c9361385018b37b4009d38e4",
+      "bytes": 3187
+    },
+    "/data/jpc/covalent-enzyme-design/docs/qmmm_direct_pt_embedded_method_benchmark_20261110.md": {
+      "sha256": "b0ec1adc609a7c8beaa3a11f36c188b50cc0de2b2dfac23a45290262973f0448",
+      "bytes": 6660
+    },
+    "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mechanism_A_B_schematic.png": {
+      "sha256": "159bf27c265fd0e7825440ece0e91de527e35c140610a9d6edb2fe82eba7f9bd",
+      "bytes": 408524
+    },
+    "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_20261121_pes.png": {
+      "sha256": "1012be1fae79fed1e6e84215674d8cb7b2d657b04229364781818344731c72c1",
+      "bytes": 91065
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_q_acyl_pmf.png": {
+      "sha256": "26dd7e5c460ca912be1be7feb2f378c6c2c454cd7ee316f94c33d059ceb471ab",
+      "bytes": 194786
+    },
+    "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_findings_20261121.md": {
+      "sha256": "215c28f5ac38bbe6797e7724b1c3f7065e573eafae17d8389ea0e56fdc00c76b",
+      "bytes": 11517
+    },
+    "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/relay_state_pymol/input.json": {
+      "sha256": "98b833027c51aff48383404bd24e502e837a6caed375aaa34545dc0752652850",
+      "bytes": 78868
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/proton_relay_geometry_20261125.json": {
+      "sha256": "241e708d4259d839446c7b5e553ba50ab57734948b96dcd036cb891d8348069b",
+      "bytes": 2575
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/ts_workflow_checkpoint_20261125.json": {
+      "sha256": "d1546e8865209c6cf61514c2b73acf1c7244ad20e5e112c27681fb6d96f7b212",
+      "bytes": 36398
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.csv": {
+      "sha256": "ffad8c4b58bc5af8cbeb79594928bac3b7bfcf395e3df76150e292c41882cfab",
+      "bytes": 7267
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/current_eligible_progress_20261127/current/latest.json": {
+      "sha256": "c3d9878f84fd43b4cf027592ce6ad70e81adc7eaf0df220134a95e1bea24371d",
+      "bytes": 19709
+    },
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/current_eligible_progress_20261127/current/latest_pmf_comparison.png": {
+      "sha256": "4546d8552cec655c49ead098607e1ea465f4d34840694514a4b92b05901c47ae",
+      "bytes": 227073
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/scientific_acceptance.json": {
+      "sha256": "b9da23c9993ba0099e2c3d40ae7069f8bd89c0edb45e6b634aaa32d8946f257a",
+      "bytes": 5889
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/scientific_acceptance.json": {
+      "sha256": "0fa0bb1d4ae5a78ff682fc922cc30fe4fde3bbb5b99a0d270478836d095ec79f",
+      "bytes": 6005
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/four_template_20261127/generation_scientific_acceptance.json": {
+      "sha256": "aed075282191f95597e1dd0b1d5113d4c2d18f5eacb0fe2ccab55a36ace98003",
+      "bytes": 424
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/four_template_20261127/generation_run01/scientific_acceptance.json": {
+      "sha256": "64e8368af7656db85c6505a3481f82eb056d11be3e7fad314f02116c203ba558",
+      "bytes": 194
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/af3_template_seed20261126/postprocess/before_after_site_summary.json": {
+      "sha256": "74e7d933be566f42c776c5ec2747223485217b9adf914f6b75a0fc2fcded3845",
+      "bytes": 13600
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/before_after_site_summary.json": {
+      "sha256": "19c88e8e2c2da7ff02829e9597b4cef90a9f3225701035036fdc6ba3c1c2eed1",
+      "bytes": 13574
+    },
+    "/data/jpc/covalent-enzyme-design/docs/NYL12_THROUGH_NOV30.md": {
+      "sha256": "99eda9e9b4e1ef2f0f05272e0de3e79ac71f7d382e3a3348eff15b301d90c5d8",
+      "bytes": 10340
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/native_advancement_receipt.json": {
+      "sha256": "cfbf6cc7ff9b1232b87ea2719401f8f661496fabac275f71b574876e21d0f724",
+      "bytes": 5688
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/effective_template_alignment_audit.json": {
+      "sha256": "34be40fbe9af19681ab299fa1b1b9491fbc48f9cdc4d420ee14613eece850104",
+      "bytes": 14695
+    },
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/relaxation_state.json": {
+      "sha256": "93545e81add30698a1333dc9f43f99872e5c2044de83ae538f7d98f60e00402c",
+      "bytes": 981
+    },
+    "/data/jpc/covalent-enzyme-design/scripts/presentation_shapes.py": {
+      "sha256": "0de0e09f744086031f91c814243177b5cb0eb4f38c46a8f4eba78e3f102d2461",
+      "bytes": 7376
+    },
+    "/data/jpc/covalent-enzyme-design/scripts/presentation_layouts.py": {
+      "sha256": "5df32ea6f1c1f062d06960f852df1bb60c6d6348ed5de149589c08ee43485cef",
+      "bytes": 2792
+    },
+    "/data/jpc/covalent-enzyme-design/docs/PRESENTATION_AND_FIGURE_STYLE.md": {
+      "sha256": "fee6b5be0da03b0ebcc1cd8365029cf2586850eb1e2bae880574565d42549201",
+      "bytes": 17724
+    }
+  },
+  "pending_plan_source_paths": [],
+  "manifest_exclusions": [
+    "DOWNLOAD* (parent-owned download packaging)"
+  ]
+}

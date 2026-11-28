@@ -1,5 +1,5 @@
 {
-  "inventory_date": "2026-11-23",
+  "inventory_date": "2026-11-25",
   "scope": "Slide-ready source figures and key evidence for a Nyl12/PA6 progress deck. Source paths are absolute; original artifacts remain in place.",
   "source_figures": [
     {
@@ -149,5 +149,16 @@
     "limitations": "Compact-conformer electrostatic holdout fails; arbitrary lengths, bulk/crystalline polymer and catalytic TI1/acyl-enzyme are not validated.",
     "historical_deck": "/data/jpc/polyamide-amber-ff/output/pa6_l4_validation_20261029/presentation_checkpoints/PA6_L4_VALIDATION_DECISION_20261031_ACTIVE_MD_CHECKPOINT.pptx",
     "historical_deck_warning": "October 31 deck predates the scoped release decision. It may provide pipeline, charges and torsion-scan graphics, but its old 'production withheld' disposition is superseded by the current release README/manifest; do not report it as current status."
+  },
+  "historical_inventory_date": "2026-11-23",
+  "current_presentation": {
+    "main_slides": 17,
+    "appendix_slides": 3,
+    "authoritative_claim_sources": [
+      "manuscript/RESULTS_DRAFT.md",
+      "docs/NYL12_MECHANISM_ROADMAP.md"
+    ],
+    "current_plot_source": "qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.csv",
+    "qualification": "Relay ΔE maximum 16.31 kcal/mol; no new PMF; w033 minimum and TS curvature unverified. Historical source_figures below are retained evidence, not the current displayed figure list."
   }
 }

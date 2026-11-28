@@ -1,0 +1,171 @@
+{
+  "created_utc": "2026-11-25T20:16:25.095232+00:00",
+  "cause": "Exact laptop/server viewer matched; invalid VMD color name brown aborted policy before original reps were replaced",
+  "old_viewer_sha256": "1f678ad6f7f3886b523afbf2d8a0221639db6ceb2cb12072d5906771358084d3",
+  "version": "20261125-palette2",
+  "repair": "BR uses tan; entire palette validated with colorinfo colors before mutating display; explicit completion and failure outputs",
+  "source_manifest": "/data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/source_snapshot/source_manifest.json",
+  "source_hashes": {
+    "scripts/watch_vmd_style.py": "5646f9cddf2a83fc7981ff8da8b16196944b9f4ca07832cfe79c0651d8a6303d",
+    "scripts/refresh_vmd_style.py": "7f27bb7b74fa465024bd8a6a3197b2f0d70d58a3563ae54a10f8657e1f64dbf0",
+    "src/nyl12_covalent/vmd_movie_policy.py": "94b01afe85dd3a05ccc96c94e71204d8a78d5279ba80ee9fcb42b2662a73d8c2",
+    "src/nyl12_covalent/vmd_chain_groups.py": "e8b0bb9467d9cf2588254f50dbf11448071e7d0f03693bc23519050c77e0b2c8",
+    "src/nyl12_covalent/vmd_style_refresh.py": "7678ebc19403eec9b85e32b5168c9e91f15dde21370c2a13167c5b651671828b",
+    "src/nyl12_covalent/vmd_style_manifests.py": "4f876441fe57bed9b3acdb29958f0386349f3c1359a4b518856ee93c7b3528c6",
+    "src/nyl12_covalent/vmd_style_watch.py": "f98bba4019f56254f66c3e000ef2f7358ac903fb5a61a45f7cc4abbb3290ce6b",
+    "provenance/vmd_style_watch_plan_20261125.json": "1baceb8095d4928ee32ccbc0bf0ebfd17c91d53de18a187875cae18367102d40",
+    "provenance/vmd_style_execution_plan_20261125.json": "37a8d30d39b0121ee1eb08a808303ba8a999f25e013e32d00a2c04d3403f6eeb"
+  },
+  "movies": [
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/view_path.vmd",
+      "sha256": "8a6683ac9ea506fa0df865ad885de5c1c91b5b8558def03aeb794d281b534d9b",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/vmd_progress/view_path.vmd",
+      "sha256": "cd3fe8015483df9f0ce2141ac9cc5d1dd2545bdd783007ca83f6370e602148ac",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/vmd_progress/view_path.vmd",
+      "sha256": "cd3fe8015483df9f0ce2141ac9cc5d1dd2545bdd783007ca83f6370e602148ac",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/view_ts_optimization.vmd",
+      "sha256": "ba94af3e3ac6fda817a3d95783f7ac9b5fd8ccbe9ce7f9424c71661e1bc45981",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/view_ts_optimization.vmd",
+      "sha256": "939fdcd16943130453a1ac393483c279a6b1b6701833a163e06cb2dcadf1ba2b",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/view_downhill_minimizations.vmd",
+      "sha256": "08ab9d5232141e27586c3a2bd4eb7985e7da81dc07cc4645bd1c2fe6cd7b466f",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/reaction_path.vmd",
+      "sha256": "fa57f61f4b9c0ef37be4aca657c7311da9373b030de4d111dbd4eddd0440c04d",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reaction_path.vmd",
+      "sha256": "ef70cc4f6e6c327f88e3eda44ac14219fe136e524fdac5268e745d090ed662bf",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+      "sha256": "35dbf201803161eb9821d758a8fd8f720842752f3f003d392990bf98d13ff9be",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+      "sha256": "7351064b8758eee1524663dcb228777682c7f6245c4234cee820ab78ba96830f",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/reaction_path.vmd",
+      "sha256": "3f9f9f625d91f942c1a1822d91a8c6168aaee1f239fa2ebc549c61f2a80c242e",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/view_relay.vmd",
+      "sha256": "43a6a2ec55f3ead4ead17d3327945cba787e0def4eeeb38e30c388211a8daeb0",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/view_relay.vmd",
+      "sha256": "43a6a2ec55f3ead4ead17d3327945cba787e0def4eeeb38e30c388211a8daeb0",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/view_relay.vmd",
+      "sha256": "43a6a2ec55f3ead4ead17d3327945cba787e0def4eeeb38e30c388211a8daeb0",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/reaction_path.vmd",
+      "sha256": "28f417e860606d6a0588eddad5ea770651ffb008c62c4caf35798e307208d4e9",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/reaction_path.vmd",
+      "sha256": "095472a5d1941594adb6a1a7b7e6adc3597ce31cfdce64802c8d7f5636e40ac3",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/reaction_path.vmd",
+      "sha256": "2d36fbd90820e4b3c9a8aeef1bf25d152d236e1c28eaffccdb66b94795994d2d",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/view_path.vmd",
+      "sha256": "290593657eaaaddb34a4fb38247e600faf110e3dad2d1f4bb9674265163d0e3e",
+      "qm_count": 102,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/reaction_path.vmd",
+      "sha256": "f8f545157273159dfbe019ad1b8f55ea8883bc8c698cf68af8037c4621de4491",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/reaction_path.vmd",
+      "sha256": "091d7de3dcec73f571ba968b93654a165574312746c489894905d2997ba1e126",
+      "qm_count": 98,
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/reaction_path.vmd",
+      "sha256": "87422ba4afed52e6991b1e4757fdbb55b03eb45070a171e24b452b4e4e992c57",
+      "qm_count": 98,
+      "checksum_failures": []
+    }
+  ],
+  "scientific_inputs_checked": 42,
+  "scientific_input_changes": [],
+  "rollback_report": "/data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/refresh_report.json",
+  "rollback_directory": "/data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/viewer_backups",
+  "tests": {
+    "passed": 106,
+    "core_statement_coverage_percent": 99.35483870967742,
+    "ruff": "passed",
+    "format": "passed",
+    "full_published_tcl": "original exact brown failure reproduced; repaired full script completed in strict Tcl command emulation",
+    "pull_filter_fixture": "exact rsync block executed, source/pulled hashes identical and checksums passed"
+  },
+  "validation_limit": "No actual VMD installed on server; actual GUI rendering remains a laptop check",
+  "watcher": {
+    "old_pid": 2761805,
+    "new_pid": 2814603,
+    "session": "nyl12_vmd_palette_watch_20261125",
+    "command": "/data/jpc/covalent-enzyme-design/.venv/bin/python /data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/source_snapshot/scripts/watch_vmd_style.py --plan /data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/source_snapshot/provenance/vmd_style_watch_plan_20261125.json --output /data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/watcher_events --interval 60 --hours 72 ",
+    "status": "/data/jpc/covalent-enzyme-design/output_vmd_palette_repair_20261125/watcher_events/watch_status.json",
+    "cycle": 2,
+    "states": {
+      "accepted": 21
+    }
+  }
+}

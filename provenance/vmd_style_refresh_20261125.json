@@ -1,0 +1,594 @@
+{
+  "created_utc": "2026-11-25T18:20:47.911986+00:00",
+  "plan": "/tmp/nyl12_vmd_style_apply_plan_20261125.json",
+  "applied": true,
+  "movies": [
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/view_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/viewer_template/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/view_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/view_path.vmd",
+          "before_sha256": "e1c63ec4143bfe3be7d7d3bda305ec8c2690ff0786df58dbd46a393e59e8b5ea",
+          "after_sha256": "1f678ad6f7f3886b523afbf2d8a0221639db6ceb2cb12072d5906771358084d3"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/export_manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/export_manifest.json",
+          "before_sha256": "22aacd8b3c2087dcea35903436749de00fd923bd60a8634d0b5ce793db3d417d",
+          "after_sha256": "41abff9b2be2696d887656379a177824bcd0d7be31c970951f1e8a84f536bf8d"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/SHA256SUMS.txt",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/12_nterminal_relay/vmd_progress/SHA256SUMS.txt",
+          "before_sha256": "9d840e0052e98b5597dcc5bc65fb97170e3b87b0275f7fb17aedc8b04c9a9fa3",
+          "after_sha256": "e34cf4bcac467f140678d2da0769b03386fac8ffb6676e6e834f7975a53c2a69"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/vmd_progress/view_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/viewer_template/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/vmd_progress/view_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/12_nterminal_relay/01_activation_reverse/vmd_progress/view_path.vmd",
+          "before_sha256": "7a898383ceaac40aac0edb3bb58903eb5b23a7832264b111c7ccacfef1f217c8",
+          "after_sha256": "62e291e81c5d9d41678c39b088588315423ac2f9791999abfa2edb79665bec90"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/vmd_progress/view_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/viewer_template/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/vmd_progress/view_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/12_nterminal_relay/02_acylation_forward/vmd_progress/view_path.vmd",
+          "before_sha256": "7a898383ceaac40aac0edb3bb58903eb5b23a7832264b111c7ccacfef1f217c8",
+          "after_sha256": "62e291e81c5d9d41678c39b088588315423ac2f9791999abfa2edb79665bec90"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/view_ts_optimization.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 36,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/view_ts_optimization.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/view_ts_optimization.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/view_ts_optimization.vmd",
+          "before_sha256": "2a5aaa83ac5add02d377f0e002728d22b9d832e3879a9e0aa85113bcadf37e7b",
+          "after_sha256": "2c842bcfd65728d1b1ca7d83d3c64d891b3773fa3190adf1669f3df845226305"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/06_dimer_ts/vmd_progress/update_20261113T144635/MANIFEST.sha256",
+          "before_sha256": "16760be542bbbfc61f06a74617265470b6b686a9220be3861137821662d472f6",
+          "after_sha256": "39ad581b4ee887f734bc88ed0cc1d9c0ee6e426e4e4bbe7ee15291ed7b5d34fc"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/view_ts_optimization.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 36,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/view_ts_optimization.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/view_ts_optimization.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/view_ts_optimization.vmd",
+          "before_sha256": "ecb400039982a93e43617b576eac3d78ae1a659f71af6e4dc1e9b1a9aeb6463b",
+          "after_sha256": "7cfa224dd9acf881bfe2fd5749a910754b95ad2df819b3cb7546df717e1d708a"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/vmd_progress/update_20261113_converged_cycle159/MANIFEST.sha256",
+          "before_sha256": "cbce1e55b083ad0e11bd62a1d6a6b1b8c404675737377a2d16685999db9b08c7",
+          "after_sha256": "8a2ae1e9619912db2f0047d23f8be7d2cb5c0c7709a56ea4848b65880b7c1acd"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/view_downhill_minimizations.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "explicit_generator_ranges",
+        "path": "/data/jpc/covalent-enzyme-design/scripts/export_downhill_minimization_vmd.py",
+        "function": "vmd_script",
+        "count": 98
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/view_downhill_minimizations.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/view_downhill_minimizations.vmd",
+          "before_sha256": "42c7106dc447e239a92cbe41113ba8274f785a429d018666f235e238d10ff011",
+          "after_sha256": "393a9eff70d425b29b6fc67885c47da94156046fe9a034331313ad32431efeff"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/vmd_progress/update_20261113_endpoint_minimizations_retry04/MANIFEST.sha256",
+          "before_sha256": "0f8bfd2a153399155d5263421308e26a0dfa6c43561c0018eaa0eaaee75b0488",
+          "after_sha256": "f5365c501a1df6c502afc6afad82f5e91da85e3def3043396fa5eb6b0c5b2b3e"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 36,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/reaction_path.vmd",
+          "before_sha256": "68acc2cf8acffe79c7c2b43b2bbdc102609adcb5bbc1c7d1d1cc8cf97cd1d9ca",
+          "after_sha256": "1866a86518a89dd9647ddad6c883794d6e4550f863316cac798ea7bd7dff0cf3"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/vmd_progress/saved_history_frame_000104/MANIFEST.sha256",
+          "before_sha256": "a93addfff2b7f34f9b15ff14827e76011128f6bbdea0c463b35e4a0615b2b2ef",
+          "after_sha256": "cc07ac28a0637b4d531e85af099f08baefd9c3ea423cd86ac1ae8585e63fa42a"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 36,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reaction_path.vmd",
+          "before_sha256": "2977f85c83f31fd9a8854fd10164f465e9e066ecd81fe621713a1b982d8de194",
+          "after_sha256": "74c73b4b170f8c5ccc5d8be0af7d30ee98aa0c3b9c3900e98ed5875ac656cf2f"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/MANIFEST.sha256",
+          "before_sha256": "b125c4cd60999631a86a9b5e0b08d330941a406b6be85316ef2aa1e616fa9370",
+          "after_sha256": "d2c2c8f564d0151f12912b8592e8c866bea1c68d7806252f780db2ce4264f658"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "original_atom_ids_1based",
+          "qm_atom_ids_1based"
+        ],
+        "kind": "manifest_original_to_display_mapping",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/manifest.json",
+        "viewer_first_licorice_contains_qm": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+          "before_sha256": "cbf353202367284eb4f97e29c1ac828edbde7513b5a910bafbfc90aad2c66060",
+          "after_sha256": "3c0c22d2abff04192bed27cfa3d6e31af2250025d01a432a8de420b64d1636ed"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/MANIFEST.sha256",
+          "before_sha256": "7d1f77d5202bc0a5ad96057735728ac362224e844df3f5e41720aca78b091a41",
+          "after_sha256": "3f9bf48b531fb3d53c67f68e40d14d798916487aacc57ed9b38920b92631ed8c"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "count": 98,
+        "key": "qm_atom_count",
+        "kind": "viewer_literal_selection_validated_by_manifest_count",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/frame_manifest.json",
+        "selection_line": 27
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+          "before_sha256": "d0160d03f123f7938b76151a13bce0a65f0f36b4e39c56dd0fe41bc5d24bf8bd",
+          "after_sha256": "0c05c3317a59494bda4a422efdda5199f903f3974dd99ca371d3cb27b9d43c30"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/MANIFEST.sha256",
+          "before_sha256": "293061308ac757102d2d05717dd73f9f484f847c7f065b8ba6d8dd89091a7b83",
+          "after_sha256": "8a412596b4bf1b2f2d157182d48d906cc7d260db0ac3fbcac2f24a52bc2e1049"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/reaction_path.vmd",
+          "before_sha256": "4a9e848122a369e70a17bbd63415ac71bfc1b6dc6c543e4051d62571c22371fd",
+          "after_sha256": "0433b6c9e6e64988afa8821740ca7ce9500a9cd8c6ee96cdde13f1f175ff4bcc"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/03_acylenzyme_neb/vmd_progress/cycle_000435/MANIFEST.sha256",
+          "before_sha256": "31477bdfba2cf6722c37b36fc93ab4b92c215ce16e9265ffef98fbe0a9dac948",
+          "after_sha256": "c855125a29d48abe0bab66ae10583abddbfef76fba9cce1637fe19f0b1214fe4"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/view_relay.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/view_relay.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/view_relay.vmd",
+          "before_sha256": "8feb7fde17ce3a5e19cd43c7b99d50ac0680b814e2294d2012b2f5c1ef6b815f",
+          "after_sha256": "434fd4d429058df402efd6ce18e8ceb538fb0e0a16876e20ace06ea468654998"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/early_window028/vmd_progress_verified/MANIFEST.sha256",
+          "before_sha256": "a8c103f04f7b8d4bc913c39bf968b0762e6c0329a2bcccb97bdf040f02a22f3c",
+          "after_sha256": "ca22b08cec7c42f46f8ca5eadac131db05be1c00ee5d74126693b384225c3c95"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/view_relay.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/view_relay.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/view_relay.vmd",
+          "before_sha256": "8feb7fde17ce3a5e19cd43c7b99d50ac0680b814e2294d2012b2f5c1ef6b815f",
+          "after_sha256": "434fd4d429058df402efd6ce18e8ceb538fb0e0a16876e20ace06ea468654998"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window032/vmd_progress_verified/MANIFEST.sha256",
+          "before_sha256": "b788ef25ab1b48f9d7482386ec5bc17739147a659d6cafb453aa23715a02cf91",
+          "after_sha256": "0ff246a664ecd7dc21d8b8d53955cdf0e501e44ff943ce6e5fe422826166630a"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/view_relay.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "qm_atom_indices_stripped_0based",
+          "qm_atom_indices_original_0based",
+          "stripped_to_original_atom_indices_0based"
+        ],
+        "kind": "validated_manifest_and_viewer",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/manifest.json",
+        "viewer_first_licorice_matches": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/view_relay.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/view_relay.vmd",
+          "before_sha256": "8feb7fde17ce3a5e19cd43c7b99d50ac0680b814e2294d2012b2f5c1ef6b815f",
+          "after_sha256": "434fd4d429058df402efd6ce18e8ceb538fb0e0a16876e20ace06ea468654998"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123/ti1_window033/vmd_progress_verified/MANIFEST.sha256",
+          "before_sha256": "06c97433288b4ccca297227905caa200c0e7f8e26966a959fbc59cd1ce8a308d",
+          "after_sha256": "2c5dec047dc38db662df0cd2148eb02ded0c34f4b0fe9c6e6bbaf44701753103"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/reaction_path.vmd",
+          "before_sha256": "a51a1b1c25fee4c6a87bd2d5f96437dc823fa6014dd8df274b34bd5006124247",
+          "after_sha256": "6e36f6e57ecf91b24cc0e438007fa8ea5ff34e05dcc604dfaa9741f46e73d726"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/manifest.json",
+          "before_sha256": "30c16ccbeea2040957e1ee33c359adf6c7e6f97d7c5c0fc58192b99edd4bca8e",
+          "after_sha256": "4f08a43c853cab04a8b066c5e005cc21a8c7b40e5d85e7927039773ee14cdae9"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/01_direct_pt/vmd_progress/update_0020/MANIFEST.sha256",
+          "before_sha256": "2bf1978c3f90c3f1dc38ac527138ac3d578e4549087b8ffe470a9ee148bba3ad",
+          "after_sha256": "3314c6a77a12c3185dd6b51ed8640ae887d55629246ba3f5791e13dd93103b35"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/reaction_path.vmd",
+          "before_sha256": "211ff2d740a8055f99da485ba6f2e4bbeadd06c6bb6ab3b607ec0191788ef2e6",
+          "after_sha256": "26ebac8979dc85a7d7dd2de8edac4a5e2d27a498d2c4c13b7cc8cf6b950705de"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/manifest.json",
+          "before_sha256": "368aabdbbbe53c866741f6d5feadde7afb5727c738288ff87252a0994348f489",
+          "after_sha256": "1131ffae2fef33436ea1cb525c12bd066e8b5ab941e17f7a52b4cbeacdebec4e"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/02_nucleophilic_attack/vmd_progress/update_0018/MANIFEST.sha256",
+          "before_sha256": "40920bd05c84117ae898da38c97de0da684695c205bcf6982ff18ed0dd5be296",
+          "after_sha256": "d1b173bc1869748602bfd44e84e997d35485457eb95cc174fa5add27b3b63193"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 36,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/reaction_path.vmd",
+          "before_sha256": "5a4c7dd85d87ce37a9ac96362dea133187ef1a8416a3185d710e448349eaca90",
+          "after_sha256": "1d9f9cacbef5491d72bff58bdfaefce5251663f07bd1f1679d434b7b7dacf461"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/05_neutral_reaction_path/05_es_to_acylenzyme_neb/vmd_progress/cycle_000069/MANIFEST.sha256",
+          "before_sha256": "c510e4fd3ba1ff8b6e20e6c7d1b043741a9f6b592f666a4c7561cdb8d031108a",
+          "after_sha256": "0a563e30712a4a1f40f0e6e6604443e7c7f7f314557b3f7ec47fe497a913e515"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/view_path.vmd",
+      "qm_count": 102,
+      "qm_evidence": {
+        "key": "qm_indices_stripped_0based",
+        "kind": "manifest_explicit_display_indices",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/manifest.json"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/view_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/view_path.vmd",
+          "before_sha256": "e09c3e5179d5cdcf7cade9d14b6e760ba6586d3c10ffe6fb616307ff89ad14a7",
+          "after_sha256": "9600a70ed011de57ff07aaa5befb93e50ada4472c95964450414bd55ce805ebc"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_flipped_model30/07_ash274_comparison/07_water_to_asp272_ti1_like/vmd_progress/MANIFEST.sha256",
+          "before_sha256": "716e50cb2304f7c6209e51eaf182151b74c3abef8cf702a6f794eef7ce2d389e",
+          "after_sha256": "82815b2c884fa545ad79e3e7227485710d7236b333eda4c3342484fab6d07a4d"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/reaction_path.vmd",
+          "before_sha256": "57aa05d466e4d265c9e296c40f177b8729a9098ccc002c9450cb8a4010f548e1",
+          "after_sha256": "c5629b0a3ef55fdf09c1c22a52dd5d3a80ebc133a87d89c187e72fe0ff6f491c"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/manifest.json",
+          "before_sha256": "61e96c15d936888c1bb5db3db91e63cdc08f3f33521dc4986e4bf4a0a399e21e",
+          "after_sha256": "8e6ac86378c3d9fec98ce7e5825ddaae7104e856ef71580f1b086fbb5da49574"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/vmd_progress/update_0020/MANIFEST.sha256",
+          "before_sha256": "9524b65d73fa5363095c65520b4c3841cb0fede8669cdf5b4763ab1d9af4a087",
+          "after_sha256": "c5edf4a1ba1d391674682a70fb5f3bf9aefa70b755be0fa8048488f8ebab06a6"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/reaction_path.vmd",
+          "before_sha256": "2fbaee2157064e09938005ed710934e0b70a2e53f7e111480e3b047501155afa",
+          "after_sha256": "fca6a8ab0c1551bd073be33d139cc70a53bb943cc095070390371e134a742ddc"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/manifest.json",
+          "before_sha256": "1c585ce3a2d18f300cccfb29e23633e5ce27a194c5c5474417b43911881d1273",
+          "after_sha256": "c5f92b17056401a1f2bfbd093879d1515f2d40423f930e9582421a10b144662a"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/03_corrected_attack_from_window24/calculation/vmd_progress/update_0010/MANIFEST.sha256",
+          "before_sha256": "aca33550a1b1f0069615ede52546a40e2817c77ba1a7237b4c3faa3a6271e4e8",
+          "after_sha256": "bfbda7fefa3d7e3e8be5701a0701be9a92e81600b39ebcc619e49f8aaa4f88f6"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/reaction_path.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "kind": "literal_qm_subsystem_selection",
+        "line": 34,
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/reaction_path.vmd"
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/reaction_path.vmd",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/reaction_path.vmd",
+          "before_sha256": "672e934c7c8a60bd5560548abffdb72968f60bc84c4564f48ed77aeaea6247bd",
+          "after_sha256": "6dc0494e9d13b41aa543c13f0ec1a25da889ce73b0a67aa65791ad4725a0f3fd"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/manifest.json",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/manifest.json",
+          "before_sha256": "4d25ad1b50770cdef5cf54048eeb8230fa3cdd52678c6f4cf0f9f1ca71fcff7c",
+          "after_sha256": "8450fcf92bb70381260d9f4a6488c7cbf8355a45cc5b1e24cbe0455349321785"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/vmd_progress/update_0032/MANIFEST.sha256",
+          "before_sha256": "1fda0306c6dfe3eca67157e8078cd1b40d063dcd450d8bf89308bfa27f2331ff",
+          "after_sha256": "fdbb8ef30ce2fd68a07e168f88e38a96b6bc6bd460770c9841c49358c373c658"
+        }
+      ],
+      "checksum_failures": []
+    }
+  ],
+  "failures": []
+}

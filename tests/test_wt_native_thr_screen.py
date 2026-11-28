@@ -11,7 +11,7 @@ import pytest
 from nyl12_covalent import wt_native_thr_screen as screen_module
 
 
-def test_eligible_frames_selects_joint_rows_and_rejects_bad_time(
+def test_eligible_frames_retains_native_failures_and_rejects_bad_time(
     tmp_path: Path,
 ) -> None:
     path = tmp_path / "screen.csv"
@@ -22,7 +22,12 @@ def test_eligible_frames_selects_joint_rows_and_rejects_bad_time(
         encoding="utf-8",
     )
     selected = screen_module.eligible_frames(path, "r1")
-    assert [(row["frame"], row["tier"]) for row in selected] == [(1, "A"), (4, "B")]
+    assert [(row["frame"], row["tier"]) for row in selected] == [
+        (1, "A"),
+        (2, "B"),
+        (4, "B"),
+    ]
+    assert selected[1]["native_torsions"] is False
     path.write_text(
         "frame,time_ns,tier,native_torsions,psi_delta,chi1_delta\n1,nan,A,True,-10,5\n",
         encoding="utf-8",
@@ -49,7 +54,7 @@ def test_cpptraj_text_extracts_only_listed_frames(tmp_path: Path) -> None:
         screen_module.cpptraj_text(topology, frames, {"r1": trajectory}, "", output)
 
 
-def test_candidate_rank_uses_og1_then_rmsd_then_n() -> None:
+def test_candidate_rank_ignores_native_similarity() -> None:
     def candidate(
         og1: float, rmsd: float, n_shift: float, frame: int
     ) -> dict[str, Any]:
@@ -67,13 +72,14 @@ def test_candidate_rank_uses_og1_then_rmsd_then_n() -> None:
 
     ordered = sorted(
         [
-            candidate(0.6, 0.8, 0.5, 3),
+            candidate(0.1, 0.1, 0.1, 3),
             candidate(0.5, 1.0, 0.7, 2),
-            candidate(0.5, 0.9, 0.8, 1),
+            candidate(4.0, 4.0, 4.0, 1),
         ],
         key=screen_module._candidate_rank,
     )
     assert [item["frame"] for item in ordered] == [1, 2, 3]
+    assert ordered[0]["native_alignment"]["thr233_held_out"]["rmsd_angstrom"] == 4.0
 
 
 def test_alignment_helpers_load_mapping_once_and_measure_frame(
@@ -160,7 +166,9 @@ def test_screen_combines_candidates_and_writes_ranked_extraction_list(
         Path(input_text.split("trajout ", 1)[1].split()[0]).write_bytes(b"compact")
 
     class FakeTrajectory:
-        coordinates = np.array([[[0.1, 0.0, 0.0]], [[0.2, 0.0, 0.0]]])
+        coordinates = np.array(
+            [[[0.1, 0.0, 0.0]], [[0.2, 0.0, 0.0]], [[0.3, 0.0, 0.0]]]
+        )
 
         def close(self) -> None:
             return None
@@ -192,11 +200,15 @@ def test_screen_combines_candidates_and_writes_ranked_extraction_list(
 
     monkeypatch.setattr(screen_module, "_measure_frame", measure)
     output = tmp_path / "out"
-    report = screen_module.screen(config, output, source_paths["cpptraj"], 1)
-    assert report["eligible_frame_count"] == 2
-    assert report["accepted_count"] == 1
+    report = screen_module.screen(config, output, source_paths["cpptraj"], 3)
+    assert report["eligible_frame_count"] == 3
+    assert report["accepted_count"] == 3
+    assert report["native_similarity_count"] == 1
+    assert report["selection_policy"]["native_thr_role"] == "diagnostic_only"
     assert report["best_candidates_for_extraction"][0]["frame"] == 1
     assert report["ranked_candidates"][1]["accepted_native_gate"] is False
+    assert report["ranked_candidates"][1]["selection_eligible"] is True
+    assert [r["frame"] for r in report["best_candidates_for_extraction"]] == [1, 2, 3]
     assert (output / "eligible_candidates.nc").read_bytes() == b"compact"
     assert (output / "ranked_candidates.csv").is_file()
-    assert json.loads((output / "native_thr_screen.json").read_text())["top_k"] == 1
+    assert json.loads((output / "native_thr_screen.json").read_text())["top_k"] == 3

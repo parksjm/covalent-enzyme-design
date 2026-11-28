@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-11-26T00:32:12.579476+00:00",
+  "prediction_job": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/pipeline_control/prediction_job",
+  "postprocessing_pointer": "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/pipeline_control/current_execution.json",
+  "native_gpu0_assignment_verified": true,
+  "bounded_models": [
+    "WT",
+    "variant_01"
+  ],
+  "variant_substitutions_canonical": [
+    "S50N",
+    "V111T",
+    "A187S",
+    "V188T"
+  ],
+  "fresh_sequence_generation": false,
+  "control_chemistry": "noncovalent ES, neutralThrNalpha, bothAspanionic; fourzwitterionicPA6L4",
+  "tests": {
+    "passed": 14,
+    "combined_coverage_percent": 90,
+    "new_modules_coverage_percent": {
+      "design_openmm_control": 81,
+      "design_pipeline_control": 93
+    },
+    "ruff": "passed"
+  },
+  "US_preserved": true,
+  "MBAR_trigger": "all57acceptedproductionreceiptscoveringshared5ps,thenincrements5ps",
+  "native_MD_dt_ps": 0.0005,
+  "first5ps_forecast_est": "about22:15ESTNov25beforevalidation/analysis",
+  "Nano_retry_controller": "mechanism_nano_autotune_off_20261125",
+  "Nano_cases_completed": 0
+}

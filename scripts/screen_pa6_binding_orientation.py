@@ -33,6 +33,7 @@ from nyl12_covalent.catalytic_alignment_geometry import (  # noqa: E402
     fit_coordinates,
     state_metrics,
 )
+from nyl12_covalent.native_thr_policy import geometry_eligible, policy_metadata  # noqa: E402
 
 
 def read_atoms(path: Path) -> dict:
@@ -130,6 +131,7 @@ def measure(site: dict, ligand: dict, reference: dict) -> dict[str, Any]:
         and abs(row["chi1_delta"]) <= 20
     )
     row["joint_pass"] = row["native_pass"] and row["tier"] in ("A", "B")
+    row["selection_eligible"] = geometry_eligible(row["tier"])
     return row
 
 
@@ -181,6 +183,7 @@ def main() -> None:
         Path(__file__),
         ROOT / "src/nyl12_covalent/active_site_geometry.py",
         ROOT / "src/nyl12_covalent/catalytic_alignment_geometry.py",
+        ROOT / "src/nyl12_covalent/native_thr_policy.py",
         LEGACY / "scripts/analyze_nyl12_nma_four_site_geometry.py",
         args.manifest,
     ):
@@ -188,6 +191,8 @@ def main() -> None:
             {"path": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
         )
     summary = {
+        "selection_policy": policy_metadata(),
+        "eligible_candidates": [r for r in rows if r["selection_eligible"]],
         "models": len(entries),
         "site_ligand_pairs": len(rows),
         "input_hashes": sources,

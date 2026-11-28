@@ -1,0 +1,302 @@
+{
+  "status": "PI_APPROVED_POSITIVE_POSE_REFERENCE",
+  "target_phi_sign": 1,
+  "scope": "noncovalent_ES_design_model_selection_only; no phi restraint added to MD/QMMM or reactive-state filtering",
+  "PI_confirmation": "Positive phi is what we want. Please fix your mistake.",
+  "created_utc": "2026-11-27T21:32:16.794310+00:00",
+  "projection_plane": [
+    "substrate_carbonyl_O",
+    "substrate_amide_N",
+    "substrate_acyl_adjacent_C"
+  ],
+  "ordered_torsion": [
+    "Thr_OG1",
+    "substrate_carbonyl_O",
+    "projected_substrate_carbonyl_C",
+    "substrate_acyl_adjacent_C"
+  ],
+  "Thr_Nalpha_in_phi": false,
+  "source_phi_math_changed": false,
+  "previous_negative_target": "assistant interpretation error; withdrawn; preserve numerical/historical diagnostics",
+  "screen_side_rule": "not a mathematical sign definition; compare using unchanged protein-reference camera",
+  "reference_measurements": [
+    {
+      "state": "before",
+      "site": "AE",
+      "ligand": "I",
+      "ordered_function_atoms": [
+        [
+          "E",
+          1,
+          "OG1"
+        ],
+        [
+          "I",
+          1,
+          "O50"
+        ],
+        [
+          "I",
+          1,
+          "C55"
+        ],
+        [
+          "I",
+          1,
+          "N57"
+        ],
+        [
+          "I",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 89.47936802834703,
+      "legacy_tier": "reject"
+    },
+    {
+      "state": "before",
+      "site": "BF",
+      "ligand": "J",
+      "ordered_function_atoms": [
+        [
+          "F",
+          1,
+          "OG1"
+        ],
+        [
+          "J",
+          1,
+          "O50"
+        ],
+        [
+          "J",
+          1,
+          "C55"
+        ],
+        [
+          "J",
+          1,
+          "N57"
+        ],
+        [
+          "J",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 81.19637103455487,
+      "legacy_tier": "reject"
+    },
+    {
+      "state": "before",
+      "site": "CG",
+      "ligand": "K",
+      "ordered_function_atoms": [
+        [
+          "G",
+          1,
+          "OG1"
+        ],
+        [
+          "K",
+          1,
+          "O50"
+        ],
+        [
+          "K",
+          1,
+          "C55"
+        ],
+        [
+          "K",
+          1,
+          "N57"
+        ],
+        [
+          "K",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 86.71441215526525,
+      "legacy_tier": "reject"
+    },
+    {
+      "state": "before",
+      "site": "DH",
+      "ligand": "L",
+      "ordered_function_atoms": [
+        [
+          "H",
+          1,
+          "OG1"
+        ],
+        [
+          "L",
+          1,
+          "O50"
+        ],
+        [
+          "L",
+          1,
+          "C55"
+        ],
+        [
+          "L",
+          1,
+          "N57"
+        ],
+        [
+          "L",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 78.200885183991,
+      "legacy_tier": "reject"
+    },
+    {
+      "state": "after",
+      "site": "AE",
+      "ligand": "I",
+      "ordered_function_atoms": [
+        [
+          "E",
+          1,
+          "OG1"
+        ],
+        [
+          "I",
+          1,
+          "O50"
+        ],
+        [
+          "I",
+          1,
+          "C55"
+        ],
+        [
+          "I",
+          1,
+          "N57"
+        ],
+        [
+          "I",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 85.40774368284815,
+      "legacy_tier": "A"
+    },
+    {
+      "state": "after",
+      "site": "BF",
+      "ligand": "J",
+      "ordered_function_atoms": [
+        [
+          "F",
+          1,
+          "OG1"
+        ],
+        [
+          "J",
+          1,
+          "O50"
+        ],
+        [
+          "J",
+          1,
+          "C55"
+        ],
+        [
+          "J",
+          1,
+          "N57"
+        ],
+        [
+          "J",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 88.22795956551624,
+      "legacy_tier": "A"
+    },
+    {
+      "state": "after",
+      "site": "CG",
+      "ligand": "K",
+      "ordered_function_atoms": [
+        [
+          "G",
+          1,
+          "OG1"
+        ],
+        [
+          "K",
+          1,
+          "O50"
+        ],
+        [
+          "K",
+          1,
+          "C55"
+        ],
+        [
+          "K",
+          1,
+          "N57"
+        ],
+        [
+          "K",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 84.20250615291627,
+      "legacy_tier": "A"
+    },
+    {
+      "state": "after",
+      "site": "DH",
+      "ligand": "L",
+      "ordered_function_atoms": [
+        [
+          "H",
+          1,
+          "OG1"
+        ],
+        [
+          "L",
+          1,
+          "O50"
+        ],
+        [
+          "L",
+          1,
+          "C55"
+        ],
+        [
+          "L",
+          1,
+          "N57"
+        ],
+        [
+          "L",
+          1,
+          "C63"
+        ]
+      ],
+      "phi_deg": 87.3658666032884,
+      "legacy_tier": "A"
+    }
+  ],
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/boltz_template_seed20261126_before/canonical_mature_local.pdb": "e147907de04a3641463be483f28fcf65b13797bba2eb7ee4379b1a14da6ae0c0",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/boltz_template_seed20261126_after/canonical_mature_local.pdb": "f8e91b8437f21c26041f185375140f80179eeb0e4c771776c43e1f3b30da766e",
+    "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/active_site_geometry.py": "d7d765924d4fac813151716c0109e3f1897fa0ab3437db4541dc5c7783df208b",
+    "/home/jpc/.codex-hosts/violet/attachments/2020e639-9ad5-4a06-b568-ad81a9645229/codex-clipboard-1b9922e9-0ca5-4eb2-b613-d1b58bfbb767.png": "582254aec638b0f491bafdd99adadbc07c8afd0528c54507245edc98e2ef6513"
+  }
+}

@@ -100,3 +100,42 @@ also failed (zero NTR/CTR groups; 2,840 diagnostics); no full Nyl12 titration
 was run. Rejection receipts are preserved under
 `analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/` and
 `analysis/nyl12_mcce_step1_preflight_20261116/neutral_replica_02_frame284_attempt2/`.
+
+## Additional input audit during tool qualification (2026-11-20)
+
+The new mechanism-agent adapter requires canonical residue names and checks
+all predicted physical-chain terminal groups. It found that the historical
+Amber-derived Nyl12 protein PDB used HIE and generated no HIS summary groups
+in PROPKA 3.5.1. A separate, explicitly HIE-to-HIS normalized copy now generates
+28 HIS groups while preserving every coordinate and chain/residue identifier.
+This preparation difference is recorded; historical values remain unchanged
+and must not be silently replaced or treated as a matched comparison.
+
+The stricter native mature5XYG trial also failed its declared-terminal gate:
+PROPKA reported no C-266 groups for alpha chains A/B, while N+ groups occurred
+at coordinate starts 19A and 3B. Therefore even the earlier beta-N-terminal
+correction does not establish complete terminal preparation of this full model.
+Validate missing-tail/construct interpretation and alpha C-terminal chemistry
+before reusing this input as accepted pKa evidence. No atom coordinates were
+changed to force a pass; numerical history and the failed new check are kept.
+This preparation finding is not evidence that a particular Asp is protonated.
+
+Exact native outputs, preparations and rejection receipts are retained in the
+private `/data/jpc/mechanism-agent` project under
+`runs/pka_tools_validation_20261120/` and `evidence/pka_tool_inputs_20261120/`.
+The active registry enables the validated complete Nyl12 input only. The
+previous MCCE rejection remains in force; no new MCCE calculation was run.
+
+## MCCE preparation diagnosis corrected (2026-11-20)
+
+The complete Nyl12 MCCE failure has now been traced to four-column PDB atom
+name alignment, not an anomalous need to change the terminal bond cutoff.
+The ddvv comparison is squared distance; its 3.0 threshold corresponds to
+1.732 Å. Correcting atom-name fields while retaining all OXT and coordinates
+yields eight NTR and eight CTR groups with zero native errors and zero heavy
+atom displacement. Historical rejection receipts remain as recorded.
+
+A matched-coordinate native MCCE/DelPhi pilot is running. Its results will be
+preliminary and need sampling, parameter/dielectric and structural-ensemble
+review before interpretation. See `mcce_preparation_repair_20261120.md` for
+exact settings, audits, preserved execution failures and active state files.

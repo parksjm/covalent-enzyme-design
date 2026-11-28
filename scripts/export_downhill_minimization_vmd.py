@@ -13,12 +13,19 @@ import shutil
 import struct
 import subprocess
 import tempfile
+import sys
 from pathlib import Path
 from typing import Any
 
 import numpy as np
 import parmed as pmd
 
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
+from nyl12_covalent.vmd_style_refresh import append_file_policy  # noqa: E402
+from scripts.export_direct_pt_progress import QM_INDICES  # noqa: E402
 
 CAMPAIGN = Path(
     "qmmm/pa6_flipped_model30/05_neutral_reaction_path/"
@@ -415,6 +422,11 @@ def main() -> None:
     output.mkdir()
     shutil.copy2(source_topology, output / "stripped.parm7")
     (output / "view_downhill_minimizations.vmd").write_text(vmd_script())
+    append_file_policy(
+        output / "view_downhill_minimizations.vmd",
+        output / "stripped.parm7",
+        [i - 1 for i in QM_INDICES],
+    )
     (output / "README.md").write_text(
         "# PA6 DFTB3/MM endpoint minimization trace\n\n"
         "Load with `source /absolute/path/view_downhill_minimizations.vmd`. "

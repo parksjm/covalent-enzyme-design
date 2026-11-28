@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-27T15:27:17.536411+00:00",
+  "reason": "Working sources generalized AFTER frozen45ps publication; original source_provenance and figures unchanged.",
+  "changes": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/reaction_distance_stats.py",
+      "frozen_45ps_source_sha256": "af3112f8c9f61cafb7cba8f98ec6117ac5644b1af4969d60ae9c9af27dbf9114",
+      "generic_working_source_sha256": "dc86801d17b8c2dc1f3b641e47dbc7d1ddc9f0b4d843f674de41ce8a9f660770"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/scripts/plot_relay_reaction_distance_statistics.py",
+      "frozen_45ps_source_sha256": "a64006effb992a924f106c0d50a1a208f24a15f21893c8df1fc139bf3ece3db2",
+      "generic_working_source_sha256": "12be7f31b8ebb4d6b79c76334e71f97e8c32778a51a1ef262d99e911469ac5b9"
+    }
+  ],
+  "selection_policy": "Exact manifest blocks and horizon; once-only initial5ps discard; timestamp-defined early/late5ps; actual frame counts and phase boundaries.",
+  "verification": "8tests passed;98percent extraction/statistics module coverage; Ruff check and format passed; frozen SHA256SUMS entries verified unchanged."
+}

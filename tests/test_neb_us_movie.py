@@ -52,7 +52,7 @@ def test_validate_block_rejects_unfinished_process(tmp_path: Path) -> None:
     (block / "process.json").write_text(json.dumps({"exit_status": 2}))
     (block / "acceptance.json").write_text("{}")
     with pytest.raises(ValueError, match="process did not succeed"):
-        _validate_block(block, "x", 1)
+        _validate_block(block, "x", 1, [1])
 
 
 def test_validate_block_requires_valid_acceptance(tmp_path: Path) -> None:
@@ -60,8 +60,8 @@ def test_validate_block_requires_valid_acceptance(tmp_path: Path) -> None:
     block.mkdir()
     (block / "process.json").write_text(json.dumps({"exit_status": 0}))
     (block / "acceptance.json").write_text(json.dumps({"completed_steps": 1}))
-    with pytest.raises(ValueError, match="acceptance failed"):
-        _validate_block(block, "x", 1)
+    with pytest.raises(ValueError, match="Unknown production acceptance schema"):
+        _validate_block(block, "x", 1, [1])
 
 
 def test_validate_block_rejects_bad_trajectory_digest(tmp_path: Path) -> None:
@@ -81,7 +81,7 @@ def test_validate_block_rejects_bad_trajectory_digest(tmp_path: Path) -> None:
     obs = {"source_sha256": {str(block / "trajectory.nc"): "bad"}}
     (block / "observables" / "observables.json").write_text(json.dumps(obs))
     with pytest.raises(ValueError, match="Trajectory hash mismatch"):
-        _validate_block(block, "topology", 1)
+        _validate_block(block, "topology", 1, [1])
 
 
 def test_validate_block_accepts_hashed_native_records(tmp_path: Path) -> None:
@@ -92,7 +92,10 @@ def test_validate_block_accepts_hashed_native_records(tmp_path: Path) -> None:
         nc.createDimension("frame", 100)
         nc.createDimension("atom", 3)
         nc.createDimension("spatial", 3)
-        nc.createVariable("coordinates", "f", ("frame", "atom", "spatial"))
+        coordinates = nc.createVariable(
+            "coordinates", "f", ("frame", "atom", "spatial")
+        )
+        coordinates[:] = [[[0.0, 0.0, 0.0], [2.0, 0.0, 0.0], [0.0, 2.0, 0.0]]] * 100
         times = nc.createVariable("time", "f", ("frame",))
         times.units = b"picosecond"
         times[:] = list(range(100))
@@ -126,7 +129,9 @@ def test_validate_block_accepts_hashed_native_records(tmp_path: Path) -> None:
         )
     )
 
-    source, metadata = _validate_block(block, _sha256(topology), 3)
+    source, metadata = _validate_block(
+        block, _sha256(topology), 3, [20, 40, 60, 80, 100]
+    )
 
     assert source == trajectory
     assert len(metadata["times"]) == 100
@@ -136,6 +141,43 @@ def test_validate_block_accepts_hashed_native_records(tmp_path: Path) -> None:
         str(acceptance_path),
         str(obs_path),
     }
+    acceptance_path.write_text(
+        json.dumps(
+            {
+                "accepted": True,
+                "completed_steps": 10000,
+                "final_temperature_K": 300.0,
+                "temperature_gate_K": [250, 350],
+                "finite_energy_temperature": True,
+                "every_integration_step_SCC_converged": True,
+                "electronic_history": {
+                    "passed": True,
+                    "verified_scc_history": True,
+                    "recovered_trials": [{"trial": 1, "recovered": True}],
+                    "unresolved_trials": [],
+                    "fatal_markers": [],
+                },
+                "frozen_outer_max_displacement_A": 0.0,
+            }
+        )
+    )
+    _validate_block(block, _sha256(topology), 3, [20])
+
+    with netcdf_file(trajectory, "a") as nc:
+        nc.variables["coordinates"][:] = 0.0
+    obs_path.write_text(
+        json.dumps(
+            {
+                "frames": 100,
+                "source_sha256": {
+                    str(trajectory): _sha256(trajectory),
+                    str(topology): _sha256(topology),
+                },
+            }
+        )
+    )
+    with pytest.raises(ValueError, match="coordinates are invalid"):
+        _validate_block(block, _sha256(topology), 3, [20])
 
 
 def test_hash_test_fixture_is_stable() -> None:
@@ -144,8 +186,9 @@ def test_hash_test_fixture_is_stable() -> None:
     )
 
 
+@pytest.mark.parametrize("use_continuation", [False, True])
 def test_export_part_orders_windows_and_preserves_qm_water(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, use_continuation: bool
 ) -> None:
     campaign = tmp_path / "campaign"
     campaign.mkdir()
@@ -154,7 +197,11 @@ def test_export_part_orders_windows_and_preserves_qm_water(
     windows = [
         {
             "label": label,
-            "bias": {"q_acyl_center": -1.7, "q_h_center": -1.4},
+            "chart": "activation" if label == "window_001" else "delivery",
+            "bias": {
+                "feature_names": ["q_acyl", "q_act"],
+                "centers_A": [-1.7, -1.4],
+            },
             "stages": [
                 {"kind": "production", "label": f"block_{i}"} for i in range(1, 7)
             ],
@@ -164,6 +211,11 @@ def test_export_part_orders_windows_and_preserves_qm_water(
     (campaign / "prepared.json").write_text(
         json.dumps({"topology": str(topology), "windows": windows})
     )
+    override = None
+    if use_continuation:
+        override = tmp_path / "continuation_prepared.json"
+        override.write_text((campaign / "prepared.json").read_text())
+        (campaign / "prepared.json").write_text("{}")
     cpptraj = tmp_path / "cpptraj"
     cpptraj.write_text("stub")
     output = tmp_path / "out"
@@ -171,10 +223,17 @@ def test_export_part_orders_windows_and_preserves_qm_water(
     monkeypatch.setattr(
         neb_us_movie,
         "_validate_block",
-        lambda block, _, __: (
+        lambda block, _, __, ___: (
             block / "trajectory.nc",
             {
                 "observables": {"qm_atom_ids": [2]},
+                "roles_1based": {
+                    "carbon": 2,
+                    "leaving_n": 2,
+                    "og1": 2,
+                    "hg1": 2,
+                    "nalpha": 2,
+                },
                 "times": list(range(100)),
                 "time_units": "ps",
                 "trajectory_sha256": "b" * 64,
@@ -203,14 +262,32 @@ def test_export_part_orders_windows_and_preserves_qm_water(
         (script.parent / "part.dcd").write_text("trajectory")
 
     monkeypatch.setattr(neb_us_movie, "_cpptraj", fake_cpptraj)
-    monkeypatch.setattr(neb_us_movie, "dcd_counts", lambda _: (60, 2))
-    manifest = export_part(campaign, ["window_002", "window_001"], cpptraj, output)
+    monkeypatch.setattr(neb_us_movie, "dcd_counts", lambda _: (40, 2))
+    manifest = export_part(
+        campaign,
+        ["window_002", "window_001"],
+        cpptraj,
+        output,
+        production_blocks=4,
+        prepared_manifest=override,
+    )
 
     assert manifest["windows"] == ["window_001", "window_002"]
-    assert manifest["frames"] == 60
+    assert manifest["window_charts"] == {
+        "window_001": "activation",
+        "window_002": "delivery",
+    }
+    assert manifest["frame_plan"][0]["bias_centers_A"] == {
+        "q_acyl": -1.7,
+        "q_act": -1.4,
+    }
+    if use_continuation:
+        assert str(override) in manifest["source_sha256"]
+        assert (campaign / "prepared.json").read_text() == "{}"
+    assert manifest["frames"] == 40
     assert manifest["original_atom_ids_1based"] == [1, 2]
     assert manifest["qm_atom_ids_1based"] == [2]
     assert manifest["frame_plan"][0]["source_frame1based"] == 20
-    assert manifest["frame_plan"][-1]["output_frame0based"] == 59
+    assert manifest["frame_plan"][-1]["output_frame0based"] == 39
     assert (output / "manifest.json").is_file()
     assert "!@2" in (output / "write_trajectory.in").read_text()

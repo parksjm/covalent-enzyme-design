@@ -1,0 +1,750 @@
+[
+  {
+    "case": "WT_seed_20261126",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 4
+  },
+  {
+    "case": "WT_seed_20261127",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          102,
+          222
+        ],
+        "template_indices0": [
+          86,
+          206
+        ],
+        "matched_positions": 120,
+        "misregistered_positions": [
+          [
+            102,
+            93
+          ]
+        ]
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          93
+        ],
+        "template_indices0": [
+          0,
+          93
+        ],
+        "matched_positions": 93,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 4
+  },
+  {
+    "case": "relay_02_seed_20261126",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 0
+  },
+  {
+    "case": "relay_02_seed_20261127",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 0
+  },
+  {
+    "case": "relay_23_seed_20261126",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 0
+  },
+  {
+    "case": "relay_23_seed_20261127",
+    "records": [
+      {
+        "query_chain": "A",
+        "template_chain": "A",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "B",
+        "template_chain": "B",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "C",
+        "template_chain": "C",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "D",
+        "template_chain": "D",
+        "query_indices0": [
+          103,
+          222
+        ],
+        "template_indices0": [
+          87,
+          206
+        ],
+        "matched_positions": 119,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "E",
+        "template_chain": "E",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "F",
+        "template_chain": "F",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "G",
+        "template_chain": "G",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      },
+      {
+        "query_chain": "H",
+        "template_chain": "H",
+        "query_indices0": [
+          0,
+          92
+        ],
+        "template_indices0": [
+          0,
+          92
+        ],
+        "matched_positions": 92,
+        "misregistered_positions": []
+      }
+    ],
+    "index_mismatch_count": 0
+  }
+]

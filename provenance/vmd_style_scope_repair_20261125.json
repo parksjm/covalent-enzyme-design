@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-11-25T18:22:24.923772+00:00",
+  "plan": "/tmp/nyl12_vmd_style_scope_plan_20261125.json",
+  "applied": true,
+  "movies": [
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "keys": [
+          "original_atom_ids_1based",
+          "qm_atom_ids_1based"
+        ],
+        "kind": "manifest_original_to_display_mapping",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/manifest.json",
+        "viewer_first_licorice_contains_qm": true
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+          "backup": "clutter/vmd_style_20261125_scope_repair/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
+          "before_sha256": "3c0c22d2abff04192bed27cfa3d6e31af2250025d01a432a8de420b64d1636ed",
+          "after_sha256": "9033dbdf21eced0059d27d690500ad5e402499e5652116945cdbff89ea2d0ccf"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125_scope_repair/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/MANIFEST.sha256",
+          "before_sha256": "3f9bf48b531fb3d53c67f68e40d14d798916487aacc57ed9b38920b92631ed8c",
+          "after_sha256": "8a09c26f7df7cf0c90dd5d59f7ad8e1b5489d9d0dfad60ca07b26b0eca1479e6"
+        }
+      ],
+      "checksum_failures": []
+    },
+    {
+      "viewer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+      "qm_count": 98,
+      "qm_evidence": {
+        "count": 98,
+        "key": "qm_atom_count",
+        "kind": "viewer_literal_selection_validated_by_manifest_count",
+        "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/frame_manifest.json",
+        "selection_line": 27
+      },
+      "before_checksum_failures": [],
+      "changes": [
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+          "backup": "clutter/vmd_style_20261125_scope_repair/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/view_hydration.vmd",
+          "before_sha256": "0c05c3317a59494bda4a422efdda5199f903f3974dd99ca371d3cb27b9d43c30",
+          "after_sha256": "034ce36020a512665ce720bc467a1330fa12be5561387dfe5cf60f6e99a1d4c9"
+        },
+        {
+          "path": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/MANIFEST.sha256",
+          "backup": "clutter/vmd_style_20261125_scope_repair/qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance/vmd_progress/MANIFEST.sha256",
+          "before_sha256": "8a412596b4bf1b2f2d157182d48d906cc7d260db0ac3fbcac2f24a52bc2e1049",
+          "after_sha256": "e27d1f0938aeb0b5209c0848bc70d40801b15e3251422dee0a062dbb1e715cec"
+        }
+      ],
+      "checksum_failures": []
+    }
+  ],
+  "failures": []
+}

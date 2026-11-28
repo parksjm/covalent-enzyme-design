@@ -1,0 +1,832 @@
+{
+  "title": "Mechanism-guided redesign of the nylon hydrolase Nyl12",
+  "as_of": "2026-11-27",
+  "scientific_status": "Provisional acylation PMF; TS verification unresolved;24 structural sequence proposals, no activity validation.",
+  "slides": [
+    {
+      "kind": "title",
+      "title": "Mechanism-guided redesign of the nylon hydrolase Nyl12",
+      "subtitle": "Quantum mechanics/molecular mechanics (QM/MM) reaction pathways and transition-state-based enzyme design",
+      "notes": "Research progress briefing. Build date is rendered dynamically in America/New_York. The scientific evidence date is 27 November 2026. Nyl12 is a nylon-6 oligomer hydrolase; the current modeling target is a bounded redesign pilot, not an experimentally validated new enzyme. The cover image is a white-background molecular rendering from source-bound structures; hydrogen atoms are grey (#B8B8B8) and sticks use the validated 0.18 Å display setting. Updated cover: PyMOL central-register TS-like template; heavy atoms only, no fabricated hydrogens; source assets/structures/provenance.json.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mol_blender/attempt_20261125_1620_retry01/relay_candidate_white_greyH.png"
+      ],
+      "image": "assets/structures/ts_like.png",
+      "title_size": 34
+    },
+    {
+      "kind": "process",
+      "title": "A transition-state ensemble will guide Nyl12 redesign",
+      "lanes": [
+        {
+          "title": "Model",
+          "steps": [
+            "Reaction mechanism",
+            "Transition-state search",
+            "Validated templates"
+          ]
+        },
+        {
+          "title": "Design",
+          "steps": [
+            "LigandMPNN",
+            "Boltz-2",
+            "OpenMM, shortlist\nand validation"
+          ]
+        }
+      ],
+      "font_size": 24,
+      "notes": "The design objective is to create qualified transition-state (TS) templates from the WT mechanism, then use them to guide sequence design. LigandMPNN proposes sequences around constrained templates; Boltz-2 ranks structural compatibility; OpenMM evaluates matched molecular-dynamics behavior. TS means transition state. The engineering pipeline can be commissioned by 30 November, while nomination requires qualified WT templates and existing scientific gates.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "PA6 hydrolysis motivates a more efficient Nyl12",
+      "columns": [
+        "Evidence",
+        "Interpretation"
+      ],
+      "rows": [
+        [
+          "Products assayed",
+          "PA6 L2, L3 and L4; L3 predominates (PI)."
+        ],
+        [
+          "Lysate assay",
+          "75 °C, 6 h; active enzyme amount uncertain."
+        ],
+        [
+          "K59E duplicates",
+          "Discordant; unsuitable as a clean activity label."
+        ],
+        [
+          "Purified enzyme",
+          "65 °C, 24 h; a separate assay context."
+        ]
+      ],
+      "notes": "PA6 is nylon-6. The 20 November manuscript lists PA6 linear dimer/trimer/tetramer MRM transitions (P0089), and PA6 L2/L3/L4 (P0092). PA6 L1 is not a listed target; this does not prove its chemical absence. L3 predominance is PI interpretation pending raw-assay verification. Crude lysate endpoint conversion cannot determine kcat or ΔG‡. The lysate uses 200 mM Tris pH8; temperature-adjusted pH and active concentration are uncertain. K59E duplicate disagreement must remain explicit.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/evidence/commercial_polyamides_20261127/source_1_paragraphs.txt",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        3.1,
+        9.1
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "two_images",
+      "title": "Cleavage exposes the catalytic Thr233 N terminus",
+      "font_size": 24,
+      "notes": "The mature enzyme is an autocleaved N-terminal nucleophile hydrolase. The α chain comprises residues 1–232 and the β chain starts at Thr233 (residues 233–328). Autocleavage exposes Thr233 at the β-chain N terminus. The Thr233 side-chain hydroxyl initiates acylation; the newly exposed α-amino group is a candidate proton acceptor in a relay hypothesis. Phe113 and Asn186 form oxyanion-hole contacts in the modeled active site. Water-mediated deacylation regenerates the enzyme and releases the carboxyl product; the current pathway campaign focuses on acylation, and hydration/deacylation has not established complete hydrolysis. Exact intersubunit mapping: occupied A/E site ligandI borders chainD95–103 (minimum heavy-atom distance3.623Å) and chainF289–300 (2.768Å); same-unit loops are distant25/31Å. DeepblueD95–103 and orange-redF289–300 identify design priorities, not already-run deletions. Existing oldCIF masks are not clean95–103+tail masks;3_loops/x125 omits95–104,115–121,151–164 and retains289–300. Inputs contain PEG/PGE/water, not PA6. Map author chains explicitly and preserve full-length query.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/nyl12_mature_assembly_mapping.json",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261127/assets/structures/provenance.json"
+      ],
+      "title_size": 34,
+      "images": [
+        "assets/structures/assembly_loops.png",
+        "assets/structures/loops_pocket.png"
+      ],
+      "labels": [
+        "Mature α/β assembly",
+        "D95–103 first; F289–300 next"
+      ],
+      "caption": "Thr233 starts the β chain; adjacent subunits border the occupied A/E pocket."
+    },
+    {
+      "kind": "table",
+      "title": "PA6 L4 is a finite model of a longer polymer",
+      "columns": [
+        "Model choice",
+        "Scientific scope"
+      ],
+      "rows": [
+        [
+          "Zwitterionic L4",
+          "Finite four-repeat model of long-chain nylon-6."
+        ],
+        [
+          "Relay PES / PMF",
+          "Middle amide → L2 + L2."
+        ],
+        [
+          "New WT pose controls",
+          "End-adjacent amide → L3 + L1."
+        ],
+        [
+          "Assay limits",
+          "L2/L3/L4 quantified; PA6 L1 not a target."
+        ]
+      ],
+      "notes": "The finite L4 proxy permits atomistic modeling but does not recreate bulk-polymer access or an experimentally established cleavage register. Central cleavage was selected from modeled catalytic contacts; it is not inferred from L3 product predominance. Manuscript passages P0054/P0061 identify chain D residues95–103 and chain B residues289–300; P0057 extends contact analysis to95–106. Keep ligand graph mapping and terminal chemistry explicit; sample alternate amides rather than forcing central cleavage in new predictions. Graph audit27Nov: current selected C55/O50/N57 is residue3 P6I C/O to residue4 P6C N; cut3|4 givesL3+L1. Original relay C54/N59 is central2|2. These registers cannot be equated. PA6 L1 not targeted does not establish absence. General cleavage objective permits any amide, with register recorded. Loop priorities95–103 then289–300; reuse existing loop/tail-omitted crystal template coordinates with full-length query before considering true indels (not run). Exact bond-unit convention: middle bond links unit2 to unit3 (2|3); end-adjacent bond links unit3 to unit4 (3|4). Fragment lengths are2+2 and3+1 respectively; do not confuse fragment lengths with bond-unit indices.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/evidence/commercial_polyamides_20261127/source_1_paragraphs.txt",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_source.mol2",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/boltz_validation/configuration/whole_l4_context_mapping.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        3.0,
+        9.2
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "image",
+      "title": "The approved substrate pose has positive φ",
+      "image": "assets/substrate_orientation_comparison_cropped.png",
+      "caption": "Current φ convention; Nα–N measures Thr233 amine to leaving-amide nitrogen.",
+      "notes": "The PI-approved substrate orientation is POSITIVE phi under the current ordered mathematical convention. The right panel is approved (+96.435 degrees), with Thr233 Nalpha–leaving amide N=3.61882A; the left panel is opposite (−105.481 degrees), distance4.58775A. These values and all underlying coordinates are unchanged. Prior negative-only advancement advice was incorrect and is withdrawn. projected_herschlag_phi(OG1,Ocarbonyl,Ccarbonyl,Namide,CadjacentC) projects carbonylC onto the plane through Ocarbonyl,Namide,CadjacentC, then takes the signed torsion OG1→Ocarbonyl→Cprojected→CadjacentC. For current selected control amide: O50,C55,N57,C63. Thr Nalpha is NOT an input to phi; it belongs to a separate proton-delivery distance. Both substrate-amideN and proteinN appearing on the right is a recognition cue only in the prescribed protein-aligned camera, not a mathematical definition. Matched molecular views use proper protein-based rotations without reflection: Thr233 below,Phe113 upperleft,Asn186 upperright,proteinNterminusright. Never mirror a ligand to manufacture similarity. Geometry/phi orientation alone does not prove relay chemistry or activity. The approved_positive_pose_reference_20261127.json independently validates the Boltz positive-phi reference against all eight before/after sites, source coordinates, image hashes and PI confirmation. The active-site camera uses protein-based proper rotations only, with Thr233 below, Phe113 upper left, Asn186 upper right and protein N terminus right; ligand poses are never mirrored.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/analysis/wt_pose_orientation_examples_20261123/side_by_side.png",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json"
+      ],
+      "title_size": 34,
+      "caption_size": 20,
+      "takeaway": "Left: opposite (−φ), 4.59 Å     Right: approved (+φ), 3.62 Å"
+    },
+    {
+      "kind": "image",
+      "title": "RESP/GAFF2 bonded profiles pass eight targeted checks",
+      "image": "assets/pa6_l4_bonded_representatives.png",
+      "caption": "Two representative profiles; all eight declared bonded-profile gates passed.",
+      "notes": "The current PA6 L4 release passes all eight declared bonded-profile gates. The parameterization combines RESP charges, GAFF2 substrate terms, ff19SB protein and TIP3P water. The compact-conformer electrostatic holdout failed, so the release is scoped to the validated zwitterionic L4 model and bonded validation; it is not a blanket validation of all PA6 electrostatics or reactive states. The existing capped models use legacy charge-method-unverified and are not covered by this RESP-quality claim. Legacy GASTEIGER inputs do not certify the final charge method. No new capped parameter release or register campaign is planned before30 November.",
+      "sources": [
+        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure3_eight_bonded_profiles.png",
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "image",
+      "title": "Three independent trajectories support the L4 model",
+      "image": "assets/pa6_l4_md_stability.png",
+      "caption": "Three 500 ps validation replicas; stability supports the stated L4 use only.",
+      "notes": "The parameter release passed three 500 ps validation replicas for zwitterionic L4. These are force-field validation simulations, separate from WT enzyme protonation-state MD. Stability does not validate a reactive TI1/acyl state, arbitrary chain length, or nylon material behavior. The compact electrostatic holdout failure remains a documented limitation.",
+      "sources": [
+        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure4_md_stability.png",
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "cards",
+      "title": "The NylC proposal motivates explicit protonation tests",
+      "cards": [
+        {
+          "title": "NylC proposal",
+          "text": "Asp306 was proposed protonated."
+        },
+        {
+          "title": "Residue mapping",
+          "text": "Asp306 → Nyl12 Asp272."
+        },
+        {
+          "title": "QM/MM relaxation",
+          "text": "ASH272 → ASH274."
+        },
+        {
+          "title": "Interpretation",
+          "text": "Motivates testing; assigns no pKa population."
+        }
+      ],
+      "font_size": 24,
+      "notes": "Negoro et al. (2023) motivates evaluating the Asp pair, but the reported NylC mechanistic proposal does not assign a protonation state to mature Nyl12. Mapping is Asp306→Asp272, Asp308→Asp274, Thr267→Thr233. Precursor structures vary in mutations and cleavage state, confounding maturation comparisons. The mature Nyl12 active-site environment is not identical to the NylC precursor site. The early Nyl12 ASH272 hypothesis followed the NylC Asp306 proposal. Exploratory QM/MM optimizations transferred that proton to Asp274, motivating a matched ASH274 WT MD follow-up. This is an observed model relaxation, not a pKa population assignment or proof that Nyl12 Asp274 is protonated.",
+      "sources": [
+        "https://doi.org/10.1111/febs.16755",
+        "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "Static pKa estimates do not resolve protonation",
+      "columns": [
+        "Structure",
+        "Asp1 pKa",
+        "Asp2 pKa",
+        "Thr Nα pKa"
+      ],
+      "rows": [
+        [
+          "Nyl12, site E",
+          "0.88–2.37",
+          "3.44–6.95",
+          "8.93–9.70"
+        ],
+        [
+          "Mature NylC 5XYG",
+          "2.19–2.21",
+          "5.49–6.49",
+          "6.35–6.55"
+        ],
+        [
+          "Precursor NylC 7YU0",
+          "4.92–6.34",
+          "4.18–6.37",
+          "Not free"
+        ],
+        [
+          "Precursor NylC 7YU1",
+          "6.36–6.39",
+          "4.24–6.53",
+          "Not free"
+        ]
+      ],
+      "widths": [
+        4.3,
+        2.5,
+        2.5,
+        2.7
+      ],
+      "table_height": 4.3,
+      "font_size": 24,
+      "caption": "PROPKA structure/chain ranges; MCCE is quantitatively unqualified.",
+      "notes": "These are default PROPKA estimates across retained structure/chain preparations; ranges are observed across structures/chains, not confidence intervals. Nyl12 primary site E includes three static geometries: Asp272 0.88–2.37, Asp274 3.44–6.95, Thr233 Nα 8.93–9.70. Mature NylC 5XYG default estimates are Asp306 2.19–2.21, Asp308 5.49–6.49, and Thr267 N 6.35–6.55. Uncleaved precursor structures 7YU0 and 7YU1 contain mutations; they were not back-mutated, so cleavage and mutation effects are confounded. The Thr N terminus is not free in these uncleaved structures. Coupled-state alternatives vary substantially and are not a unique assignment. MCCE quality checks are incomplete; its values are not interpreted. A ~3.91 Å nearest Asp O–O separation is discussed in the NylC mechanism notes, not mixed into this pKa table. Latest20November complete-Nyl12 MCCE diagnostic finished but curves were mostly saturated overpH0–14; Asp272 sigmoid fit disagreed with midpoint, His257 label contradicted curve, and FTPL/legacy proline parameters differed. No quantitative catalytic MCCE pKa accepted. Matched HIS-normalized snapshot PROPKA acrosssites: ThrN7.06–9.70,Asp2721.02–1.99,Asp2742.95–4.37. These are different conformer/protonation preparations from the3snapshot primary-siteE ranges tabulated here; do not pool them as uncertainty intervals. No automatic protonation-state assignment follows.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md",
+        "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "image",
+      "title": "Asp274 protonation did not improve WT geometry",
+      "image": "assets/wt_protonation_occupancy.png",
+      "caption": "Four independent trajectories per state; bars = mean, error bars = sample SD.",
+      "notes": "The plotted observable is the fraction of frames meeting either the stringent or broader defined attack/oxyanion-hole geometry set. Means ± between-replica SD: NH2/ASP272/ASP274 27.77 ± 24.64%; NH2/ASP272/ASH274 5.18 ± 6.80%; NH3+/ASP272/ASP274 28.99 ± 12.99%. Native-Thr occupancy is 0.0175%, 0.245%, and 0%, respectively. These are correlated structural observations from four replicas, not activity, rate, or protonation population. The ASH274 state did not improve occupancy under this matched protocol. Matched four100ns replicas per state; neutral Thr Nα with ASP272/ASP274, neutral Nα with ASP272/ASH274, and protonated Nα with ASP272/ASP274. These fixed-charge occupancies do not establish equilibrium protonation populations. PROPKA is structure-dependent; MCCE validation incomplete. Negoro2023 AspCOOH inference is circumstantial and precursor mutagenesis confounds maturation with mature hydrolysis. Audit: scientific_acceptance.json specifies12 matched replicas,4 per state. occupancy_by_replica.csv independently lists12 cases (__replica_01..04 per state), each10000 analyzed frames; four enzyme copies are not treated as four independent trajectories.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/plots/tier_occupancy.png",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/scientific_acceptance.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_replica.csv"
+      ],
+      "font_size": 24,
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "cards",
+      "title": "The QM region has 98 atoms and a 12 Å mobile shell",
+      "cards": [
+        {
+          "title": "QM region",
+          "text": "98 real atoms + 8 link H; charge −2."
+        },
+        {
+          "title": "QM coverage",
+          "text": "Reactive center, scissile amide, polar contacts."
+        },
+        {
+          "title": "Movable region",
+          "text": "4,165 atoms; exterior fixed."
+        },
+        {
+          "title": "QM/MM boundary",
+          "text": "Eight link H; selected substrate/protein cuts."
+        }
+      ],
+      "font_size": 24,
+      "notes": "The current branch uses 98 real QM atoms, eight Amber link hydrogens, charge −2, and 4,165 mobile MM atoms in the 12 Å environment; atoms outside that region are frozen. No molecular image is used here; the active-site context render is not the exact QM subsystem. Native QM membership from model/inputs/dimer.mdin and system.prmtop: Ile112 partial segment (17 atoms, no backbone N); Phe113 partial segment (18 atoms, N/H/CA plus side chain, no C/O); Asn186 side chain (8); full Thr233 (15); partial Thr234 segment (12, no C/O); Asp272 and Asp274 side chains (6 each); and two local PA6 amide fragments (8 atoms each). There are no QM waters. This concise list does not imply the whole Phe113 or PA6 backbone is QM.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/dimer.mdin",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/system.prmtop",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis_request.json"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "Fixed-geometry benchmarks support cautious DFTB3 use",
+      "columns": [
+        "Transformation",
+        "RMSE vs DFT¹",
+        "Scope"
+      ],
+      "rows": [
+        [
+          "DFTB3: OH → Nα",
+          "1.49",
+          "5 fixed geometries"
+        ],
+        [
+          "DFTB3: coupled addition",
+          "3.27",
+          "6 fixed geometries"
+        ],
+        [
+          "GFN2-xTB: OH → Nα",
+          "3.91",
+          "5 fixed geometries"
+        ]
+      ],
+      "widths": [
+        4.8,
+        3.0,
+        4.4
+      ],
+      "table_height": 3.6,
+      "font_size": 24,
+      "caption": "¹ kcal mol⁻¹; reference ωB97X-D/def2-SVP. Fixed-geometry comparisons.",
+      "notes": "The coupled-path panel compares six fixed geometries with ωB97X-D/def2-SVP; DFTB3 relative-profile RMSE is 3.27 kcal/mol and error reaches +7.42 kcal/mol for the TI1-like structure. Point-charge membership varied across windows (8104–7999), so this is a finite-embedding method diagnostic, not a validated reaction-energy profile; a fixed-membership check remains. A separate five-window matched electrostatic-embedding benchmark tests Thr233 OH→Nα proton transfer (not direct transfer to substrate amide N): DFTB3 RMSE 1.49 kcal/mol, endpoint error −0.57; GFN2-xTB RMSE 3.91, endpoint +7.93. Neither fixed-geometry comparison establishes gradients, a stationary point, a barrier, or a PMF.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/benchmarks/04_coupled_path_method_panel/analysis/method_errors.png",
+        "/data/jpc/covalent-enzyme-design/docs/coupled_method_panel_results_20261110.md",
+        "/data/jpc/covalent-enzyme-design/docs/qmmm_direct_pt_embedded_method_benchmark_20261110.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "process",
+      "title": "MD precedes MM and QM/MM structural refinement",
+      "lanes": [
+        {
+          "title": "Prepare",
+          "steps": [
+            "Equilibrated WT MD snapshot",
+            "Audit protonation and atom mapping"
+          ]
+        },
+        {
+          "title": "Minimize",
+          "steps": [
+            "MM minimization",
+            "DFTB3/MM minimization",
+            "Check geometry and chemistry"
+          ]
+        }
+      ],
+      "font_size": 24,
+      "notes": "The workflow begins from equilibrated enzyme–substrate (E–S) snapshots sampled under explicit protonation states. Validate atom mapping, proton inventory, covalent connectivity and QM/MM membership before minimization. MM minimization removes local strain in the chosen classical model. DFTB3/MM minimization then treats the reactive center quantum mechanically. These steps refine starting structures; they do not guarantee every snapshot is catalytically competent or prove a stable intermediate. Reactive TI1/acyl states are not accepted using the PA6 classical force field alone.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "image",
+      "title": "Two acylation proposals differ in proton transfer",
+      "image": "assets/mechanism_A_B_schematic.png",
+      "caption": "A: Thr233 OH → amide N; B: OH → Nα → amide N. TI1: tetrahedral intermediate.",
+      "notes": "Mechanism A transfers the Thr233 side-chain hydroxyl proton directly to the scissile substrate amide nitrogen as Thr233 OG1 attacks the substrate carbonyl. Mechanism B relays that proton first to the Thr233 N-terminal α-amino group (Nα), then from Nα to the substrate amide nitrogen during acylation. These are distinct hypotheses. Similar E–S endpoints or product composition do not establish a shared frozen reference, Hamiltonian, sampling coordinate, or comparable free-energy profile.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mechanism_A_B_schematic.png",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "annotated_image",
+      "title": "Mechanism A has a high potential-energy maximum",
+      "image": "assets/mechanism_A_direct_neb_large.png",
+      "callouts": [
+        "NEB maximum\nΔE ≈ 35.81 kcal/mol",
+        "Highest image\nTS unverified"
+      ],
+      "caption": "Mechanism A potential-energy path; the highest band image is not a verified transition state.",
+      "notes": "This canonical band contains the direct Thr233 OG1–H to scissile substrate amide-N route (Mechanism A), with DFTB3/MM energies. The maximum is about 35.81 kcal/mol relative to the stated E–S reference. The band is converged as a NEB path, but the highest image has not been verified as an index-1 transition state with a downhill connection. Treat the plotted value as a potential-energy profile (PES) maximum, not ΔG‡. It is not directly comparable with the N-terminal-relay PES without common Hamiltonian/reference/coordinate analysis.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_20261121_pes.png",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "annotated_image",
+      "title": "Direct-seeded sampling mixes proton-transfer channels",
+      "image": "assets/mechanism_A_direct_seeded_pmf.png",
+      "callouts": [
+        "Projected maximum\n47.05 kcal mol⁻¹",
+        "Mixed channels;\nnot converged"
+      ],
+      "caption": "q_acyl is the projected acylation coordinate; this mixed-channel marginal is unconverged.",
+      "notes": "The latest 22 November 2026 retained q_acyl marginal is about 47.05 kcal/mol for direct-seeded umbrella sampling. The 63-window dataset includes configurations with competing proton-transfer channels, including N-terminal-relay-like frames, so this is not a route-pure Mechanism A PMF. Target effective sample size was about 7.29, with drift flags in windows 028/030/032. It is preliminary and unconverged. Its q_acyl projection/reference differs from the three-coordinate arclength profile used for Mechanism B, so the maxima must not be directly subtracted.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_q_acyl_pmf.png",
+        "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_findings_20261121.md"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "image",
+      "title": "An addition-like structure motivates relay acylation",
+      "image": "assets/relay_structures.png",
+      "caption": "Bias-free optimization; full minimum curvature and lifetime remain unverified.",
+      "notes": "The w033 internal candidate came from direct-seeded umbrella MD, which also sampled N-terminal-relay configurations; umbrella bias was then removed before QM/MM optimization. This lineage explains how an addition-like relay structure emerged from a direct-seeded campaign. It retained partial tetrahedral character with C–OG1=1.740 Å, C–N=1.490 Å, C–O=1.309 Å; gradient was 7.94×10⁻⁶ Eh/bohr. Label it addition-like or TI1-like, not a proven stable TI1 minimum. Full Hessian/minimum curvature and an unbiased lifetime are not established. This active-site rendering contains 152 local atoms and provides context only; it is not a visualization of the exact 98-real-atom QM subsystem. E–S/acyl endpoints may share chemical composition but not automatically a common frozen environment/reference.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/relay_state_pymol/input.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/proton_relay_geometry_20261125.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/ts_workflow_checkpoint_20261125.json"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "annotated_image",
+      "title": "Mechanism B has a 16.31 kcal mol⁻¹ PES maximum",
+      "image": "assets/relay_pes_large.png",
+      "callouts": [
+        "Potential energy ΔE;\nTS verification pending"
+      ],
+      "caption": "Relative potential energy along the coordinate-driven path; ΔEmax = 16.31 kcal/mol.",
+      "notes": "Joined DFTB3/MM coordinate-driven path, referenced to regenerated E–S under the current pathway Hamiltonian and frozen exterior. The physical energy excludes driving bias. The connected maximum is ΔE=16.312 kcal/mol; acyl endpoint is −4.15 kcal/mol. Endpoint optimization gradients were small, but the forward dimer candidate’s first-order curvature and downhill connectivity remain unverified; the reverse candidate search had SCC failures and is not used for TS qualification. This is a PES, not a PMF or verified TS barrier. Matching the E–S chemistry to Mechanism A does not prove the frozen coordinates, Hamiltonian, QM membership, or reference are identical. The B path was constructed in reverse toward E–S and forward toward acylenzyme from the addition-like candidate. Its zero is the separately released E–S endpoint, not automatically the zero of the original A ensemble.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.csv",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ],
+      "takeaway": "",
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "image",
+      "title": "The current relay PMF remains provisional",
+      "image": "assets/relay_pmf_readable.png",
+      "takeaway": "61 eligible lineages; provisional maximum ≈26.0 kcal mol⁻¹",
+      "caption": "Sampling not converged. Pooled curve is point-only; shaded interval describes the original 57 lineages.",
+      "notes": "Snapshot read27 November2026. {\"main_horizon_ps\": 55, \"independent_lineages\": 61, \"supplemental_lineages\": 4, \"retained_frames\": 57400, \"unique_bias_potentials\": 59, \"discarded_ps_once_per_lineage\": 5, \"pooled_maximum_kcal_mol\": 26.005413691284627, \"pooled_maximum_s\": 0.6875, \"CI_status\": \"POINT ONLY; pooled uncertainty not computed; original57 band explicitly conditional\", \"primary_source\": \"/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_55ps_analysis.json\", \"sampling_converged\": false, \"primary_replacement\": false}. 57 main lineages plus4 eligible independent supplemental lineages; 59 unique bias potentials. Fixed5ps production discard once per lineage. This pooled point estimate is not a certified activation barrier. The original57 statistical band cannot be attributed to the pooled61 estimate; pooled confidence intervals remain unresolved. Different projected coordinates/references preclude subtracting this maximum from the direct-seeded marginal. No newly running zero-horizon supplemental lineage is counted. Plot uses fixed55ps primary bin centers and snapshotted pooled hard projection. Original57 band is200 within-window contiguous5ps block-bootstrap full MBAR refits; unsupported intervals remain absent. It is not a confidence interval for the selected maximum. The pooled61 estimate has no computed interval.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/current_eligible_progress_20261127/current/latest.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/current_eligible_progress_20261127/current/latest_pmf_comparison.png"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    },
+    {
+      "kind": "table",
+      "title": "Additional sampling targets overlap and activation support",
+      "columns": [
+        "Sampling group",
+        "Current role"
+      ],
+      "rows": [
+        [
+          "57 main + 4 supplements",
+          "Eligible for the displayed pooled estimate."
+        ],
+        [
+          "33 activation-grid lineages",
+          "Running; no eligible production in snapshot."
+        ],
+        [
+          "6 additional bridge lineages",
+          "Running; not yet included."
+        ],
+        [
+          "Planned checkpoint",
+          "100 lineages; main 60 ps / supplements 30 ps."
+        ]
+      ],
+      "notes": "Overlap gaps and low-weight-support activation corners motivate bounded additional sampling. The33-point activation grid and6 independent bridges are not observations until native production acceptance receipts qualify them. Expected earliest supplemental checkpoints Friday evening/Saturday; full targeted checkpoint Sunday/Monday is a forecast, not guaranteed. Scientific acceptance still requires overlap, orthogonal channel, initialization and temporal stability checks. Extend useful support; a smooth PMF or smaller error band does not certify equilibrium.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/current_eligible_progress_20261127/current/latest.json",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        4.3,
+        7.9
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "text",
+      "title": "A transition state requires curvature and connectivity",
+      "bullets": [
+        "One unstable mode in the reactive direction",
+        "Downhill paths connect E–S and acylenzyme",
+        "Correct proton inventory and chemical identities"
+      ],
+      "font_size": 28,
+      "notes": "Neither a NEB maximum nor a low optimized gradient establishes a first-order saddle. Full or justified projected curvature and both downhill connections remain unresolved. The w033 addition-like structure is not a verified full minimum. A discrete TI1 is optional; acylation can be concerted. Separate force convergence, chemical retention, geometric acceptance and sampling convergence.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.csv"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "Two RFD3 backbones pass bounded structural qualification",
+      "columns": [
+        "Parent",
+        "Mobile Cα RMSD",
+        "Interpretation"
+      ],
+      "rows": [
+        [
+          "Parent01, t5",
+          "0.385 Å",
+          "Accepted backbone perturbation."
+        ],
+        [
+          "Parent03, t5",
+          "0.314 Å",
+          "Accepted backbone perturbation."
+        ]
+      ],
+      "notes": "RFD3 backbone qualification protects the catalytic scaffold and checks chemical graph/atom mapping. These are structural acceptance results, not improved activity predictions or verified transition-state structures. Only two accepted t5 parents feed the current bounded four-template sequence pilot. Flexible loop priorities95–103 first and289–300 second remain separate from wider sequence mutability.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/scientific_acceptance.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/scientific_acceptance.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        3.2,
+        3.4,
+        5.6
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "The sequence pilot yields 24 distinct symmetric designs",
+      "columns": [
+        "Design property",
+        "Current result"
+      ],
+      "rows": [
+        [
+          "Four structural templates",
+          "6 sequences each; 24 unique designs."
+        ],
+        [
+          "Per-protomer mask",
+          "229 mutable / 99 protected positions."
+        ],
+        [
+          "Assembly symmetry",
+          "Four exact sequence copies."
+        ],
+        [
+          "Mutation burden",
+          "93–110 substitutions per protomer."
+        ],
+        [
+          "Cross-scoring",
+          "TS4 + E–S accepted; activity untested."
+        ]
+      ],
+      "notes": "LigandMPNN generation and cross-scoring acceptance do not establish activity or stable polymer binding. The high mutation burden makes matched WT controls and structural validation essential. Four templates comprise the bounded qualified-template pilot. Cross-scoring evaluates compatibility with the TS-like template ensemble and enzyme–substrate structure; unverified templates remain explicitly TS-like. No broad campaign expansion is implied.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/four_template_20261127/generation_scientific_acceptance.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/four_template_20261127/generation_run01/scientific_acceptance.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        4.5,
+        7.7
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "four_images",
+      "title": "WT predictions respond differently to relaxation",
+      "images": [
+        "assets/structures/af3_before.png",
+        "assets/structures/af3_after.png",
+        "assets/structures/boltz_before.png",
+        "assets/structures/boltz_after.png"
+      ],
+      "labels": [
+        "AF3: before",
+        "After: −φ",
+        "Boltz: before",
+        "After: +φ"
+      ],
+      "notes": "Matched B/F site views with unguided PA6; source heavy atoms only. Cyan protein carbon; orange substrate carbon; O red; N blue. Corrected common camera; Phe113 upper left, Asn186 upper right, Thr233 below. These controls use terminal3|4 selected amideC55/O50/N57, distinct from relay central2|2. Static Amber minimization, not MD or activity. Refer following editable table for measured pose quality. Native PPTX crop applies the identical union nonwhite bounds plus40px margin to all four1600×1400 PNGs; all panels share scale/camera and original source pixels remain unchanged. Four columns enlarge the matched displays. PI CORRECTION27November: Boltz positive-phi pose is the desired visual orientation; AF3 negative-phi is opposite. No numeric signs or coordinates changed. The previous negative-only target assumption was wrong and withdrawn. Native cropping is the same bounds/scale on all original PNGs; original protein-based proper rotations and camera remain intact, with proteinNterminusright and no mirroring. The approved_positive_pose_reference_20261127.json independently validates the Boltz positive-phi reference against all eight before/after sites, source coordinates, image hashes and PI confirmation. The active-site camera uses protein-based proper rotations only, with Thr233 below, Phe113 upper left, Asn186 upper right and protein N terminus right; ligand poses are never mirrored.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261127/assets/structures/provenance.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json"
+      ],
+      "title_size": 34,
+      "caption": "Boltz +φ is the approved orientation; AF3 −φ is the opposite.",
+      "matched_crop_box": [
+        251,
+        49,
+        1349,
+        1351
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Boltz relaxation produces four Tier A active sites",
+      "columns": [
+        "WT input",
+        "Before",
+        "After",
+        "Signed φ after"
+      ],
+      "rows": [
+        [
+          "AlphaFold 3 WT",
+          "C × 4",
+          "reject × 4",
+          "-98 to -80°"
+        ],
+        [
+          "Boltz-2 WT",
+          "reject × 4",
+          "A × 4",
+          "+84 to +88°"
+        ]
+      ],
+      "notes": "Both static WT template controls meet the native force criterion after unrestrained Amber ff19SB/TIP3P,150mM,modularRESP/GAFF2 PA6 minimization. Final RMS gradients AF3=.047702;Boltz=.045807 in nativeAmberunits. AF3 goes from4C to4reject sites (angle/Asncontact) with negativephi, the opposite orientation. Boltz goes from4reject to4A sites with positivephi +84..+88degrees, the PI-approved orientation. WT positivephiA therefore meets the desired static orientation and local geometric criterion; it remains a control, not an activity-validated new enzyme. Prior interpretation rejecting Boltz solely for positivephi was wrong and is withdrawn. Native measurements, atom identities and image coordinates are unchanged. New WT controls attack end-adjacent unit3→4 bondC55/N57 (L3+L1); relaymechanism uses middle unit2→3 bondC54/N59 (L2+L2). These distinctregisters are not matchedmechanisticcomparisons. Staticminimization is not MD occupancy or activity. The approved_positive_pose_reference_20261127.json independently validates the Boltz positive-phi reference against all eight before/after sites, source coordinates, image hashes and PI confirmation. The active-site camera uses protein-based proper rotations only, with Thr233 below, Phe113 upper left, Asn186 upper right and protein N terminus right; ligand poses are never mirrored.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/af3_template_seed20261126/postprocess/before_after_site_summary.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/before_after_site_summary.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        3.5,
+        2.2,
+        2.2,
+        4.3
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "Designs must retain the approved substrate orientation",
+      "columns": [
+        "Gate after matched relaxation",
+        "Requirement"
+      ],
+      "rows": [
+        [
+          "Local orientation",
+          "Positive φ under the current ordered definition."
+        ],
+        [
+          "Tier A: strict geometry",
+          "d₁≤3.2 Å; d₂,d₃≤3.8 Å; α=90–120°."
+        ],
+        [
+          "Tier B: broad geometry",
+          "d₁≤3.5 Å; d₂,d₃≤4.0 Å; α=85–125°."
+        ],
+        [
+          "Additional checks",
+          "Valid amide graph; |φ| range; proton delivery."
+        ]
+      ],
+      "notes": "Design target: explicit target_phi_sign = +1, the PI-approved positive-φ orientation, together with Tier A or B geometry after matched relaxation. Our previous negative-only target assumption was wrong and is withdrawn. Numerical signs and molecular coordinates are unchanged.\n\nThe current function is projected_herschlag_phi(OG1, Ocarbonyl, Ccarbonyl, Namide, CadjacentC). It projects carbonyl C onto the plane through Ocarbonyl, Namide and CadjacentC, then evaluates the signed torsion OG1 → Ocarbonyl → Cprojected → CadjacentC. Thr Nα is not an input. The selected control amide is O50/C55/N57/C63. Calibrate every new atom mapping against the explicit approved reference.\n\nd1 = Thr233 OG1–scissile C; d2 = Phe113 N–carbonyl O; d3 = Asn186 ND2–carbonyl O. Strict |φ| is 70–110°; broad |φ| is 60–125°. Nα–leaving N is a separate proton-delivery metric. Positive-φ Boltz WT sites meet the desired static orientation and A geometry; negative-φ AF3 sites are opposite and reject on local geometry. These are structural criteria, not activity measurements.\n\nWT and variants use the same protein MSA and protein-only crystal-template policy, with unguided PA6; record every amide/register. No model was rejected or Amber withheld by the mistaken negative-only advice. The generalized gate uses explicit target sign +1. The approved_positive_pose_reference_20261127.json independently validates the Boltz positive-phi reference against all eight before/after sites, source coordinates, image hashes and PI confirmation. The active-site camera uses protein-based proper rotations only, with Thr233 below, Phe113 upper left, Asn186 upper right and protein N terminus right; ligand poses are never mirrored.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/af3_template_seed20261126/postprocess/before_after_site_summary.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/before_after_site_summary.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        4.6,
+        7.6
+      ],
+      "title_size": 34,
+      "caption": "Target pose: positive φ with the stated atom ordering.",
+      "caption_size": 20
+    },
+    {
+      "kind": "table",
+      "title": "The November deadline favors three bounded deliverables",
+      "columns": [
+        "By 30 November",
+        "Acceptance / decision"
+      ],
+      "rows": [
+        [
+          "Acylation free energies",
+          "Release supported PMF + diagnostics; disclose gaps."
+        ],
+        [
+          "TS-like ensemble",
+          "Curvature/connectivity status; explicit chemistry."
+        ],
+        [
+          "Native prediction screen",
+          "Six complete; WT alignment needs correction."
+        ],
+        [
+          "From 1 December",
+          "~10-fold less AI; deterministic controllers."
+        ]
+      ],
+      "notes": "Through 30 November prioritize acylation MBAR, a chemically audited TS-like ensemble and bounded sequence predictions. Do not promise PMF convergence, a verified TS or improved activity. Keep the current middle-amide relay Hamiltonian unchanged. Complete corrected support first, targeting main 60 ps / supplemental 30 ps plus robustness checks on Sunday/Monday. Defer true indels, capped RESP, new-register mechanism work, deacylation and broad agentic expansion.\n\nSix Boltz models comprise WT, relay_02 (97 substitutions) and relay_23 (106 substitutions, RFD parent), each with seeds 26/27. The native WT pair completed; relay_02 pairs are running and relay_23 pairs queued at the latest native-agent checkpoint. Matched Amber follow-through with the corrected positive-φ A/B target is under qualification and is not claimed active. No model was rejected or Amber withheld by the mistaken negative-only rule.\n\nThe controlled protein-only template masks α95–103 and α223–232: 486 of 9426 atoms removed, 8940 retained with identical unmasked coordinates. Full queries are retained; β289–300 remains present. There are no sequence indels or PA6 pose/contact instructions. Historical masks motivate the concept but are not reused as precise coordinate masks.\n\nThe PI explicitly confirmed that positive φ (+1 under the current ordered formula) is the approved orientation. Prior negative-only advice is withdrawn. From 1 December use deterministic tmux controllers, no LLM daemon, milestone or blocked-decision checkpoints and a compact board/delta report; aim for tenfold lower token use without a billing guarantee.\n\nFinal alignment qualification: all six native predictions completed. The effective-template audit shows both WT seeds map α query residue103 to template94 at the mask boundary; all four design cases have exact alignment. Template coordinates95–103 and223–232 were genuinely removed, but native WT alignment reused94. Consequently this is not a fully matched six-case template comparison until corrected. No scientific rerun was launched for this presentation update.\n\nSnapshotted relaxation checkpoint: WT seed26 force-converged, RMS gradient0.049985, positive-target A/B count0→0. The current JSON additionally records WT seed27 force-converged, RMS0.049171, count0→2; other relaxations are not all complete. These masked-template controls are distinct from the earlier full-template Boltz WT baseline with four positive TierA endpoints. The WT boundary mismatch limits interpretation of WT/design comparisons despite native completion and force convergence.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_THROUGH_NOV30.md",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/native_advancement_receipt.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/effective_template_alignment_audit.json",
+        "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/relaxation_state.json"
+      ],
+      "font_size": 24,
+      "table_height": 4.0,
+      "widths": [
+        4.2,
+        8.0
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "text",
+      "title": "Current evidence supports a focused redesign pilot",
+      "bullets": [
+        "Relay acylation is promising; ΔG‡ remains provisional",
+        "Boltz WT meets the approved +φ orientation and A geometry",
+        "Nominate sequences only after matched structural checks"
+      ],
+      "font_size": 28,
+      "notes": "Take-home: the mechanism-guided design workflow has concrete structural and sequence outputs, while free-energy and transition-state qualification remain unresolved. High direct-route PES and mixed-channel sampling are meaningful negative evidence, not proof that relay catalysis is established. Experimental validation and activity improvement remain future requirements. The desiredvisualorientation ispositivephi under thecurrentordereddefinition. Previousnegative-onlytargetinterpretation withdrawn;allnumbersunchanged. Negativephioppositeposes are retainedasdiagnostics.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ],
+      "title_size": 34
+    },
+    {
+      "kind": "table",
+      "title": "Appendix: Eyring rates illustrate ΔG‡ sensitivity",
+      "columns": [
+        "ΔG‡ (kcal mol⁻¹)",
+        "300 K",
+        "348.15 K"
+      ],
+      "rows": [
+        [
+          "20",
+          "0.017",
+          "2"
+        ],
+        [
+          "22",
+          "0.00059",
+          "0.11"
+        ],
+        [
+          "24",
+          "2.1e-05",
+          "0.0062"
+        ],
+        [
+          "26",
+          "7.2e-07",
+          "0.00035"
+        ],
+        [
+          "28",
+          "2.5e-08",
+          "1.9e-05"
+        ],
+        [
+          "30",
+          "8.7e-10",
+          "1.1e-06"
+        ]
+      ],
+      "widths": [
+        4.2,
+        4.0,
+        4.0
+      ],
+      "table_height": 4.25,
+      "font_size": 24,
+      "caption": "k = (kBT/h) exp[−ΔG‡/(RT)]; κ = 1; rates in s⁻¹. Assumed ΔG‡, not a conversion prediction.",
+      "notes": "Elementary Eyring rates assume transmission coefficient κ=1 and a specified activation free energy at each temperature. The calculation does not predict the temperature dependence of the barrier. Lysate conversion depends on active-enzyme concentration, substrate accessibility, adsorption, binding and product release. A potential-energy maximum cannot be inserted as ΔG‡. Constants: exact SI kB=1.380649e−23J K−1 and h=6.62607015e−34J s;R=0.00198720425864083kcal mol−1K−1. Computed consistently from kBT/h for both temperatures; 348.15K is75°C. κ=1. ΔG‡ is an assumed activation free energy at each temperature, never the16.31kcal/mol potential-energy maximum.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "https://physics.nist.gov/cgi-bin/cuu/Value?k",
+        "https://physics.nist.gov/cgi-bin/cuu/Value?h"
+      ],
+      "title_size": 34,
+      "caption_size": 20
+    }
+  ]
+}

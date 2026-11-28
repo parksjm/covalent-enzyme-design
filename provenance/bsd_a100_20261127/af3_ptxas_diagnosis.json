@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-27T17:17:08.419526+00:00",
+  "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "default_ptxas": "/usr/bin/ptxas",
+  "candidates": [
+    {
+      "path": "/usr/bin/ptxas",
+      "exists": true,
+      "realpath": "/usr/bin/ptxas",
+      "returncode": 0,
+      "stdout": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2023 NVIDIA Corporation\nBuilt on Fri_Jan__6_16:43:29_PST_2023\nCuda compilation tools, release 12.0, V12.0.140\nBuild cuda_12.0.r12.0/compiler.32267302_0\n",
+      "stderr": ""
+    },
+    {
+      "path": "/usr/local/cuda/bin/ptxas",
+      "exists": false
+    },
+    {
+      "path": "/home/jpc/code/alphafold3/.conda/envs/af3/bin/ptxas",
+      "exists": true,
+      "realpath": "/home/jpc/code/alphafold3/.conda/envs/af3/bin/ptxas",
+      "returncode": 0,
+      "stdout": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Tue_Oct_29_23:47:06_PDT_2024\nCuda compilation tools, release 12.6, V12.6.85\nBuild cuda_12.6.r12.6/compiler.35059454_0\n",
+      "stderr": ""
+    },
+    {
+      "path": "/home/jpc/code/alphafold3/.conda/envs/af3/lib/python3.11/site-packages/nvidia/cuda_nvcc/bin/ptxas",
+      "exists": true,
+      "realpath": "/home/jpc/code/alphafold3/.conda/envs/af3/lib/python3.11/site-packages/nvidia/cuda_nvcc/bin/ptxas",
+      "returncode": 0,
+      "stdout": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Thu_Sep_12_02:14:55_PDT_2024\nCuda compilation tools, release 12.6, V12.6.77\nBuild cuda_12.6.r12.6/compiler.34841621_0\n",
+      "stderr": ""
+    },
+    {
+      "path": "/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/nvidia/cuda_nvcc/bin/ptxas",
+      "exists": false
+    },
+    {
+      "path": "/home/jpc/code/alphafold3/.conda/envs/af3/lib/python3.11/site-packages/triton/backends/nvidia/bin/ptxas",
+      "exists": true,
+      "realpath": "/home/jpc/code/alphafold3/.conda/envs/af3/lib/python3.11/site-packages/triton/backends/nvidia/bin/ptxas",
+      "returncode": 0,
+      "stdout": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Tue_Feb_27_16:15:50_PST_2024\nCuda compilation tools, release 12.4, V12.4.99\nBuild cuda_12.4.r12.4/compiler.33961263_0\n",
+      "stderr": ""
+    },
+    {
+      "path": "/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/triton/backends/nvidia/bin/ptxas",
+      "exists": true,
+      "realpath": "/home/jpc/code/miniforge3/envs/boltz-env/lib/python3.11/site-packages/triton/backends/nvidia/bin/ptxas",
+      "returncode": 0,
+      "stdout": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:21:21_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0\n",
+      "stderr": ""
+    }
+  ]
+}

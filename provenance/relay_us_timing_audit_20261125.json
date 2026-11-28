@@ -1,0 +1,35 @@
+{
+  "observed_utc": "2026-11-26T00:05:04.119119+00:00",
+  "source_runtime_summary": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/relay_us_heat_recovery_v2_20261125/runtime_summary.json",
+  "physical_cores": 28,
+  "logical_cpus": 56,
+  "active_workers": 57,
+  "progress_steps_min_max": [
+    2091,
+    4892
+  ],
+  "s_per_step_min_max": [
+    1.4141695454545455,
+    1.4815109523809524
+  ],
+  "SCC_cycles_min_max": [
+    19,
+    21
+  ],
+  "earliest_production_start_utc": "2026-11-25T22:09:56.700Z",
+  "latest_production_start_utc": "2026-11-25T23:14:47.990Z",
+  "production_start_spread_s": 3891.29,
+  "timestamp_evidence": "Azalea activation_full_010 and delivery_full_011 /03_production_5ps/process.json started_utc, verified by delegated read-only audit",
+  "first_5ps_boundary_projected_utc": [
+    "2026-11-26T01:13:37.938327+00:00",
+    "2026-11-26T01:16:53.834479+00:00"
+  ],
+  "forecast_conditions": [
+    "Unchanged per-step rates",
+    "Native step count uses 0.001 ps timestep",
+    "Excludes acceptance, synchronization and MBAR runtime",
+    "Not a sampling-convergence forecast"
+  ],
+  "jobs_modified": false,
+  "interpretation": "Progress spread is dominated by staggered production starts; current per-step rates and SCC counts are similar."
+}

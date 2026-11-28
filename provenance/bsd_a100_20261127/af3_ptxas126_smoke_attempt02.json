@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-27T17:19:20.545900+00:00",
+  "compiler": "/home/jpc/code/alphafold3/.conda/envs/af3/bin/ptxas",
+  "PATH": "/home/jpc/code/alphafold3/.conda/envs/af3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "target": "sm_80",
+  "assembly_returncode": 0,
+  "assembly_stderr": "",
+  "jax_returncode": 0,
+  "jax_stdout": "{\"backend\": \"gpu\", \"devices\": [\"cuda:0\"], \"matmul_accepted\": true}\n",
+  "jax_stderr": ""
+}

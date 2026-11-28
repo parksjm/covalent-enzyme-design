@@ -1,0 +1,28 @@
+{
+  "native_models": 4,
+  "assigned_sites": 16,
+  "all_amide_ligand_site_combinations": 192,
+  "A_B_C_passes": 0,
+  "physical_pairs": [
+    "AE",
+    "BF",
+    "CG",
+    "DH"
+  ],
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/dgx_wt_control_qualification_20261127/comparison_20261127/comparison_report.md": "29114a3d0be9a3db5d1a80b48d567ff3974ce43b26fe952c373a1c74a11d9ae9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/dgx_wt_control_qualification_20261127/comparison_20261127/combined_assigned_16.csv": "e87b4de04c2bff6551985164f3dbee79aaf320209312feff5fec5a0ec635400b",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/dgx_wt_control_qualification_20261127/comparison_20261127/combined_all_192.csv": "1ef2266363b68b5a1986ebbc855d434aaecb4f2ada80e9b6b1e4facadef1c775",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_redesign_gate_audit_20261127.md": "a1b00245a604dd5cc4dce651eb11194bc79426ea452876ddb06c0bbd23675c5a"
+  },
+  "checks": {
+    "raw_and_derived_inventory": "passed",
+    "pairing_independent_of_ligand": "passed",
+    "agent_reported_focused_tests": 19,
+    "agent_reported_ruff": "passed",
+    "documentation_diff_check": "passed",
+    "standalone_analysis_script_coverage": "unmeasured"
+  },
+  "new_native_launches": "two AF3 unchanged-input PATH-corrected retries only; both complete",
+  "existing_QMMM_US": "unchanged"
+}

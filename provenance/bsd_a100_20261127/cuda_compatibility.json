@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-27T16:56:10.856473+00:00",
+  "GPU_limit": 2,
+  "checks": [
+    {
+      "physical_uuid": "GPU-a752cdba-475a-6afe-14c5-4a58ea101a56",
+      "returncode": 0,
+      "stdout": "{\"torch\": \"2.9.0+cu128\", \"runtime_cuda\": \"12.8\", \"device\": \"NVIDIA A100-SXM4-40GB\", \"capability\": [8, 0], \"allocated_bytes\": 8552448, \"matmul_accepted\": true}\n",
+      "stderr": ""
+    },
+    {
+      "physical_uuid": "GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee",
+      "returncode": 0,
+      "stdout": "{\"torch\": \"2.9.0+cu128\", \"runtime_cuda\": \"12.8\", \"device\": \"NVIDIA A100-SXM4-40GB\", \"capability\": [8, 0], \"allocated_bytes\": 8552448, \"matmul_accepted\": true}\n",
+      "stderr": ""
+    }
+  ]
+}

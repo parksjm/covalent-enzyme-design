@@ -1,0 +1,47 @@
+{
+  "checked_utc": "2026-11-21T19:03:32.838505+00:00",
+  "authorization": "User explicitly permits geranium/tulip and identifies aster SSH key for all workstations.",
+  "ssh_identity_file": "/home/jpc/.ssh/id_ed25519_aster",
+  "ssh_identity_contents_read": false,
+  "ssh_configuration_modified": false,
+  "hosts": {
+    "geranium": {
+      "ssh_as_jpc_verified": true,
+      "logical_cpus": 48,
+      "memory_total_GiB": 503.3,
+      "gpus": {
+        "count": 2,
+        "model": "NVIDIA RTX 6000 Ada Generation",
+        "reported_memory_each_MiB": 49140,
+        "utilization_percent_at_check": [
+          0,
+          0
+        ]
+      },
+      "amber_executables_present": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "/data/jpc/code/pmemd26/bin/pmemd.cuda_SPFP"
+      ],
+      "native_calculation_compatibility_tested": false
+    },
+    "tulip": {
+      "ssh_as_jpc_verified": true,
+      "logical_cpus": 24,
+      "memory_total_GiB": 503.3,
+      "gpus": {
+        "count": 2,
+        "model": "NVIDIA RTX 6000 Ada Generation",
+        "reported_memory_each_MiB": 49140,
+        "utilization_percent_at_check": [
+          0,
+          0
+        ]
+      },
+      "amber_discovery": "Not in noninteractive PATH or the bounded common install locations checked; installation is not ruled out.",
+      "native_calculation_compatibility_tested": false
+    }
+  },
+  "scientific_jobs_changed": false,
+  "transfers_or_installs": false,
+  "usage_policy": "Shared resources: use geranium and tulip simultaneously only for work expected to finish within a few hours. Before every launch, verify no other users are using the proposed host by checking sessions, CPU/GPU workloads and queued work. Earlier idle observations do not establish current availability. Ask the PI when availability or expected duration is uncertain. Preserve current MD/US jobs and exact software environments."
+}

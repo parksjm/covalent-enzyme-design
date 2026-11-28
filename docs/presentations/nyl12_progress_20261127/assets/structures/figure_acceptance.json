@@ -1,0 +1,199 @@
+{
+  "figures": {
+    "af3_before": {
+      "size": [
+        1600,
+        1400
+      ],
+      "foreground_bbox": [
+        377,
+        88,
+        1309,
+        1212
+      ],
+      "sha256": "3bea5bc95df93582e3231bc59b96f633824310f142b0211d323f12ad6bd0264b",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "af3_after": {
+      "size": [
+        1600,
+        1400
+      ],
+      "foreground_bbox": [
+        365,
+        170,
+        1300,
+        1312
+      ],
+      "sha256": "7e32606834f20fd31bba23824c3df383c3cf343f2846255c0b0c012288b4c26f",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "boltz_before": {
+      "size": [
+        1600,
+        1400
+      ],
+      "foreground_bbox": [
+        380,
+        663,
+        1294,
+        1192
+      ],
+      "sha256": "1d5bdbeeaa005e45bcf5f15f33614e5d7d37482cad593d9e1d615017daaa5583",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "boltz_after": {
+      "size": [
+        1600,
+        1400
+      ],
+      "foreground_bbox": [
+        291,
+        655,
+        1270,
+        1195
+      ],
+      "sha256": "69c20f531a8b3af85ac5569651081d5454454fb94ecd683bded0f778e6b8dcf5",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "ts_like": {
+      "size": [
+        1600,
+        1400
+      ],
+      "foreground_bbox": [
+        444,
+        444,
+        1214,
+        997
+      ],
+      "sha256": "a6a4fdfbe4778991f2403c5d5d13dfcf3b1aad2481a73d956656e720c91f66e9",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "assembly_loops": {
+      "size": [
+        1800,
+        1600
+      ],
+      "foreground_bbox": [
+        203,
+        153,
+        1638,
+        1448
+      ],
+      "sha256": "853488b539cfc962b9abe25e899554dc0a189dfd910994a01ca519d0e8c9427a",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": true,
+      "crop_scope": "none"
+    },
+    "loops_pocket": {
+      "size": [
+        1800,
+        1600
+      ],
+      "foreground_bbox": [
+        0,
+        0,
+        1800,
+        1600
+      ],
+      "sha256": "dec608c633b1b4e51556dfc8c4b307d9eaedb6fd35c179b5bc5eab12c5399b9b",
+      "exposed_background_white_and_image_opaque": true,
+      "no_foreground_clipping": false,
+      "crop_scope": "surrounding tetramer ribbons only; loops and ligand intact"
+    }
+  },
+  "metrics": {
+    "af3_before": {
+      "site": "BF",
+      "ligand": "J",
+      "carbonyl_c": "C55",
+      "carbonyl_o": "O50",
+      "leaving_n": "N57",
+      "d1": 2.686889279445656,
+      "d2": 2.5353812336609267,
+      "d3": 3.4512063108426303,
+      "a_bd": 80.47936832674318,
+      "herschlag_phi": -103.98005924795167,
+      "nterm_to_leaving_n": 5.325815430523293,
+      "tier": "C"
+    },
+    "af3_after": {
+      "site": "BF",
+      "ligand": "J",
+      "carbonyl_c": "C55",
+      "carbonyl_o": "O50",
+      "leaving_n": "N57",
+      "d1": 2.9540138794528352,
+      "d2": 2.8674861813093306,
+      "d3": 4.2662917152956155,
+      "a_bd": 74.51255608780122,
+      "herschlag_phi": -80.97745559600872,
+      "nterm_to_leaving_n": 6.220037138152793,
+      "tier": "reject"
+    },
+    "boltz_before": {
+      "site": "BF",
+      "ligand": "J",
+      "carbonyl_c": "C55",
+      "carbonyl_o": "O50",
+      "leaving_n": "N57",
+      "d1": 2.798579103759621,
+      "d2": 3.078618034118557,
+      "d3": 4.156489504377462,
+      "a_bd": 56.01723650761717,
+      "herschlag_phi": 81.19637103455487,
+      "nterm_to_leaving_n": 5.5283067932234005,
+      "tier": "reject"
+    },
+    "boltz_after": {
+      "site": "BF",
+      "ligand": "J",
+      "carbonyl_c": "C55",
+      "carbonyl_o": "O50",
+      "leaving_n": "N57",
+      "d1": 2.9496084485910967,
+      "d2": 2.844093704504125,
+      "d3": 2.933982617535416,
+      "a_bd": 106.79632794613825,
+      "herschlag_phi": 88.22795956551624,
+      "nterm_to_leaving_n": 3.9248966865383856,
+      "tier": "A"
+    }
+  },
+  "WT_register": "C55/O50/N57 = unit3|4; L3+L1 modeling hypothesis",
+  "TS_register": "modular ligand I resi2:C \u2192 resi3:N = 2|2; reference C54/N59",
+  "labels": "Editable PPTX labels: Phe113 upper-left, Asn186 upper-right, Thr233 below",
+  "loop_copies": {
+    "occupied_catalytic_site": "A/E; ligand I",
+    "alpha95_103_min_heavy_distance_A": {
+      "A": 25.2888757757,
+      "B": 30.594372865,
+      "C": 35.1422509666,
+      "D": 3.6231646388
+    },
+    "beta289_300_min_heavy_distance_A": {
+      "E": 31.0439600083,
+      "F": 2.7679178095,
+      "G": 24.9156312784,
+      "H": 20.8012065515
+    },
+    "correct_highlights": "D95\u2013103 deep blue; F289\u2013300 orange-red; neighboring subunits"
+  },
+  "limitations": "Heavy-only inputs; no added hydrogens. TS-like source is umbrella-sampling snapshot, not verified TS. No modeled loop deletion has been run.",
+  "checks": {
+    "ruff": "passed for current render scripts",
+    "pytest": "not run; figure-only changes",
+    "coverage": "not measured; rendering scripts"
+  }
+}

@@ -1,4 +1,4 @@
-"""Screen joint-eligible WT MD frames for native Thr233 alignment."""
+"""Screen catalytic WT MD candidates and report native Thr233 diagnostics."""
 
 from __future__ import annotations
 
@@ -24,6 +24,7 @@ from nyl12_covalent.catalytic_alignment import (
     _topology_atoms,
 )
 from nyl12_covalent.catalytic_alignment_geometry import fit_coordinates, state_metrics
+from nyl12_covalent.native_thr_policy import geometry_eligible, policy_metadata
 
 LOGGER = logging.getLogger(__name__)
 NATIVE_THR_LIMITS = {
@@ -43,7 +44,7 @@ def _source_record(path: Path) -> dict[str, Any]:
 
 
 def eligible_frames(path: Path, replica: str) -> list[dict[str, Any]]:
-    """Read all joint Tier A/B and native-torsion frames from a prior screen."""
+    """Read Tier A/B frames, retaining native torsions as diagnostics only."""
     required = {
         "frame",
         "time_ns",
@@ -69,7 +70,7 @@ def eligible_frames(path: Path, replica: str) -> list[dict[str, Any]]:
             time_ns = float(row["time_ns"])
             if not np.isfinite(time_ns) or time_ns < 0:
                 raise ValueError(f"Invalid time at frame {frame}")
-            if row["tier"] not in {"A", "B"}:
+            if not geometry_eligible(row["tier"]):
                 continue
             if row["native_torsions"].lower() not in {"true", "false"}:
                 raise ValueError(f"Invalid native_torsions value at frame {frame}")
@@ -81,19 +82,19 @@ def eligible_frames(path: Path, replica: str) -> list[dict[str, Any]]:
                 raise ValueError(
                     f"Native-torsion flag disagrees with deltas at frame {frame}"
                 )
-            if native:
-                selected.append(
-                    {
-                        "replica": replica,
-                        "frame": frame,
-                        "time_ns": time_ns,
-                        "tier": row["tier"],
-                        "psi_delta": psi_delta,
-                        "chi1_delta": chi1_delta,
-                    }
-                )
+            selected.append(
+                {
+                    "replica": replica,
+                    "frame": frame,
+                    "time_ns": time_ns,
+                    "tier": row["tier"],
+                    "psi_delta": psi_delta,
+                    "chi1_delta": chi1_delta,
+                    "native_torsions": native,
+                }
+            )
     if not selected:
-        raise ValueError(f"No joint Tier A/B plus native-torsion frames in {path}")
+        raise ValueError(f"No Tier A/B frames in {path}")
     return selected
 
 
@@ -174,13 +175,8 @@ def _measure_frame(
 
 def _candidate_rank(
     item: dict[str, Any],
-) -> tuple[float, float, float, int, float, int]:
-    thr = item["native_alignment"]["thr233_held_out"]
-    shifts = thr["heavy_atom_displacements_angstrom"]
+) -> tuple[int, float, int]:
     return (
-        shifts["OG1"],
-        thr["rmsd_angstrom"],
-        shifts["N"],
         0 if item["tier"] == "A" else 1,
         item["time_ns"],
         item["frame"],
@@ -261,22 +257,24 @@ def screen(
             and abs(candidate["chi1_delta"])
             <= NATIVE_THR_LIMITS["absolute_chi1_delta_degrees"]
         )
+        candidate["selection_eligible"] = geometry_eligible(candidate["tier"])
     ranked = sorted(candidates, key=_candidate_rank)
     for rank, item in enumerate(ranked, start=1):
         item["rank"] = rank
     report = {
-        "schema_version": 1,
+        "schema_version": 2,
+        "selection_policy": policy_metadata(),
         "reference_cif": str(reference_cif.resolve()),
         "alignment_fit": "backbone N/CA/C/O of Phe113, Asn186, Asp272, Asp274",
         "ranking": [
-            "Thr233 OG1 displacement",
-            "Thr233 heavy-atom RMSD",
-            "Thr233 N displacement",
+            "Tier A before Tier B",
+            "earliest time, then frame; no native-similarity ranking",
         ],
         "eligible_frame_count": len(ranked),
         "native_thr_acceptance_limits": NATIVE_THR_LIMITS,
-        "accepted_count": sum(item["accepted_native_gate"] for item in ranked),
-        "top_k": min(top_k, sum(item["accepted_native_gate"] for item in ranked)),
+        "accepted_count": len(ranked),
+        "native_similarity_count": sum(item["accepted_native_gate"] for item in ranked),
+        "top_k": min(top_k, len(ranked)),
         "compact_trajectory": str(compact.resolve()),
         "sources": [
             _source_record(path)
@@ -288,6 +286,7 @@ def screen(
                 *trajectories.values(),
                 *(Path(item["screen_csv"]) for item in replicas),
                 Path(__file__),
+                Path(__file__).with_name("native_thr_policy.py"),
                 input_path,
                 compact,
             )
@@ -295,9 +294,7 @@ def screen(
         "ranked_candidates": ranked,
         "best_candidates_for_extraction": [
             {key: item[key] for key in ("rank", "replica", "frame", "time_ns", "tier")}
-            for item in [
-                candidate for candidate in ranked if candidate["accepted_native_gate"]
-            ][:top_k]
+            for item in ranked[:top_k]
         ],
     }
     (output / "native_thr_screen.json").write_text(
@@ -317,6 +314,7 @@ def screen(
             "n_displacement_angstrom",
             "fit_rmsd_angstrom",
             "accepted_native_gate",
+            "selection_eligible",
         ]
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
@@ -338,6 +336,7 @@ def screen(
                     ],
                     "fit_rmsd_angstrom": item["native_alignment"]["fit_rmsd_angstrom"],
                     "accepted_native_gate": item["accepted_native_gate"],
+                    "selection_eligible": item["selection_eligible"],
                 }
             )
     LOGGER.info("Aligned and ranked %d eligible WT frames", len(ranked))

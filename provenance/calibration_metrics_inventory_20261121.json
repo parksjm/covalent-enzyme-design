@@ -1,0 +1,393 @@
+{
+  "additional_md_metric_availability": {
+    "current_wt_only_four_site_md": "The later WT four-site MD summary provides per-seed/site medians for d1/d2/d3, alpha-BD, absolute Herschlag phi, ligand RMSD, tier fractions, and second-half tier A/B. It contains 8 rows (2 seeds \u00d7 4 sites), WT only, and cannot be matched against mutant models. Campaign metadata states 100 ns, 200 compact frames per seed, stride 10, contact cutoff 4.0 \u00c5.",
+    "historical_summary": "Historical MD summary contains variant-level Tier A/B/C occupancy, persistent replicate count, mean d1, activity, and family, but no model/replica-level geometry or per-gate flags.",
+    "strain_metrics": "No directly comparable per-model strain-energy table found among the consolidated balanced outputs. interface_delta is Rosetta interface score, not ligand strain."
+  },
+  "inventory_date": "2026-11-21",
+  "missingness_notes": "Target-level selected PA6 and PA66 model records are enumerated above with per-column nonfinite/missing counts. Historical MD table is variant-level aggregation; static directionality tables omit per-model diagnostics by design. Protonation identity and calibrated force-field validity remain unverified in this bounded inventory.",
+  "primary_static_model_level_inputs": {
+    "balanced_script": "The frozen analysis script selects PA6 rows by prefix and model indices 0\u201349 from pa6_model_metrics, and PA66 rows by a separate prefix and indices 0\u201349 from pa66_model_metrics. There is no individual-row CSV in the balanced output directory; these full_metrics tables are its exact model-level inputs.",
+    "completeness_gate": "Exactly target indices 0\u201349, no duplicates or missing indices, finite post-relaxation interface_delta for every target model, and at least one Tier A/B model per sequence. Existing completeness_gate.csv reports all 18 register-arm combinations passed.",
+    "estimators": "Tier A/B fraction and median interface_delta among A/B are primary; best-three mean secondary; single best sensitivity-only. Directional comparisons use \u00b12 REU and \u00b120% experimental no-call tolerances; bootstrap uses 20,000 iterations.",
+    "geometry_gates": {
+      "Tier_A": {
+        "abs_phi_deg": [
+          70,
+          110
+        ],
+        "alphaBD_deg": [
+          90,
+          120
+        ],
+        "d1_max_A": 3.2,
+        "d2_d3_max_A": 3.8
+      },
+      "Tier_B": {
+        "abs_phi_deg": [
+          60,
+          125
+        ],
+        "alphaBD_deg": [
+          85,
+          125
+        ],
+        "d1_max_A": 3.5,
+        "d2_d3_max_A": 4.0
+      },
+      "Tier_C": {
+        "abs_phi_deg": [
+          45,
+          140
+        ],
+        "alphaBD_deg": [
+          80,
+          130
+        ],
+        "d1_max_A": 3.8,
+        "d2_d3_max_A": 4.2
+      },
+      "primary_geometry_acceptance": "Tier A or B"
+    },
+    "interpretive_boundary": "A/B is a static geometry gate, not a force-strain criterion or experimental activity. Experimental labels are substrate-specific: e.g. F101E/H are zero on PA6 L2 endpoint but high activity on PA6,6 L1 endpoint; never assign global active/inactive labels across substrates.",
+    "metrics": "d1,d2,d3,a1,t1,t2,Herschlag phi, confidence, ligand ipTM, affinity prediction/probability, interface_delta, geometry tier/rank; score_source is amber_openmm.",
+    "pa66_stratum": "PA6,6 L2z -> L1z; 9 arms (WT plus eight singles), 50 target model indices per arm, 450 selected rows. Separate campaign and substrate; analyze within this stratum.",
+    "pa6_stratum": "PA6 L4z -> L2; 9 arms (WT plus eight singles), 50 target model indices per arm, 450 selected rows. Analyze within this stratum.",
+    "protocol_metadata": "Plan declares independent one-diffusion-sample Boltz invocation per model index with explicit seeds, 200 sampling steps, three recycling steps, cached full MSAs, original contact restraints, then relaxation and Rosetta interface_delta scoring. Logs identify Boltz2 and Amber/OpenMM relaxation/score source; ligand parameter log states inferred net charge 0 and GAFF atom types. Exact ligand protonation state / parameter quality were not certifiable from these summaries; verify actual ligand MOL2/parameter provenance before using as a scientific stratum."
+  },
+  "purpose": "Read-only inventory of existing consolidated static model and MD geometry/confidence/strain-like metrics for retrospective WT/known-active mutant filter calibration.",
+  "scope": "No trajectories read, no structures rescored, no calculations performed. QM/MM, umbrella sampling, and MD protocols untouched.",
+  "sources": {
+    "balanced_analysis_script": {
+      "bytes": 7706,
+      "path": "/data/jpc/enzyme-substrate-modeling/scripts/analyze_nyl12_balanced_static.py",
+      "sha256": "2d4bc9361a1cbf30cdae534bd7ebe441939203934350d54319ef089af952d750"
+    },
+    "balanced_completeness_gate": {
+      "bytes": 766,
+      "columns": [
+        "substrate_register",
+        "variant",
+        "n_target_models",
+        "n_tier_ab",
+        "missing_indices",
+        "duplicate_indices",
+        "invalid_interface_delta",
+        "passed"
+      ],
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_balanced_static_analysis_20261011/completeness_gate.csv",
+      "row_count": 18,
+      "sample_rows": [
+        {
+          "duplicate_indices": "",
+          "invalid_interface_delta": "0",
+          "missing_indices": "",
+          "n_target_models": "50",
+          "n_tier_ab": "7",
+          "passed": "True",
+          "substrate_register": "PA6_L4z_to_L2",
+          "variant": "WT"
+        }
+      ],
+      "sha256": "a61758b909bc5ec367f30b6dcfe17abc91ac6ffa299b7e210066cd54749d5dfb"
+    },
+    "balanced_directional_calls": {
+      "bytes": 1437,
+      "columns": [
+        "substrate_register",
+        "variant",
+        "experimental_relative_activity",
+        "mutant_minus_wt_median_interface_delta",
+        "model_direction_2_reu_tolerance",
+        "experimental_direction_20_percent_tolerance",
+        "directional_call"
+      ],
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_balanced_static_analysis_20261011/directional_calls.csv",
+      "row_count": 16,
+      "sample_rows": [
+        {
+          "directional_call": "concordant",
+          "experimental_direction_20_percent_tolerance": "lower",
+          "experimental_relative_activity": "0.0",
+          "model_direction_2_reu_tolerance": "lower",
+          "mutant_minus_wt_median_interface_delta": "3.0799999999999983",
+          "substrate_register": "PA6_L4z_to_L2",
+          "variant": "F101E"
+        }
+      ],
+      "sha256": "bc0e306ce2a2650f0332b197c24223a4a5ce86f526159b4feacf0eb45397b9a4"
+    },
+    "balanced_ensemble_summary": {
+      "bytes": 2032,
+      "columns": [
+        "substrate_register",
+        "variant",
+        "n_models",
+        "n_tier_ab",
+        "tier_ab_fraction",
+        "tier_ab_fraction_ci_low",
+        "tier_ab_fraction_ci_high",
+        "median_interface_delta_tier_ab",
+        "mean_best_three_interface_delta_tier_ab",
+        "best_interface_delta_tier_ab"
+      ],
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_balanced_static_analysis_20261011/ensemble_summary.csv",
+      "row_count": 18,
+      "sample_rows": [
+        {
+          "best_interface_delta_tier_ab": "-27.85",
+          "mean_best_three_interface_delta_tier_ab": "-25.363333333333333",
+          "median_interface_delta_tier_ab": "-22.86",
+          "n_models": "50",
+          "n_tier_ab": "7",
+          "substrate_register": "PA6_L4z_to_L2",
+          "tier_ab_fraction": "0.14",
+          "tier_ab_fraction_ci_high": "0.2618619371058554",
+          "tier_ab_fraction_ci_low": "0.06950833427016294",
+          "variant": "WT"
+        }
+      ],
+      "sha256": "ac29ee556140121cf1faf924b0666ed2b4a93a71fb886f18ee75e94a98ae8a7f"
+    },
+    "balanced_plan": {
+      "bytes": 11212,
+      "path": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/NYL12_BALANCED_STATIC_ENSEMBLE_PLAN_20261011.md",
+      "sha256": "48b7b79aa5ff978900ac4b7eaaa05360cf9dab7235f49471663e08537f48d810"
+    },
+    "geometry_tier_source": {
+      "bytes": 3783,
+      "path": "/data/jpc/enzyme-substrate-modeling/src/geometry_tiers.py",
+      "sha256": "a7404a4e594a17371ecdb24cb27cf076bb9377343b1336f2011d2437f6a5e803"
+    },
+    "historical_md_variant_summary": {
+      "bytes": 1781,
+      "columns": [
+        "variant",
+        "mean_tier_a",
+        "mean_tier_b",
+        "mean_tier_c",
+        "persistent_reps",
+        "mean_d1",
+        "n_replicates",
+        "family",
+        "activity"
+      ],
+      "path": "/data/jpc/enzyme-substrate-modeling/manuscript_nyl12_wt_vs_mutants/presentation_figures_20260918/md_variant_summary_20260918.csv",
+      "row_count": 18,
+      "sample_rows": [
+        {
+          "activity": "0.0",
+          "family": "PA6_L2",
+          "mean_d1": "3.857333333333333",
+          "mean_tier_a": "0.024999999999999998",
+          "mean_tier_b": "0.26",
+          "mean_tier_c": "0.6266666666666666",
+          "n_replicates": "3",
+          "persistent_reps": "1",
+          "variant": "F101E"
+        }
+      ],
+      "sha256": "261227f8a9b01395e0513eb822511296d97da3d2a00ed975d30d5fb31ff0dbfa"
+    },
+    "pa66_model_metrics": {
+      "balanced_target_subset_rows": 450,
+      "bytes": 64819,
+      "columns": [
+        "sequence_name",
+        "model",
+        "score_source",
+        "d1",
+        "d2",
+        "d3",
+        "a1",
+        "t1",
+        "t2",
+        "herschlag_phi",
+        "conf",
+        "lig_iptm",
+        "aff_pred",
+        "aff_prob",
+        "interface_delta",
+        "geometry_tier",
+        "geometry_tier_rank"
+      ],
+      "geometry_tier_counts": {
+        "A": 69,
+        "B": 56,
+        "C": 36,
+        "reject": 289
+      },
+      "missing_or_nonfinite_by_column": {
+        "a1": 0,
+        "conf": 0,
+        "d1": 0,
+        "d2": 0,
+        "d3": 0,
+        "herschlag_phi": 0,
+        "interface_delta": 0,
+        "lig_iptm": 0
+      },
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa66_l2z_l1_variants_smiles_ds20_20260903/final/full_metrics.csv",
+      "row_count": 450,
+      "sample_rows": [
+        {
+          "a1": "69.6",
+          "aff_pred": "-0.064",
+          "aff_prob": "0.397",
+          "conf": "0.784",
+          "d1": "2.91",
+          "d2": "3.0",
+          "d3": "2.96",
+          "geometry_tier": "reject",
+          "geometry_tier_rank": "99",
+          "herschlag_phi": "74.3",
+          "interface_delta": "-14.49",
+          "lig_iptm": "0.849",
+          "model": "pa66_l2z_l1_nyl12_f101e_model_46",
+          "score_source": "amber_openmm",
+          "sequence_name": "pa66_l2z_l1_nyl12_f101e",
+          "t1": "74.4",
+          "t2": "-158.9"
+        }
+      ],
+      "score_sources": [
+        "amber_openmm"
+      ],
+      "sha256": "532f5f09f6d00996074c5d5b59dcf39ca72b675bb651f9f52622065e8fb128ce",
+      "target_arm_counts": {
+        "F101E": 50,
+        "F101H": 50,
+        "F55N": 50,
+        "K59D": 50,
+        "K59E": 50,
+        "P105K": 50,
+        "T53Q": 50,
+        "V111C": 50,
+        "WT": 50
+      }
+    },
+    "pa6_model_metrics": {
+      "balanced_target_subset_rows": 450,
+      "bytes": 114404,
+      "columns": [
+        "sequence_name",
+        "model",
+        "score_source",
+        "d1",
+        "d2",
+        "d3",
+        "a1",
+        "t1",
+        "t2",
+        "herschlag_phi",
+        "conf",
+        "lig_iptm",
+        "aff_pred",
+        "aff_prob",
+        "interface_delta",
+        "geometry_tier",
+        "geometry_tier_rank"
+      ],
+      "geometry_tier_counts": {
+        "A": 48,
+        "B": 49,
+        "C": 47,
+        "reject": 306
+      },
+      "missing_or_nonfinite_by_column": {
+        "a1": 0,
+        "conf": 0,
+        "d1": 0,
+        "d2": 0,
+        "d3": 0,
+        "herschlag_phi": 0,
+        "interface_delta": 0,
+        "lig_iptm": 0
+      },
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_pa6_pa66_ssl_sites_1_4_ds1_aff1/final/full_metrics.csv",
+      "row_count": 801,
+      "sample_rows": [
+        {
+          "a1": "71.6",
+          "aff_pred": "0.189",
+          "aff_prob": "0.33",
+          "conf": "0.787",
+          "d1": "3.31",
+          "d2": "2.99",
+          "d3": "2.84",
+          "geometry_tier": "reject",
+          "geometry_tier_rank": "99",
+          "herschlag_phi": "-109.8",
+          "interface_delta": "-16.72",
+          "lig_iptm": "0.856",
+          "model": "pa6_l4z_l2_nyl12_f101e_model_8",
+          "score_source": "amber_openmm",
+          "sequence_name": "pa6_l4z_l2_nyl12_f101e",
+          "t1": "-106.9",
+          "t2": "13.0"
+        }
+      ],
+      "score_sources": [
+        "amber_openmm"
+      ],
+      "sha256": "635d6e6b6c1bdf1ba5de6c69dbc5c077e90f6a0fc82873798d42259305c097c0",
+      "target_arm_counts": {
+        "F101E": 50,
+        "F101H": 50,
+        "F55N": 50,
+        "K59D": 50,
+        "K59E": 50,
+        "P105K": 50,
+        "T53Q": 50,
+        "V111C": 50,
+        "WT": 50
+      }
+    },
+    "wt_md_site_summary": {
+      "bytes": 1791,
+      "columns": [
+        "seed",
+        "site",
+        "n_frames",
+        "last_time_ns",
+        "median_d1",
+        "median_d2",
+        "median_d3",
+        "median_a1",
+        "median_abs_herschlag_phi",
+        "median_ligand_rmsd",
+        "p95_ligand_rmsd",
+        "frac_tier_a",
+        "frac_tier_b",
+        "frac_tier_c",
+        "frac_tier_reject",
+        "frac_tier_ab",
+        "second_half_frac_tier_ab"
+      ],
+      "path": "/data/jpc/enzyme-substrate-modeling/output_nyl12_af3_contact_pa6_l4z_l2_wt_md_100ns_20261009/four_site_postprocessing/active_site_geometry_site_summary.csv",
+      "row_count": 8,
+      "sample_rows": [
+        {
+          "frac_tier_a": "0.245",
+          "frac_tier_ab": "0.625",
+          "frac_tier_b": "0.38",
+          "frac_tier_c": "0.225",
+          "frac_tier_reject": "0.15",
+          "last_time_ns": "99.55000000000001",
+          "median_a1": "99.53094459432525",
+          "median_abs_herschlag_phi": "92.85672566695025",
+          "median_d1": "3.296043242198496",
+          "median_d2": "3.0044807041067085",
+          "median_d3": "3.0192125209549685",
+          "median_ligand_rmsd": "2.9809195808976288",
+          "n_frames": "200",
+          "p95_ligand_rmsd": "4.22121205144977",
+          "second_half_frac_tier_ab": "0.49",
+          "seed": "2026100921",
+          "site": "AE"
+        }
+      ],
+      "sha256": "d1b4076586a1301bf19f8884c1eed60b98b7e92608e23a708b2fa2f77b3c0ab3"
+    }
+  }
+}

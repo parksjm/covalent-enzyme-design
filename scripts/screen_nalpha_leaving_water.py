@@ -21,6 +21,7 @@ from scipy.io import netcdf_file
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from nyl12_covalent.catalytic_alignment import SITE_RESIDUES, _cif_atoms  # noqa:E402
+from nyl12_covalent.native_thr_policy import geometry_eligible, policy_metadata  # noqa:E402
 from nyl12_covalent.nalpha_water_relay import (  # noqa:E402
     angle,
     candidate_rank,
@@ -144,9 +145,10 @@ def scan_case(case: dict, config: dict, output: Path) -> tuple[dict, list[dict]]
                         **native,
                     }
                 )
-                if not intact or not native["native_pass"]:
+                if not intact or not geometry_eligible(cached["tier"]):
                     continue
-                counts["joint_eligible"] += 1
+                counts["geometry_integrity_eligible"] += 1
+                counts["joint_eligible"] += int(native["native_pass"])
                 near = close_waters(xyz[waters[:, 1]], xyz[mapped["nalpha"]], cell, 3.5)
                 near2 = close_waters(
                     xyz[waters[near, 1]], xyz[mapped["nleave"]], cell, 3.5
@@ -225,6 +227,8 @@ def scan_case(case: dict, config: dict, output: Path) -> tuple[dict, list[dict]]
         writer.writerows(gates)
     return {
         "case": case["name"],
+        "selection_policy": policy_metadata(),
+        "joint_eligible_role": "Legacy native-similarity diagnostic count, not a relay-screen veto",
         "counts": dict(counts),
         "topology": case["topology"],
         "topology_sha256": digest(Path(case["topology"])),

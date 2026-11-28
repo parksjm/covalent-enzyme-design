@@ -1,0 +1,140 @@
+{
+  "directories": {
+    "/home/jpc/code/alphafold3/.conda": [
+      "envs"
+    ],
+    "/home/jpc/code/alphafold3/models": [
+      "af3.bin.zst"
+    ],
+    "/home/jpc/code/alphafold3/run": [
+      "__pycache__",
+      "af3_utils.py",
+      "evopro_utils.py",
+      "run_af3.py"
+    ],
+    "/home/jpc/code/boltz/mols": [
+      "000.pkl",
+      "001.pkl",
+      "002.pkl",
+      "003.pkl",
+      "004.pkl",
+      "005.pkl",
+      "006.pkl",
+      "007.pkl",
+      "008.pkl",
+      "009.pkl",
+      "00A.pkl",
+      "00B.pkl",
+      "00C.pkl",
+      "00D.pkl",
+      "00E.pkl",
+      "00F.pkl",
+      "00G.pkl",
+      "00H.pkl",
+      "00I.pkl",
+      "00J.pkl",
+      "00K.pkl",
+      "00L.pkl",
+      "00M.pkl",
+      "00N.pkl",
+      "00O.pkl",
+      "00P.pkl",
+      "00Q.pkl",
+      "00R.pkl",
+      "00S.pkl",
+      "00T.pkl",
+      "00U.pkl",
+      "00V.pkl",
+      "00W.pkl",
+      "00X.pkl",
+      "00Y.pkl",
+      "010.pkl",
+      "011.pkl",
+      "012.pkl",
+      "013.pkl",
+      "014.pkl",
+      "015.pkl",
+      "016.pkl",
+      "017.pkl",
+      "018.pkl",
+      "019.pkl"
+    ],
+    "/home/jpc/code/miniforge3/envs/boltz-env/bin": [
+      "2to3",
+      "2to3-3.11",
+      "boltz",
+      "bunzip2",
+      "bzcat",
+      "bzcmp",
+      "bzdiff",
+      "bzegrep",
+      "bzfgrep",
+      "bzgrep",
+      "bzip2",
+      "bzip2recover",
+      "bzless",
+      "bzmore",
+      "c_rehash",
+      "captoinfo",
+      "clear",
+      "derb",
+      "f2py",
+      "genbrk",
+      "gencfu",
+      "gencnval",
+      "gendict",
+      "genrb",
+      "icu-config",
+      "icuexportdata",
+      "icuinfo",
+      "idle3",
+      "idle3.11",
+      "infocmp",
+      "infotocap",
+      "isympy",
+      "makeconv",
+      "ncurses6-config",
+      "ncursesw6-config",
+      "normalizer",
+      "numba",
+      "openssl",
+      "pip",
+      "pip3",
+      "pkgdata",
+      "proton",
+      "proton-viewer",
+      "pydoc",
+      "pydoc3"
+    ]
+  },
+  "commands": {
+    "boltz_version": {
+      "returncode": 0,
+      "stdout": "boltz 2.2.1\ntorch 2.9.0+cu128\ntorch_cuda 12.8\npython 3.11.14 | packaged by conda-forge | (main, Oct 22 2025, 22:46:25) [GCC 14.3.0]\n",
+      "stderr": ""
+    },
+    "boltz_help": {
+      "returncode": 0,
+      "stdout": "Usage: boltz predict [OPTIONS] DATA\n\n  Run predictions with Boltz.\n\nOptions:\n  --out_dir PATH                  The path where to save the predictions.\n  --cache PATH                    The directory where to download the data and\n                                  model. Default is ~/.boltz, or $BOLTZ_CACHE\n                                  if set.\n  --checkpoint PATH               An optional checkpoint, will use the\n                                  provided Boltz-1 model by default.\n  --devices INTEGER               The number of devices to use for prediction.\n                                  Default is 1.\n  --accelerator [gpu|cpu|tpu]     The accelerator to use for prediction.\n                                  Default is gpu.\n  --recycling_steps INTEGER       The number of recycling steps to use for\n                                  prediction. Default is 3.\n  --sampling_steps INTEGER        The number of sampling steps to use for\n                                  prediction. Default is 200.\n  --diffusion_samples INTEGER     The number of diffusion samples to use for\n                                  prediction. Default is 1.\n  --max_parallel_samples INTEGER  The maximum number of samples to predict in\n                                  parallel. Default is None.\n  --step_scale FLOAT              The step size is related to the temperature\n                                  at which the diffusion process samples the\n                                  distribution. The lower the higher the\n                                  diversity among samples (recommended between\n                                  1 and 2). Default is 1.638 for Boltz-1 and\n                                  1.5 for Boltz-2. If not provided, the\n                                  default step size will be used.\n  --write_full_pae                Whether to dump the pae into a npz file.\n                                  Default is True.\n  --write_full_pde                Whether to dump the pde into a npz file.\n                                  Default is False.\n  --output_format [pdb|mmcif]     The output format to use for the\n                                  predictions. Default is mmcif.\n  --num_workers INTEGER           The number of dataloader workers to use for\n                                  prediction. Default is 2.\n  --override                      Whether to override existing found\n                                  predictions. Default is False.\n  --seed INTEGER                  Seed to use for random number generator.\n                                  Default is None (no seeding).\n  --use_msa_server                Whether to use the MMSeqs2 server for MSA\n                                  generation. Default is False.\n  --msa_server_url TEXT           MSA server url. Used only if\n                                  --use_msa_server is set.\n  --msa_pairing_strategy TEXT     Pairing strategy to use. Used only if\n                                  --use_msa_server is set. Options are\n                                  'greedy' and 'complete'\n  --msa_server_username TEXT      MSA server username for basic auth. Used\n                                  only if --use_msa_server is set. Can also be\n                                  set via BOLTZ_MSA_USERNAME environment\n                                  variable.\n  --msa_server_password TEXT      MSA server password for basic auth. Used\n                                  only if --use_msa_server is set. Can also be\n                                  set via BOLTZ_MSA_PASSWORD environment\n                                  variable.\n  --api_key_header TEXT           Custom header key for API key authentication\n                                  (default: X-API-Key).\n  --api_key_value TEXT            Custom header value for API key\n                                  authentication.\n  --use_potentials                Whether to use potentials for steering.\n                                  Default is False.\n  --model [boltz1|boltz2]         The model to use for prediction. Default is\n                                  boltz2.\n  --method TEXT                   The method to use for prediction. Default is\n                                  None.\n  --preprocessing-threads INTEGER\n                                  The number of threads to use for\n                                  preprocessing. Default is 1.\n  --affinity_mw_correction        Whether to add the Molecular Weight\n                                  correction to the affinity value head.\n  --sampling_steps_affinity INTEGER\n                                  The number of sampling steps to use for\n                                  affinity prediction. Default is 200.\n  --diffusion_samples_affinity INTEGER\n                                  The number of diffusion samples to use for\n                                  affinity prediction. Default is 5.\n  --affinity_checkpoint PATH      An optional checkpoint, will use the\n                                  provided Boltz-1 model by default.\n  --max_msa_seqs INTEGER          The maximum number of MSA sequences to use\n                                  for prediction. Default is 8192.\n  --subsample_msa                 Whether to subsample the MSA. Default is\n                                  True.\n  --num_subsampled_msa INTEGER    The number of MSA sequences to subsample.\n                                  Default is 1024.\n  --no_kernels                    Whether to disable the kernels. Default\n                                  False\n  --write_embeddings              to dump the s and z embeddings into a npz\n                                  file. Default is False.\n  --help                          Show this message and exit.\n",
+      "stderr": ""
+    }
+  },
+  "model_files": [
+    {
+      "path": "/home/jpc/code/boltz/boltz2_aff.ckpt",
+      "bytes": 2062139170
+    },
+    {
+      "path": "/home/jpc/code/boltz/mols.tar",
+      "bytes": 1855662080
+    },
+    {
+      "path": "/home/jpc/code/boltz/boltz2_conf.ckpt",
+      "bytes": 2286561469
+    },
+    {
+      "path": "/home/jpc/code/alphafold3/models/af3.bin.zst",
+      "bytes": 1020543979
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "observed_utc": "2026-11-26T00:34:41Z",
+  "attempt": "startup_autotune_off_attempt01",
+  "both_started_utc_approx": "2026-11-26T00:31:22Z",
+  "marigold": {
+    "model": "Nemotron3.5SuperVLNVFP4",
+    "stage": "checkpointloading",
+    "shards_loaded": 39,
+    "shards_total": 88,
+    "native_engine_active": true,
+    "exit_status": null,
+    "HTTP_ready": false,
+    "newfatalerror_observed": false,
+    "missing_precompiled_FlashInfer_warning": true
+  },
+  "lavender": {
+    "model": "MistralSmall4NVFP4",
+    "stage": "checkpointloading",
+    "shards_loaded": 5,
+    "shards_total": 13,
+    "native_engine_active": true,
+    "exit_status": null,
+    "HTTP_ready": false,
+    "newfatalerror_observed": false,
+    "autotune_disabled_verified": true
+  },
+  "benchmark_cases_completed": 0,
+  "interpretation": "Earlierwalltimewasruntimeinstallation/loading/compilationandfailedstartup,notmeasured20caseinference. Currentretryisabout3minutesold; bothmakingloadingprogress. Fullservingacceptancestillpending.",
+  "changes_to_jobs": false
+}

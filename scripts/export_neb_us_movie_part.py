@@ -17,10 +17,18 @@ def main() -> None:
     parser.add_argument("--cpptraj", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--frames-per-block", type=int, default=5)
+    parser.add_argument("--production-blocks", type=int, default=6)
+    parser.add_argument("--prepared-manifest", type=Path)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     export_part(
-        args.campaign, args.windows, args.cpptraj, args.output, args.frames_per_block
+        args.campaign,
+        args.windows,
+        args.cpptraj,
+        args.output,
+        args.frames_per_block,
+        args.production_blocks,
+        args.prepared_manifest,
     )
 
 

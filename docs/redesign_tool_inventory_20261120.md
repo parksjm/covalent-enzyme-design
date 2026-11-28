@@ -11,14 +11,31 @@ design protocol. Diffusion tools remain future controlled comparisons if a
 backbone limitation is demonstrated. RFD4 is also deferred; the older preferred-
 RFD4 discussion below is historical. The current matched Boltz cohort uses
 template-free, precursor-paired MSAs and four unguided PA6 L4 molecules.
-ipSAE2 is recommended as a supplementary confidence descriptor after local
-input/order and scoring qualification, independently of catalytic geometry.
+ipSAE2 is installed in a separate uv environment and technically qualified on
+WT/design inputs; all six matched predictions were scored on 28 November.
+It remains a supplementary confidence descriptor, independent of catalytic geometry.
+
+**Local MSA readiness, recovered and exercised on Violet, 27 November:**
+RomeroLab LightningBoltz checkout
+`/data/jpc/code/lightning-boltz` (cf37c3e), editable Boltz2.2.1 environment
+`/data/jpc/code/lboltz-env`, supports local `--use_colabfold_search` separately
+from remote `--use_msa_server`. The working search executables are
+`/data/jpc/enzyme-substrate-modeling/.pixi/envs/colabfold/bin/`; both indexed
+databases are present under `/data/boltz_db`. A local GPU search of the exact
+WT328 precursor completed and supplied1,387 usable homolog pairs. The earlier
+unavailable assessment checked the wrong environment/locations. No installation
+or download was needed. See `LOCAL_MSA_WORKFLOW.md` for exact commands, native
+query-based output naming, source recovery and paired-feature qualification.
+Existing WT homolog A3Ms contain 3,136 alpha and 4,912 beta non-query rows and
+are reusable with query identity checks. Their synthetic row labels cannot
+establish alpha/beta pairing. Those older unpaired inputs remain separate from
+the new precursor-derived paired controls.
 
 ## Resource inventory
 
 | Resource | Intended optional use | Verified local state and readiness |
 | --- | --- | --- |
-| [ipSAE2](https://github.com/DunbrackLab/IPSAE2) | Additional raw-model protein-interface and directional protein–PA6 placement confidence; complements physical geometry checks | Source reviewed at `fe560f4`, alpha 0.1.11; raw WT PAE readability checked, full scoring qualification pending. No installation or production cutoff adopted. Keep separate from the active Boltz environment; [review](ipsae2_code_review_20261127.md) |
+| [ipSAE2](https://github.com/DunbrackLab/IPSAE2) | Additional raw-model protein-interface and directional protein–PA6 placement confidence; complements physical geometry checks | Isolated uv installation at `fe560f4`, alpha 0.1.11; WT/design native mapping and numerical qualification passed, then six matched models scored. No catalytic cutoff adopted; active Boltz environment unchanged. [Qualification](IPSAE2_QUALIFICATION.md) |
 | [RFD4-Proteina](https://github.com/RosettaCommons/RFD4-Proteina), [project](https://rfd4-proteina.org/) | Preferred candidate over RFD3 when backbone or joint sequence/structure redesign is justified; motif conditioning, ligand context and partial diffusion | Not found in bounded violet/azalea checkout/environment checks; no Nyl12 qualification yet |
 | [Foundry / RFdiffusion3](https://github.com/RosettaCommons/foundry) | Retain the existing implementation and checkpoints for reproducibility and optional comparison | Violet checkout `/data/jpc/code/foundry`; rc-foundry 0.1.11.dev34+gcee116dc5. RFD3/RF3/MPNN checkpoint files exist in the default cache on both hosts; inference readiness was not retested |
 | [tmol](https://github.com/RosettaCommons/tmol) | Standalone PyTorch scoring, packing, minimization/FastRelax and possible future design interfaces | Not found in bounded checks; adapter and PA6/covalent-state compatibility unvalidated |

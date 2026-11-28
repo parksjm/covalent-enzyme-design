@@ -76,12 +76,21 @@ def test_attack_only_export_prepends_start_and_exports_completed_windows(
 
     monkeypatch.setattr(progress_export, "run_cpptraj", fake_run_cpptraj)
     monkeypatch.setattr(progress_export, "dcd_counts", lambda _path: (3, 42))
+    policy_calls = []
+    monkeypatch.setattr(
+        progress_export, "append_file_policy", lambda *args: policy_calls.append(args)
+    )
     topology = tmp_path / "topology.parm7"
     topology.write_text("topology")
     cpptraj = tmp_path / "cpptraj"
     cpptraj.write_text("executable placeholder")
 
     generation = export(run, topology, cpptraj, tmp_path / "exports", "attack_only")
+    assert policy_calls[0][:2] == (
+        generation / "reaction_path.vmd",
+        generation / "stripped.parm7",
+    )
+    assert len(policy_calls[0][2]) == 98
 
     trajectory_input = input_files[0]
     assert trajectory_input.count("trajin ") == 3

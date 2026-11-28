@@ -1,0 +1,288 @@
+{
+  "sources": {
+    "af3_before": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/af3_template_seed20261126/postprocess/af3_template_seed20261126_before/canonical_precursor.pdb",
+      "sha256": "49ba458040678dec8c5351fe5f8da75205ce7db78bde287f66013b1fc88a5348"
+    },
+    "af3_after": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/af3_template_seed20261126/postprocess/af3_template_seed20261126_after/canonical_precursor.pdb",
+      "sha256": "8f67e169bea2c303c430ead018926347c95d5e9ed7cc527d4cd3b8542df7bf5c"
+    },
+    "boltz_before": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/boltz_template_seed20261126_before/canonical_precursor.pdb",
+      "sha256": "828147be5d71ced74f59463b40bc843878b1a06a944296114c3ecd98761dd849"
+    },
+    "boltz_after": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/boltz_template_seed20261126/postprocess/boltz_template_seed20261126_after/canonical_precursor.pdb",
+      "sha256": "8f5849df6c2406a0d79c4c40daea968f08f641719cb227486c5ecbab17189e7c"
+    },
+    "ts_like": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_heavy.pdb",
+      "sha256": "04f0e01efa124c3441b995005bb0f8dce3683bd871a3d4b7541761dbbe8190e6"
+    }
+  },
+  "figures": {
+    "af3_before": {
+      "canonical_site": "BF",
+      "ligand_chain": "J",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -65.21974182128906,
+        0.0,
+        0.0,
+        0.0,
+        51.419742584228516,
+        79.01974487304688,
+        20.0
+      ],
+      "alignment": {
+        "method": "Kabsch on canonical B/F CA excluding catalytic residues and highlighted loops",
+        "atoms": 304,
+        "rmsd_A": 3.7932547766580327
+      },
+      "display_coordinates": {
+        "B:113:CA": [
+          -4.216074328381477,
+          1.6932794509028557,
+          -0.5751105063246925
+        ],
+        "B:186:CA": [
+          3.490393173442398,
+          1.8319658724541217,
+          -1.0941950079328255
+        ],
+        "F:233:CA": [
+          2.1226628949282795,
+          -2.6659394142992365,
+          -0.14040681518144368
+        ]
+      }
+    },
+    "af3_after": {
+      "canonical_site": "BF",
+      "ligand_chain": "J",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -65.21974182128906,
+        0.0,
+        0.0,
+        0.0,
+        51.419742584228516,
+        79.01974487304688,
+        20.0
+      ],
+      "alignment": {
+        "method": "Kabsch on canonical B/F CA excluding catalytic residues and highlighted loops",
+        "atoms": 304,
+        "rmsd_A": 3.83501090314082
+      },
+      "display_coordinates": {
+        "B:113:CA": [
+          -4.432210145633316,
+          1.9401269369225211,
+          -0.5958789022805765
+        ],
+        "B:186:CA": [
+          3.334559552104101,
+          1.6314026407018636,
+          -0.9224731019089124
+        ],
+        "F:233:CA": [
+          1.7917639151755622,
+          -2.935928537951773,
+          -0.22257487561257866
+        ]
+      }
+    },
+    "boltz_before": {
+      "canonical_site": "BF",
+      "ligand_chain": "J",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -65.21974182128906,
+        0.0,
+        0.0,
+        0.0,
+        51.419742584228516,
+        79.01974487304688,
+        20.0
+      ],
+      "alignment": {
+        "method": "Kabsch on canonical B/F CA excluding catalytic residues and highlighted loops",
+        "atoms": 304,
+        "rmsd_A": 0.5690979901576738
+      },
+      "display_coordinates": {
+        "B:113:CA": [
+          -4.553748320465861,
+          1.17925261443152,
+          -0.15918461660279487
+        ],
+        "B:186:CA": [
+          3.1513144880767343,
+          1.6729524759235332,
+          -0.44388193512986623
+        ],
+        "F:233:CA": [
+          1.8210466101596483,
+          -2.9378605095694543,
+          0.2259934158058409
+        ]
+      }
+    },
+    "boltz_after": {
+      "canonical_site": "BF",
+      "ligand_chain": "J",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -65.21974182128906,
+        0.0,
+        0.0,
+        0.0,
+        51.419742584228516,
+        79.01974487304688,
+        20.0
+      ],
+      "alignment": {
+        "method": "Kabsch on canonical B/F CA excluding catalytic residues and highlighted loops",
+        "atoms": 304,
+        "rmsd_A": 1.4554377779532435e-14
+      },
+      "display_coordinates": {
+        "B:113:CA": [
+          -4.789040661667465,
+          1.6081413311321802,
+          2.2615261888898662e-15
+        ],
+        "B:186:CA": [
+          2.7374700836912225,
+          1.6081413311321786,
+          4.44551239005164e-15
+        ],
+        "F:233:CA": [
+          2.0515705779762543,
+          -3.2162826622643412,
+          -8.988467048093392e-15
+        ]
+      }
+    },
+    "ts_like": {
+      "canonical_site": "AE",
+      "ligand_chain": "I",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -76.8195571899414,
+        -3.9160282611846924,
+        -1.4156899452209473,
+        3.1356801986694336,
+        60.56512451171875,
+        93.07398986816406,
+        20.0
+      ],
+      "alignment": {
+        "method": "own catalytic reference frame; no coordinate optimization"
+      },
+      "display_coordinates": {
+        "A:113:CA": [
+          -4.689156140825907,
+          1.6235889320539234,
+          -1.9047055451989864e-15
+        ],
+        "A:186:CA": [
+          2.898340613703874,
+          1.6235889320539239,
+          -1.9978375457397636e-15
+        ],
+        "E:233:CA": [
+          1.7908155271220407,
+          -3.2471778641078384,
+          6.794552790604985e-16
+        ]
+      }
+    },
+    "assembly_loops": {
+      "source": "ts_like",
+      "camera": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -282.19378662109375,
+        -0.837005615234375,
+        -22.771812438964844,
+        -6.236259460449219,
+        222.48373413085938,
+        341.9038391113281,
+        20.0
+      ],
+      "loops": {
+        "alpha_A_95_103": "deep blue",
+        "beta_E_289_300": "orange-red"
+      },
+      "canonical_chains": "A/E green, B/F cyan, C/G magenta, D/H yellow; ligand I orange C",
+      "note": "Assembly context from TS-like template, not reference crystal; label ligand as modeled L4/PA6 orientation."
+    }
+  },
+  "native_files_modified": false,
+  "hydrogens_added": false,
+  "threads": 2,
+  "connectivity": "PyMOL PDB connectivity; display valence=0, no force-field changes",
+  "scope": "WT local panels display full heavy-only L4 and Phe113, Asn186, Thr233; no hidden ligand atoms."
+}

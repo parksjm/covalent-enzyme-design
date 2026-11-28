@@ -50,8 +50,18 @@ def journal(phase: str, action: str, result: str = "", *, root: Path = ROOT) -> 
 def discover(
     request: dict, receipts_root: Path, pattern: str
 ) -> tuple[list[Path], bool]:
-    """Find local completed receipts and check explicit manifest-wide duration."""
-    receipts = sorted(receipts_root.rglob(pattern))
+    """Read only manifest windows and direct production stages.
+
+    Targeted diagnostics and derived trees are outside this campaign's source
+    namespace. A mislabeled receipt inside a declared window remains an error.
+    """
+    receipts = sorted(
+        path
+        for window in request["windows"]
+        for path in (receipts_root / window["label"]).glob(
+            f"*_production_5ps/{pattern}"
+        )
+    )
     duration = dict.fromkeys((window["label"] for window in request["windows"]), 0.0)
     for path in receipts:
         proof = json.loads(path.read_text())

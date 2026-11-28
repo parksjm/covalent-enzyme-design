@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import logging
 import math
 from pathlib import Path
 import re
@@ -25,6 +26,7 @@ from nyl12_covalent.relay_umbrella_cv import (
     raw_features,
 )
 
+LOGGER = logging.getLogger(__name__)
 BOLTZMANN_KCAL_MOL_K = 0.00198720425864083
 DT_PS = 0.0005
 ROLES = {
@@ -152,6 +154,36 @@ def _validate_trajectory_times(
     return local_steps
 
 
+def _step_origin_from_mdin(mdin: str, restart_time_ps: float) -> int:
+    """Derive the native trajectory clock origin from Amber's explicit irest.
+
+    Args:
+        mdin: Contents of the stage's Amber input file.
+        restart_time_ps: Time stored in the stage input restart file.
+
+    Returns:
+        Integration-step origin for native NetCDF times.
+
+    Raises:
+        ValueError: If irest is missing, duplicated, unsupported, or invalid.
+    """
+    uncommented = "\n".join(line.split("!", 1)[0] for line in mdin.splitlines())
+    declarations = re.findall(r"\birest\s*=\s*([^,\s/]+)", uncommented, re.IGNORECASE)
+    if len(declarations) != 1:
+        raise ValueError("Amber input must declare irest exactly once")
+    try:
+        irest = int(declarations[0])
+    except ValueError as error:
+        raise ValueError("Amber input irest must be integer 0 or 1") from error
+    if irest == 0:
+        return 0
+    if irest != 1:
+        raise ValueError(f"Unsupported Amber irest value: {irest}")
+    if not math.isfinite(restart_time_ps) or restart_time_ps < 0.0:
+        raise ValueError("Restart time must be finite and nonnegative")
+    return int(round(restart_time_ps / DT_PS))
+
+
 def _read_dumpave(path: Path) -> dict[int, tuple[float, float]]:
     """Read native Amber step and two restraint CVs, preserving native precision."""
     values: dict[int, tuple[float, float]] = {}
@@ -170,6 +202,13 @@ def _read_dumpave(path: Path) -> dict[int, tuple[float, float]]:
             raise ValueError(
                 f"Invalid DUMPAVE record at {path}:{line_number}"
             ) from error
+        if step == 0 and values.get(0) == cv_values:
+            LOGGER.info(
+                "Coalesced identical unsampled startup CV record at %s:%d",
+                path,
+                line_number,
+            )
+            continue
         if step in values or not all(math.isfinite(value) for value in cv_values):
             raise ValueError(f"Duplicate/nonfinite DUMPAVE record at step {step}")
         values[step] = cv_values
@@ -400,9 +439,9 @@ def block_diagnostics(
     native = _native_stage_receipt(
         stage, steps, float(cfg["temperature_K"]), (float(gate[0]), float(gate[1]))
     )
-    input_restart = Rst7.open(str(stage / "input.ncrst"))
-    step_origin = int(round(float(input_restart.time) / DT_PS))
     mdin = (stage / "run.mdin").read_text()
+    input_restart = Rst7.open(str(stage / "input.ncrst"))
+    step_origin = _step_origin_from_mdin(mdin, float(input_restart.time))
     stride_match = re.search(r"\bntwx\s*=\s*(\d+)", mdin, re.IGNORECASE)
     if stride_match is None:
         raise ValueError("Production input does not declare trajectory stride ntwx")

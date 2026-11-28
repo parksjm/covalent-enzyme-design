@@ -20,12 +20,15 @@ from nyl12_covalent.umbrella_vmd import (  # noqa: E402
     cpptraj_trajectory_input,
 )
 from scripts.export_direct_pt_progress import (  # noqa: E402
+    QM_INDICES,
     STRIP_MASK,
     run_cpptraj,
     sha256,
     vmd_script,
     write_checksum_manifest,
 )
+
+from nyl12_covalent.vmd_style_refresh import append_file_policy  # noqa: E402
 
 LOGGER = logging.getLogger(__name__)
 
@@ -92,6 +95,11 @@ def export(
             trajectory_name=trajectory.name,
             description="sequential umbrella-sampling",
         )
+    )
+    append_file_policy(
+        output / "view_umbrella.vmd",
+        output / "stripped.parm7",
+        [i - 1 for i in QM_INDICES],
     )
     serializable_plan = [
         {**row, "source": str(row["source"].resolve())} for row in plan

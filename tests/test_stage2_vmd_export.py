@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 from pathlib import Path
 import sys
@@ -49,17 +49,25 @@ def test_parse_atom_mask_rejects_ambiguous_or_invalid_selection(mask: str) -> No
 @dataclass
 class _Residue:
     idx: int
+    name: str = "LIG"
+    chain: str = "A"
 
 
 @dataclass
 class _Atom:
     residue: _Residue
     name: str = "X"
+    idx: int = 0
+    atomic_number: int = 6
+    bond_partners: list[Any] = field(default_factory=list)
 
 
 class _Topology:
     def __init__(self, residues: list[int]) -> None:
         self.atoms = [_Atom(_Residue(index)) for index in residues]
+        self.atoms[0].residue.name = "ALA"
+        for index, atom in enumerate(self.atoms):
+            atom.idx = index
 
 
 def test_residue_mask_compacts_selected_atom_residues() -> None:
@@ -87,6 +95,7 @@ def test_viewer_uses_verified_zero_based_reactive_atoms_and_displays() -> None:
     for index, name in identities.items():
         topology.atoms[index].name = name
     remap = {index: offset for offset, index in enumerate(sorted(identities))}
+    topology.atoms[1637].residue.name = "PHE"
     text = _viewer_text(len(remap), [13916], remap, topology)
     assert "mol showrep $::stage2_mol 0 off" in text
     assert "resname LIG and element C" in text
@@ -95,6 +104,9 @@ def test_viewer_uses_verified_zero_based_reactive_atoms_and_displays() -> None:
     assert "label show Angles" in text
     assert "VDW 0.32" in text
     assert len(DYNAMIC_BONDS) == 4
+    assert {row[2] for row in DYNAMIC_BONDS} == {1.25, 1.9}
+    assert "::nyl12_movie_policy::apply $::stage2_mol" in text
+    assert "    }\n}\nmol representation VDW" in text
 
 
 def test_read_frames_accepts_zero_boxes_as_fixed_box(

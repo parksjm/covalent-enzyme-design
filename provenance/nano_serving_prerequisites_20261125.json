@@ -1,0 +1,14 @@
+[
+  {
+    "host": "marigold",
+    "stdout": "marigold\nuid=11702(jpc) gid=27(sudo) groups=27(sudo)\nClient: Docker Engine - Community\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:13:09 2026\n OS/Arch:           linux/arm64\n Context:           default\n/home/jpc/.local/bin/uv: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5608a8b9ea033919066060d2b5fbdf8b9b8bdacf, for GNU/Linux 2.6.32, stripped\ndrwxr-xr-x  3 root root  4096 Oct 29 10:07 /data\ndrwxr-xr-x  4 jpc  root  4096 Oct 29 10:34 /data/jpc\ndrwxrwxrwt 20 root root 28672 Nov 25 17:51 /tmp\ndrwxrwxrwt 13 root root  4096 Nov 25 15:12 /var/tmp\nbiovault.ornl.gov:/mnt/tank/Hot/Biosciences/homedirs/cmb/jpc /home/jpc nfs4\n{'torch': False, 'vllm': False, 'huggingface_hub': False, 'transformers': False}\n",
+    "stderr": "permission denied while trying to connect to the docker API at unix:///var/run/docker.sock\nbash: line 4: /home/jpc/.local/bin/uv: cannot execute binary file: Exec format error\n",
+    "exit_code": 0
+  },
+  {
+    "host": "lavender",
+    "stdout": "lavender\nuid=11702(jpc) gid=27(sudo) groups=27(sudo)\nClient: Docker Engine - Community\n Version:           29.6.2\n API version:       1.55\n Go version:        go1.26.5\n Git commit:        dfc4efb\n Built:             Thu Jul 16 16:13:09 2026\n OS/Arch:           linux/arm64\n Context:           default\n/home/jpc/.local/bin/uv: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5608a8b9ea033919066060d2b5fbdf8b9b8bdacf, for GNU/Linux 2.6.32, stripped\ndrwxrwxrwt 20 root root 20480 Nov 25 17:51 /tmp\ndrwxrwxrwt 13 root root  4096 Nov 25 15:10 /var/tmp\nbiovault.ornl.gov:/mnt/tank/Hot/Biosciences/homedirs/cmb/jpc /home/jpc nfs4\n{'torch': False, 'vllm': False, 'huggingface_hub': False, 'transformers': False}\n",
+    "stderr": "permission denied while trying to connect to the docker API at unix:///var/run/docker.sock\nbash: line 4: /home/jpc/.local/bin/uv: cannot execute binary file: Exec format error\nls: cannot access '/data': No such file or directory\nls: cannot access '/data/jpc': No such file or directory\n",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Exact local rsync filter and SHA256 verification; SSH transport not rerun",
+  "retained_test_copy": "/tmp/nyl12_deck_transfer_check_20261127_qi9wsc1e",
+  "files": {
+    "Nyl12_PA6_progress_20261127.pptx": "11a80be64a1ec49a24b023bb239f5abbff58e31de6a1d0d307bcd87a77177264",
+    "Nyl12_PA6_progress_20261127.pdf": "4eb4b28784e29c3c7ae4f43525bd85f3b1287ea5b5982e534c16b673cba3eb85",
+    "DOWNLOAD_README.md": "60c30b462315876566c500153a9281bbc22731e0643a372d7080a56700b93b25"
+  },
+  "main_manifest_sha256": "ffc9b37d0274dec09e6d99abf4130a3c49aa9425e077d1fac432e5eb634c0d29"
+}

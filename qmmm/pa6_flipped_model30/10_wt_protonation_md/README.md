@@ -50,3 +50,16 @@ MD keeps each declared protonation topology fixed; it cannot demonstrate
 proton transfer. Comparison of Tier A occupancy must also retain native-Thr
 geometry, substrate binding, site identity and replica/block uncertainty.
 No new umbrella sampling was launched as part of this WT campaign.
+
+## Automatic final comparison — queued November 21, 2026
+
+`analysis_after_md/` contains the PI-authorized analysis queue. Tmux session
+`nyl12_final_matched_wt_analysis_20261121` waits for all twelve accepted 100 ns
+replicas. It then compares Tier A/B occupancy, signed phi and native-Thr criteria
+across the three matched states, and screens the four newly completed trajectories
+for proton-delivery networks to the leaving amide nitrogen. Eight existing matched
+relay screens are reused with input-hash checks; legacy cohorts are excluded.
+
+See `analysis_after_md/README.md` and `analysis_after_md/waiting/status.json`.
+Results will appear under `analysis_after_md/{plots,tables,occupancy,relay/comparison}`.
+No current MD or US job is stopped or reconfigured by this queue.

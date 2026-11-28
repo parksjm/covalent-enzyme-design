@@ -18,6 +18,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from nyl12_covalent.path_inspection import dcd_counts  # noqa: E402
 
+from nyl12_covalent.vmd_style_refresh import append_file_policy  # noqa: E402
+
 LOGGER = logging.getLogger(__name__)
 STRIP_MASK = ":WAT,Na+,Cl-,NA,CL"
 QM_INDICES = [
@@ -285,6 +287,11 @@ def export(
     if frames != len(restarts):
         raise ValueError("Exported DCD frame count differs from finalized windows")
     (generation / "reaction_path.vmd").write_text(vmd_script(frames))
+    append_file_policy(
+        generation / "reaction_path.vmd",
+        generation / "stripped.parm7",
+        [i - 1 for i in QM_INDICES],
+    )
     manifest: dict[str, Any] = {
         "frames": frames,
         "stripped_atoms": atoms,

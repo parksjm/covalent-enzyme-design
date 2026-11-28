@@ -1,0 +1,17 @@
+{
+  "temporary_known_hosts_directory": "/tmp/nano_ssh_preflight_7t093ofr",
+  "results": [
+    {
+      "host": "marigold",
+      "exit_code": 0,
+      "stdout": "marigold\naarch64\njpc",
+      "stderr": ""
+    },
+    {
+      "host": "lavender",
+      "exit_code": 0,
+      "stdout": "lavender\naarch64\njpc",
+      "stderr": "Warning: Permanently added 'lavender' (ED25519) to the list of known hosts."
+    }
+  ]
+}

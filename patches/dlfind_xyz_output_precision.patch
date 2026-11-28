@@ -1,0 +1,11 @@
+--- a/AmberTools/src/libdlfind/src/dlf_util.F90
++++ b/AmberTools/src/libdlfind/src/dlf_util.F90
+@@ -821,7 +821,7 @@
+   write(unit,*)
+   do iat=1,nat
+     str2 = get_atom_symbol(znuc(iat))
+-    write(unit,'(a2,3f15.7)') str2,coords(:,iat)*ang_au
++    write(unit,'(a2,3es25.16)') str2,coords(:,iat)*ang_au
+   end do
+   call flush(unit)
+ end subroutine write_xyz

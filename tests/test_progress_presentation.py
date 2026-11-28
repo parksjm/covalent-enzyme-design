@@ -10,6 +10,8 @@ from pathlib import Path
 import pytest
 from PIL import Image
 
+from scripts.make_presentation_contact_sheet import make_contact_sheet
+
 presentation_runtime = pytest.importorskip("pptx")
 presentation_builder = importlib.import_module("scripts.build_nyl12_progress_deck")
 Presentation = presentation_runtime.Presentation
@@ -120,3 +122,82 @@ def test_command_line_build(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> 
     )
     main()
     assert len(Presentation(output).slides) == 7
+
+
+def test_cover_date_and_scientific_callout_layouts(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    monkeypatch.setattr(
+        presentation_builder,
+        "build_date",
+        lambda: datetime(2026, 11, 25, tzinfo=ZoneInfo("America/New_York")),
+    )
+    figure = tmp_path / "figure.png"
+    Image.new("RGB", (160, 90), "white").save(figure)
+    source = tmp_path / "layouts.json"
+    source.write_text(
+        json.dumps(
+            {
+                "title": "Layouts",
+                "slides": [
+                    {
+                        "kind": "title",
+                        "title": "Mechanism-guided redesign",
+                        "subtitle": "QM/MM pathways and sequence design",
+                    },
+                    {
+                        "kind": "process",
+                        "title": "Modeling workflow",
+                        "lanes": [{"title": "Path", "steps": ["MD", "QM/MM", "PMF"]}],
+                    },
+                    {
+                        "kind": "annotated_image",
+                        "title": "Direct-seeded data",
+                        "image": "figure.png",
+                        "callouts": [
+                            "Mixed proton-transfer channels",
+                            "Sampling not converged",
+                        ],
+                    },
+                    {
+                        "kind": "placeholder",
+                        "title": "Free-energy comparison",
+                        "status": "Analysis pending",
+                        "message": "Common-reference comparison is not yet available.",
+                    },
+                ],
+            }
+        )
+    )
+    output = tmp_path / "layouts.pptx"
+    receipt = build_deck(source, output)
+    deck = Presentation(output)
+    cover_text = " ".join(
+        shape.text for shape in deck.slides[0].shapes if shape.has_text_frame
+    )
+    assert "Mechanism-guided redesign" in cover_text
+    assert "25 November 2026" in cover_text
+    assert receipt["build_date"] == "2026-11-25"
+    callout_text = " ".join(
+        shape.text for shape in deck.slides[2].shapes if shape.has_text_frame
+    )
+    assert "Mixed proton-transfer channels" in callout_text
+    placeholder_text = " ".join(
+        shape.text for shape in deck.slides[3].shapes if shape.has_text_frame
+    )
+    assert "Common-reference comparison is not yet available" in placeholder_text
+
+
+def test_contact_sheet_orders_every_numbered_slide(tmp_path: Path) -> None:
+    for number in (2, 1, 3):
+        Image.new(
+            "RGB", (160, 90), f"#{number}{number}{number}{number}{number}{number}"
+        ).save(tmp_path / f"slide-{number:02}.png")
+    output = tmp_path / "contact_sheet.png"
+    count = make_contact_sheet(tmp_path, output)
+    assert count == 3
+    with Image.open(output) as sheet:
+        assert sheet.size == (4 * (480 + 12) + 12, 1 * (270 + 12) + 12)

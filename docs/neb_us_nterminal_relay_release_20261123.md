@@ -136,3 +136,76 @@ separate topology export. The subsequent exports passed all checks. The first au
 Checks: 18 focused and artifact-backed integration tests passed; combined custom-source coverage is 91% (geometry/input 100%, native runner 92%, preparation 86%, exporter 91%, monitor 90%). Ruff lint and format checks passed for all seven new source/test files. Preparation reproducibility, DCD coordinates/boxes, canonical publication, monitor lifetime/failure logging and locking were exercised; retained reports are in `checks/`. No dependency was added. Original artifacts and unrelated files remain untouched; no scientific job was stopped. Final scientific acceptance remains pending.
 
 The corrected monitor's first all-three publication was verified at 38/38/39 frames; all coordinate/box checks passed, the generated dynamic-bond viewer Tcl parsed/executed with VMD command stubs, no pending files remained, and a nonblocking shared flock succeeded between refreshes. Native VMD GUI rendering was not available. The failed initial temporary builder was archived with a verified manifest hash under `clutter/failed_movie_builder_before_portable_publication/`; its /tmp location is absent. The system refused `gio trash` on its internal /tmp mount, so no unsafe deletion was substituted. Exclude campaign `clutter/` from routine laptop pulls.
+
+
+## Why window033 retained addition character — terminology and provenance (2026-11-25)
+
+**We have not yet established a stable, discrete TI1 minimum.** The current
+finding is a force-converged, partially tetrahedral/addition-like stationary
+candidate that survived removal of the umbrella bias. Full-minimum curvature
+qualification remains unresolved. Its released C–OG1 distance is 1.740 Å and
+its geometry classifier is `unassigned`, so a compact, fully formed TI1 must
+not be inferred from the shorthand name `ti1_window033`. Optimization retention
+also does not establish a finite-temperature residence time.
+
+The useful change was the source of the starting coordinates. The candidate
+came from the existing finite-temperature, NEB-seeded DFTB3/MM umbrella
+trajectory: window 033, production block 05, frame 46, recorded trajectory
+time 28.30 ps. This is a biased sampled frame, not an unbiased equilibrium
+observation; the recorded time includes the campaign's preceding stages.
+Its initial C–OG1/C–Nleave/C–O distances were 1.556/1.478/1.317 Å, and HG1
+was already bonded to Nalpha (1.045 Å), alongside H1/H2. The substrate and
+surrounding mobile enzyme/solvent therefore began in a jointly sampled,
+reactive-state-conditioned arrangement rather than a manually constructed
+cluster or a single driven endpoint.
+
+We then removed the reaction bias and optimized the original solvated system
+with the same 98-real-atom DFTB3 QM region, eight links, QM charge −2 and
+4,165 mobile atoms in the original 12 Å region. The exterior stayed fixed;
+there was no positional or reaction-coordinate potential on the mobile atoms.
+HG1 remained on Nalpha (1.050 Å), C–Nleave remained 1.490 Å, and C–O remained
+elongated at 1.309 Å while C–OG1 lengthened to 1.740 Å. Independent maximum
+gradient was 7.94e−6 Eh/bohr. This is evidence for retention of partial addition
+character under that model, rather than full reversion to neutral-Thr E–S.
+
+The most informative control is the matched window032 release:
+
+| Same-protocol release | Initial C–OG1 (Å) | Released C–OG1 / C–Nleave / C–O (Å) | HG1 after release | Maximum gradient (Eh/bohr) |
+|---|---:|---:|---|---:|
+| window032 | 1.558 | 2.661 / 1.371 / 1.262 | Nalpha, 1.079 Å | 8.50e−6 |
+| window033 | 1.556 | 1.740 / 1.490 / 1.309 | Nalpha, 1.050 Å | 7.94e−6 |
+
+Window032 lost the addition contact while retaining the transferred proton:
+it is a noncovalent NH3+/alkoxide-like arrangement, not the original neutral
+Thr–OH E–S microstate despite its geometry-only `reactant_like` label. Because
+both seeds used the same method, proton inventory and partition/mobility
+protocol, proton location or a nominal short starting C–OG1 distance alone did
+not determine retention. The different sampled substrate/protein/solvent
+arrangements are the leading explanation. One observed difference is proton
+orientation after relaxation: window032 has HG1–OG1/HG1–Nleave distances of
+1.695/2.543 Å, whereas window033 has 2.195/1.975 Å. The latter is compatible
+with delivery toward the leaving nitrogen; the former places HG1 nearer the
+alkoxide. This is consistent with different competing hydrogen-bond networks,
+not a controlled demonstration of what caused addition-contact retention.
+We have not isolated a particular
+hydrogen bond, water orientation, torsion or electrostatic interaction as the
+cause; these coordinate differences covary.
+
+Earlier gas-phase clusters lacked the complete enzyme environment, and some
+early reaction paths used excessive MM restraints. Those limitations can affect
+reversion and barriers, but they do not explain the difference between the two
+recent matched releases, where the mobile-shell protocol was already identical.
+No change of fast-QM Hamiltonian, Asp protonation assignment, or QM-water content
+was introduced to obtain window033 retention. Force-field improvements may
+influence sampled conformations, but their causal role is not established by
+these releases.
+
+The newer E–S → relay-like seed → acylenzyme paths demonstrate retained endpoint
+chemistry and identify a lower conditional PES route; they do not resolve the
+window033 minimum classification. Curvature/downhill tests and the subsequent
+PMF must address that distinction. We will retain `relay/TI1-like candidate`
+until chemical and numerical evidence warrants a stronger name. A discrete TI1
+minimum is not required to connect amide reactants to acylenzyme.
+
+Authoritative compact comparison, with source hashes:
+`analysis/nyl12_mechanism_priority_20261124/window033_retention_comparison.json`.

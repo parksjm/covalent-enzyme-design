@@ -20,7 +20,10 @@ args = sys.argv[1:]
 with Path(os.environ["PULL_STUB_LOG"]).open("a") as stream:
     stream.write(json.dumps({"command": name, "argv": args}) + "\\n")
 if name == "ssh":
-    if len(args) != 4 or args[0] != "jpc@violet" or args[1] != "test" or args[2] not in {"-f", "-d"}:
+    pointer_probe = len(args) == 4 and args[:3] == ["jpc@violet", "readlink", "-f"] and args[3].startswith("/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/") and args[3].endswith(("/latest_verified", "/current"))
+    if pointer_probe:
+        print(args[3].rsplit("/", 1)[0] + ("/verified_fixture" if args[3].endswith("/latest_verified") else "/checkpoint_fixture"))
+    elif len(args) != 4 or args[0] != "jpc@violet" or args[1] != "test" or args[2] not in {"-f", "-d"}:
         sys.exit("Only read-only violet existence probes are allowed")
 elif name == "rsync":
     if "--dry-run" not in args:
@@ -60,8 +63,12 @@ def test_whole_pull_dry_run_uses_only_existing_violet_copies(tmp_path: Path) -> 
     probes = [r["argv"] for r in records if r["command"] == "ssh"]
     transfers = [r["argv"] for r in records if r["command"] == "rsync"]
     assert probes and transfers
-    assert all(args[:2] == ["jpc@violet", "test"] for args in probes)
+    assert all(
+        args[:2] in (["jpc@violet", "test"], ["jpc@violet", "readlink"])
+        for args in probes
+    )
     assert {args[2] for args in probes} == {"-f", "-d"}
+    assert sum(args[1:3] == ["readlink", "-f"] for args in probes) == 3
     assert all("--dry-run" in args for args in transfers)
     assert all(
         not any("sync_acylenzyme_progress" in arg for arg in args) for args in probes

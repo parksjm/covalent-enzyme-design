@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "inventory_date_local": "2026-11-20",
+  "recorded_at_utc": "2026-11-21T01:51:43.473734+00:00",
+  "scope": "Optional expert resource catalog; no dependencies, model weights, scientific jobs or agent capabilities changed.",
+  "pi_clarification": "Programs are optional resources; experts need not use all of them.",
+  "decision": "Prefer evaluating RFD4-Proteina over RFD3 when backbone remodeling is justified; retain fixed-length symmetry-tied LigandMPNN baseline.",
+  "primary_sources": [
+    {
+      "id": "rfd4_readme",
+      "url": "https://github.com/RosettaCommons/RFD4-Proteina/blob/main/README.md",
+      "git_blob_sha": "bc513e799a183b2558fb504bbd4993c5b4bd9542",
+      "sha256": "921d179e300f6be523fcb8eead907ee5b37a04c88883a64f5ed6716d754d5ace",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/rfd4_readme.txt"
+    },
+    {
+      "id": "tmol_readme",
+      "url": "https://github.com/RosettaCommons/tmol/blob/master/README.md",
+      "git_blob_sha": "e873ea0d24b753b0357d471964483c720eda9b78",
+      "sha256": "7295bf267b44d05335dab2b25b8213e29854c352e18412850a99e708afb8bb76",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/tmol_readme.txt"
+    },
+    {
+      "id": "plip_readme",
+      "url": "https://github.com/pharmai/plip/blob/master/README.md",
+      "git_blob_sha": "cf01043a0f26b9e57bd5988085912b44c63ae9d5",
+      "sha256": "63313fe9a3af9d3a1cb4b31edc5531b5d4c118d7e910d12e45d31d7b76515640",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/plip_readme.txt"
+    },
+    {
+      "id": "foundry_readme",
+      "url": "https://github.com/RosettaCommons/foundry/blob/production/README.md",
+      "git_blob_sha": "a4c21fcc8c41238e1216960fa30e49b3eb38bb47",
+      "sha256": "3d2c0bde14253067316658a148a84af59eaf1c44e9dc20c32292a2c20a925811",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/foundry_readme.txt"
+    },
+    {
+      "id": "prolif_readme",
+      "url": "https://github.com/chemosim-lab/ProLIF/blob/master/README.rst",
+      "git_blob_sha": "c4dc5877117864a17e667789464eb9b0b4cb1687",
+      "sha256": "ada505844418d382d9e8429d71ab7007c932485f9050327eddad1b06fee7920d",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/prolif_readme.txt"
+    },
+    {
+      "id": "rfd4_license",
+      "url": "https://github.com/RosettaCommons/RFD4-Proteina/blob/main/LICENSE",
+      "git_blob_sha": "db22701893d09ea1d7126b68cc7262695278551f",
+      "sha256": "0927a01536709c20efa64834482fd4d50c9bb954353dbcf35c95a98675545470",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/rfd4_license.txt"
+    },
+    {
+      "id": "tmol_license",
+      "url": "https://github.com/RosettaCommons/tmol/blob/master/LICENSE",
+      "git_blob_sha": "939515518c1b05b79421828a5c63a67dce8f7028",
+      "sha256": "1fc7ae0bc3cbe091ee8a50f087ebc89e235b7085f5ba00b6dbb5840a07674260",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/tmol_license.txt"
+    },
+    {
+      "id": "rfd4_project",
+      "url": "https://github.com/RosettaCommons/RFD4-Proteina/blob/main/pyproject.toml",
+      "git_blob_sha": "43abd0fec35bc2ffeb45e61d6101cb570b683b9b",
+      "sha256": "2456b46bc4c3bbc7d0a27b87911aff05d362e776ac7a1feb893cf23fbf2b3252",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/rfd4_project.txt"
+    },
+    {
+      "id": "rfd4_conditions",
+      "url": "https://github.com/RosettaCommons/RFD4-Proteina/blob/main/docs/how-to/input_prep/index.md",
+      "git_blob_sha": "4edd67b0ad383388329fadd01317b7832909a68f",
+      "sha256": "bd0aec5d2f1bb052783ef5e21b78dd4497a9570ec96813b59522af3cb1c1c775",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/rfd4_conditions.txt"
+    },
+    {
+      "id": "af3_remote_readme",
+      "url": "https://github.com/parksjm/alphafold3-contact-restraints/blob/main/README.md",
+      "git_blob_sha": "46db948e4a02e353edf9be844afad2e4894ff30c",
+      "sha256": "8a66cb89fe901f66b958835524c41bb1258fe5bbbea69ea88e0481def27af3d2",
+      "retained_source": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/sources/af3_remote_readme.txt"
+    }
+  ],
+  "local_sources": [
+    {
+      "path": "/data/jpc/polyamide-amber-ff/README.md",
+      "sha256": "c9c751d7b668c733f08733569ef461f67413ddcabd5731ffb997e85916fa735d"
+    },
+    {
+      "path": "/data/jpc/polyamide-amber-ff/docs/PROJECT_STATUS_20261120.md",
+      "sha256": "efc30f24c3262dd8f1484a0a5182da6940ed953da9a121bcf5e5e1af4a363770"
+    },
+    {
+      "path": "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/manifest.json",
+      "sha256": "9e007d708afeb73ef5af956b593e994ff0b0d0698826bb73e64ae35d11de57f3"
+    },
+    {
+      "path": "/data/jpc/code/alphafold3-contact-restraints/README.md",
+      "sha256": "991f03f410e5da58ee921edc114e308fed48134e4f7aa6dda897c23527de7c33"
+    }
+  ],
+  "local_audit": {
+    "date": "2026-11-20",
+    "scope": "read-only bounded audit; architectures, targeted checkout SHAs, PA6 current status/release manifest, Foundry default checkpoint directory; no installs, imports, downloads, jobs, or repository edits",
+    "hosts": {
+      "violet": {
+        "uname_m": "x86_64"
+      },
+      "azalea": {
+        "uname_m": "x86_64"
+      }
+    },
+    "checkouts": [
+      {
+        "host": "violet",
+        "path": "/data/jpc/code/foundry",
+        "state": "present",
+        "head": "c97ad246877e2c7cb3b50e60aab7d76d02e8d393",
+        "versions": {
+          "rc-foundry": "0.1.11.dev34+gcee116dc5",
+          "torch": "2.7.1"
+        }
+      },
+      {
+        "host": "violet+azalea",
+        "path": "/data/jpc/code/alphafold3-contact-restraints",
+        "state": "present",
+        "head": "ef5dc91d65b4845f63e95ea03316f1613c6dfb5e",
+        "origin": "azalea:/data/jpc/code/alphafold3-contact-restraints",
+        "azalea_af3_env": {
+          "alphafold3": "3.0.1"
+        }
+      },
+      {
+        "host": "violet",
+        "path": "/data/jpc/polyamide-amber-ff",
+        "state": "present",
+        "head": "6f6fd348d50be271778005e150e9462250950feb"
+      }
+    ],
+    "foundry_default_checkpoints": {
+      "path_on_both_hosts": "/home/jpc/.foundry/checkpoints",
+      "state": "present",
+      "files": [
+        {
+          "name": "ligandmpnn_v_32_010_25.pt",
+          "size_bytes": 10541943
+        },
+        {
+          "name": "ligandmpnn_v_32_020_25.pt",
+          "size_bytes": 10541943
+        },
+        {
+          "name": "proteinmpnn_v_48_020.pt",
+          "size_bytes": 6681301
+        },
+        {
+          "name": "rf3_foundry_01_24_latest_remapped.ckpt",
+          "size_bytes": 3038876446
+        },
+        {
+          "name": "rf3_foundry_01_24_preprint_remapped.ckpt",
+          "size_bytes": 3039286562
+        },
+        {
+          "name": "rf3_foundry_09_21_preprint_remapped.ckpt",
+          "size_bytes": 3039286562
+        },
+        {
+          "name": "rfd3_latest.ckpt",
+          "size_bytes": 2690316669
+        },
+        {
+          "name": "solublempnn_v_48_020.pt",
+          "size_bytes": 6681301
+        }
+      ]
+    },
+    "pa6_release": {
+      "release_id": "pa6_l4_modular_resp_gaff2_v1_20261031",
+      "scope": "md-ready production release for validated zwitterionic PA6 L4 scope; ff19SB-compatible, GAFF2, two-stage multiconformer RESP, mbondi3, three accepted improper overrides",
+      "manifest_status": "md_ready_release_for_validated_pa6_l4_scope",
+      "limitations": [
+        "not arbitrary lengths",
+        "not bulk/melt/crystalline",
+        "not TI1 or acyl-enzyme",
+        "mixed-solvent conformer-energy analysis is non-gating diagnostic"
+      ],
+      "outstanding_gaps": [
+        "localize compact-L4 electrostatic residual; compare modular, whole-L4 RESP, and historical AM1-BCC on identical independent grids before deciding refit",
+        "independent conformer/ESP accuracy acceptance remains unset for L2/L4; compact L4 transfer remains poor",
+        "integrate final L4 and water-probe results into latest manuscript",
+        "public deposit of verified historical archive remains pending",
+        "no separately certified L2 or catalytic-state release"
+      ]
+    }
+  },
+  "local_audit_sha256": "98337f3594d6c129f307cbe5e740c0bee391abbe6302875e5852a9366df0088a",
+  "scope_limitations": [
+    "Bounded presence checks do not establish system-wide absence or validated inference.",
+    "Current public AF3 README differs from audited local checkout documentation.",
+    "GitHub connector could not access polyamide-amber-ff README; local release manifest and November 20 checkpoint used.",
+    "Symmetry enforcement for processed Nyl12 and custom PA6/reactive-state conditioning in RFD4 remain unverified."
+  ],
+  "documentation_changes": [
+    {
+      "path": "/data/jpc/covalent-enzyme-design/docs/MASTER_PLAN_NYL12_COVALENT_REDESIGN.md",
+      "before_sha256": "c542aa5055f971d2cd7a73da1c0b39db8a1e0f24d44b9d9e54be0b2f6f594d45",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/00_docs_MASTER_PLAN_NYL12_COVALENT_REDESIGN.md",
+      "after_sha256": "e2918833e463d0986103436c20431d1f6e09e415379499577e0dae19873eef77"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/docs/redesign_backbone_symmetry_and_access_20261022.md",
+      "before_sha256": "2b1f97079041cb0623d072d6d38b74623255864665f6f45c9373a8b6e3a03738",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/01_docs_redesign_backbone_symmetry_and_access_20261022.md",
+      "after_sha256": "2eff63fdd6e0735f2ad1fb849073a561ab2f80740fbd8115662f29a9455d40a2"
+    },
+    {
+      "path": "/data/jpc/covalent-enzyme-design/docs/standalone_handoff_20261020.md",
+      "before_sha256": "e04c97a80c7ba9633a724288622417f806a9ad1fa1534b9a11d20255f945e93b",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/02_docs_standalone_handoff_20261020.md",
+      "after_sha256": "bcd3b0b2c38538943dadc47fd0dfe4ba85ae3ff7203b72d5d16c5e8f027c1070"
+    },
+    {
+      "path": "/data/jpc/mechanism-agent/docs/TOOL_CATALOG.md",
+      "before_sha256": "1bc6a8d184fa30d7496df8067b94b07a826e33253188f0b63068dcd729d54333",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/03_docs_TOOL_CATALOG.md",
+      "after_sha256": "118ef1eb1f56846c44f955a70dba18c9aa603803bd6cad466068c2935cdba505"
+    },
+    {
+      "path": "/data/jpc/mechanism-agent/docs/DESIGN.md",
+      "before_sha256": "9074524962812ff81a19de5a0775f41338861230ebd5be35975dceee31657aac",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/04_docs_DESIGN.md",
+      "after_sha256": "effe72e3e1d2a95779cde7d228f4e7867f05cd9ce06bbceb2bda7c2c7a4f62af"
+    },
+    {
+      "path": "/data/jpc/mechanism-agent/docs/ROADMAP.md",
+      "before_sha256": "3117613693fa4701f34525bd5e11cf361b552c856530ffb769a97dc983b9e50b",
+      "backup": "/data/jpc/covalent-enzyme-design/output_agent_actions/tool_catalog_20261120_before/05_docs_ROADMAP.md",
+      "after_sha256": "31947da8fd9fc1f957b763b9472e8a013d39e01d7d48e63a7ad9f5bd142bfbab"
+    }
+  ],
+  "inventory_document": {
+    "path": "/data/jpc/covalent-enzyme-design/docs/redesign_tool_inventory_20261120.md",
+    "sha256": "4dd5d2a123f6afdab33ecdf2785f47183d87843e8dda463671c1b4533b048a94"
+  },
+  "rollback": "Use pre-edit copies for exact scoped changes; retain unrelated edits, all scientific jobs and append-only journals."
+}

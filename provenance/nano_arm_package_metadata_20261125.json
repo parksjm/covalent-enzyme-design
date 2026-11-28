@@ -1,0 +1,223 @@
+{
+  "uv": {
+    "version": "0.13.10",
+    "assets": [
+      {
+        "name": "uv-aarch64-unknown-linux-gnu.tar.gz",
+        "size": 16275135,
+        "digest": "sha256:14590f644805a6234ffe071154340669e38137f38e60aa9629690119704107d2",
+        "browser_download_url": "https://github.com/astral-sh/uv/releases/download/0.13.10/uv-aarch64-unknown-linux-gnu.tar.gz"
+      },
+      {
+        "name": "uv-aarch64-unknown-linux-gnu.tar.gz.sha256",
+        "size": 102,
+        "digest": "sha256:76c097d940546f5a8a66f073a6e67f328847defe989b38c90e0fd68d91ab4d67",
+        "browser_download_url": "https://github.com/astral-sh/uv/releases/download/0.13.10/uv-aarch64-unknown-linux-gnu.tar.gz.sha256"
+      }
+    ]
+  },
+  "vllm": {
+    "version": "0.32.0",
+    "requires_python": "<3.15,>=3.11",
+    "requires_dist": [
+      "regex",
+      "cachetools",
+      "psutil",
+      "sentencepiece",
+      "numpy",
+      "requests>=2.33.0",
+      "tqdm",
+      "blake3",
+      "py-cpuinfo",
+      "transformers<5.20.0,>=5.16.1",
+      "huggingface_hub>=1.31.0",
+      "tokenizers>=0.23.2",
+      "safetensors>=0.6.2",
+      "protobuf!=6.30.*,!=6.31.*,!=6.32.*,!=6.33.0.*,!=6.33.1.*,!=6.33.2.*,!=6.33.3.*,!=6.33.4.*,>=5.29.6; platform_machine != \"s390x\"",
+      "protobuf==7.36.1; platform_machine == \"s390x\"",
+      "fastapi[standard]<0.137.0,>=0.133.0",
+      "starlette>=1.0.1",
+      "aiohttp>=3.14.3",
+      "openai>=2.25.0",
+      "pydantic>=2.12.0",
+      "prometheus_client>=0.18.0",
+      "pillow>=12.3.0",
+      "prometheus-fastapi-instrumentator>=8.0.0",
+      "tiktoken>=0.6.0",
+      "lm-format-enforcer==0.11.3",
+      "llguidance<1.8.0,>=1.7.0; platform_machine == \"x86_64\" or platform_machine == \"arm64\" or platform_machine == \"aarch64\" or platform_machine == \"ppc64le\" or platform_machine == \"s390x\"",
+      "outlines_core==0.2.14",
+      "lark==1.2.2",
+      "xgrammar==0.2.8; platform_machine == \"x86_64\" or platform_machine == \"aarch64\" or platform_machine == \"arm64\" or platform_machine == \"s390x\" or platform_machine == \"ppc64le\"",
+      "typing_extensions>=4.10",
+      "filelock>=3.20.3",
+      "partial-json-parser",
+      "jsonschema>=4.23.0",
+      "pyzmq>=25.0.0",
+      "msgspec",
+      "mistral_common[image]>=1.11.6",
+      "opencv-python-headless>=4.13.0",
+      "pyyaml",
+      "six>=1.16.0; python_version > \"3.11\"",
+      "setuptools<81.0.0,>=78.1.1; python_version > \"3.11\"",
+      "einops",
+      "compressed-tensors==0.17.0",
+      "depyf==0.20.0",
+      "cloudpickle",
+      "watchfiles",
+      "python-json-logger",
+      "ninja",
+      "pybase64",
+      "cbor2",
+      "ijson",
+      "setproctitle",
+      "oss-harmony>=0.0.11",
+      "anthropic>=0.71.0",
+      "model-hosting-container-standards<1.0.0,>=0.1.14",
+      "mcp<3.0.0,>=2.0.0",
+      "opentelemetry-sdk>=1.27.0",
+      "opentelemetry-api>=1.27.0",
+      "opentelemetry-exporter-otlp>=1.27.0",
+      "opentelemetry-semantic-conventions-ai>=0.4.1",
+      "numba==0.65.0",
+      "torch==2.13.0",
+      "torchaudio==2.11.0",
+      "torchvision==0.28.0",
+      "torchcodec>=0.14",
+      "PyNvVideoCodec==2.0.4",
+      "flashinfer-python==0.7.0.post1",
+      "apache-tvm-ffi==0.1.11",
+      "tilelang==0.1.12",
+      "nvidia-cudnn-frontend>=1.19.1",
+      "nvtx==0.2.15",
+      "fastsafetensors>=0.3.3",
+      "instanttensor>=0.2.2",
+      "nvidia-cutlass-dsl[cu13]==4.8.0",
+      "quack-kernels==0.6.5",
+      "tokenspeed-mla==0.2.15; platform_system == \"Linux\"",
+      "humming-kernels[cu13]==0.1.17",
+      "zentorch==2.13.0.1; extra == \"zen\"",
+      "pandas; extra == \"bench\"",
+      "matplotlib; extra == \"bench\"",
+      "seaborn; extra == \"bench\"",
+      "datasets; extra == \"bench\"",
+      "scipy; extra == \"bench\"",
+      "plotly; extra == \"bench\"",
+      "tensorizer==2.10.1; extra == \"tensorizer\"",
+      "fastsafetensors>=0.3.3; extra == \"fastsafetensors\"",
+      "instanttensor>=0.2.2; extra == \"instanttensor\"",
+      "runai-model-streamer[azure,gcs,s3]>=0.15.7; extra == \"runai\"",
+      "av; extra == \"audio\"",
+      "scipy; extra == \"audio\"",
+      "soundfile; extra == \"audio\"",
+      "soxr; extra == \"audio\"",
+      "mistral_common[audio]; extra == \"audio\"",
+      "nvidia-deepstream-videodecode-cu13>=9.0.2; extra == \"deepstream\"",
+      "b12x==1.5.1; extra == \"b12x\"",
+      "helion==1.4.0; extra == \"helion\"",
+      "smg-grpc-servicer[vllm]>=0.5.2; extra == \"grpc\"",
+      "opentelemetry-sdk>=1.26.0; extra == \"otel\"",
+      "opentelemetry-api>=1.26.0; extra == \"otel\"",
+      "opentelemetry-exporter-otlp>=1.26.0; extra == \"otel\"",
+      "opentelemetry-semantic-conventions-ai>=0.4.1; extra == \"otel\"",
+      "vllm-gguf-plugin>=0.0.2; extra == \"extra-quant\""
+    ],
+    "arm_wheels": [
+      {
+        "filename": "vllm-0.32.0-cp38-abi3-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/02/7b/19ee98705e4a357fdb6158083c4aedb93bf548bf89fa827023449e22c98d/vllm-0.32.0-cp38-abi3-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "027b19ee98705e4a357fdb6158083c4aedb93bf548bf89fa827023449e22c98d",
+          "md5": "53e4eabb601bc25f8ec3b52eb20402bd",
+          "sha256": "d0620dbdf99528bcfebe551a8906347a229921fb1602f887bd1286a920da2d44"
+        },
+        "size": 321437289
+      }
+    ]
+  },
+  "torch": {
+    "version": "2.15.0",
+    "requires_python": ">=3.11",
+    "requires_dist": [
+      "filelock",
+      "typing-extensions>=4.13.0",
+      "setuptools>=77.0.3",
+      "sympy>=1.13.3",
+      "networkx>=2.5.1",
+      "jinja2",
+      "fsspec>=0.8.5",
+      "cuda-toolkit[cublas,cudart,cufft,cufile,cupti,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.2.2; platform_system == \"Linux\"",
+      "cuda-bindings<14,>=13.0.3; platform_system == \"Linux\" and python_version < \"3.15\"",
+      "nvidia-cudnn-cu13==9.26.0.51; platform_system == \"Linux\"",
+      "nvidia-cusparselt-cu13==0.8.1; platform_system == \"Linux\"",
+      "nvidia-nccl-cu13==2.30.7; platform_system == \"Linux\"",
+      "nvidia-nvshmem-cu13==3.7.2; platform_system == \"Linux\"",
+      "triton~=3.9.0; platform_system == \"Linux\" and python_version < \"3.16\"",
+      "optree>=0.13.0; extra == \"optree\"",
+      "opt-einsum>=3.3; extra == \"opt-einsum\"",
+      "pyyaml; extra == \"pyyaml\""
+    ],
+    "arm_wheels": [
+      {
+        "filename": "torch-2.15.0-cp311-cp311-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/8c/06/439e6434bef959507463fa3fd21c580304f3798ea06ab3e932ef908cff1d/torch-2.15.0-cp311-cp311-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "8c06439e6434bef959507463fa3fd21c580304f3798ea06ab3e932ef908cff1d",
+          "md5": "47b119edea4f5f9f6d9774e2de6a8ea0",
+          "sha256": "58ce2ebfb3430941353109a85be63ee8e941da22f13daa2c43344eeb51c81e06"
+        },
+        "size": 483605887
+      },
+      {
+        "filename": "torch-2.15.0-cp312-cp312-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/56/c9/ac253c63f13212393483bfa6c180b684c8e5437960c06ec9292797e09357/torch-2.15.0-cp312-cp312-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "56c9ac253c63f13212393483bfa6c180b684c8e5437960c06ec9292797e09357",
+          "md5": "0dc1f5b3c9406c1b27908218c30496c1",
+          "sha256": "9e51cf9460c5441dcd2a4f31ece207e35ea7c3d2535be0f929cca4944e2eeb18"
+        },
+        "size": 483664949
+      },
+      {
+        "filename": "torch-2.15.0-cp313-cp313-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/16/e7/4d67a9c8aef527423510e21ecf6f6a6ce45946b0891c54b04bc5edc5a9e2/torch-2.15.0-cp313-cp313-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "16e74d67a9c8aef527423510e21ecf6f6a6ce45946b0891c54b04bc5edc5a9e2",
+          "md5": "88b0332e0c2bbb742fa1c7c72af0170a",
+          "sha256": "a46cf67c6b574311ecdc24364a5c3a694c60dd3619043f594cfebb8f0b283ea4"
+        },
+        "size": 483665057
+      },
+      {
+        "filename": "torch-2.15.0-cp314-cp314-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/2b/ce/81dd3a77ea2ff436b3401b8237ff6b960f0a7bec4075cfb09948b3a41880/torch-2.15.0-cp314-cp314-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "2bce81dd3a77ea2ff436b3401b8237ff6b960f0a7bec4075cfb09948b3a41880",
+          "md5": "af7822624f27604a84539b5b567a0574",
+          "sha256": "59c3a521000ab76a11785276b3d56752e03ca2751658798a94c8f1032f93cf41"
+        },
+        "size": 483678906
+      },
+      {
+        "filename": "torch-2.15.0-cp314-cp314t-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/11/ff/6e4a6cb34ed2b112c7d3818a9249d99ca732e0de79ebff8a46d7ed762633/torch-2.15.0-cp314-cp314t-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "11ff6e4a6cb34ed2b112c7d3818a9249d99ca732e0de79ebff8a46d7ed762633",
+          "md5": "b3e68be226aeebdbc9483d1bf7164a89",
+          "sha256": "2167ed5782ab62f41fb766b822ebea638c2ffcb72e8c3abdd3efc429bbe60a19"
+        },
+        "size": 483646483
+      },
+      {
+        "filename": "torch-2.15.0-cp315-cp315-manylinux_2_28_aarch64.whl",
+        "url": "https://files.pythonhosted.org/packages/af/e1/0bf3da42a8491c2917287da4b086480662c3c9affc856a5a992b38366339/torch-2.15.0-cp315-cp315-manylinux_2_28_aarch64.whl",
+        "digests": {
+          "blake2b_256": "afe10bf3da42a8491c2917287da4b086480662c3c9affc856a5a992b38366339",
+          "md5": "5a742a1cb72e51b0d5b6ea588417ab64",
+          "sha256": "eba5772cdce0f92a81d0f5c577ac571a4ee35e052ba7533c2d6dd860f0c5659f"
+        },
+        "size": 483684218
+      }
+    ]
+  }
+}

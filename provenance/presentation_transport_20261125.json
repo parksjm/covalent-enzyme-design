@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-25",
+  "source": "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123",
+  "temporary_export": "/tmp/nyl12-deck-transport-vvptzmvl",
+  "verified_manifest_files": 53,
+  "slides": 32,
+  "notes": 32,
+  "pdf_pages": 32,
+  "correct_cover_date": true,
+  "actual_pull_filters_used": true,
+  "excluded_renderer_debug_tree": true,
+  "manifest_sha256": "d117cf35f2a5331ad3f596efbc58e3bdc6c25b3aae34403a3795289475b9ba0f",
+  "pptx_sha256": "6830ee817e3ad84ba3ed82c1ff73a5e59ab74eee0290a6c0e7434bf3a683bf35",
+  "passed": true
+}

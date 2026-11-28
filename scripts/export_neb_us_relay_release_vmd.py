@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "src"))
 import numpy as np  # noqa: E402
 from nyl12_covalent.relay_release import ROLES  # noqa: E402
 from nyl12_covalent.stationary_native import digest, write_json  # noqa: E402
+from nyl12_covalent.vmd_style_refresh import append_topology_policy  # noqa: E402
 
 STRIP_MASK = ":WAT,Na+,Cl-,NA,CL"
 
@@ -285,6 +286,13 @@ def export(seed: Path, output: Path) -> None:
         'puts "Frame0: exact sampled seed. Later frames: optimizer iterations, not MD time or reaction path."'
     )
     (output / "view_relay.vmd").write_text("\n".join(lines) + "\n")
+    append_topology_policy(
+        output / "view_relay.vmd",
+        AmberParm(str(output / "stripped.parm7")),
+        [remap[index] for index in qm_original],
+        original_topology=parm,
+        original_ids_1based=[int(index) + 1 for index in kept],
+    )
     write_json(
         output / "manifest.json",
         {

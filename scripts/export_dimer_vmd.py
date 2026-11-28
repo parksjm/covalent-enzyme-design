@@ -13,6 +13,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from export_direct_pt_progress import (  # noqa: E402
+    QM_INDICES,
     STRIP_MASK,
     run_cpptraj,
     sha256,
@@ -21,6 +22,9 @@ from export_direct_pt_progress import (  # noqa: E402
 )
 from nyl12_covalent.path_inspection import dcd_counts  # noqa: E402
 from scipy.io import netcdf_file  # noqa: E402
+
+
+from nyl12_covalent.vmd_style_refresh import append_file_policy  # noqa: E402
 
 
 def export(base: Path) -> Path:
@@ -75,6 +79,11 @@ def export(base: Path) -> Path:
             trajectory_name="ts_optimization.dcd",
             description="saved dimer search states",
         )
+    )
+    append_file_policy(
+        output / "view_ts_optimization.vmd",
+        output / "stripped.parm7",
+        [i - 1 for i in QM_INDICES],
     )
     (output / "manifest.json").write_text(
         json.dumps(

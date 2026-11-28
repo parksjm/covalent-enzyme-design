@@ -1,6 +1,35 @@
 # Redesign backbone, symmetry and substrate access — 2026-10-22
 
-**Resource update, 2026-11-20:** RFD4-Proteina is now the preferred candidate
+**Current steering, 27 November 2026:** the PI favors modest fixed-length
+whole-assembly partial diffusion, including active-site loops, around a retained
+TS-like motif, followed by broad symmetry-tied LigandMPNN. Preserve maturation,
+assembly and catalytic anchors; qualify the global mask instead of reusing
+the current 24-mobile-residue local mask. Retain unchanged-backbone controls.
+Avoid new loop-indel/de novo scaffold branches. Prefer MSA-based prediction
+without external crystal templates once WT calibration passes; earlier
+MSA-only pocket failures remain unresolved. TS-derived RFD3 input coordinates
+and external structure-prediction templates serve separate roles. All current
+QM/MM, US and Boltz jobs continue. See the active plan and design policy;
+the older prospective preferences below do not override this refinement.
+
+**Current revision, 2026-11-26:** the PI requests broader sequence freedom and
+a bounded RFD3 partial-diffusion comparison conditioned on the relay TS heavy-
+atom geometry, followed by tied LigandMPNN design and unguided AF3/Boltz E–S
+prediction. Accept any properly mapped catalytically competent PA6 amide;
+do not retain fixed terminal contacts/register as selection requirements.
+The authoritative current budgets, qualification gates and lysate/MS assay
+limitations are in `design_ranking_and_iteration_20261022.md`, section
+“Broader sequence and backbone redesign”. This supersedes the older staged
+preference below, without claiming that a new GPU campaign has launched.
+RFD3 coordinate masks and sequence-design masks are separate. Exact sequence
+symmetry remains required; local structural asymmetry is compatible with one
+occupied site. The inspected installed partial scheduler transmits its noise
+amplitude correctly, but custom four-residue PA6 parsing and full denoising
+still need qualification. No indels in the initial comparison. Prior
+`redesigner-agent` examples found in this audit establish LigandMPNN symmetry
+on merged precursor-like chains, not RFD3 execution on eight mature chains.
+
+**Historical resource update, 2026-11-20 (superseded above):** RFD4-Proteina was the preferred candidate
 for an optional local-backbone comparison. The RFD3-specific controls below
 are historical and must not be copied as RFD4 syntax. The length, symmetry,
 maturation, mapping and access requirements still apply. See

@@ -770,7 +770,20 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         fi
         current_us_movie="$nterminal_relay_destination/umbrella_sampling/full_path_300K/vmd_progress/current"
         if [[ -f "$current_us_movie/SHA256SUMS.txt" ]]; then
-            (cd "$current_us_movie" && "${checksum[@]}" SHA256SUMS.txt)
+            # The 30 ps trajectory is 820 MB, above the curated pull's 500 MB
+            # cap. Pull this one published artifact explicitly, then verify the
+            # complete bundle against the manifest copied above.
+            current_us_movie_rsync_args=(-rtpvz --safe-links --checksum)
+            if [[ $dry_run -eq 1 ]]; then
+                current_us_movie_rsync_args+=(--dry-run)
+            fi
+            rsync "${current_us_movie_rsync_args[@]}" \
+                "$remote:$nterminal_relay_source/umbrella_sampling/full_path_300K/vmd_progress/current/path.dcd" \
+                "$current_us_movie/path.dcd"
+            if ! (cd "$current_us_movie" && "${checksum[@]}" SHA256SUMS.txt); then
+                echo "Checksum verification failed for current relay US movie at: $current_us_movie" >&2
+                exit 1
+            fi
         fi
         echo "Combined relay movie: $nterminal_relay_destination/vmd_progress/view_path.vmd"
         echo "N-terminal relay movies: $nterminal_relay_destination/BRANCH/vmd_progress/view_path.vmd"
@@ -1109,3 +1122,209 @@ if ssh "$remote" test -f "$relay_release_source/prepared.json"; then
         echo "Relay release movies: $relay_release_destination/SEED/vmd_progress_verified/view_relay.vmd"
     fi
 fi
+
+# Native WT predictor controls: immutable curated publication, not live job trees.
+control_source=/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/dgx_wt_control_qualification_20261127/inspection_export_20261127
+control_destination="$destination/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/dgx_wt_control_qualification_20261127/inspection_export_20261127"
+if ssh "$remote" test -f "$control_source/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$control_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/columns/***' --exclude='**/*hessian*' \
+        --exclude='**/*Hessian*' --exclude='**/private/***' \
+        --exclude='**/__pycache__/***' --exclude='**/.*/***' \
+        --include='*/' --include='*.pdb' --include='*.cif' \
+        --include='*.pml' --include='*.py' --include='*.json' \
+        --include='*.csv' --include='*.md' --include='*.mol2' \
+        --include='MANIFEST.sha256' --exclude='*' \
+        "$remote:$control_source/" "$control_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$control_destination" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Native WT controls: $control_destination/README.md"
+        echo "PyMOL (cd there first): @load_all_controls.pml"
+    fi
+fi
+
+# Current N-terminal relay publications: main57 and supplemental4 stay separate.
+# Source immutable reviewed checkpoints; laptop logical current paths stay stable.
+relay_current_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K
+relay_current_destination="$destination/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K"
+# Deliberately uncapped: the main DCD is about 1.3 GiB, supplemental about 19 MiB.
+# Print remote sizes before transfer; rsync reuses unchanged laptop payloads.
+relay_current_rsync_args=(-rtpvz --safe-links)
+if [[ $dry_run -eq 1 ]]; then relay_current_rsync_args+=(--dry-run); fi
+for movie_relative in vmd_progress/current additional_sampling_20261126/vmd_progress/current; do
+    movie_pointer="$relay_current_source/${movie_relative%/current}/latest_verified"
+    if ! ssh "$remote" test -d "$movie_pointer"; then
+        echo "Current verified relay movie is pending: $movie_pointer"
+        continue
+    fi
+    movie_source=$(ssh "$remote" readlink -f "$movie_pointer")
+    if [[ $movie_source != "$relay_current_source"/*/verified_* || $movie_source == *$'\n'* ]]; then
+        echo "Invalid immutable movie publication path: $movie_source" >&2
+        exit 1
+    fi
+    movie_destination="$relay_current_destination/$movie_relative"
+    if ssh "$remote" test -f "$movie_source/SHA256SUMS.txt"; then
+        echo "Relay transfer: main bundle ~1.3 GiB; supplemental bundle ~31 MiB."
+        echo "Unchanged laptop files are reused: $movie_relative"
+        if [[ $dry_run -eq 0 ]]; then mkdir -p "$movie_destination"; fi
+        rsync "${relay_current_rsync_args[@]}" \
+            --exclude='**/columns/***' --exclude='**/*hessian*' \
+            --exclude='**/*Hessian*' --exclude='**/private/***' \
+            --include='/README.md' --include='/coordinate_probe_*.in' \
+            --include='/coordinate_probe_*.log' --include='/coordinate_probe_*.pdb' \
+            --include='/manifest.json' --include='/path.dcd' --include='/path.parm7' \
+            --include='/qm_indices.json' --include='/view_path.vmd' \
+            --include='/write_topology.in' --include='/write_topology.log' \
+            --include='/write_trajectory.in' --include='/write_trajectory.log' \
+            --include='/SHA256SUMS.txt' --exclude='*' \
+            "$remote:$movie_source/" "$movie_destination/"
+        if [[ $dry_run -eq 0 ]]; then
+            (cd "$movie_destination" && "${checksum[@]}" SHA256SUMS.txt)
+            echo "Current relay VMD: $movie_destination/view_path.vmd"
+        fi
+    fi
+done
+
+# Latest eligible-data PMF: exact small publication, excluding calculation caches.
+relay_pmf_pointer="$relay_current_source/analysis/current_eligible_progress_20261127/current"
+if ssh "$remote" test -d "$relay_pmf_pointer"; then
+relay_pmf_source=$(ssh "$remote" readlink -f "$relay_pmf_pointer")
+if [[ $relay_pmf_source != "$relay_current_source"/analysis/current_eligible_progress_20261127/checkpoint_* || $relay_pmf_source == *$'\n'* ]]; then
+    echo "Invalid immutable PMF publication path: $relay_pmf_source" >&2
+    exit 1
+fi
+relay_pmf_destination="$relay_current_destination/analysis/current_eligible_20261127"
+if ssh "$remote" test -f "$relay_pmf_source/SHA256SUMS.txt"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$relay_pmf_destination"; fi
+    rsync "${relay_current_rsync_args[@]}" \
+        --exclude='*/' --exclude='*hessian*' --exclude='*Hessian*' \
+        --exclude='*private*' --include='*.png' --include='*.json' \
+        --include='*.npz' --include='*.py' --include='*.txt' --include='*.md' \
+        --exclude='*' "$remote:$relay_pmf_source/" "$relay_pmf_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$relay_pmf_destination" && "${checksum[@]}" SHA256SUMS.txt)
+        echo "Current eligible-data PMF: $relay_pmf_destination/latest_pmf_comparison.png"
+    fi
+fi
+
+else
+    echo "Current eligible-data PMF publication is pending: $relay_pmf_pointer"
+fi
+
+# Additional calibration controls: optional immutable canonical inspection only.
+calibration_base=/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot
+for calibration_campaign in wt_msa_controls_20261127 wt_protein_template_controls_20261127; do
+    calibration_source="$calibration_base/$calibration_campaign/inspection_export_20261127"
+    calibration_destination="$destination/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/$calibration_campaign/inspection_export_20261127"
+    if ssh "$remote" test -f "$calibration_source/MANIFEST.sha256"; then
+        if [[ $dry_run -eq 0 ]]; then mkdir -p "$calibration_destination"; fi
+        rsync "${vmd_rsync_args[@]}" \
+            --exclude='**/columns/***' --exclude='**/*hessian*' \
+            --exclude='**/*Hessian*' --exclude='**/private/***' \
+            --exclude='**/__pycache__/***' --exclude='**/.*/***' \
+            --include='*/' --include='*.pdb' --include='*.cif' \
+            --include='*.pml' --include='*.py' --include='*.json' \
+            --include='*.csv' --include='*.md' --include='*.mol2' \
+            --include='MANIFEST.sha256' --exclude='*' \
+            "$remote:$calibration_source/" "$calibration_destination/"
+        if [[ $dry_run -eq 0 ]]; then
+            (cd "$calibration_destination" && "${checksum[@]}" MANIFEST.sha256)
+            echo "Calibration control inspection: $calibration_destination/README.md"
+        fi
+    else
+        echo "Canonical calibration publication is pending: $calibration_campaign"
+    fi
+done
+
+# Matched unrestrained template controls: atomic canonical before/after bundles.
+for relaxation_case in af3_template_seed20261126 boltz_template_seed20261126; do
+    relaxation_relative="design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/$relaxation_case/postprocess"
+    relaxation_source="/data/jpc/covalent-enzyme-design/$relaxation_relative"
+    relaxation_destination="$destination/$relaxation_relative"
+    if ssh "$remote" test -f "$relaxation_source/MANIFEST.sha256"; then
+        if [[ $dry_run -eq 0 ]]; then mkdir -p "$relaxation_destination"; fi
+        rsync "${vmd_rsync_args[@]}" \
+            --exclude='**/columns/***' --exclude='**/*hessian*' \
+            --exclude='**/*Hessian*' --exclude='**/private/***' \
+            --exclude='**/__pycache__/***' --exclude='**/.*/***' \
+            --include='*/' --include='*.pdb' --include='*.cif' \
+            --include='*.pml' --include='*.py' --include='*.json' --include='*.csv' \
+            --include='*.md' --include='MANIFEST.sha256' --exclude='*' \
+            "$remote:$relaxation_source/" "$relaxation_destination/"
+        if [[ $dry_run -eq 0 ]]; then
+            (cd "$relaxation_destination" && "${checksum[@]}" MANIFEST.sha256)
+            echo "Matched Amber before/after inspection: $relaxation_destination/README.md"
+        fi
+    else
+        echo "Matched Amber inspection is pending: $relaxation_case"
+    fi
+done
+
+# Current dated presentation: compact verified release, no calculation caches.
+current_deck_relative=docs/presentations/nyl12_progress_20261127
+current_deck_source="/data/jpc/covalent-enzyme-design/$current_deck_relative"
+current_deck_destination="$destination/$current_deck_relative"
+if ssh "$remote" test -f "$current_deck_source/DOWNLOAD.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$current_deck_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --include='/Nyl12_PA6_progress_20261127.pptx' \
+        --include='/Nyl12_PA6_progress_20261127.pdf' \
+        --include='/DOWNLOAD_README.md' --include='/DOWNLOAD.sha256' \
+        --exclude='*' "$remote:$current_deck_source/" "$current_deck_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$current_deck_destination" && "${checksum[@]}" DOWNLOAD.sha256)
+        echo "Current Nyl12 presentation: $current_deck_destination/Nyl12_PA6_progress_20261127.pptx"
+    fi
+fi
+
+# Masked loop95/tail matched six-model calibration: published subset only.
+mask95_source=/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/inspection_export_20261127
+mask95_destination="$destination/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/inspection_export_20261127"
+if ssh "$remote" test -f "$mask95_source/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$mask95_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/components/***' --exclude='**/columns/***' \
+        --exclude='**/*hessian*' --exclude='**/*Hessian*' --exclude='**/private/***' \
+        --include='*/' --include='*.pdb' --include='*.cif' --include='*.pml' \
+        --include='*.py' --include='*.json' --include='*.csv' --include='*.md' \
+        --include='*.mol2' --include='MANIFEST.sha256' --exclude='*' \
+        "$remote:$mask95_source/" "$mask95_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$mask95_destination" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Six masked-template Boltz/Amber controls: $mask95_destination/README.md"
+    fi
+fi
+
+# Corrected explicit-template-index six-case comparison: accepted immutable subset.
+
+mask95repair_source=/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/template_alignment_repair01/inspection_export_20261127
+mask95repair_destination="$destination/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/boltz_masked_loop95_designs_20261127/template_alignment_repair01/inspection_export_20261127"
+if ssh "$remote" test -f "$mask95repair_source/MANIFEST.sha256"; then
+    if [[ $dry_run -eq 0 ]]; then mkdir -p "$mask95repair_destination"; fi
+    rsync "${vmd_rsync_args[@]}" \
+        --exclude='**/components/***' --exclude='**/columns/***' \
+        --exclude='**/*hessian*' --exclude='**/*Hessian*' --exclude='**/private/***' \
+        --include='*/' --include='*.pdb' --include='*.cif' --include='*.pml' \
+        --include='*.py' --include='*.json' --include='*.csv' --include='*.md' \
+        --include='*.mol2' --include='*.yaml' --include='MANIFEST.sha256' --exclude='*' \
+        "$remote:$mask95repair_source/" "$mask95repair_destination/"
+    if [[ $dry_run -eq 0 ]]; then
+        (cd "$mask95repair_destination" && "${checksum[@]}" MANIFEST.sha256)
+        echo "Six masked-template Boltz/Amber controls: $mask95repair_destination/README.md"
+    fi
+fi
+
+# Verified post5ps supplemental viewers and paired index (mainmovie unchanged).
+echo "Supplemental viewer payload: about335MB total; immutable post5ps selections"
+for supplemental_relative in qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/vmd_progress/eligible_post5ps_15ps_checkpoint01 qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/vmd_progress/eligible_post5ps_10ps_checkpoint01 qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/supplemental_movies_post5ps_prepare_20261127/accepted_inspection_index; do
+    supplemental_source="/data/jpc/covalent-enzyme-design/$supplemental_relative"
+    supplemental_destination="$destination/$supplemental_relative"
+    if ssh "$remote" test -f "$supplemental_source/SHA256SUMS.txt"; then
+        if [[ $dry_run -eq 0 ]]; then mkdir -p "$supplemental_destination"; fi
+        rsync "${vmd_rsync_args[@]}" --exclude="**/private/***" --exclude="**/columns/***" --exclude="**/*hessian*" --include="*/" --include="*.dcd" --include="*.parm7" --include="*.vmd" --include="*.json" --include="*.csv" --include="*.md" --include="*.txt" --exclude="*" "$remote:$supplemental_source/" "$supplemental_destination/"
+        if [[ $dry_run -eq 0 ]]; then (cd "$supplemental_destination" && "${checksum[@]}" SHA256SUMS.txt); fi
+    else
+        echo "Supplemental publication pending: $supplemental_relative"
+    fi
+done

@@ -1,0 +1,42 @@
+{
+  "host": "bsd-a100",
+  "maximum_concurrent_GPUs": 2,
+  "slots": [
+    {
+      "index_at_audit": 2,
+      "uuid": "GPU-a752cdba-475a-6afe-14c5-4a58ea101a56",
+      "cpu_affinity": "16-23"
+    },
+    {
+      "index_at_audit": 3,
+      "uuid": "GPU-37c49915-4468-ef72-3b24-e0f9bcfcd9ee",
+      "cpu_affinity": "24-31"
+    }
+  ],
+  "threads_per_native_job": 2,
+  "minimum_free_home_GiB": 10,
+  "prediction_budget": {
+    "total_existing_comparison": 8,
+    "WT_controls_reserved": 4,
+    "redesigned_variant_predictions_remaining": 4
+  },
+  "prediction_protocol": {
+    "protein_assembly": "four alpha232 and four beta96 mature chains",
+    "ligands": "four zwitterionic PA6 L4",
+    "contact_restraints": false,
+    "templates": false,
+    "homologous_MSAs": false,
+    "query_only_MSA": true,
+    "Boltz_recycles": 3,
+    "Boltz_sampling_steps": 200,
+    "samples_per_seed": 1,
+    "seeds": [
+      20261126,
+      20261127
+    ]
+  },
+  "current_QMMM_US": "Leave running and keep prior pause/resume policy unchanged",
+  "broad_design_gate": "HOLD until native parent acceptance",
+  "no_model_downloads_or_new_dependencies": true,
+  "stage": "preparation/native-input acceptance; GPU inference not yet launched"
+}

@@ -1,324 +1,320 @@
 {
-  "title": "Nyl12–PA6 mechanism and redesign",
-  "as_of": "2026-11-23",
-  "scientific_status": "Workingprogress; no validated viablebarrier or activityranker; relayreleasesnewlyauthorized",
+  "title": "Mechanism-guided redesign of the nylon hydrolase Nyl12",
+  "as_of": "2026-11-25",
+  "scientific_status": "25 November 2026: Mechanism B connected PES ΔEmax≈16.31 kcal/mol; current 57-window 300 K umbrella campaign is ongoing with no PMF; candidate curvature and TS connectivity are unverified. Mechanism A seeded q_acyl profile is mixed-channel and unconverged.",
   "slides": [
     {
       "kind": "title",
-      "title": "Nyl12–PA6: mechanism and redesign",
-      "takeaway": "Research progress and decision briefing | 23 November 2026",
-      "bullets": [
-        "Goal: identify credible catalytic states and design more active Nyl 12 variants.",
-        "Scope: PA6 force field → MD ensembles → QM/MM paths → sequence design.",
-        "Key distinction: completed calculations, accepted geometry and mechanistic validation are separate.",
-        "Working conclusions; unpublished experimental context is identified explicitly."
-      ],
+      "title": "Mechanism-guided redesign of the nylon hydrolase Nyl12",
+      "subtitle": "Quantum mechanics/molecular mechanics (QM/MM) reaction pathways and transition-state-based enzyme design",
+      "notes": "Research progress briefing. Build date is rendered dynamically in America/New_York. The scientific evidence date is 25 November 2026. Nyl12 is a nylon-6 oligomer hydrolase; the current modeling target is a bounded redesign pilot, not an experimentally validated new enzyme. The cover image is a white-background molecular rendering from source-bound structures; hydrogen atoms are grey (#B8B8B8) and sticks use the validated 0.18 Å display setting.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mol_blender/attempt_20261125_1620_retry01/relay_candidate_white_greyH.png"
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "image": "assets/relay_candidate_white_greyH.png"
     },
     {
-      "kind": "cards",
-      "title": "What we can conclude today",
-      "takeaway": "A useful computational foundation; a viable mechanism is still unresolved.",
-      "cards": [
+      "kind": "process",
+      "title": "Transition-state models will guide Nyl12 redesign",
+      "lanes": [
         {
-          "title": "Established",
-          "text": "Reusable PA6 parameters and scripted MD/QM/MM workflows.\nConnected E–S→acylenzyme paths have been generated."
+          "title": "Model",
+          "steps": [
+            "Reaction mechanism",
+            "Transition-state search",
+            "Validated templates"
+          ]
         },
         {
-          "title": "Not established",
-          "text": "A kinetically credible pathway, a fully verified first-order TS, or a computational activity ranker."
-        },
-        {
-          "title": "Current decision",
-          "text": "Calibrate structural gates; release N-terminal-relay configurations from existing US data."
+          "title": "Design",
+          "steps": [
+            "LigandMPNN",
+            "Boltz-2",
+            "OpenMM, shortlist\nand validation"
+          ]
         }
       ],
+      "font_size": 24,
+      "notes": "The design objective is to create qualified transition-state (TS) templates from the WT mechanism, then use them to guide sequence design. LigandMPNN proposes sequences around constrained templates; Boltz-2 ranks structural compatibility; OpenMM evaluates matched molecular-dynamics behavior. TS means transition state. The engineering pipeline can be commissioned by 30 November, while nomination requires qualified WT templates and existing scientific gates.",
       "sources": [
         "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "Scientific objective and success criteria",
-      "takeaway": "Mechanism and engineering are linked, separately testable deliverables.",
-      "bullets": [
-        "Mechanism: chemically consistent E–S→acylenzyme pathway with a credible barrier and independently verified TS connectivity.",
-        "Engineering: symmetry-aware designs that preserve maturation, assembly, substrate access and productive configurations.",
-        "A stable, discrete TI1 minimum is not a prerequisite for hydrolysis.",
-        "Long-polymer binding, chemistry and product release can limit activity differently."
-      ],
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/MASTER_PLAN_NYL12_COVALENT_REDESIGN.md",
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      ]
     },
     {
       "kind": "table",
-      "title": "Experimental baseline: two distinct assay contexts",
-      "takeaway": "Endpoint conversion does not uniquely determine kcat or a chemical barrier.",
+      "title": "Nyl12 hydrolyzes PA6 with limited conversion",
       "columns": [
-        "Context",
-        "Conditions",
-        "Interpretive limits"
+        "Evidence context",
+        "Visible finding"
       ],
       "rows": [
         [
-          "Crude-lysate screen",
-          "75 °C; 6 h; 200 mM Tris, pH 8",
-          "Active enzyme concentration and temperature-adjusted pH uncertain"
+          "Published product",
+          "Linear PA6 oligomers; trimers predominate."
         ],
         [
-          "Purified-enzyme manuscript",
-          "65 °C; 24 h; pH 7.4 phosphate",
-          "Polymer powder; product profiles rather than a defined elementary rate"
+          "Crude lysate",
+          "75 °C, 6 h; Tris pH 8. Active amount uncertain."
         ],
         [
-          "Substrate model",
-          "Zwitterionic PA6 L4",
-          "L4→two L2 is a modeling hypothesis; long polymer is likely"
+          "Purified enzyme",
+          "65 °C, 24 h; phosphate pH 7.4."
         ],
         [
-          "Variant evidence",
-          "MS products; discordant K59E duplicates",
-          "Treat activity labels and figure/workbook linkage as provisional"
+          "Model substrate",
+          "L4 modeled; L4 → two L2 is unproven."
         ]
       ],
       "widths": [
-        2.8,
-        4.0,
-        5.4
+        3.3,
+        8.9
       ],
-      "font_size": 18,
-      "table_height": 4.1,
-      "caption": "Published Drufva work primarily reported linear PA6 trimer; no experimentally established L4→L2 precursor–product relationship.",
+      "table_height": 3.8,
+      "font_size": 24,
+      "caption": "PA6 = nylon-6. Assay systems differ; conversion is not kcat.",
+      "notes": "Published PA6 hydrolysis work reports linear oligomers, with trimers predominating; this preference is not attributed specifically to the crude-lysate assay. The crude lysate experiment used 75 °C for 6 h in 200 mM Tris pH 8; active enzyme amount and temperature-adjusted pH are uncertain. The purified-enzyme manuscript assay used 65 °C for 24 h in phosphate pH 7.4. Discordant K59E duplicate measurements are from crude lysate; they are not used as a clean activity label. L4 is an atomistic modeling hypothesis; formation of two L2 products is not experimentally established. No lysate conversion is treated as kcat.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/plm_and_filter_calibration_20261121.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
         "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      ]
     },
     {
-      "kind": "text",
-      "title": "Structure, assembly and residue identities",
-      "takeaway": "Catalytic Thr233 is Amber Thr929; neighboring Thr234 is Amber Thr930.",
+      "kind": "split",
+      "title": "Mature Nyl12 exposes Thr233 as the β-chain N terminus",
+      "image": "assets/nyl12_mature_assembly.png",
       "bullets": [
-        "Nyl 12 matures by autocatalytic cleavage; substrate hydrolysis must be distinguished from maturation chemistry.",
-        "The working model retains the tetramer and four active sites; designs use explicit sequence-symmetry ties.",
-        "n 12c.cif is a supplied, edited tetramer derivative of 9Z0B; 9Z0A is a complementary room-temperature structure.",
-        "Phe113 and Asn186 are candidate oxyanion-hole donors; Asp272/Asp274 and the Thr N-terminus form the acid–base environment."
+        "Mature enzyme: α chain 1–232 plus β chain 233–328.",
+        "Autocleavage exposes β-chain Thr233 as the N-terminal nucleophile.",
+        "Thr233 OG1 attacks; Phe113 and Asn186 stabilize oxyanion-like O.",
+        "Water-driven deacylation regenerates enzyme."
       ],
+      "font_size": 24,
+      "notes": "The mature enzyme is an autocleaved N-terminal nucleophile hydrolase. The α chain comprises residues 1–232 and the β chain starts at Thr233 (residues 233–328). Autocleavage exposes Thr233 at the β-chain N terminus. The Thr233 side-chain hydroxyl initiates acylation; the newly exposed α-amino group is a candidate proton acceptor in a relay hypothesis. Phe113 and Asn186 form oxyanion-hole contacts in the modeled active site. Water-mediated deacylation regenerates the enzyme and releases the carboxyl product; the current pathway campaign focuses on acylation, and hydration/deacylation has not established complete hydrolysis.",
       "sources": [
-        "https://www.rcsb.org/structure/9Z0A",
-        "https://www.rcsb.org/structure/9Z0B",
-        "/data/jpc/covalent-enzyme-design/docs/native_thr_gate_calibration_20261123.md"
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/nyl12_mature_assembly_mapping.json",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
+    },
+    {
+      "kind": "process",
+      "title": "Acylation and deacylation complete the catalytic cycle",
+      "takeaway": "Acylation is in scope; water-mediated deacylation remains untested.",
+      "lanes": [
+        {
+          "title": "Cycle",
+          "steps": [
+            "E–S complex",
+            "Acylation:\nacyl-enzyme + amine",
+            "Water deacylation\nrestores enzyme;\ncarboxylic acid product"
+          ]
+        }
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "font_size": 20,
+      "notes": "E–S means enzyme–substrate complex. Acylation transfers the substrate acyl group to Thr233 and releases the amine-side product. The resulting acylenzyme is then attacked by water; deacylation releases the carboxylic-acid product (subsequent protonation depends on buffer conditions) and regenerates enzyme. Current QM/MM path work focuses on acylation. The hydration/deacylation follow-up has not yet supplied a qualified attacking-water model or a complete hydrolysis cycle.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
+    },
+    {
+      "kind": "image",
+      "title": "Substrate orientation sets the geometry for proton delivery",
+      "image": "assets/substrate_orientation_comparison_cropped.png",
+      "caption": "Two orientations: Nα–Nleave = 4.59 Å vs 3.62 Å; leaving-N proximity matters.",
+      "notes": "Nα denotes the Thr233 α-amino nitrogen; Nleave is the substrate scissile-amide nitrogen. With consistent scissile-amide atom mapping, signed Herschlag φ distinguishes the two local orientations. In these representative structures, negative φ is not the closer Nα–Nleave pose: 4.58775 Å versus 3.61882 Å for positive φ. Separate ensemble means are 4.65 versus 3.61 Å. Use the measured proton-donor/acceptor distances and hydrogen-bond geometry to assess delivery; do not use φ sign alone as a catalytic criterion. An initial substrate-bound structure is a model and may reorganize.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/analysis/wt_pose_orientation_examples_20261123/side_by_side.png",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
     },
     {
       "kind": "cards",
-      "title": "Mechanistic hypotheses and observables",
-      "takeaway": "Track complete proton inventories rather than a prescribed proton label.",
+      "title": "A four-repeat PA6 oligomer defines the classical model scope",
       "cards": [
         {
-          "title": "Direct acylation",
-          "text": "OG1 attacks the amide carbonyl as a proton reaches the leaving N.\nA four-membered pseudo-ring route was tested."
+          "title": "Model",
+          "text": "Four-repeat nylon-6 oligomer; net charge 0."
         },
         {
-          "title": "N-terminal relay",
-          "text": "Thr N accepts an OG1 proton, then can donate a proton onward.\nN-H identity may exchange without invalidating chemistry."
+          "title": "End groups",
+          "text": "NH₃⁺ and COO⁻; internal amides are neutral."
         },
         {
-          "title": "Assisted networks",
-          "text": "Asp and water networks may reorganize proton delivery.\nRequire actual geometry and a distinct, testable role."
+          "title": "Use in this study",
+          "text": "Matched L4 molecular dynamics."
+        },
+        {
+          "title": "Not checked",
+          "text": "Other lengths, bulk polymer, reactive states."
         }
       ],
+      "font_size": 24,
+      "notes": "The released RESP/GAFF2 parameterization is validated for zwitterionic L4 only. It does not certify a reactive intermediate or an arbitrary polymer length. The compact-conformer electrostatic holdout did not pass. Reactive pathway calculations use QM/MM rather than assuming the classical substrate force field is valid for TI1 or acylenzyme states. L4 is a four-repeat nylon-6 oligomer. The modular residue labels are P6N (+1), P6I (neutral), P6I (neutral), P6C (−1); these internal labels are kept in notes rather than presented as chemical names.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "Computational workflow and safeguards",
-      "takeaway": "Reproducibility and scientific acceptance are explicit at every stage.",
-      "bullets": [
-        "Boltz/AF3 or experimental structure → chemistry/atom-map audit → solvated MM preparation and independent MD.",
-        "Snapshot selection → MM minimization → DFTB3/MM E–S optimization → coordinate driving or NEB.",
-        "Separate TS force convergence, Hessian index and downhill connectivity; use US/MBAR for sampled free energies.",
-        "Scripts, immutable source snapshots, input hashes, environments, tmux logs and process/scientific receipts are retained."
-      ],
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/action_logging_and_rollback.md",
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "PA6 parameters: reusable modular architecture",
-      "takeaway": "Methods and limitations transfer from the separate polyamide-amber-ff project.",
-      "bullets": [
-        "Amber ff19SB protein, TIP3P water and GAFF2/RESP PA6 substrate parameters support current MD comparisons.",
-        "Modular residues: P6N (+1), repeated P6I (0) and P6C (−1), with explicit polymer connectivity and atom mapping.",
-        "QM electrostatics and torsional validation address limitations of the original AM1-BCC/GAFF model.",
-        "Current release is MD-ready for zwitterionic PA6 L4 only; compact-conformer electrostatics and extension to other chemistries remain open."
-      ],
-      "sources": [
-        "https://github.com/parksjm/polyamide-amber-ff",
-        "/data/jpc/polyamide-amber-ff/README.md"
-      ],
-      "notes": "Current release README/manifest supersedes historical October31 presentation holds. Three 500ps validationreplicas and all8 declaredbondedprofilegates passed. Scope is P6N–P6I–P6I–P6C; does not certify arbitrarylengths, bulknylon, TI1 or acylenzyme. Existing FFdeck was consulted; current manuscriptfigures are integrated directly."
-    },
-    {
-      "kind": "text",
-      "title": "Parameterization validation: what matters",
-      "takeaway": "A parameter release is evaluated across chemistry, electrostatics and conformational behavior.",
-      "bullets": [
-        "RESP: charge conservation, equivalent-atom constraints, transferability of the internal residue and ESP quality.",
-        "Bonded terms: QM/MM torsional profiles, amide planarity, forward/reverse scans and consistent solvent protocols.",
-        "System behavior: topology round trips, unrestrained relaxation and independent MD stability.",
-        "Compare AM1-BCC/GAFF, integrated RESP/GAFF2 and modular RESP/GAFF2 under matched conditions; binding persistence alone is insufficient."
-      ],
-      "sources": [
-        "/data/jpc/polyamide-amber-ff/README.md",
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md",
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/"
+      ]
     },
     {
       "kind": "image",
-      "title": "PA6 architecture: current modular release",
-      "takeaway": "A transferable residue scheme; validation presently certifies one molecular scope.",
-      "image": "assets/ff_architecture.png",
-      "caption": "MD-ready release pa6_l4_modular_resp_gaff2_v1_20261031 covers zwitterionic PA6 L4: P6N–P6I–P6I–P6C.",
+      "title": "PA6 L4 bonded profiles pass all eight force-field checks",
+      "image": "assets/pa6_l4_bonded_representatives.png",
+      "caption": "Two representative profiles; all eight declared bonded-profile gates passed.",
+      "notes": "The current PA6 L4 release passes all eight declared bonded-profile gates. The parameterization combines RESP charges, GAFF2 substrate terms, ff19SB protein and TIP3P water. The compact-conformer electrostatic holdout failed, so the release is scoped to the validated zwitterionic L4 model and bonded validation; it is not a blanket validation of all PA6 electrostatics or reactive states.",
       "sources": [
-        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure1_modular_architecture.png"
-      ],
-      "notes": "Source-bound figure reused from current project artifacts. Scope and limitations stated on this slide; the older October31 deck is a historical checkpoint."
+        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure3_eight_bonded_profiles.png",
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md"
+      ]
     },
     {
       "kind": "image",
-      "title": "Bonded validation of the current PA6 release",
-      "takeaway": "All eight declared profile gates pass after three fitted improper overrides.",
-      "image": "assets/ff_bonded.png",
-      "caption": "Standard two-stage multiconformer RESP + GAFF2; compact-conformer electrostatic holdout remains a limitation.",
+      "title": "Three 500 ps molecular-dynamics replicas support the L4 model",
+      "image": "assets/pa6_l4_md_stability.png",
+      "caption": "Three 500 ps validation replicas; stability supports the stated L4 use only.",
+      "notes": "The parameter release passed three 500 ps validation replicas for zwitterionic L4. These are force-field validation simulations, separate from WT enzyme protonation-state MD. Stability does not validate a reactive TI1/acyl state, arbitrary chain length, or nylon material behavior. The compact electrostatic holdout failure remains a documented limitation.",
       "sources": [
-        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure3_eight_bonded_profiles.png"
-      ],
-      "notes": "Source-bound figure reused from current project artifacts. Scope and limitations stated on this slide; the older October31 deck is a historical checkpoint."
+        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure4_md_stability.png",
+        "/data/jpc/polyamide-amber-ff/parameters/releases/pa6_l4_modular_resp_gaff2_v1_20261031/README.md"
+      ]
     },
     {
-      "kind": "image",
-      "title": "Matched PA6 validation MD",
-      "takeaway": "Three 500-ps replicas pass the release’s recorded stability and geometry checks.",
-      "image": "assets/ff_md.png",
-      "caption": "These short validation runs certify the declared release checks; arbitrary lengths, bulk PA6 and covalent reaction states remain unvalidated.",
-      "sources": [
-        "/data/jpc/polyamide-amber-ff/manuscript/artifacts_20261119_attempt2/figures/figure4_md_stability.png"
+      "kind": "cards",
+      "title": "The NylC catalytic-triad proposal motivated Asp protonation tests",
+      "cards": [
+        {
+          "title": "NylC proposal",
+          "text": "Asp306 was proposed protonated."
+        },
+        {
+          "title": "Residue mapping",
+          "text": "Asp306 → Nyl12 Asp272."
+        },
+        {
+          "title": "QM/MM relaxation",
+          "text": "ASH272 → ASH274."
+        },
+        {
+          "title": "Interpretation",
+          "text": "Motivates testing; assigns no pKa population."
+        }
       ],
-      "notes": "Source-bound figure reused from current project artifacts. Scope and limitations stated on this slide; the older October31 deck is a historical checkpoint."
+      "font_size": 24,
+      "notes": "Negoro et al. (2023) motivates evaluating the Asp pair, but the reported NylC mechanistic proposal does not assign a protonation state to mature Nyl12. Mapping is Asp306→Asp272, Asp308→Asp274, Thr267→Thr233. Precursor structures vary in mutations and cleavage state, confounding maturation comparisons. The mature Nyl12 active-site environment is not identical to the NylC precursor site. The early Nyl12 ASH272 hypothesis followed the NylC Asp306 proposal. Exploratory QM/MM optimizations transferred that proton to Asp274, motivating a matched ASH274 WT MD follow-up. This is an observed model relaxation, not a pKa population assignment or proof that Nyl12 Asp274 is protonated.",
+      "sources": [
+        "https://doi.org/10.1111/febs.16755",
+        "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md"
+      ],
+      "takeaway": "Negoro et al., FEBS J. 2023; doi:10.1111/febs.16755"
+    },
+    {
+      "kind": "cards",
+      "title": "Static pKa calculations do not identify a unique active-site microstate",
+      "cards": [
+        {
+          "title": "ASP / ASH",
+          "text": "COO⁻ / COOH; both Asp states tested."
+        },
+        {
+          "title": "Thr N terminus",
+          "text": "NH₂ / NH₃⁺ tested as explicit states."
+        },
+        {
+          "title": "PROPKA",
+          "text": "Structure and ligand state change estimates."
+        },
+        {
+          "title": "MCCE",
+          "text": "Quality checks incomplete; values not interpreted."
+        }
+      ],
+      "font_size": 24,
+      "notes": "ASP denotes deprotonated carboxylate COO−; ASH denotes protonated carboxylic acid COOH. The Thr233 N-terminal amine can be neutral NH2 or protonated NH3+. These states are explicit hypotheses for matched simulation, not automatic assignments. PROPKA estimates are sensitive to starting conformation, ligand state and coupling. MCCE quality checks are incomplete; values are not interpreted as microscopic pKa results. In mature NylC structures, the nearest Asp oxygen separation is about 3.91 Å, not evidence for a short shared-proton bond. NylC values must not be presented as Nyl12 pKa values. The pKa and protonation terminology is defined here before the matched MD protocol.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md",
+        "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
     },
     {
       "kind": "table",
-      "title": "Matched WT MD: protonation-state comparison",
-      "takeaway": "Four independent 100-ns replicas per state; substantial between-replica variation.",
+      "title": "Matched wild-type (WT) simulations compare three protonation states",
       "columns": [
-        "Thr N / 272 / 274",
-        "Tier A/B (%)",
-        "Native Thr (%)"
+        "Thr233 N terminus",
+        "Asp272",
+        "Asp274",
+        "Matched sampling"
       ],
       "rows": [
         [
-          "NH₂ / ASP / ASP",
-          "27.77 ± 24.64",
-          "0.0175"
+          "NH₂ (neutral amine)",
+          "ASP (COO−)",
+          "ASP (COO−)",
+          "4 independent × 100 ns"
         ],
         [
-          "NH₂ / ASP / ASH",
-          "5.18 ± 6.80",
-          "0.245"
+          "NH₂ (neutral amine)",
+          "ASP (COO−)",
+          "ASH (COOH)",
+          "4 independent × 100 ns"
         ],
         [
-          "NH₃⁺ / ASP / ASP",
-          "28.99 ± 12.99",
-          "0"
+          "NH₃⁺ (protonated amine)",
+          "ASP (COO−)",
+          "ASP (COO−)",
+          "4 independent × 100 ns"
         ]
       ],
       "widths": [
-        5.0,
-        3.6,
-        3.6
+        3.4,
+        2.35,
+        2.35,
+        4.1
       ],
-      "table_height": 3.2,
-      "font_size": 22,
-      "caption": "Tier A/B: mean ± replica SD. Fixed-charge trajectories test conditional behavior; they do not determine protonation populations.",
+      "table_height": 3.3,
+      "font_size": 24,
+      "caption": "Fixed-charge simulations near 300 K; states test conditional structure, not protonation populations.",
+      "notes": "WT means wild type. All three sets used four independent 100 ns replicas with matched preparation and analysis near 300 K. Each row names the N-terminal amino state and Asp272/Asp274 carboxyl state. Fixed-charge trajectories estimate conditional structural occupancy within the specified state; they do not measure pKa or equilibrium populations between states. Earlier unmatched ASH272 trajectories are not pooled.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "image",
-      "title": "MD occupancy across independent replicas",
-      "takeaway": "No matched-ensemble advantage for ASH274 is established.",
-      "image": "assets/md_occupancy.png",
-      "caption": "Twelve 100-ns WT trajectories at about 300 K. Earlier unmatched ASH272 observations must not be pooled with this comparison.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/plots/tier_occupancy.png"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "image",
-      "title": "Native-Thr gate: crystal calibration",
-      "takeaway": "All deposited comparison sites pass the unchanged structural gate.",
-      "image": "assets/crystal_gate.png",
-      "caption": "Eight 9Z0B sites + two 9Z0A sites; four n 12c sites are derived references, not independent experiments.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/results/crystal_calibration.png"
-      ],
-      "notes": "Unchanged cutoffs: OG1 shift0.75A,N shift1.25A,psi delta35deg,chi1 delta20deg. Local catalytic-backbone fit excludes Thr. Crystal maxima OG1 .1232A,N .0841A,psi3.244deg,chi1 6.834deg. Structural agreement does not validate activity prediction."
-    },
-    {
-      "kind": "image",
-      "title": "Known-active controls: prediction versus relaxation",
-      "takeaway": "Relaxation-induced displacement can reject experimentally active sequences.",
-      "image": "assets/active_control_gate.png",
-      "caption": "Native-gate passes: raw WT/K59D/V111C 20/20 each → relaxed 5/20, 6/20 and 16/20. Joint Tier A/B + native passes are 1/20, 0/20 and 7/20.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/diagnostics/known_active_raw_to_relaxed.png"
-      ],
-      "notes": "Source-bound figure reused from current project artifacts. Scope and limitations stated on this slide; the older October31 deck is a historical checkpoint."
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
     },
     {
       "kind": "table",
-      "title": "Protonation: corrected mature-NylC PROPKA",
-      "takeaway": "Predictions depend on coupling; no microscopic protonation state is established.",
+      "title": "Attack geometry and oxyanion contacts define the structural screen",
       "columns": [
-        "Mature 5XYG",
-        "Default pKa",
-        "Coupled alternative"
+        "Coordinate",
+        "Strict",
+        "Broad"
       ],
       "rows": [
         [
-          "Asp306 (≈ Nyl12 Asp272)",
-          "2.19–2.21",
-          "2.19–2.21"
+          "Thr233 OG1–C",
+          "≤ 3.2 Å",
+          "≤ 3.5 Å"
         ],
         [
-          "Asp308 (≈ Nyl12 Asp274)",
-          "5.49–6.49",
-          "7.24–8.45"
+          "Phe113 N–O",
+          "≤ 3.8 Å",
+          "≤ 4.0 Å"
         ],
         [
-          "Thr267 N-terminus",
-          "6.35–6.55",
-          "4.59–4.60"
+          "Asn186 ND2–O",
+          "≤ 3.8 Å",
+          "≤ 4.0 Å"
+        ],
+        [
+          "Bürgi–Dunitz attack angle",
+          "90–120°",
+          "85–125°"
+        ],
+        [
+          "|signed φ|",
+          "70–110°",
+          "60–125°"
         ]
       ],
       "widths": [
@@ -326,345 +322,365 @@
         3.4,
         3.4
       ],
-      "table_height": 3.1,
-      "font_size": 22,
-      "caption": "Uncleaved 7YU0/7YU1 are mutant precursor controls; Thr267 is not a free N-terminus. Cleavage and mutation effects are confounded.",
+      "table_height": 4.0,
+      "font_size": 24,
+      "caption": "φ is a signed local peptide-orientation metric, not evidence of proton transfer.",
+      "notes": "The strict and broad sets replace unexplained Tier A/B labels. Distances are Thr233 OG1 to scissile C, Phe113 backbone N to carbonyl O, and Asn186 ND2 to carbonyl O. The Bürgi–Dunitz angle describes nucleophile approach; signed Herschlag φ reports local amide orientation, and |φ| is used in these geometry bins. A separate Nα–Nleave distance evaluates possible proton delivery. Geometry occupancy is not catalytic activity or a protonation-state measurement. The native-Thr diagnostic is retained as a diagnostic because known-active controls expose false negatives.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
-        "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "table",
-      "title": "Nyl12 pKa sensitivity: substrate-facing site",
-      "takeaway": "Conformation, ligand removal and coupling limit interpretation.",
-      "columns": [
-        "Starting geometry",
-        "Asp272",
-        "Asp274",
-        "Thr233 N"
-      ],
-      "rows": [
-        [
-          "ASP272 / ASP274",
-          "1.02",
-          "3.44",
-          "9.70"
-        ],
-        [
-          "ASH272 / ASP274",
-          "0.88",
-          "6.95",
-          "8.93"
-        ],
-        [
-          "ASP272 / ASH274",
-          "2.37",
-          "5.84",
-          "9.62"
-        ]
-      ],
-      "widths": [
-        5.0,
-        2.3,
-        2.3,
-        2.6
-      ],
-      "table_height": 3.1,
-      "font_size": 21,
-      "caption": "Original default PROPKA values. Across all four sites: Asp2720.88–6.67; Asp2740.83–7.98; Thr N6.53–9.87. No automatic state assignment.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "MCCE and crystal contacts: uncertainty remains",
-      "takeaway": "Successful execution is not validation of a pKa prediction.",
-      "bullets": [
-        "Negoro’s protonated-Asp assignment is a mechanistic inference; mutational effects are partly confounded by maturation.",
-        "Across 31 deposited NylC sites, minimum Asp–Asp O···O distances were3.58–4.17 Å; none was below3.5 Å.",
-        "Repaired 5XYG / 7YU0 / 7YU1 MCCE runs completed, but target curves/bounds and poor fits remain unqualified.",
-        "Mature 5XYG labels Asp306/Asp308<0 and N-terminal Thr>14 are not accepted protonation evidence. Compare matched-input curves and parameters."
-      ],
-      "font_size": 22,
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/pka_trust_and_active_site_audit_20261120.md",
-        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
-        "/data/jpc/covalent-enzyme-design/analysis/negoro_2023_protonation/mcce4_alpha_trial_20261116/repaired_comparison_20261120"
-      ],
-      "notes": "Current reruns native_completed_pka_unqualified. Sampling_convergencefalse; assigned_statesfalse. Known proline FTPL/legacy charge-template inconsistency, protein-only pilot, six MC runs x2000 iterations. Precursor group fits can be broad/non-sigmoidal; out-of-grid labels are bounds."
+        "/data/jpc/covalent-enzyme-design/manuscript/METHODS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
     },
     {
       "kind": "image",
-      "title": "Direct proton transfer: uphill PES",
-      "takeaway": "A proton-transfer-only coordinate did not establish a stable intermediate.",
-      "image": "assets/pt_pes.png",
-      "caption": "DFTB3/MM ΔE relative to first driven E–S window: +15.38 kcal/mol including bias; +15.28 after subtracting bias. Release returned to E–S.",
+      "title": "Asp274 protonation did not improve matched WT geometry occupancy",
+      "image": "assets/wt_protonation_occupancy.png",
+      "caption": "Bars are four-replica means; error bars show between-replica sample SD.",
+      "notes": "The plotted observable is the fraction of frames meeting either the stringent or broader defined attack/oxyanion-hole geometry set. Means ± between-replica SD: NH2/ASP272/ASP274 27.77 ± 24.64%; NH2/ASP272/ASH274 5.18 ± 6.80%; NH3+/ASP272/ASP274 28.99 ± 12.99%. Native-Thr occupancy is 0.0175%, 0.245%, and 0%, respectively. These are correlated structural observations from four replicas, not activity, rate, or protonation population. The ASH274 state did not improve occupancy under this matched protocol.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/01_proton_transfer/plots/potential_energy.png"
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/tables/occupancy_by_state.csv",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/analysis_after_md/plots/tier_occupancy.png"
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "image",
-      "title": "Asynchronous proton transfer and attack",
-      "takeaway": "The prefix is uphill; the later continuation changes protonation and is diagnostic only.",
-      "image": "assets/async_pes.png",
-      "caption": "Prefix ΔE: +21.01 kcal/mol including bias (+20.81 without it). Windows25–32 are a contaminated continuation: H1 returned to OG1; they do not establish TI1.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_resp_gaff2_wt/11_frame1603_12A_reaction_path_20261109/reaction_paths/02_asynchronous_es_to_ti1/plots/potential_energy.png"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance. Preserve the invalidcontinuation as negativeevidence. Theconnectedlinethroughthese windowsdoesnotcertifychemicalcontinuity. No PMForverifiedbarrierclaimed."
-    },
-    {
-      "kind": "image",
-      "title": "Fast-QM benchmark in the enzyme environment",
-      "takeaway": "DFTB3 was closer to the DFT reference here than gas-phase trends predicted.",
-      "image": "assets/pt_method.png",
-      "caption": "Five fixed enzyme-path geometries; DFTB3/xTB error RMSE 1.49/3.91 kcal/mol. DFT-corrected endpoint ΔE remains uphill (+15.85 versus initial E–S geometry).",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/benchmarks/03_direct_pt_embedded_method_comparison/final_analysis/dft_corrected_periodic_profile.png"
-      ],
-      "notes": "Reference omegaB97X-D/def2-SVP/MM; fixed geometries, matched finite embedding, method-relative double differences. This is not a fully optimized DFT reaction path. DFTB3 endpoint15.28; diagnostic corrected endpoint15.85kcal/mol."
-    },
-    {
-      "kind": "image",
-      "title": "Flipped-pose E–S→acylenzyme NEB",
-      "takeaway": "Connected path with a 35.81 kcal/mol potential-energy maximum.",
-      "image": "assets/direct_neb.png",
-      "caption": "ΔE relative to the NEB E–S image. This band maximum is not an independently verified TS barrier and is not ΔG‡.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/energy_profile.png"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "image",
-      "title": "Bond changes along the direct NEB path",
-      "takeaway": "Inspect protonation, C–O formation and C–N cleavage together.",
-      "image": "assets/direct_distances.png",
-      "caption": "Image index orders optimized path configurations; it is not physical time.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/reactive_distances.png"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "font_size": 24
     },
     {
       "kind": "cards",
-      "title": "NEB, refined candidate and PMF are different",
-      "takeaway": "Their energies use different geometries, sampling and reactant references.",
+      "title": "The quantum region contains 98 atoms in a 12 Å mobile environment",
       "cards": [
         {
-          "title": "NEB:35.81",
-          "text": "Potential-energy maximum relative to its E–S image.\nThe path supplies seeds and a TS candidate."
+          "title": "QM region",
+          "text": "98 real atoms + 8 link H; charge −2."
         },
         {
-          "title": "Candidate:46.41",
-          "text": "Potential energy above independently relaxed E–S.\nNative force gate met; Hessian soft-mode verification incomplete."
+          "title": "QM coverage",
+          "text": "Reactive center, scissile amide, polar contacts."
         },
         {
-          "title": "US:47.05",
-          "text": "Apparent300 K marginal PMF height versus a specified E–S density bin.\nNot a converged activation free energy."
+          "title": "Movable region",
+          "text": "4,165 atoms; exterior fixed."
+        },
+        {
+          "title": "QM/MM boundary",
+          "text": "Eight link H; selected substrate/protein cuts."
         }
       ],
+      "font_size": 24,
+      "notes": "The current branch uses 98 real QM atoms, eight Amber link hydrogens, charge −2, and 4,165 mobile MM atoms in the 12 Å environment; atoms outside that region are frozen. No molecular image is used here; the active-site context render is not the exact QM subsystem. Native QM membership from model/inputs/dimer.mdin and system.prmtop: Ile112 partial segment (17 atoms, no backbone N); Phe113 partial segment (18 atoms, N/H/CA plus side chain, no C/O); Asn186 side chain (8); full Thr233 (15); partial Thr234 segment (12, no C/O); Asp272 and Asp274 side chains (6 each); and two local PA6 amide fragments (8 atoms each). There are no QM waters. This concise list does not imply the whole Phe113 or PA6 backbone is QM.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/nyl12_stationary_validation_loop_20261121.md",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/dimer.mdin",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/inputs/system.prmtop",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis_request.json"
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Fixed-geometry QM benchmarks test distinct transformations",
+      "columns": [
+        "Test",
+        "RMSE vs DFT (kcal/mol)",
+        "Scope"
+      ],
+      "rows": [
+        [
+          "DFTB3: OH → Nα",
+          "1.49",
+          "5 proton-transfer geometries; endpoint −0.57."
+        ],
+        [
+          "DFTB3: coupled addition",
+          "3.27",
+          "6 fixed geometries; TI-like error +7.42."
+        ],
+        [
+          "GFN2-xTB: OH → Nα",
+          "3.91",
+          "Same 5 PT geometries; endpoint +7.93."
+        ]
+      ],
+      "widths": [
+        4.0,
+        3.7,
+        4.5
+      ],
+      "table_height": 3.6,
+      "font_size": 24,
+      "caption": "Reference: ωB97X-D/def2-SVP. Fixed-geometry comparisons; no barrier validation.",
+      "notes": "The coupled-path panel compares six fixed geometries with ωB97X-D/def2-SVP; DFTB3 relative-profile RMSE is 3.27 kcal/mol and error reaches +7.42 kcal/mol for the TI1-like structure. Point-charge membership varied across windows (8104–7999), so this is a finite-embedding method diagnostic, not a validated reaction-energy profile; a fixed-membership check remains. A separate five-window matched electrostatic-embedding benchmark tests Thr233 OH→Nα proton transfer (not direct transfer to substrate amide N): DFTB3 RMSE 1.49 kcal/mol, endpoint error −0.57; GFN2-xTB RMSE 3.91, endpoint +7.93. Neither fixed-geometry comparison establishes gradients, a stationary point, a barrier, or a PMF.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/benchmarks/04_coupled_path_method_panel/analysis/method_errors.png",
+        "/data/jpc/covalent-enzyme-design/docs/coupled_method_panel_results_20261110.md",
+        "/data/jpc/covalent-enzyme-design/docs/qmmm_direct_pt_embedded_method_benchmark_20261110.md"
+      ]
+    },
+    {
+      "kind": "process",
+      "title": "MM and QM/MM minimization refine MD-derived E–S structures",
+      "lanes": [
+        {
+          "title": "Prepare",
+          "steps": [
+            "Equilibrated WT MD snapshot",
+            "Audit protonation and atom mapping"
+          ]
+        },
+        {
+          "title": "Minimize",
+          "steps": [
+            "MM minimization",
+            "DFTB3/MM minimization",
+            "Check geometry and chemistry"
+          ]
+        }
+      ],
+      "font_size": 24,
+      "notes": "The workflow begins from equilibrated enzyme–substrate (E–S) snapshots sampled under explicit protonation states. Validate atom mapping, proton inventory, covalent connectivity and QM/MM membership before minimization. MM minimization removes local strain in the chosen classical model. DFTB3/MM minimization then treats the reactive center quantum mechanically. These steps refine starting structures; they do not guarantee every snapshot is catalytically competent or prove a stable intermediate. Reactive TI1/acyl states are not accepted using the PA6 classical force field alone.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/10_wt_protonation_md/",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/model/"
+      ]
+    },
+    {
+      "kind": "process",
+      "title": "Reaction-path optimization and free-energy sampling",
+      "takeaway": "PES: potential energy; PMF: sampled free energy.",
+      "lanes": [
+        {
+          "title": "Path",
+          "steps": [
+            "Coordinate driving",
+            "NEB path",
+            "Saddle check"
+          ]
+        },
+        {
+          "title": "Sampling",
+          "steps": [
+            "Umbrella MD",
+            "WHAM / MBAR",
+            "PMF"
+          ]
+        }
+      ],
+      "font_size": 24,
+      "notes": "Coordinate driving constructs a chemically guided starting path. Nudged elastic band (NEB) optimizes a chain of images on the potential-energy surface (PES); the maximum is a TS candidate, not automatically a verified saddle. Transition-state qualification requires curvature and downhill connectivity. Umbrella sampling runs biased molecular dynamics windows, then reweights the samples. WHAM (weighted histogram analysis method) and MBAR (multistate Bennett acceptance ratio) estimate the potential of mean force (PMF), a free-energy profile. WHAM (weighted histogram analysis method) cross-checking is planned, not completed. MBAR is the multistate Bennett acceptance ratio. These two outputs answer different questions and require separate acceptance.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md",
         "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_findings_20261121.md"
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "caption": "NEB = nudged elastic band; WHAM = weighted histogram analysis method; MBAR = multistate Bennett acceptance ratio."
     },
     {
       "kind": "image",
-      "title": "NEB-seeded umbrella sampling: final refresh",
-      "takeaway": "63 windows ×30 ps =1.89 ns aggregate sampling; a high apparent barrier.",
-      "image": "assets/neb_pmf.png",
-      "caption": "Apparent maximum 47.0475 kcal/mol. Fixed-bin bootstrap interval 45.407–47.870 excludes important systematic uncertainties.",
+      "title": "Two proposed acylation mechanisms differ in proton transfer",
+      "image": "assets/mechanism_A_B_schematic.png",
+      "caption": "A: Thr233 OH → amide N; B: OH → Nα → amide N. TI1: tetrahedral intermediate.",
+      "notes": "Mechanism A transfers the Thr233 side-chain hydroxyl proton directly to the scissile substrate amide nitrogen as Thr233 OG1 attacks the substrate carbonyl. Mechanism B relays that proton first to the Thr233 N-terminal α-amino group (Nα), then from Nα to the substrate amide nitrogen during acylation. These are distinct hypotheses. Similar E–S endpoints or product composition do not establish a shared frozen reference, Hamiltonian, sampling coordinate, or comparable free-energy profile.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_q_acyl_pmf.png"
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/mechanism_A_B_schematic.png",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
+    },
+    {
+      "kind": "annotated_image",
+      "title": "Direct proton transfer: DFTB3/MM NEB profile",
+      "image": "assets/mechanism_A_direct_neb_large.png",
+      "callouts": [
+        "NEB maximum\nΔE ≈ 35.81 kcal/mol",
+        "Highest image\nTS unverified"
       ],
-      "notes": "37,800raw/7,871thinned frames; targetESS7.2928, connected overlap, driftwindows028/030/032. Reference is histogram density bin, not integrated E–S basin. Campaign closed; no extension queued."
+      "caption": "Mechanism A potential-energy path; the highest band image is not a verified transition state.",
+      "notes": "This canonical band contains the direct Thr233 OG1–H to scissile substrate amide-N route (Mechanism A), with DFTB3/MM energies. The maximum is about 35.81 kcal/mol relative to the stated E–S reference. The band is converged as a NEB path, but the highest image has not been verified as an index-1 transition state with a downhill connection. Treat the plotted value as a potential-energy profile (PES) maximum, not ΔG‡. It is not directly comparable with the N-terminal-relay PES without common Hamiltonian/reference/coordinate analysis.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_20261121_pes.png",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/vmd_final_24img/final_24img/"
+      ]
+    },
+    {
+      "kind": "annotated_image",
+      "title": "Direct-seeded umbrella sampling reveals competing proton-transfer channels",
+      "image": "assets/mechanism_A_direct_seeded_pmf.png",
+      "callouts": [
+        "Preliminary maximum: 47.05 kcal/mol",
+        "Mixed proton-transfer channels",
+        "Sampling not converged"
+      ],
+      "caption": "q_acyl is the projected acylation coordinate; this mixed-channel marginal is unconverged.",
+      "notes": "The latest 22 November 2026 retained q_acyl marginal is about 47.05 kcal/mol for direct-seeded umbrella sampling. The 63-window dataset includes configurations with competing proton-transfer channels, including N-terminal-relay-like frames, so this is not a route-pure Mechanism A PMF. Target effective sample size was about 7.29, with drift flags in windows 028/030/032. It is preliminary and unconverged. Its q_acyl projection/reference differs from the three-coordinate arclength profile used for Mechanism B, so the maxima must not be directly subtracted.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_q_acyl_pmf.png",
+        "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_findings_20261121.md"
+      ]
     },
     {
       "kind": "image",
-      "title": "Two-coordinate sampled free-energy surface",
-      "takeaway": "The projection can mix proton-transfer branches.",
-      "image": "assets/neb_fes.png",
-      "caption": "q_acyl=r(C,Nleaving)−r(C,OG1); qH=r(OG1,HG1)−r(Nleaving,HG1). Neither directly measures N-terminal proton occupancy.",
+      "title": "Bias-free optimization retained an addition-like structure",
+      "image": "assets/relay_structures.png",
+      "caption": "This optimization retained an addition-like, relay-ready structure.",
+      "notes": "The w033 internal candidate came from direct-seeded umbrella MD, which also sampled N-terminal-relay configurations; umbrella bias was then removed before QM/MM optimization. This lineage explains how an addition-like relay structure emerged from a direct-seeded campaign. It retained partial tetrahedral character with C–OG1=1.740 Å, C–N=1.490 Å, C–O=1.309 Å; gradient was 7.94×10⁻⁶ Eh/bohr. Label it addition-like or TI1-like, not a proven stable TI1 minimum. Full Hessian/minimum curvature and an unbiased lifetime are not established. This active-site rendering contains 152 local atoms and provides context only; it is not a visualization of the exact 98-real-atom QM subsystem. E–S/acyl endpoints may share chemical composition but not automatically a common frozen environment/reference.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/primary_fes.png"
+        "/data/jpc/covalent-enzyme-design/docs/presentations/nyl12_progress_20261123/assets/relay_state_pymol/input.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/proton_relay_geometry_20261125.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/ts_workflow_checkpoint_20261125.json"
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "takeaway": "Direct-seeded umbrella MD → bias-free QM/MM optimization."
     },
     {
-      "kind": "image",
-      "title": "US overlap and convergence are separate",
-      "takeaway": "Connected overlap permits reconstruction; it does not establish sufficient sampling.",
-      "image": "assets/overlap.png",
-      "caption": "Low target effective sample size, block drift and untested hysteresis limit quantitative interpretation.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/compact_export/mbar_overlap.png"
+      "kind": "annotated_image",
+      "title": "Proton-relay acylation: DFTB3/MM potential-energy profile",
+      "image": "assets/relay_pes_large.png",
+      "callouts": [
+        "PES profile; TS verification pending"
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "caption": "Relative potential energy along the coordinate-driven path; ΔEmax = 16.31 kcal/mol.",
+      "notes": "Joined DFTB3/MM coordinate-driven path, referenced to regenerated E–S under the current pathway Hamiltonian and frozen exterior. The physical energy excludes driving bias. The connected maximum is ΔE=16.312 kcal/mol; acyl endpoint is −4.15 kcal/mol. Endpoint optimization gradients were small, but the forward dimer candidate’s first-order curvature and downhill connectivity remain unverified; the reverse candidate search had SCC failures and is not used for TS qualification. This is a PES, not a PMF or verified TS barrier. Matching the E–S chemistry to Mechanism A does not prove the frozen coordinates, Hamiltonian, QM membership, or reference are identical. The B path was constructed in reverse toward E–S and forward toward acylenzyme from the addition-like candidate. Its zero is the separately released E–S endpoint, not automatically the zero of the original A ensemble.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/plots/connected_relay_pes.csv",
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ],
+      "takeaway": "PES maximum ΔE ≈ 16.31 kcal/mol from released E–S; ΔG‡ pending."
     },
     {
-      "kind": "table",
-      "title": "HG1 ownership in the completed biased data",
-      "takeaway": "N-terminal binding supports a relay hypothesis, not established transfer order.",
-      "columns": [
-        "Nearest heavy-atom owner",
-        "Frames",
-        "Biased fraction"
-      ],
-      "rows": [
-        [
-          "Thr OG1",
-          "15,402",
-          "40.7%"
-        ],
-        [
-          "Substrate leaving N",
-          "18,507",
-          "49.0%"
-        ],
-        [
-          "Thr N-terminal N",
-          "3,891",
-          "10.3%"
-        ]
-      ],
-      "widths": [
-        6.0,
-        3.1,
-        3.1
-      ],
-      "table_height": 3.1,
-      "font_size": 22,
-      "caption": "Counts are neither equilibrium populations nor bond classifications. Concatenated windows are not a continuous reaction movie.",
+      "kind": "placeholder",
+      "title": "Umbrella sampling tests the Mechanism B free-energy profile",
+      "status": "Production sampling in progress; PMF pending",
+      "message": "No converged profile is available.",
+      "detail": "57 windows at 300 K; coverage, overlap and stability gates remain.",
+      "notes": "The current N-terminal-relay umbrella campaign has 57 windows at 300 K. Production is organized into short 5 ps blocks following heating/equilibration and workflow acceptance. Do not show a filled PMF curve or completion date while analysis is pending. WHAM and MBAR refer to histogram-based and multistate Bennett free-energy estimators; any estimator must pass the same coverage/overlap, block stability, hysteresis and chemical-retention gates. Sampling completion, convergence, and mechanism qualification are separate outcomes.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/analysis/pmf_refresh_20261122/proton_state_retention.json"
-      ],
-      "notes": "Old direct-PT umbrellas already sampled N-boundHG1. The mechanistically useful question is coupling proton occupancy to attack/acylation. HG1→Nalpha followed by H1/H2→leavingN can be a valid relay; restoring OG1OH/NalphaNH2 invalidates an intended alkoxide/ammonium state."
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis_request.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/ts_workflow_checkpoint_20261125.json"
+      ]
     },
     {
-      "kind": "table",
-      "title": "Current test: unbiased relay-state relaxations",
-      "takeaway": "Relay seed w033: force accepted; full Hessian ongoing, minimum not yet certified.",
-      "columns": [
-        "Seed",
-        "C–OG1 / C–N / C–O (Å)",
-        "Source"
-      ],
-      "rows": [
-        [
-          "TI1-like A",
-          "1.558 /1.471 /1.307",
-          "w032, block04, frame65"
-        ],
-        [
-          "TI1-like B",
-          "1.556 /1.478 /1.317",
-          "w033, block05, frame46"
-        ],
-        [
-          "Earlier attack",
-          "1.897 /1.495 /1.275",
-          "w028, block04, frame98"
-        ]
-      ],
-      "widths": [
-        3.2,
-        5.2,
-        3.8
-      ],
-      "table_height": 3.3,
-      "font_size": 20,
-      "caption": "All three have actual Nalpha–HG1 bonds, with H1/H2 retained on Nalpha. No reaction-coordinate or positional potentials in the movable region.",
+      "kind": "placeholder",
+      "title": "Matched free-energy calculations will compare the two mechanisms",
+      "status": "Common physical model confirmed; matched-coordinate analysis pending",
+      "message": "Topology and QM/MM masks agree within restart precision.",
+      "detail": "Mechanism A uses q_acyl; B uses path/arclength. Shared-coordinate reanalysis remains pending.",
+      "notes": "A new compatibility audit confirmed exact topology hash 448560…, the same 98-real-atom QM mask and −2 charge, 4,165-atom mobile mask, 300 K MD / 0 K electronic setup, shared 16-file 3OB tree, and native Ewald/PME cutoffs. The 100,757 frozen atoms in A seeds 001/004/009/012/024 and the B seed agree to maximum XYZ difference 3.81×10⁻⁶ Å (RMS 1.56×10⁻⁶ Å; maximum per-atom displacement 6.32×10⁻⁶ Å); six cell parameters match exactly. A uses SCF energy tolerance 1×10⁻¹⁰ and B 1×10⁻¹², a numerical rather than chemical Hamiltonian difference. A stricter-tolerance/numerical-precision check remains before pooling. Even with a compatible physical model, the current profiles are not directly comparable: A is a branch-mixed, unconverged q_acyl marginal; B uses path arclength and has no PMF. Reanalyze retained A frames and B samples on a shared coordinate, E–S basin and normalization before interpreting barriers. The B coordinate path starts at its released E–S structure; identical chemical composition is not proof that this is the same conformational basin as the A q_acyl reference.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123"
-      ],
-      "notes": "w033 force acceptance is distinct from stationary-point classification. The full Hessian is ongoing; no minimum is certified. The three configurations preserve the declared N-terminal proton inventory and fixed exterior; no live host or GPU availability is implied.",
-      "footer": "w033 force accepted | full Hessian ongoing | minimum not certified"
+        "/data/jpc/covalent-enzyme-design/docs/neb_us_preliminary_findings_20261121.md",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis_request.json",
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/direct_relay_compatibility_20261125.json"
+      ]
     },
     {
-      "kind": "image",
-      "title": "ASP272/ASH274 water-assisted route",
-      "takeaway": "This tested alternative has not resolved the high-energy problem.",
-      "image": "assets/ash_water_pes.png",
-      "caption": "Reverse-path PES maximum≈50.89 kcal/mol; originalNEB≈50.88. ExtendedCG checkpoint≈44.88 remains unconverged.",
+      "kind": "placeholder",
+      "title": "Transition-state verification requires curvature and downhill connectivity",
+      "status": "Candidate identified; verification in progress",
+      "message": "No verified index-1 transition state or complete downhill connection is established.",
+      "detail": "Pending checks: stationary-point curvature, eigenvector direction, and connected descent to the intended chemical basins.",
+      "notes": "A high NEB image or PES maximum is not by itself a transition state. The current relay candidate needs first-order saddle curvature (one imaginary mode along the reaction coordinate) and downhill connectivity into the intended E–S and acyl basins. A stationary-point search can terminate computationally without meeting these scientific acceptance criteria. No full-Hessian result should be implied while verification is in progress.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/07_ash274_comparison/09_water_relay_acylation/03_reverse_path/plots/coordinate_driving_pes.png"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/ts_workflow_checkpoint_20261125.json",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
     },
     {
-      "kind": "table",
-      "title": "Energy ledger: distinct reference definitions",
-      "takeaway": "A completed scan, a band maximum and ΔG‡ must not be conflated.",
-      "columns": [
-        "Result family",
-        "kcal/mol",
-        "Meaning"
+      "kind": "process",
+      "title": "Transition-state templates guide symmetry-aware sequence design",
+      "lanes": [
+        {
+          "title": "Input",
+          "steps": [
+            "Validated WT ensemble",
+            "Protect catalytic scaffold"
+          ]
+        },
+        {
+          "title": "Design",
+          "steps": [
+            "LigandMPNN",
+            "Boltz-2",
+            "OpenMM, shortlist\nand validation"
+          ]
+        }
       ],
-      "rows": [
-        [
-          "Early restrained scan",
-          "91.79",
-          "65.88 driving penalty; MM positional restraint contribution remains"
-        ],
-        [
-          "Direct PT / asynchronous PES",
-          "15.38 /21.01",
-          "Driven-path rises; released states did not verifyTI1"
-        ],
-        [
-          "Direct PT US,12 ps grid",
-          "18.04",
-          "Uphill standalone PT projection; no verified product basin"
-        ],
-        [
-          "Direct NEB / refined candidate",
-          "35.81 /46.41",
-          "Different optimized geometries and E–S references"
-        ],
-        [
-          "NEB-seeded US,30 ps/window",
-          "47.05",
-          "Apparent marginalPMF; not convergedΔG‡"
-        ]
-      ],
-      "widths": [
-        4.4,
-        2.3,
-        5.5
-      ],
-      "font_size": 17,
-      "table_height": 4.1,
-      "caption": "The earlier7psPT target-endpoint cost 15.49 is different from the 12 ps whole-grid height 18.04.",
+      "font_size": 24,
+      "notes": "Design templates should be derived from an ensemble of chemically checked WT transition-state-like structures, with key catalytic atoms and symmetry-related design positions defined before sequence sampling. LigandMPNN supplies sequence proposals under the protected-site mask. Boltz-2 evaluates structural compatibility. OpenMM uses matched protocols for WT/design comparison. An unverified candidate or ES-trained force field does not become a TS template. The existing geometry gates remain in force; do not relax them to meet a deadline.",
       "sources": [
         "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
-        "/data/jpc/covalent-enzyme-design/docs/pa6_overnight_path_review_20261025.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
+      ]
     },
     {
       "kind": "table",
-      "title": "Eyring scale for interpreting plausible barriers",
-      "takeaway": "k=(kBT/h)exp(−ΔG‡/RT), transmission coefficientκ=1; rates in s⁻¹.",
+      "title": "Priorities through 30 November: matched PMFs and a redesign pilot",
+      "columns": [
+        "Workstream",
+        "Target deliverable",
+        "Status"
+      ],
+      "rows": [
+        [
+          "Matched free energies",
+          "Compare on a common coordinate and reference.",
+          "Validation pending."
+        ],
+        [
+          "WT template review",
+          "Check saddle curvature and downhill path.",
+          "Validation pending."
+        ],
+        [
+          "Design workflow",
+          "Run end-to-end sequence-design pilot.",
+          "Activity untested."
+        ]
+      ],
+      "widths": [
+        2.8,
+        6.4,
+        2.6
+      ],
+      "table_height": 3.6,
+      "font_size": 24,
+      "caption": "The 30 November target does not guarantee convergence or improved activity.",
+      "notes": "The design workflow pilot may complete in parallel by 30 November using existing structures and masks. Sequence nomination requires validated transition-state templates. Umbrella sampling is not promised to converge by the deadline; a pipeline pilot does not guarantee activity improvement. Keep experimental validation distinct from simulation ranking.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
+    },
+    {
+      "kind": "cards",
+      "title": "Mechanism comparison sets the next redesign decision",
+      "cards": [
+        {
+          "title": "Matched WT MD",
+          "text": "ASH274 did not improve geometry occupancy."
+        },
+        {
+          "title": "Relay path",
+          "text": "ΔEmax ≈ 16.3 kcal/mol; ΔG‡ pending."
+        },
+        {
+          "title": "Next decision",
+          "text": "Compare free energies; verify TS templates."
+        }
+      ],
+      "font_size": 24,
+      "notes": "Summary uses the current evidence state dated 25 November 2026. Matched fixed-charge WT MD did not show increased geometry occupancy for ASH274. The N-terminal relay path connects retained chemical endpoints and has a 16.31 kcal/mol physical PES rise, but no B PMF or verified TS is available. The direct-seeded A profile is mixed-channel and unconverged. The next redesign decision depends on common-reference mechanistic evidence and TS template qualification.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Appendix: Eyring rates illustrate barrier sensitivity to temperature",
+      "takeaway": "k = (k_B T/h) exp[−ΔG‡/(RT)], κ = 1; rates in s⁻¹.",
       "columns": [
         "ΔG‡ (kcal/mol)",
         "300 K",
-        "65°C (338.15 K)",
-        "75°C (348.15 K)"
+        "65 °C (338.15 K)",
+        "75 °C (348.15 K)"
       ],
       "rows": [
         [
           "20",
           "0.017",
           "0.84",
-          "2"
+          "2.0"
         ],
         [
           "22",
@@ -674,27 +690,27 @@
         ],
         [
           "24",
-          "2.1e-05",
+          "2.1×10⁻⁵",
           "0.0022",
           "0.0062"
         ],
         [
           "26",
-          "7.2e-07",
+          "7.2×10⁻⁷",
           "0.00011",
           "0.00035"
         ],
         [
           "28",
-          "2.5e-08",
-          "5.6e-06",
-          "1.9e-05"
+          "2.5×10⁻⁸",
+          "5.6×10⁻⁶",
+          "1.9×10⁻⁵"
         ],
         [
           "30",
-          "8.7e-10",
-          "2.9e-07",
-          "1.1e-06"
+          "8.7×10⁻¹⁰",
+          "2.9×10⁻⁷",
+          "1.1×10⁻⁶"
         ]
       ],
       "widths": [
@@ -703,198 +719,82 @@
         2.8,
         2.8
       ],
-      "font_size": 20,
       "table_height": 4.15,
-      "caption": "Each column evaluates a specified ΔG‡ at that temperature; this does not predict its temperature dependence.22–26 kcal/mol is a plausibility guide at 75 °C, not an assay-derived cutoff.",
+      "font_size": 22,
+      "caption": "An assumed ΔG‡ at each temperature; this is not a measured barrier or a polymer-conversion prediction.",
+      "notes": "Elementary Eyring rates assume transmission coefficient κ=1 and a specified activation free energy at each temperature. The calculation does not predict the temperature dependence of the barrier. Lysate conversion depends on active-enzyme concentration, substrate accessibility, adsorption, binding and product release. A potential-energy maximum cannot be inserted as ΔG‡.",
       "sources": [
         "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md"
-      ],
-      "notes": "Crude-lysate conversion of polymer powder depends on activeenzymeconcentration,accessiblebonds,adsorption,binding,andrelease. Potentialenergycannotbeinsertedasactivationfreeenergy. At348.15K,22→.1123,24→.006237,26→.0003463s−1; at300Kratesaremuchlower."
+      ]
     },
     {
-      "kind": "snapshots",
-      "title": "Structural inspection: snapshot placeholders",
-      "takeaway": "Use the retained VMD bundles for the corresponding atomic views.",
-      "cards": [
-        {
-          "title": "E–S endpoint",
-          "text": "Insert VMD snapshot of intact amide, OG1–H and N-terminal NH₂.\nShow oxyanion donors and both Asp residues."
-        },
-        {
-          "title": "Direct-route candidate",
-          "text": "Insert VMD snapshot at the saddle candidate.\nShow dynamic reactive bonds and measured distances."
-        },
-        {
-          "title": "Acylenzyme endpoint",
-          "text": "Insert VMD snapshot of C–OG1 ester and cleaved C–N.\nConfirm leaving-N protonation."
-        },
-        {
-          "title": "N-terminal relay seed",
-          "text": "Insert VMD snapshot from current release campaign.\nShow all three N-terminal H atoms and tetrahedral geometry."
-        }
+      "kind": "table",
+      "title": "Appendix: PROPKA estimates depend on structure and cleavage state",
+      "columns": [
+        "Structure",
+        "Asp1 pKa",
+        "Asp2 pKa",
+        "Thr Nα pKa"
       ],
-      "font_size": 18,
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/vmd_dynamic/view_umbrella.vmd",
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/ts_image08_attempt1/validation_loop_20261121",
-        "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/05_neutral_reaction_path/07_dimer_ts_img07_img08_seed_20261113/irc_0K/new_neb/trace_seed_25img_step005_max4000_20261113/umbrella_sampling/nterminal_relay_releases_20261123"
+      "rows": [
+        [
+          "Nyl12, primary site E",
+          "0.88–2.37",
+          "3.44–6.95",
+          "8.93–9.70"
+        ],
+        [
+          "Mature NylC 5XYG",
+          "2.19–2.21",
+          "5.49–6.49",
+          "6.35–6.55"
+        ],
+        [
+          "Uncleaved NylC 7YU0",
+          "4.92–6.34",
+          "4.18–6.37",
+          "Not free"
+        ],
+        [
+          "Uncleaved NylC 7YU1",
+          "6.36–6.39",
+          "4.24–6.53",
+          "Not free"
+        ]
       ],
-      "notes": "These panels are explicitly placeholders, not atomic renderings. VMD GUI is on the PI laptop; do not label synthetic illustrations as VMD snapshots. Source bundlepathsandframeprovenance are in notes/manifests."
-    },
-    {
-      "kind": "image",
-      "title": "Symmetry-aware design: structural comparison",
-      "takeaway": "Broader sequence freedom improves some structural metrics; activity is unproven.",
-      "image": "assets/design_geometry.png",
-      "caption": "55 force-converged Boltz/MM models; jointTier A/B+native sites: broader 12/80,focused 8/80,WT 1/20. These are not designed-variantMD results.",
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/plots/tier_native_comparison.png"
+      "widths": [
+        4.3,
+        2.5,
+        2.5,
+        2.7
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "How the two mutable masks were chosen",
-      "takeaway": "Focused 19 positions are retained; broader 29 adds ten audited alpha sites.",
-      "font_size": 21,
-      "bullets": [
-        "Focused alpha: 50, 51, 52, 73, 76, 101, 111, 112, 114, 115, 116, 151, 152, 153, 185, 187, 188.",
-        "Focused beta: local 39, 41 = canonical precursor 271, 273. These 19 sites form the unchanged base mask.",
-        "Broader adds alpha 28, 37, 38, 92, 96, 97, 160, 161, 162, 164: 27 alpha + 2 beta = 29.",
-        "New sites: RSA ≥ 0.25 in every copy of both WT parents; no other-chain heavy contact ≤ 4 Å."
-      ],
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/protocol.json",
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/final_masks.json"
-      ],
-      "notes": "The focused mask is retained unchanged, not retrospectively subjected to the broader-addition gate. Four additions are in the 6–12 Å shell and six in the 12–16 Å shell. RSA uses Tien 2013 normalization. Parent structures were WT seed 02 and seed 03."
-    },
-    {
-      "kind": "text",
-      "title": "Selected mutations: canonical precursor numbering",
-      "takeaway": "Full substitution lists; beta local L39F is canonical L271F.",
+      "table_height": 3.8,
       "font_size": 22,
-      "bullets": [
-        "mask_03 (focused): S50A, V51A, S153A, A187T, V188I, L271F.",
-        "mask_07 (broader): S50A, V51A, A92K, N97D, S153T, A187T, V188T.",
-        "Equivalent alpha chains A–D share one sequence; beta chains E–H share one sequence.",
-        "Catalytic/maturation protections remain fixed: alpha 113, 156, 186, 222–232; beta local 1–3, 40, 42 (canonical 233–235, 272, 274)."
-      ],
+      "caption": "Nyl12: Asp272/Asp274/Thr233; NylC: Asp306/Asp308/Thr267. Ranges span structures/chains.",
+      "notes": "These are default PROPKA estimates across retained structure/chain preparations; ranges are observed across structures/chains, not confidence intervals. Nyl12 primary site E includes three static geometries: Asp272 0.88–2.37, Asp274 3.44–6.95, Thr233 Nα 8.93–9.70. Mature NylC 5XYG default estimates are Asp306 2.19–2.21, Asp308 5.49–6.49, and Thr267 N 6.35–6.55. Uncleaved precursor structures 7YU0 and 7YU1 contain mutations; they were not back-mutated, so cleavage and mutation effects are confounded. The Thr N terminus is not free in these uncleaved structures. Coupled-state alternatives vary substantially and are not a unique assignment. MCCE quality checks are incomplete; its values are not interpreted. A ~3.91 Å nearest Asp O–O separation is discussed in the NylC mechanism notes, not mixed into this pKa table.",
       "sources": [
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/prepared/candidate_manifest.json",
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/protocol.json",
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/preflight/final_masks.json"
-      ],
-      "notes": "Canonical precursor numbering covers alpha residues 1–232 and beta residues 233–328; beta local index is canonical minus 232. Mutation lists describe whole precursor sequences, not individual site substitutions per tetramer."
-    },
-    {
-      "kind": "text",
-      "title": "Why test the flipped PA6 pose?",
-      "takeaway": "Signed φ identifies orientation; it does not establish relay competence.",
-      "font_size": 21,
-      "bullets": [
-        "Flipped-only MD tests the N-terminal relay hypothesis; it does not assume the relay is already positioned.",
-        "WT negative φ: Nα–leaving N mean 4.65 Å (4.24–5.47; n=16). Positive φ: 3.61 Å (3.51–3.67; n=4).",
-        "Current negative-φ poses require reorganization or a water relay; the shorter positive-φ distance alone also proves nothing.",
-        "Proton-transfer direction remains unresolved. Selected starts and finite unrestrained MD cannot establish unbiased binding preference."
-      ],
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
-        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/results/control_summary.csv",
-        "/data/jpc/covalent-enzyme-design/analysis/native_thr_gate_calibration_20261123/inputs/occupied_sites.csv"
-      ],
-      "notes": "The negative signed projected phi denotes flipped orientation only under the consistent scissile-amide mapping. Lead audit of relaxed WT sites: negative n=16, mean 4.65 Å, range 4.24–5.47 Å; positive n=4, mean 3.61 Å, range 3.51–3.67 Å. Selected WT seed04 4.59–4.87 Å, mask_03 4.30–5.19 Å, mask_07 4.30–4.89 Å, V111C 5.26–5.45 Å. Geometric proximity alone establishes neither transfer direction nor relay competence. The PI-selected campaign remains flipped-only."
-    },
-    {
-      "kind": "text",
-      "title": "Design interpretation and experimental spending",
-      "takeaway": "Current scores do not provide compelling evidence of improved catalytic activity.",
-      "bullets": [
-        "Broader mask_07 has 6 joint sites across3/5 predictions; focused mask_03 provides a comparison with fewer substitutions.",
-        "Known-active K59D has0/20 joint passes and V111C 7/20: activity calibration remains a major limitation.",
-        "Four sites per model and prediction seeds are correlated; do not interpret site fractions as hit probabilities.",
-        "Calibrate controls and matched starting ensembles before a bounded variantMD follow-up or experimental nomination."
-      ],
-      "font_size": 23,
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/design/nyl12_ligandmpnn_pilot/ensemble_mask_comparison/validation/analysis/comparison_summary.json"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "Engineering precedent: Puetz KnowVolution",
-      "takeaway": "Empirical anchoring and productive binding can guide improvement before full mechanism resolution.",
-      "bullets": [
-        "NylC F134W/D304M/R330A improved PA6 specific activity6.9-fold in the reported parent background.",
-        "Adding D99R reduced that improvement to3.9-fold: negative epistasis matters.",
-        "Persistent contacts to a charged oligomer terminus were associated with poorer performance in the combined variant.",
-        "ForNyl 12: consider terminal artifacts, access and release alongside catalytic geometry; validate mutation combinations experimentally."
-      ],
-      "font_size": 23,
-      "sources": [
-        "https://doi.org/10.1002/cssc.202500257"
-      ],
-      "notes": "Puetzetal.,ChemSusChem2025,18,e202500257. Mutagenesis/MD/recombination study; this does not validate ouractivityranker. Homologmutationnumbersmustbemappedbeforetransfer."
-    },
-    {
-      "kind": "text",
-      "title": "Mechanism-agent and resource strategy",
-      "takeaway": "Tool-backed bounded tasks; human control of chemistry and expensive launches.",
-      "bullets": [
-        "GPT-OSS and Mistral pilots both made consequential chemistry errors; neither qualified for autonomous scientific dispatch.",
-        "Next tool task: matched-inputMCCE/PROPKA curve audit with explicit preparation and parameter checks.",
-        "MuseGlimmer 30B is the intended alternative model; a held-out qualification would be a separate, bounded test.",
-        "Maintain one roadmap, compact decision packets and existing source-linked evidence. Keep model servers off between requests."
-      ],
-      "font_size": 23,
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/mechanism_agent_model_and_strategy_20261120.md",
-        "https://dev.meta.ai/models/muse-glimmer"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "cards",
-      "title": "Next decisions and stopping rules",
-      "takeaway": "Concentrate effort on calculations that distinguish mechanistic hypotheses.",
-      "cards": [
-        {
-          "title": "Structural gate",
-          "text": "Keep frozen thresholds; report crystal/control calibration and continuous metrics.\nDo not tune to favored designs."
-        },
-        {
-          "title": "Relay release",
-          "text": "Classify actual protonation and acyl geometry after unbiased relaxation.\nNo minimum? Follow the alternative chemistry rather than forceTI1."
-        },
-        {
-          "title": "TS validation",
-          "text": "Finish bounded Hessian conditioning on the existing candidate.\nNo duplicateNEB/US campaign on the same branch."
-        }
-      ],
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
-      ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
-    },
-    {
-      "kind": "text",
-      "title": "Reference and evidence map",
-      "takeaway": "Full figure provenance, caveats and source paths are retained in slide notes.",
-      "bullets": [
-        "Puetzetal.2025,ChemSusChem 18,e 202500257: engineering,MD interpretation and epistasis.",
-        "Negoroetal.2023,FEBS: NylC catalytic-triad hypothesis; inference versus direct evidence distinguished.",
-        "Andjelkovićetal.2023,JCIM63,5676–5688: N-terminal-nucleophile mechanistic comparator; not direct proof for Nyl 12.",
-        "Project sources: mechanism roadmap, Methods/Results drafts, frozen MD/NEB/MBAR manifests, parameterization project and current release receipts."
-      ],
-      "font_size": 22,
-      "sources": [
-        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md",
-        "/data/jpc/covalent-enzyme-design/manuscript/METHODS_DRAFT.md",
         "/data/jpc/covalent-enzyme-design/manuscript/RESULTS_DRAFT.md",
-        "https://github.com/parksjm/polyamide-amber-ff"
+        "/data/jpc/covalent-enzyme-design/docs/propka_asp_pair_pilot_20261116.md",
+        "/data/jpc/covalent-enzyme-design/docs/negoro_2023_mechanism_audit.md"
+      ]
+    },
+    {
+      "kind": "text",
+      "title": "Appendix: sources, coordinate definitions, and interpretation limits",
+      "bullets": [
+        "PES: potential energy along a path; it is not a free-energy profile.",
+        "PMF: potential of mean force from sampled, bias-corrected configurations.",
+        "TS: transition state requires stationary-point curvature and downhill connectivity.",
+        "E–S: enzyme–substrate complex; acylenzyme: covalent enzyme–substrate intermediate.",
+        "WHAM/MBAR: histogram and multistate estimators; overlap and stability checks remain required.",
+        "All figures and scientific inputs are mapped with source hashes in asset_sources.json and the build receipt."
       ],
-      "notes": "Working interpretation; source records are authoritative. Process completion does not establish scientific acceptance."
+      "font_size": 19,
+      "notes": "PES means potential-energy surface/profile and is distinct from a potential of mean force (PMF), which estimates a free-energy profile from sampled biased configurations. A transition-state assignment requires stationary-point curvature and downhill connections. E–S is enzyme–substrate; acylenzyme is the covalent intermediate after substrate acylation. WHAM is the weighted histogram analysis method and MBAR is the multistate Bennett acceptance ratio; neither rescues poor overlap or unstable sampling. Primary inputs, caveats, and per-slide references are retained in slide notes and the hashed receipt.",
+      "sources": [
+        "/data/jpc/covalent-enzyme-design/docs/qmmm_umbrella_sampling_and_pmf_protocol_20261109.md",
+        "/data/jpc/covalent-enzyme-design/docs/NYL12_MECHANISM_ROADMAP.md"
+      ]
     }
   ]
 }
