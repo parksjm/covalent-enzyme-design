@@ -172,3 +172,57 @@ def test_removed_legacy_movie_variable_is_not_referenced() -> None:
     script = Path("scripts/pull_nyl12_inspection.sh").read_text()
     assert "$current_us_movie" not in script
     assert 'echo "Current relay VMD: $movie_destination/view_path.vmd"' in script
+
+
+@pytest.mark.parametrize("trajectory_bytes", [191747396, 143810596])
+def test_supplemental_bundle_includes_large_trajectory(
+    tmp_path: Path, trajectory_bytes: int
+) -> None:
+    """Transfer every listed supplemental payload despite the old 100 MB cap."""
+    rsync = shutil.which("rsync")
+    if rsync is None:
+        pytest.skip("Actual rsync is required for the large-payload regression")
+    rules = _rules("# Verified post5ps supplemental viewers", "supplemental_source")
+    options = _current_transfer_args()
+    assert "--checksum" in options
+    assert not any(option.startswith("--max-size") for option in options)
+    source = tmp_path / "publication"
+    source.mkdir()
+    names = [
+        "README.md",
+        "display_prepared.json",
+        "frame_sources.csv",
+        "manifest.json",
+        "path.dcd",
+        "path.parm7",
+        "qm_indices.json",
+        "source_selection.json",
+        "verification.json",
+        "view_path.vmd",
+    ]
+    hashes: dict[str, str] = {}
+    for name in names:
+        path = source / name
+        if name == "path.dcd":
+            with path.open("wb") as stream:
+                stream.truncate(trajectory_bytes)
+        else:
+            path.write_text(name)
+        with path.open("rb") as stream:
+            hashes[name] = hashlib.file_digest(stream, "sha256").hexdigest()
+    manifest = "SHA256SUMS.txt"
+    (source / manifest).write_text(
+        "".join(f"{hashes[name]}  {name}\n" for name in names)
+    )
+    target = tmp_path / "laptop"
+    subprocess.run(
+        [rsync, *options, *rules, f"{source}/", f"{target}/"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    assert {path.name for path in target.iterdir()} == set(names) | {manifest}
+    assert (target / "path.dcd").stat().st_size == trajectory_bytes
+    for name in names:
+        with (target / name).open("rb") as stream:
+            assert hashlib.file_digest(stream, "sha256").hexdigest() == hashes[name]

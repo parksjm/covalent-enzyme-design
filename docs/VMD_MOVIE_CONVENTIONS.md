@@ -102,6 +102,12 @@ atom selections. The helper does not rewrite native topology chain attributes.
    Hessian columns, raw full-system MD and archived display backups.
    A curated DCD may exceed general rsync size limits: transfer the explicitly
    selected movie payload without that cap before validating its checksums.
+   This applies to every supplemental viewer as well as the main movie.
+   In the pull script, complete verified bundles use the uncapped,
+   content-checked `relay_current_rsync_args`; the generic 100 MB
+   `vmd_rsync_args` must not govern a complete checksummed movie bundle.
+   Exercise each new bundle family with its full manifest and a trajectory
+   larger than the generic cap. Checksum failures must name the destination.
    Never publish new viewer dimensions alongside a silently skipped older DCD.
    Keep a newly loaded molecule hidden until dimensions/style/camera checks
    succeed; on failure delete only that incomplete movie and report the error.

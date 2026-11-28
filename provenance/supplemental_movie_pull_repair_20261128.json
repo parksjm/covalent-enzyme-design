@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "reported_error": "One manifest-listed file could not be read after verification.json/view_path.vmd OK",
+  "missing_payload": "path.dcd",
+  "cause": "Supplemental verified movie loop inherited generic100MB rsync cap, silently skipping both144MB/192MB trajectories",
+  "source_payload_sizes_bytes": [
+    191747396,
+    143810596
+  ],
+  "source_checksums": "All ten payloads in each supplemental source bundle verified",
+  "fix": "Use existing uncapped --checksum relay_current_rsync_args for complete supplemental bundles; print destination on verification failure",
+  "checks": {
+    "focused_pytest": "13 passed in5.80s",
+    "full_sized_transfer_tests": "Actual rsync and full SHA256 verification of both trajectory sizes and all manifest payloads",
+    "bash_syntax": "passed",
+    "ruff": "passed"
+  },
+  "related_transfer_audit": "Bounded named checksum-backed movie exports found no additional concrete cap/filter mismatch; not a full raw-tree or remote audit",
+  "script_sha256": "52e03f6b03b6d6a273ef22776f3d5ff4e154269acb41a46af3131daf65c1d8f4",
+  "scientific_jobs_changed": false,
+  "laptop_recovery": "Copy corrected script fromViolet and rerun same arguments/destination; existing local files are reused and checked"
+}

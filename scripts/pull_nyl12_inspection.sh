@@ -1298,14 +1298,26 @@ if ssh "$remote" test -f "$mask95repair_source/MANIFEST.sha256"; then
 fi
 
 # Verified post5ps supplemental viewers and paired index (mainmovie unchanged).
-echo "Supplemental viewer payload: about335MB total; immutable post5ps selections"
+echo "Supplemental viewers: complete checksummed post5ps selections"
 for supplemental_relative in qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/vmd_progress/eligible_post5ps_15ps_checkpoint01 qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/vmd_progress/eligible_post5ps_10ps_checkpoint01 qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/supplemental_movies_post5ps_prepare_20261127/accepted_inspection_index; do
     supplemental_source="/data/jpc/covalent-enzyme-design/$supplemental_relative"
     supplemental_destination="$destination/$supplemental_relative"
     if ssh "$remote" test -f "$supplemental_source/SHA256SUMS.txt"; then
+        echo "Supplemental VMD transfer: $supplemental_relative"
         if [[ $dry_run -eq 0 ]]; then mkdir -p "$supplemental_destination"; fi
-        rsync "${vmd_rsync_args[@]}" --exclude="**/private/***" --exclude="**/columns/***" --exclude="**/*hessian*" --include="*/" --include="*.dcd" --include="*.parm7" --include="*.vmd" --include="*.json" --include="*.csv" --include="*.md" --include="*.txt" --exclude="*" "$remote:$supplemental_source/" "$supplemental_destination/"
-        if [[ $dry_run -eq 0 ]]; then (cd "$supplemental_destination" && "${checksum[@]}" SHA256SUMS.txt); fi
+        # Verified DCDs exceed the generic 100 MB cap; transfer the complete bundle.
+        rsync "${relay_current_rsync_args[@]}" \
+            --exclude="**/private/***" --exclude="**/columns/***" \
+            --exclude="**/*hessian*" --include="*/" --include="*.dcd" \
+            --include="*.parm7" --include="*.vmd" --include="*.json" \
+            --include="*.csv" --include="*.md" --include="*.txt" --exclude="*" \
+            "$remote:$supplemental_source/" "$supplemental_destination/"
+        if [[ $dry_run -eq 0 ]]; then
+            if ! (cd "$supplemental_destination" && "${checksum[@]}" SHA256SUMS.txt); then
+                echo "Supplemental VMD checksum verification failed: $supplemental_destination" >&2
+                exit 1
+            fi
+        fi
     else
         echo "Supplemental publication pending: $supplemental_relative"
     fi
