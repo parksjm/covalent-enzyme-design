@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "decision": "ExistingMDensemblebaseline;RFD3optionalnotrequired;LigandMPNN4copytiesmandatory",
+  "payload_sha256": {
+    "AGENTS.md": "2f720fd82d6def4692cfc402de71a60de66cd312db1859fe294e0d657b80bd05",
+    "docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md": "5a9643ca3d13db9a687702797c5d9e49152ae1371891b03a0a9413000c6757b3",
+    "docs/NYL12_THROUGH_NOV30.md": "419d80c7da1553ad8a17ac6df26d3228eb7ac949427ed3ea9b67beba22503686",
+    "docs/NYL12_MECHANISM_ROADMAP.md": "566678064fddda693b7e497c84f4eff99a99769691390f88819f83c816824c4e",
+    "docs/standalone_handoff_20261020.md": "1f9e506b4df1c3d9a4e0015e78f6f7452e4bdf51d23dd1170b04c5d6d068ff84",
+    "docs/RFD3_SYMMETRY_QUALIFICATION.md": "ae700d9b7a5ac44917cb55f1e139a605529e51f9d20a55065a9b193f10adf49f",
+    "manuscript/METHODS_DRAFT.md": "761f13813739913662c7e81a2c467f56f68d07fc2cccaf52cf5b67ca3a8adb80",
+    "manuscript/SUPPORTING_INFORMATION_DRAFT.md": "85796ae673f0d6a6348f41b4c607023e4998a687f79d273c5bdbc4413cdcb7fe",
+    "src/nyl12_covalent/relay_broad_runtime.py": "449c64d9e806658a16b5d98c767304c70b9c76cead41f0d09b9b0b6ae2eb150d",
+    "tests/test_rfd3_symmetry_acceptance.py": "6b65420c96cf9151791e0241b542499d6eaaab8106f2c4bdda15f665947c5544",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/exact_projection_rejection.json": "1f81d1e1c7fdda784b575dd304fcee5d4af56d0d3e3ae78f4aed344636ce4707",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/parked_prototype_20261127/README.md": "ac5acc1433f35b09954898bb2304fb8b1f12444498954c703777d1dec0095c26",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/parked_prototype_20261127/archive_manifest.json": "9e987cc54dd14eb9cabab71352e00d30dff74c741b8babb739fe60158bca8286",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/parked_prototype_20261127/tracked_development.patch": "b83e4bc03304b469f27dbdd0a0f6744898171d69c8c1e586602124ab3945cc0d",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/parked_prototype_20261127/source_snapshot/src/nyl12_covalent/rfd3_symmetry_geometry.py": "35db525d93f5d95acca12bef7cf27f54879d8230d56bf7370c6076a85bc409fc",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/parked_prototype_20261127/source_snapshot/tests/test_rfd3_symmetry_geometry.py": "a8cf9170bf8cb02bcb6bdbf8cfe32be52a4e69e931e39529c87c06b4eb5ad2bc",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/md_baseline_decision_20261127.json": "a46b2ed328dcb0992967644cb9c26b1f9ab69c481e3aab931a3dcacfe5986f4f",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/original_backbone_triage_20261127/README.md": "c5dbefe0e6b587873f2b0c96e1a76046ac0dc9fd692d1f58d5a6ced91eeccd9e",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/original_backbone_triage_20261127/rerank.py": "377da9c06641d89d6c7c962ceb16f7f012f3b8b1afe26c60bf348ae1ef1d2d93",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/original_backbone_triage_20261127/ranked_original_candidates.json": "badec23ef06267a41fee7d216370c93b334db03a366edf918140cf415db71bda",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/original_backbone_triage_20261127/ranking.csv": "429ec43c79dfcc9cd39868d4431bf71a36ab59a3f977cc3c92f471a827b45ac5"
+  },
+  "validation": {
+    "focused_runtime_tests_passed": 43,
+    "optional_gate_statement_coverage_percent": 100,
+    "parked_prototype_export_tests_passed": 52,
+    "derived_triage_actual_candidates": 12,
+    "ruff": "passed"
+  },
+  "scientific_jobs": "unchanged",
+  "RFD3_GPU_launches": 0,
+  "remaining_optional_prototype_issue": "NativeCPUpreflightE233canonical/localmappingfailedbeforefeaturegeneration",
+  "action_journal": "output_agent_actions/20261021.jsonl"
+}

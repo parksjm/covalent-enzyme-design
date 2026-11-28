@@ -1,0 +1,159 @@
+diff --git a/scripts/export_rfd3_qualified_parent.py b/scripts/export_rfd3_qualified_parent.py
+index cf970a6..a3f2de7 100644
+--- a/scripts/export_rfd3_qualified_parent.py
++++ b/scripts/export_rfd3_qualified_parent.py
+@@ -15,6 +15,7 @@ from biotite.structure.io.pdbx import get_structure
+ 
+ from nyl12_covalent.rfd3_export_adapter import (
+     adapt_coordinates,
++    export_center,
+     reassociate_typed_graph,
+ )
+ from nyl12_covalent.rfd3_output_mapping import canonical_output_keys
+@@ -77,12 +78,6 @@ def export_parent(manifest_path: Path, job_id: str, destination: Path) -> dict:
+         next(a.split("=", 1)[1] for a in job["argv"] if a.startswith("inputs="))
+     )
+     spec = next(iter(json.loads(spec_path.read_text()).values()))
+-    if (
+-        spec.get("ori_token") is not None
+-        or spec.get("infer_ori_strategy") is not None
+-        or spec.get("symmetry")
+-    ):
+-        raise ValueError("Adapter requires native default partial-diffusion mobile COM")
+     source_cif = Path(spec["input"])
+     source = get_structure(read_any(source_cif), model=1, include_bonds=True)
+     source_keys = canonical_output_keys(
+@@ -107,8 +102,7 @@ def export_parent(manifest_path: Path, job_id: str, destination: Path) -> dict:
+         )
+     coords = np.asarray(ref["coords"], dtype=float)
+     mobile = set(job["mobile_residues"])
+-    moving = np.array([f"{c}{p}" in mobile for c, p, _ in keys])
+-    center = coords.astype(np.float32)[moving].mean(axis=0)
++    center = export_center(spec, keys, coords, mobile, job.get("symmetry_center_A"))
+     generated, normalization = adapt_coordinates(
+         keys, coords, native_keys, aa.coord.astype(float), mobile, center
+     )
+diff --git a/src/nyl12_covalent/rfd3_export_adapter.py b/src/nyl12_covalent/rfd3_export_adapter.py
+index 5966e91..4bfc9bc 100644
+--- a/src/nyl12_covalent/rfd3_export_adapter.py
++++ b/src/nyl12_covalent/rfd3_export_adapter.py
+@@ -9,6 +9,45 @@ import numpy as np
+ AtomKey = tuple[str, int, str]
+ 
+ 
++def export_center(
++    spec: dict[str, Any],
++    keys: list[AtomKey],
++    coords: np.ndarray,
++    mobile_residues: set[str],
++    symmetry_center_A: list[float] | None = None,
++) -> np.ndarray:
++    """Select a qualified native frame without guessing a symmetry transform.
++
++    Args:
++        spec: Actual native input specification.
++        keys: Source atom identities in coordinate order.
++        coords: Finite source coordinates.
++        mobile_residues: Explicit motion mask for default partial diffusion.
++        symmetry_center_A: Exact protein center retained by symmetry preflight.
++
++    Returns:
++        Float32 translation removed by the native input parser.
++
++    Raises:
++        ValueError: A frame override or missing/invalid symmetry pin is present.
++    """
++    if spec.get("ori_token") is not None or spec.get("infer_ori_strategy") is not None:
++        raise ValueError("Unqualified native frame override")
++    if spec.get("symmetry"):
++        if spec["symmetry"]["id"] != "D2" or symmetry_center_A is None:
++            raise ValueError("Symmetric export requires a preflight-pinned D2 center")
++        center = np.asarray(symmetry_center_A, dtype=np.float32)
++        if center.shape != (3,) or not np.isfinite(center).all():
++            raise ValueError("Invalid symmetry center")
++        return center
++    if symmetry_center_A is not None:
++        raise ValueError("Symmetry center supplied for an asymmetric input")
++    moving = np.array([f"{c}{p}" in mobile_residues for c, p, _ in keys])
++    if not moving.any():
++        raise ValueError("Empty native mobile mask")
++    return np.asarray(coords, dtype=np.float32)[moving].mean(axis=0)
++
++
+ def bf16_coordinates(values: np.ndarray) -> np.ndarray:
+     """Round float32 coordinates to BF16 using round-to-nearest-even.
+ 
+diff --git a/src/nyl12_covalent/rfd3_symmetry_acceptance.py b/src/nyl12_covalent/rfd3_symmetry_acceptance.py
+index de538fc..aef71b4 100644
+--- a/src/nyl12_covalent/rfd3_symmetry_acceptance.py
++++ b/src/nyl12_covalent/rfd3_symmetry_acceptance.py
+@@ -48,6 +48,17 @@ def require_backbone_symmetry(parent: dict[str, Any]) -> None:
+         for key, value in expected.items()
+     ):
+         raise ValueError("RFD3 backbone symmetry contract is not accepted")
++    scope = receipt.get("symmetry_scope")
++    if scope not in {"absolute_coordinates", "tied_displacements"}:
++        raise ValueError("RFD3 backbone symmetry scope must be explicit")
++    if scope == "tied_displacements":
++        reference = Path(parent["symmetry_reference_coordinates"])
++        reference_digest = hashlib.sha256(reference.read_bytes()).hexdigest()
++        if (
++            reference_digest != parent["symmetry_reference_coordinates_sha256"]
++            or reference_digest != receipt["reference_coordinates_sha256"]
++        ):
++            raise ValueError("RFD3 displacement symmetry reference hash mismatch")
+     for metric in ("backbone_rmsd_A", "backbone_max_deviation_A"):
+         value = receipt.get(metric)
+         limit = receipt.get(metric + "_limit")
+diff --git a/tests/test_relay_broad_runtime.py b/tests/test_relay_broad_runtime.py
+index 7d1fee1..86df289 100644
+--- a/tests/test_relay_broad_runtime.py
++++ b/tests/test_relay_broad_runtime.py
+@@ -65,6 +65,7 @@ def make_parent(tmp_path):
+                 "schema_version": 1,
+                 "accepted": True,
+                 "point_group": "D2",
++                "symmetry_scope": "absolute_coordinates",
+                 "sampler_kind": "symmetry",
+                 "coupled_repeats": COUPLED_REPEATS,
+                 "equivalent_mobile_masks": True,
+diff --git a/tests/test_rfd3_export_adapter.py b/tests/test_rfd3_export_adapter.py
+index 1e7153b..a947180 100644
+--- a/tests/test_rfd3_export_adapter.py
++++ b/tests/test_rfd3_export_adapter.py
+@@ -6,6 +6,7 @@ import pytest
+ from nyl12_covalent.rfd3_export_adapter import (
+     adapt_coordinates,
+     bf16_coordinates,
++    export_center,
+     reassociate_typed_graph,
+ )
+ 
+@@ -85,3 +86,27 @@ def test_typed_graph_is_reindexed_without_inference() -> None:
+     ):
+         with pytest.raises(ValueError):
+             reassociate_typed_graph(keys, graph, target)
++
++
++def test_export_center_requires_explicit_symmetry_frame() -> None:
++    """Preserve default COM but require a retained center for symmetric native runs."""
++    keys, source, _, _, mobile, center = fixture()
++    np.testing.assert_array_equal(
++        export_center({}, keys, source, mobile), source.astype(np.float32)[-1]
++    )
++    symmetric = {"symmetry": {"id": "D2"}}
++    np.testing.assert_array_equal(
++        export_center(symmetric, keys, source, mobile, center.tolist()), center
++    )
++    for spec, mask, pin in (
++        ({"ori_token": "A1"}, mobile, None),
++        ({"infer_ori_strategy": "x"}, mobile, None),
++        (symmetric, mobile, None),
++        ({"symmetry": {"id": "C4"}}, mobile, center.tolist()),
++        (symmetric, mobile, [0, 1]),
++        (symmetric, mobile, [float("nan"), 0, 0]),
++        ({}, mobile, center.tolist()),
++        ({}, set(), None),
++    ):
++        with pytest.raises(ValueError):
++            export_center(spec, keys, source, mask, pin)

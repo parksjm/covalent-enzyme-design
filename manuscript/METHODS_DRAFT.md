@@ -8,22 +8,22 @@ window, block, frame, proton inventory and reaction-atom mapping. Templates
 selected before free-energy and reaction-coordinate convergence are designated
 TS-like structures; they are not claimed to be verified first-order PES saddle
 points or committor-defined transition states. Original backbones provide a
-baseline, with qualified, fixed-length RFD3 partial diffusion as an optional
-comparison. Canonical export and native graph/atom-context audits precede and
-follow remodeling. No whole-assembly diffusion claim follows from the earlier
-local remodeling experiments. Prospective RFD3 remodeling requires coupled
-A/E, B/F, C/G and D/H repeats, symmetry-equivalent motion masks and the native
-symmetry sampler, followed by independent final backbone-residual, fixed-context
-and ligand checks. Crystal C-alpha fits support approximate D2 NCS, not C4;
-exact operators/native export and fixed single-site TS compatibility remain
-unqualified. The native sampler projects denoised coordinates while raw Gaussian
-noise is independent; no custom sampler or tied-noise claim is introduced.
+baseline. RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
 
-Historical local RFD3 inputs omitted symmetry, used the default sampler and
-allowed motion only in chain A. Their graph/coordinate acceptance does not
-qualify symmetry. The immutable LigandMPNN pilot may finish diagnostically,
-but all RFD3-parent lineages are held from advancement pending independent
-symmetry qualification; original MD-backbone baseline lineages remain eligible.
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
 
 LigandMPNN sampling ties equivalent alpha and beta positions across the four
 copies. The current design mask fixes 101 of 328 precursor positions: 24 core
@@ -229,8 +229,8 @@ The full eight-chain mature assembly and one physical substrate were retained.
 Twenty-four pocket/entrance-loop positions in the occupied repeat were mobile;
 other context and catalytic/maturation anchors were fixed. Exact four-copy
 sequence ties were specified for subsequent inverse folding. This historical
-local run did not impose backbone symmetry; it does not satisfy the prospective
-RFD3 symmetry requirement above.
+local run did not impose backbone symmetry; it remains a historical local
+remodeling diagnostic, outside the current baseline.
 
 The original PA6 component IDs collided with unrelated installed CCD entries.
 A reversible serialization-only relabeling retained 33 ligand heavy atoms and all
@@ -791,12 +791,11 @@ beta positions separately, using explicit tied groups and equal weights with
 `homo_oligomer=0`. Automatic homooligomer mode ties all parsed chains and is
 inappropriate for the mature eight-chain alpha/beta representation. A geometric
 audit of the retained scaffold is
-D2-like; the experimental assembly/operators will be checked before a production
-RFD3 symmetry specification. Native symmetry-constrained remodeling and
-independent output qualification are required prospectively. Symmetric sequence design does not require
-identical instantaneous loop conformations or ligand occupancy. The exact
-RFD3 combination of alpha/beta repeats, retained context and catalytic atomic
-motifs still requires an input preflight. Variable-length variants are deferred
+D2-like, but thermal conformational differences do not require exact coordinate
+symmetry. Any future optional RFD3 experiment must independently qualify
+physical movement, assembly and retained catalytic context; this is not a
+production-qualified arm. Symmetric sequence design does not require
+identical instantaneous loop conformations or ligand occupancy. Variable-length variants are deferred
 until explicit indel-aware mapping can regenerate residue selections, symmetry
 groups, maturation checks and Amber/QM indices; current WT exporters are not
 certified for indels.

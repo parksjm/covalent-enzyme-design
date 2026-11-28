@@ -21,11 +21,16 @@ Conversely, a discrete TI1 minimum is not required for hydrolysis. A verified
 PES TS can complement the ensemble; it is not interchangeable with a sampled
 free-energy bottleneck. Preserve both categories in metadata.
 
-The current bounded comparison uses two original relay representatives and
-their two historically graph/coordinate-accepted RFD3 remodels. The latter
-are not symmetry-qualified and their lineages are held from advancement. This
-comparison does not claim a converged transition-state ensemble. Provenance is in
+The current baseline uses the two original chemically coherent MD-derived relay
+representatives and their existing 12 LigandMPNN designs. Historical RFD3
+remodels are preserved as diagnostics, outside the current comparison. This
+does not claim a converged transition-state ensemble. Provenance is in
 `design/nyl12_relay_ts_ensemble_20261126/templates/template_manifest.json`.
+The 101-protection pilot has completed generation and scoring. Its
+`original_backbone_triage_20261127/` reuses the two original TS-parent scores
+to rank the 12 baseline candidates; no new sequences or predictions were
+generated. The dated `md_baseline_decision_20261127.json` supersedes the
+earlier universal symmetry-hold receipt without rewriting it.
 
 ## 2. Export, canonicalize and qualify before design
 
@@ -44,39 +49,32 @@ fails qualification; it is not repaired by silently changing the method.
 
 ## 3. Compare direct sequence design with optional partial diffusion
 
-Keep original TS-like backbones as a baseline. RFD3 partial diffusion is an
-optional matched arm, followed by the same canonical, identity, clash, ligand
-graph and catalytic-geometry checks. Preserve tetramer sequence symmetry,
-reaction geometry and required structural context. Sequence conservation and
-the permitted coordinate-motion mask are separate specifications.
+RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
 
-Prospective RFD3 remodeling must couple the four mature alpha/beta repeats
-A/E, B/F, C/G and D/H with symmetry-equivalent coordinate-motion masks and the
-native symmetry sampler. Crystal C-alpha fits support approximate D2
-noncrystallographic symmetry (all three nonidentity rotations are near 180°),
-not C4. The exact group/operators, native symmetry export and compatibility
-with the fixed single-site TS/ligand context remain unqualified. Native RFD3
-projects denoised coordinates; raw Gaussian noise is independently sampled.
-Do not promise tied noise or introduce a custom sampler. Independently audit
-final backbone symmetry residuals, fixed context and ligand integrity before
-accepting any remodeled parent.
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
 
-The existing local, fixed-length remodels omitted the symmetry field, used the
-default sampler and permitted motion only in chain A. Historical graph and
-coordinate checks remain valid for their stated scope, but do not establish
-symmetry qualification. The immutable running LigandMPNN pilot may finish as
-a diagnostic; every RFD3-generated parent lineage is held from advancement
-pending independent symmetry qualification. Original MD-backbone baseline
-lineages may proceed through the other gates. Gentle whole-assembly backbone
-variation is a future independently qualified arm; it is not implemented. No
-loop insertion/deletion or new capped-substrate parameter campaign belongs to
-this pilot.
+No loop insertion/deletion or new capped-substrate parameter campaign belongs
+to this pilot. See [the retained qualification audit](RFD3_SYMMETRY_QUALIFICATION.md).
 
 ## 4. Run a bounded, symmetry-tied LigandMPNN experiment
 
-The immutable pilot samples six sequences on each of four historical parents:
-24 raw samples at temperature 0.1, without native-identity bias or a forced
-mutation count.
+The immutable pilot sampled six sequences on each of four historical parents.
+Review the 12 samples on the two original MD-derived parents; the other 12
+remain diagnostic. Retain temperature 0.1, no native-identity bias and no forced
+mutation count; no replacement generation is required.
 Tie equivalent alpha positions across A–D and beta positions across E–H.
 Preserve the current 101-position mask in all copies, including K156 and L235.
 Keep the entire 221–232 alpha tail and the established catalytic identities.
@@ -209,7 +207,7 @@ standards accordingly.
 | --- | --- |
 | Persistent execution | `scripts/run_nyl12_job.py` |
 | RFD3 parent qualification | `scripts/run_rfd3_parent_qualification.py`, `scripts/export_rfd3_qualified_parent.py` |
-| Required RFD3 symmetry admission | `src/nyl12_covalent/rfd3_symmetry_acceptance.py`; [qualification contract](RFD3_SYMMETRY_QUALIFICATION.md) |
+| Optional exact-symmetry experiment admission | `src/nyl12_covalent/rfd3_symmetry_acceptance.py`; [qualification contract](RFD3_SYMMETRY_QUALIFICATION.md) |
 | Broad mask and sequence budget | `scripts/prepare_relay_broad_pilot.py`, `scripts/run_relay_broad_pilot.py` |
 | Shared protection and audits | `src/nyl12_covalent/nyl12_sequence_protection.py`, `relay_broad_pilot.py`, `relay_ensemble_sequences.py` |
 | Native sequence injection/scoring | `scripts/score_relay_ensemble_sequence.py` |

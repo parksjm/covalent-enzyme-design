@@ -896,20 +896,25 @@ mutations and alignment gaps are explicit. A simple fixed numbering offset
 was not assumed. Homologous activity/maturation evidence must be distinguished
 from direct evidence in Nyl12.
 
-Prospective RFD3 remodeling must tie the mature A/E, B/F, C/G and D/H repeats
-with equivalent motion masks and the native symmetry sampler, then independently
-check final backbone residuals, fixed context and ligand integrity. Crystal
-C-alpha fits support approximate D2 NCS rather than C4; exact operators/native
-export and compatibility with the fixed single-site TS context are unqualified.
-Native sampling projects denoised coordinates, with independent raw Gaussian
-noise. Historical local parents omitted symmetry, used the default sampler and
-moved chain A only. Their graph/coordinate checks do not qualify symmetry.
-The immutable LigandMPNN pilot may finish diagnostically; RFD3-parent lineages
-are held from advancement pending independent symmetry qualification. Original
-MD-backbone baseline lineages may proceed under the other acceptance gates.
+RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
+
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
 
 The operational stage sequence is TS-like ensemble selection → canonical/graph
-qualification → original backbones with an optional qualified RFD3 arm →
+qualification → two original MD-derived backbones (12 existing designs) →
 symmetry-tied LigandMPNN → pooled sequence audit/diversity triage → small
 matched template-free Boltz cohort → canonical/clash preflight → matched
 Amber relaxation → canonical remeasurement/filtering → few independent MD

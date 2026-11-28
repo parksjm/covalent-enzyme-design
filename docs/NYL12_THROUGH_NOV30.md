@@ -1,12 +1,22 @@
 # Nyl12: active plan through 30 November 2026
 
-**Latest PI clarification, 27 November:** RFD3 must also constrain backbone
-symmetry across the four coupled alpha/beta repeats. The audit found that the
-existing local remodels did not do this. Hold their candidate lineages from
-advancement; preserve ongoing frozen jobs as diagnostics. Original-backbone
-lineages may proceed to review. Qualify the native D2 setup, equivalent mobile
-masks, fixed TS context and final coordinate residuals before releasing a new
-RFD3 parent; see [the qualification contract](RFD3_SYMMETRY_QUALIFICATION.md).
+**Latest PI clarification, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
+
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
+
 QM/MM PMFs are **not prerequisites for experimental testing**. They are an
 optional matched comparison before testing or a mechanistic explanation
 afterward. PI nomination can proceed from the available structural/dynamic
@@ -155,18 +165,20 @@ Final source: the same campaign's `analysis/final_candidate_20261127/`
   assembly/minimization and remains excluded; no two-seed robustness claim.
 - **Current execution:** `broader_pilot/k156_protected_pilot_20261127/`, session
   `nyl12_prot101_pilot_20261127`, owns a replacement 24-raw-sample run: six on
-  each of two original and two qualified RFD3 parents, unchanged temperature/
+  each of two original and two historically accepted RFD3 parents, unchanged temperature/
   seeds/engines. Fresh 101-position flags and ONE frozen package serve both
   generation and scoring. All four TS and E–S native parser checks and GPU
-  prerequisite passed; native generation began. It recomputes five WT plus
-  120 candidate scores under the changed mask. No stale WT scores are reused.
+  prerequisite passed. Generation and all cross-scores are complete. Review
+  the existing 12 original-parent designs using their completed scores; the
+  12 RFD3-parent designs remain outside the current baseline comparison.
+  No regeneration or new scoring calculation is needed.
 - The preceding 24 `relay_corr01_*` sequences all changed K156 and are
   ineligible. The score-only diagnostic was stopped after 118 evaluations;
   data/failures are preserved. Do not silently revert old sequences or
   reuse their identities for replacement designs. Earlier broad designs
   also remain diagnostics under restored 275–276 protections.
-- **Next steps and budgets:** original-backbone design baseline with optional
-  qualified RFD3, then symmetry-tied LigandMPNN → small matched template-free
+- **Next steps and budgets:** review the existing 12 original-backbone designs;
+  no replacement generation or RFD3 qualification. Then small matched template-free
   Boltz cohort → canonical/clash checks → matched Amber relaxation → all 48
   positive-phi/Tier A/B measurements. Native-Thr similarity is diagnostic.
   At most two initial designs enter the matched two-seed WT/design prediction

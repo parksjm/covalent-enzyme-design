@@ -1,11 +1,22 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
-**Latest design/experimental gate, 27 November:** RFD3 backbone remodeling
-must be symmetry-constrained across A/E, B/F, C/G and D/H. Existing local
-RFD3 parents lack this qualification and their candidate lineages are held;
-original-backbone designs remain eligible for review. Native D2 configuration,
-equivalent mobility masks, fixed-TS compatibility and independent final
-residual checks are required; [qualification details](RFD3_SYMMETRY_QUALIFICATION.md).
+**Latest design/experimental gate, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
+
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
+
 PMFs are optional before experiments, not a nomination prerequisite. With PI
 review, test a bounded WT/design cohort using available structural and dynamic
 evidence; use matched QM/MM PMFs before testing when feasible or afterward

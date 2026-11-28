@@ -1,56 +1,49 @@
-# RFD3 backbone symmetry qualification
+# RFD3 optional-arm qualification and retained symmetry audit
 
-Updated 27 November 2026. RFD3 remodeling must preserve the assembly symmetry
-of the four coupled mature alpha/beta repeats: A/E, B/F, C/G and D/H.
-LigandMPNN sequence ties alone do not meet this requirement.
+Updated 27 November 2026. RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
 
-## Audit and current hold
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
 
-The [retained audit](../design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/symmetry_contract_audit.json)
-found no symmetry specification, the default sampler and chain-A-only mobility
-in the existing local RFD3 parents. Their earlier chemistry/graph acceptance
-does not certify backbone symmetry. Preserve these outputs and let existing
-frozen sequence-generation/scoring jobs finish as diagnostics. Do not advance
-their RFD3-generated candidate lineages. Original MD-backbone lineages remain
-eligible for review; cross-scores on unqualified remodels remain diagnostic.
+## Retained 27 November audit history
 
-Crystal CA correspondences give three nonidentity rotations near 180 degrees,
-supporting approximate D2 noncrystallographic symmetry rather than C4. These
-fits do not establish exact operator closure or qualify a native RFD3 run.
+The [original audit](../design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/symmetry_contract_audit.json)
+found default-sampler, chain-A-only local remodeling without symmetry inputs.
+Earlier graph/coordinate receipts retain their stated scope; these remodels
+remain diagnostics rather than current baseline parents. Approximate crystal
+D2 NCS does not establish exact operators or TS compatibility.
 
-## Required qualification before another remodeled parent advances
+The [exact-projection rejection](../design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/exact_projection_rejection.json)
+records 10 inter-repeat contacts below 1 Å and a 17.5 Å displacement of alpha
+residue 232 in the exact A/E-copy audit. Exact projection was rejected.
+Two actual CPU preflights failed on an E233 canonical/local numbering mismatch
+before feature generation. No GPU qualification launched. Prototypes are
+parked and unqualified; preserve their evidence and all prior outputs.
 
-1. Qualify D2 operators and the coupled alpha/beta correspondence in the actual
-   input coordinate frame; do not treat eight mature chains as eight identical
-   subunits. Use equivalent mobile-residue masks in all four repeats.
-2. Use the installed native symmetry specification and symmetry sampler.
-   Native Gaussian perturbations are independent; denoised coordinates are
-   projected. Do not describe the implementation as tied raw noise.
-3. Resolve compatibility between protein symmetry and the fixed single-site
-   TS-like context before execution. Do not silently duplicate substrate atoms,
-   alter the proton inventory or move the fixed reaction geometry.
-4. Adapt and qualify the export coordinate transform for this sampler: the
-   current mobile-center-of-mass exporter explicitly rejects symmetry inputs.
-   Preserve canonical maps, identities, typed ligand graph and clash checks.
-5. Declare backbone residual tolerances before the run; independently measure
-   final symmetry residuals and fixed-context retention. Freeze the actual
-   specification, sampler arguments, masks, operators, source and output hashes.
+## Scope of the optional exact-symmetry gate
 
-The admission gate in `rfd3_symmetry_acceptance.py`, called by
-`relay_broad_runtime.verify_parent`, requires a new hash-bound
-`backbone_symmetry_acceptance` JSON receipt. It checks schema version 1,
-`accepted: true`, `point_group: D2`, `sampler_kind: symmetry`, the four
-`coupled_repeats`, `equivalent_mobile_masks`, `operator_closure_accepted` and
-`fixed_ts_context_retained`. The receipt must bind the exact parent PDB and
-canonical mapping digests. It must report finite nonnegative
-`backbone_rmsd_A` and `backbone_max_deviation_A`, each within its positive
-predeclared limit (`<metric>_limit`). Synthetic test tolerances are not a
-scientifically approved tolerance for a real run.
-
-This gate consumes independent evidence; it does not produce operators or
-measure coordinates. No existing parent has been issued a symmetry acceptance
-receipt. Missing evidence fails explicitly. Include the new imported module
-in every future frozen source release; never modify a running release.
+`rfd3_symmetry_acceptance.py` validates a hash-bound acceptance receipt only
+for a future explicitly symmetry-constrained experiment. The current
+`relay_broad_runtime.verify_parent` does not invoke it. It is an optional
+helper, not a universal MD-parent requirement. Its D2/native-sampler, equivalent-mask, operator-closure and
+residual checks describe that specific experiment. They do not measure
+coordinates or independently establish physical plausibility, fixed-TS
+compatibility or chemistry. No production-qualified optional RFD3 arm is
+established. Any later coupled-perturbation study needs a prespecified physical
+hypothesis, motion masks, canonical maps, ligand/proton checks and independent
+assembly/clash acceptance before execution; no new run is authorized here.
 
 ## Experimental testing remains a separate decision
 

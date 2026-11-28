@@ -1,0 +1,40 @@
+{
+  "status": "parked_not_production_qualified_no_GPU_launch",
+  "reason": "PIprefersMDensemblebaseline; exactsymmetryprojectioncreatesclashes;actualnativepreflightsfailedcanonical/localbetaidentifier",
+  "sha256": {
+    "scripts/export_rfd3_qualified_parent.py": "e2b7b80a7579a4ba9219fbe4f0cd6124e17f8d4ac076068b451557441b792bd2",
+    "src/nyl12_covalent/rfd3_export_adapter.py": "60968d2c3150cb9be21b5edfd90dde91c4a149e369e55554b0100e34fea68fc3",
+    "src/nyl12_covalent/rfd3_symmetry_acceptance.py": "27f51ccee31dbf5916ac5c4c7402e0e7fbf06ebbc00f1a244dac26351dad89f0",
+    "tests/test_rfd3_export_adapter.py": "de45d9d9ac1c8f641ade75e3cdc96a5e6cece89048c104fb662ebea9a8fd42c8",
+    "tests/test_relay_broad_runtime.py": "a85bbfb913232019fd21735d185f9e61214135ea5625fd06d020d20fb72ab220",
+    "src/nyl12_covalent/rfd3_native_symmetry.py": "e22f655198f9f49635b736f6c65f3da73b5d22d5c4369f502070fd0891e92eb4",
+    "src/nyl12_covalent/rfd3_symmetry_geometry.py": "35db525d93f5d95acca12bef7cf27f54879d8230d56bf7370c6076a85bc409fc",
+    "src/nyl12_covalent/symmetric_relay_designs.py": "70301358d0c913197604890f837445464af4edd252b216a62bcedba0e24c1451",
+    "scripts/preflight_rfd3_symmetry.py": "0a78dc0dd262034f80c33d0dd4216a4770f3002a7ebc7d7709a6b65ff7d2a216",
+    "scripts/run_symmetric_relay_designs.py": "0b2589f251d5ac4b1f558877aa7f01894ac9df86fc90bfa69dc2599b232edbed",
+    "scripts/prepare_rfd3_symmetry_campaign.py": "a0d31fbd3209c9216b06d3f4ee51b1a8d9148f87aa6947c94de3faa8de3bf551",
+    "tests/test_rfd3_native_symmetry.py": "6858112ea1f7d2e60394a69adab676bb7602c3f068251422bd30fa1d7d299aeb",
+    "tests/test_rfd3_symmetry_geometry.py": "a8cf9170bf8cb02bcb6bdbf8cfe32be52a4e69e931e39529c87c06b4eb5ad2bc",
+    "tests/test_symmetric_relay_designs.py": "adb7781852553002372c29fe7bad54eae48965886e69f8d35110183f4f6bd3cb",
+    "tests/test_prepare_rfd3_symmetry_campaign.py": "7c893068176b0bf72000ea5992d4f331e54c323b71dde8ab3f43250d133360f1"
+  },
+  "reverted_tracked_paths": [
+    "scripts/export_rfd3_qualified_parent.py",
+    "src/nyl12_covalent/rfd3_export_adapter.py",
+    "src/nyl12_covalent/rfd3_symmetry_acceptance.py",
+    "tests/test_rfd3_export_adapter.py",
+    "tests/test_relay_broad_runtime.py"
+  ],
+  "moved_untracked_paths": [
+    "src/nyl12_covalent/rfd3_native_symmetry.py",
+    "src/nyl12_covalent/rfd3_symmetry_geometry.py",
+    "src/nyl12_covalent/symmetric_relay_designs.py",
+    "scripts/preflight_rfd3_symmetry.py",
+    "scripts/run_symmetric_relay_designs.py",
+    "scripts/prepare_rfd3_symmetry_campaign.py",
+    "tests/test_rfd3_native_symmetry.py",
+    "tests/test_rfd3_symmetry_geometry.py",
+    "tests/test_symmetric_relay_designs.py",
+    "tests/test_prepare_rfd3_symmetry_campaign.py"
+  ]
+}

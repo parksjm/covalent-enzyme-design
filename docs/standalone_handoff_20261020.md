@@ -1,12 +1,25 @@
 **Start here:** [active plan through 30 November](NYL12_THROUGH_NOV30.md).
 
-**Latest clarification, 27 November:** require symmetry-constrained RFD3
-backbones as well as LigandMPNN sequence ties. The existing local RFD3 parents
-used the default sampler and chain-A-only mobility; do not advance their
-lineages under the new requirement. Original-backbone candidates remain
-eligible for review. See [the qualification contract](RFD3_SYMMETRY_QUALIFICATION.md)
-and the current pilot's separate `symmetry_eligibility_20261127.json` hold
-record; frozen inputs and previous acceptance receipts remain unchanged.
+**Latest clarification, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
+MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
+parents, retaining the 101-position protection mask and mandatory four-copy
+sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
+Identical sequences need not have identical thermal conformations; do not force
+exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
+also do not establish TS compatibility: retain reaction mapping, proton inventory,
+ligand graph and catalytic geometry for each parent.
+
+Fixed-backbone LigandMPNN design followed by independent template-free,
+paired-MSA Boltz prediction and matched Amber relaxation can assess
+sequence-driven repacking and assembly; it does not promise improved activity.
+A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
+and chemical checks. It is not implemented or qualified for production, and
+exact coordinate symmetry is not a universal acceptance requirement.
+
+Earlier symmetry-eligibility holds remain historical receipts, not the current
+universal coordinate-symmetry policy. Frozen inputs and artifacts are preserved.
+
 QM/MM PMFs are optional before experimental testing and may instead explain
 WT/design differences afterward. This supersedes any older mandatory
 PMF-before-experiment ordering below. No current QM/MM/US job is stopped.

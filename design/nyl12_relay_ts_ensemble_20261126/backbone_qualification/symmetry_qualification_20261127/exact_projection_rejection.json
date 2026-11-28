@@ -1,0 +1,944 @@
+{
+  "schema_version": 1,
+  "status": "rejected_exact_AE_coordinate_copy_initialization",
+  "reason": "AE-generated exact copies introduce inter-repeat heavy-atom overlaps below 1 Angstrom in both source medoids; source asymmetry cannot be silently projected away.",
+  "scope": "Read-only protein initialization feasibility diagnostic; no RFD3 job, no source coordinates changed, no TS atoms projected or duplicated.",
+  "coupled_repeat_order": [
+    [
+      "A",
+      "E"
+    ],
+    [
+      "B",
+      "F"
+    ],
+    [
+      "C",
+      "G"
+    ],
+    [
+      "D",
+      "H"
+    ]
+  ],
+  "operator_convention": "row vectors: x_new = x @ row_rotation + translation_A; translation=center-center@row_rotation",
+  "fit_method": "Joint alpha+beta N/CA/C/O atoms, source-AE pair Kabsch axes, polar orthogonalization to exact D2, centroid least-squares common center; projected copies generated from unchanged AE.",
+  "atom_mapping": "Identical segment(alpha/beta), source canonical residue number, atom name in all four repeats; ATOM records only. No alignment or per-chain fitting in displacement metrics. OXT counted heavy but not backbone.",
+  "clash_definition": "All heavy ATOM pairs across distinct coupled repeats, each unordered repeat pair once; intra-repeat alpha/beta pairs excluded.",
+  "threshold_policy": "1/1.5/2 Angstrom bins are diagnostic overlap counts, not newly approved campaign tolerances.",
+  "geometry_module": "src/nyl12_covalent/rfd3_symmetry_geometry.py",
+  "geometry_module_sha256": "35db525d93f5d95acca12bef7cf27f54879d8230d56bf7370c6076a85bc409fc",
+  "numpy_version": "1.26.4",
+  "results": [
+    {
+      "source": "design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_heavy.pdb",
+      "source_sha256": "04f0e01efa124c3441b995005bb0f8dce3683bd871a3d4b7541761dbbe8190e6",
+      "n_heavy_atoms_per_repeat": 2482,
+      "n_backbone_atoms_per_repeat": 1312,
+      "atom_keys_sha256": "13f2f5659f5c83002170440a3deee539dccc059eec5b86f4dd0834fbb839b0a6",
+      "backbone_displacement": {
+        "rmsd_A": 1.3278986067747443,
+        "max_deviation_A": 17.544368345703244
+      },
+      "heavy_displacement": {
+        "rmsd_A": 1.6764654897638407,
+        "max_deviation_A": 18.921670035370564
+      },
+      "per_repeat_backbone_displacement": [
+        {
+          "rmsd_A": 3.397691264677176e-16,
+          "max_deviation_A": 3.552713678800501e-15
+        },
+        {
+          "rmsd_A": 1.5947857026774817,
+          "max_deviation_A": 17.544368345703244
+        },
+        {
+          "rmsd_A": 1.5566092283311952,
+          "max_deviation_A": 12.91502161396005
+        },
+        {
+          "rmsd_A": 1.444605521347222,
+          "max_deviation_A": 10.419211121955946
+        }
+      ],
+      "top_heavy_displacements": [
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "ND2"
+          ],
+          "displacement_A": 18.921670035370564
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "OD1"
+          ],
+          "displacement_A": 18.855612163875062
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CG"
+          ],
+          "displacement_A": 18.298831554095013
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "O"
+          ],
+          "displacement_A": 17.544368345703244
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CB"
+          ],
+          "displacement_A": 17.13723111332636
+        },
+        {
+          "repeat_index": 3,
+          "atom_key": [
+            "beta",
+            327,
+            "NH2"
+          ],
+          "displacement_A": 15.781179965821588
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "C"
+          ],
+          "displacement_A": 15.724880433249242
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "OXT"
+          ],
+          "displacement_A": 15.065363842403512
+        },
+        {
+          "repeat_index": 3,
+          "atom_key": [
+            "beta",
+            327,
+            "NH1"
+          ],
+          "displacement_A": 14.919954208160734
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CA"
+          ],
+          "displacement_A": 14.833921901444382
+        },
+        {
+          "repeat_index": 2,
+          "atom_key": [
+            "beta",
+            327,
+            "NH2"
+          ],
+          "displacement_A": 14.766807669331492
+        },
+        {
+          "repeat_index": 2,
+          "atom_key": [
+            "alpha",
+            232,
+            "OD1"
+          ],
+          "displacement_A": 14.547934969801936
+        }
+      ],
+      "operator_closure": {
+        "rotation_max_error": 5.106547427728036e-15,
+        "translation_max_error_A": 3.380869558603285e-13
+      },
+      "center_A": [
+        64.32601069879293,
+        34.12749765037067,
+        56.99669333338703
+      ],
+      "row_rotations": [
+        [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            -0.3250430346387563,
+            0.9456463976190834,
+            0.009995814267978307
+          ],
+          [
+            0.9456463976190834,
+            0.3248950010484588,
+            0.014004605091709876
+          ],
+          [
+            0.009995814267978307,
+            0.014004605091709876,
+            -0.9998519664097008
+          ]
+        ],
+        [
+          [
+            -0.35855258443951676,
+            -0.4491842500630785,
+            -0.8183358440683226
+          ],
+          [
+            -0.4491842500630785,
+            -0.6854512379188076,
+            0.5730533220659701
+          ],
+          [
+            -0.8183358440683226,
+            0.5730533220659701,
+            0.044003822358325895
+          ]
+        ],
+        [
+          [
+            -0.31640438092172407,
+            -0.4964621475560044,
+            0.8083400298003449
+          ],
+          [
+            -0.4964621475560044,
+            -0.6394437631296508,
+            -0.5870579271576801
+          ],
+          [
+            0.8083400298003449,
+            -0.5870579271576801,
+            -0.04415185594862259
+          ]
+        ]
+      ],
+      "translations_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          52.39245884925748,
+          -38.58823220671532,
+          112.86401625871791
+        ],
+        [
+          149.36223966822098,
+          53.75231957570254,
+          87.57202532333385
+        ],
+        [
+          55.549344277693024,
+          121.34590323249542,
+          27.550731751496173
+        ]
+      ],
+      "projected_protein_coordinates_float64_little_endian_sha256": "1992bf338581f93a817e64dd8f6d400387589dbd069a7016ff42bcdb2430bab1",
+      "source_interrepeat_heavy": {
+        "minimum_A": 2.610823816346098,
+        "pair_counts_below_A": {
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0
+        },
+        "pairs_below_1A": []
+      },
+      "exact_projection_interrepeat_heavy": {
+        "minimum_A": 0.7106720694814238,
+        "pair_counts_below_A": {
+          "1.0": 10,
+          "1.5": 12,
+          "2.0": 48
+        },
+        "pairs_below_1A": [
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.7106720694814238
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "OE1"
+              ]
+            ],
+            "distance_A": 0.8921908152284778
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.7106720694814331
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.8996913311164918
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "OE1"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.8921908152284755
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.7106720694814275
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "OE1"
+              ]
+            ],
+            "distance_A": 0.8921908152284653
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.7106720694814254
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.8996913311164927
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "OE1"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.892190815228474
+          }
+        ]
+      }
+    },
+    {
+      "source": "design/nyl12_relay_ts_ensemble_20261126/templates/medoid_03_delivery_full_007_frame_095/complex_heavy.pdb",
+      "source_sha256": "a4dea0ebbabba5ffd66ce7b6636615c851bab5f11ec18d1a5b623b38fc00b8b1",
+      "n_heavy_atoms_per_repeat": 2482,
+      "n_backbone_atoms_per_repeat": 1312,
+      "atom_keys_sha256": "13f2f5659f5c83002170440a3deee539dccc059eec5b86f4dd0834fbb839b0a6",
+      "backbone_displacement": {
+        "rmsd_A": 1.3300051411351885,
+        "max_deviation_A": 17.362373239681677
+      },
+      "heavy_displacement": {
+        "rmsd_A": 1.6826435556232011,
+        "max_deviation_A": 19.178967758504022
+      },
+      "per_repeat_backbone_displacement": [
+        {
+          "rmsd_A": 3.397691264677176e-16,
+          "max_deviation_A": 3.552713678800501e-15
+        },
+        {
+          "rmsd_A": 1.596699957217344,
+          "max_deviation_A": 17.362373239681677
+        },
+        {
+          "rmsd_A": 1.5602637021544252,
+          "max_deviation_A": 12.792774727254638
+        },
+        {
+          "rmsd_A": 1.4462991143417154,
+          "max_deviation_A": 10.441428247571018
+        }
+      ],
+      "top_heavy_displacements": [
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "ND2"
+          ],
+          "displacement_A": 19.178967758504022
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "OD1"
+          ],
+          "displacement_A": 19.04489599404276
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CG"
+          ],
+          "displacement_A": 18.378992778120615
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "O"
+          ],
+          "displacement_A": 17.362373239681677
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CB"
+          ],
+          "displacement_A": 16.94713620051254
+        },
+        {
+          "repeat_index": 3,
+          "atom_key": [
+            "beta",
+            327,
+            "NH2"
+          ],
+          "displacement_A": 15.814389578328527
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "C"
+          ],
+          "displacement_A": 15.722091261890418
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "OXT"
+          ],
+          "displacement_A": 15.364253367000446
+        },
+        {
+          "repeat_index": 3,
+          "atom_key": [
+            "beta",
+            327,
+            "NH1"
+          ],
+          "displacement_A": 14.952875405198569
+        },
+        {
+          "repeat_index": 2,
+          "atom_key": [
+            "alpha",
+            232,
+            "OD1"
+          ],
+          "displacement_A": 14.82817765775412
+        },
+        {
+          "repeat_index": 2,
+          "atom_key": [
+            "beta",
+            327,
+            "NH2"
+          ],
+          "displacement_A": 14.770194267949963
+        },
+        {
+          "repeat_index": 1,
+          "atom_key": [
+            "alpha",
+            232,
+            "CA"
+          ],
+          "displacement_A": 14.732894926766948
+        }
+      ],
+      "operator_closure": {
+        "rotation_max_error": 4.642214975953294e-15,
+        "translation_max_error_A": 3.1142529622927565e-13
+      },
+      "center_A": [
+        64.33491012068531,
+        34.11377697744756,
+        56.99132687800534
+      ],
+      "row_rotations": [
+        [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            -0.3249275355059743,
+            0.9456847439682885,
+            0.01012233647178381
+          ],
+          [
+            0.9456847439682885,
+            0.32477575669549763,
+            0.0141800172250463
+          ],
+          [
+            0.01012233647178381,
+            0.0141800172250463,
+            -0.999848221189521
+          ]
+        ],
+        [
+          [
+            -0.3584126513651916,
+            -0.449234422862474,
+            -0.8183696014984875
+          ],
+          [
+            -0.449234422862474,
+            -0.6854495851359885,
+            0.5730159679732502
+          ],
+          [
+            -0.8183696014984875,
+            0.5730159679732502,
+            0.0438622365011796
+          ]
+        ],
+        [
+          [
+            -0.3166598131288332,
+            -0.4964503211058134,
+            0.8082472650267042
+          ],
+          [
+            -0.4964503211058134,
+            -0.6393261715595077,
+            -0.5871959851982963
+          ],
+          [
+            0.8082472650267042,
+            -0.5871959851982963,
+            -0.04401401531165894
+          ]
+        ]
+      ],
+      "translations_A": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          52.40133007985658,
+          -38.614231756655926,
+          112.83905012793437
+        ],
+        [
+          149.3584082105275,
+          53.74156713495569,
+          87.5935556419168
+        ],
+        [
+          55.579902192357025,
+          121.32777253149034,
+          27.532701742170175
+        ]
+      ],
+      "projected_protein_coordinates_float64_little_endian_sha256": "b886f2698ac599f134625551bf7121be6205a05838940950eb0637bbd2dc0eac",
+      "source_interrepeat_heavy": {
+        "minimum_A": 2.673428697384688,
+        "pair_counts_below_A": {
+          "1.0": 0,
+          "1.5": 0,
+          "2.0": 0
+        },
+        "pairs_below_1A": []
+      },
+      "exact_projection_interrepeat_heavy": {
+        "minimum_A": 0.7258963218175396,
+        "pair_counts_below_A": {
+          "1.0": 10,
+          "1.5": 12,
+          "2.0": 36
+        },
+        "pairs_below_1A": [
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.725896321817547
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "OE1"
+              ]
+            ],
+            "distance_A": 0.8849469698644663
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.7258963218175425
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.8804429641979742
+          },
+          {
+            "repeat_indices": [
+              0,
+              2
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "OE1"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.8849469698644663
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.7258963218175396
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CG"
+              ],
+              [
+                "alpha",
+                62,
+                "OE1"
+              ]
+            ],
+            "distance_A": 0.8849469698644722
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.7258963218175465
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "CD"
+              ],
+              [
+                "alpha",
+                62,
+                "CD"
+              ]
+            ],
+            "distance_A": 0.8804429641979787
+          },
+          {
+            "repeat_indices": [
+              1,
+              3
+            ],
+            "atom_keys": [
+              [
+                "alpha",
+                62,
+                "OE1"
+              ],
+              [
+                "alpha",
+                62,
+                "CG"
+              ]
+            ],
+            "distance_A": 0.884946969864471
+          }
+        ]
+      }
+    }
+  ],
+  "reproduction_command": "PYTHONPATH=src uv run python /path/to/extracted_calculation.py",
+  "calculation_source": "\"\"\"Read-only source calculation; writes the requested diagnostic JSON only.\"\"\"\nfrom pathlib import Path\nimport hashlib\nimport json\nimport numpy as np\nfrom nyl12_covalent.rfd3_symmetry_geometry import (\n    fit_d2_operators, reference_projection, displacement_metrics,\n    operator_closure_metrics,\n)\n\nROOT = Path('/data/jpc/covalent-enzyme-design')\nOUTPUT = ROOT / 'design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/exact_projection_rejection.json'\nmodule = ROOT / 'src/nyl12_covalent/rfd3_symmetry_geometry.py'\nrecords = []\nfor name in ('medoid_01_delivery_full_010_frame_068', 'medoid_03_delivery_full_007_frame_095'):\n    path = ROOT / 'design/nyl12_relay_ts_ensemble_20261126/templates' / name / 'complex_heavy.pdb'\n    chains = {chain: {} for chain in 'ABCDEFGH'}\n    for line in path.read_text().splitlines():\n        if line.startswith('ATOM') and line[21] in chains:\n            key = (int(line[22:26]), line[12:16].strip())\n            if key in chains[line[21]]:\n                raise ValueError('Duplicate source atom identity')\n            if line[16] not in (' ', 'A'):\n                raise ValueError('Unexpected alternate conformer')\n            chains[line[21]][key] = np.array([float(line[30:38]), float(line[38:46]), float(line[46:54])])\n    keys = [[(segment, residue, atom) for segment, chain in [('alpha', alpha), ('beta', beta)]\n             for residue, atom in chains[chain]] for alpha, beta in zip('ABCD', 'EFGH')]\n    xyz = np.array([[coord for chain in (alpha, beta) for coord in chains[chain].values()]\n                    for alpha, beta in zip('ABCD', 'EFGH')])\n    if any(repeat != keys[0] for repeat in keys[1:]):\n        raise ValueError('Source heavy atom correspondence differs')\n    backbone = np.array([key[2] in {'N', 'CA', 'C', 'O'} for key in keys[0]])\n    backbone_keys = [[key for key, selected in zip(repeat, backbone) if selected] for repeat in keys]\n    operators = fit_d2_operators(xyz[:, backbone], backbone_keys)\n    projected = reference_projection(xyz, operators)\n    distances = np.linalg.norm(projected - xyz, axis=-1)\n    top = np.argsort(distances.ravel())[-12:][::-1]\n    outliers = [{'repeat_index': int(i), 'atom_key': keys[i][j], 'displacement_A': float(distances[i, j])}\n                for i, j in [np.unravel_index(index, distances.shape) for index in top]]\n    result = {\n        'source': str(path.relative_to(ROOT)),\n        'source_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),\n        'n_heavy_atoms_per_repeat': xyz.shape[1],\n        'n_backbone_atoms_per_repeat': int(backbone.sum()),\n        'atom_keys_sha256': hashlib.sha256(json.dumps(keys, separators=(',', ':')).encode()).hexdigest(),\n        'backbone_displacement': displacement_metrics(xyz[:, backbone], projected[:, backbone]),\n        'heavy_displacement': displacement_metrics(xyz, projected),\n        'per_repeat_backbone_displacement': [displacement_metrics(a, b) for a, b in zip(xyz[:, backbone], projected[:, backbone])],\n        'top_heavy_displacements': outliers,\n        'operator_closure': operator_closure_metrics(operators),\n        'center_A': operators.center.tolist(),\n        'row_rotations': operators.rotations.transpose(0, 2, 1).tolist(),\n        'translations_A': (operators.center - np.einsum('j,kji->ki', operators.center, operators.rotations.transpose(0, 2, 1))).tolist(),\n        'projected_protein_coordinates_float64_little_endian_sha256': hashlib.sha256(projected.astype('<f8').tobytes()).hexdigest(),\n    }\n    for label, coords in [('source', xyz), ('exact_projection', projected)]:\n        minimum, counts = float('inf'), {str(threshold): 0 for threshold in (1., 1.5, 2.)}\n        clashes = []\n        for i in range(4):\n            for j in range(i + 1, 4):\n                pair_distances = np.linalg.norm(coords[i, :, None, :] - coords[j, None, :, :], axis=-1)\n                minimum = min(minimum, float(pair_distances.min()))\n                for threshold in (1., 1.5, 2.):\n                    counts[str(threshold)] += int((pair_distances < threshold).sum())\n                for a, b in np.argwhere(pair_distances < 1.):\n                    clashes.append({'repeat_indices': [i, j], 'atom_keys': [keys[i][a], keys[j][b]],\n                                    'distance_A': float(pair_distances[a, b])})\n        result[label + '_interrepeat_heavy'] = {\n            'minimum_A': minimum, 'pair_counts_below_A': counts, 'pairs_below_1A': clashes,\n        }\n    records.append(result)\npayload = {\n    'schema_version': 1,\n    'status': 'rejected_exact_AE_coordinate_copy_initialization',\n    'reason': 'AE-generated exact copies introduce inter-repeat heavy-atom overlaps below 1 Angstrom in both source medoids; source asymmetry cannot be silently projected away.',\n    'scope': 'Read-only protein initialization feasibility diagnostic; no RFD3 job, no source coordinates changed, no TS atoms projected or duplicated.',\n    'coupled_repeat_order': [['A', 'E'], ['B', 'F'], ['C', 'G'], ['D', 'H']],\n    'operator_convention': 'row vectors: x_new = x @ row_rotation + translation_A; translation=center-center@row_rotation',\n    'fit_method': 'Joint alpha+beta N/CA/C/O atoms, source-AE pair Kabsch axes, polar orthogonalization to exact D2, centroid least-squares common center; projected copies generated from unchanged AE.',\n    'atom_mapping': 'Identical segment(alpha/beta), source canonical residue number, atom name in all four repeats; ATOM records only. No alignment or per-chain fitting in displacement metrics. OXT counted heavy but not backbone.',\n    'clash_definition': 'All heavy ATOM pairs across distinct coupled repeats, each unordered repeat pair once; intra-repeat alpha/beta pairs excluded.',\n    'threshold_policy': '1/1.5/2 Angstrom bins are diagnostic overlap counts, not newly approved campaign tolerances.',\n    'geometry_module': str(module.relative_to(ROOT)),\n    'geometry_module_sha256': hashlib.sha256(module.read_bytes()).hexdigest(),\n    'numpy_version': np.__version__,\n    'results': records,\n    'reproduction_command': 'PYTHONPATH=src uv run python /path/to/extracted_calculation.py',\n    'calculation_source': Path(__file__).read_text(),\n}\nOUTPUT.write_text(json.dumps(payload, indent=2, allow_nan=False) + '\\n')\n"
+}

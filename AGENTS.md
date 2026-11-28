@@ -65,15 +65,15 @@ the existing topologies for MD or the current coordinates as optimized.
   testing if resources permit or follow improvement to explain mechanism.
   Computed barrier-improvement claims require matched, supported WT/design
   calculations; do not tune post hoc protocols to reproduce assay outcomes.
-- RFD3 remodeling must couple mature alpha/beta repeats A/E, B/F, C/G and D/H
-  with symmetry-equivalent motion masks and the native symmetry sampler.
-  Approximate crystal D2 NCS does not qualify exact operators/native export or
-  fixed single-site TS compatibility. Independently check final backbone
-  residuals, fixed context and ligands. Native sampling projects denoised
-  coordinates; raw Gaussian noise is independent. Historical chain-A-only,
-  default-sampler parents omitted symmetry: their lineages cannot advance
-  pending independent symmetry qualification. Immutable jobs may finish as
-  diagnostics; original MD-backbone baseline lineages remain eligible.
+- Keep RFD3 outside the current critical path: use the existing 12 original
+  MD/TS-backbone designs, the 101-position mask and four-copy sequence ties.
+  Identical sequences do not require identical thermal conformations. Do not
+  force exact D2 coordinates onto MD snapshots or launch RFD3 qualification
+  or replacement designs. A future optional RFD3 arm requires independent
+  physical-movement, assembly and chemical qualification; it is not production
+  qualified. Preserve historical local remodels and failed prototypes as
+  diagnostics. Multiple chain conformations do not alone establish TS compatibility.
+
 - With consistent scissile-amide mapping, opposite catalytic Herschlag-phi
   signs identify flipped local poses. Other distances assess catalytic utility.
 - Before template-guided prediction, verify actual native feature tensors,

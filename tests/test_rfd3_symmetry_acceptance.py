@@ -17,7 +17,19 @@ def test_qualified_receipt_and_legacy_hold(tmp_path: Path) -> None:
     require_backbone_symmetry(parent)
     del parent["backbone_symmetry_acceptance"]
     with pytest.raises(ValueError, match="qualification is required"):
-        runtime.verify_parent(parent)
+        require_backbone_symmetry(parent)
+
+
+def test_default_parent_validation_does_not_require_coordinate_symmetry(
+    tmp_path: Path,
+) -> None:
+    """Keep chemistry acceptance separate from an optional symmetry experiment."""
+    parent = make_parent(tmp_path)
+    del parent["backbone_symmetry_acceptance"]
+    del parent["backbone_symmetry_acceptance_sha256"]
+    runtime.verify_parent(parent)
+    with pytest.raises(ValueError, match="qualification is required"):
+        require_backbone_symmetry(parent)
 
 
 def test_receipt_hash_is_verified(tmp_path: Path) -> None:
