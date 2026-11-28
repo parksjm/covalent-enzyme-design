@@ -1,0 +1,8 @@
+{
+  "process_complete": true,
+  "native_parity_validated": true,
+  "connected": true,
+  "point_sha256": "fa4e8f7cd0c1cac909189d9fcabb4c69ebecb8f406959dfdd55151d2eee1fe1e",
+  "sources_sha256": "99b7a86772a9cd4a6c5142ce3cb4039c25f5f37d352e185099cdb3c9908854f3",
+  "sampling_converged": false
+}

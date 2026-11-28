@@ -38,6 +38,40 @@ not constitute four independent predictions. No PA6-specific cutoff is imposed.
 Commands, dependency lock, mapping evidence, numerical checks and limitations
 are detailed in [the qualification record](../docs/IPSAE2_QUALIFICATION.md).
 
+## Relay sampling and visualization checkpoint — 28 November 2026
+
+| Cohort | Independent histories | Completed ps/history used | Frames after one 5 ps discard |
+|---|---:|---:|---:|
+| Original reaction-path windows |57|70|74,100|
+| Corrective activation grid |33|10|3,300|
+| Targeted opposite-start/product checks |4|25|1,600|
+| Additional initialization checks |6|30|3,000|
+| Total |100|cohort-specific|82,000|
+
+All 43 supplemental histories contribute to the present global MBAR point fit;
+none is excluded merely for being shorter than the main windows. Native
+Hamiltonian, atom mapping and bias-energy parity are checked per completed
+block. Physical observations, binning, E–S reference s=0.0125 and the one-time
+5ps discard are unchanged. Repeat bias potentials are not independent new
+bias locations;92 unique potentials are represented. No smoothing was applied.
+Pooled pointwise intervals are not reported while each corrective-grid history
+contains only one retained 5 ps block. The comparison figure's gray interval
+is explicitly for the original 57 alone (200 full-MBAR 5 ps-block resamples).
+The bin-local Kish weight ESS panel is not a temporal independence estimate.
+
+The regenerated main-only movie contains 28 snapshots/window across 14 completed
+production blocks (1,596 frames, 19,967 stripped atoms). Visualization includes
+initial production sampling and must not be confused with the statistical
+selection. The immutable 70 ps bundle passed topology/DCD dimension checks,
+complete Tcl execution, atom mapping, camera-orientation and portable checksum
+checks; graphical VMD rendering was unavailable. Supplemental movies remain
+separate. Reusable source and acceptance records reside under
+`analysis/review_20261128_01/` and `movie_70ps_refresh_20261128/` in the relay
+campaign. The numerical refit converged; an additional figure-only assertion
+initially assumed the reference was the first histogram bin. That guard was
+corrected to validate the actual reference at index 10 without refitting,
+renormalizing, dropping bins or altering any PMF values; failed logs are retained.
+
 ## S1. Scientific model, provenance and atom mapping
 
 **Signed-angle definition and current pose reference.** Projected Herschlag

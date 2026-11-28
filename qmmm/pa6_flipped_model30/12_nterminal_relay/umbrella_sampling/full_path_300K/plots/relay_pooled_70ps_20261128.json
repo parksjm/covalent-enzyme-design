@@ -1,0 +1,34 @@
+{
+  "main_horizon_ps": 70,
+  "main_histories": 57,
+  "supplemental_histories_by_horizon_ps": {
+    "old_targets4": {
+      "25": 4
+    },
+    "activation_grid33": {
+      "10": 33
+    },
+    "geranium_mixing6": {
+      "30": 6
+    }
+  },
+  "histories": 100,
+  "retained_frames": 82000,
+  "pooled_peak_kcal_mol": 26.280034298428617,
+  "peak_s": 0.6875,
+  "pooled_CI": "unavailable: one retained 5 ps block/new grid history",
+  "gray_interval_scope": "original57 only; conditional pointwise95%; 200 full-MBAR 5ps block resamples",
+  "weight_ESS_scope": "bin-local Kish weight concentration, not temporal independence",
+  "burn_in": "discard first5ps once per continuous production history",
+  "sampling_converged": false,
+  "global_barrier_accepted": false,
+  "source_publication": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/checkpoint_001_main70ps_supplement43",
+  "math_changed": false,
+  "curve_smoothing": false,
+  "source_summary_sha256": "07915e05d1e52bcb319105b78bfb99aec2cb99352fe1dd60e5e3482cf576a713",
+  "export_sha256": {
+    "relay_pooled_70ps_20261128.png": "e4480e4fe5ff771569f54d4a3ea73e0640589f0fa416986fdd9afd95b5b75758",
+    "relay_pooled_70ps_20261128.pdf": "00def210b546d0cd2ae5c20f665ad431cbc70d1626c71e7885048eb1ef6d53ad",
+    "relay_pooled_70ps_20261128.csv": "d9ae57bc4dac1ba7372daf094a0d28e5e6598d8184b7ee756925a19c6a901f7f"
+  }
+}

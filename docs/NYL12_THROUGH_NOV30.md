@@ -8,17 +8,37 @@ separate postprocessing job; active Boltz/Amber and QM/MM/US inputs remain
 unchanged. Scores describe prediction confidence, with no PA6-specific cutoff
 or catalytic-activity claim. See [qualification and usage](IPSAE2_QUALIFICATION.md).
 
-**Matched design comparison queued, 27 November:** evaluate `relay_prot101_06`
-and `relay_prot101_03` (original-only ranks 1/2; 92/99 substitutions; 41-position
-pairwise difference) against fresh WT predictions with seeds 20261126/27.
-Two query-specific local MSA searches run on Violet. Persistent session
-`nyl12_original_matched_20261127` automatically follows them with six stock
-template-free Boltz models, four unguided L4 substrates, canonical/clash
-checks and matched unrestrained Amber relaxation. Evaluate all 48 combinations
-per model and report all four sites before/after using positive-phi Tier A/B.
-Existing QM/MM and US jobs remain unchanged. Native WT CPU feature checks
-passed; no new structural result is claimed at launch. See
-[the campaign](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/README.md).
+**Relay sampling update, 28 November:** the common analyzed main horizon is
+70 ps across 57 windows. The new pooled fit includes all 43 eligible add-on
+histories: 33 corrective activation windows at 10 ps, four targeted checks at
+25 ps and six additional initialization checks at 30 ps. With the fixed 5 ps
+discard once/history, the pool contains 82,000 frames and has a projected
+maximum of 26.28 kcal mol⁻¹ at s=0.6875. The original 57-only estimate is 26.12;
+its early/late maxima are 25.53/26.78. Neither estimate is accepted as a
+converged activation barrier. Pooled uncertainty remains unresolved because
+the new grid histories retain only one 5 ps block each; gray intervals in the
+new comparison plot apply only to the original 57. All 33 grid and four target
+workers continue on Violet; main continuation to 100 ps runs on Azalea. The
+single 75 ps-complete main window waits normally for its 56 peers at the scheduler
+barrier, without an error. Geranium's six 30 ps checks are finished.
+
+The refreshed main VMD bundle covers70 ps/window with 1,596 frames and the
+required camera/display policy. It explicitly includes the first 5 ps for
+visual inspection, whereas PMF statistics discard them. Supplemental movies
+remain separately identified. The unchanged movie API is
+`vmd_progress/current/view_path.vmd`; the updated laptop pull now follows the
+extended-current PMF monitor, not the stale60ps monitor. The readable dated
+plot is `plots/relay_pooled_70ps_20261128.png` with matching PDF/CSV/JSON.
+
+**Matched design comparison completed, 28 November:** all six Boltz predictions
+finished. WT seed 20261126 relaxed to four positive-phi Tier A sites. Design
+03 seed 20261126 relaxed to C/B/B/B (three Tier B), and its second seed has
+no Tier A/B sites. WT seed 20261127 and both design-06 predictions have severe
+interchain overlaps and were rejected before Amber. All three launched
+minimizations force-converged. Neither design has demonstrated an improvement
+over the accepted WT model. Native ipSAE2 is available for all six, with no
+catalytic threshold; do not assign four unique occupied sites to an invalid
+assembly. [All-site geometry and confidence report](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/comparison/update_20261128/README.md).
 
 **Latest PI clarification, 27 November:** The current design workflow excludes RFD3. Its candidate pool comprises the
 12 fixed-backbone LigandMPNN designs from two chemically coherent MD-derived

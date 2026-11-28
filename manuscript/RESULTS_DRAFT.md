@@ -1,3 +1,47 @@
+## Relay US checkpoint including supplemental histories — 28 November 2026
+
+The current pooled estimate combines 57 original windows at 70 ps with 33
+corrective activation histories at 10 ps, four targeted histories at 25 ps and
+six additional initialization checks at 30 ps. These 100 histories represent 92
+unique bias potentials; repeated biases retain independent source lineages.
+After the fixed 5 ps production discard once/history, 82,000 frames enter the
+same source-parity-validated global MBAR estimator. The projected maximum is
+26.28kcal mol⁻¹ at s=0.6875, compared with 26.12 kcal mol⁻¹ for the original 57
+alone. These are provisional projected maxima, not validated kinetic barriers.
+
+The 33 new grid histories each retain only one 5 ps block, preventing the planned
+pooled block-bootstrap qualification. The displayed gray 95% interval therefore
+belongs only to the original 57-window fit. At the fixed maximum bin that
+conditional interval is 25.69–26.60 kcal mol⁻¹; it is neither a simultaneous
+profile band nor an interval for a selected activation barrier. Early/late
+original-window maxima remain 25.53/26.78 kcal mol⁻¹, and some initial-region
+bins have weight ESS near unity. Supplemental histories change the early
+profile more than its dominant maximum. Continued sampling and orthogonal/
+initialization checks remain necessary; no convergence claim is made.
+
+## Matched WT and first two original-backbone designs — 28 November 2026
+
+Six template-free, paired-MSA Boltz models compared WT with `relay_prot101_06`
+and `relay_prot101_03` at two matched seeds and four unguided L4 substrates.
+All predictions completed. Severe interchain-overlap screening rejected WT
+seed 20261127 and both design-06 models before Amber (591, 535 and 641 heavy-atom
+pairs below 1 Å, respectively). These are invalid predicted assemblies, not
+experimental evidence of instability or inactivity. Three accepted assemblies
+completed unrestrained minimization with final RMS gradients 0.0450–0.0496
+kcal mol⁻¹ Å⁻¹.
+
+The accepted WT seed changed from A/A/B/B to A/A/A/A across canonical sites
+A/E, B/F, C/G and D/H. Design 03 seed 20261126 changed from B/A/A/A to C/B/B/B;
+its other seed lacked positive-phi Tier A/B geometry both before and after
+relaxation. Thus these first two designs show no demonstrated geometric gain
+over the accepted WT control. Both model-seed dependence and failed controls
+limit sequence-level conclusions. Scores for all four native ligands and
+protein interfaces are retained with their explicit mappings. Whole-ligand
+ipSAE2 values remain low across the cohort and are supplementary confidence
+measurements, without an activity cutoff. The [complete table and source-bound
+report](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/comparison/update_20261128/README.md)
+include all four sites, unassigned invalid endpoints and both seeds.
+
 ## Supplementary prediction-confidence qualification — 28 November 2026
 
 The isolated ipSAE2 implementation passed native-input mapping and numerical

@@ -1,0 +1,13 @@
+{
+  "project_source_commit": "3c66b45",
+  "runtime_python": "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+  "frozen_source_manifest_sha256": "067dacad0aaad3f02ec9d07c954028922485440340a573ed48fafb60c6bae1bf",
+  "numerical_refit_job_exit": 1,
+  "numerical_fit_converged": true,
+  "postfit_plot_assertion_failed": true,
+  "plot_recovery_job_exit": 0,
+  "MBAR_refitted_for_plot_recovery": false,
+  "figure_layout_visually_inspected": true,
+  "source_data_and_point_hashes_unchanged": true,
+  "sampling_converged": false
+}

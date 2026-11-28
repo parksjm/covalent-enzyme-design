@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "checkpoint_commit": "3c66b45",
+  "full_pytest_exit_status": 0,
+  "result": "3341 passed, 17 skipped, 63 warnings in 514.73s",
+  "ended_utc": "2026-11-28T05:34:15.746282Z",
+  "job_status_path": "output_agent_checkpoints/20261128_pending_changes/status.json",
+  "scope": "Full project tests for the prior development checkpoint; not scientific convergence acceptance"
+}

@@ -1,0 +1,10 @@
+{
+  "process_complete": true,
+  "MBAR_refitted": false,
+  "original_plot_failure": "E-S reference assumed to be first histogram bin",
+  "correct_reference_s": 0.0125,
+  "reference_bin_index": 10,
+  "all_histogram_bins_displayed": true,
+  "math_changed": false,
+  "figure": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/checkpoint_001_main70ps_supplement43/relay_pmf_latest.png"
+}

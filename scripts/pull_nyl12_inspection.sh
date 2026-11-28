@@ -1187,10 +1187,10 @@ for movie_relative in vmd_progress/current additional_sampling_20261126/vmd_prog
 done
 
 # Latest eligible-data PMF: exact small publication, excluding calculation caches.
-relay_pmf_pointer="$relay_current_source/analysis/current_eligible_progress_20261127/current"
+relay_pmf_pointer="$relay_current_source/analysis/main100_continuation_20261127/current_ext100/current"
 if ssh "$remote" test -d "$relay_pmf_pointer"; then
 relay_pmf_source=$(ssh "$remote" readlink -f "$relay_pmf_pointer")
-if [[ $relay_pmf_source != "$relay_current_source"/analysis/current_eligible_progress_20261127/checkpoint_* || $relay_pmf_source == *$'\n'* ]]; then
+if [[ $relay_pmf_source != "$relay_current_source"/analysis/main100_continuation_20261127/current_ext100/checkpoint_* || $relay_pmf_source == *$'\n'* ]]; then
     echo "Invalid immutable PMF publication path: $relay_pmf_source" >&2
     exit 1
 fi
