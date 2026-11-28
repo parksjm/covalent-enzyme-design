@@ -1060,3 +1060,40 @@ early vertex contains 25.89% of its histogram-bin probability; its calculated
 0.179 kcal/mol effect explains only part of the 3.524 kcal/mol feature.
 Neither smoothing the coordinate nor choosing coarse WHAM bins establishes
 physical intermediates. No frames, bins or restraints were removed or changed.
+
+### Physical-distance audit of early projected bins — 28 November 2026
+
+The unchanged 100-history, 82,000-frame pool was interrogated using original
+atom mappings and global MBAR weights. The dominant frame at s=0.254986
+(histogram center 0.2625) has the following distances:
+
+| Distance | Å |
+|---|---:|
+| OG1–HG1 | 0.9521 |
+| HG1–leaving-N | 4.1486 |
+| Nalpha–HG1 | 1.7658 |
+| OG1–scissile-C | 3.3707 |
+| Scissile C–N | 1.3690 |
+
+These are E–S-like distances, despite the 1.670 Å transverse displacement;
+there is no demonstrated chemical-invalidity basis for rejecting this accepted
+frame. Its local Kish weight ESS is 1.066 and its normalized bin weight is
+96.84%; Kish ESS is not an autocorrelation-corrected independent-frame count.
+At s=0.2875, nearest-Nalpha HG1 ownership is 90.327% by raw count but
+0.13797% by unbiased weight; nearest-OG1 ownership is 99.862% by weight.
+Both original Nalpha hydrogens remain nearest Nalpha in every raw observation
+and all weighted mass in the five selected diagnostic bins. This control does
+not establish electronic bond orders or the identity of a product state.
+
+From s=0.1125 to 0.1625, weighted mean OG1–C rises 2.5205→2.8989 Å,
+whereas O–H remains approximately 0.995 Å and C–N approximately 1.37 Å.
+Nucleophile retreat thus contributes to progress in projected s without proton
+transfer in this comparison. The lowest existing corrective q_acyl center is
+-1.75 Å, versus -2.0018 Å for the dominant observation; more main-history
+sampling alone need not supply the missing local support. These descriptors
+assign neither an intermediate nor a transition state and do not resolve all
+early PMF features. Full raw/weighted distance statistics and bin support are
+in `analysis/reaction_distances_20261128/distance_statistics.json`,
+`bin_diagnostics.json` and `diagnostic_interpretation.json` within the relay
+campaign. MBAR remains the primary estimator; the WHAM comparison above is
+retained as an estimator diagnostic.

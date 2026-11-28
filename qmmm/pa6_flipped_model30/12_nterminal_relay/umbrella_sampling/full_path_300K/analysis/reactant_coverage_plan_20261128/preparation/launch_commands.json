@@ -1,0 +1,77 @@
+{
+  "status": "not_executed_resource_release_required",
+  "commands": [
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_01_original_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ],
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_01_dominant_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ],
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_02_original_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ],
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_02_dominant_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ],
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_03_original_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ],
+    [
+      "/data/jpc/code/ambertools26/venv/bin/python",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py",
+      "--prepared",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json",
+      "--label",
+      "activation_boundary_03_dominant_es",
+      "--sha256",
+      "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d"
+    ]
+  ],
+  "tmux_command": [
+    "tmux",
+    "new-session",
+    "-d",
+    "-s",
+    "nyl12_es_boundary6_20261128",
+    "bash",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_six_cpu.sh"
+  ],
+  "environment_release_gate": "GERANIUM_BOUNDARY_RELEASE_APPROVED must be set only after PI approval",
+  "resource_request": "six single-thread CPU sander jobs; zero GPUs; approximately20h including diagnostics; existing33 remain running",
+  "transfer": "No remote staging performed; explicit preparation and source payload transfer/hash verification required before launch."
+}

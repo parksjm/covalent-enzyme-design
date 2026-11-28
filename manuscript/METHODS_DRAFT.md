@@ -2303,6 +2303,21 @@ not a sampling-convergence gate. These point comparisons carry no new
 statistical confidence intervals. All source/input hashes and failed gates are
 retained; no dynamics or molecular Hamiltonian was changed.
 
+### Physical-distance support diagnostics (28 November 2026)
+
+For the unchanged 82,000-frame pool (57×70 ps, 33×10 ps, 4×25 ps and
+6×30 ps histories, with a fixed 5 ps discard once per history), we inspected
+OG1–HG1, HG1–leaving-N, Nalpha–HG1, OG1–C and scissile C–N distances
+using the existing atom mapping. Per-s-bin statistics include raw and global
+MBAR-weighted distance distributions, nearest-heavy-atom ownership of HG1,
+Kish weight ESS, largest normalized frame weight and transverse path distance.
+The two original Nalpha hydrogens were checked separately as inventory
+controls. Nearest ownership is a geometric descriptor, not an electronic
+bond-order assignment. No chemically inconvenient frames were censored, and
+no alternate projection or estimator replaced the primary MBAR profile.
+Results and interpretation are retained under
+`analysis/reaction_distances_20261128/` in the relay campaign.
+
 ## Relay supporting-information record (27 November 2026)
 
 The [supporting-information draft](SUPPORTING_INFORMATION_DRAFT.md) consolidates

@@ -1,0 +1,95 @@
+{
+  "dominant_q_A": [
+    -2.0017626443723335,
+    -0.8137761722753188,
+    -2.3827318583904473
+  ],
+  "neighborhood_totals": {
+    "within_0p15_A_3CV": 2,
+    "within_0p15_A_2CV": 32,
+    "reactant_tail_region": 10,
+    "s_0p25_0p275": 864
+  },
+  "responsibility_by_group": {
+    "activation_grid33": 0.9990281063325973,
+    "old_targets4": 1.3178164144930534e-46,
+    "main57": 0.000971893667402358,
+    "geranium_mixing6": 2.3876698364582698e-82
+  },
+  "timing_completed_production_5ps_h": {
+    "n": 66,
+    "quantiles_10_50_90": [
+      6.221510332083334,
+      6.923274175555555,
+      7.587378583611111
+    ]
+  },
+  "top_responsibilities": [
+    {
+      "state_id": "activation_grid33/activation_support_3_03",
+      "responsibility_at_dominant": 0.5624844329691977,
+      "bias_at_dominant_kcal_mol": 2.7271170233509228,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 2,
+        "within_0p15_A_2CV": 17,
+        "reactant_tail_region": 5,
+        "s_0p25_0p275": 2
+      }
+    },
+    {
+      "state_id": "activation_grid33/activation_support_3_02",
+      "responsibility_at_dominant": 0.2532610391795169,
+      "bias_at_dominant_kcal_mol": 1.5893553005977337,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 0,
+        "within_0p15_A_2CV": 5,
+        "reactant_tail_region": 1,
+        "s_0p25_0p275": 0
+      }
+    },
+    {
+      "state_id": "activation_grid33/activation_support_3_04",
+      "responsibility_at_dominant": 0.16280137145810816,
+      "bias_at_dominant_kcal_mol": 5.86487874610411,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 0,
+        "within_0p15_A_2CV": 4,
+        "reactant_tail_region": 2,
+        "s_0p25_0p275": 7
+      }
+    },
+    {
+      "state_id": "activation_grid33/activation_support_3_01",
+      "responsibility_at_dominant": 0.015400115872840592,
+      "bias_at_dominant_kcal_mol": 2.4515935778445455,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 0,
+        "within_0p15_A_2CV": 3,
+        "reactant_tail_region": 0,
+        "s_0p25_0p275": 0
+      }
+    },
+    {
+      "state_id": "activation_grid33/activation_support_3_05",
+      "responsibility_at_dominant": 0.004484722774256345,
+      "bias_at_dominant_kcal_mol": 11.002640468857296,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 0,
+        "within_0p15_A_2CV": 0,
+        "reactant_tail_region": 2,
+        "s_0p25_0p275": 44
+      }
+    },
+    {
+      "state_id": "main57/activation_full_001",
+      "responsibility_at_dominant": 0.0009499654334949119,
+      "bias_at_dominant_kcal_mol": 5.566905068217344,
+      "neighborhood_counts": {
+        "within_0p15_A_3CV": 0,
+        "within_0p15_A_2CV": 3,
+        "reactant_tail_region": 0,
+        "s_0p25_0p275": 0
+      }
+    }
+  ]
+}

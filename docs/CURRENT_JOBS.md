@@ -1,3 +1,22 @@
+## Focused update — relay reactant coverage, 28 November 2026
+
+Six additional DFTB3/MM umbrella histories started on Geranium at 15:56 UTC
+(10:56 EST), in tmux `nyl12_es_boundary6_20261128`. Six native Sander PIDs
+were verified against their exact working directories. They use three new
+reactant-side centers and two E–S starting geometries per center, with 30 ps
+production after 1 ps heating + 4 ps equilibration. This is running sampling,
+not completed or scientifically accepted sampling. Estimated wall time is
+about 20 hours from measured prior throughput; no GPU is allocated.
+
+All existing Violet/Azalea relay US jobs are preserved. The new branch is
+`qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/`.
+Its hashed launch receipt is under
+`analysis/reactant_coverage_plan_20261128/preparation/launch_evidence_20261128.json`
+in the same campaign. Separate automatic checkpoint analysis is being prepared;
+the original primary collector and original scientific inputs are unchanged.
+See `NYL12_MECHANISM_ROADMAP.md` for current scientific priorities. Entries
+below are historical snapshots, not a fresh full-host status audit.
+
 ## CURRENT — resumed pKa controls, 2026-11-23
 
 Three NylC MCCE jobs (5XYG,7YU0,7YU1) have passed preparation and conformer

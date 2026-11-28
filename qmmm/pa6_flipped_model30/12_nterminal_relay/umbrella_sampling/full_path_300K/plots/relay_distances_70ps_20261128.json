@@ -1,0 +1,7 @@
+{
+  "dominant_s_0p2625": "HG1 remains nearest OG1 with 0.9521 A separation; OG1\u2013C=3.3707 A and C\u2013N=1.3690 A are reactant-like geometry. No evidence here for completed proton transfer or nucleophilic addition. Bond order is not measured.",
+  "early_s_0p1125_to_0p1625": "Weighted mean OG1\u2013C increases 2.5205 to 2.8989 A while O\u2013H stays ~0.995 A and C\u2013N ~1.37 A. The coordinate change includes nucleophile retreat without proton transfer.",
+  "s_0p2875_mixture": "Raw HG1 nearest-owner Nalpha fraction 0.90327, but weighted fraction 0.0013797. Hard s overlaps geometrically and chemically different populations; numerous biased frames do not ensure reweighted support.",
+  "hydrogen_controls": "All five selected bins retain both original Nalpha hydrogens nearest Nalpha in 100% of rows and weighted mass; direct N\u2013H distance statistics included.",
+  "limitations": "Nearest owner and distances do not prove electronic bond order, product identity, causal origin of all PMF features or sampling convergence. No minimum or transition-state assignment. Dominant accepted frame retained."
+}

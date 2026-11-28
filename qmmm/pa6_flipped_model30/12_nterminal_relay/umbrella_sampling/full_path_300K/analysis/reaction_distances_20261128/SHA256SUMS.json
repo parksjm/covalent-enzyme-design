@@ -1,0 +1,22 @@
+{
+  "bin_diagnostics.json": "9a38eba200dbf3f2759fb293a54a0a057693763cb9b4575cec9d3b28704967c5",
+  "diagnostic_interpretation.json": "9571b17b6455eb14e74e15934b459e938e01b2b8fef5d50410ad8a0ca390dfa9",
+  "distance_statistics.json": "88905bbe9cea657332a669613756f5cea1e7d9e8d424f372268e323734c20e08",
+  "early_bins_summary.csv": "416faca3910a0f9174570d31e34d515cb1f4afa8808793a51030cbd1d6a9e114",
+  "early_grid_key_windows_5to10ps.pdf": "3d3809c60df270ce0944bd1b2f174648e638653576137ee3a86d207c41e038e5",
+  "early_grid_key_windows_5to10ps.png": "6d3fbedbaa9fcf23cff5d3d3aee2cb56ece2ba295e4e19d0ee4d99875bc00118",
+  "five_distances_main57_70ps_independent_traces.pdf": "5cc223d23508575b1c3a404efee689018ec2bab320eb695b7c4a37c019ea519d",
+  "five_distances_main57_70ps_independent_traces.png": "500b4323eb71f0fae9e9b659e866d507378151d488df883e10252f2d82c99869",
+  "five_distances_vs_s.pdf": "ad80ec0ee752726df786f312937116aca93770aaa648902e3cb83cb8fc2f0997",
+  "five_distances_vs_s.png": "143e4019432fa4629ed44cbf62c8537550c40e5a87538686db6f26e4229a600a",
+  "five_distances_vs_s_early.pdf": "ee1995f583e4db55ee4756c27c210e2983330404210e426bb6b491a72e05aa6f",
+  "five_distances_vs_s_early.png": "8432643d209b118914051bbb18bab5a809299fa3678f93df366a1abd676ca69b",
+  "plot_distances.py": "4e96a2dd6fd1abab1ed9d8fdcd042b42bb078f026f1227258860c29035fe2b03",
+  "render_local.py": "b35f00bc7041cf791c6762f513cf3b78d86d258b9a8f58c4503466a3b0e647d5",
+  "retained_rows.csv": "e81106fe1b8a8149b44ee2639554fe4110be3ac6df72afbada075bcb7475bf0c",
+  "run_distances.py": "016ca862aa46f6192f45ceb34a58524afae0b217b9c904ee646e8a5eb4039297",
+  "runtime.json": "11e2499187e670c778aec893b6ef1afe5f747c9ab2a0409869dfc3c78040c8e0",
+  "scientific_acceptance.json": "cb32b7bf05f5a37323127f9620f5e52cb1aee75d0d97bb4ec82a4b330a74181e",
+  "source_hashes.json": "42b4c6018360cde2c2c58291bf5e5471b6183daccf6a721e75e4d5655fae8008",
+  "test_distances.py": "2057bc9980075b96b42c7152b5b78eaa4f790195a762220dfad3ee2f7ce78051"
+}

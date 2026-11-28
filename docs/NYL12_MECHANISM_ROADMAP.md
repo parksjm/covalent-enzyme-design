@@ -13,6 +13,46 @@ pull now transfers one complete immutable publication with content checks;
 its obsolete mutable DCD-only transfer was removed and 11 regressions passed.
 
 
+**Physical-distance diagnosis and bounded follow-up, 28 November:** the dominant
+frame has s=0.254986 (histogram center 0.2625) but ordinary E–S-like geometry:
+OG1–HG1 0.9521 Å, HG1–leaving-N 4.1486 Å, Nalpha–HG1 1.7658 Å,
+OG1–C 3.3707 Å and scissile C–N 1.3690 Å. Its 1.67 Å path displacement
+and local Kish weight ESS 1.066 concern projection/support, not demonstrated
+chemical invalidity. At s=0.2875, 90.327% of raw frames place HG1 nearest
+Nalpha, whereas only 0.13797% of reweighted mass does; OG1-bound HG1 carries
+99.862% of weighted mass. Raw occupancy therefore cannot establish the
+reweighted chemical population. The earlier s=0.1125–0.1625 change includes
+OG1 retreat from C (weighted mean 2.5205→2.8989 Å) while O–H stays near
+0.995 Å and C–N near 1.37 Å; it is not evidence of proton transfer.
+
+The corrective grid stops at q_acyl=-1.75 Å, while the dominant frame lies at
+-2.0018 Å. Longer main sampling alone offers no guarantee of filling that
+support gap. Six additional histories are running under
+`activation_support_boundary_20261128/`: (q_acyl,q_act)=(-2,-1), (-2,-0.8)
+and (-2,-0.6) Å, each from two geometric E–S starts (ordinary and rare-frame
+E–S), not two protonation states. Each uses native Amber no-half-factor
+coefficients of 25 kcal mol⁻¹ Å⁻² on both coordinates, unrestrained q_del,
+1 ps heating, 4 ps equilibration and 30 ps production. The PI-authorized
+Geranium launch began at 15:56 UTC (10:56 EST), with six single-thread CPU
+workers in tmux `nyl12_es_boundary6_20261128`; no existing jobs were stopped.
+Measured prior throughput suggests approximately 8 h to 10 ps production and
+20 h to 30 ps, subject to runtime variation. The hashed launch evidence is
+`analysis/reactant_coverage_plan_20261128/preparation/launch_evidence_20261128.json`.
+Assess repeated
+geometric/chemical coverage, reweighted support and initialization consistency;
+smoother curves alone do not establish convergence. MBAR remains primary;
+WHAM is retained as the archived estimator cross-check. Source diagnostics:
+`analysis/reaction_distances_20261128/{distance_statistics,bin_diagnostics,diagnostic_interpretation}.json`.
+
+**Internal sensitivity only — not for the manuscript:** the PI-requested
+single-frame omission/refit raises the s=0.2625 bin from 2.89979 to 4.95910
+kcal/mol, leaves the maximum at 26.2800 kcal/mol, and changes every other
+common bin by less than 0.00063 kcal/mol. Earlier features remain. This
+measures local influence; there is no scientific exclusion rationale and the
+accepted frame remains in the primary pool. Omitted-frame PMF numbers and
+figures are not publication results. Evidence:
+`analysis/frame_omission_20261128/attempt_02/results/comparison.json`.
+
 **Model-confidence qualification completed, 28 November:** isolated ipSAE2
 0.1.11 passed upstream tests and real WT/design-06 native-mapping and numerical
 checks. Add its assembly-interface and protein-aligned ligand descriptors to

@@ -1,0 +1,374 @@
+[
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:44:11.937463+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:24:48.467736+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:25:04.286090+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_original/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:05:09.326810+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:44:05.091180+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:24:48.724972+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:25:04.774386+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A026_late/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:05:10.170676+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:44:20.651438+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:24:43.183566+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:24:59.110152+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_original/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:05:38.835604+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:43:49.323629+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:24:04.827185+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:24:20.638230+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/A028_late/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:04:49.646777+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:45:01.768911+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:26:18.224581+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:26:35.298076+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D008_from_D010/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:08:10.948123+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/03_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T18:44:26.082983+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/03_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/02_equilibration_4ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-27T21:24:59.074871+00:00"
+    }
+  },
+  {
+    "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/04_production_5ps/process.json",
+    "record": {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-27T21:25:14.537438+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/04_production_5ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/D009_from_D007/03_production_5ps/restart.ncrst"
+      },
+      "exit_status": 0,
+      "ended_utc": "2026-11-28T00:06:11.406314+00:00"
+    }
+  }
+]

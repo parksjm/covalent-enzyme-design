@@ -1,0 +1,2518 @@
+[
+  {
+    "s": -0.037500000000000006,
+    "n": 26,
+    "weight_ESS": 15.316256208916451,
+    "dominant_frame_index": 1021,
+    "dominant_fraction": 0.12423245080959633,
+    "dominant_row": {
+      "r_og1_hg1": 0.9631785409253695,
+      "r_nleave_hg1": 3.4846454832247704,
+      "r_c_og1": 3.190696272816062,
+      "r_c_n": 1.3289834560245999,
+      "r_nalpha_hg1": 2.208520992781207,
+      "time_ps": 62.099998474121094,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0167683560012513,
+      "r_nalpha_h2": 1.0692409873175908,
+      "q_acyl_A": -1.8617128167914623,
+      "q_act_A": -1.2453424518558376,
+      "q_del_A": -1.2761244904435634,
+      "state_index": 0,
+      "state_id": "main57/activation_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_001/14_production_5ps/raw_features.csv",
+      "source_frame": 22,
+      "production_time_ps": 56.1
+    },
+    "transverse_A": {
+      "mean_A": 0.8092996117789567,
+      "p10_A": 0.45085439375277825,
+      "median_A": 0.7782848288647273,
+      "p90_A": 1.359084619590242
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": -0.0125,
+    "n": 801,
+    "weight_ESS": 13.540782365014808,
+    "dominant_frame_index": 76871,
+    "dominant_fraction": 0.2579745898239057,
+    "dominant_row": {
+      "r_og1_hg1": 1.012460626921257,
+      "r_nleave_hg1": 3.0048642785315796,
+      "r_c_og1": 2.848939439859635,
+      "r_c_n": 1.3644266032283061,
+      "r_nalpha_hg1": 2.4459484848850446,
+      "time_ps": 13.600000381469727,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0356586742663485,
+      "r_nalpha_h2": 1.0273351924555352,
+      "q_acyl_A": -1.484512836631329,
+      "q_act_A": -1.4334878579637875,
+      "q_del_A": -0.558915793646535,
+      "state_index": 72,
+      "state_id": "activation_grid33/activation_support_2_01",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_2_01/04_production_5ps/raw_features.csv",
+      "source_frame": 72,
+      "production_time_ps": 8.6
+    },
+    "transverse_A": {
+      "mean_A": 0.5938707630019217,
+      "p10_A": 0.3633073764869423,
+      "median_A": 0.4559734167842432,
+      "p90_A": 1.009140618255788
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.0125,
+    "n": 2043,
+    "weight_ESS": 113.0690743238343,
+    "dominant_frame_index": 514,
+    "dominant_fraction": 0.08254737851484942,
+    "dominant_row": {
+      "r_og1_hg1": 0.9913808098126322,
+      "r_nleave_hg1": 2.898749291237916,
+      "r_c_og1": 2.7394804512612736,
+      "r_c_n": 1.368994044899984,
+      "r_nalpha_hg1": 2.3474044479401557,
+      "time_ps": 36.75,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0835597591825372,
+      "r_nalpha_h2": 1.075890192971399,
+      "q_acyl_A": -1.3704864063612896,
+      "q_act_A": -1.3560236381275235,
+      "q_del_A": -0.5513448432977603,
+      "state_index": 0,
+      "state_id": "main57/activation_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_001/09_production_5ps/raw_features.csv",
+      "source_frame": 15,
+      "production_time_ps": 30.75
+    },
+    "transverse_A": {
+      "mean_A": 0.7011065130088223,
+      "p10_A": 0.38571776146694114,
+      "median_A": 0.7153747510286856,
+      "p90_A": 1.0016629949162354
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.037500000000000006,
+    "n": 1529,
+    "weight_ESS": 175.2155730079711,
+    "dominant_frame_index": 4235,
+    "dominant_fraction": 0.06268642468665002,
+    "dominant_row": {
+      "r_og1_hg1": 1.006568062207781,
+      "r_nleave_hg1": 3.0376197716915905,
+      "r_c_og1": 2.6202397797286556,
+      "r_c_n": 1.3579973242592969,
+      "r_nalpha_hg1": 2.2681301170198203,
+      "time_ps": 27.799999237060547,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0060225031352776,
+      "r_nalpha_h2": 1.0900977609359477,
+      "q_acyl_A": -1.2622424554693588,
+      "q_act_A": -1.2615620548120392,
+      "q_del_A": -0.7694896546717702,
+      "state_index": 3,
+      "state_id": "main57/activation_full_004",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_004/07_production_5ps/raw_features.csv",
+      "source_frame": 36,
+      "production_time_ps": 21.8
+    },
+    "transverse_A": {
+      "mean_A": 0.6475450493838175,
+      "p10_A": 0.4202628325239613,
+      "median_A": 0.6484799465824825,
+      "p90_A": 0.8779135540773032
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.0625,
+    "n": 301,
+    "weight_ESS": 76.70653949344275,
+    "dominant_frame_index": 3900,
+    "dominant_fraction": 0.07031302883207348,
+    "dominant_row": {
+      "r_og1_hg1": 0.9906919933498538,
+      "r_nleave_hg1": 2.6858910337348028,
+      "r_c_og1": 2.4295509564908455,
+      "r_c_n": 1.3577790663149176,
+      "r_nalpha_hg1": 2.1258206813678426,
+      "time_ps": 11.050000190734863,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0026235162804122,
+      "r_nalpha_h2": 1.0720053708623718,
+      "q_acyl_A": -1.0717718901759279,
+      "q_act_A": -1.1351286880179887,
+      "q_del_A": -0.5600703523669601,
+      "state_index": 3,
+      "state_id": "main57/activation_full_004",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_004/04_production_5ps/raw_features.csv",
+      "source_frame": 1,
+      "production_time_ps": 5.05
+    },
+    "transverse_A": {
+      "mean_A": 0.41643896157552057,
+      "p10_A": 0.2937730144128272,
+      "median_A": 0.43039982401781657,
+      "p90_A": 0.5426604521487378
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.0875,
+    "n": 888,
+    "weight_ESS": 206.65559209830323,
+    "dominant_frame_index": 9435,
+    "dominant_fraction": 0.03950894658720095,
+    "dominant_row": {
+      "r_og1_hg1": 0.9947001299043995,
+      "r_nleave_hg1": 3.2497547392095956,
+      "r_c_og1": 2.4765998385558508,
+      "r_c_n": 1.3866849747321501,
+      "r_nalpha_hg1": 2.116156065401064,
+      "time_ps": 27.799999237060547,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0230807860204136,
+      "r_nalpha_h2": 1.0391105292328362,
+      "q_acyl_A": -1.0899148638237006,
+      "q_act_A": -1.1214559354966642,
+      "q_del_A": -1.1335986738085317,
+      "state_index": 7,
+      "state_id": "main57/activation_full_008",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_008/07_production_5ps/raw_features.csv",
+      "source_frame": 36,
+      "production_time_ps": 21.8
+    },
+    "transverse_A": {
+      "mean_A": 0.6052733097768687,
+      "p10_A": 0.4874851137098068,
+      "median_A": 0.6166513642510285,
+      "p90_A": 0.7102577327650804
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.1125,
+    "n": 399,
+    "weight_ESS": 110.0806404993181,
+    "dominant_frame_index": 5299,
+    "dominant_fraction": 0.025989432357991966,
+    "dominant_row": {
+      "r_og1_hg1": 0.997456566255356,
+      "r_nleave_hg1": 3.308762464109218,
+      "r_c_og1": 2.5507577789686198,
+      "r_c_n": 1.4254949665073293,
+      "r_nalpha_hg1": 2.01756075522368,
+      "time_ps": 16.0,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.071312924752741,
+      "r_nalpha_h2": 0.9901114052823227,
+      "q_acyl_A": -1.1252628124612905,
+      "q_act_A": -1.020104188968324,
+      "q_del_A": -1.2912017088855379,
+      "state_index": 4,
+      "state_id": "main57/activation_full_005",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_005/04_production_5ps/raw_features.csv",
+      "source_frame": 100,
+      "production_time_ps": 10.0
+    },
+    "transverse_A": {
+      "mean_A": 0.6181787236159979,
+      "p10_A": 0.5201445052255329,
+      "median_A": 0.6333758469804238,
+      "p90_A": 0.7019425799241367
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.1375,
+    "n": 2060,
+    "weight_ESS": 289.5052651463022,
+    "dominant_frame_index": 1594,
+    "dominant_fraction": 0.01378729485629675,
+    "dominant_row": {
+      "r_og1_hg1": 0.9776395782805862,
+      "r_nleave_hg1": 3.5636968935378848,
+      "r_c_og1": 2.727021406495431,
+      "r_c_n": 1.380770867206615,
+      "r_nalpha_hg1": 2.0380805585557003,
+      "time_ps": 25.75,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9989363816840402,
+      "r_nalpha_h2": 1.043732293603301,
+      "q_acyl_A": -1.3462505392888158,
+      "q_act_A": -1.060440980275114,
+      "q_del_A": -1.5256163349821845,
+      "state_index": 1,
+      "state_id": "main57/activation_full_002",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_002/06_production_5ps/raw_features.csv",
+      "source_frame": 95,
+      "production_time_ps": 19.75
+    },
+    "transverse_A": {
+      "mean_A": 0.7849603703300311,
+      "p10_A": 0.6570559389239373,
+      "median_A": 0.7882416397301989,
+      "p90_A": 0.9197751240267612
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.16249999999999998,
+    "n": 4658,
+    "weight_ESS": 508.2666741717955,
+    "dominant_frame_index": 1638,
+    "dominant_fraction": 0.007422544089056324,
+    "dominant_row": {
+      "r_og1_hg1": 1.0316872838930724,
+      "r_nleave_hg1": 3.6419824902150992,
+      "r_c_og1": 3.041434612967913,
+      "r_c_n": 1.331871983651878,
+      "r_nalpha_hg1": 1.9413740911014346,
+      "time_ps": 27.950000762939453,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9924729839941641,
+      "r_nalpha_h2": 1.021467515593072,
+      "q_acyl_A": -1.709562629316035,
+      "q_act_A": -0.9096868072083621,
+      "q_del_A": -1.7006083991136647,
+      "state_index": 1,
+      "state_id": "main57/activation_full_002",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_002/07_production_5ps/raw_features.csv",
+      "source_frame": 39,
+      "production_time_ps": 21.95
+    },
+    "transverse_A": {
+      "mean_A": 1.051352068026312,
+      "p10_A": 0.8995069352051083,
+      "median_A": 1.0559273305749908,
+      "p90_A": 1.191780734280085
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.1875,
+    "n": 3031,
+    "weight_ESS": 94.00174515853597,
+    "dominant_frame_index": 962,
+    "dominant_fraction": 0.03005461692679033,
+    "dominant_row": {
+      "r_og1_hg1": 0.9555646403275166,
+      "r_nleave_hg1": 3.9287772402072973,
+      "r_c_og1": 3.116947404220042,
+      "r_c_n": 1.3546237622411714,
+      "r_nalpha_hg1": 1.960232723683788,
+      "time_ps": 59.150001525878906,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0048144140305668,
+      "r_nalpha_h2": 1.0536340359533038,
+      "q_acyl_A": -1.7623236419788706,
+      "q_act_A": -1.0046680833562713,
+      "q_del_A": -1.9685445165235094,
+      "state_index": 0,
+      "state_id": "main57/activation_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_001/13_production_5ps/raw_features.csv",
+      "source_frame": 63,
+      "production_time_ps": 53.15
+    },
+    "transverse_A": {
+      "mean_A": 1.2124258474581686,
+      "p10_A": 1.0683069002697294,
+      "median_A": 1.225347835789402,
+      "p90_A": 1.338951703604907
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.21250000000000002,
+    "n": 1786,
+    "weight_ESS": 47.83458979747463,
+    "dominant_frame_index": 78110,
+    "dominant_fraction": 0.09303388831693142,
+    "dominant_row": {
+      "r_og1_hg1": 0.9458381669475746,
+      "r_nleave_hg1": 3.945235895420316,
+      "r_c_og1": 3.2817353103238225,
+      "r_c_n": 1.3714753017503394,
+      "r_nalpha_hg1": 1.9299519942446632,
+      "time_ps": 10.550000190734863,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0356820617192968,
+      "r_nalpha_h2": 1.033924726534582,
+      "q_acyl_A": -1.910260008573483,
+      "q_act_A": -0.9841138272970886,
+      "q_del_A": -2.0152839011756525,
+      "state_index": 85,
+      "state_id": "activation_grid33/activation_support_3_03",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_03/04_production_5ps/raw_features.csv",
+      "source_frame": 11,
+      "production_time_ps": 5.55
+    },
+    "transverse_A": {
+      "mean_A": 1.33587918143399,
+      "p10_A": 1.1887772151377676,
+      "median_A": 1.3554568897830197,
+      "p90_A": 1.5168735918797298
+    },
+    "owners": {
+      "hg1_owner": {
+        "13916": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.2375,
+    "n": 1109,
+    "weight_ESS": 8.775639654119791,
+    "dominant_frame_index": 78096,
+    "dominant_fraction": 0.27581727088872243,
+    "dominant_row": {
+      "r_og1_hg1": 0.9852761390252578,
+      "r_nleave_hg1": 4.025234894689493,
+      "r_c_og1": 3.296004747199459,
+      "r_c_n": 1.3417945660446498,
+      "r_nalpha_hg1": 1.905528153681718,
+      "time_ps": 14.850000381469727,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0061973152952386,
+      "r_nalpha_h2": 1.028976951554305,
+      "q_acyl_A": -1.9542101811548094,
+      "q_act_A": -0.9202520146564601,
+      "q_del_A": -2.1197067410077755,
+      "state_index": 84,
+      "state_id": "activation_grid33/activation_support_3_02",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_02/04_production_5ps/raw_features.csv",
+      "source_frame": 97,
+      "production_time_ps": 9.85
+    },
+    "transverse_A": {
+      "mean_A": 1.4863756303975593,
+      "p10_A": 1.3713931312884917,
+      "median_A": 1.4701787664554113,
+      "p90_A": 1.6457468193163325
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.925446987482452e-13,
+          "unweighted": 0.0009017132551848512
+        },
+        "13916": {
+          "weighted": 0.9999999999998076,
+          "unweighted": 0.9990982867448152
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.2625,
+    "n": 864,
+    "weight_ESS": 1.0662353074385742,
+    "dominant_frame_index": 78151,
+    "dominant_fraction": 0.9683888774690661,
+    "dominant_row": {
+      "r_og1_hg1": 0.9520674768668692,
+      "r_nleave_hg1": 4.148575507532636,
+      "r_c_og1": 3.3707212894580034,
+      "r_c_n": 1.3689586450856697,
+      "r_nalpha_hg1": 1.765843649142188,
+      "time_ps": 12.600000381469727,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0365863458776938,
+      "r_nalpha_h2": 1.0852857129926972,
+      "q_acyl_A": -2.0017626443723335,
+      "q_act_A": -0.8137761722753188,
+      "q_del_A": -2.3827318583904473,
+      "state_index": 85,
+      "state_id": "activation_grid33/activation_support_3_03",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_03/04_production_5ps/raw_features.csv",
+      "source_frame": 52,
+      "production_time_ps": 7.6
+    },
+    "transverse_A": {
+      "mean_A": 1.6607272639004624,
+      "p10_A": 1.6702020672836928,
+      "median_A": 1.6702020672836928,
+      "p90_A": 1.6702020672836928
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.5148600812707886e-11,
+          "unweighted": 0.016203703703703703
+        },
+        "13916": {
+          "weighted": 0.9999999999848517,
+          "unweighted": 0.9837962962962963
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.2875,
+    "n": 8808,
+    "weight_ESS": 5.880761227011437,
+    "dominant_frame_index": 78330,
+    "dominant_fraction": 0.2775086796717903,
+    "dominant_row": {
+      "r_og1_hg1": 1.0496189580441355,
+      "r_nleave_hg1": 4.143329023486962,
+      "r_c_og1": 3.2581689182152873,
+      "r_c_n": 1.3539474469214041,
+      "r_nalpha_hg1": 1.586222926726065,
+      "time_ps": 11.550000190734863,
+      "hg1_owner": 13916,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0108927800068865,
+      "r_nalpha_h2": 1.0346527679420052,
+      "q_acyl_A": -1.9042214712938832,
+      "q_act_A": -0.5366039686819295,
+      "q_del_A": -2.557106096760897,
+      "state_index": 87,
+      "state_id": "activation_grid33/activation_support_3_05",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_05/04_production_5ps/raw_features.csv",
+      "source_frame": 31,
+      "production_time_ps": 6.55
+    },
+    "transverse_A": {
+      "mean_A": 1.5016130822999025,
+      "p10_A": 1.414897577186773,
+      "median_A": 1.492692798700392,
+      "p90_A": 1.5802010701449902
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 0.0013797264844146002,
+          "unweighted": 0.9032697547683923
+        },
+        "13916": {
+          "weighted": 0.9986202735155855,
+          "unweighted": 0.09673024523160763
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.3125,
+    "n": 5915,
+    "weight_ESS": 33.60903866205093,
+    "dominant_frame_index": 78917,
+    "dominant_fraction": 0.09393700129340554,
+    "dominant_row": {
+      "r_og1_hg1": 2.2501434402045244,
+      "r_nleave_hg1": 4.273262667043147,
+      "r_c_og1": 3.177685029785637,
+      "r_c_n": 1.3492410493497375,
+      "r_nalpha_hg1": 1.013821382089594,
+      "time_ps": 10.899999618530273,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0273246784613408,
+      "r_nalpha_h2": 1.1354422001978255,
+      "q_acyl_A": -1.8284439804358994,
+      "q_act_A": 1.2363220581149303,
+      "q_del_A": -3.259441284953553,
+      "state_index": 93,
+      "state_id": "activation_grid33/activation_support_3_11",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_11/04_production_5ps/raw_features.csv",
+      "source_frame": 18,
+      "production_time_ps": 5.9
+    },
+    "transverse_A": {
+      "mean_A": 1.9175017619242933,
+      "p10_A": 1.518667666236151,
+      "median_A": 1.9926141645230513,
+      "p90_A": 2.2391961331676447
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.3375,
+    "n": 2242,
+    "weight_ESS": 24.316089003151507,
+    "dominant_frame_index": 27348,
+    "dominant_fraction": 0.19548836315218027,
+    "dominant_row": {
+      "r_og1_hg1": 1.989967908833177,
+      "r_nleave_hg1": 2.577129272381297,
+      "r_c_og1": 2.664515741041454,
+      "r_c_n": 1.3801267406918365,
+      "r_nalpha_hg1": 1.0589607346020709,
+      "time_ps": 13.449999809265137,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.054548201017034,
+      "r_nalpha_h2": 1.0793580227388557,
+      "q_acyl_A": -1.2843890003496177,
+      "q_act_A": 0.9310071742311061,
+      "q_del_A": -1.518168537779226,
+      "state_index": 21,
+      "state_id": "main57/activation_full_022",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_022/04_production_5ps/raw_features.csv",
+      "source_frame": 49,
+      "production_time_ps": 7.45
+    },
+    "transverse_A": {
+      "mean_A": 0.6000782942258518,
+      "p10_A": 0.25689056498534585,
+      "median_A": 0.4248188236212811,
+      "p90_A": 1.3813837546009657
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.3625,
+    "n": 2662,
+    "weight_ESS": 185.43359341185786,
+    "dominant_frame_index": 27372,
+    "dominant_fraction": 0.04572991835139431,
+    "dominant_row": {
+      "r_og1_hg1": 1.8474425333493036,
+      "r_nleave_hg1": 2.333791053225698,
+      "r_c_og1": 2.461743763651353,
+      "r_c_n": 1.3461041097742992,
+      "r_nalpha_hg1": 1.0707302496859237,
+      "time_ps": 14.649999618530273,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0415707295268415,
+      "r_nalpha_h2": 1.0748338256585357,
+      "q_acyl_A": -1.1156396538770539,
+      "q_act_A": 0.77671228366338,
+      "q_del_A": -1.2630608035397741,
+      "state_index": 21,
+      "state_id": "main57/activation_full_022",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_022/04_production_5ps/raw_features.csv",
+      "source_frame": 73,
+      "production_time_ps": 8.65
+    },
+    "transverse_A": {
+      "mean_A": 0.8398280973335055,
+      "p10_A": 0.29020998835236805,
+      "median_A": 0.7761236393929173,
+      "p90_A": 1.50086260986577
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.3875,
+    "n": 481,
+    "weight_ESS": 100.93639289687273,
+    "dominant_frame_index": 32223,
+    "dominant_fraction": 0.053691392219139,
+    "dominant_row": {
+      "r_og1_hg1": 1.5986553003741766,
+      "r_nleave_hg1": 2.4246272203285044,
+      "r_c_og1": 2.0943469135606825,
+      "r_c_n": 1.4720001237163,
+      "r_nalpha_hg1": 1.0601604403533524,
+      "time_ps": 62.20000076293945,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0068730596189255,
+      "r_nalpha_h2": 1.0870069295980778,
+      "q_acyl_A": -0.6223467898443824,
+      "q_act_A": 0.5384948600208241,
+      "q_del_A": -1.364466779975152,
+      "state_index": 24,
+      "state_id": "main57/activation_full_025",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_025/14_production_5ps/raw_features.csv",
+      "source_frame": 24,
+      "production_time_ps": 56.2
+    },
+    "transverse_A": {
+      "mean_A": 0.28354982764941294,
+      "p10_A": 0.09301463956369081,
+      "median_A": 0.26004017792963374,
+      "p90_A": 0.5302349469341048
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.4125,
+    "n": 528,
+    "weight_ESS": 89.00059605252366,
+    "dominant_frame_index": 34622,
+    "dominant_fraction": 0.05646572888830085,
+    "dominant_row": {
+      "r_og1_hg1": 2.2084438645492472,
+      "r_nleave_hg1": 2.4091927423888633,
+      "r_c_og1": 2.0851323111093003,
+      "r_c_n": 1.3467836407040867,
+      "r_nalpha_hg1": 1.0307520239778767,
+      "time_ps": 52.150001525878906,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.02015871535533,
+      "r_nalpha_h2": 1.0651870102479433,
+      "q_acyl_A": -0.7383486704052136,
+      "q_act_A": 1.1776918405713706,
+      "q_del_A": -1.3784407184109866,
+      "state_index": 26,
+      "state_id": "main57/activation_full_027",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_027/12_production_5ps/raw_features.csv",
+      "source_frame": 23,
+      "production_time_ps": 46.15
+    },
+    "transverse_A": {
+      "mean_A": 0.22088090202509075,
+      "p10_A": 0.07359619769323084,
+      "median_A": 0.20724127094519582,
+      "p90_A": 0.4596755201332586
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.4375,
+    "n": 1061,
+    "weight_ESS": 148.17621771316774,
+    "dominant_frame_index": 34028,
+    "dominant_fraction": 0.061916380217443334,
+    "dominant_row": {
+      "r_og1_hg1": 2.214336203413257,
+      "r_nleave_hg1": 2.039741677438843,
+      "r_c_og1": 2.1224352745403627,
+      "r_c_n": 1.4213533376991474,
+      "r_nalpha_hg1": 1.010847598698851,
+      "time_ps": 22.450000762939453,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.054950753024001,
+      "r_nalpha_h2": 1.0504493299519382,
+      "q_acyl_A": -0.7010819368412153,
+      "q_act_A": 1.2034886047144062,
+      "q_del_A": -1.028894078739992,
+      "state_index": 26,
+      "state_id": "main57/activation_full_027",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_027/06_production_5ps/raw_features.csv",
+      "source_frame": 29,
+      "production_time_ps": 16.45
+    },
+    "transverse_A": {
+      "mean_A": 0.20390725017414954,
+      "p10_A": 0.07194795801632245,
+      "median_A": 0.18547985554564597,
+      "p90_A": 0.351237151389249
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.4625,
+    "n": 1620,
+    "weight_ESS": 574.9112347308926,
+    "dominant_frame_index": 35382,
+    "dominant_fraction": 0.02034353559337459,
+    "dominant_row": {
+      "r_og1_hg1": 2.2804801879926377,
+      "r_nleave_hg1": 2.0297515531687007,
+      "r_c_og1": 2.0052372672386363,
+      "r_c_n": 1.4270605945846484,
+      "r_nalpha_hg1": 1.0091808847604398,
+      "time_ps": 25.149999618530273,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0241190140800507,
+      "r_nalpha_h2": 1.074275865038879,
+      "q_acyl_A": -0.5781766726539879,
+      "q_act_A": 1.271299303232198,
+      "q_del_A": -1.020570668408261,
+      "state_index": 27,
+      "state_id": "main57/activation_full_028",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_028/06_production_5ps/raw_features.csv",
+      "source_frame": 83,
+      "production_time_ps": 19.15
+    },
+    "transverse_A": {
+      "mean_A": 0.17790546229754342,
+      "p10_A": 0.06369658513581505,
+      "median_A": 0.16857557244783497,
+      "p90_A": 0.3175094068730566
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.4875,
+    "n": 1896,
+    "weight_ESS": 789.6040874089816,
+    "dominant_frame_index": 38944,
+    "dominant_fraction": 0.010763307393394025,
+    "dominant_row": {
+      "r_og1_hg1": 2.4698813900035916,
+      "r_nleave_hg1": 2.130626168254536,
+      "r_c_og1": 1.8938717964281653,
+      "r_c_n": 1.418630087524173,
+      "r_nalpha_hg1": 1.059352019871449,
+      "time_ps": 73.25,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0213968470716182,
+      "r_nalpha_h2": 1.2058702551611957,
+      "q_acyl_A": -0.4752417089039922,
+      "q_act_A": 1.4105293701321426,
+      "q_del_A": -1.071274148383087,
+      "state_index": 29,
+      "state_id": "main57/activation_full_030",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_030/16_production_5ps/raw_features.csv",
+      "source_frame": 45,
+      "production_time_ps": 67.25
+    },
+    "transverse_A": {
+      "mean_A": 0.18316109330683578,
+      "p10_A": 0.05744376970474816,
+      "median_A": 0.16377536541232648,
+      "p90_A": 0.32739199240102884
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.5125,
+    "n": 1384,
+    "weight_ESS": 747.0370157539259,
+    "dominant_frame_index": 39960,
+    "dominant_fraction": 0.01226827553860865,
+    "dominant_row": {
+      "r_og1_hg1": 2.530597161823349,
+      "r_nleave_hg1": 2.008011047003651,
+      "r_c_og1": 1.9015688876329713,
+      "r_c_n": 1.4763596906255507,
+      "r_nalpha_hg1": 1.063171547913732,
+      "time_ps": 59.04999923706055,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0396149915131487,
+      "r_nalpha_h2": 1.1152668114072988,
+      "q_acyl_A": -0.42520919700742055,
+      "q_act_A": 1.4674256139096171,
+      "q_del_A": -0.9448394990899189,
+      "state_index": 30,
+      "state_id": "main57/activation_full_031",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_031/13_production_5ps/raw_features.csv",
+      "source_frame": 61,
+      "production_time_ps": 53.05
+    },
+    "transverse_A": {
+      "mean_A": 0.16571353268071723,
+      "p10_A": 0.0523066424564153,
+      "median_A": 0.14866784167175362,
+      "p90_A": 0.2929589222274165
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 0.9980386549035316,
+          "unweighted": 0.9978323699421965
+        },
+        "14559": {
+          "weighted": 0.0019613450964682567,
+          "unweighted": 0.002167630057803468
+        }
+      }
+    }
+  },
+  {
+    "s": 0.5375000000000001,
+    "n": 661,
+    "weight_ESS": 60.593201299365234,
+    "dominant_frame_index": 37748,
+    "dominant_fraction": 0.1203797343786017,
+    "dominant_row": {
+      "r_og1_hg1": 2.593151136777336,
+      "r_nleave_hg1": 1.9957395418319965,
+      "r_c_og1": 1.9365448407280992,
+      "r_c_n": 1.5174481956765422,
+      "r_nalpha_hg1": 0.9861658369263383,
+      "time_ps": 13.449999809265137,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9739231445758308,
+      "r_nalpha_h2": 1.185913768491779,
+      "q_acyl_A": -0.41909664505155697,
+      "q_act_A": 1.6069852998509977,
+      "q_del_A": -1.0095737049056583,
+      "state_index": 29,
+      "state_id": "main57/activation_full_030",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_full_030/04_production_5ps/raw_features.csv",
+      "source_frame": 49,
+      "production_time_ps": 7.45
+    },
+    "transverse_A": {
+      "mean_A": 0.18201624152153548,
+      "p10_A": 0.061544748060551865,
+      "median_A": 0.16487988396359055,
+      "p90_A": 0.3495871550944489
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 0.9956953008311688,
+          "unweighted": 0.9939485627836612
+        },
+        "14559": {
+          "weighted": 0.004304699168831251,
+          "unweighted": 0.006051437216338881
+        }
+      }
+    }
+  },
+  {
+    "s": 0.5625,
+    "n": 1459,
+    "weight_ESS": 910.4020178968163,
+    "dominant_frame_index": 41255,
+    "dominant_fraction": 0.007117139194949089,
+    "dominant_row": {
+      "r_og1_hg1": 2.2358326830357993,
+      "r_nleave_hg1": 2.083995415153103,
+      "r_c_og1": 1.5558435246431406,
+      "r_c_n": 1.611205916236187,
+      "r_nalpha_hg1": 1.0299918054998054,
+      "time_ps": 58.79999923706055,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9894733905875871,
+      "r_nalpha_h2": 1.1443347144632066,
+      "q_acyl_A": 0.055362391593046345,
+      "q_act_A": 1.205840877535994,
+      "q_del_A": -1.0540036096532974,
+      "state_index": 31,
+      "state_id": "main57/delivery_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_001/13_production_5ps/raw_features.csv",
+      "source_frame": 56,
+      "production_time_ps": 52.8
+    },
+    "transverse_A": {
+      "mean_A": 0.12419475917499853,
+      "p10_A": 0.04105944569667933,
+      "median_A": 0.11490057259601057,
+      "p90_A": 0.22565287137340048
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.5874999999999999,
+    "n": 2141,
+    "weight_ESS": 1595.3603220374753,
+    "dominant_frame_index": 41428,
+    "dominant_fraction": 0.004132364458930538,
+    "dominant_row": {
+      "r_og1_hg1": 2.105679983137599,
+      "r_nleave_hg1": 2.0209032644581852,
+      "r_c_og1": 1.599388225184292,
+      "r_c_n": 1.7034261877391252,
+      "r_nalpha_hg1": 1.009714005431333,
+      "time_ps": 67.44999694824219,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0017945782831124,
+      "r_nalpha_h2": 1.0598994342153965,
+      "q_acyl_A": 0.10403796255483333,
+      "q_act_A": 1.0959659777062662,
+      "q_del_A": -1.0111892590268523,
+      "state_index": 31,
+      "state_id": "main57/delivery_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_001/15_production_5ps/raw_features.csv",
+      "source_frame": 29,
+      "production_time_ps": 61.45
+    },
+    "transverse_A": {
+      "mean_A": 0.14933882605861756,
+      "p10_A": 0.0535539681370335,
+      "median_A": 0.1357149108245501,
+      "p90_A": 0.26714749232576823
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.6125,
+    "n": 1729,
+    "weight_ESS": 1036.6657389842358,
+    "dominant_frame_index": 41267,
+    "dominant_fraction": 0.007187855115084307,
+    "dominant_row": {
+      "r_og1_hg1": 2.2540983883585657,
+      "r_nleave_hg1": 2.052352828846476,
+      "r_c_og1": 1.5470591956969775,
+      "r_c_n": 1.6625729859276823,
+      "r_nalpha_hg1": 1.0892651233642892,
+      "time_ps": 59.400001525878906,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0338400166309438,
+      "r_nalpha_h2": 1.087130879861227,
+      "q_acyl_A": 0.11551379023070485,
+      "q_act_A": 1.1648332649942765,
+      "q_del_A": -0.9630877054821867,
+      "state_index": 31,
+      "state_id": "main57/delivery_full_001",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_001/13_production_5ps/raw_features.csv",
+      "source_frame": 68,
+      "production_time_ps": 53.4
+    },
+    "transverse_A": {
+      "mean_A": 0.14520433558253137,
+      "p10_A": 0.05550642370817325,
+      "median_A": 0.13333026686032134,
+      "p90_A": 0.25665676954536676
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.6375,
+    "n": 2252,
+    "weight_ESS": 414.42324628833506,
+    "dominant_frame_index": 45578,
+    "dominant_fraction": 0.024765055105717602,
+    "dominant_row": {
+      "r_og1_hg1": 2.1421645851285325,
+      "r_nleave_hg1": 1.9579611881884251,
+      "r_c_og1": 1.4431490294448244,
+      "r_c_n": 1.641471423971786,
+      "r_nalpha_hg1": 1.0196378992690616,
+      "time_ps": 14.949999809265137,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9996887328522261,
+      "r_nalpha_h2": 1.1739207800362843,
+      "q_acyl_A": 0.19832239452696165,
+      "q_act_A": 1.122526685859471,
+      "q_del_A": -0.9383232889193636,
+      "state_index": 35,
+      "state_id": "main57/delivery_full_005",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_005/04_production_5ps/raw_features.csv",
+      "source_frame": 79,
+      "production_time_ps": 8.95
+    },
+    "transverse_A": {
+      "mean_A": 0.181117046855573,
+      "p10_A": 0.07325459353052728,
+      "median_A": 0.18203816912568224,
+      "p90_A": 0.2874516981834062
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 0.9991094432930213,
+          "unweighted": 0.9995559502664298
+        },
+        "14559": {
+          "weighted": 0.0008905567069787703,
+          "unweighted": 0.0004440497335701599
+        }
+      }
+    }
+  },
+  {
+    "s": 0.6625000000000001,
+    "n": 1975,
+    "weight_ESS": 476.87313244325725,
+    "dominant_frame_index": 48593,
+    "dominant_fraction": 0.02957441383912943,
+    "dominant_row": {
+      "r_og1_hg1": 2.449156071857141,
+      "r_nleave_hg1": 1.811629207991397,
+      "r_c_og1": 1.4124049596939732,
+      "r_c_n": 1.8778834942349172,
+      "r_nalpha_hg1": 1.055255844303036,
+      "time_ps": 35.70000076293945,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0129816307432493,
+      "r_nalpha_h2": 1.0607695237419985,
+      "q_acyl_A": 0.465478534540944,
+      "q_act_A": 1.393900227554105,
+      "q_del_A": -0.756373363688361,
+      "state_index": 37,
+      "state_id": "main57/delivery_full_007",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_007/08_production_5ps/raw_features.csv",
+      "source_frame": 94,
+      "production_time_ps": 29.7
+    },
+    "transverse_A": {
+      "mean_A": 0.1588401896606313,
+      "p10_A": 0.05886424116288976,
+      "median_A": 0.14940148047166196,
+      "p90_A": 0.2771851170585759
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.6875,
+    "n": 1331,
+    "weight_ESS": 426.9306569677381,
+    "dominant_frame_index": 81392,
+    "dominant_fraction": 0.028677911573053178,
+    "dominant_row": {
+      "r_og1_hg1": 2.210088518846805,
+      "r_nleave_hg1": 1.450540394523,
+      "r_c_og1": 1.4858190380085936,
+      "r_c_n": 1.5361984313695032,
+      "r_nalpha_hg1": 1.1489607588724933,
+      "time_ps": 29.649999618530273,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0089091656553772,
+      "r_nalpha_h2": 1.114221937683814,
+      "q_acyl_A": 0.050379393360909575,
+      "q_act_A": 1.0611277599743116,
+      "q_del_A": -0.3015796356505067,
+      "state_index": 98,
+      "state_id": "geranium_mixing6/D008_from_D010",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/final_candidate_20261127/geranium_derived/mixing_checks_20261127/D008_from_D010/07_production_5ps/raw_features.csv",
+      "source_frame": 93,
+      "production_time_ps": 24.65
+    },
+    "transverse_A": {
+      "mean_A": 0.15804606571035285,
+      "p10_A": 0.05494049534762661,
+      "median_A": 0.14585026078757565,
+      "p90_A": 0.27611151686917873
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.7124999999999999,
+    "n": 1046,
+    "weight_ESS": 393.43828427407595,
+    "dominant_frame_index": 53159,
+    "dominant_fraction": 0.014786324726100164,
+    "dominant_row": {
+      "r_og1_hg1": 2.4617937609377774,
+      "r_nleave_hg1": 1.3846983517741975,
+      "r_c_og1": 1.3401612278661224,
+      "r_c_n": 2.008319592122595,
+      "r_nalpha_hg1": 1.2440410074627408,
+      "time_ps": 69.0,
+      "hg1_owner": 13905,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0034261255907302,
+      "r_nalpha_h2": 1.0736504490534542,
+      "q_acyl_A": 0.6681583642564728,
+      "q_act_A": 1.2177527534750365,
+      "q_del_A": -0.1406573443114567,
+      "state_index": 40,
+      "state_id": "main57/delivery_full_010",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_010/15_production_5ps/raw_features.csv",
+      "source_frame": 60,
+      "production_time_ps": 63.0
+    },
+    "transverse_A": {
+      "mean_A": 0.16142220844095737,
+      "p10_A": 0.06103746078299229,
+      "median_A": 0.15408315571685507,
+      "p90_A": 0.27969485868575167
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 0.9672002012266709,
+          "unweighted": 0.9952198852772467
+        },
+        "19929": {
+          "weighted": 0.03279979877332907,
+          "unweighted": 0.004780114722753346
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.7375,
+    "n": 1040,
+    "weight_ESS": 68.24623519888539,
+    "dominant_frame_index": 52617,
+    "dominant_fraction": 0.06803325776022416,
+    "dominant_row": {
+      "r_og1_hg1": 2.6248783908327655,
+      "r_nleave_hg1": 1.2443906224428984,
+      "r_c_og1": 1.4396175307072092,
+      "r_c_n": 2.1289876767301514,
+      "r_nalpha_hg1": 1.3840081844721914,
+      "time_ps": 41.900001525878906,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0021019270909306,
+      "r_nalpha_h2": 1.0412871466186073,
+      "q_acyl_A": 0.6893701460229422,
+      "q_act_A": 1.240870206360574,
+      "q_del_A": 0.13961756202929299,
+      "state_index": 40,
+      "state_id": "main57/delivery_full_010",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_010/10_production_5ps/raw_features.csv",
+      "source_frame": 18,
+      "production_time_ps": 35.9
+    },
+    "transverse_A": {
+      "mean_A": 0.206217273848628,
+      "p10_A": 0.08627547103494797,
+      "median_A": 0.20840763360147443,
+      "p90_A": 0.3162358504531681
+    },
+    "owners": {
+      "hg1_owner": {
+        "13905": {
+          "weighted": 0.06876434607878913,
+          "unweighted": 0.39615384615384613
+        },
+        "19929": {
+          "weighted": 0.9312356539212108,
+          "unweighted": 0.6038461538461538
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.7625,
+    "n": 1065,
+    "weight_ESS": 7.609069782785215,
+    "dominant_frame_index": 54526,
+    "dominant_fraction": 0.2904906440299514,
+    "dominant_row": {
+      "r_og1_hg1": 2.6444748825132462,
+      "r_nleave_hg1": 1.1872648693679155,
+      "r_c_og1": 1.3364003178356603,
+      "r_c_n": 2.1564972488433716,
+      "r_nalpha_hg1": 1.4918401175588536,
+      "time_ps": 72.3499984741211,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.049065290804162,
+      "r_nalpha_h2": 1.0654458357632777,
+      "q_acyl_A": 0.8200969310077113,
+      "q_act_A": 1.1526347649543927,
+      "q_del_A": 0.30457524819093806,
+      "state_index": 41,
+      "state_id": "main57/delivery_full_011",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_011/16_production_5ps/raw_features.csv",
+      "source_frame": 27,
+      "production_time_ps": 66.35
+    },
+    "transverse_A": {
+      "mean_A": 0.3606380388768974,
+      "p10_A": 0.20112241746012044,
+      "median_A": 0.33826332981954527,
+      "p90_A": 0.5718019050396219
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.7875000000000001,
+    "n": 1100,
+    "weight_ESS": 14.642785302178174,
+    "dominant_frame_index": 56511,
+    "dominant_fraction": 0.18028767472890725,
+    "dominant_row": {
+      "r_og1_hg1": 2.696034084144089,
+      "r_nleave_hg1": 1.1148935359236933,
+      "r_c_og1": 1.3863693291436825,
+      "r_c_n": 2.256194459614881,
+      "r_nalpha_hg1": 1.602529150318621,
+      "time_ps": 41.599998474121094,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0346311367417083,
+      "r_nalpha_h2": 1.03994833625785,
+      "q_acyl_A": 0.8698251304711986,
+      "q_act_A": 1.093504933825468,
+      "q_del_A": 0.48763561439492764,
+      "state_index": 43,
+      "state_id": "main57/delivery_full_013",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_013/10_production_5ps/raw_features.csv",
+      "source_frame": 12,
+      "production_time_ps": 35.6
+    },
+    "transverse_A": {
+      "mean_A": 0.3779772788588796,
+      "p10_A": 0.29697919356320507,
+      "median_A": 0.3998273271750462,
+      "p90_A": 0.42808087923377064
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.8125,
+    "n": 1362,
+    "weight_ESS": 39.96722140678475,
+    "dominant_frame_index": 55930,
+    "dominant_fraction": 0.08629624383255272,
+    "dominant_row": {
+      "r_og1_hg1": 2.749202826790053,
+      "r_nleave_hg1": 1.0708400907633628,
+      "r_c_og1": 1.3751890368363533,
+      "r_c_n": 2.2730490141780946,
+      "r_nalpha_hg1": 1.6224695355227463,
+      "time_ps": 12.550000190734863,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0135742942409824,
+      "r_nalpha_h2": 1.052586889632022,
+      "q_acyl_A": 0.8978599773417413,
+      "q_act_A": 1.1267332912673065,
+      "q_del_A": 0.5516294447593835,
+      "state_index": 43,
+      "state_id": "main57/delivery_full_013",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_013/04_production_5ps/raw_features.csv",
+      "source_frame": 31,
+      "production_time_ps": 6.55
+    },
+    "transverse_A": {
+      "mean_A": 0.3330748818989884,
+      "p10_A": 0.1561616750969435,
+      "median_A": 0.3497144221466995,
+      "p90_A": 0.48061700119155837
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.8374999999999999,
+    "n": 2220,
+    "weight_ESS": 249.20778828643017,
+    "dominant_frame_index": 61936,
+    "dominant_fraction": 0.022616068552779808,
+    "dominant_row": {
+      "r_og1_hg1": 2.9628801437335484,
+      "r_nleave_hg1": 1.0597052752647416,
+      "r_c_og1": 1.3980716492456249,
+      "r_c_n": 2.2109410456573797,
+      "r_nalpha_hg1": 1.8571959030896006,
+      "time_ps": 52.849998474121094,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0561753730816543,
+      "r_nalpha_h2": 1.009128638541042,
+      "q_acyl_A": 0.8128693964117548,
+      "q_act_A": 1.1056842406439478,
+      "q_del_A": 0.797490627824859,
+      "state_index": 47,
+      "state_id": "main57/delivery_full_017",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_017/12_production_5ps/raw_features.csv",
+      "source_frame": 37,
+      "production_time_ps": 46.85
+    },
+    "transverse_A": {
+      "mean_A": 0.2240964085058801,
+      "p10_A": 0.08554857253888144,
+      "median_A": 0.2245340657371951,
+      "p90_A": 0.3805632461705039
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.8625,
+    "n": 3603,
+    "weight_ESS": 131.40231150962555,
+    "dominant_frame_index": 63876,
+    "dominant_fraction": 0.06859883992906617,
+    "dominant_row": {
+      "r_og1_hg1": 2.83022324594539,
+      "r_nleave_hg1": 1.0623873642465593,
+      "r_c_og1": 1.3080999428048377,
+      "r_c_n": 2.1267714181094335,
+      "r_nalpha_hg1": 2.146816942723995,
+      "time_ps": 19.850000381469727,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0207579986019277,
+      "r_nalpha_h2": 1.0718698019220412,
+      "q_acyl_A": 0.8186714753045958,
+      "q_act_A": 0.6834063032213948,
+      "q_del_A": 1.0844295784774358,
+      "state_index": 49,
+      "state_id": "main57/delivery_full_019",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_019/05_production_5ps/raw_features.csv",
+      "source_frame": 77,
+      "production_time_ps": 13.85
+    },
+    "transverse_A": {
+      "mean_A": 0.24864495836310832,
+      "p10_A": 0.11665611887643101,
+      "median_A": 0.23784547889566782,
+      "p90_A": 0.38618551828835895
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.8875,
+    "n": 2715,
+    "weight_ESS": 472.6805149204258,
+    "dominant_frame_index": 62528,
+    "dominant_fraction": 0.025410923220254712,
+    "dominant_row": {
+      "r_og1_hg1": 2.6582481820864117,
+      "r_nleave_hg1": 1.0778618168120813,
+      "r_c_og1": 1.3426759080471815,
+      "r_c_n": 2.1377672277013042,
+      "r_nalpha_hg1": 2.2256988351183375,
+      "time_ps": 17.450000762939453,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0552478485688006,
+      "r_nalpha_h2": 1.023966455062467,
+      "q_acyl_A": 0.7950913196541227,
+      "q_act_A": 0.4325493469680741,
+      "q_del_A": 1.1478370183062563,
+      "state_index": 48,
+      "state_id": "main57/delivery_full_018",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_018/05_production_5ps/raw_features.csv",
+      "source_frame": 29,
+      "production_time_ps": 11.45
+    },
+    "transverse_A": {
+      "mean_A": 0.23071432910315542,
+      "p10_A": 0.0923540961298349,
+      "median_A": 0.22402996424951538,
+      "p90_A": 0.3861697650066487
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.9125000000000001,
+    "n": 2535,
+    "weight_ESS": 574.7823161746095,
+    "dominant_frame_index": 66446,
+    "dominant_fraction": 0.015855079623966154,
+    "dominant_row": {
+      "r_og1_hg1": 3.113288668789936,
+      "r_nleave_hg1": 1.0777713102790618,
+      "r_c_og1": 1.3979993552670182,
+      "r_c_n": 2.491519850990942,
+      "r_nalpha_hg1": 2.2884943213825615,
+      "time_ps": 18.350000381469727,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0162792538919898,
+      "r_nalpha_h2": 1.037317289690954,
+      "q_acyl_A": 1.0935204957239237,
+      "q_act_A": 0.8247943474073747,
+      "q_del_A": 1.2107230111034997,
+      "state_index": 51,
+      "state_id": "main57/delivery_full_021",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_021/05_production_5ps/raw_features.csv",
+      "source_frame": 47,
+      "production_time_ps": 12.35
+    },
+    "transverse_A": {
+      "mean_A": 0.24793880290446715,
+      "p10_A": 0.09280958278368484,
+      "median_A": 0.23401286042490188,
+      "p90_A": 0.41853722958901024
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.9375,
+    "n": 2207,
+    "weight_ESS": 331.28791311170164,
+    "dominant_frame_index": 70115,
+    "dominant_fraction": 0.03447240533250023,
+    "dominant_row": {
+      "r_og1_hg1": 2.989433790700689,
+      "r_nleave_hg1": 0.9960702533454612,
+      "r_c_og1": 1.3809952711078208,
+      "r_c_n": 2.550727744899879,
+      "r_nalpha_hg1": 2.3364883099644844,
+      "time_ps": 71.80000305175781,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 0.9902854540622713,
+      "r_nalpha_h2": 1.0012164222567745,
+      "q_acyl_A": 1.169732473792058,
+      "q_act_A": 0.6529454807362045,
+      "q_del_A": 1.3404180566190234,
+      "state_index": 53,
+      "state_id": "main57/delivery_full_023",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_023/16_production_5ps/raw_features.csv",
+      "source_frame": 16,
+      "production_time_ps": 65.8
+    },
+    "transverse_A": {
+      "mean_A": 0.28283721868393735,
+      "p10_A": 0.11263784096334264,
+      "median_A": 0.27488580425150194,
+      "p90_A": 0.4767016025656383
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.9624999999999999,
+    "n": 1898,
+    "weight_ESS": 114.91268505491819,
+    "dominant_frame_index": 69625,
+    "dominant_fraction": 0.059911605154204614,
+    "dominant_row": {
+      "r_og1_hg1": 2.4048958004904457,
+      "r_nleave_hg1": 1.0255913069520934,
+      "r_c_og1": 1.3504330011381442,
+      "r_c_n": 2.5693358718097223,
+      "r_nalpha_hg1": 2.453454452377767,
+      "time_ps": 47.29999923706055,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.016603611336028,
+      "r_nalpha_h2": 1.0025551182190502,
+      "q_acyl_A": 1.218902870671578,
+      "q_act_A": -0.048558651887321336,
+      "q_del_A": 1.4278631454256736,
+      "state_index": 53,
+      "state_id": "main57/delivery_full_023",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_023/11_production_5ps/raw_features.csv",
+      "source_frame": 26,
+      "production_time_ps": 41.3
+    },
+    "transverse_A": {
+      "mean_A": 0.31498648172571764,
+      "p10_A": 0.12164309920718541,
+      "median_A": 0.29433023455645546,
+      "p90_A": 0.5832314569171316
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 0.9875,
+    "n": 1721,
+    "weight_ESS": 126.19516343685208,
+    "dominant_frame_index": 72091,
+    "dominant_fraction": 0.05845401909703022,
+    "dominant_row": {
+      "r_og1_hg1": 2.706010681496492,
+      "r_nleave_hg1": 0.9926743120442607,
+      "r_c_og1": 1.3711412214811383,
+      "r_c_n": 2.7186210081264486,
+      "r_nalpha_hg1": 2.5029760476499847,
+      "time_ps": 40.599998474121094,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0003192941886174,
+      "r_nalpha_h2": 1.049028754899449,
+      "q_acyl_A": 1.3474797866453103,
+      "q_act_A": 0.20303463384650744,
+      "q_del_A": 1.510301735605724,
+      "state_index": 55,
+      "state_id": "main57/delivery_full_025",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_025/09_production_5ps/raw_features.csv",
+      "source_frame": 92,
+      "production_time_ps": 34.6
+    },
+    "transverse_A": {
+      "mean_A": 0.32437799182984295,
+      "p10_A": 0.12946488092893976,
+      "median_A": 0.3093266296872155,
+      "p90_A": 0.5102678951033909
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 1.0125,
+    "n": 1070,
+    "weight_ESS": 65.03324941708155,
+    "dominant_frame_index": 75381,
+    "dominant_fraction": 0.06629692055542742,
+    "dominant_row": {
+      "r_og1_hg1": 3.014017123139642,
+      "r_nleave_hg1": 1.0325130867599668,
+      "r_c_og1": 1.3471385201798027,
+      "r_c_n": 2.836112514266818,
+      "r_nalpha_hg1": 2.7839996829711966,
+      "time_ps": 14.100000381469727,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.00524998896714,
+      "r_nalpha_h2": 1.0090199087788008,
+      "q_acyl_A": 1.4889739940870153,
+      "q_act_A": 0.2300174401684454,
+      "q_del_A": 1.7514865962112298,
+      "state_index": 60,
+      "state_id": "old_targets4/delivery_028_qdel_1p75",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_028_qdel_1p75/04_production_5ps/raw_features.csv",
+      "source_frame": 82,
+      "production_time_ps": 9.1
+    },
+    "transverse_A": {
+      "mean_A": 0.42528114229081976,
+      "p10_A": 0.17780840031302814,
+      "median_A": 0.42904340328981455,
+      "p90_A": 0.6524747448875922
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 1.0375,
+    "n": 524,
+    "weight_ESS": 47.69670338351516,
+    "dominant_frame_index": 75034,
+    "dominant_fraction": 0.08555682825091553,
+    "dominant_row": {
+      "r_og1_hg1": 3.4860127563577175,
+      "r_nleave_hg1": 1.054490870921005,
+      "r_c_og1": 1.283244747702225,
+      "r_c_n": 3.3811860888769174,
+      "r_nalpha_hg1": 2.5933295929063136,
+      "time_ps": 16.75,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.086226082340325,
+      "r_nalpha_h2": 1.0199684614309095,
+      "q_acyl_A": 2.0979413411746926,
+      "q_act_A": 0.8926831634514039,
+      "q_del_A": 1.5388387219853086,
+      "state_index": 59,
+      "state_id": "old_targets4/delivery_027_qdel_1p50",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_027_qdel_1p50/05_production_5ps/raw_features.csv",
+      "source_frame": 35,
+      "production_time_ps": 11.75
+    },
+    "transverse_A": {
+      "mean_A": 0.5116100204368959,
+      "p10_A": 0.1915350170180023,
+      "median_A": 0.5252491170677838,
+      "p90_A": 0.8325742900772061
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 1.0625,
+    "n": 239,
+    "weight_ESS": 54.32903529898593,
+    "dominant_frame_index": 75616,
+    "dominant_fraction": 0.07396902760287596,
+    "dominant_row": {
+      "r_og1_hg1": 2.7461524434675604,
+      "r_nleave_hg1": 1.001347993564241,
+      "r_c_og1": 1.3487564801286418,
+      "r_c_n": 2.9606141068269882,
+      "r_nalpha_hg1": 3.0346260564332144,
+      "time_ps": 25.850000381469727,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.052937391528047,
+      "r_nalpha_h2": 1.0038452327972616,
+      "q_acyl_A": 1.6118576266983464,
+      "q_act_A": -0.288473612965654,
+      "q_del_A": 2.0332780628689733,
+      "state_index": 60,
+      "state_id": "old_targets4/delivery_028_qdel_1p75",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_028_qdel_1p75/07_production_5ps/raw_features.csv",
+      "source_frame": 17,
+      "production_time_ps": 20.85
+    },
+    "transverse_A": {
+      "mean_A": 0.5529158585630519,
+      "p10_A": 0.1847897666657564,
+      "median_A": 0.5347002061092286,
+      "p90_A": 0.9123181595850876
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  },
+  {
+    "s": 1.0875,
+    "n": 15,
+    "weight_ESS": 7.4106954734674035,
+    "dominant_frame_index": 75489,
+    "dominant_fraction": 0.23501064160474922,
+    "dominant_row": {
+      "r_og1_hg1": 3.0090292674966457,
+      "r_nleave_hg1": 1.0085480921560883,
+      "r_c_og1": 1.325118785278218,
+      "r_c_n": 3.232282124139859,
+      "r_nalpha_hg1": 3.05427362161666,
+      "time_ps": 19.5,
+      "hg1_owner": 19929,
+      "nalpha_h1_owner": 13905,
+      "nalpha_h2_owner": 13905,
+      "r_nalpha_h1": 1.0622158037916367,
+      "r_nalpha_h2": 1.028761145951261,
+      "q_acyl_A": 1.907163338861641,
+      "q_act_A": -0.045244354120014485,
+      "q_del_A": 2.045725529460572,
+      "state_index": 60,
+      "state_id": "old_targets4/delivery_028_qdel_1p75",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/additional_sampling_20261126/delivery_028_qdel_1p75/05_production_5ps/raw_features.csv",
+      "source_frame": 90,
+      "production_time_ps": 14.5
+    },
+    "transverse_A": {
+      "mean_A": 0.5874570963776846,
+      "p10_A": 0.46013081587457755,
+      "median_A": 0.5324870351701879,
+      "p90_A": 0.7919603258731739
+    },
+    "owners": {
+      "hg1_owner": {
+        "19929": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h1_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      },
+      "nalpha_h2_owner": {
+        "13905": {
+          "weighted": 1.0,
+          "unweighted": 1.0
+        }
+      }
+    }
+  }
+]

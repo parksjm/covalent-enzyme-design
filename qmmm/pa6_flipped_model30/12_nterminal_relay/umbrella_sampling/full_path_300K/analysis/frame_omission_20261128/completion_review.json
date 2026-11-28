@@ -1,0 +1,25 @@
+{
+  "label": "DIAGNOSTIC ONLY \u2014 NOT FOR PUBLICATION",
+  "process_exit_status": 0,
+  "scientific_diagnostic_checks_passed": true,
+  "primary_analysis_unchanged": true,
+  "original_baseline_files_hashes_unchanged": true,
+  "retained_observation_mapping_exact": true,
+  "counts_changed_only_source_state85_by_one": true,
+  "source_core_pytest_coverage_percent": 93.94,
+  "tests_passed": 3,
+  "coverage_limitation": "Orchestration/plot coverage not instrumented; entire numerical workflow and figure separately verified by completion gates/visual inspection",
+  "plot_visually_reviewed": true,
+  "attempt01_retained_failure": "Numerical fit completed; JSON serialization of tiny complex overlap eigenvalues failed. Explicit 1e-10 imaginary-roundoff gate and real spectrum reporting qualified in attempt02.",
+  "artifact_sha256": {
+    "attempt_02/results/README.md": "e896a2d945e48852271589fba0d88da53f27d8ede250e1eb61acd80a8c302f97",
+    "attempt_02/results/comparison.json": "06fb983d897d05a1aa2b0549dd61c911f0e51cee892fcf33830df4bef727cc54",
+    "attempt_02/results/omitted_observation.json": "b2f35d8c39d7bd631e0debfb89b9682ac0f32c5eae5cafcb3213658970f33bef",
+    "attempt_02/results/profiles.csv": "707e4b78f16e80eefbc1054563e44fa4f51b20c68e1f6bf481dc3c1d5ab49192",
+    "attempt_02/results/refitted_weights.npz": "45780e7895531cbcdf5f44099fe60f8db7db6e8dbcd316c67836d4298ed7964b",
+    "attempt_02/results/scientific_acceptance.json": "5cb513f9cf0030b0dea99a31e812f0b8372e913b087400e8ffb52ecc6e42c964",
+    "attempt_02/results/single_frame_omission.pdf": "a661b93516873ce3bb3c01f26458e1ee49ee91fde0885bec39405df1dfba9b39",
+    "attempt_02/results/single_frame_omission.png": "1d98b93e7b1148854ea925daecbd430bfae7643aeab74dc5efd36ec8c02a2830"
+  },
+  "rollback": "No source data or production analysis changed; preserve both attempt directories; archive diagnostic directory only if requested"
+}

@@ -1,0 +1,31 @@
+{
+  "label": "DIAGNOSTIC ONLY \u2014 NOT FOR PUBLICATION",
+  "baseline": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/checkpoint_001_main70ps_supplement43",
+  "user_intent": "Curiosity-only omit one dominant observation and recompute full MBAR; primary unchanged",
+  "sha256": {
+    "frozen_inputs/dominant_frame_receipt.json": "8b5af9fed58f2b451208c6b002c35aa4ec3dd2d711cccf4e7d7ba9314c703ee7",
+    "frozen_inputs/point.json": "fa4e8f7cd0c1cac909189d9fcabb4c69ebecb8f406959dfdd55151d2eee1fe1e",
+    "frozen_inputs/raw_features.csv": "194fc475bffe69f0080b581bc06e1e1baef91bed1ca7152cf5ba7f5dcb4adc56",
+    "frozen_inputs/sources.json": "99b7a86772a9cd4a6c5142ce3cb4039c25f5f37d352e185099cdb3c9908854f3",
+    "frozen_inputs/weights.npz": "5f89aee210dc5071e8a06d9b1b346ba551bd684c4bae3fd4eb2668c69e39bfdf",
+    "source_snapshot/diagnostic/omission_core.py": "aa532004c894f1ff9ad278094830b46979c0846191ccab15704fedae56542908",
+    "source_snapshot/diagnostic/omission_figures.py": "7a84b80f18a458e9a952b4df10f384fb6f52e2a753865fc93073bd89eef31c61",
+    "source_snapshot/diagnostic/run_omission.py": "9f97499c0142e75ff78cc30635cd71caa4a739b95187c06aa235820c47353a0c",
+    "source_snapshot/diagnostic/test_omission.py": "776d8624fdab7e83512ac0906550f6c736bd3b2d9d2e433f8be3ac89a109a92d",
+    "source_snapshot/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "source_snapshot/nyl12_covalent/neb_umbrella_observables.py": "80fabfb862cfb20816e3d3627e92bb5716bb59082e46a0de83a028f57b5b0217",
+    "source_snapshot/nyl12_covalent/relay_umbrella_cv.py": "967f223bd04bd1303efb3ddd46a915934b1875e6fa350d53da0149d12d47d21f",
+    "source_snapshot/nyl12_covalent/relay_umbrella_projection.py": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc"
+  },
+  "cpu_affinity": 0,
+  "python": "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "CUDA_VISIBLE_DEVICES": "",
+    "JAX_PLATFORMS": "cpu",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "frozen_baseline": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/checkpoint_001_main70ps_supplement43",
+  "rows": 82000,
+  "states": 100,
+  "direct_distances": 5,
+  "CV_identity_checks": 3,
+  "exact_q_order_verified": true,
+  "source_hashes_verified": 922,
+  "discard_once_ps": 5,
+  "intervals": "Weighted empirical 10\u201390% distributions; not confidence intervals",
+  "limitations": "Biased histories remain correlated; sampling convergence unresolved. Distance geometry alone does not establish bond order, product identity or a TS."
+}

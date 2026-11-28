@@ -1,0 +1,17 @@
+{
+  "diagnostic_checks_passed": true,
+  "sampling_converged": false,
+  "accepted_activation_barrier": false,
+  "primary_analysis_unchanged": true,
+  "process_completion": "See ../status.json",
+  "checks": [
+    "Accepted native CSV digest plus state/frame/time/CV match",
+    "Exactly one observation omitted and only its N_k decremented",
+    "Frozen 0.025 bins and s=0.0125 zero",
+    "Baseline PMF and native cross-bias logweight parity",
+    "Robust full 100-state MBAR refit with gauge residual <=1e-7 kBT",
+    "Overlap graph connected at 1e-12",
+    "Fixed-weight local shift matches -kT log(1-share)",
+    "All original sampling files preserved"
+  ]
+}

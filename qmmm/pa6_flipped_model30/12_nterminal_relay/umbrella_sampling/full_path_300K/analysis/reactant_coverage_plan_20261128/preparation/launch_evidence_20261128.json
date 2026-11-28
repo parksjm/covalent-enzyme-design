@@ -1,0 +1,227 @@
+{
+  "utc": "2026-11-28T15:57:30.352908+00:00",
+  "host": "Geranium",
+  "tmux": "nyl12_es_boundary6_20261128: 1 windows (created Sat Nov 28 10:56:52 2026)\n",
+  "controller": {
+    "command": [
+      "/usr/bin/bash",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_six_cpu.sh"
+    ],
+    "cwd": "/data/jpc/covalent-enzyme-design",
+    "ended_utc": null,
+    "env_overrides": {
+      "CUDA_VISIBLE_DEVICES": "",
+      "GERANIUM_BOUNDARY_RELEASE_APPROVED": "PI_20261128_sixCPU_overnight",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "exit_status": null,
+    "input_sha256": {
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/prepared.json": "ea35a86d025ef106c7397fad832a158e9bb5e77740dfad69f39d88e53dad6d4d",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_boundary.py": "c0adedf9fb27f9b11f58d2591cf9e7d8e32a5f1c872eb758aeab689478d80e80",
+      "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reactant_coverage_plan_20261128/preparation/run_six_cpu.sh": "30a28d78fee76df94d34b191a0f4005c177e6fc32bc8ad965cb1d7978b5e1cc5"
+    },
+    "log": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/controller_job/job.log",
+    "session_name": "nyl12_es_boundary6_20261128",
+    "started_utc": "2026-11-28T15:56:52.256689Z"
+  },
+  "first_stage_processes": [
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.860460+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_dominant_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_dominant_es/seed.ncrst"
+      },
+      "window": "activation_boundary_01_dominant_es"
+    },
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.626536+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_original_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_original_es/seed.ncrst"
+      },
+      "window": "activation_boundary_02_original_es"
+    },
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.860428+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_dominant_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_dominant_es/seed.ncrst"
+      },
+      "window": "activation_boundary_03_dominant_es"
+    },
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.743593+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_original_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_original_es/seed.ncrst"
+      },
+      "window": "activation_boundary_03_original_es"
+    },
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.696926+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_dominant_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_dominant_es/seed.ncrst"
+      },
+      "window": "activation_boundary_02_dominant_es"
+    },
+    {
+      "command": [
+        "/data/jpc/code/ambertools26/venv/bin/sander",
+        "-O",
+        "-i",
+        "run.mdin",
+        "-p",
+        "topology.prmtop",
+        "-c",
+        "input.ncrst",
+        "-o",
+        "run.mdout",
+        "-r",
+        "restart.ncrst",
+        "-x",
+        "trajectory.nc",
+        "-inf",
+        "mdinfo"
+      ],
+      "started_utc": "2026-11-28T15:57:04.894203+00:00",
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_original_es/01_equilibration_1ps",
+      "short_alias_sources": {
+        "topology.prmtop": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop",
+        "input.ncrst": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_original_es/seed.ncrst"
+      },
+      "window": "activation_boundary_01_original_es"
+    }
+  ],
+  "native_sander_processes": [
+    {
+      "pid": 3581014,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_original_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    },
+    {
+      "pid": 3581015,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_02_dominant_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    },
+    {
+      "pid": 3581016,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_original_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    },
+    {
+      "pid": 3581017,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_03_dominant_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    },
+    {
+      "pid": 3581018,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_dominant_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    },
+    {
+      "pid": 3581019,
+      "cwd": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_boundary_20261128/activation_boundary_01_original_es/01_equilibration_1ps",
+      "command": "/data/jpc/code/ambertools26/venv/bin/sander -O -i run.mdin -p topology.prmtop -c input.ncrst -o run.mdout -r restart.ncrst -x trajectory.nc -inf mdinfo "
+    }
+  ],
+  "scientific_acceptance": "pending; first1ps stages running"
+}

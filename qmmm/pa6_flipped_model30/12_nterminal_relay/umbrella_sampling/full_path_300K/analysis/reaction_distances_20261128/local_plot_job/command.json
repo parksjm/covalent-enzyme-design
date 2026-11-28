@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "15",
+    "taskset",
+    "-c",
+    "0",
+    "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reaction_distances_20261128/render_local.py"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reaction_distances_20261128/plot_distances.py": "4e96a2dd6fd1abab1ed9d8fdcd042b42bb078f026f1227258860c29035fe2b03",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reaction_distances_20261128/render_local.py": "b35f00bc7041cf791c6762f513cf3b78d86d258b9a8f58c4503466a3b0e647d5",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reaction_distances_20261128/retained_rows.csv": "e81106fe1b8a8149b44ee2639554fe4110be3ac6df72afbada075bcb7475bf0c"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/reaction_distances_20261128/local_plot_job/job.log",
+  "session_name": "relay_distance_localplot_20261128",
+  "started_utc": null
+}

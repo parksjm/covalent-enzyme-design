@@ -16,6 +16,23 @@ short new-grid histories, so extending older main histories provides little
 new information there. The raw coordinates and weights are not evidence of
 an electronic-convergence failure and the frame was not removed.
 
+Physical distances identify that dominant observation (s=0.254986, histogram
+center 0.2625) as reactant-like: OG1–HG1=0.9521 Å,
+HG1–leaving-N=4.1486 Å, Nalpha–HG1=1.7658 Å, OG1–C=3.3707 Å and
+scissile C–N=1.3690 Å. These distances show neither completed proton transfer
+nor nucleophilic addition; they do not measure bond order. In the neighboring
+s=0.2875 bin, 90.327% of raw frames place HG1 nearest Nalpha, but that
+population carries only 0.13797% of unbiased weight; OG1-bound HG1 accounts
+for 99.862% of weighted mass. Projected s therefore mixes different local
+geometries, and numerous biased observations need not provide reweighted
+support. Across s=0.1125–0.1625, weighted mean OG1–C increases from 2.5205
+to 2.8989 Å while O–H remains near 0.995 Å and C–N near 1.37 Å, consistent
+with nucleophile retreat without proton transfer in that comparison. The
+corrective grid's lowest q_acyl center (-1.75 Å) does not encompass the
+dominant frame's q_acyl=-2.0018 Å as a center; extending older main histories
+alone does not guarantee repair. Kish weight ESS describes weight
+concentration, not a count of independent configurations.
+
 The measured vertex pileup at s≈0.1566 contributes only 0.179 kcal/mol of the
 3.524 kcal/mol drop from s=0.1125 to 0.1625. It cannot explain the entire early
 hump; that peak itself has weight ESS 110. A smooth path-coordinate diagnostic

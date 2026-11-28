@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-28T15:47:34.089184+00:00",
+  "status": "proposal_only_no_launch",
+  "hypothesis": "The ordinary noncovalent ES geometry is statistically undersupported at q_acyl about -2.0; extending the bias grid tests reactant coverage while paired geometric starts test hidden unrestrained q_del mixing. This does not redefine a chemical intermediate.",
+  "baseline": {
+    "checkpoint": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100/checkpoint_032_main70ps_supplement43",
+    "histories": 100,
+    "frames": 82000,
+    "immutable": true
+  },
+  "proposed_histories": 6,
+  "total_histories_after_addition": 106,
+  "additional_bias_locations": 3,
+  "centers_A": [
+    [
+      -2.0,
+      -1.0
+    ],
+    [
+      -2.0,
+      -0.8
+    ],
+    [
+      -2.0,
+      -0.6
+    ]
+  ],
+  "feature_names": [
+    "q_acyl",
+    "q_act"
+  ],
+  "force_constants_kcal_mol_A2": [
+    25.0,
+    25.0
+  ],
+  "q_del_restraint": null,
+  "temperature_K": 300,
+  "production_ps_per_history": 30,
+  "equilibration_ps_per_history": 5,
+  "initializations_per_center": [
+    "accepted ordinary-ES restart from independent current ES history",
+    "exact dominant geometry from activation_support_3_03/04_production_5ps/trajectory.nc native1basedframe52; fresh velocities"
+  ],
+  "independence_note": "Distinct initial velocity seeds are required. Two geometry starts and six stochastic histories do not constitute six independently equilibrated equilibrium samples. q_del mixing must be measured.",
+  "physics": "Identical topology, QM atom inventory, QM charge -2, DFTB3 3ob parameters, 300K, active/frozen masks, timestep, engine/environment and chemistry mapping as reviewed parent; hash all pinned assets.",
+  "bias_tail_at_dominant": {
+    "old_grid_acyl_min_A": -1.75,
+    "dominant_acyl_A": -2.0017626443723335,
+    "sigma_A": 0.1091935233969716,
+    "old_acyl_displacement_sigma": 2.305655468750228,
+    "energy_reduction_kcal_mol_same_q_act_center": 1.5845330546541692
+  },
+  "reusable_tools": {
+    "preparation": "nyl12_covalent.relay_activation_support.prepare_reviewed_targets(plan_path, new_unique_output_name, explicit_six_target_validator)",
+    "runtime": "nyl12_covalent.relay_activation_support_runtime.run_reviewed_target(prepared,label,expected_sha256,6)",
+    "unchanged_runtime_stages": "1ps+4ps excluded equilibration, six5ps production blocks;10ps native diagnostic checkpoint already supported",
+    "export": "Use existing accepted-restart/export helpers; arbitrary trajectory frame requires a new provenance-pinned extracted restart with exact frame time, coordinates/cell audit, fresh velocities and no claimed inherited velocities."
+  },
+  "launch_gates": [
+    "Lead approves physical interpretation as ES coverage extension; no new chemical state/forcefield.",
+    "Fresh paired-start coordinates audited for unchanged proton inventory, C-N connectivity, topology, atom mapping, frozen shell/cell, finite coordinates and exact source/time.",
+    "New unique child directory, explicit exactly-six validator, unique random seeds across all new histories and existing campaigns, input/source/runtime hashes, tmux logs and separate process/scientific acceptance records.",
+    "Geranium current reservation/PI availability established because other-user sessions exist and projected runtime exceeds a few hours. Recheck sessions CPU/GPU/queue immediately before launch.",
+    "Preserve old33/100 manifests and pinned MBAR baseline; a future pooled publication adds6 distinct source histories even where biases coincide between starts."
+  ],
+  "scientific_gates": {
+    "native_per_stage": "Existing SCC/energy/temperature/completion/frozen-shell gates unchanged; native completion is not convergence.",
+    "chemistry": "Ordinary ES proton/connectivity retention and distances consistent with explicit starting ensemble; transitions are recorded, never automatically discarded because they are inconvenient.",
+    "mixing": "At10,15,30ps compare paired-start q_del distributions, 5ps-block means and autocorrelation with enough independent blocks; disagreement or no exchange means unresolved mixing, not success.",
+    "coverage": "Report exact3CV neighborhoods, source-lineage counts, overlap connectivity, group responsibilities and s-bin ESS/max-frame dominance. Provisional useful evidence: >1 source lineage in dominant-neighborhood and its stationary neighbors, no single history controlling target-bin weight, overlap with existing -1.75 row. These are diagnostic gates, not proof of convergence.",
+    "PMF": "MBAR only, same source definitions and primary coordinate; compare full data, dominant-frame omission, lineage omission and cumulative block estimates. A binESS increase alone does not validate a minimum."
+  },
+  "diagnostic_milestones_ps": [
+    10,
+    15,
+    30
+  ],
+  "resource_audit": {
+    "host": "geranium",
+    "read_only": true,
+    "other_user_sessions": [
+      "sxo",
+      "jta"
+    ],
+    "other_user_tmux_sessions": true,
+    "cpu_load_1m_5m_15m": [
+      0.43,
+      0.26,
+      0.15
+    ],
+    "gpu_compute_processes_observed": 0,
+    "jpc_atq_empty": true,
+    "other_user_future_reservations": "unknown",
+    "permission_to_launch": "not inferred from resource audit; lead decides under standing authorization"
+  },
+  "measured_costs": {
+    "geranium_receipts": "geranium_prior_process_timings.json",
+    "completed_5ps_stages": 12,
+    "geranium_5ps_wall_hours_p10_median_p90": [
+      2.6684463935000005,
+      2.676322522361111,
+      2.6873602751666668
+    ],
+    "six_parallel_lanes_5equil_plus30prod_wall_hours_median": 18.734257656527777,
+    "six_jobs_total_CPU_hours_approx": 112.44657787125001,
+    "first_10ps_production_checkpoint_wall_hours_approx": 8.028967567083333,
+    "first_15ps_production_checkpoint_wall_hours_approx": 10.705290089444444,
+    "violet_current33_remaining20ps_wall_hours_approx": 27.69309670222222,
+    "limits": "Linear throughput projections from native process elapsed times, excluding staging/QC/diagnostics and reservation delays. Geranium timing reflects prior matching relay campaign; no new performance trial launched."
+  },
+  "recommendation": "Conditional bounded six-CPU-history extension is justified by tail coverage and two-frame single-lineage local support; continue current33. Neither extending33 to30ps nor newrow alone guarantees q_del equilibration. Prefer existing30ps worker with diagnostic checkpoints; do not invent15ps horizon."
+}

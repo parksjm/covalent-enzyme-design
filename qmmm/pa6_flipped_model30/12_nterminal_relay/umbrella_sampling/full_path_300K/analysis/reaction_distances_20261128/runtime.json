@@ -1,0 +1,8 @@
+{
+  "python": "/data/jpc/covalent-enzyme-design/.venv/bin/python",
+  "cpu": 0,
+  "priority": 15,
+  "OMP_NUM_THREADS": 1,
+  "OPENBLAS_NUM_THREADS": 1,
+  "MKL_NUM_THREADS": 1
+}
