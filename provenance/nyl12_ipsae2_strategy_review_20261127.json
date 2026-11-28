@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "decision": "RFD3removedfromcurrentprotocol;ipSAE2recommendedsupplementaryconfidenceafterqualification",
+  "ipSAE2_commit": "fe560f4c2461eeb91aebded61ac8c1e83b264f60",
+  "software_status": "Sourceandnativeinputreviewonly;nodependencyinstallationorscoringbenchmark",
+  "validation": {
+    "document_diff_check": "passed",
+    "unique_R64_and_Methods_headers": "passed",
+    "historical_native_WT_PAE_tokens": 1444,
+    "source_token_order_validation": "pendingforeachproductiontriplet",
+    "paper_full_text": "inaccessible;authorabstractmetadataandprimaryimplementationreviewed"
+  },
+  "scientific_jobs": "unchanged",
+  "payload_sha256": {
+    "docs/NYL12_MECHANISM_ROADMAP.md": "4cff3135a6b79a3c4ffa374bddf7d20fa5f183d8bd941e0d362b554505460a14",
+    "docs/NYL12_THROUGH_NOV30.md": "05c3d32e799403d0dcdae605250c831c4071e8adb88bb09e3a4b49dfd9bca086",
+    "docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md": "caac263769b0d7e910abdb2d0dfdaa42cc47cf55cd1e65c424a16a7bf30fb33c",
+    "docs/ipsae2_code_review_20261127.md": "dfda61c9bdab5c5298067d719e02025671d3514eb1f10d1766ec1ce04f073b12",
+    "manuscript/METHODS_DRAFT.md": "a41b4c61947e277a46f6185d9554783818c3a5a970e62479febf0a30a55dc86d",
+    "manuscript/RESULTS_DRAFT.md": "1ea7ec165027d03f0698cebe8f25f087a89aa1df9bb6425f6f27198b2529fafc",
+    "manuscript/SUPPORTING_INFORMATION_DRAFT.md": "d5fa48e514f9b2ed5a797b3f5d6a64186f23ff1a5703c6cdb94d2ed5a25b9310",
+    "manuscript/REFERENCES.md": "1a0f0d729bdf752d7304830d9cab23ab6c889bc809ce81abc35eff1ffcb93784",
+    "manuscript/recent_design_and_relay_references.bib": "4d42b8e812e7ea25c2b38d6d4ef8ad98de7ba7b01551ba411ea7ea6eb194e49b",
+    "docs/redesign_tool_inventory_20261120.md": "e4c77f997978a35d7cd6ff048c77c35e5baf0d9af1584c5dc03588a4e182add9"
+  },
+  "selective_staging": "Resourceinventoryincludescurrentstrategy/ipSAE2only;pre-existingMSAinventorynotesremainunstaged",
+  "journal": "output_agent_actions/20261021.jsonl"
+}

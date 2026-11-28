@@ -11,11 +11,12 @@ ties. Scores served only as sequence/structure diagnostics. WT and both
 designs entered a fresh matched two-seed, template-free Boltz comparison on
 Violet, with four unguided PA6 L4 molecules. Each design used its own exact
 328-residue precursor MSA search and query-aligned mature-chain pairing;
-the unchanged validated WT MSA was reused. Identical unrestrained Amber
-relaxation followed canonicalization and severe-clash screening. Positive-phi
-Tier A/B selection considered all 48 site–ligand–amide combinations before
-one-to-one assignment, with all four sites reported before and after
-relaxation. These are structural tests, not estimates of catalytic efficiency.
+the unchanged validated WT MSA was reused. The queued workflow applies identical unrestrained Amber relaxation after
+canonicalization and severe-clash screening. Positive-phi Tier A/B selection
+considers all 48 site–ligand–amide combinations before one-to-one assignment,
+with all four sites reported before and after relaxation. No comparative outcome
+is yet claimed for this cohort. These are structural tests, not estimates of
+catalytic efficiency.
 
 The bounded redesign protocol selects chemically coherent, decorrelated
 representatives near supported relay free-energy bottlenecks, retaining source
@@ -23,19 +24,21 @@ window, block, frame, proton inventory and reaction-atom mapping. Templates
 selected before free-energy and reaction-coordinate convergence are designated
 TS-like structures; they are not claimed to be verified first-order PES saddle
 points or committor-defined transition states. Original backbones provide a
-baseline. RFD3 is outside the current critical path. Review the existing 12 original
-MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
-parents, retaining the 101-position protection mask and mandatory four-copy
-sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
-Identical sequences need not have identical thermal conformations; do not force
-exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
-also do not establish TS compatibility: retain reaction mapping, proton inventory,
-ligand graph and catalytic geometry for each parent.
+baseline. The current design workflow excludes RFD3. Its candidate pool comprises the
+12 fixed-backbone LigandMPNN designs from two chemically coherent MD-derived
+TS-like parents, with the 101-position protection mask and identical sequences
+across all four copies. Thermal conformational asymmetry is allowed; exact D2
+coordinates are not imposed on MD snapshots. Parent acceptance independently
+requires reaction mapping, proton inventory, ligand graph and catalytic geometry;
+multiple chain conformations alone do not establish TS compatibility. Historical
+RFD3 remodels and their 12 sequences remain diagnostic artifacts outside this
+current pool; no replacement generation or RFD3 qualification is required.
 
 Fixed-backbone LigandMPNN design followed by independent template-free,
 paired-MSA Boltz prediction and matched Amber relaxation can assess
 sequence-driven repacking and assembly; it does not promise improved activity.
-A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+Only clear evidence of a backbone limitation would motivate a future controlled
+RFD3 comparison evaluating coupled perturbations of A/E, B/F,
 C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
 and chemical checks. It is not implemented or qualified for production, and
 exact coordinate symmetry is not a universal acceptance requirement.
@@ -52,8 +55,10 @@ reasons, source coordinates and reproducible visualization are provided in
 the Supporting Information. Sequence protection is distinct from backbone
 coordinate restraint.
 
-The initial budget is 24 raw samples, six on each of two original and two
-historically graph/coordinate-accepted remodeled parents. Complete sequences are deduplicated while
+The historical pilot generated 24 raw samples, six on each of two original and
+two remodeled parents accepted under the historical graph/coordinate criteria.
+Only the 12 original-parent sequences enter the current design pool; these
+receipts did not qualify an RFD3 production workflow. Complete sequences are deduplicated while
 retaining every lineage, and WT/design cross-scores use identical model weights,
 masks and decoding orders across TS-like and matched E–S structures. Likelihood
 rank is used for computational triage, not as an activation-energy estimate.
@@ -75,6 +80,23 @@ candidates. US/MBAR is reserved for the strongest cases with a matched WT
 reference. All stages retain input/source hashes, maps, environments, process
 receipts and separate scientific acceptance. Detailed stage gates and reused
 entry points are recorded in the [protocol](../docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md).
+
+## Proposed supplementary interface-confidence analysis
+
+Directional ipSAE scoring with ipSAE2 [R64] is proposed as a supplementary
+assessment of predicted protein assembly and PA6 placement. This analysis is
+not yet qualified or reported as completed. The protocol will use each
+unmodified native Boltz structure and its matching PAE/confidence outputs;
+token order and chain identities will be verified before canonicalization.
+Scores will be mapped to subsequent structural records rather than
+reinterpreted as confidence estimates for Amber-relaxed coordinates. Protein
+interfaces and all four ligands will be reported separately. For virtual
+alpha/beta or whole-protein groups compared with a ligand, the explicitly
+protein-aligned directional score will be retained because the package's
+grouped scalar maximum can select the opposite direction. No confidence
+threshold will substitute for the positive-phi Tier A/B or physical checks.
+The package revision and environment will be pinned before use; PA6-specific
+calibration and catalytic-activity prediction are not claimed.
 
 ## Precursor-derived paired MSAs and template-free WT controls
 
@@ -261,8 +283,8 @@ separately from process exit. A subsequent source-validated export adapter
 also tested the native centered-BF16 serialization signature before restoring
 fixed source coordinates and typed connectivity. It did not adjust mobile
 atoms. The 5 Å parent01 export passed the unchanged audit; the 2 Å alternative
-retained genuine packing clashes and was rejected. A second TS parent is
-being qualified independently before conditional broad sequence generation.
+retained genuine packing clashes and was rejected. A second TS parent subsequently passed the historical graph/coordinate audit;
+both remodeled parents remain outside the current 12-design pool.
 
 The conditional broad pilot permits 229 of 328 precursor positions, protecting 99
 including M1 and the established catalytic/maturation motif. Recurring interface
@@ -283,8 +305,9 @@ yield 48 local evaluations. Legacy geometric tiers remain descriptive, and
 native-Thr similarity is not a hard filter. These are exploratory templates,
 not committor-qualified transition states or validated improved enzymes.
 
-The first broad batch is limited to24 raw sequences, six per original or
-accepted remodeled template for two TS parents. Existing canonicalization
+The historical broad batch comprised 24 raw sequences, six per original or
+accepted remodeled template for two TS parents; it is not a 24-candidate
+current nomination pool. Existing canonicalization
 and modular-ligand tools generate biological and mature-local exports and
 sequential Amber heavy inputs with explicit atom/residue maps. Coordinate
 and catalytic-metric roundtrips are checked before publication. Matching

@@ -47,21 +47,23 @@ map. Existing parent exporters, graph audits and native LigandMPNN parser
 checks are reused. Loss of a fixed atom or alteration of substrate chemistry
 fails qualification; it is not repaired by silently changing the method.
 
-## 3. Compare direct sequence design with optional partial diffusion
+## 3. Use direct sequence design on fixed MD-derived backbones
 
-RFD3 is outside the current critical path. Review the existing 12 original
-MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
-parents, retaining the 101-position protection mask and mandatory four-copy
-sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
-Identical sequences need not have identical thermal conformations; do not force
-exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
-also do not establish TS compatibility: retain reaction mapping, proton inventory,
-ligand graph and catalytic geometry for each parent.
+The current design workflow excludes RFD3. Its candidate pool comprises the
+12 fixed-backbone LigandMPNN designs from two chemically coherent MD-derived
+TS-like parents, with the 101-position protection mask and identical sequences
+across all four copies. Thermal conformational asymmetry is allowed; exact D2
+coordinates are not imposed on MD snapshots. Parent acceptance independently
+requires reaction mapping, proton inventory, ligand graph and catalytic geometry;
+multiple chain conformations alone do not establish TS compatibility. Historical
+RFD3 remodels and their 12 sequences remain diagnostic artifacts outside this
+current pool; no replacement generation or RFD3 qualification is required.
 
 Fixed-backbone LigandMPNN design followed by independent template-free,
 paired-MSA Boltz prediction and matched Amber relaxation can assess
 sequence-driven repacking and assembly; it does not promise improved activity.
-A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+Only clear evidence of a backbone limitation would motivate a future controlled
+RFD3 comparison evaluating coupled perturbations of A/E, B/F,
 C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
 and chemical checks. It is not implemented or qualified for production, and
 exact coordinate symmetry is not a universal acceptance requirement.
@@ -137,6 +139,18 @@ use matched WT seeds when assessing designs. AF3 is an optional separately
 qualified comparison, not a compulsory step for every candidate.
 
 ## 6. Postprocess, reject pathological assemblies, then relax
+
+**Prospective confidence analysis:** ipSAE2 is recommended as an additional
+descriptor after a pinned WT/design input-mapping qualification, not as a new
+catalytic filter. Score original native coordinates with their matching PAE
+and confidence files before canonicalization or relaxation. Retain native
+chain/token maps, all protein interfaces and protein-aligned PA6 scores for
+each ligand. Grouped scores require explicit direction selection; their
+default scalar maximum can reverse the intended protein-to-ligand direction.
+Attach the raw scores to canonical site records without treating them as new
+confidence estimates for Amber-relaxed structures. Retain positive-phi Tier
+A/B, graph, clash and force checks independently. See
+[the pinned review and qualification plan](ipsae2_code_review_20261127.md).
 
 **Matched cohort queued, 27 November:** the two highest-ranked original-only
 designs, `relay_prot101_06` and `relay_prot101_03`, have 92/99 substitutions

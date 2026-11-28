@@ -40,8 +40,17 @@ Protein-only template controls were therefore prepared as a bounded
 follow-up; these preserve observed crystal coordinates and missing-residue
 gaps while leaving PA6 unguided. They do not yet establish a prediction
 protocol suitable for variant ranking. Both 5 Å RFD3 parent exports subsequently
-passed the unchanged graph, coordinate, stereochemistry, closure and clash
+passed the historical graph, coordinate, stereochemistry, closure and clash
 audits, and the 24-sequence exploratory pilot completed native cross-scoring.
+Those receipts establish acceptance only within that historical audit scope;
+they do not qualify a production RFD3 workflow. The current protocol excludes
+RFD3 and retains only the 12 original MD-backbone sequences for triage. The
+12 remodeled-parent sequences and prior local remodels remain diagnostics.
+The later exact A/E-copy projection produced 10 contacts below 1 Å and a
+maximum tail displacement of approximately 17.5 Å; this preparation audit and
+the E233-mapping CPU preflight failures were not native RFD3 scientific
+failures. No GPU qualification of that proposed arm ran (see
+[the retained qualification audit](../docs/RFD3_SYMMETRY_QUALIFICATION.md)).
 
 Matched, fully unrestrained Amber minimization of the protein-template WT
 controls subsequently converged to RMS gradients of 0.047702 (AF3) and

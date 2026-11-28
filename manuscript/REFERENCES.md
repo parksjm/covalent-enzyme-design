@@ -456,3 +456,16 @@ a joint multistate optimization objective.
   stationary/weak-dependence assumptions do not hold automatically for short,
   drifting QM/MM trajectories; the resampling scheme cannot repair missing
   conformations or initialization dependence.
+
+
+- **R64.** Dunbrack, R. L. *Rēs ipSAE adhūc loquuntur: What the directionality
+  of predicted aligned error in cofolding models can tell us about scoring
+  diverse molecular complexes*. bioRxiv **2026**, posted 3 November, version 1.
+  https://doi.org/10.64898/2026.11.02.763449 . Preprint, not peer reviewed.
+  Ligand-aware directional ipSAE: align on protein and score ligand heavy atoms
+  with fixed d0 = 2 Å. The supplied full text was inaccessible during this
+  review; public author-abstract metadata and the primary software were
+  examined. Do not describe full benchmark details as independently reviewed.
+  Code: https://github.com/DunbrackLab/IPSAE2 ; reviewed commit
+  fe560f4c2461eeb91aebded61ac8c1e83b264f60 (alpha 0.1.11). Nyl12/PA6
+  scoring and thresholds remain unqualified.

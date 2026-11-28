@@ -1,5 +1,14 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
+**Additional model-confidence analysis proposed:** qualify ipSAE2 on raw
+matched WT/design Boltz outputs, then report assembly interfaces and
+protein-aligned ligand confidence at all four sites. This is a nonblocking
+descriptor, not an affinity, catalytic-activity or barrier estimate. Keep the
+native coordinate/PAE order intact; score before canonicalization/Amber and
+carry scores through the mapping. No universal PA6 cutoff or production
+installation has been adopted. Current jobs continue unchanged; see
+[the assessment](ipsae2_code_review_20261127.md).
+
 **Matched sequence-validation cohort queued:** the PI authorized fresh
 Boltz/Amber predictions for original-only likelihood ranks 1/2,
 `relay_prot101_06` and `relay_prot101_03`, plus WT with two matched seeds.
@@ -12,19 +21,21 @@ then evaluate all four sites under positive-phi Tier A/B criteria. Session
 QM/MM/US jobs continue unchanged; see
 [the cohort record](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/README.md).
 
-**Latest design/experimental gate, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
-MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
-parents, retaining the 101-position protection mask and mandatory four-copy
-sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
-Identical sequences need not have identical thermal conformations; do not force
-exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
-also do not establish TS compatibility: retain reaction mapping, proton inventory,
-ligand graph and catalytic geometry for each parent.
+**Latest design/experimental gate, 27 November:** The current design workflow excludes RFD3. Its candidate pool comprises the
+12 fixed-backbone LigandMPNN designs from two chemically coherent MD-derived
+TS-like parents, with the 101-position protection mask and identical sequences
+across all four copies. Thermal conformational asymmetry is allowed; exact D2
+coordinates are not imposed on MD snapshots. Parent acceptance independently
+requires reaction mapping, proton inventory, ligand graph and catalytic geometry;
+multiple chain conformations alone do not establish TS compatibility. Historical
+RFD3 remodels and their 12 sequences remain diagnostic artifacts outside this
+current pool; no replacement generation or RFD3 qualification is required.
 
 Fixed-backbone LigandMPNN design followed by independent template-free,
 paired-MSA Boltz prediction and matched Amber relaxation can assess
 sequence-driven repacking and assembly; it does not promise improved activity.
-A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+Only clear evidence of a backbone limitation would motivate a future controlled
+RFD3 comparison evaluating coupled perturbations of A/E, B/F,
 C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
 and chemical checks. It is not implemented or qualified for production, and
 exact coordinate symmetry is not a universal acceptance requirement.

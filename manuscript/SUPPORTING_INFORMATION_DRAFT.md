@@ -896,19 +896,21 @@ mutations and alignment gaps are explicit. A simple fixed numbering offset
 was not assumed. Homologous activity/maturation evidence must be distinguished
 from direct evidence in Nyl12.
 
-RFD3 is outside the current critical path. Review the existing 12 original
-MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
-parents, retaining the 101-position protection mask and mandatory four-copy
-sequence ties. No RFD3 GPU qualification or 12-design replacement is required.
-Identical sequences need not have identical thermal conformations; do not force
-exact D2 coordinates onto an MD snapshot. Multiple chain conformations alone
-also do not establish TS compatibility: retain reaction mapping, proton inventory,
-ligand graph and catalytic geometry for each parent.
+The current design workflow excludes RFD3. Its candidate pool comprises the
+12 fixed-backbone LigandMPNN designs from two chemically coherent MD-derived
+TS-like parents, with the 101-position protection mask and identical sequences
+across all four copies. Thermal conformational asymmetry is allowed; exact D2
+coordinates are not imposed on MD snapshots. Parent acceptance independently
+requires reaction mapping, proton inventory, ligand graph and catalytic geometry;
+multiple chain conformations alone do not establish TS compatibility. Historical
+RFD3 remodels and their 12 sequences remain diagnostic artifacts outside this
+current pool; no replacement generation or RFD3 qualification is required.
 
 Fixed-backbone LigandMPNN design followed by independent template-free,
 paired-MSA Boltz prediction and matched Amber relaxation can assess
 sequence-driven repacking and assembly; it does not promise improved activity.
-A future optional RFD3 arm may evaluate coupled perturbations of A/E, B/F,
+Only clear evidence of a backbone limitation would motivate a future controlled
+RFD3 comparison evaluating coupled perturbations of A/E, B/F,
 C/G and D/H, with independent physical-movement, clash, assembly, fixed-context
 and chemical checks. It is not implemented or qualified for production, and
 exact coordinate symmetry is not a universal acceptance requirement.

@@ -5,10 +5,20 @@ stack or a new execution queue**. The PI clarified that we need not use them all
 The current mechanism/US/pKa work continues unchanged. Installation, model
 download and production use are separate decisions.
 
+**Current disposition, 27 November:** use the MD-derived TS-like ensemble
+with symmetry-tied LigandMPNN sequences; RFD3 is excluded from the current
+design protocol. Diffusion tools remain future controlled comparisons if a
+backbone limitation is demonstrated. RFD4 is also deferred; the older preferred-
+RFD4 discussion below is historical. The current matched Boltz cohort uses
+template-free, precursor-paired MSAs and four unguided PA6 L4 molecules.
+ipSAE2 is recommended as a supplementary confidence descriptor after local
+input/order and scoring qualification, independently of catalytic geometry.
+
 ## Resource inventory
 
 | Resource | Intended optional use | Verified local state and readiness |
 | --- | --- | --- |
+| [ipSAE2](https://github.com/DunbrackLab/IPSAE2) | Additional raw-model protein-interface and directional protein–PA6 placement confidence; complements physical geometry checks | Source reviewed at `fe560f4`, alpha 0.1.11; raw WT PAE readability checked, full scoring qualification pending. No installation or production cutoff adopted. Keep separate from the active Boltz environment; [review](ipsae2_code_review_20261127.md) |
 | [RFD4-Proteina](https://github.com/RosettaCommons/RFD4-Proteina), [project](https://rfd4-proteina.org/) | Preferred candidate over RFD3 when backbone or joint sequence/structure redesign is justified; motif conditioning, ligand context and partial diffusion | Not found in bounded violet/azalea checkout/environment checks; no Nyl12 qualification yet |
 | [Foundry / RFdiffusion3](https://github.com/RosettaCommons/foundry) | Retain the existing implementation and checkpoints for reproducibility and optional comparison | Violet checkout `/data/jpc/code/foundry`; rc-foundry 0.1.11.dev34+gcee116dc5. RFD3/RF3/MPNN checkpoint files exist in the default cache on both hosts; inference readiness was not retested |
 | [tmol](https://github.com/RosettaCommons/tmol) | Standalone PyTorch scoring, packing, minimization/FastRelax and possible future design interfaces | Not found in bounded checks; adapter and PA6/covalent-state compatibility unvalidated |
