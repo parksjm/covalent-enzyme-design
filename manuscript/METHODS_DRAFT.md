@@ -2275,6 +2275,34 @@ coordinate/reference, and resampling units and are not total uncertainty or
 evidence by themselves for equilibration or endpoint support.
 
 
+
+### Matched finite-bin WHAM diagnostic (28 November 2026)
+
+We compared the displayed 82,000-frame, 100-history pooled MBAR point estimate
+with finite-bin WHAM using the same post-discard observations, native bias
+functions, final s bins and E–S reference. Because the umbrella biases depend
+on different pairs drawn from three physical distance-difference coordinates,
+a one-dimensional harmonic approximation in projected s was not used. We
+formed uniform three-dimensional physical-coordinate cells of width 0.1,
+0.05, 0.025 and 0.0125 Å and evaluated all native bias functions at occupied
+cell centers. Repeating each cell-center bias column according to its sample
+multiplicity solves the finite-bin WHAM equations using the existing PyMBAR
+numerical engine [R65,R66]. This is a binning-sensitivity test, not an
+independent software implementation. Original per-history counts were retained;
+no correlation correction was introduced into only one estimator.
+
+The primary comparison distributes each WHAM cell mass among its original
+frames and uses those frames' original s values, preserving within-cell
+empirical observable proportions. A separate cell-center projection tests the
+additional projection discretization. Final histogram widths and energy zero
+are unchanged. A half-cell origin shift tests the finest grid. Ten analytic
+tests covered known probability masses, state-energy gauge shifts, duplicate
+bias splitting and probability conservation; core coverage was 98%. A 0.1
+kcal/mol finest-grid/origin comparison was declared as a numerical diagnostic,
+not a sampling-convergence gate. These point comparisons carry no new
+statistical confidence intervals. All source/input hashes and failed gates are
+retained; no dynamics or molecular Hamiltonian was changed.
+
 ## Relay supporting-information record (27 November 2026)
 
 The [supporting-information draft](SUPPORTING_INFORMATION_DRAFT.md) consolidates

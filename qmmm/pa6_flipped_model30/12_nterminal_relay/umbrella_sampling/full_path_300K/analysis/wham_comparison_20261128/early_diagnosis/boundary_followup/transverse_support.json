@@ -1,0 +1,26 @@
+[
+  {
+    "s": 0.1125,
+    "weighted_mean_transverse_A": 0.6181787236159979,
+    "minimum_transverse_A": 0.1293875903206128,
+    "dominant_transverse_A": 0.7238226457164041
+  },
+  {
+    "s": 0.1625,
+    "weighted_mean_transverse_A": 1.0513520680263113,
+    "minimum_transverse_A": 0.20747024398110334,
+    "dominant_transverse_A": 1.1889313668476278
+  },
+  {
+    "s": 0.23750000000000002,
+    "weighted_mean_transverse_A": 1.486375630397559,
+    "minimum_transverse_A": 0.21399521530862875,
+    "dominant_transverse_A": 1.5568754946022694
+  },
+  {
+    "s": 0.2625,
+    "weighted_mean_transverse_A": 1.6607272639004624,
+    "minimum_transverse_A": 0.10718458195699974,
+    "dominant_transverse_A": 1.6702020672836928
+  }
+]

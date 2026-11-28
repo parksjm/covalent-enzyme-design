@@ -1,0 +1,554 @@
+[
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -1.449999999999999,
+    "pmf_kcal_mol": 0.11142106393149588,
+    "raw_count": 1,
+    "kish_ess": 1.0,
+    "max_frame_fraction": 1.0
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -1.349999999999999,
+    "pmf_kcal_mol": 0.10286104921306331,
+    "raw_count": 14,
+    "kish_ess": 8.51096014453453,
+    "max_frame_fraction": 0.1995668815365033
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -1.249999999999999,
+    "pmf_kcal_mol": -0.08600333880279092,
+    "raw_count": 185,
+    "kish_ess": 60.171155572204896,
+    "max_frame_fraction": 0.07590836769843617
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -1.1499999999999988,
+    "pmf_kcal_mol": -0.003538180690477618,
+    "raw_count": 797,
+    "kish_ess": 301.32043935342347,
+    "max_frame_fraction": 0.0204291638644643
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -1.0499999999999987,
+    "pmf_kcal_mol": -0.0,
+    "raw_count": 2178,
+    "kish_ess": 170.62237499167455,
+    "max_frame_fraction": 0.05001406694497478
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.9499999999999986,
+    "pmf_kcal_mol": 0.34129797858883476,
+    "raw_count": 3376,
+    "kish_ess": 261.55209404807414,
+    "max_frame_fraction": 0.027026690064988403
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.8499999999999985,
+    "pmf_kcal_mol": 0.9199203484919977,
+    "raw_count": 3336,
+    "kish_ess": 97.64454813522929,
+    "max_frame_fraction": 0.07304212699421313
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.7499999999999984,
+    "pmf_kcal_mol": 1.9720025563268944,
+    "raw_count": 2960,
+    "kish_ess": 65.3529297536673,
+    "max_frame_fraction": 0.09436150527288
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.6499999999999984,
+    "pmf_kcal_mol": 3.4021465686936136,
+    "raw_count": 2211,
+    "kish_ess": 99.78693087812435,
+    "max_frame_fraction": 0.026676261827653862
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.5499999999999983,
+    "pmf_kcal_mol": 4.8015294665652055,
+    "raw_count": 1404,
+    "kish_ess": 54.68580735842383,
+    "max_frame_fraction": 0.06924472935954196
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.4499999999999982,
+    "pmf_kcal_mol": 6.595753803792802,
+    "raw_count": 1021,
+    "kish_ess": 59.87832049925865,
+    "max_frame_fraction": 0.046814969183438145
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.3499999999999981,
+    "pmf_kcal_mol": 8.06535667968211,
+    "raw_count": 897,
+    "kish_ess": 15.49667022558237,
+    "max_frame_fraction": 0.2018442726701477
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.249999999999998,
+    "pmf_kcal_mol": 9.328694371220257,
+    "raw_count": 770,
+    "kish_ess": 32.69270132768393,
+    "max_frame_fraction": 0.08547476083077624
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.1499999999999979,
+    "pmf_kcal_mol": 10.677780673243136,
+    "raw_count": 664,
+    "kish_ess": 39.390267773260945,
+    "max_frame_fraction": 0.08352782192264581
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": -0.049999999999997824,
+    "pmf_kcal_mol": 11.726946888183786,
+    "raw_count": 513,
+    "kish_ess": 39.160341682191984,
+    "max_frame_fraction": 0.06338538120036981
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.050000000000002265,
+    "pmf_kcal_mol": 12.648872106842276,
+    "raw_count": 475,
+    "kish_ess": 22.225309316733238,
+    "max_frame_fraction": 0.10536924966678682
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.15000000000000235,
+    "pmf_kcal_mol": 12.785608528801404,
+    "raw_count": 501,
+    "kish_ess": 9.555262647116086,
+    "max_frame_fraction": 0.28548301750653315
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.25000000000000244,
+    "pmf_kcal_mol": 13.160292494301114,
+    "raw_count": 603,
+    "kish_ess": 16.757912448668584,
+    "max_frame_fraction": 0.14520062734189754
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.35000000000000253,
+    "pmf_kcal_mol": 12.890013273326087,
+    "raw_count": 771,
+    "kish_ess": 30.881216681370525,
+    "max_frame_fraction": 0.10470967417287709
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.4500000000000026,
+    "pmf_kcal_mol": 12.453523244845966,
+    "raw_count": 1382,
+    "kish_ess": 49.96416496967126,
+    "max_frame_fraction": 0.06190630810649427
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.5500000000000027,
+    "pmf_kcal_mol": 11.739758048636194,
+    "raw_count": 2466,
+    "kish_ess": 29.318809473005622,
+    "max_frame_fraction": 0.08741106321349582
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.6500000000000028,
+    "pmf_kcal_mol": 11.628950140103825,
+    "raw_count": 3409,
+    "kish_ess": 40.915890687382515,
+    "max_frame_fraction": 0.06421516097301833
+  },
+  {
+    "lower_bound_A": -2.0,
+    "q_act": 0.7500000000000029,
+    "pmf_kcal_mol": 11.475828770706595,
+    "raw_count": 2910,
+    "kish_ess": 35.17639370697295,
+    "max_frame_fraction": 0.08369034965970637
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -1.449999999999999,
+    "pmf_kcal_mol": 0.11142106393149641,
+    "raw_count": 1,
+    "kish_ess": 1.0,
+    "max_frame_fraction": 1.0
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -1.349999999999999,
+    "pmf_kcal_mol": 0.10286104921306372,
+    "raw_count": 14,
+    "kish_ess": 8.510960144534527,
+    "max_frame_fraction": 0.1995668815365033
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -1.249999999999999,
+    "pmf_kcal_mol": -0.08600333880279065,
+    "raw_count": 185,
+    "kish_ess": 60.171155572204896,
+    "max_frame_fraction": 0.07590836769843617
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -1.1499999999999988,
+    "pmf_kcal_mol": -0.003538180690477618,
+    "raw_count": 797,
+    "kish_ess": 301.32043935342375,
+    "max_frame_fraction": 0.0204291638644643
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -1.0499999999999987,
+    "pmf_kcal_mol": -0.0,
+    "raw_count": 2178,
+    "kish_ess": 170.622374991675,
+    "max_frame_fraction": 0.05001406694497478
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.9499999999999986,
+    "pmf_kcal_mol": 0.25849429546481445,
+    "raw_count": 3377,
+    "kish_ess": 50.72792219649457,
+    "max_frame_fraction": 0.12968039202933634
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.8499999999999985,
+    "pmf_kcal_mol": 0.8938239629930186,
+    "raw_count": 3337,
+    "kish_ess": 89.14924657374831,
+    "max_frame_fraction": 0.06991374866303644
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.7499999999999984,
+    "pmf_kcal_mol": 1.9720025563268946,
+    "raw_count": 2960,
+    "kish_ess": 65.35292975366718,
+    "max_frame_fraction": 0.09436150527288
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.6499999999999984,
+    "pmf_kcal_mol": 3.4021465686936136,
+    "raw_count": 2211,
+    "kish_ess": 99.78693087812435,
+    "max_frame_fraction": 0.026676261827653862
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.5499999999999983,
+    "pmf_kcal_mol": 4.8015294665652055,
+    "raw_count": 1404,
+    "kish_ess": 54.68580735842383,
+    "max_frame_fraction": 0.06924472935954196
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.4499999999999982,
+    "pmf_kcal_mol": 6.595753803792804,
+    "raw_count": 1021,
+    "kish_ess": 59.878320499258436,
+    "max_frame_fraction": 0.046814969183438145
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.3499999999999981,
+    "pmf_kcal_mol": 7.957174853842416,
+    "raw_count": 898,
+    "kish_ess": 13.806548145838622,
+    "max_frame_fraction": 0.16834786207984925
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.249999999999998,
+    "pmf_kcal_mol": 9.23416166387264,
+    "raw_count": 771,
+    "kish_ess": 22.84298981090937,
+    "max_frame_fraction": 0.14663593427712196
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.1499999999999979,
+    "pmf_kcal_mol": 10.677780673243136,
+    "raw_count": 664,
+    "kish_ess": 39.390267773260945,
+    "max_frame_fraction": 0.08352782192264581
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": -0.049999999999997824,
+    "pmf_kcal_mol": 11.313168265891466,
+    "raw_count": 514,
+    "kish_ess": 3.8935588879776573,
+    "max_frame_fraction": 0.500462004942722
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.050000000000002265,
+    "pmf_kcal_mol": 12.648872106842276,
+    "raw_count": 475,
+    "kish_ess": 22.225309316733238,
+    "max_frame_fraction": 0.10536924966678682
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.15000000000000235,
+    "pmf_kcal_mol": 12.785608528801404,
+    "raw_count": 501,
+    "kish_ess": 9.555262647116086,
+    "max_frame_fraction": 0.28548301750653315
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.25000000000000244,
+    "pmf_kcal_mol": 13.160292494301114,
+    "raw_count": 603,
+    "kish_ess": 16.757912448668584,
+    "max_frame_fraction": 0.14520062734189754
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.35000000000000253,
+    "pmf_kcal_mol": 12.890013273326087,
+    "raw_count": 771,
+    "kish_ess": 30.881216681370525,
+    "max_frame_fraction": 0.10470967417287709
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.4500000000000026,
+    "pmf_kcal_mol": 12.453523244845966,
+    "raw_count": 1382,
+    "kish_ess": 49.96416496967126,
+    "max_frame_fraction": 0.06190630810649427
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.5500000000000027,
+    "pmf_kcal_mol": 11.593630273273053,
+    "raw_count": 2468,
+    "kish_ess": 22.43027111789952,
+    "max_frame_fraction": 0.114345875333888
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.6500000000000028,
+    "pmf_kcal_mol": 11.628950140103825,
+    "raw_count": 3409,
+    "kish_ess": 40.915890687382515,
+    "max_frame_fraction": 0.06421516097301833
+  },
+  {
+    "lower_bound_A": -2.05,
+    "q_act": 0.7500000000000029,
+    "pmf_kcal_mol": 11.475828770706595,
+    "raw_count": 2910,
+    "kish_ess": 35.17639370697295,
+    "max_frame_fraction": 0.08369034965970637
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -1.449999999999999,
+    "pmf_kcal_mol": 0.11142106393149614,
+    "raw_count": 1,
+    "kish_ess": 1.0,
+    "max_frame_fraction": 1.0
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -1.349999999999999,
+    "pmf_kcal_mol": 0.10286104921306345,
+    "raw_count": 14,
+    "kish_ess": 8.510960144534527,
+    "max_frame_fraction": 0.1995668815365033
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -1.249999999999999,
+    "pmf_kcal_mol": -0.08600333880279092,
+    "raw_count": 185,
+    "kish_ess": 60.171155572204896,
+    "max_frame_fraction": 0.07590836769843617
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -1.1499999999999988,
+    "pmf_kcal_mol": -0.003538180690477618,
+    "raw_count": 797,
+    "kish_ess": 301.32043935342347,
+    "max_frame_fraction": 0.0204291638644643
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -1.0499999999999987,
+    "pmf_kcal_mol": -0.0,
+    "raw_count": 2178,
+    "kish_ess": 170.62237499167486,
+    "max_frame_fraction": 0.05001406694497478
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.9499999999999986,
+    "pmf_kcal_mol": 0.25849429546481445,
+    "raw_count": 3377,
+    "kish_ess": 50.72792219649452,
+    "max_frame_fraction": 0.12968039202933634
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.8499999999999985,
+    "pmf_kcal_mol": 0.8938239629930188,
+    "raw_count": 3337,
+    "kish_ess": 89.14924657374816,
+    "max_frame_fraction": 0.06991374866303644
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.7499999999999984,
+    "pmf_kcal_mol": 1.9720025563268944,
+    "raw_count": 2960,
+    "kish_ess": 65.3529297536673,
+    "max_frame_fraction": 0.09436150527288
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.6499999999999984,
+    "pmf_kcal_mol": 3.4021465686936136,
+    "raw_count": 2211,
+    "kish_ess": 99.78693087812435,
+    "max_frame_fraction": 0.026676261827653862
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.5499999999999983,
+    "pmf_kcal_mol": 4.8015294665652055,
+    "raw_count": 1404,
+    "kish_ess": 54.68580735842383,
+    "max_frame_fraction": 0.06924472935954196
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.4499999999999982,
+    "pmf_kcal_mol": 6.595753803792804,
+    "raw_count": 1021,
+    "kish_ess": 59.878320499258436,
+    "max_frame_fraction": 0.046814969183438145
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.3499999999999981,
+    "pmf_kcal_mol": 7.957174853842416,
+    "raw_count": 898,
+    "kish_ess": 13.80654814583867,
+    "max_frame_fraction": 0.16834786207984925
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.249999999999998,
+    "pmf_kcal_mol": 9.234161663872639,
+    "raw_count": 771,
+    "kish_ess": 22.84298981090937,
+    "max_frame_fraction": 0.14663593427712196
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.1499999999999979,
+    "pmf_kcal_mol": 10.677780673243136,
+    "raw_count": 664,
+    "kish_ess": 39.390267773260945,
+    "max_frame_fraction": 0.08352782192264581
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": -0.049999999999997824,
+    "pmf_kcal_mol": 11.313168265891468,
+    "raw_count": 514,
+    "kish_ess": 3.8935588879776573,
+    "max_frame_fraction": 0.500462004942722
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.050000000000002265,
+    "pmf_kcal_mol": 12.648872106842276,
+    "raw_count": 475,
+    "kish_ess": 22.225309316733238,
+    "max_frame_fraction": 0.10536924966678682
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.15000000000000235,
+    "pmf_kcal_mol": 12.785608528801404,
+    "raw_count": 501,
+    "kish_ess": 9.555262647116086,
+    "max_frame_fraction": 0.28548301750653315
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.25000000000000244,
+    "pmf_kcal_mol": 13.160292494301116,
+    "raw_count": 603,
+    "kish_ess": 16.757912448668584,
+    "max_frame_fraction": 0.14520062734189754
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.35000000000000253,
+    "pmf_kcal_mol": 12.890013273326089,
+    "raw_count": 771,
+    "kish_ess": 30.881216681370304,
+    "max_frame_fraction": 0.10470967417287709
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.4500000000000026,
+    "pmf_kcal_mol": 12.453523244845966,
+    "raw_count": 1382,
+    "kish_ess": 49.964164969671614,
+    "max_frame_fraction": 0.06190630810649427
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.5500000000000027,
+    "pmf_kcal_mol": 11.458925850429168,
+    "raw_count": 2469,
+    "kish_ess": 14.43505684960372,
+    "max_frame_fraction": 0.20224439625613894
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.6500000000000028,
+    "pmf_kcal_mol": 11.628950140103827,
+    "raw_count": 3409,
+    "kish_ess": 40.915890687382515,
+    "max_frame_fraction": 0.06421516097301833
+  },
+  {
+    "lower_bound_A": -2.1,
+    "q_act": 0.7500000000000029,
+    "pmf_kcal_mol": 11.475828770706597,
+    "raw_count": 2910,
+    "kish_ess": 35.1763937069727,
+    "max_frame_fraction": 0.08369034965970637
+  }
+]

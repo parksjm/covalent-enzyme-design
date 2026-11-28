@@ -1,3 +1,32 @@
+## WHAM comparison and unresolved early projected-PMF structure — 28 November 2026
+
+Finite-bin WHAM reproduces the early jagged structure in the matched displayed
+pool. The maximum is 26.2837 kcal/mol for a 0.0125 Å physical-coordinate grid,
+compared with 26.2800 for MBAR; both occur at s=0.6875. Early-bin differences
+are at most 0.0994 kcal/mol at that grid origin. Shifting the finest grid changes
+one poorly supported bin by 0.1232 kcal/mol, exceeding the predeclared 0.1
+numerical diagnostic. Agreement of estimators therefore does not certify
+sampling convergence or chemical intermediates.
+
+At s=0.2625, 864 saved frames yield weight ESS 1.066: one accepted, SCC-converged
+frame at production age 7.60 ps carries 96.84% of the bin probability. It is
+1.670 Å from the reference path in the three-coordinate metric. More than
+99.8% of weighted probability in neighboring s=0.2375–0.2875 bins comes from
+short new-grid histories, so extending older main histories provides little
+new information there. The raw coordinates and weights are not evidence of
+an electronic-convergence failure and the frame was not removed.
+
+The measured vertex pileup at s≈0.1566 contributes only 0.179 kcal/mol of the
+3.524 kcal/mol drop from s=0.1125 to 0.1625. It cannot explain the entire early
+hump; that peak itself has weight ESS 110. A smooth path-coordinate diagnostic
+retains a shallower hump and a strongly varying gradient. Conditional physical
+proton-transfer profiles lack the same dip, including after expanding their
+conditioning boundary to include the dominant frame. These comparisons show
+coordinate/conditioning sensitivity, rather than proving or disproving a real
+basin. The remaining feature is unassigned. Path-distance and physical
+multidimensional free-energy diagnostics, continued corrective sampling and
+independent initialization checks remain necessary before mechanistic claims.
+
 ## Relay US checkpoint including supplemental histories — 28 November 2026
 
 The current pooled estimate combines 57 original windows at 70 ps with 33

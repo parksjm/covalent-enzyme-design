@@ -1,0 +1,44 @@
+[
+  {
+    "lower_bound_A": -2.0,
+    "upper_bound_A": -0.8,
+    "retained_frames": 34978,
+    "dominant_frame_included": false,
+    "dominant_qact_bin": -0.8499999999999985,
+    "dominant_fraction_in_qact_bin": 0.0,
+    "qact_bin_ess": 97.64454813522929,
+    "monotonic_minus1p05_to_plus0p25": true,
+    "maximum_downward_step_kcal_mol": 0.0,
+    "pmf_at_minus0p85": 0.9199203484919977,
+    "pmf_at_plus0p25": 13.160292494301114,
+    "maximum_pmf_difference_from_original": 0.0
+  },
+  {
+    "lower_bound_A": -2.05,
+    "upper_bound_A": -0.8,
+    "retained_frames": 34985,
+    "dominant_frame_included": true,
+    "dominant_qact_bin": -0.8499999999999985,
+    "dominant_fraction_in_qact_bin": 0.04282978138663187,
+    "qact_bin_ess": 89.14924657374831,
+    "monotonic_minus1p05_to_plus0p25": true,
+    "maximum_downward_step_kcal_mol": 0.0,
+    "pmf_at_minus0p85": 0.8938239629930186,
+    "pmf_at_plus0p25": 13.160292494301114,
+    "maximum_pmf_difference_from_original": 0.41377862229231965
+  },
+  {
+    "lower_bound_A": -2.1,
+    "upper_bound_A": -0.8,
+    "retained_frames": 34987,
+    "dominant_frame_included": true,
+    "dominant_qact_bin": -0.8499999999999985,
+    "dominant_fraction_in_qact_bin": 0.04282978138663187,
+    "qact_bin_ess": 89.14924657374816,
+    "monotonic_minus1p05_to_plus0p25": true,
+    "maximum_downward_step_kcal_mol": 0.0,
+    "pmf_at_minus0p85": 0.8938239629930188,
+    "pmf_at_plus0p25": 13.160292494301116,
+    "maximum_pmf_difference_from_original": 0.4137786222923179
+  }
+]

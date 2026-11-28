@@ -1,0 +1,144 @@
+{
+  "pooled_frame_index_zero_based": 78151,
+  "state_id": "activation_grid33/activation_support_3_03",
+  "q_A": [
+    -2.0017626443723335,
+    -0.8137761722753188,
+    -2.3827318583904473
+  ],
+  "bias": {
+    "feature_names": [
+      "q_acyl",
+      "q_act"
+    ],
+    "centers_A": [
+      -1.75,
+      -0.6
+    ],
+    "force_constants": [
+      25.0,
+      25.0
+    ],
+    "outer_extent_A": 10.0
+  },
+  "delta_from_bias_center_A": [
+    -0.25176264437233353,
+    -0.21377617227531887
+  ],
+  "bias_components_kcal_mol": [
+    1.5846107275337522,
+    1.1425062958171703
+  ],
+  "total_bias_kcal_mol": 2.7271170233509228,
+  "total_bias_in_kT": 4.574461854290651,
+  "raw_feature_frame": 52,
+  "raw_feature_row_zero_based": 51,
+  "native_time_ps": 12.600000381469727,
+  "production_age_ps": 7.6,
+  "stage": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/activation_support_20261127/activation_support_3_03/04_production_5ps",
+  "native_bias_kcal_mol": 2.7324999999999973,
+  "native_bias_error_bound_kcal_mol": 0.012393508400479583,
+  "native_bias_evaluated": "1",
+  "acceptance": {
+    "accepted": true,
+    "completed_steps": 10000,
+    "final_temperature_K": 292.68,
+    "temperature_gate_K": [
+      225,
+      375
+    ],
+    "finite_energy_temperature": true,
+    "every_integration_step_SCC_converged": true,
+    "electronic_history": {
+      "passed": true,
+      "history_observed": true,
+      "verified_scc_history": true,
+      "recovered_trials": [],
+      "recovered_trial_count": 0,
+      "unresolved_trials": [],
+      "fatal_markers": [],
+      "temperature_changes": []
+    },
+    "checkpoint_sha256": "0b3292e16d2e085a24e9c6e51dc509668e4ad31cb6d615033142cb4740a6eb4e",
+    "frozen_outer_max_displacement_A": 0.0
+  },
+  "analysis_acceptance": {
+    "accepted": true,
+    "coordinate_serialization_tolerance_A": 2.6428997918226276e-05,
+    "coordinates_finite": true,
+    "csv_file": "raw_features.csv",
+    "csv_sha256": "194fc475bffe69f0080b581bc06e1e1baef91bed1ca7152cf5ba7f5dcb4adc56",
+    "electronic_history": {
+      "fatal_markers": [],
+      "history_observed": true,
+      "passed": true,
+      "recovered_trial_count": 0,
+      "recovered_trials": [],
+      "temperature_changes": [],
+      "unresolved_trials": [],
+      "verified_scc_history": true
+    },
+    "energies_finite": true,
+    "exit_status": 0,
+    "final_temperature_K": 292.68,
+    "frames": 100,
+    "frames_censored": 0,
+    "native_artifacts_sha256": {
+      "activation_support_3_03/04_production_5ps/observables/observables.csv": "76f97cb03a7d027071c1bc9126799d84dae60fbd7f9f679399bb84fd37984b5b",
+      "activation_support_3_03/04_production_5ps/observables/observables.json": "2d9e41ce87d32cb425dd7ca7042be3ae5d8a10f515b42f114655507639b9f5a9",
+      "activation_support_3_03/04_production_5ps/restart.ncrst": "0b3292e16d2e085a24e9c6e51dc509668e4ad31cb6d615033142cb4740a6eb4e",
+      "activation_support_3_03/04_production_5ps/run.mdout": "d3fb1d507dea3de3d14d30521d1719f6b08da65d01f6ff34524126cbbaa2d9f7",
+      "activation_support_3_03/04_production_5ps/trajectory.nc": "3a2e9dac25a02aede9f0b1e432f0825ad2bb354d61a4d9cbe6b6f3defc64ed77",
+      "activation_support_3_03/04_production_5ps/umbrella_coordinate.dat": "fa14466290c5ec4bcd06bbb46b69e8c45aa4441f0b9cfcabdb855458144fbe4b"
+    },
+    "native_bias_evaluated_frames": 99,
+    "native_bias_source": "amber_dumpave_independent_CVs",
+    "native_bias_unevaluated_terminal_frames": 1,
+    "native_cv_quantization_A": 0.0005,
+    "native_cv_total_tolerance_A": 0.0005264289979182263,
+    "physical_hamiltonian_sha256": "927a6e26d45b5db018db2dbb2b9bf5ce12b4f25e4b7e91b10a4d615903f9f5f0",
+    "process_file": "process.json",
+    "process_sha256": "037bb03d921e5ed011894a423ce8bfde0e03b8918180c951367cd21215a0d997",
+    "sampled_duration_ps": 5.0,
+    "source_sha256": {
+      "sourceproof.json": "519170cafdd74919db79aa503642ee4d56c42547de8382b4bea8a2c123e1aa6e",
+      "umbrella_coordinate.dat": "fa14466290c5ec4bcd06bbb46b69e8c45aa4441f0b9cfcabdb855458144fbe4b"
+    },
+    "temperature_K": 300.0,
+    "window": "activation_support_3_03"
+  },
+  "source_state_qdel_range_A": [
+    -2.398433189206462,
+    -1.439894407479817
+  ],
+  "source_state_qdel_lower_rank": 2,
+  "nearest_bias_energy_kcal_mol": 1.5893553005977337,
+  "nearest_bias_state": "activation_grid33/activation_support_3_02",
+  "denominator_responsibilities": [
+    {
+      "state": "activation_grid33/activation_support_3_03",
+      "fraction": 0.5624844329691977,
+      "bias_kcal_mol": 2.7271170233509228
+    },
+    {
+      "state": "activation_grid33/activation_support_3_02",
+      "fraction": 0.25326103917951714,
+      "bias_kcal_mol": 1.5893553005977337
+    },
+    {
+      "state": "activation_grid33/activation_support_3_04",
+      "fraction": 0.1628013714581083,
+      "bias_kcal_mol": 5.86487874610411
+    },
+    {
+      "state": "activation_grid33/activation_support_3_01",
+      "fraction": 0.015400115872840606,
+      "bias_kcal_mol": 2.4515935778445455
+    },
+    {
+      "state": "activation_grid33/activation_support_3_05",
+      "fraction": 0.004484722774256349,
+      "bias_kcal_mol": 11.002640468857296
+    }
+  ]
+}

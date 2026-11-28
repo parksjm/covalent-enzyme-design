@@ -1,0 +1,9 @@
+{
+  "process": "complete",
+  "baseline_counts_match": true,
+  "baseline_BGP_match": true,
+  "weights_refit": false,
+  "sampling_converged": false,
+  "age_definition": "Selected sample age from history selected_indices/start/frame interval; not independent-start age",
+  "scientific_scope": "Coordinate/support diagnostic only; Kish ESS excludes temporal correlation; no barrier acceptance"
+}

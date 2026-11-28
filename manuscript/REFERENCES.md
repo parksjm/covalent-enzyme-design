@@ -468,4 +468,15 @@ a joint multistate optimization objective.
   examined. Do not describe full benchmark details as independently reviewed.
   Code: https://github.com/DunbrackLab/IPSAE2 ; reviewed commit
   fe560f4c2461eeb91aebded61ac8c1e83b264f60 (alpha 0.1.11). Nyl12/PA6
-  scoring and thresholds remain unqualified.
+  technical input/scoring qualification passed on 28 November; no PA6-specific
+  affinity or activity threshold is calibrated.
+
+- **R65.** Shirts, M. R.; Chodera, J. D. *Statistically optimal analysis of
+  samples from multiple equilibrium states*. J. Chem. Phys. **2008**, 129,
+  124105. https://doi.org/10.1063/1.2978177 . MBAR and the zero-bin-width
+  WHAM limit; estimator agreement does not establish sampling convergence.
+
+- **R66.** Zhu, F.; Hummer, G. *Convergence and error estimation in free energy
+  calculations using the weighted histogram analysis method*. J. Comput. Chem.
+  **2012**, 33, 453–465. https://doi.org/10.1002/jcc.21989 . WHAM likelihood,
+  uncertainty and histogram-consistency diagnostics; primary full text reviewed.

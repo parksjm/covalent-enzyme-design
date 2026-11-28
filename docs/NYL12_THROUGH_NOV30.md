@@ -1,5 +1,18 @@
 # Nyl12: active plan through 30 November 2026
 
+**WHAM/early-region diagnosis, 28 November:** finite-bin 3D WHAM and MBAR
+reproduce the same early jaggedness (finest-grid maxima 26.284/26.280 kcal/mol).
+Changing the estimator is not a remedy. The s≈0.26 bin is dominated 96.84%
+by one young, accepted frame 1.67 Å off the reference path; its weight ESS is
+1.07. Corner pileup explains only 0.179 kcal/mol of a 3.524 kcal/mol earlier
+feature, whose remaining origin is unresolved. Continue existing sampling;
+inspect physical-coordinate and path-distance distributions and initialization
+consistency before assigning minima or changing the primary reported coordinate.
+Preserve all data and the grid-origin sensitivity warning. The laptop movie
+pull now transfers one complete immutable publication with content checks;
+its obsolete mutable DCD-only transfer was removed and 11 regressions passed.
+
+
 **Confidence scoring qualified, 28 November:** ipSAE2 0.1.11 is installed in
 an isolated, locked uv environment at the reviewed Git revision. WT and
 design 06 passed native-token mapping, all-four-ligand reporting and 896

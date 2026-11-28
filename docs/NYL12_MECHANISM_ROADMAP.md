@@ -1,5 +1,18 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
+**WHAM/early-region diagnosis, 28 November:** finite-bin 3D WHAM and MBAR
+reproduce the same early jaggedness (finest-grid maxima 26.284/26.280 kcal/mol).
+Changing the estimator is not a remedy. The s≈0.26 bin is dominated 96.84%
+by one young, accepted frame 1.67 Å off the reference path; its weight ESS is
+1.07. Corner pileup explains only 0.179 kcal/mol of a 3.524 kcal/mol earlier
+feature, whose remaining origin is unresolved. Continue existing sampling;
+inspect physical-coordinate and path-distance distributions and initialization
+consistency before assigning minima or changing the primary reported coordinate.
+Preserve all data and the grid-origin sensitivity warning. The laptop movie
+pull now transfers one complete immutable publication with content checks;
+its obsolete mutable DCD-only transfer was removed and 11 regressions passed.
+
+
 **Model-confidence qualification completed, 28 November:** isolated ipSAE2
 0.1.11 passed upstream tests and real WT/design-06 native-mapping and numerical
 checks. Add its assembly-interface and protein-aligned ligand descriptors to

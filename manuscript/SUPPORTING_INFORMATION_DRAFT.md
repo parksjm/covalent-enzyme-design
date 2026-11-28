@@ -1013,3 +1013,50 @@ experimentally established immutability. Discordant K59E duplicates and the
 limitations of the lysate/MS assay prevent strong activity rankings. Any later
 relaxation of interface protections should be tested explicitly while retaining
 the catalytic/maturation core and verifying assembly.
+
+## WHAM and early-region diagnosis — 28 November 2026
+
+The matched finite-bin WHAM comparison used the exact previously displayed
+70 ps main + 43 supplemental-history pool, rather than introducing additional
+sampling during the estimator comparison. The source and report package is
+`analysis/wham_comparison_20261128/` in the relay campaign. Main observations:
+
+| Analysis | Projected maximum (kcal/mol) | Maximum early difference from MBAR (kcal/mol) |
+|---|---:|---:|
+| MBAR |26.2800|reference|
+| WHAM, 0.1 Å cells |26.1755|1.0044|
+| WHAM, 0.05 Å cells |26.3026|0.3700|
+| WHAM, 0.025 Å cells |26.2943|0.1101|
+| WHAM, 0.0125 Å cells |26.2837|0.0994|
+| WHAM, finest grid shifted half-cell |26.2703|0.0238|
+
+All maxima occur at s=0.6875. Values are point-estimator diagnostics, without
+implied physical precision. Fixed-point residuals are at most 1.96×10⁻¹³ kBT.
+The finest-grid origin sensitivity is 0.1232 kcal/mol at s=0.2625; this
+exceeds the declared 0.1 diagnostic and is not suppressed. The existing
+PyMBAR engine solves the discrete WHAM likelihood; this is not an independent
+numerical-software validation. The primary comparison uses original-frame
+projection; a separately labeled figure reports cell-center projection.
+
+The dominant early-bin frame is native frame 52 (zero-based row 51), at
+native time 12.60000038 ps / production age 7.60 ps, from
+`activation_support_3_03/04_production_5ps`. Its source bias centers are
+(q_acyl,q_act)=(-1.75,-0.6) Å, with 25 kcal mol⁻¹ Å⁻² on each coordinate.
+The exact harmonic/linear-tail adapter gives bias energy 2.72712 kcal/mol,
+consistent with native bias parity and the source rounding bound. SCC and
+source acceptance passed. q_del was unrestrained in that window, and this
+frame lies in the tail of its sampled q_del distribution. Its hard-s bin
+weight is 96.84%, but it supplies only 4.283% of the corresponding physical
+q_act bin when the explicit q_acyl conditioning boundary is expanded.
+Boundary sensitivity (lower q_acyl bound -2, -2.05, -2.10 Å; upper bound -0.8)
+retains a monotonic conditional q_act profile over -1.05 to +0.25 Å; maximum
+change is 0.414 kcal/mol. This does not prove the unconditional path feature
+spurious. Exact source mappings, ranges, weights and boundary choices remain
+in the diagnostic JSON/CSV and retained scripts.
+
+A nearest-segment polyline projection can assign a finite volume to an exact
+vertex, producing an atomic component of projected probability. The measured
+early vertex contains 25.89% of its histogram-bin probability; its calculated
+0.179 kcal/mol effect explains only part of the 3.524 kcal/mol feature.
+Neither smoothing the coordinate nor choosing coarse WHAM bins establishes
+physical intermediates. No frames, bins or restraints were removed or changed.

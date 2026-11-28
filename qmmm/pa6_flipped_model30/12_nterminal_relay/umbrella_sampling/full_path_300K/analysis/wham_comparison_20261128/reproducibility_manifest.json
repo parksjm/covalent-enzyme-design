@@ -1,0 +1,21 @@
+{
+  "archive_sha256": "e5e78499439ecd9693edd6e23d9dbbcfec3ae8eaaec1efa9824d3d7f1b0ee668",
+  "members": {
+    "finite_bin_wham/attempt_01/command.json": "468a947d2b5a31bbf7a6c1b915dcd1dd265b49e48ed8882e1585e3cb424ed5f6",
+    "finite_bin_wham/attempt_01/job.log": "ec8e9fb03ad7ab935b4354036a7060759b9c34ffe1799faf406b0cae5f0e61f0",
+    "finite_bin_wham/attempt_01/run.sh": "ac96b722cc3e2633c6bcc5d1f11cb660dc44479c0546f03d33144563e30c1119",
+    "finite_bin_wham/attempt_01/status.json": "ebae3945dbe8763f9f3da339022fbb0647976ebee0f3eb496487e659ba181618",
+    "finite_bin_wham/frozen_inputs/point.json": "fa4e8f7cd0c1cac909189d9fcabb4c69ebecb8f406959dfdd55151d2eee1fe1e",
+    "finite_bin_wham/frozen_inputs/sources.json": "99b7a86772a9cd4a6c5142ce3cb4039c25f5f37d352e185099cdb3c9908854f3",
+    "finite_bin_wham/frozen_inputs/weights.npz": "5f89aee210dc5071e8a06d9b1b346ba551bd684c4bae3fd4eb2668c69e39bfdf",
+    "finite_bin_wham/source_snapshot/diagnostic/run_comparison.py": "b126390147e62ed7beafd546a8c7f3e6d13c5c54b12446697f0eb747190da2f1",
+    "finite_bin_wham/source_snapshot/diagnostic/test_wham_core.py": "9e8f679fddf80075a79eaccc2c567c2c17ed3eceaa2cb8c2f540af1c5bfb10ea",
+    "finite_bin_wham/source_snapshot/diagnostic/wham_core.py": "18f42d481939df61961516ec9a740427361bcfe8e16fdd20b3bd243de4bbefc5",
+    "finite_bin_wham/source_snapshot/diagnostic/wham_figures.py": "da59b0db5a1f8c2f3456e6b52f85da04f025c73751aa92a74ee65fceb498e01b",
+    "finite_bin_wham/source_snapshot/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "finite_bin_wham/source_snapshot/nyl12_covalent/neb_umbrella_observables.py": "80fabfb862cfb20816e3d3627e92bb5716bb59082e46a0de83a028f57b5b0217",
+    "finite_bin_wham/source_snapshot/nyl12_covalent/relay_umbrella_cv.py": "967f223bd04bd1303efb3ddd46a915934b1875e6fa350d53da0149d12d47d21f",
+    "finite_bin_wham/source_snapshot/nyl12_covalent/relay_umbrella_projection.py": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc"
+  },
+  "scope": "Aggregate CV/weight inputs and frozen source only; no raw MD trajectories; same 82000-frame comparison"
+}

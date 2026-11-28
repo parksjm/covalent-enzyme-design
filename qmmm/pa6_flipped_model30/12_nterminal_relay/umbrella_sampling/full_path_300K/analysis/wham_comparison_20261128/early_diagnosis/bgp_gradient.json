@@ -1,0 +1,110 @@
+[
+  {
+    "s": 0.0125,
+    "pmf_kcal_mol": -0.0,
+    "kish_ess": 32.39397890175079,
+    "raw_count": 2694,
+    "gradient_norm_weighted_mean": 0.04477926250639778,
+    "gradient_norm_min": 0.007163939253361382,
+    "gradient_norm_max": 2.2496206383595054
+  },
+  {
+    "s": 0.037500000000000006,
+    "pmf_kcal_mol": 2.1475617547948977,
+    "kish_ess": 191.3771326705653,
+    "raw_count": 1170,
+    "gradient_norm_weighted_mean": 0.6023384480841091,
+    "gradient_norm_min": 0.1220446879756173,
+    "gradient_norm_max": 3.946279647892567
+  },
+  {
+    "s": 0.0625,
+    "pmf_kcal_mol": 3.023134135394661,
+    "kish_ess": 100.75137089812907,
+    "raw_count": 866,
+    "gradient_norm_weighted_mean": 2.325176808745671,
+    "gradient_norm_min": 0.10419124170085932,
+    "gradient_norm_max": 4.910225252824207
+  },
+  {
+    "s": 0.08750000000000001,
+    "pmf_kcal_mol": 3.3501624958433203,
+    "kish_ess": 35.97208185715139,
+    "raw_count": 813,
+    "gradient_norm_weighted_mean": 3.6381960801888873,
+    "gradient_norm_min": 0.11604012349989683,
+    "gradient_norm_max": 6.716269568453975
+  },
+  {
+    "s": 0.1125,
+    "pmf_kcal_mol": 3.429051194965888,
+    "kish_ess": 50.18203488227026,
+    "raw_count": 1009,
+    "gradient_norm_weighted_mean": 3.025862003030894,
+    "gradient_norm_min": 0.1237500512114427,
+    "gradient_norm_max": 5.777219989940389
+  },
+  {
+    "s": 0.1375,
+    "pmf_kcal_mol": 2.9548982113515714,
+    "kish_ess": 41.063337163381284,
+    "raw_count": 2060,
+    "gradient_norm_weighted_mean": 2.5516779492395507,
+    "gradient_norm_min": 0.10156637034560911,
+    "gradient_norm_max": 6.14423181461603
+  },
+  {
+    "s": 0.16250000000000003,
+    "pmf_kcal_mol": 2.424792412788657,
+    "kish_ess": 319.1261716919962,
+    "raw_count": 4023,
+    "gradient_norm_weighted_mean": 0.40802052161210023,
+    "gradient_norm_min": 0.08261491407082078,
+    "gradient_norm_max": 3.499946444777768
+  },
+  {
+    "s": 0.1875,
+    "pmf_kcal_mol": 2.2607580700916268,
+    "kish_ess": 70.35311772533323,
+    "raw_count": 3038,
+    "gradient_norm_weighted_mean": 0.6829426849590148,
+    "gradient_norm_min": 0.06273720225256126,
+    "gradient_norm_max": 4.475380010483402
+  },
+  {
+    "s": 0.21250000000000002,
+    "pmf_kcal_mol": 2.295632243668725,
+    "kish_ess": 34.99023544301359,
+    "raw_count": 1847,
+    "gradient_norm_weighted_mean": 0.2947417461773561,
+    "gradient_norm_min": 0.08926759922054534,
+    "gradient_norm_max": 1.168196163159296
+  },
+  {
+    "s": 0.2375,
+    "pmf_kcal_mol": 2.700192333308006,
+    "kish_ess": 8.775639695022234,
+    "raw_count": 1111,
+    "gradient_norm_weighted_mean": 0.13076936555251079,
+    "gradient_norm_min": 0.12954170412096333,
+    "gradient_norm_max": 0.13355792381421347
+  },
+  {
+    "s": 0.2625,
+    "pmf_kcal_mol": 3.7269411716053567,
+    "kish_ess": 1.066290093771524,
+    "raw_count": 936,
+    "gradient_norm_weighted_mean": 0.1289741834439908,
+    "gradient_norm_min": 0.09505918827523203,
+    "gradient_norm_max": 0.13019340874294608
+  },
+  {
+    "s": 0.28750000000000003,
+    "pmf_kcal_mol": 7.565677899849794,
+    "kish_ess": 5.698719783918396,
+    "raw_count": 7975,
+    "gradient_norm_weighted_mean": 0.07689690921812306,
+    "gradient_norm_min": 0.003708507959790535,
+    "gradient_norm_max": 0.4740822536231291
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "hypothesis": "Finite physical-CV cell bias discretization approaches original-frame MBAR weights as cells shrink; this does not establish sampling convergence",
+  "method": "Finite-bin WHAM likelihood solved with existing PyMBAR robust numerical solver, exact native Amber biases at occupied 3D cell centers",
+  "protonation": "Unchanged; no new molecular calculation",
+  "atom_mapping": "Unchanged exact q_acyl/q_act/q_del definitions snapshotted with native adapter",
+  "new_dependencies": false,
+  "independent_software_crosscheck": false,
+  "acceptance": {
+    "baseline_point_parity_max_kcal_mol": 1e-08,
+    "baseline_logweights_max": 1e-07,
+    "WHAM_gauge_aligned_residual_kBT": 1e-07,
+    "cell_frame_mass_error": 1e-12
+  },
+  "diagnostic_tolerance_kcal_mol": 0.1,
+  "diagnostic_tolerance_scope": "Finest-width and grid-origin differences in early supported bins only; exceeding 0.1 is reported, never silently repaired",
+  "files": [
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/current/weights.npz",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/frozen_inputs/weights.npz",
+      "sha256": "5f89aee210dc5071e8a06d9b1b346ba551bd684c4bae3fd4eb2668c69e39bfdf"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/current/sources.json",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/frozen_inputs/sources.json",
+      "sha256": "99b7a86772a9cd4a6c5142ce3cb4039c25f5f37d352e185099cdb3c9908854f3"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/review_20261128_01/current/point.json",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/frozen_inputs/point.json",
+      "sha256": "fa4e8f7cd0c1cac909189d9fcabb4c69ebecb8f406959dfdd55151d2eee1fe1e"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/wham_core.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/diagnostic/wham_core.py",
+      "sha256": "18f42d481939df61961516ec9a740427361bcfe8e16fdd20b3bd243de4bbefc5"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/run_comparison.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/diagnostic/run_comparison.py",
+      "sha256": "b126390147e62ed7beafd546a8c7f3e6d13c5c54b12446697f0eb747190da2f1"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/wham_figures.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/diagnostic/wham_figures.py",
+      "sha256": "da59b0db5a1f8c2f3456e6b52f85da04f025c73751aa92a74ee65fceb498e01b"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/test_wham_core.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/diagnostic/test_wham_core.py",
+      "sha256": "9e8f679fddf80075a79eaccc2c567c2c17ed3eceaa2cb8c2f540af1c5bfb10ea"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/__init__.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/nyl12_covalent/__init__.py",
+      "sha256": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/neb_umbrella_observables.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/nyl12_covalent/neb_umbrella_observables.py",
+      "sha256": "80fabfb862cfb20816e3d3627e92bb5716bb59082e46a0de83a028f57b5b0217"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/relay_umbrella_cv.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/nyl12_covalent/relay_umbrella_cv.py",
+      "sha256": "967f223bd04bd1303efb3ddd46a915934b1875e6fa350d53da0149d12d47d21f"
+    },
+    {
+      "source": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/relay_umbrella_projection.py",
+      "snapshot": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/wham_comparison_20261128/finite_bin_wham/source_snapshot/nyl12_covalent/relay_umbrella_projection.py",
+      "sha256": "95aa8b4db5b424e14d87f76290c0c551dc05194494313fd163dc38a4ad542efc"
+    }
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "pymbar": "4.0.3",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.2",
+    "ruff": "0.15.13"
+  },
+  "python": "/data/jpc/covalent-enzyme-design/.venv/bin/python"
+}
