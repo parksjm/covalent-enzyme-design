@@ -59,6 +59,21 @@ the existing topologies for MD or the current coordinates as optimized.
 - Distinguish PES profiles from PMFs; an unconverged NEB maximum is not a
   validated barrier. Record all restraints, frozen atoms and proton inventories.
   Separate substrate hydrolysis from enzyme maturation/autocleavage.
+- QM/MM PMFs and verified PES transition states are not prerequisites for PI
+  experimental nomination based on sequence, assembly, structural and dynamic
+  evidence, with expression/maturation/activity checks. Chemistry may precede
+  testing if resources permit or follow improvement to explain mechanism.
+  Computed barrier-improvement claims require matched, supported WT/design
+  calculations; do not tune post hoc protocols to reproduce assay outcomes.
+- RFD3 remodeling must couple mature alpha/beta repeats A/E, B/F, C/G and D/H
+  with symmetry-equivalent motion masks and the native symmetry sampler.
+  Approximate crystal D2 NCS does not qualify exact operators/native export or
+  fixed single-site TS compatibility. Independently check final backbone
+  residuals, fixed context and ligands. Native sampling projects denoised
+  coordinates; raw Gaussian noise is independent. Historical chain-A-only,
+  default-sampler parents omitted symmetry: their lineages cannot advance
+  pending independent symmetry qualification. Immutable jobs may finish as
+  diagnostics; original MD-backbone baseline lineages remain eligible.
 - With consistent scissile-amide mapping, opposite catalytic Herschlag-phi
   signs identify flipped local poses. Other distances assess catalytic utility.
 - Before template-guided prediction, verify actual native feature tensors,

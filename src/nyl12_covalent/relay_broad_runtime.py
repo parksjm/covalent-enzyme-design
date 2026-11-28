@@ -14,6 +14,7 @@ from typing import Any
 import numpy as np
 
 from .relay_ensemble_sequences import summarize_score
+from .rfd3_symmetry_acceptance import require_backbone_symmetry
 
 
 def write_new(path: Path, data: Any) -> None:
@@ -97,6 +98,7 @@ def verify_parent(parent: dict[str, Any]) -> None:
             raise ValueError(f"Parent rejected by {field}")
     if parent["sequence_scope"] != "native_WT":
         raise ValueError("Only native-sequence RFD3 parents are permitted")
+    require_backbone_symmetry(parent)
 
 
 def export_local(source: Path, destination: Path) -> None:

@@ -11,7 +11,19 @@ points or committor-defined transition states. Original backbones provide a
 baseline, with qualified, fixed-length RFD3 partial diffusion as an optional
 comparison. Canonical export and native graph/atom-context audits precede and
 follow remodeling. No whole-assembly diffusion claim follows from the earlier
-local remodeling experiments.
+local remodeling experiments. Prospective RFD3 remodeling requires coupled
+A/E, B/F, C/G and D/H repeats, symmetry-equivalent motion masks and the native
+symmetry sampler, followed by independent final backbone-residual, fixed-context
+and ligand checks. Crystal C-alpha fits support approximate D2 NCS, not C4;
+exact operators/native export and fixed single-site TS compatibility remain
+unqualified. The native sampler projects denoised coordinates while raw Gaussian
+noise is independent; no custom sampler or tied-noise claim is introduced.
+
+Historical local RFD3 inputs omitted symmetry, used the default sampler and
+allowed motion only in chain A. Their graph/coordinate acceptance does not
+qualify symmetry. The immutable LigandMPNN pilot may finish diagnostically,
+but all RFD3-parent lineages are held from advancement pending independent
+symmetry qualification; original MD-backbone baseline lineages remain eligible.
 
 LigandMPNN sampling ties equivalent alpha and beta positions across the four
 copies. The current design mask fixes 101 of 328 precursor positions: 24 core
@@ -26,7 +38,7 @@ the Supporting Information. Sequence protection is distinct from backbone
 coordinate restraint.
 
 The initial budget is 24 raw samples, six on each of two original and two
-qualified remodeled parents. Complete sequences are deduplicated while
+historically graph/coordinate-accepted remodeled parents. Complete sequences are deduplicated while
 retaining every lineage, and WT/design cross-scores use identical model weights,
 masks and decoding orders across TS-like and matched E–S structures. Likelihood
 rank is used for computational triage, not as an activation-energy estimate.
@@ -216,8 +228,9 @@ settings, not molecular-dynamics times or final structural-displacement limits.
 The full eight-chain mature assembly and one physical substrate were retained.
 Twenty-four pocket/entrance-loop positions in the occupied repeat were mobile;
 other context and catalytic/maturation anchors were fixed. Exact four-copy
-sequence ties are imposed during subsequent inverse folding; identical
-instantaneous conformations are not required for bound and apo sites.
+sequence ties were specified for subsequent inverse folding. This historical
+local run did not impose backbone symmetry; it does not satisfy the prospective
+RFD3 symmetry requirement above.
 
 The original PA6 component IDs collided with unrelated installed CCD entries.
 A reversible serialization-only relabeling retained 33 ligand heavy atoms and all
@@ -750,6 +763,16 @@ minimizations will be labeled distinctly. Higher-level benchmarks will assess
 DFTB reaction energetics; single-point corrections do not validate stationary
 points at the higher level.
 
+## Experimental nomination and optional mechanistic follow-up
+
+The PI may nominate candidates from sequence, assembly, structural and dynamic
+evidence for expression, maturation and activity testing against WT. QM/MM PMFs
+and verified PES transition states are not prerequisites for experimental
+nomination. Resource-permitting chemistry may precede testing or follow measured
+improvement to investigate mechanism. Computed barrier-improvement claims still
+require matched, supported WT/design calculations; post hoc protocols must not
+be tuned to reproduce assay outcomes.
+
 ## Design and independent prediction — proposed
 
 The initial campaign will use focused LigandMPNN sequence redesign on retained
@@ -769,7 +792,8 @@ beta positions separately, using explicit tied groups and equal weights with
 inappropriate for the mature eight-chain alpha/beta representation. A geometric
 audit of the retained scaffold is
 D2-like; the experimental assembly/operators will be checked before a production
-RFD3 symmetry specification. Symmetric sequence design does not require
+RFD3 symmetry specification. Native symmetry-constrained remodeling and
+independent output qualification are required prospectively. Symmetric sequence design does not require
 identical instantaneous loop conformations or ligand occupancy. The exact
 RFD3 combination of alpha/beta repeats, retained context and catalytic atomic
 motifs still requires an input preflight. Variable-length variants are deferred
@@ -822,8 +846,8 @@ sequences will be evaluated across all templates and E–S/acylenzyme/access
 controls, rather than requiring identical sequences to recur independently.
 The multiple-PDB option is batching, not built-in joint multistate design [R10].
 LigandMPNN context/likelihoods do not encode a computed reaction barrier or
-substitute for QM charge redistribution. Quantitative improvement will require
-matched mutant/WT activation free energies referenced to each enzyme's own
+substitute for QM charge redistribution. A computed barrier-improvement claim
+will require matched mutant/WT activation free energies referenced to each enzyme's own
 reactant basin, plus checks for impaired later chemistry or access. Lauko et al.
 combined QM-derived reactive motifs with multistate PLACER analysis [R27];
 Zoi, Antoniou and Schwartz analyzed 15 uncorrelated, committor-defined TS

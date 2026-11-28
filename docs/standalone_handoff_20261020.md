@@ -1,5 +1,16 @@
 **Start here:** [active plan through 30 November](NYL12_THROUGH_NOV30.md).
 
+**Latest clarification, 27 November:** require symmetry-constrained RFD3
+backbones as well as LigandMPNN sequence ties. The existing local RFD3 parents
+used the default sampler and chain-A-only mobility; do not advance their
+lineages under the new requirement. Original-backbone candidates remain
+eligible for review. See [the qualification contract](RFD3_SYMMETRY_QUALIFICATION.md)
+and the current pilot's separate `symmetry_eligibility_20261127.json` hold
+record; frozen inputs and previous acceptance receipts remain unchanged.
+QM/MM PMFs are optional before experimental testing and may instead explain
+WT/design differences afterward. This supersedes any older mandatory
+PMF-before-experiment ordering below. No current QM/MM/US job is stopped.
+
 **Current PI decisions, 27 November:** K156 and L235 are protected. The current
 mask has 101 fixed / 227 variable precursor positions. All 24 `relay_corr01_*`
 designs change K156 and are ineligible; diagnostic outputs are preserved and

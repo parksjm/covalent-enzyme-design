@@ -12,6 +12,7 @@ import numpy as np
 import pytest
 
 from nyl12_covalent import relay_broad_runtime as runtime
+from nyl12_covalent.rfd3_symmetry_acceptance import COUPLED_REPEATS
 
 
 def load_script(name: str):
@@ -57,6 +58,29 @@ def make_parent(tmp_path):
         path.write_text(json.dumps({"accepted": True}))
         parent[field] = str(path)
         parent[field + "_sha256"] = runtime.digest(path)
+    symmetry = tmp_path / "backbone_symmetry_acceptance.json"
+    symmetry.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "accepted": True,
+                "point_group": "D2",
+                "sampler_kind": "symmetry",
+                "coupled_repeats": COUPLED_REPEATS,
+                "equivalent_mobile_masks": True,
+                "operator_closure_accepted": True,
+                "fixed_ts_context_retained": True,
+                "pdb_path_sha256": parent["pdb_path_sha256"],
+                "canonical_mapping_sha256": parent["canonical_mapping_sha256"],
+                "backbone_rmsd_A": 0.001,
+                "backbone_rmsd_A_limit": 0.01,
+                "backbone_max_deviation_A": 0.002,
+                "backbone_max_deviation_A_limit": 0.02,
+            }
+        )
+    )
+    parent["backbone_symmetry_acceptance"] = str(symmetry)
+    parent["backbone_symmetry_acceptance_sha256"] = runtime.digest(symmetry)
     return parent
 
 

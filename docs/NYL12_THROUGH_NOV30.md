@@ -1,5 +1,17 @@
 # Nyl12: active plan through 30 November 2026
 
+**Latest PI clarification, 27 November:** RFD3 must also constrain backbone
+symmetry across the four coupled alpha/beta repeats. The audit found that the
+existing local remodels did not do this. Hold their candidate lineages from
+advancement; preserve ongoing frozen jobs as diagnostics. Original-backbone
+lineages may proceed to review. Qualify the native D2 setup, equivalent mobile
+masks, fixed TS context and final coordinate residuals before releasing a new
+RFD3 parent; see [the qualification contract](RFD3_SYMMETRY_QUALIFICATION.md).
+QM/MM PMFs are **not prerequisites for experimental testing**. They are an
+optional matched comparison before testing or a mechanistic explanation
+afterward. PI nomination can proceed from the available structural/dynamic
+evidence, with appropriate experimental controls and bounded claims.
+
 **Sign correction, confirmed by the PI on 27 November:** the desired Boltz
 orientation is **positive phi** under the unchanged project definition. The
 earlier assistant claim that the target was negative was incorrect and is

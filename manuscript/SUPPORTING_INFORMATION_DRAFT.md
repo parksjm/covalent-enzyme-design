@@ -896,13 +896,30 @@ mutations and alignment gaps are explicit. A simple fixed numbering offset
 was not assumed. Homologous activity/maturation evidence must be distinguished
 from direct evidence in Nyl12.
 
+Prospective RFD3 remodeling must tie the mature A/E, B/F, C/G and D/H repeats
+with equivalent motion masks and the native symmetry sampler, then independently
+check final backbone residuals, fixed context and ligand integrity. Crystal
+C-alpha fits support approximate D2 NCS rather than C4; exact operators/native
+export and compatibility with the fixed single-site TS context are unqualified.
+Native sampling projects denoised coordinates, with independent raw Gaussian
+noise. Historical local parents omitted symmetry, used the default sampler and
+moved chain A only. Their graph/coordinate checks do not qualify symmetry.
+The immutable LigandMPNN pilot may finish diagnostically; RFD3-parent lineages
+are held from advancement pending independent symmetry qualification. Original
+MD-backbone baseline lineages may proceed under the other acceptance gates.
+
 The operational stage sequence is TS-like ensemble selection → canonical/graph
 qualification → original backbones with an optional qualified RFD3 arm →
 symmetry-tied LigandMPNN → pooled sequence audit/diversity triage → small
 matched template-free Boltz cohort → canonical/clash preflight → matched
 Amber relaxation → canonical remeasurement/filtering → few independent MD
-comparisons → selected QM/MM/path tests → US/MBAR only for the strongest
-candidates. OpenMM is an available separately qualified alternative to Amber,
+comparisons → PI experimental nomination with expression, maturation and
+activity checks. Selected QM/MM/path tests and US/MBAR are optional before
+experiments if resources permit, or may follow measured improvement to explain
+mechanism; neither a PMF nor a verified PES TS is an experimental prerequisite.
+Computed barrier-improvement claims require matched, supported WT/design
+calculations, including post hoc protocols not tuned to assay outcomes. OpenMM
+is an available separately qualified alternative to Amber,
 not an extra mandatory relaxation. Exact reused entry points, budget limits
 and acceptance records are described in the
 [protocol](../docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md).

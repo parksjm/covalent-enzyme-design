@@ -1,5 +1,16 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
+**Latest design/experimental gate, 27 November:** RFD3 backbone remodeling
+must be symmetry-constrained across A/E, B/F, C/G and D/H. Existing local
+RFD3 parents lack this qualification and their candidate lineages are held;
+original-backbone designs remain eligible for review. Native D2 configuration,
+equivalent mobility masks, fixed-TS compatibility and independent final
+residual checks are required; [qualification details](RFD3_SYMMETRY_QUALIFICATION.md).
+PMFs are optional before experiments, not a nomination prerequisite. With PI
+review, test a bounded WT/design cohort using available structural and dynamic
+evidence; use matched QM/MM PMFs before testing when feasible or afterward
+to investigate measured improvements. Current QM/MM/US jobs continue.
+
 **Current PI decisions, 27 November:** K156 and L235 are protected. The current
 mask has 101 fixed / 227 variable precursor positions. All 24 `relay_corr01_*`
 designs change K156 and are ineligible; diagnostic outputs are preserved and

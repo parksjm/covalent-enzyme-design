@@ -22,8 +22,9 @@ PES TS can complement the ensemble; it is not interchangeable with a sampled
 free-energy bottleneck. Preserve both categories in metadata.
 
 The current bounded comparison uses two original relay representatives and
-their two accepted RFD3 remodels. It does not claim a converged transition-state
-ensemble. Template provenance is in
+their two historically graph/coordinate-accepted RFD3 remodels. The latter
+are not symmetry-qualified and their lineages are held from advancement. This
+comparison does not claim a converged transition-state ensemble. Provenance is in
 `design/nyl12_relay_ts_ensemble_20261126/templates/template_manifest.json`.
 
 ## 2. Export, canonicalize and qualify before design
@@ -49,15 +50,33 @@ graph and catalytic-geometry checks. Preserve tetramer sequence symmetry,
 reaction geometry and required structural context. Sequence conservation and
 the permitted coordinate-motion mask are separate specifications.
 
-The existing qualified remodels were local, fixed-length experiments. Gentle
-whole-assembly backbone variation is a future independently qualified arm;
-it must not be described as already implemented. No loop insertion/deletion
-or new capped-substrate parameter campaign belongs to this pilot.
+Prospective RFD3 remodeling must couple the four mature alpha/beta repeats
+A/E, B/F, C/G and D/H with symmetry-equivalent coordinate-motion masks and the
+native symmetry sampler. Crystal C-alpha fits support approximate D2
+noncrystallographic symmetry (all three nonidentity rotations are near 180°),
+not C4. The exact group/operators, native symmetry export and compatibility
+with the fixed single-site TS/ligand context remain unqualified. Native RFD3
+projects denoised coordinates; raw Gaussian noise is independently sampled.
+Do not promise tied noise or introduce a custom sampler. Independently audit
+final backbone symmetry residuals, fixed context and ligand integrity before
+accepting any remodeled parent.
+
+The existing local, fixed-length remodels omitted the symmetry field, used the
+default sampler and permitted motion only in chain A. Historical graph and
+coordinate checks remain valid for their stated scope, but do not establish
+symmetry qualification. The immutable running LigandMPNN pilot may finish as
+a diagnostic; every RFD3-generated parent lineage is held from advancement
+pending independent symmetry qualification. Original MD-backbone baseline
+lineages may proceed through the other gates. Gentle whole-assembly backbone
+variation is a future independently qualified arm; it is not implemented. No
+loop insertion/deletion or new capped-substrate parameter campaign belongs to
+this pilot.
 
 ## 4. Run a bounded, symmetry-tied LigandMPNN experiment
 
-Sample six sequences on each of four accepted parents: 24 raw samples at the
-existing temperature 0.1, with no native-identity bias or forced mutation count.
+The immutable pilot samples six sequences on each of four historical parents:
+24 raw samples at temperature 0.1, without native-identity bias or a forced
+mutation count.
 Tie equivalent alpha positions across A–D and beta positions across E–H.
 Preserve the current 101-position mask in all copies, including K156 and L235.
 Keep the entire 221–232 alpha tail and the established catalytic identities.
@@ -157,15 +176,25 @@ retention, hydrogen-bond networks, assembly and native-Thr diagnostics. Four
 sites within a tetramer are correlated observations, not four independent
 replicas. Geometry occupancy alone is not a catalytic-efficiency prediction.
 
-## 8. Test chemistry only for the strongest candidates
+## 8. Nominate experiments and reserve detailed chemistry for a shortlist
 
-For a few persistent MD candidates, perform MM minimization, matched QM/MM
-optimization and inexpensive reaction-path tests. Regenerate candidate-specific
+The PI may nominate candidates for experimental testing on sequence, assembly,
+structural and dynamic evidence, with expression, maturation and activity
+checks against WT. Neither a QM/MM PMF nor a verified PES TS is a prerequisite.
+Detailed chemistry may precede experiments if resources permit, or follow
+experimental improvement to investigate its mechanism. Experimental improvement
+alone does not establish a computed barrier improvement.
+
+For a few persistent MD candidates, optional chemistry uses MM minimization,
+matched QM/MM optimization and inexpensive reaction-path tests. Regenerate
+candidate-specific
 atom maps, QM charges and input hashes; preserve the baseline Hamiltonian,
 protonation, movable region and mechanism for comparisons. Reserve expensive
 US/MBAR for the best supported candidates, using the same equilibration,
 analysis, uncertainty and convergence criteria as WT. Report a mutation effect
-on a barrier only with a matched reference and statistical support.
+on a barrier only with a matched WT reference and statistical support.
+Post hoc WT/design protocols must remain matched
+and must not be tuned to reproduce assay outcomes.
 
 Any later SolubleMPNN layer acts on a selected catalytic parent while retaining
 catalytic, maturation, binding and assembly constraints. Revalidate the combined
@@ -180,6 +209,7 @@ standards accordingly.
 | --- | --- |
 | Persistent execution | `scripts/run_nyl12_job.py` |
 | RFD3 parent qualification | `scripts/run_rfd3_parent_qualification.py`, `scripts/export_rfd3_qualified_parent.py` |
+| Required RFD3 symmetry admission | `src/nyl12_covalent/rfd3_symmetry_acceptance.py`; [qualification contract](RFD3_SYMMETRY_QUALIFICATION.md) |
 | Broad mask and sequence budget | `scripts/prepare_relay_broad_pilot.py`, `scripts/run_relay_broad_pilot.py` |
 | Shared protection and audits | `src/nyl12_covalent/nyl12_sequence_protection.py`, `relay_broad_pilot.py`, `relay_ensemble_sequences.py` |
 | Native sequence injection/scoring | `scripts/score_relay_ensemble_sequence.py` |

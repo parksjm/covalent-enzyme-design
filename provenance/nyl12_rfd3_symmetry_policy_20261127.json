@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-28T04:16:56.074473+00:00",
+  "parent_commit": "196be1faea3031d36d23caf372d3a4b6f60ac465",
+  "payload_sha256": {
+    "AGENTS.md": "7b3f41764bba6872d6c69c72e084cddd618baf011794996486d8c57eaa5a8c93",
+    "docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md": "289fc2ca42113fa3eca2a23e5bb29b194f31127bfbc0e2dda469a56d1836210d",
+    "docs/NYL12_THROUGH_NOV30.md": "6ccce0fb4f941151b89c41d2d1c27df331c01e7c34807b3c7c83f9e11cabff8d",
+    "docs/NYL12_MECHANISM_ROADMAP.md": "203095fb7b2e1e5ae345741a44cf47e06a83a607a29fc7768b47d545889e6c49",
+    "docs/standalone_handoff_20261020.md": "8c03f045cf037eeb172ce1b698ff7620caf65a6289f647dc6b0d5cd911938dd8",
+    "docs/RFD3_SYMMETRY_QUALIFICATION.md": "5281139d58f66a64838b9d3322afd32cac2020c34ce9f09967768dffb5434d8c",
+    "manuscript/METHODS_DRAFT.md": "643b87a026b3f83859a82a4821fc0ecf2fdcf70113cace2cd22d77285219c221",
+    "manuscript/SUPPORTING_INFORMATION_DRAFT.md": "248bb23f2fdbf29fed18f4e31b50748c497170c53a56ac0b109e9cc0cf1d4abc",
+    "src/nyl12_covalent/relay_broad_runtime.py": "7a383e95918f9a89d8a7c1794f0e11e9796bfd810abc61cf3e2cecb64e3320d9",
+    "src/nyl12_covalent/rfd3_symmetry_acceptance.py": "3a52f99f36af626afe7f83b86566306e4bc399cfd8d26b483e7bcd2fe1f17a1a",
+    "tests/test_relay_broad_runtime.py": "882c760678d679c8770939d1ad5adbb6e1701b655fc39e4ea69f0ab712c6602b",
+    "tests/test_rfd3_symmetry_acceptance.py": "7bcfd048c46c0abee4edbf6d1c99c9951519c0b740686320d497c1fc8d49ebdb",
+    "design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/symmetry_qualification_20261127/symmetry_contract_audit.json": "9660441e8edc988e1969c1a234baac7bae2ce6b3dbb60cd0cbf9c553e31bd24e",
+    "design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/symmetry_eligibility_20261127.json": "a309a9e1f833ab43ad60a7e025f355ab901981402e9128750c88203bcfde8712"
+  },
+  "validation": {
+    "focused_pytest_passed": 42,
+    "new_symmetry_gate_statement_coverage_percent": 100,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "scoped_git_diff_check": "passed",
+    "actual_legacy_RFD3_parents_held": 2
+  },
+  "scientific_scope": "Prospective admission guard, not completed native symmetric RFD3 qualification",
+  "execution": "Existing frozen jobs unchanged;12RFD3lineages held;12original lineages eligible for other gates",
+  "experimental_nomination_requires_PMF": false,
+  "active_action_journal": "output_agent_actions/20261021.jsonl"
+}
