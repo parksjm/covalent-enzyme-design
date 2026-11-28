@@ -2,6 +2,21 @@
 
 ## Prespecified TS-ensemble redesign and validation workflow
 
+For the initial matched sequence-validation cohort, the two highest-ranked
+original-backbone candidates were selected using local-pocket LigandMPNN
+scores across both original TS-like parents. Candidates 06 and 03 contained
+92 and 99 substitutions, respectively, and differed at 41 of 328 precursor
+positions while retaining all 101 protected identities and four-copy sequence
+ties. Scores served only as sequence/structure diagnostics. WT and both
+designs entered a fresh matched two-seed, template-free Boltz comparison on
+Violet, with four unguided PA6 L4 molecules. Each design used its own exact
+328-residue precursor MSA search and query-aligned mature-chain pairing;
+the unchanged validated WT MSA was reused. Identical unrestrained Amber
+relaxation followed canonicalization and severe-clash screening. Positive-phi
+Tier A/B selection considered all 48 site–ligand–amide combinations before
+one-to-one assignment, with all four sites reported before and after
+relaxation. These are structural tests, not estimates of catalytic efficiency.
+
 The bounded redesign protocol selects chemically coherent, decorrelated
 representatives near supported relay free-energy bottlenecks, retaining source
 window, block, frame, proton inventory and reaction-atom mapping. Templates

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "/data/jpc/enzyme-substrate-modeling/.pixi/envs/boltz/bin/python",
+    "-B",
+    "-m",
+    "nyl12_covalent.matched_original_native",
+    "--audit",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/cases/WT_seed_20261126/case.json",
+    "/data/jpc/code/boltz"
+  ],
+  "cwd": "/data/jpc/covalent-enzyme-design",
+  "ended_utc": null,
+  "env_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "LD_LIBRARY_PATH": "/data/jpc/code/pmemd26/lib:",
+    "MKL_NUM_THREADS": "1",
+    "NYL12_PROJECT_ROOT": "/data/jpc/covalent-enzyme-design",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/pipeline_source_snapshot/src"
+  },
+  "exit_status": null,
+  "input_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction_plan.json": "589096568a4f4667f0de8a2afbf2660e6a2dc15ce1f19a6c7e834d2413a42877"
+  },
+  "log": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/jobs/native_WT_cpu_diagnostic/job.log",
+  "session_name": "nyl12_matched_native_cpu_20261127",
+  "started_utc": null
+}

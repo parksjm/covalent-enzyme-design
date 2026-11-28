@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "target_phi_sign": 1,
+  "approved_reference_manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json",
+  "ligand_graph_manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/prediction_preparation/ligand_graph_manifest.json",
+  "candidates": [
+    {
+      "candidate": "relay_prot101_06",
+      "sequences": {
+        "alpha": "MEASSKDGTLLFDFPEIKVGDAVDPAGPTGITVFYFPKGVQSCVVIQGGSVGTFFTQEKMQQGEGYLDGFAITGGAILGLEAVAGIQSAIFNSMKKNEVQFRNMPLITGAVIFDYIPRNNMLYPNKEMGVKAAENLTSGSFKQGRHGAGVSAVVGKLLGEGFQLSGQGAAYMEMGELKVFVATVVNSIGVILDEKGEVVWGRPPGFTKENLNEVVRELLKQPKKPFWPEPKN",
+        "beta": "TTLAIVVVNQEMNPRHLKQLGRQVHHAASQVIHPYATILDGDVLYTATTRLVRSDLYAPGADIESDLNAKFIYLGMVAGELLKKAIWNAAGWKHVP"
+      },
+      "gpu_uuid": "GPU-ec7e1af2-0974-2893-d34b-411eee82bbd6"
+    },
+    {
+      "candidate": "relay_prot101_03",
+      "sequences": {
+        "alpha": "MKASSENGTLLFDFPEIQVGDAVDESGPIGITVFYFPKGVQAAVVIQGGSVGTFFTQEKLQQGEGYLDGFVITGGAILGLEAVAGVVSAAFAAQKKNEVQFRNMILFTGAVIFDYIPRNNMLYPNKEMGVAAFQNLSSGSFKQGRQGAGVSAVVGKLFYEGYQLSGQGAAYMEMGELKVFVATVVNSIGVVLDEKGEVVWGRPPGFTKENLNKVVEELLKQPKKPFWPEPKN",
+        "beta": "TTLAIVVVNQEMDPRHLKQLGRQVHHAASQVIHPFATILDGDVLQTATTRLVKSDIYAPGADIESDLNAKFIYLGMVAGELLKEAIWNAVGYHHHH"
+      },
+      "gpu_uuid": "GPU-40fa5eaf-4a10-3258-d773-7b6c01bdfa9d"
+    },
+    {
+      "candidate": "WT",
+      "sequences": {
+        "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+        "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+      },
+      "gpu_uuid": "GPU-ec7e1af2-0974-2893-d34b-411eee82bbd6",
+      "precursor_a3m": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_paired_precursor_controls_20261127/precursor_search/local_attempt01/nyl12_wt_precursor.a3m",
+      "source_acceptance": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_paired_precursor_controls_20261127/precursor_search/source_acceptance.json"
+    }
+  ],
+  "seeds": [
+    20261126,
+    20261127
+  ],
+  "search": {
+    "executable": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/colabfold/bin/colabfold_search",
+    "database": "/data/boltz_db"
+  },
+  "engine": {
+    "executable": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/boltz/bin/boltz",
+    "python": "/data/jpc/enzyme-substrate-modeling/.pixi/envs/boltz/bin/python",
+    "cache": "/data/jpc/code/boltz",
+    "checkpoint": "/data/jpc/code/boltz/boltz2_conf.ckpt",
+    "checkpoint_sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1",
+    "env_overrides": {
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "2",
+      "NUMEXPR_NUM_THREADS": "2"
+    }
+  }
+}

@@ -1,5 +1,16 @@
 **Start here:** [active plan through 30 November](NYL12_THROUGH_NOV30.md).
 
+**Active matched comparison:** `nyl12_original_matched_20261127` waits for the
+two running `nyl12_msa_relay_prot101_{06,03}_20261127` searches, then runs six
+fresh matched WT/design Boltz models and automatic Amber follow-through.
+Candidates are literal original-only ranks 1/2 (06/03), superseding the prior
+parent-balanced 06/07 proposal. Both seeds are 20261126/27, with four unguided
+PA6 L4 molecules and no protein template. Canonical checks, severe-clash
+preflight, matched minimization and all-48 positive-phi Tier A/B analysis are
+automatic. `original_backbone_matched_20261127/controller/` owns the census;
+per-case outputs retain all four sites and PyMOL-ready canonical structures.
+Original QM/MM and US sessions were not altered.
+
 **Latest clarification, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
 MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
 parents, retaining the 101-position protection mask and mandatory four-copy

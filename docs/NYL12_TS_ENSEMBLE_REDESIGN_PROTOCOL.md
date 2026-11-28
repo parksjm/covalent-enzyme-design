@@ -123,8 +123,8 @@ automatically from a favorable likelihood alone.
 
 ## 5. Predict a small matched E–S control/design cohort
 
-Select at most two initial design representatives, balancing original/remodeled
-parentage, sequence diversity and cross-template compatibility. Predict WT and
+Select at most two initial original-backbone design representatives using
+cross-template compatibility and sequence diversity. Predict WT and
 both designs with the same two declared seeds (six models initially), using
 the qualified precursor-derived paired protein MSAs and template-free Boltz-2
 condition. Four PA6 L4 molecules remain unguided: no substrate contact restraints,
@@ -137,6 +137,17 @@ use matched WT seeds when assessing designs. AF3 is an optional separately
 qualified comparison, not a compulsory step for every candidate.
 
 ## 6. Postprocess, reject pathological assemblies, then relax
+
+**Matched cohort queued, 27 November:** the two highest-ranked original-only
+designs, `relay_prot101_06` and `relay_prot101_03`, have 92/99 substitutions
+and differ at 41 precursor positions. All 101 protections and sequence ties
+pass. Fresh WT/design predictions use the same Violet executable, checkpoint,
+two seeds, query-specific paired MSAs and four unguided L4 molecules. The
+existing WT MSA is reused; old DGX predictions remain calibration references.
+The persistent controller waits for the two new MSA searches and automatically
+runs the six predictions, canonical audits, clash screening, matched Amber and
+all-four-site comparisons. See the
+[campaign](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/README.md).
 
 Canonicalize raw predictions; verify sequence symmetry, chain/residue identity,
 all four ligands and PA6 connectivity. Reject severe nonbonded interchain

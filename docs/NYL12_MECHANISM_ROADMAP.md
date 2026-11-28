@@ -1,5 +1,17 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
+**Matched sequence-validation cohort queued:** the PI authorized fresh
+Boltz/Amber predictions for original-only likelihood ranks 1/2,
+`relay_prot101_06` and `relay_prot101_03`, plus WT with two matched seeds.
+All 101 protected identities are retained. Query-specific local precursor
+MSAs precede six template-free models with four unguided L4 molecules;
+canonical audits, clash screening and identical unrestrained Amber relaxation
+then evaluate all four sites under positive-phi Tier A/B criteria. Session
+`nyl12_original_matched_20261127` owns the automatic follow-through. The prior
+06/07 pair was parent-balanced rather than the top two overall. Current
+QM/MM/US jobs continue unchanged; see
+[the cohort record](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/README.md).
+
 **Latest design/experimental gate, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
 MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
 parents, retaining the 101-position protection mask and mandatory four-copy

@@ -1,0 +1,22 @@
+{
+  "candidate": "WT",
+  "sequences": {
+    "alpha": "MAASSTDNILHFDFPEVQIGTAINPEGPTGITLFYFPKGVQASVDIQGGSVGTFFTQEKMQQGEAYLDGVAFTGGGILGLEAVAGAVSSLFADQTKNEVQFRRMPLISGAVIFDYTPRQNMIYPDKALGQKAFAALSAGQFVQGRHGAGVSASVGKLLRDGFQLAGQGGAFAQIGKTKIAVFTVVNAVGVILDEKGEVIYGLPKGATKQTLNQQVTELLQQPKKPFWPEPKN",
+    "beta": "TTLTIVITNEKLAPRHLKQLGRQVHHALSQVIHPYATILDGDVLYTVSTRSIESDLYAPGADIESDLNAKFIYLGMVAGELAKQAVWSAVGYSHRP"
+  },
+  "gpu_uuid": "GPU-ec7e1af2-0974-2893-d34b-411eee82bbd6",
+  "precursor_a3m": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_paired_precursor_controls_20261127/precursor_search/local_attempt01/nyl12_wt_precursor.a3m",
+  "source_acceptance": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_paired_precursor_controls_20261127/precursor_search/source_acceptance.json",
+  "case": "WT_seed_20261126",
+  "seed": 20261126,
+  "input": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/cases/WT_seed_20261126/WT_seed_20261126.yaml",
+  "remote_input": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/cases/WT_seed_20261126/WT_seed_20261126.yaml",
+  "remote_output": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/cases/WT_seed_20261126/runs",
+  "remote_job": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/cases/WT_seed_20261126/job",
+  "msas": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/diagnostic_WT_native/msas/WT",
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_paired_precursor_controls_20261127/precursor_search/local_attempt01/nyl12_wt_precursor.a3m": "8e9cc726c45ec180ea1603ed1b7f08c5a4b1c1a8dc4d6a8e9b7bbbf1a5549322",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/prediction_preparation/ligand_graph_manifest.json": "4d33cecf7f2730dc15cdcfacd193ff3cab9bf3e5426fb8027b8fe46f3ae94dd9",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/wt_protein_template_controls_20261127/amber_relaxation_20261127/approved_positive_pose_reference_20261127.json": "5bc37927aff643d7fb69610bb5c0491e6a83c154a0ff99658adf8eeeafb62efd"
+  }
+}

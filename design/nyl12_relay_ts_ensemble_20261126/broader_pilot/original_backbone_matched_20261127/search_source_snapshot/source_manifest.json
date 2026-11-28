@@ -1,0 +1,16 @@
+{
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/search_source_snapshot/scripts/run_matched_original_boltz.py": "39028eeac30f563e0c7de5ed4ee3d73e79082d5ffa1d057cd1e3bc943b637d6f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/search_source_snapshot/src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/search_source_snapshot/src/nyl12_covalent/matched_original_boltz.py": "6a8d8ccf967536a9a34761096535341d85e52c450effd6974088d99dc0a69fdb",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/search_source_snapshot/src/nyl12_covalent/precursor_paired_msa.py": "aefb01ffd4f1620178f1e5389899950670ac39d34d06e86674f46d7a8ab22dbf"
+  },
+  "origin_sha256": {
+    "scripts/run_matched_original_boltz.py": "39028eeac30f563e0c7de5ed4ee3d73e79082d5ffa1d057cd1e3bc943b637d6f",
+    "src/nyl12_covalent/__init__.py": "86cb5f4f90da993944828b63c01af5ce5c3182e8786e7746d225a99dc70cf204",
+    "src/nyl12_covalent/matched_original_boltz.py": "6a8d8ccf967536a9a34761096535341d85e52c450effd6974088d99dc0a69fdb",
+    "src/nyl12_covalent/precursor_paired_msa.py": "aefb01ffd4f1620178f1e5389899950670ac39d34d06e86674f46d7a8ab22dbf"
+  },
+  "python": "/data/jpc/covalent-enzyme-design/.venv/bin/python3",
+  "scope": "searchstageonly;predictionreleasedseparately"
+}

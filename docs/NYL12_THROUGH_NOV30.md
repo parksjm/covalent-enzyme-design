@@ -1,5 +1,17 @@
 # Nyl12: active plan through 30 November 2026
 
+**Matched design comparison queued, 27 November:** evaluate `relay_prot101_06`
+and `relay_prot101_03` (original-only ranks 1/2; 92/99 substitutions; 41-position
+pairwise difference) against fresh WT predictions with seeds 20261126/27.
+Two query-specific local MSA searches run on Violet. Persistent session
+`nyl12_original_matched_20261127` automatically follows them with six stock
+template-free Boltz models, four unguided L4 substrates, canonical/clash
+checks and matched unrestrained Amber relaxation. Evaluate all 48 combinations
+per model and report all four sites before/after using positive-phi Tier A/B.
+Existing QM/MM and US jobs remain unchanged. Native WT CPU feature checks
+passed; no new structural result is claimed at launch. See
+[the campaign](../design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/README.md).
+
 **Latest PI clarification, 27 November:** RFD3 is outside the current critical path. Review the existing 12 original
 MD/TS-backbone LigandMPNN designs from the two chemically coherent MD-derived
 parents, retaining the 101-position protection mask and mandatory four-copy

@@ -1,0 +1,9 @@
+{
+  "cohort_root": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127",
+  "pipeline_status": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/jobs/matched_pipeline01/status.json",
+  "script": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/report_source_snapshot/summarize_original_matched_geometry.py",
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/report_source_snapshot/summarize_original_matched_geometry.py": "4f74ea761f3ff3c723b6dc2683d8e7cda815fd50993f4d12f2d19e4b248bd969",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/report_source_snapshot/wait_and_summarize.py": "31a0c3d3d8f57310cd03ff53ae5dd95e7fcc0c2f3e81de0d183a873828123de3"
+  }
+}
