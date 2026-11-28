@@ -1,5 +1,294 @@
 # Methods — working draft
 
+## Prespecified TS-ensemble redesign and validation workflow
+
+The bounded redesign protocol selects chemically coherent, decorrelated
+representatives near supported relay free-energy bottlenecks, retaining source
+window, block, frame, proton inventory and reaction-atom mapping. Templates
+selected before free-energy and reaction-coordinate convergence are designated
+TS-like structures; they are not claimed to be verified first-order PES saddle
+points or committor-defined transition states. Original backbones provide a
+baseline, with qualified, fixed-length RFD3 partial diffusion as an optional
+comparison. Canonical export and native graph/atom-context audits precede and
+follow remodeling. No whole-assembly diffusion claim follows from the earlier
+local remodeling experiments.
+
+LigandMPNN sampling ties equivalent alpha and beta positions across the four
+copies. The current design mask fixes 101 of 328 precursor positions: 24 core
+policy positions and 77 additional recurring inter-repeat contact positions.
+The structural contact rule requires a heavy-atom distance of at most 4.0 Å
+in at least three of four equivalent copies in each of three original TS-like
+parents, excluding the intrinsic A/E, B/F, C/G and D/H alpha/beta pairs.
+This is an operational assembly constraint, not evidence that every fixed
+position is experimentally essential. The full mask, WT identities, overlapping
+reasons, source coordinates and reproducible visualization are provided in
+the Supporting Information. Sequence protection is distinct from backbone
+coordinate restraint.
+
+The initial budget is 24 raw samples, six on each of two original and two
+qualified remodeled parents. Complete sequences are deduplicated while
+retaining every lineage, and WT/design cross-scores use identical model weights,
+masks and decoding orders across TS-like and matched E–S structures. Likelihood
+rank is used for computational triage, not as an activation-energy estimate.
+At most two initial design representatives and WT enter a matched two-seed,
+template-free, precursor-paired-MSA Boltz comparison, with four unguided PA6 L4
+molecules per assembly. AF3 is an optional separately calibrated comparison.
+
+Raw predictions are canonicalized and checked for chain identity, substrate
+connectivity and severe interchain overlaps before matched unrestrained Amber
+relaxation. The existing OpenMM adapter is an alternative backend; it is not
+an additional required stage and cannot replace only the design arm without
+matched control qualification. Canonical models are measured before and after
+relaxation over all 48 site–ligand–amide combinations. Positive signed Herschlag
+phi and the declared Tier A/B criteria are applied before pose assignment;
+native-Thr similarity remains diagnostic. A small, diverse group of finalists
+can proceed to matched independent MD replicas, with MM/QM/MM optimization
+and reaction-path tests limited further to persistent, chemically compatible
+candidates. US/MBAR is reserved for the strongest cases with a matched WT
+reference. All stages retain input/source hashes, maps, environments, process
+receipts and separate scientific acceptance. Detailed stage gates and reused
+entry points are recorded in the [protocol](../docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md).
+
+## Precursor-derived paired MSAs and template-free WT controls
+
+A local ColabFold/MMseqs search used the exact 328-residue WT precursor
+against the installed UniRef30 and environmental databases. Homolog sequences
+were split at the query-aligned 232|233 boundary to provide paired alignments
+for the mature alpha 232 and beta 96 chains. Query gaps and insertions were
+handled in alignment space; integer pairing keys recorded the common source
+row. Duplicate segments were filtered symmetrically to prevent independent
+native chain deduplication from breaking pairs. Of 2,795 nonquery rows,
+1,387 homolog pairs were retained. The older independently generated
+alpha/beta alignments were not paired by synthetic header matches.
+
+Two matched WT controls (seeds 20261126/20261127) retained eight mature protein
+chains and four unguided zwitterionic PA6 L4 molecules. Stock Boltz-2 inputs
+contained no structural templates or substrate contact restraints. Actual
+native dataset checks verified coherent pairing across all eight protein
+chains, empty template records and exact agreement with stock dummy-template
+features before inference. Canonical export and matched unrestrained Amber
+relaxation were handled separately from prediction completion, with all 48
+site–ligand–amide combinations retained for geometric evaluation. Source
+hashes, database/settings provenance and the completed local search are
+preserved; the working setup is described in
+[the local MSA workflow](../docs/LOCAL_MSA_WORKFLOW.md).
+
+The current hard minimum protects canonical 113, 156, 186, 221–235 and 272–276
+in all copies, with initiator M1 and structural/interface constraints added.
+Lys156 is retained as a precaution informed by NylC Lys189 mutagenesis, without
+claiming direct evidence of Nyl12 essentiality. Leu235 is retained within the
+mature beta N-terminal 1–3 context; its individual catalytic role is unproven.
+Historical protection of 275–276 likewise does not establish direct
+participation in maturation chemistry. An exploratory 100-position pilot
+allowed Lys156 substitutions; all 24 generated sequences changed this residue
+and were excluded from advancement when the 101-position mask was restored.
+Its immutable outputs are retained as diagnostics, without silent sequence
+reversion or relabeling as current-policy designs.
+
+The conditional release of the corrected 24-sequence pilot required at least
+one independently accepted WT control with conserved identity/connectivity,
+force-converged unrestrained relaxation and passing positive-phi geometry.
+A successful seed was not used to relabel another seed as accepted. The
+second paired-MSA control failed because of severe predicted interchain
+overlaps; its unsuccessful minimization and native artifacts were retained,
+and its endpoint was excluded from accepted relaxed-model comparisons.
+
+## Finite substrate models, binding register and protein-template omissions
+
+Zwitterionic PA6 L4 was used as a tractable local model of a potentially much
+longer polyamide strand. The original contact-guided L4→L2+L2 models were
+motivated by observed oligomeric products, including L2 and L4, rather than
+by a measured L4-specific cleavage reaction. Register-independent validation
+examines all three internal amides and records the selected bond separately
+from fragment lengths: C54–N59 joins units 2–3 and would give L2+L2; C55–N57
+joins units 3–4 and would give L3+L1 for this finite model. The latter was
+selected by the recent protein-template WT controls. A finite-model product
+split does not establish endo/exo selectivity for long polymers. The ongoing
+relay reaction-path/PMF model retains its original central-amide mapping;
+different-register results are not pooled or treated as the same pathway.
+
+The commercial-polyamides manuscript identifies structurally variable loops
+95–103 and 289–300 around the occupied site, including contributions from
+neighboring subunits. Existing loop/tail-omitted crystal CIFs were audited
+before reuse. Their masks differ and some retain waters/PEG; filename alone
+does not establish which residues are omitted. For the bounded new design
+screen, an explicit mask was derived from the validated protein-only mature
+assembly: observed alpha-subunit coordinates 95–103 and 223–232 were omitted
+in all four copies, preserving every other observed coordinate. All full-length
+alpha 232/beta 96 protein queries and homolog MSA rows were retained. The mask
+removed 486 of 9,426 protein heavy atoms; beta289–300 remained available as
+template context. This frees template coordinates without deleting sequence
+residues or introducing loop-length changes. No PA6 coordinates/contact
+restraints or designed TS-backbone template were supplied to the predictor.
+
+Template qualification subsequently checked the tensors supplied to the
+native predictor, rather than relying only on coordinate omission and stored
+alignment ranges. The installed Boltz featurizer used an offset without
+clipping to the nominal alignment boundaries. Original WT and design template
+tensors were identical, but all retained template features at alpha query
+positions95–103, which were intended to be untemplated. Changing only the WT
+alignment-record start did not change these tensors. The original six outputs
+were retained as exploratory results. An isolated adapter maps both observed
+alpha-subunit residues 8–94 and 104–222 and mature beta-subunit residues 1–93, leaving the
+installed predictor unchanged. The actual native dataset path was checked for
+all six cases against features calculated independently from source-author
+residue indices. All template tensors agreed exactly with this reference and
+across the six inputs, with 1,196 retained protein residues per assembly and
+no template features at omitted loop/tail or ligand positions. Original
+processed structures and chemistry retained their source hashes. The mapping
+adapter passed 14 regression tests with 100% statement coverage. Corrected
+WT and design predictions retain the same sequences, seeds, MSAs, template
+coordinates and relaxation protocol; downstream outcomes are recorded
+separately from input acceptance.
+
+Legacy capped-substrate models and GAFF payloads are retained as provenance.
+The available historical payload does not yet certify its exact charge-fitting
+method. It is not labeled as the high-quality RESP/GAFF2 parameter release,
+and capped and uncapped force-field calculations are not pooled quantitatively.
+
+## N-terminal-relay path construction and sampling qualification
+
+The relay hypothesis was investigated by coordinate-driven optimization from
+the common force-converged window033 structure toward E–S and acylenzyme in
+opposite directions. The ordered branches supplied a shared 39-node reference;
+they were not refined by NEB. The TI1-like starting structure's full-minimum
+qualification remains unresolved. We initialized 31 activation and 26 proton-
+delivery umbrellas using two distance-difference biases per window. All windows
+retained the same DFTB3/3ob-3-1 QM/MM Hamiltonian, proton inventory, movable
+region and 300 K protocol. Continuous accepted segments were analyzed by MBAR
+after one initial 5 ps production discard per independent history.
+
+Projected-coordinate pileup, importance-weight concentration, distance drift
+and initialization dependence were assessed separately from statistical
+interval width. Corrective sampling comprised a 33-center physical-coordinate
+activation grid, reciprocal-start and product-side checks, and six additional
+late-activation/transition-region initialization controls. All existing data
+were retained and process completion, chemistry and sampling acceptance were
+recorded separately. The exact atom mapping, source construction, native bias
+convention, equilibration, reweighting, ESS definitions and prospective final
+uncertainty checks are detailed in [SI S1–S8](SUPPORTING_INFORMATION_DRAFT.md).
+No convergence claim follows from the planned sampling duration alone.
+
+Supplemental trajectories were incorporated into the same global MBAR fit
+as soon as their native bias-energy parity, identity and production-length
+checks passed. Independent starts at the same bias remained separate time
+series for equilibration and uncertainty analysis. The first eligible pooled
+fit used 57 main 50 ps histories and four supplemental 10 ps histories, retaining
+51,700 frames after the same one-time 5 ps discard per history. Pooled estimates
+were labeled point-only when a newly eligible history retained only one 5 ps
+block; uncertainty bands from the original 57-history fit were not reassigned
+to the pooled curve. An automatic source-signature monitor updates progress
+fits and verified movie pointers; final sampling/uncertainty qualification
+remains a separate analysis.
+
+## Exploratory backbone and broad-sequence qualification — launched 2026-11-26
+
+**Prospective design-selection policy, updated 27 November:** Boltz is
+prioritized for the next matched validation screen. New designs require a
+PI-approved positive-signed-phi amide under the current coherent atom mapping
+and Tier A/B geometry after unrestrained relaxation. All amide/site candidates
+are evaluated before selecting a passing pose; original WT control tiers are
+retained separately. A WT flipped-pose pass is not required to test designs.
+Loop insertion/deletion reconstruction is proposed as a separately qualified
+arm, with identical edits in all four copies and explicit WT/design/Amber
+maps. No loop-indel calculations have yet been performed in this study.
+
+Matched unrestrained relaxation of the two protein-template WT controls was
+subsequently performed with the previously validated four-substrate Amber
+protocol. Each system retained four zwitterionic PA6 L4 molecules with released
+modular RESP/GAFF2 parameters, ff19SB protein parameters, neutral Thr233
+alpha-amino groups and anionic Asp272/Asp274 in all four mature beta chains.
+TIP3P solvent was added in a truncated-octahedral box with 12 Å padding,
+with 150 mM NaCl plus neutralizing ions. Both used a single all-atom
+unrestrained periodic minimization, maximum 10,000 cycles with 1,000 initial
+steepest-descent cycles, 10 Å nonbonded cutoff and RMS-gradient target
+0.05 kcal mol⁻¹ Å⁻¹. Positional/contact restraints and bond constraints were
+absent throughout (`ntr=0,nmropt=0,ntc=1,ntf=1`). The same source-pinned
+Violet pmemd.cuda executable was used sequentially. Matching dry topology,
+restart and conversion metadata restore canonical identity before paired
+all-amide/four-site geometric analysis. Native completion, force convergence
+and geometric acceptance are recorded separately; no MD equilibration or
+QM/MM stationary-point acceptance is implied by this minimization.
+
+A sequential two-target RFDiffusion3 qualification job was launched from an observed relay
+barrier-region parent, using partial-noise amplitudes of 2 and 5 Å. These are noise
+settings, not molecular-dynamics times or final structural-displacement limits.
+The full eight-chain mature assembly and one physical substrate were retained.
+Twenty-four pocket/entrance-loop positions in the occupied repeat were mobile;
+other context and catalytic/maturation anchors were fixed. Exact four-copy
+sequence ties are imposed during subsequent inverse folding; identical
+instantaneous conformations are not required for bound and apo sites.
+
+The original PA6 component IDs collided with unrelated installed CCD entries.
+A reversible serialization-only relabeling retained 33 ligand heavy atoms and all
+32 typed heavy-atom bonds, verified through the native feature pipeline. The source
+E–S graph is declared ligand context for the actual sampled TS-like coordinates;
+no stable Thr-adduct graph or fractional electronic structure is implied.
+Native RFD3 removes eight protein-terminal OXT atoms. Raw output is retained;
+only these source OXT coordinates may be restored to a derived export after
+proper alignment and verification that their terminal anchors remain fixed.
+Any unexpected missing atom fails qualification. Geometry, stereochemistry,
+loop closure, clashes, sequence and ligand correspondence are checked
+separately from process exit. A subsequent source-validated export adapter
+also tested the native centered-BF16 serialization signature before restoring
+fixed source coordinates and typed connectivity. It did not adjust mobile
+atoms. The 5 Å parent01 export passed the unchanged audit; the 2 Å alternative
+retained genuine packing clashes and was rejected. A second TS parent is
+being qualified independently before conditional broad sequence generation.
+
+The conditional broad pilot permits 229 of 328 precursor positions, protecting 99
+including M1 and the established catalytic/maturation motif. Recurring interface
+core means a heavy-atom contact within 4 Å in at least three of four copies in each of
+three original parents; this is an operational protection, not proof that every
+protected position is experimentally essential. Cross-scoring uses an 18-position
+reactive-core neighborhood separately from global sequence compatibility.
+Original and remodeled arms share the same broad mask and sampling policy.
+Unguided AF3/Boltz validation requires independent WT protocol calibration,
+with fresh noncovalent E–S ligand chemistry, four substrates and one diffusion
+sample per seed. The first controls used query-only MSAs and empty templates;
+separate follow-ups test homologous protein MSAs and protein-only crystal
+templates without substrate contacts or designed-TS template guidance.
+The qualified prediction policy must be matched across WT and variants.
+Every internal amide is evaluated with its
+own carbonyl C/O/N and acyl-side adjacent C; four ligands × four sites × three amides
+yield 48 local evaluations. Legacy geometric tiers remain descriptive, and
+native-Thr similarity is not a hard filter. These are exploratory templates,
+not committor-qualified transition states or validated improved enzymes.
+
+The first broad batch is limited to24 raw sequences, six per original or
+accepted remodeled template for two TS parents. Existing canonicalization
+and modular-ligand tools generate biological and mature-local exports and
+sequential Amber heavy inputs with explicit atom/residue maps. Coordinate
+and catalytic-metric roundtrips are checked before publication. Matching
+topology/restart/conversion metadata are used to recanonicalize Amber outputs
+before subsequent RFD3/MPNN use; an engine-written chain label alone is not
+an identity map. Source raw files remain immutable.
+
+## Planned complementary amine-release assay — 2026-11-26
+
+**Prospective protocol; no new assay data have been generated.** Purification
+of WT Nyl12 plus two or three selected designs is considered feasible by the
+PI. A TNBS primary-amine-release assay will first be qualified on purified WT,
+using NylC precedent [R61] and the published 96-well nylon-hydrolase method
+[R62, section 1.4]. Its derivatization conditions are separate from the
+enzymatic hydrolysis temperature. An amine-free reaction buffer such as
+phosphate will be evaluated against the existing Tris condition using paired
+calibrated product-MS measurements; pH measurement temperature and enzyme
+stability will be recorded. Tris, accessible protein amines and continuing
+autoprocessing/proteolysis can contribute background.
+
+Qualification will include reagent, enzyme-only, substrate-only and time-zero
+controls; mature-enzyme quantification; calibration against 6-aminohexanoate
+and available L2/L3/L4 standards; and matrix-spike recovery across any cleanup.
+Detection/quantification limits and a usable time/concentration range must be
+established before comparing designs. Independent enzyme preparations and
+technical replicates will be distinguished. Background-corrected soluble
+amine equivalents will be reported alongside individual calibrated L2/L3/L4
+products. Neither measurement alone establishes total bond cleavage or polymer
+conversion; higher oligomers lack current quantitative standards. The full
+assay-development plan is retained in
+`../docs/design_ranking_and_iteration_20261022.md`.
+
 ## Matched WT protonation-state comparison — queued 2026-11-21
 
 After all twelve matched WT replicas complete, four independent 100 ns replicas
@@ -1656,6 +1945,37 @@ and the MBAR framework of
 
 ## Continuous-window equilibration and correlation analysis
 
+### Path-coordinate and configurational-support diagnostics
+
+Nearest-segment projection onto the three-distance-difference reference path
+was tested for probability accumulation at its vertices. We quantified both
+the raw frame fraction and MBAR-weighted fraction assigned exactly to each
+vertex, and calculated Kish weight concentration within every PMF bin. This
+quantity measures importance-weight concentration, not temporal independence.
+A differentiable path-coordinate sensitivity and physical two-dimensional
+histograms used the same global MBAR weights. The activation analysis retained
+both q_act and q_acyl because a marginal in q_act alone merges configurations
+from different chemical stages. No kernel smoothing or removal of inconvenient
+proton configurations was used to obtain these diagnostics. Confidence
+intervals remain conditional on sampled modes and cannot validate a coordinate
+projection or compensate for unsampled configurations.
+
+**Corrective sampling protocol specified 27 November; execution/results are
+recorded separately.** Supplementary activation umbrellas span q_acyl = −1.25,
+−1.50 and −1.75 Å and q_act = −1.0 to +1.0 Å in 0.2 Å increments (33 states).
+The two native biases retain k = 25 kcal mol⁻¹ Å⁻² with E = k(ξ−ξ₀)²;
+no additional q_del or proton-identity restraint is introduced. Accepted
+same-Hamiltonian coordinates initialize 5 ps equilibration and 30 ps production
+at 300 K in 5 ps segments. The existing reciprocal-start and product-tail
+diagnostics are continued from their 10 ps checkpoints to 30 ps without
+reinitializing velocities. Every independent lineage retains its own initial
+5 ps production discard and bootstrap resampling groups; independent starts
+are not concatenated into an artificial continuous trajectory. All umbrella
+biases must be cross-evaluated and checked against native restraint energies
+before pooling. At 10 ps production only one retained 5 ps block exists, so the
+specified 5 ps block-bootstrap interval is unresolved; eligibility begins at
+15 ps production, with limited precision from only two retained blocks.
+
 ### Revised primary analysis: fixed burn-in and correlated-block uncertainty
 
 The following protocol supersedes the latest-of-thirteen truncation rule for
@@ -1854,3 +2174,45 @@ equilibrium sampling follows Chodera [R55], the methodological reassessment
 by Clark, Cole and Michel [R56], and the sampling-quality guidance of
 Grossfield et al. [R57]. Full bibliographic entries and DOIs are retained in
 `manuscript/REFERENCES.md` and `manuscript/recent_design_and_relay_references.bib`.
+
+
+### Diagnostic checks on projected PMF coordinates (26 November checkpoint)
+
+In addition to common bin grids and bootstrap analysis, we audited the scalar
+projection of the same retained three-CV samples onto the reference polyline.
+We counted exact interior-vertex projections, reconstructed the saved histogram,
+and examined raw counts, Kish weight ESS, bootstrap support and temporal-half
+estimates per endpoint bin. Kish weight ESS measures weight concentration and
+is not a count of decorrelated frames. Interior nearest-segment clipping can
+map finite regions of CV space to individual path vertices; reference-bin
+subtraction also pins that bin's uncertainty to zero in each bootstrap refit.
+Consequently, narrow conditional intervals do not exclude coordinate artifacts
+or unsampled conformations. Terminal tangent-extrapolation bins were identified
+explicitly rather than interpreted as new reference minima. The bounded binning-sensitivity calculation retained the same physical
+biases, frames and MBAR normalization; the original profile was reproduced
+exactly before reporting half-bin offsets, doubled bin widths and weighted
+vertex contributions. All histograms used the same original reference-bin
+density rather than independently shifting each curve to its own minimum.
+No smoothing or alternate projection silently replaces the primary comparison.
+
+For PMF reporting, each bin is additionally screened for raw count, Kish weight
+ESS, largest normalized frame weight and bootstrap support; bins beyond either
+reference endpoint are marked, and their support is assessed separately from
+the reference-basin density. Projection pileup is quantified as reweighted
+corner mass per bin, not inferred from raw frame counts alone. Time-block and
+independent-start/replica stability, adjacent-window overlap, and declared
+bin-edge and projection sensitivities are reported alongside the profile.
+Pointwise bootstrap intervals remain conditional on the sampled states,
+coordinate/reference, and resampling units and are not total uncertainty or
+evidence by themselves for equilibration or endpoint support.
+
+
+## Relay supporting-information record (27 November 2026)
+
+The [supporting-information draft](SUPPORTING_INFORMATION_DRAFT.md) consolidates
+the actual coordinate-driven relay seed construction, atom mapping, native
+two-CV biases, fixed-discard/global-MBAR analysis, ESS definitions and the
+45 ps support/drift diagnostics with source and figure links. It distinguishes
+the running 33-state activation supplement and four continuation checks from
+validated convergence; the original dated analyses above remain historical
+evidence. Initial TI1 minimum qualification and TS validation remain unresolved.

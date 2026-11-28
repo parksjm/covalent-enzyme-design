@@ -174,6 +174,31 @@ def test_relax_model_records_and_raises_on_leap_errors(
     assert not (output / "acceptance.json").exists()
 
 
+def test_preparation_only_never_runs_minimization(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Prepare validated topology for another engine without optimizing it."""
+    source = tmp_path / "source.pdb"
+    source.write_text("source\n")
+    _mock_mapping(monkeypatch)
+    _patch_science(monkeypatch)
+    calls = _mock_subprocess(monkeypatch)
+    output = tmp_path / "prepared"
+    result = runner.relax_model(
+        source, output, _config(tmp_path), preparation_only=True
+    )
+    assert len(calls) == 2
+    assert all(Path(call["argv"][0]).name == "tleap" for call in calls)
+    assert result["minimization_performed"] is False
+    assert result["force_converged"] is False
+    assert result["solvated_topology"]["solvated"] is True
+    assert Path(result["coordinates"]).is_file()
+    assert not (output / "minimization").exists()
+    assert not (output / "acceptance.json").exists()
+    receipt = json.loads((output / "preparation_acceptance.json").read_text())
+    assert receipt["status"] == "prepared_without_minimization"
+
+
 def test_box_volume_and_amber_final_results_validation(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:

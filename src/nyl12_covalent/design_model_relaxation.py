@@ -176,13 +176,21 @@ def _process_record(
     )
 
 
-def relax_model(source: Path, output: Path, config: dict[str, Any]) -> dict[str, Any]:
+def relax_model(
+    source: Path,
+    output: Path,
+    config: dict[str, Any],
+    *,
+    preparation_only: bool = False,
+) -> dict[str, Any]:
     """Prepare and minimize a four-ligand PA6 model.
 
     Args:
         source: Canonical eight-protein/four-ligand PDB.
         output: New artifact directory.
         config: Required absolute Amber, release and mapping paths plus ``gpu``.
+        preparation_only: Build and validate the solvated Amber topology without
+            running minimization. Coordinates remain unoptimized.
 
     Returns:
         Scientific acceptance; process status is written separately.
@@ -251,6 +259,24 @@ def relax_model(source: Path, output: Path, config: dict[str, Any]) -> dict[str,
         solvated = validate_four_ligand_topology(
             system / "complex.prmtop", release, True
         )
+
+        if preparation_only:
+            prepared = {
+                "status": "prepared_without_minimization",
+                "topology": str(system / "complex.prmtop"),
+                "coordinates": str(system / "complex.rst7"),
+                "conversion": str(conversion),
+                "dry_topology": dry,
+                "solvated_topology": solvated,
+                "force_converged": False,
+                "minimization_performed": False,
+                "salt": {"sodium_count": sodium, "chloride_count": chloride},
+            }
+            (output / "preparation_acceptance.json").write_text(
+                json.dumps(prepared, indent=2, sort_keys=True) + "\n"
+            )
+            _process_record(output, "completed", "topology_preparation", events)
+            return prepared
 
         stage = "minimization"
         minimization = output / "minimization"

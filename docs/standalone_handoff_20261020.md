@@ -1,3 +1,527 @@
+**Start here:** [active plan through 30 November](NYL12_THROUGH_NOV30.md).
+
+**Current PI decisions, 27 November:** K156 and L235 are protected. The current
+mask has 101 fixed / 227 variable precursor positions. All 24 `relay_corr01_*`
+designs change K156 and are ineligible; diagnostic outputs are preserved and
+only that score-only job was stopped. No QM/MM or US job was interrupted.
+The Negoro mutation/mapping audit precedes replacement design launch.
+Azalea's relay campaign is extended from 60 to 100 ps/window with 57 single-
+thread workers; Violet's corrective grid continues. Use the authoritative
+[TS-ensemble redesign protocol](NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md) and
+[SI mask inventory](figures/nyl12_sequence_protection_20261127/SI_caption_and_inventory.md).
+Older K156-variable/90 ps proposals below are superseded, not active policy.
+
+
+**Corrected 24-sample LigandMPNN pilot launched, 27 November:**
+`broader_pilot/protection_corrected_pilot_20261127/` uses the same two original
+and two accepted 5 Å-remodeled TS backbones, six samples each, four-copy
+sequence ties and the new 100-fixed/228-mutable mask. K156 is variable; L235
+is retained conservatively. Accepted paired-MSA WT seed 20261126 is the
+single-seed calibration control; seed 20261127 remains a failed assembly.
+New design IDs use `relay_corr01_*` and do not replace the previous 24 designs.
+The first preflight stopped on copied Python bytecode hashes; a second
+preflight encountered retained effective-manifest paths. Neither generated
+sequences. Both failures and their manifests/releases remain preserved.
+`manifest_attempt02.json` excludes only generated caches, verifies 397 actual
+source/input hashes and disables bytecode writes.
+
+The project launcher owns session `nyl12_protection_corrected_20261127_attempt02`
+and `job_attempt02/status.json`. All four TS native parsers and the E–S parser
+passed; the GPU prerequisite exited 0 and first native generation began on
+Violet GPU UUID `GPU-ec7e1af2-0974-2893-d34b-411eee82bbd6`, capped at two CPU
+threads. The bounded run includes deduplication and matched TS/E–S scores;
+no new RFD3, Boltz/AF3, MD or QM/MM variant campaign is released by this step.
+Existing QM/MM and US continue unchanged. Source/release proofs are retained
+with the campaign, including the independently accepted WT artifact.
+
+
+**Generation complete; score-only recovery, 27 November:** all four native
+generation calls exited 0 and produced 24 raw / 24 unique `relay_corr01_*`
+sequences. The combined job then exited 1 because its nested historical
+scoring adapter still protected K156. This was a sequence-permission mismatch
+before candidate inference, not a force-field or generated-sequence failure.
+The generated pool and all five successful WT scores remain immutable.
+`scoring_recovery_attempt01/` supplies the coherent current policy package
+and a score-only continuation using the same engines, weights, templates,
+mask, seeds and exact WT decoding orders. It does not regenerate sequences.
+The new continuation passed 9 regressions (81% statement coverage) and Ruff;
+source/input hashes and separate process/acceptance records own recovery.
+
+
+**Score-only continuation active:** session
+`nyl12_corrected_scores_resume01_20261127` and
+`scoring_recovery_attempt01/job_attempt01/status.json` own the remaining
+120 matched candidate evaluations. The first two native candidate scores
+exited 0 under the coherent K156-variable policy and matched WT-order checks.
+Five accepted WT scores are reused. All 24 generated sequences remain
+unchanged; score-only validation has 9 passing tests and 81% statement coverage.
+
+**Latest protection decision:** K156 is now variable by PI instruction; prior
+protection was NylC Lys189 analogy, not demonstrated Nyl12 essentiality.
+L235 remains conservatively fixed as mature beta N-terminal context, without
+claiming a residue-specific catalytic role. Active hard minimum:
+113, 186, 221–235 and 272–276 plus structural/interface anchors. Older 101-position
+mask statements below describe the preceding policy and must not be reused
+for the new corrected 24-sample pilot.
+
+**Latest WT input/protection checkpoint, 27 November:** local precursor search
+succeeded with the existing Pixi ColabFold environment and `/data/boltz_db`.
+Two stock Boltz template-free WT predictions, with 1,387 true precursor-derived
+alpha/beta homolog pairs and four unguided L4 substrates, completed natively
+with exit 0 on DGX GPUs 2/3. Both canonical exports now pass; persistent
+collect/Amber recovery sessions are `nyl12_paired_WT_collect_precision01` and
+`nyl12_paired_WT_amber_precision01`. Before relaxation the two seeds have
+4/4 (one A, three B) and 0/4 positive-phi A/B sites, respectively. Inspect
+paired campaign receipts for subsequent relaxation status. See [LOCAL_MSA_WORKFLOW.md](LOCAL_MSA_WORKFLOW.md); no new installation
+or public MSA-server request was needed.
+
+Hard sequence protection now includes canonical 113, 156, 186, 221–235 and 272–276
+in every copy, plus existing structural/interface anchors (101 fixed positions
+in the prospective mask). All 24 previous broad designs violate the recovered
+275 protection; relay_02 also changes 276. Existing jobs continue as diagnostics,
+but those designs cannot advance under current policy. Do not silently revert
+sequences or conflate sequence conservation with frozen backbone coordinates.
+The legacy 275–276 assignment is retained conservatively, without claiming
+experimental proof of direct maturation chemistry. Receipts are
+`broader_pilot/canonical_protection_hardened_20261127.json` and
+`broader_pilot/protection_requalification_20261127.json`.
+
+**Sign correction:** the PI-approved Boltz pose is positive phi. Earlier
+assistant wording identifying the target with negative phi is withdrawn;
+historical numerical signs are preserved. All new E–S design-selection gates
+must explicitly use `target_phi_sign=+1`. The source metric itself is unchanged.
+
+**Latest template correction:** all six original loop-masked predictions
+and relaxations completed; the four relay_02/relay_23 endpoints have zero
+positive-phi Tier A/B sites. The initial WT-only alignment-record diagnosis
+was superseded by actual tensor inspection: all six original template tensor
+sets are identical and all leak features into the intended alpha95–103 mask.
+A nominal WT record trim changes no features. A corrected matched comparison
+therefore needs the same six predictions rerun through a qualified isolated
+feature adapter, preserving seeds, sequences and all other settings. The PI
+requested WT repair and a matched six-case comparison; the necessary four
+design replacements were disclosed. No new sequence campaign is added.
+Audit provenance remains in `wt_alignment_repair01/`; use repair JSON receipts
+for actual launch status. Keep original artifacts and all current QM/MM/US
+jobs. Do not mix corrected WT with original design endpoints in the final
+intended-mask table; older checkpoint paragraphs below are historical.
+All six corrected native feature datasets passed (1,196 observed protein
+residues each, exact independent reference agreement). WT replacements are
+running on DGX GPUs 2/3 in `nyl12_mask95_repair01_gpu2`/`gpu3`, followed by the
+same four designs. Violet collectors/Amber follow-through are persistent in
+`nyl12_mask95_repair01_collect` and `nyl12_mask95_repair01_amber`. Corrected
+receipts/publication are in the campaign's `template_alignment_repair01/`.
+No existing QM/MM or US job was interrupted.
+
+Use its compact source/status links for routine work. The entries below retain
+dated evidence; they are not a request to reload the full history or restart
+superseded jobs. New six-model Boltz validation is source-bound under
+`broader_pilot/boltz_masked_loop95_designs_20261127/`; both WT seed jobs passed
+native advancement, followed by the two existing designs per seed. Template
+coordinate omission preserves all query residues. Loop95–103 is first,
+289–300 next; no sequence-indel or capped-RESP campaign is launched.
+
+**Latest execution checkpoint, 27 November:** the original four WT AF3/Boltz
+controls now have canonical biological and mature-local PDB/CIF exports,
+sequential1,328-residue Amber heavy inputs, conversion/roundtrip receipts and
+portable PyMOL loaders. The pull script includes these and resolves verified
+movie/PMF generations once per transfer. All 48 internal-amide/ligand/site
+combinations are measured per model; one-to-one assignment and independently
+nearest-d1 diagnostics are both retained. No fixed amide register is assumed.
+
+Both additional homologous-protein-MSA controls and both protein-only template
+follow-ups completed inference and canonical/Amber roundtrips. PA6 remains
+unguided; no designed TS backbone is used as a predictor template. The AF3
+template control recovers near-native pocket spacing and four Tier C sites;
+attack angles 80.48–81.68° alone fail A/B. Boltz template sites all reject.
+The failed AF3 watcher used recursive exactly-one-CIF selection; retained
+retry02 explicitly selects the top-level model and verifies its identity and
+coordinates against the native sample copy. Postprocessing/publication exited
+zero at 14:24 EST. All eight WT predictions are now in three separate pull-ready
+inspection bundles. Source sequences, gaps and the crystal H228 ALA/query PRO
+difference remain explicit. See SI S10 and the current roadmap for all-site data.
+
+The RFD3 parent01 5 Å adapter passed the complete audit, restoring only proven
+fixed-context serialization losses and source-typed connectivity. Parent03 5 Å
+also passed its independent audit (mobile Cα RMSD 0.314 Å). The source-hashed
+broad queue generated all 24 unique designs, six per original/remodeled
+parent. All preserve exact four-copy ties and all 99 protected positions in
+the 229-position mutable-mask experiment. Native TS/E–S cross-scoring completed
+with exit zero. Variant prediction additionally
+requires a usable WT prediction baseline. The old failed controller stays
+stopped and the clashing2Å alternative stays rejected.
+
+Current pooled relay MBAR includes57 main histories at 50 ps and four completed
+checks at 10 ps (61 histories/59 distinct biases/51,700 retained frames), maximum
+25.913 kcal/mol at s = 0.6875. The pooled curve is point-only; its supplemental
+histories have only one retained5 ps block, so the original 57-history 95% band
+must not be attributed to it. New33 + 6 checks are not yet production-eligible.
+The live180 s updater incorporates newly accepted eligible histories without
+another user request. Main/supplemental movies contain5,700/80 frames and use
+the established0.2 Å bond/color/chain policy. Original US and QM/MM remain
+running; direct-US/hydration pauses are unchanged. The100-history final
+analysis remains separate. See the current roadmap and per-job receipts.
+
+Native-progress audit at 14:28 EST, 27 November estimates first new Geranium
+contributions at 19:00–21:00 EST today and first Violet grid contributions at
+07:00–10:00 EST on 28 November (all 33 around 08:00–12:00). The former are
+in production; the latter remain in equilibration. Each requires 10 ps accepted
+production with the first 5 ps discarded once. These are eligibility estimates,
+not PMF-convergence deadlines; allow several hours of rate uncertainty.
+
+**Matched Amber follow-up, 27 November:** the two protein-template controls
+completed sequentially on Violet GPU 1 in
+`wt_template_amber_unrestrained_20261127`. Protocol is the validated four-L4
+ff19SB/TIP3P/150 mM/modular RESP-GAFF2 recipe, neutral beta Thr and anionic Asp
+at every site, all atoms movable, no restraints, 10,000-cycle maximum with
+RMS target 0.05. Final RMS gradients were 0.047702 (AF3) and 0.045807
+(Boltz). Canonical before/after audits and publication exited zero at
+15:25:39 EST. Boltz has four Tier A endpoints from four initially rejected
+sites; AF3's four initial Tier C sites all reject after relaxation. All 48
+combinations were searched and the selected amide identities stayed unchanged.
+Boltz retains positive phi, so these Tier A sites match the PI-approved
+positive-phi class; their Nα–leaving-N distances are 3.77–3.97 Å. Outputs
+are under `wt_protein_template_controls_20261127/amber_relaxation_20261127/`;
+validated paired PyMOL bundles are ready to pull. Relay US remains
+running. LigandMPNN finished naturally with exit zero before this launch.
+
+**Latest PI design steering, 27 November:** prioritize Boltz, with AF3
+optional. New designs require a positive-phi PI-approved site plus Tier A/B
+geometry after unrestrained relaxation; test eligibility on all 48 combinations
+before selecting the best site. Positive-phi WT controls remain controls;
+WT does not have to pass this design-specific target before testing variants.
+The existing 24 fixed-length designs remain unchanged. Loop-length variants
+are a separate proposed one-loop L−1/L/L+1 arm with identical edits in all
+copies and explicit WT-reference/design/Amber maps; not launched. Read the
+current design policy before using any fixed-length numerical assumptions.
+
+The following earlier checkpoint is historical, superseded above.
+
+**DGX resource checkpoint, 27 November:** PI-authorized access to `bsd-a100`
+now works from Violet using the existing aster public key. Eight A100 40 GiB
+GPUs are present; other-user jobs occupy 0–1, and project use is limited to
+two idle GPUs, 2–3. Both planned WT Boltz controls completed successfully
+and passed the eight-protein/four-ligand output inventory, but none of eight
+sites passes Tier A/B. Protein-only contacts confirm A/E, B/F, C/G and D/H.
+Both original AF3 jobs failed PTX8.4 compilation with system CUDA12.0 ptxas;
+corrected-PATH CUDA12.6 retries completed successfully on those same GPUs,
+preserving all original inputs and failures. Across both predictors, all16
+assigned sites and all192 amide/site comparisons fail even TierC. The
+Phe113N–Asn186ND2 pocket separation is9.92–20.34Å versus crystal3.83–3.88Å;
+this protocol needs protein-fold/pocket calibration before variant ranking.
+All four native predictions are complete; no further DGX GPU job was launched.
+The broad controller exited after the failed RFD3 gate;
+parent01 5 Å needs an accepted export adapter, its 2 Å result has real Arg118
+clashes, and parent03 is still unqualified. See the current roadmap and gate
+audit before restarting. Home had only 16.7 GiB free at initial audit and the
+PI is cleaning it. No new model weights/dependencies were installed. Current
+QM/MM/US are unchanged. See [DGX runtime/limits](BSD_A100_RUNTIME.md).
+
+**Active checkpoint, 27 November:** all 57 original relay windows on Azalea
+reached 50 ps and continue to 60 ps. The latest matching-protocol PMF maximum
+is 25.910 kcal/mol at s = 0.6875, with 738 frames and Kish ESS 362.15 at that
+bin. Early/late maxima differ by 2.087 kcal/mol; convergence is not established.
+The detailed geometry audit remains explicitly the frozen 45 ps data set.
+
+Violet runs 33 supplemental two-CV activation umbrellas plus four existing
+checks continuing to 30 ps in `relay_activation_support_20261127`. The 33-grid
+samples an early lateral coverage gap; it cannot alone resolve projection
+artifacts or the slow A026–A028 geometrical rearrangement. Forty direct-US
+and two hydration engines are paused as an identity-checked group, with the
+existing guarded restoration policy retained.
+
+**New PI authorization:** six CPU-only independent-start checks now run on
+Geranium in `relay_mixing6_geranium_20261127`; leave its other user's GPU work
+untouched. Existing Sander and all 16 used 3ob files match Violet. A 20-step
+D008 compatibility run passed SCC, checkpoint/frozen-exterior and native
+bias parity before launch. The exact idle Azalea six-check queue was retired;
+its unlaunched preparations were preserved. No AmberTools installation was
+needed. Verbena was inspected as an authorized alternative but no software
+was installed or calculation launched there.
+
+The six checks compare A026/A028 near/far initializations and opposite-side
+D008/D009 starts at unchanged biases, each 5 ps equilibration plus 30 ps production.
+Actual Geranium prepared SHA256:
+`73c3bf5b1731ea40588f069bf89bfe6fc985e69072456f37f4e5d3002c1373a7`.
+Canonical path on execution host/local mirror:
+`qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/mixing_checks_20261127/`.
+
+`relay_final100_geranium_20261127` is active and waits for actual accepted
+57 main histories × 60 ps plus 43 supplemental histories × 30 ps (100 independent lineages). Its Geranium-derived
+mirror/host binding is isolated from Azalea compact sync, whose stale retired
+queue metadata was caught before any final fit. All valid source frames remain
+eligible in count-preserving 5/10 ps circular-block uncertainty checks; no
+converged-barrier label is automatic. The older 94-lineage frozen 45 ps diagnostic
+and main 50/55/60 ps monitor remain separate and active.
+
+Current plans, quantitative acceptance limits and measured ETA are in
+[the roadmap](NYL12_MECHANISM_ROADMAP.md). Full path construction, biases,
+ESS, diagnostic findings and corrective actions are in
+[Supporting Information S1–S8](../manuscript/SUPPORTING_INFORMATION_DRAFT.md).
+Earliest complete corrected-data assessment remains Sunday night/30 November,
+not a guarantee of statistical convergence or publication readiness.
+
+RFD3 native runs finished but broader redesign remains held: 5 Å passes only
+a declared in-memory precision normalization, 2 Å retains two Arg118 packing
+clashes. No acceptance gate was relaxed and no broad MPNN/AF3/Boltz work launched.
+
+The entries below are dated historical records, not current execution claims.
+
+---
+
+**Execution checkpoint, 26 November (late evening):** relay US has
+35 ps accepted in all 57 windows. Latest plot is relay
+`full_path_300K/plots/relay_35ps_fixed_burnin_20261126_pmf.png`;
+maximum 25.445 kcal/mol at s = 0.6875, conditional pointwise 95% interval
+24.758–26.070 kcal/mol;
+temporal-half maxima of 23.976/26.575 kcal/mol show incomplete convergence. CurrentVMD
+bundle has 3,990 frames and passes hashes/style/coordinate checks. New tmux
+`relay_auto_40to60_20261126` automatically updates PMF and movie at common
+40/45/50/55/60 ps with four analysis workers; old nested-diagnostic discovery was
+fixed. Its pinned monitor/README are in
+`analysis/fixed_burnin_20261126/automatic_progression_20261126/`.
+
+RFD3 qualification retry is active in
+`relay_rfd3_qualification_retry01_20261126`, Violet GPU 0, with two targets at 2 and 5 Å noise amplitudes.
+The first native attempt failed on a true P6N/P6I/P6C CCD-ID collision, not sampled
+backbone geometry. Reversible collision-free input aliases passed all native
+CPU features; the exact graph has 33 ligand heavy atoms and 32 typed bonds. The native
+model's eight-OXT omission has an explicit tested fixed-source normalization;
+raw outputs are never overwritten. Both structural qualifications are pending.
+`relay_broad_gated_20261126` is actually queued, waiting on native acceptance
+and hash-bound receipts before release-only expansion, broad LigandMPNN and
+eight unguided AF3/Boltz predictions. All 516 frozen hashes were verified at
+queue time; mutable producer outputs are excluded from static binding and
+are checked only after acceptance. Paths under the same logical campaign:
+`design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/` and
+`broader_pilot/queued_controller_status_20261126.json`.
+The broad mask permits 229 positions and fixes 99, including M1; local
+scoring uses 18 positions.
+One model per seed; no contacts or designed-backbone templates; query-only
+MSAs for WT/design in both architectures. New all-amide analysis reports 48
+local evaluations/model and one-to-one assignments, with native-Thr diagnostic
+policy preserved. No mutant activity claim follows from these scores.
+Native relay engines and prior direct/hydration scheduling were not changed.
+TNBS references R61/R62 were added to manuscript bibliography and prospective
+Methods; the 2025 first author is Shiraishi.
+
+---
+
+**Purified panel and amine assay confirmed, 26 November:** the PI considers
+purification of WT plus a few designs feasible and favors primary-amine-release
+measurements even if buffer must change. Plan WT+2–3 selected designs; qualify
+TNBS on purified WT first, with calibrated L2/L3/L4 MS in parallel. Record
+reaction-versus-detection buffers, temperature-dependent pH, WT stability and
+paired MS in original/candidate buffers. Validate reagent/substrate/enzyme-only
+and time-zero backgrounds, mature fraction, quantification limits and spike
+recovery through any protein-removal step. Use non-nylon consumables and report
+filtration cutoffs. Proteins and ongoing maturation can themselves contribute
+new amines. Preserve lysates for screening; purified assays remain a separate
+comparison. General soluble amino release, detected L2–L4 yields, total polymer
+conversion and intrinsic catalytic rates are different outcomes. The roadmap
+and detailed plan now contain the agreed direction and qualification gates;
+no wet-lab method is claimed validated or newly launched.
+
+---
+
+**Current design and experimental steering, 26 November:** the PI requests
+broad sequence mutability and TS-conditioned RFD3 partial diffusion before
+LigandMPNN; the five-site pilot below is now a technical baseline. Primary
+AF3/Boltz validation will have no substrate contact restraints and will accept
+any correctly mapped catalytically competent PA6 amide/register. Preserve
+exact alpha/beta sequence ties, mature chain breaks and required catalytic,
+maturation and interface identities. The revised resource-capped plan is in
+`docs/design_ranking_and_iteration_20261022.md`, section “Broader sequence and
+backbone redesign”: qualify two RFD3 outputs before expanding to eight total;
+24 new broad-mask samples split original/remodeled backbones; at most 30
+AF3/Boltz predictions including predictor controls; unchanged downstream
+two-design+WT MD/QM/MM/PMF funnel. No new production work was launched by this
+update. Current relay US and targeted checks remain unchanged.
+
+Foundry's installed partial scheduler passed a CPU-only mask/noise diagnostic;
+full denoising and multi-residue PA6 graph retention are unqualified. The
+inspected `redesigner-agent` contains LigandMPNN symmetry on four merged
+328-residue chains, not a located RFD3 execution artifact; do not copy its
+homooligomer flags directly to eight mature alpha/beta chains. Exact sequence
+symmetry does not require identical bound/apo conformations.
+
+The PI's current assay quantifies calibrated L2/L3/L4 in crude lysates; higher
+oligomers can escape this readout. Treat short-product yield, total cleavage
+and intrinsic catalytic efficiency as different outcomes. If feasible, purify
+WT+2–3 finalists for enzyme-normalized characterization. If not, retain matched
+lysate screens with expression/maturation, background and spike-recovery
+controls; CFPS is a later platform requiring its own WT maturation/activity
+qualification. Complementary options and primary papers are recorded in the
+plan: broader MS, validated amine-release analysis (not directly in Tris/lysate),
+SEC/GPC and a proposed, unvalidated analytical post-hydrolysis of the isolated
+soluble fraction. Nyl12 predominantly trimeric products remain the corrected
+published baseline; a delegated triage's conflicting tetrad wording was rejected.
+
+---
+
+**Relay-ensemble design pilot completed, 26 November (evening):** tmux
+`relay_ensemble_generation_20261126` on idle Violet GPU 0 sampled eight
+sequences from each of three observed relay-US medoids at s=0.672/0.725/0.745
+(24 raw total). Canonical mutable positions V111/I112/D114/A187/V188 are tied
+across all four alpha copies; beta chains, catalytic/maturation identities,
+the Asp272–Gly273–Asp274 loop and inter-repeat interfaces remain fixed.
+Each source retains one physical substrate, with active-copy sampling weights
+1,0,0,0 and the complete mature tetramer. Source coordinates/proton inventories,
+native frame lineage, exact map, parser acceptance and frozen source hashes are
+under `design/nyl12_relay_ts_ensemble_20261126/`. Runtime derivatives use beta-
+local numbering and explicitly parse Amber's zero-occupancy serialization.
+The matched accepted E–S control is exported without new optimization.
+Generation receipts live in `generation_job/`, sequence outputs in
+`generation_run01/`: 24 raw/4 unique (A187S/V188I; A187S; I112L/A187P; I112L/A187S).
+`relay_ensemble_crossscore_20261126` also completed: WT+four designs across
+three parents and matched E–S, two identical decoding orders/pair; native
+exit 0 and separate acceptance passed. Outputs/receipts are in
+`crossscore_run01/` and `crossscore_job/`. A187S leads the descriptive NLL
+ranking; no energetic/activity improvement is established. All mutable WT
+sidechain context is natively masked; actual feature perturbation checks passed.
+Six template and five adapter tests passed, Ruff passed; preparation-only
+runtime-script coverage is unmeasured.
+The resource-capped follow-up is in `docs/design_ranking_and_iteration_20261022.md`:
+at most 30 Boltz predictions, 6 independent 100 ns MD runs, 6 QM/MM relaxations,
+3 matched coordinate-driving paths, then only the strongest design+WT for US.
+The actual pool needs at most 10 initial Boltz predictions including WT,
+22 with top3+WT confirmation; do not fill the larger ceiling with more designs.
+Boltz retains four-site occupancy for screening; later mechanistic MD/QM/MM
+uses a declared single-substrate preparation for all sequences and WT to match
+the existing mechanism protocol. No downstream science is dispatched now.
+Keep solubility and dimer/exo
+specificity separate; do not make a noisy Tier A fraction an activity label.
+Main relay US/targeted checks and the prior direct/hydration pause/resume policy
+are unchanged.
+
+---
+
+**Four relay tests: automatic analysis queued, 26 November (evening):**
+tmux `relay_targeted_postrun_20261126` waits for accepted native completion and
+will write `targeted_relay_report.{json,md}` plus readable activation/product
+plots in relay `full_path_300K/analysis/fixed_burnin_20261126/`
+`targeted_sampling_20261126/`. It compares initialization memory, physical-CV
+overlap, drift, ESS and chemical/proton inventories, with conditional longer-
+sampling versus added-center/orthogonal-CV recommendations. No automatic new
+sampling or physics change. Fifteen tests passed (all modules≥87% coverage);
+real original30psCSV cadence and exact reciprocal biases were checked. All57
+main Azalea relay engines were verified running. Existing direct-US/hydration
+pauses and coordinated resumption policy remain unchanged. The updated design
+policy permits a bounded provisional LigandMPNN pilot using credible US
+barrier-region templates before full PMF/PES-TS certification; claims remain
+provisional and no new design campaign was launched.
+
+---
+
+**Fresh Nemotron decision benchmark, 26 November (evening):** a ten-scenario,
+twenty-answer curated-versus-retrieved evaluation is launched in tmux
+`scientific_decisions_nemotron_20261126`. Marigold is loading the existing
+Nemotron NVFP4 model; chemistry grading is pending. All actual request packets,
+private criteria and source/index identities were frozen before inference.
+See `/data/jpc/mechanism-agent/benchmarks/scientific_decisions_20261126/README.md`
+and `controller_tmux.log`; the controller has a four-hour ceiling and owned
+server/tunnel cleanup plus notifications. No model scientific-dispatch tools
+are enabled. Existing science scheduling, including the direct-US and two
+hydration pauses, is unchanged. The PI cannot obtain a GPT API key: retain
+GPT/PI decision review and evaluate bounded local assistance, without promising
+a fully local scientific lead. Updated capabilities/limits and agentic-science
+references are in mechanism-agent `docs/QUALIFIED_SCIENTIFIC_CONTROL.md`.
+
+---
+
+**Current relay movie transfer repair, 26 November (evening):** the 30 ps
+movie has 3,420 frames and its verified `path.dcd` is 819,719,476 bytes. The pull
+script's 500 MB cap skipped that file while copying its newer viewer/manifest,
+which explains a laptop checksum mismatch and a VMD frame-count abort leaving
+the default full-protein Lines scene. The current viewer now hides incomplete
+loads and removes its own molecule on failure. The pull script now transfers the explicitly curated DCD outside the 500 MB
+cap with checksum-based refresh before bundle verification; copy the updated
+`scripts/pull_nyl12_inspection.sh` to the laptop and rerun it. The
+original topology, trajectory, frame order, colors and physical coordinates
+are unchanged. Original small display files are retained under
+`clutter/vmd_loader_repair_20261126/`; full-script Tcl validation passed for
+matching and stale frame counts, but no graphical VMD render was available.
+
+---
+
+**Priority relay checks and coordinated pause, 26 November (evening):**
+all **40 direct-US native engines are suspended together**, preserving process
+memory, trajectory files and held worker locks. Two independent acylenzyme
+hydration engines are also suspended; the main hydration run remains active.
+Four targeted relay checks run in tmux (`relay_target_1_20261126` through `_4_`):
+reciprocal starts for activation021/022, and product umbrellas at
+(q_acyl,q_del)=(1.75,1.50)/(1.75,1.75) Å. Each runs 1+4 ps equilibration then
+10 ps diagnostic production. Azalea's original relay campaign remains running.
+Inputs and checks live in relay `full_path_300K/additional_sampling_20261126/`;
+these are diagnostics, not already converged extra production windows.
+
+The tested `relay_campaign_resume_all_20261126` monitor will resume all 40
+direct engines and both suspended hydration engines together once all four
+checks and their children are idle, including after failures. Its pinned
+configuration, identities, live status and real-signal smoke-test receipt are
+under `analysis/fixed_burnin_20261126/targeted_sampling_20261126/`
+`campaign_resume_control/`. The frozen per-target wrapper was launched with a
+Python interpreter missing pidfd APIs; its final restoration will therefore
+report an operational AttributeError even if native stages pass. Do not
+mistake that terminal wrapper error for electronic or sampling failure.
+The independent monitor uses validated `/usr/bin/python3` pidfd support;
+scientific acceptance is recorded separately in each `window_status.json`
+and stage `acceptance.json`. Frozen scientific inputs were not changed.
+
+---
+
+**Relay 30 ps and retrieval update, 26 November:** all 57 Azalea windows are
+already in stage09 (30→35 ps; last measured production 30.90–30.95 ps), continuing
+toward 60 ps. The fixed-cutoff 30 ps PMF sampled maximum is 25.042 kcal/mol
+(pointwise conditional 95%: 24.285–25.697); temporal-half maxima 23.578/26.149
+remain inconsistent. The updated stripped movie has 3,420 frames (60/window)
+at relay `full_path_300K/vmd_progress/current/view_path.vmd`. A broad compact-JSON
+sync was overwriting its new metadata with stale remote 20 ps metadata; only
+the derived synchronizer was repaired. Bundle checksums remained valid over
+subsequent sync cycles. Native simulations were untouched.
+
+Endpoint diagnosis: nearest-polyline projection maps about 17% of sampled
+frames exactly to vertices, including 32% near s≈0.1625. This contributes to
+persistent early structure, but does not explain every wiggle. The last two
+bins extend beyond s=1: their weight ESS values are 1.25 and 1; the final bin
+contains one frame and has unresolved CI. These are not established acyl-basin
+features. The separately retained, low-priority one-refit diagnostic reproduced the
+primary PMF exactly. Vertex projections carry 32.7% of the s≈0.1625 bin weight
+but only 0.203% near s≈0.1875; the raw 17% global vertex fraction is therefore
+not a weighted explanation of the whole profile. One frame contributes 89.0%
+of the penultimate bin weight and 98.4% at s≈0.2375. The original PMF/grid/biases
+remain unchanged; new binning sensitivities are diagnostic only.
+See `analysis/fixed_burnin_20261126/endpoint_diagnostics_20261126/`.
+
+The Marigold retrieval benchmark completed: current lexical evidence delivery
+20/20, dense19/20, reranking20/20; ordering improved but no coverage gain. Current
+retrieval stays unchanged, model servers remain off, and BioReason-Pro 2 is
+explicitly excluded. The PI selected LigandMPNN; no RFD4 pilot is queued.
+Mechanism-agent benchmark and expanded NVIDIA collection assessment are saved
+in their existing project directories. No scientific dispatch was enabled.
+
+---
+
+**Mechanism-agent supervised test completed, 26 November:** the 20-answer
+factual audit found 9 correct, 5 minor and 6 major findings. A frozen 17-source
+primary view and separate 29-source reference index are retained in the private
+mechanism-agent project. One source-linked hydration report, TEST-only pending
+human packet, notification and cleanup completed (controller exit 0). Core
+chemistry was supported but the draft still needs lead corrections for scope
+and stale status labels; no scientific authority was promoted. Both Nanos and
+the local tunnel are verified stopped. Native science remains 43 Sander jobs
+on Violet and 57 on Azalea. See `/data/jpc/mechanism-agent/runs/`
+`supervised_handoff_prep_20261126/completion.json`. No test-email reply is needed.
+
+**Deacylation hypothesis update, 26 November:** distinguish retained product
+NH2 from eventual bulk NH3+. Water can supply both Thr–OH regeneration and
+the extra product-amine proton. Compare the Thr-Nalpha baseline with a
+geometry-supported Asp272/Asp274 water-activation/product-protonation relay;
+the latter still requires explicit proton return to Thr OG1 and regeneration
+of the catalytic microstate. See the current roadmap's proton-accounting
+entry. This is a plan, not a simulated result; running proton inventories and
+all sampling jobs remain unchanged.
+
 **Live continuations, 26 November:** verified 43 native Sander processes on
 Violet: 40 direct-US workers plus three acylenzyme hydration runs. Violet has
 24 physical cores / 48 logical CPUs; these 43 single-thread calculations share
@@ -6235,3 +6759,6 @@ points with sparse matched-embedding method checks and candidate releases.
 Do not claim a stable TI1 is mechanistically mandatory; a coupled path to
 acylenzyme remains an alternative. This plan is documented but not launched.
 Updated manuscript interpretation is in `manuscript/RESULTS_DRAFT.md`.
+
+
+**Relay weighted endpoint diagnostic, 26 November:** derived-only single low-priority MBAR refit completed in13.7s; original fixed30 PMF/counts/ESS reproduced. See `qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/endpoint_diagnostics_20261126/weighted_bin_sensitivity_20261126/retry_with_historical_feature_mapping/README.md`. Vertex mass32.728% at s0.1625 but only0.203% at0.1875; product-tail minimum89.013%oneframe. Existing primary plots/CI and native jobs unchanged. Failed import attempt and rejected initial histogram accumulation retained; accepted cached-weight reconstruction errors PMF3.55e-15, ESS3.35e-12. No active diagnostic session; sampling convergence remains unaccepted.

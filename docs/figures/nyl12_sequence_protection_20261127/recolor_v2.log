@@ -1,0 +1,52 @@
+PyMOL>load /data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_heavy.pdb, model
+ Warning: 'model' is a reserved keyword, appending underscore
+ ObjectMolecule: Read crystal symmetry information.
+ CmdLoad: "" loaded as "model_".
+PyMOL>bg_color white
+PyMOL>set ray_opaque_background, 1
+ Setting: ray_opaque_background set to 1.
+PyMOL>set max_threads, 1
+ Setting: max_threads set to 1.
+PyMOL>set valence, 0
+ Setting: valence set to off.
+PyMOL>set stick_radius, 0.2
+ Setting: stick_radius set to 0.20000.
+PyMOL>hide everything
+PyMOL>show cartoon, chain A+B+C+D+E+F+G+H
+PyMOL>set_color protected_magenta, [0.83137,0,0.70980]
+ Color: "protected_magenta" defined as [ 0.831, 0.000, 0.710 ].
+PyMOL>set_color mechanistic_teal, [0,0.61961,0.45098]
+ Color: "mechanistic_teal" defined as [ 0.000, 0.620, 0.451 ].
+PyMOL>set_color variable_gray, [0.90196,0.90196,0.90196]
+ Color: "variable_gray" defined as [ 0.902, 0.902, 0.902 ].
+PyMOL>set ambient, 0.65
+ Setting: ambient set to 0.65000.
+PyMOL>set direct, 0.35
+ Setting: direct set to 0.35000.
+PyMOL>set reflect, 0.15
+ Setting: reflect set to 0.15000.
+PyMOL>set specular, 0
+ Setting: specular set to 0.00000.
+PyMOL>set ray_shadows, off
+ Setting: ray_shadow set to off.
+PyMOL>set depth_cue, off
+ Setting: depth_cue set to off.
+PyMOL>color variable_gray, all
+ Executive: Colored 9961 atoms and 1 object.
+PyMOL>color protected_magenta, (chain A+B+C+D and resi 1+41+46+47+48+49+50+51+52+53+54+55+56+57+58+59+61+62+64+66+77+78+80+81+88+91+96+97+98+99+100+101+102+104+113+115+121+123+126+156+157+186+195+208+212+215+218+219+221+222+223+224+225+226+227+228+229+230+231+232) or (chain E+F+G+H and resi 233+234+235+246+247+250+251+254+255+257+258+261+262+265+268+269+270+271+272+273+274+275+276+282+287+292+293+294+295+296+298+299+300+301+302+304+305+306+308+309+312)
+ Executive: Colored 3380 atoms.
+PyMOL>color mechanistic_teal, (chain A+B+C+D and resi 113+156+186) or (chain E+F+G+H and resi 233+272+274)
+ Executive: Colored 204 atoms.
+PyMOL>show sticks, chain I+J+K+L
+PyMOL>color orange, chain I+J+K+L and elem C
+ Executive: Colored 24 atoms.
+PyMOL>color blue, chain I+J+K+L and elem N
+ Executive: Colored 4 atoms.
+PyMOL>color red, chain I+J+K+L and elem O
+ Executive: Colored 5 atoms.
+PyMOL>set orthoscopic, on
+ Setting: orthoscopic set to on.
+PyMOL>set antialias, 2
+ Setting: antialias set to 2.
+PyMOL>orient all
+PyMOL>zoom all, 3

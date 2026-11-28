@@ -1,0 +1,12 @@
+{
+  "tests_passed": 22,
+  "new_preparation_module_statement_coverage_percent": 93,
+  "ruff": "passed",
+  "copied_existing_analysis_wrappers_coverage": "unmeasured; extended65/100guards andsingle5psdiscard tested",
+  "module": "/data/jpc/covalent-enzyme-design/src/nyl12_covalent/relay_umbrella_continuation.py",
+  "module_sha256": "f022a6652b840f45c7701287f52e816702fa520ebcdb632a50650fa33a0d4a81",
+  "tests": [
+    "tests/test_relay_umbrella_continuation.py",
+    "tests/test_relay_continuation_analysis.py"
+  ]
+}

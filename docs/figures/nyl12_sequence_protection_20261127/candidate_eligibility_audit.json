@@ -1,0 +1,224 @@
+{
+  "pool": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/protection_corrected_pilot_20261127/generation_run01/deduplicated_pool.json",
+  "pool_sha256": "4d95f659431e1e4dae01e4e9e95a8b6395c1c4eb7754fda3a832b3e12f1164d4",
+  "candidates": [
+    {
+      "candidate_id": "relay_corr01_01",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_02",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_03",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_04",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_05",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_06",
+      "residue156": "I",
+      "violations": [
+        "K156I"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_07",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_08",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_09",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_10",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_11",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_12",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_13",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_14",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_15",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_16",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_17",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_18",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_19",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_20",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_21",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_22",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_23",
+      "residue156": "T",
+      "violations": [
+        "K156T"
+      ],
+      "eligible": false
+    },
+    {
+      "candidate_id": "relay_corr01_24",
+      "residue156": "L",
+      "violations": [
+        "K156L"
+      ],
+      "eligible": false
+    }
+  ],
+  "eligible_ids": [],
+  "generation_processes": {
+    "generate_01": {
+      "exit_code": 0,
+      "started_utc": "2026-11-28T02:23:58.583467+00:00",
+      "ended_utc": "2026-11-28T02:24:17.010286+00:00"
+    },
+    "generate_02": {
+      "exit_code": 0,
+      "started_utc": "2026-11-28T02:24:18.650177+00:00",
+      "ended_utc": "2026-11-28T02:24:37.040076+00:00"
+    },
+    "generate_03": {
+      "exit_code": 0,
+      "started_utc": "2026-11-28T02:24:38.665845+00:00",
+      "ended_utc": "2026-11-28T02:24:57.252768+00:00"
+    },
+    "generate_04": {
+      "exit_code": 0,
+      "started_utc": "2026-11-28T02:24:59.100842+00:00",
+      "ended_utc": "2026-11-28T02:25:17.502612+00:00"
+    }
+  },
+  "completed_score_receipts": 21,
+  "audit_is_snapshot": true,
+  "jobs_modified": false
+}

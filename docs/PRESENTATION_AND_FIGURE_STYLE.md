@@ -202,9 +202,16 @@ The continuous-window watcher replaces the blockwise figure watcher for
   colors there too so color-follow does not override the grey palette.
 - Use a clean white or explicitly requested transparent background, appropriate
   antialiasing and sufficient export resolution. Avoid screenshots of GUI panels.
-- Keep the catalytic view consistent: **Thr233 below, Phe113 upper left,
-  Asn186 upper right** when the geometry permits. Use `set valence, 0` in PyMOL.
-  Matched states should share a camera and display scale.
+- **Default active-site camera for every figure and movie unless the PI
+  explicitly requests otherwise:** Thr233 below the reactive substrate amide,
+  Phe113 upper left and Asn186 upper right, with the Thr233 N-terminus on the
+  right as in the PI's 27 November reference image. Define the camera from
+  protein landmarks and preserve it across matched states and pose classes.
+  Use proper rigid rotations only, never reflection/mirroring. Do not rotate
+  each ligand separately to make opposite substrate directions look alike.
+  In the approved Boltz pose the substrate amide N and Thr Nα appear on the
+  right in this camera; this visual arrangement does not define a universal
+  torsion sign. Matched images share scale. Use `set valence, 0` in PyMOL.
 - Use orange substrate carbons, cyan protein carbons, white H, blue N and red O
   unless a specific comparison needs a declared alternative. Use few large
   labels, positioned away from atoms and other labels.
@@ -217,6 +224,17 @@ The continuous-window watcher replaces the blockwise figure watcher for
   or hidden distal substrate portions; never optimize coordinates for appearance.
 
 ## Speaker notes
+
+For any Herschlag-phi comparison, state the ordered convention. Our function
+uses five atoms: Thr OG1, carbonyl O, carbonyl C, substrate amide N and the
+carbon attached to carbonyl C on its acyl side. Carbonyl C is projected onto
+the plane defined by O, amide N and acyl-side C. The signed torsion is then
+**OG1 → O → projected C → acyl-side C**, evaluated with the unchanged project
+`atan2` convention. Thr Nα is not part of phi. In the approved B/F Boltz
+reference this is OG1/O50/C55/N57/C63, giving +81.196° before and +88.228°
+after relaxation. The approved E–S target is positive; the prior negative-only
+selection rule was an interpretation error. Never change measured signs to
+match a label, and never infer the sign from screen-left/right alone.
 
 Use notes for definitions, abbreviations, full references, source paths/frame
 IDs, methods/settings, controls, uncertainties and interpretation limits. Include
@@ -239,3 +257,14 @@ enzyme assay conditions. Do not mix their measurements or temperatures.
    on-slide text size. Record limitations and which visual checks were performed.
 5. Deliver the editable PPTX, a PDF preview, and reproducible figure/build inputs.
    Ensure the curated pull script downloads the current deck and policy.
+
+
+### Sequence-protection figures (PI revision, 27 November 2026)
+
+Use vivid magenta for other protected identities, very light gray for variable
+identities, and teal for the F113/K156/N186/T233/D272/D274 mechanistic subset.
+The current disjoint counts are 95+6+227; the 101 protected total includes teal.
+Label the subset as mechanistic constraints, not six independently proven
+Nyl12 catalytic residues. Use a white background and lighting that retains
+the light-gray/magenta contrast. PA6 carbon stays orange. This explicit
+protection-status view overrides chain coloring for this figure only.

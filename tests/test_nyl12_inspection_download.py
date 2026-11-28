@@ -358,7 +358,13 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
     )
     for name, body in {
         "rsync": rsync_stub,
-        "ssh": "#!/bin/sh\nexit 0\n",
+        "ssh": (
+            "#!/bin/sh\n"
+            "# Optional immutable publications are absent in this fixture.\n"
+            'case "$*" in *latest_verified*|'
+            "*current_eligible_progress_20261127/current*) exit 1;; esac\n"
+            "exit 0\n"
+        ),
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
         path = binary / name
@@ -380,7 +386,8 @@ def test_rsync_dry_run_and_arguments(tmp_path: Path) -> None:
             "jpc@violet",
             str(destination),
         ]
-        subprocess.run(argv, env=environment, check=True, capture_output=True)
+        result = subprocess.run(argv, env=environment, capture_output=True, text=True)
+        assert result.returncode == 0, result.stderr
         arguments = Path(str(captured) + ".details").read_text().splitlines()
         assert ("--dry-run" in arguments) == dry_run
         assert "--delete" not in arguments
@@ -461,7 +468,13 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
     )
     for name, body in {
         "rsync": rsync_stub,
-        "ssh": "#!/bin/sh\nexit 0\n",
+        "ssh": (
+            "#!/bin/sh\n"
+            "# Optional immutable publications are absent in this fixture.\n"
+            'case "$*" in *latest_verified*|'
+            "*current_eligible_progress_20261127/current*) exit 1;; esac\n"
+            "exit 0\n"
+        ),
         "shasum": "#!/bin/sh\nexit 0\n",
     }.items():
         path = binary / name
@@ -475,13 +488,14 @@ def test_rsync_executable_uses_current_user_and_violet_by_default(
     current_user = subprocess.run(
         ["id", "-un"], check=True, text=True, capture_output=True
     ).stdout.strip()
-    subprocess.run(
+    result = subprocess.run(
         [str(PULL)],
         cwd=tmp_path,
         env=environment,
-        check=True,
         capture_output=True,
+        text=True,
     )
+    assert result.returncode == 0, result.stderr
     arguments = captured.read_text().splitlines()
     assert (
         f"{current_user}@violet:/data/jpc/covalent-enzyme-design/"

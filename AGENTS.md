@@ -27,6 +27,12 @@
 
 Read the current resume note before calculations. TI1 protonation/connectivity,
 measured product identities, and parameter quality are scientific requirements.
+
+For this Nyl12 campaign, start with `docs/NYL12_THROUGH_NOV30.md` for active
+priorities and compact status/evidence links; consult the long historical
+roadmap/handoff only for the relevant unresolved question. From 1 December,
+prefer deterministic checkpoint summaries and milestone/decision reviews to
+routine repeated LLM monitoring, preserving scientific checks and provenance.
 The initial repository import is a development snapshot; it does not certify
 the existing topologies for MD or the current coordinates as optimized.
 
@@ -55,8 +61,33 @@ the existing topologies for MD or the current coordinates as optimized.
   Separate substrate hydrolysis from enzyme maturation/autocleavage.
 - With consistent scissile-amide mapping, opposite catalytic Herschlag-phi
   signs identify flipped local poses. Other distances assess catalytic utility.
+- Before template-guided prediction, verify actual native feature tensors,
+  source-author/query mapping and omitted-position masks. Coordinate deletion
+  and alignment records alone do not prove effective template visibility.
+  Test all matched conditions and preserve source coordinates; see the
+  27 November native-feature correction in `docs/NYL12_THROUGH_NOV30.md`.
+- For the current Nyl12 E–S design campaign, the PI-approved Boltz pose is
+  **positive phi** under the unchanged projected-angle definition. Require an
+  explicit `target_phi_sign=+1` and the approved reference manifest; the earlier
+  assistant negative-only target was incorrect. Preserve numerical signs and
+  historical analyses. Follow the PI's default protein-based active-site camera
+  in `docs/PRESENTATION_AND_FIGURE_STYLE.md` for figures and movies.
 - Use independent MD seeds and matched comparison protocols. Update topology
   charges and counterions for protonation changes; never change states silently.
+- Preserve the hard Nyl12 sequence minimum at canonical 113, 156, 186, 221–235
+  and 272–276 in all four copies, plus structural/interface protections. See
+  `nyl12_sequence_protection.py` and the latest audited 101-position receipt.
+  K156 is protected by the PI's latest review of NylC Lys189 mutagenesis.
+  L235 remains a conservative N-terminal-context protection without a
+  demonstrated residue-specific catalytic role. Earlier K156-variable pilot
+  outputs are diagnostics, not eligible candidates. Historical
+  config claims about275–276 are protection policy, not mechanistic proof.
+  Sequence identity and RFD3 coordinate mobility are separate. Current designs
+  violating restored protections may finish as diagnostics but cannot advance.
+- For local MSA searches, read `docs/LOCAL_MSA_WORKFLOW.md` first. Violet's
+  working Pixi ColabFold is under enzyme-substrate-modeling and databases are
+  in `/data/boltz_db`; do not infer failure from a broken global wrapper or an
+  empty unrelated database directory. Native output uses the query header.
 - Use scripted monitors and meaningful checkpoints, not frequent manual polls.
   Check CPU/GPU contention before stopping work; signal only verified processes.
 - Default science hosts are violet and azalea. On 2026-11-22 the PI explicitly

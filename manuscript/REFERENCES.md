@@ -1,5 +1,28 @@
 # Working references
 
+## Primary-amine release assay references (verified 2026-11-26)
+
+- **R61.** Negoro, S.; Shibata, N.; Tanaka, Y.; et al.
+  *Three-dimensional Structure of Nylon Hydrolase and Mechanism of Nylon-6
+  Hydrolysis*. J. Biol. Chem. **2012**, 287 (7), 5079–5090.
+  https://doi.org/10.1074/jbc.M111.321992 .
+  Direct NylC precedent: enzyme activity was measured as an increase in amino
+  groups using TNBS; polymer-product analysis also used TLC/ninhydrin. These
+  are different readouts, not a proof that all soluble products are monomers.
+  Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC3281642/ .
+- **R62.** Shiraishi, Y.; Kato, D.-i.; Miyazaki, K.; Yonemura, M.; Furuno, Y.;
+  Yokoyama, R.; et al. *Quantitative nylon monomerization by the combination
+  of chemical pretreatment and enzymatic hydrolysis using nylon hydrolases*.
+  PLOS ONE **2025**, 20 (2), e0318641.
+  https://doi.org/10.1371/journal.pone.0318641 .
+  Section 1.4 gives a 96-well TNBS assay in tetraborate at pH 9.5, with 420 nm
+  detection after 40 °C derivatization and calibration against 6-aminohexanoate.
+  Hydrolysis conditions are separate from these detection conditions.
+  This is a nylon-specific adaptation precedent, not a validated Nyl12 assay
+  in 200 mM Tris/crude lysate. First author is Shiraishi, not Negoro.
+
+## Core computational references
+
 - **R43.** Kästner, J.; Sherwood, P. *Superlinearly converging dimer method
   for transition state search*. J. Chem. Phys. **2008**, *128*, 014106.
   https://doi.org/10.1063/1.2815812
@@ -422,3 +445,14 @@ a joint multistate optimization objective.
   QM/MM US example using 30 ps/window, the last 15 ps for WHAM, 100 bootstrap
   data sets, profile-convergence checks and committor analysis. Protocol example,
   not a universal equilibration or sampling-time recommendation for Nyl12.
+
+- **R63.** Politis, D. N.; Romano, J. P. *A Circular Block-Resampling Procedure
+  for Stationary Data*. In *Exploring the Limits of Bootstrap*; LePage, R.;
+  Billard, L., Eds.; Wiley, 1992; pp 263–270. Primary preprint: Stanford
+  Department of Statistics, report EFS NSF 370, March 1991:
+  https://statistics.stanford.edu/technical-reports/circular-block-resampling-procedure-stationary-data .
+  Source for fixed-length circular block resampling. This is distinct from
+  the authors' geometric-length stationary bootstrap (JASA 1994). The
+  stationary/weak-dependence assumptions do not hold automatically for short,
+  drifting QM/MM trajectories; the resampling scheme cannot repair missing
+  conformations or initialization dependence.

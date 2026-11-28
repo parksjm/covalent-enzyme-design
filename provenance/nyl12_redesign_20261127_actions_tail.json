@@ -1,0 +1,10 @@
+{
+  "captured_utc": "2026-11-28T03:21:12.833176+00:00",
+  "prefix_manifest": "provenance/nyl12_redesign_20261127_actions.json",
+  "prefix_manifest_sha256": "2dcb5e23c0eea450167a84ed3d497297d11176e2a252d7fbef2ef4f16641596e",
+  "start_byte": 40260694,
+  "tail_sha256": "afe56c3874738d25d7804b87160a20c11d1b9e7bfee3b65435b523ce286e45ee",
+  "tail_records": 18,
+  "combined_source_sha256": "38eae3fb6b40a53f02a0ab6ca881f11be5bc32dead65c7fb53300e17f9719729",
+  "later_operations": "Commit/push outcomes remain in live journal"
+}

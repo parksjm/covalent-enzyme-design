@@ -1,0 +1,62 @@
+{
+  "source": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_heavy.pdb",
+  "source_sha256": "04f0e01efa124c3441b995005bb0f8dce3683bd871a3d4b7541761dbbe8190e6",
+  "pymol_version": "3.1.0",
+  "camera": [
+    0.982273896268952,
+    -0.1371227590979435,
+    -0.1278097869725924,
+    0.18411869489973598,
+    0.8337668577543137,
+    0.5205123755482823,
+    0.035189471394581145,
+    -0.5348178903588262,
+    0.844234283392415,
+    0.0,
+    0.0,
+    -286.6705627441406,
+    64.26124572753906,
+    34.18516540527344,
+    56.89478302001953,
+    226.0132598876953,
+    347.327880859375,
+    20.0
+  ],
+  "rotation_determinant": 1.0,
+  "camera_landmarks": "A:Phe113 CA, A:Asn186 CA, E:Thr233 CA; approved protein frame",
+  "protein_color_exception": "Protection status replaces chain coloring",
+  "max_threads": 1,
+  "palette": {
+    "other_protected": "#D400B5",
+    "mechanistic_core": "#009E73",
+    "variable": "#E6E6E6"
+  },
+  "mechanistic_core_canonical": [
+    113,
+    156,
+    186,
+    233,
+    272,
+    274
+  ],
+  "mechanistic_core_interpretation": "Six-position mechanistic subset; includes homolog-informed K156; not all experimentally established in Nyl12",
+  "script_sha256": "e8f6c8ee114f56073fed1f4b510b2c294e91cea0ae80389f61051fda0febb7bc",
+  "prior_version": "prior_v1",
+  "coordinate_optimization": false,
+  "mask_sha256": "ab33632afbb4bb08b04c172c45b7cf04fd8cb1139d07af3e3a60cc40a6d530c8",
+  "artifacts": {
+    "SI_caption_and_inventory.md": "e7532e584e29b9d1f73b5f279b88d9bbc19facb55c4b4fda68ea0b3a5786fd9b",
+    "recolor_v2.log": "bbe0102e9dc3673d25e1b48057a2979288f552e46150aac423e3d6da16a01309",
+    "protected_positions.pml": "b141501a041fe3774e22287c796a656173d61c2e2f269ae06f301742e3ac7340",
+    "protected_positions.pse": "f333ee00866d8dd4c1a4d986ec7e013e0682c821dec7c916c0ef324814eccec3",
+    "build_figure.py": "e8f6c8ee114f56073fed1f4b510b2c294e91cea0ae80389f61051fda0febb7bc",
+    "protected_vs_variable.pdf": "0a6ea57a12f9b623cdc3b0a558bbe9954df0b136d6a068d11fe1e465709eb586",
+    "canonical_protection_restored_K156_20261127.json": "ab33632afbb4bb08b04c172c45b7cf04fd8cb1139d07af3e3a60cc40a6d530c8",
+    "protected_vs_variable.png": "65b08f05e7c5419e201bdb62c085e0f738776bfd282d44011228f893777c149f",
+    "canonical_position_inventory.json": "c4a2431a35350680d0716f3d32427e87d9b922bd4fa7bdc4adafa5ed31433aa4",
+    "canonical_position_inventory.csv": "e473e691fab845194faafa4a4ec911d24d6afa017373767424528a886d375c7b",
+    "candidate_eligibility_audit.json": "b04787a59df28d75efc73f03b5385a89308d9b3b001d79991ce388d064726ca7",
+    "structure.png": "bb79ddd17568579ecfb046c564a9fb699d8cc5549f1f5f06389b4350b2136f26",
+    "render_manifest.json": "681d3d880e750dadb1eb1f14555f62a9b4432f8cf28e2d02c1e5b7a016fccb6a"
+  }
+}

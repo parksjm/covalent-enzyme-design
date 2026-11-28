@@ -125,21 +125,52 @@ def test_exclusive_candidate_hold(
         queue.hold({"base": str(tmp_path)}, 4)
 
 
-def test_report_actual_producer_schema(monkeypatch: pytest.MonkeyPatch) -> None:
-    base = Path(
-        "qmmm/pa6_flipped_model30/13_deacylation_pilot/hydration_reconnaissance"
-    ).resolve()
-    # Real repaired report currently includes extend_01; native files retain their hashes.
-    count = len(
-        [
-            s
-            for s in gates.read(base / "analysis/report.json")["frame_count_by_stage"]
-            if s.startswith("extend_")
-        ]
+def test_report_producer_schema_isolated_from_live_receipts(tmp_path: Path) -> None:
+    base, count = tmp_path.resolve(), 2
+    analysis = base / "analysis"
+    analysis.mkdir()
+    stages = ["extend_01", "extend_02"]
+    sources = []
+    bound = []
+    for name in stages:
+        directory = base / name
+        directory.mkdir()
+        trajectory = directory / "trajectory.nc"
+        trajectory.write_bytes(b"test trajectory source")
+        put(directory / "scientific_acceptance.json", {"acyl_retained": True})
+        sources.append({"stage": name, "path": str(trajectory)})
+        bound.extend([trajectory, directory / "scientific_acceptance.json"])
+    put(
+        analysis / "report.json",
+        {
+            "frame_count_by_stage": dict.fromkeys(stages, 100),
+            "trajectory_sources": sources,
+            "criteria": {
+                "near_attack_O_C_A_max": 3.5,
+                "attack_angle_deg": [95, 125],
+            },
+            "endpoint_time_ps": 10,
+            "water_count": 1,
+        },
     )
-    assert isinstance(gates.report_candidates(base, count), list)
+    water = {"near_attack_frame_count": 3, "water_residue": 123}
+    put(analysis / "per_water_summary.json", {"waters": [water]})
+    (analysis / "per_frame_metrics.csv").write_text("time_ps\n26\n")
+    (analysis / "nearest_water_per_frame.csv").write_text("time_ps\n26\n")
+    bound.extend(
+        analysis / name
+        for name in ("report.json", "per_water_summary.json", "per_frame_metrics.csv")
+    )
+    put(
+        analysis / "source_manifest.json",
+        {"sha256": {str(path): gates.digest(path) for path in bound}},
+    )
+    assert gates.report_candidates(base, count) == [water]
     with pytest.raises(ValueError, match="every accepted"):
         gates.report_candidates(base, count + 1)
+    bound[0].write_bytes(b"changed source")
+    with pytest.raises(ValueError, match="Identity changed"):
+        gates.report_candidates(base, count)
 
 
 def test_prepare_native_runtime(tmp_path: Path) -> None:

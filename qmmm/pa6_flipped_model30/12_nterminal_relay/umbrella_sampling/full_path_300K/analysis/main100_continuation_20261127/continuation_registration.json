@@ -1,0 +1,53 @@
+{
+  "status": "registered_waiting_for_new_accepted_blocks",
+  "campaign": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K",
+  "execution_plan": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/continuation_100ps_20261127/plan.json",
+  "execution_plan_sha256": "34f963b6c0d23a4792652ef78b808db544d12e639242f0276e131ab4c4948aa0",
+  "prepared": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/continuation_100ps_20261127/prepared.json",
+  "prepared_sha256": "69ae79dfed6a43f54750b77c39ce3260a0fa3b482b31c259ccee22ca12191510",
+  "window_count": 57,
+  "worker_count": 57,
+  "production_horizons_ps": [
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100
+  ],
+  "stage_labels": [
+    "15_production_5ps",
+    "16_production_5ps",
+    "17_production_5ps",
+    "18_production_5ps",
+    "19_production_5ps",
+    "20_production_5ps",
+    "21_production_5ps",
+    "22_production_5ps"
+  ],
+  "same_lineages_not_new_histories": true,
+  "discard_once_ps": 5,
+  "native_process_gate": "exit0, every10000integrationstepsSCCconverged, finiteenergytemperature, finalT225to375K, endpoint104922atomsvelocitiesfinite, frozenoutermaxdisplacement0",
+  "analysis_gate": "analysis_acceptance.json and unchangedphysicalHamiltonian/bias/nativeenergyparity for every consecutive block; no stale/incomplete frame inclusion",
+  "main60_analysis_preserved": true,
+  "old_collector_cap_ps": 60,
+  "existing_generic_loader": "nyl12_covalent.relay_pooled_sources.load_cohort",
+  "existing_generic_checkpoint_selector": "nyl12_covalent.relay_mbar_progression.select_horizon",
+  "physics_changes": false,
+  "fixed_protocol_source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/source_snapshot",
+  "fixed_monitor": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/watch.py",
+  "fixed_outputs": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/evidence",
+  "future_pool_collector": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100_source/collect.py",
+  "fixed_bootstrap_replicates": 200,
+  "fixed_bootstrap_widths_ps": [
+    5,
+    2.5
+  ],
+  "future_pooled_claim": "POINT_ONLY until same final overlap/uncertainty gate passes",
+  "old_final100_scope": "Previous100lineages main60+grid30+old4_30+mixing6_30 remains fixed checkpoint, not extended100ps claim",
+  "future_pool_monitor": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100_source/watch.py",
+  "future_pool_pointer": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/main100_continuation_20261127/current_ext100/current",
+  "future_pool_start_gate": "Requires qualifiedfixed65psfit; then includes each accepted eligible supplement after Hamiltonian/nativebiasparity; POINT_ONLY"
+}

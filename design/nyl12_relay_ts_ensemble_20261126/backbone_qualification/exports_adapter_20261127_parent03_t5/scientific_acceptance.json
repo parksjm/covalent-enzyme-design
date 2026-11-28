@@ -1,0 +1,208 @@
+{
+  "accepted": true,
+  "fixed_max_A": 2.4613922385709617e-14,
+  "mobile_CA_rmsd_A": 0.3142191751100708,
+  "peptide_closure_pass": true,
+  "peptide_closures": [
+    {
+      "chain": "A",
+      "residue": 73,
+      "distance_A": 1.2861336464221456
+    },
+    {
+      "chain": "A",
+      "residue": 74,
+      "distance_A": 1.281471919845847
+    },
+    {
+      "chain": "A",
+      "residue": 75,
+      "distance_A": 1.3381855202337316
+    },
+    {
+      "chain": "A",
+      "residue": 76,
+      "distance_A": 1.3425030128320137
+    },
+    {
+      "chain": "A",
+      "residue": 108,
+      "distance_A": 1.3244723725631815
+    },
+    {
+      "chain": "A",
+      "residue": 109,
+      "distance_A": 1.292791065652654
+    },
+    {
+      "chain": "A",
+      "residue": 110,
+      "distance_A": 1.3146486413900056
+    },
+    {
+      "chain": "A",
+      "residue": 111,
+      "distance_A": 1.4016836990504675
+    },
+    {
+      "chain": "A",
+      "residue": 112,
+      "distance_A": 1.365735070900134
+    },
+    {
+      "chain": "A",
+      "residue": 113,
+      "distance_A": 1.4233328654866277
+    },
+    {
+      "chain": "A",
+      "residue": 114,
+      "distance_A": 1.364744169181309
+    },
+    {
+      "chain": "A",
+      "residue": 115,
+      "distance_A": 1.346758301700628
+    },
+    {
+      "chain": "A",
+      "residue": 116,
+      "distance_A": 1.3436108109327884
+    },
+    {
+      "chain": "A",
+      "residue": 117,
+      "distance_A": 1.4239729579383835
+    },
+    {
+      "chain": "A",
+      "residue": 118,
+      "distance_A": 1.3693718841018871
+    },
+    {
+      "chain": "A",
+      "residue": 147,
+      "distance_A": 1.4313037673588234
+    },
+    {
+      "chain": "A",
+      "residue": 148,
+      "distance_A": 1.2595669456388154
+    },
+    {
+      "chain": "A",
+      "residue": 149,
+      "distance_A": 1.3374579795548505
+    },
+    {
+      "chain": "A",
+      "residue": 150,
+      "distance_A": 1.3163217914953766
+    },
+    {
+      "chain": "A",
+      "residue": 151,
+      "distance_A": 1.3942450031291773
+    },
+    {
+      "chain": "A",
+      "residue": 152,
+      "distance_A": 1.3971634034845195
+    },
+    {
+      "chain": "A",
+      "residue": 153,
+      "distance_A": 1.279039131540178
+    },
+    {
+      "chain": "A",
+      "residue": 154,
+      "distance_A": 1.3336565867922379
+    },
+    {
+      "chain": "A",
+      "residue": 155,
+      "distance_A": 1.358211434485216
+    },
+    {
+      "chain": "A",
+      "residue": 183,
+      "distance_A": 1.3526407386451458
+    },
+    {
+      "chain": "A",
+      "residue": 184,
+      "distance_A": 1.3968563168633799
+    },
+    {
+      "chain": "A",
+      "residue": 185,
+      "distance_A": 1.3518813962126035
+    },
+    {
+      "chain": "A",
+      "residue": 186,
+      "distance_A": 1.376931052462173
+    },
+    {
+      "chain": "A",
+      "residue": 187,
+      "distance_A": 1.3608794519952843
+    },
+    {
+      "chain": "A",
+      "residue": 188,
+      "distance_A": 1.3270686313523774
+    },
+    {
+      "chain": "A",
+      "residue": 189,
+      "distance_A": 1.288231905484268
+    },
+    {
+      "chain": "A",
+      "residue": 190,
+      "distance_A": 1.334730321987369
+    },
+    {
+      "chain": "A",
+      "residue": 191,
+      "distance_A": 1.2985603731173379
+    }
+  ],
+  "stereochemical_inversions": [],
+  "severe_heavy_clashes": [],
+  "forming_contact_excluded_from_clash_gate": [
+    9942,
+    6952
+  ],
+  "thresholds": {
+    "fixed_max_A": 0.05,
+    "mobile_CA_rmsd_min_A": 0.05,
+    "mobile_CA_rmsd_max_A": 3.0,
+    "peptide_min_A": 1.15,
+    "peptide_max_A": 1.65,
+    "clash_min_A": 1.8
+  },
+  "equivalent_Val_methyl_label_permutations": [],
+  "job_id": "parent03_t5_seed01_qualification_20261127",
+  "parent_source_id": "medoid03",
+  "source_atom_inventory_exact": true,
+  "source_sequence_exact": true,
+  "source_ligand_graph_exact": true,
+  "native_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/runs/parent03_t5_seed01_qualification_20261127/parent03_t5_medoid03_t5_0_model_0.cif.gz",
+  "native_cif_sha256": "8dae79517a5c2bf95aa6a760ad19bc8f7efe6a6fe2c5265dfebd0f2696d560ee",
+  "manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/parent03_qualification_20261127_manifest.json",
+  "manifest_sha256": "98acbaa8089a89e074aae80b311e408f47de1a6ce0610a97074a6f0d52b1e0d7",
+  "pdb_path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/audited_parent.pdb",
+  "canonical_mapping": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/canonical_mapping.json",
+  "pa6_graph_receipt": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/pa6_graph_acceptance.json",
+  "authoritative_coordinates": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/derived_coordinates_and_typed_graph.json",
+  "explicit_graph_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/audited_parent_explicit_graph.cif",
+  "fixed_context_normalization": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/fixed_context_normalization.json",
+  "pdb_path_sha256": "b77a7c0fae978b343f2caad4bc7be56fbe814ec75de212f41dd149a2c3b47adf",
+  "canonical_mapping_sha256": "1667edf7b52f588a4fe921a2b6f3491dd7d026c79acbfac059206b3cf6fb4c43",
+  "pa6_graph_receipt_sha256": "572e12ce4f11ca21cf789808ff6249fb935828d7f07d554ab438da6aeb36c9c0",
+  "authoritative_coordinates_sha256": "31ebc31f34813a7d4dbd200a365eab59661c23515ec7d52f3db87cc34880f44e",
+  "explicit_graph_cif_sha256": "fcb3229b2d364436226dbcf6de1ff9fbd3d7adb46eeb2d90c220a33f63af5adc"
+}

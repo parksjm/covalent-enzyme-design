@@ -1,0 +1,344 @@
+{
+  "title": "Primary evidence audit of NylC critical and functionally tested residues",
+  "date": "2026-11-27",
+  "source_scope": "Primary NylC mutagenesis, structure, substrate hydrolysis, maturation, assembly, and stability studies",
+  "alignment": {
+    "file": "analysis/negoro_2023_protonation/table1_job/nyl12_active_site_conservation_20261110/nyl12_nylc_numbering_alignment.fasta",
+    "method": "Count nongap residues independently in the NylC 3AXG reference and the 328-residue Nyl12 alpha-plus-beta query; map via aligned columns, without a fixed offset.",
+    "query_verified_against_current_wt": true,
+    "reference": "NylC_A/3AXG 355-aa reference, homolog mapping rather than a construct-specific structure alignment",
+    "limitations": "For NylCp2 mutant literature, source construct numbering is assumed to match the 355-residue NylC reference numbering; NylC_A alleles differ at some sites. Homology assignment does not establish identical structure or mechanism.",
+    "mapping_receipt": "analysis/negoro_mutagenesis_mapping_20261127/nylc_to_nyl12_protection_mapping.json",
+    "mapping_receipt_hashes": {
+      "analysis/nyl12_active_site_conservation_20261110/nyl12_nylc_numbering_alignment.fasta": "0a7517d420c35379826e1106effb47dc5f2f8d2c791a59b5059ee12f14d15d79",
+      "analysis/nyl12_active_site_conservation_20261110/public_nylc_3axg.fasta": "0a889ac50338bf06d5ae2444b393584c1eefd2f5c6e9ffe182f4fd17c58b9ace",
+      "docs/figures/nyl12_sequence_protection_20261127/canonical_position_inventory.json": "c4a2431a35350680d0716f3d32427e87d9b922bd4fa7bdc4adafa5ed31433aa4"
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "doi": "10.1111/febs.16755",
+      "title": "X-ray crystallographic and mutational analysis of the NylC precursor: catalytic mechanism of autocleavage and substrate hydrolysis of nylon hydrolase",
+      "year": 2023,
+      "references": "Table 1: local PDF p. 3/journal p. 3402; K189A discussion and Fig. 8: PDF pp. 11-12/journal pp. 3410-3411; Fig. 10: PDF p. 17/journal p. 3416; other figures/tables as cited per residue",
+      "local_pdf": "/home/jpc/.codex-hosts/violet/attachments/774153ee-6c69-496f-b558-e4e46390943f/Negoro_2023_FEBS.pdf"
+    },
+    {
+      "id": "S2",
+      "doi": "10.1074/jbc.M111.321992",
+      "title": "Three-dimensional structure of nylon hydrolase and mechanism of nylon-6 hydrolysis",
+      "year": 2012,
+      "references": "Fig. 2; Tables 1-2; Figs. 3-5"
+    },
+    {
+      "id": "S3",
+      "doi": "10.1038/s41598-018-27860-w",
+      "title": "Structural basis of the correct subunit assembly, aggregation, and intracellular degradation of nylon hydrolase",
+      "year": 2018,
+      "references": "Figs. 2-4; Tables 1-3"
+    }
+  ],
+  "residues": [
+    {
+      "nylc": "N266",
+      "nyl12": "N232",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "cleavage-site determinant",
+      "evidence": "N266A cleavage 42-57%; N266G 40-57%; variants remain partially processed. N266A/T267A double mutant <1% cleavage, but this does not isolate the N266 contribution.",
+      "substrate_hydrolysis": "No independent mature-enzyme role established.",
+      "confidence": "high for maturation sensitivity; none for independent substrate chemistry",
+      "source": "S1 Table 1, Figs. 3-4",
+      "alignment_reference_site": "N266",
+      "mapped_nyl12_site": "N232"
+    },
+    {
+      "nylc": "T267",
+      "nyl12": "T233",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "maturation nucleophile and proposed substrate nucleophile",
+      "evidence": "T267C in G122Y130 background <1% cleavage; N266A/T267A plus H130Y triple variant <1% (does not isolate T267A). T267S initially 9.7%, eventually >99% after 48 h (k=2.8e-5 s-1); cleavage-corrected activity 0.72 U/mg in G122Y130 background, with kcat/Km about 4% of its parental enzyme.",
+      "substrate_hydrolysis": "Mature substrate role is structurally and by analogy proposed; T267C/A low-activity results are confounded by failure to mature, and the A result is a triple mutant.",
+      "confidence": "high for maturation role; moderate for substrate nucleophile",
+      "source": "S1 Table 1, Figs. 3-4, Table 2; S2 Fig. 2",
+      "alignment_reference_site": "T267",
+      "mapped_nyl12_site": "T233"
+    },
+    {
+      "nylc": "D306",
+      "nyl12": "D272",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "proposed catalytic triad; maturation-critical",
+      "evidence": "D306A in NylCp2 and H-GYAQ and L137A/D306A in NylCA: <1% cleavage and <0.1 U/mg raw activity.",
+      "substrate_hydrolysis": "Asp306 is proposed in the substrate Asp308-Asp306-Thr267 triad; mutational loss of activity cannot isolate mature hydrolysis because cleavage fails. Proposed acid/base assignments are not directly observed.",
+      "confidence": "high for maturation requirement; low-to-moderate for mature substrate chemistry",
+      "source": "S1 Table 1, Figs. 4, 8, 10; S2 Fig. 2",
+      "alignment_reference_site": "D306",
+      "mapped_nyl12_site": "D272"
+    },
+    {
+      "nylc": "D308",
+      "nyl12": "D274",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "proposed substrate triad; maturation-critical",
+      "evidence": "D308A in H-GYAQ: <1% cleavage and <0.1 U/mg raw activity.",
+      "substrate_hydrolysis": "Part of the proposed Asp308-Asp306-Thr267 mature-substrate triad; no mature D308A assay because precursor fails processing.",
+      "confidence": "high for H-GYAQ maturation requirement; low-to-moderate for mature substrate chemistry",
+      "source": "S1 Table 1, Fig. 8, Fig. 10",
+      "alignment_reference_site": "D308",
+      "mapped_nyl12_site": "D274"
+    },
+    {
+      "nylc": "G307",
+      "nyl12": "G273",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "proposed backbone oxyanion donor",
+      "evidence": "No G307 substitution tested in the audited NylC papers.",
+      "substrate_hydrolysis": "Backbone NH is proposed to stabilize the tetrahedral intermediate; this is model/structural inference.",
+      "confidence": "low; proposal only",
+      "source": "S1 Fig. S11; S2 Fig. 2",
+      "alignment_reference_site": "G307",
+      "mapped_nyl12_site": "G273"
+    },
+    {
+      "nylc": "K189",
+      "nyl12": "K156",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "maturation network; strong hydrolysis-associated evidence",
+      "evidence": "H-GYAQ K189A cleavage 6.0-33% (67-94% remains uncleaved); cleavage-normalized activity 0.032 U/mg (~0.6% parental). TLC: trace Ahx dimer after 24 h vs parental dimer and monomer by 1 h.",
+      "substrate_hydrolysis": "Severe effect persists after specific-activity/cleavage correction, supporting a role beyond maturation; exact chemistry (including proposed general-base or substrate-binding role) is not isolated from structural effects.",
+      "confidence": "high for important enzyme function and hydrolysis-associated role; moderate for exact mechanism",
+      "source": "S1 Table 1 footnote d (PDF p.3/journal p.3402), K189A discussion and Fig. 8 (PDF pp.11-12/journal pp.3410-3411), Fig. 10 (PDF p.17/journal p.3416), Fig. S12",
+      "alignment_reference_site": "K189",
+      "mapped_nyl12_site": "K156"
+    },
+    {
+      "nylc": "Y146",
+      "nyl12": "F113",
+      "protected": true,
+      "protection_reason": "hard_core; recurring_inter_repeat_interface",
+      "class": "proposed oxyanion donor and side-chain hydrolysis contributor",
+      "evidence": "H-GYAQ Y146A cleavage 47-92%; cleavage-normalized activity 0.18 U/mg (~3.6% parental). NylCA Y146A kcat/Km reported ~3% parental; NylCA background carries L137A.",
+      "substrate_hydrolysis": "Alanine removes both aromatic ring and OH; no Y146F test. Backbone NH donor remains in Nyl12 F113, but its Tyr OH is absent.",
+      "confidence": "moderate-high for Tyr146 contribution; low for specific proton donation or F113 equivalence",
+      "source": "S1 Table 1 footnote d, Table 2, Figs. 8, 10, S13",
+      "alignment_reference_site": "Y146",
+      "mapped_nyl12_site": "F113"
+    },
+    {
+      "nylc": "N219",
+      "nyl12": "N186",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "maturation water network; proposed oxyanion donor",
+      "evidence": "N219A precursor cleavage 31-33%; paper reports no cleavage-corrected mature N219A hydrolysis value.",
+      "substrate_hydrolysis": "Water-network participation in maturation supported; mature substrate oxyanion stabilization is proposed from structure, not isolated by mutant assay.",
+      "confidence": "high for maturation network involvement; low-to-moderate for mature substrate role",
+      "source": "S1 Table 1, Figs. 6-7, 10",
+      "alignment_reference_site": "N219",
+      "mapped_nyl12_site": "N186"
+    },
+    {
+      "nylc": "F134",
+      "nyl12": "F101",
+      "protected": true,
+      "protection_reason": "recurring_inter_repeat_interface",
+      "class": "active-site-adjacent/interface residue",
+      "evidence": "F134A cleavage 44-59%; substrate activity not tested.",
+      "substrate_hydrolysis": "No direct evidence of a mature-substrate chemical role.",
+      "confidence": "moderate for context-dependent maturation effect; low for catalysis",
+      "source": "S1 Table 1, Fig. 1",
+      "alignment_reference_site": "F134",
+      "mapped_nyl12_site": "F101"
+    },
+    {
+      "nylc": "L137",
+      "nyl12": "M104",
+      "protected": true,
+      "protection_reason": "recurring_inter_repeat_interface",
+      "class": "assembly and maturation modifier, not catalytic-essential evidence",
+      "evidence": "NylCp2 L137A: <1% cleavage, <0.1 U/mg, Tm 41 vs 52 C; D122G partially rescues cleavage to 33-34%. NylCA naturally has A137 and is >99% cleaved.",
+      "substrate_hydrolysis": "Activity loss is confounded by altered oligomerization/maturation and is context-dependent; not evidence that Leu137 is an indispensable catalytic residue.",
+      "confidence": "high for context-dependent assembly/maturation effect; low for direct catalysis",
+      "source": "S1 Table 1; S2 Table 2; S3 Figs. 3-4, Table 1",
+      "alignment_reference_site": "A137",
+      "mapped_nyl12_site": "M104"
+    },
+    {
+      "nylc": "D122",
+      "nyl12": "S89",
+      "protected": false,
+      "protection_reason": "mutable",
+      "class": "interface thermostability/substrate-affinity engineering",
+      "evidence": "D122G raises Tm by ~22-24 C; D122G/H130Y double mutant remains active and improves apparent Ahx-oligomer affinity. D122 variants span active enzyme through failed expression/instability depending on substitution.",
+      "substrate_hydrolysis": "No essential catalytic role; NylC-P2 D122G/H130Y effects are context-dependent interface and binding changes.",
+      "confidence": "high that it is not an established catalytic-essential site",
+      "source": "S2 Tables 1-2; S3 Tables 1-3; S1 Table 1",
+      "alignment_reference_site": "G122",
+      "mapped_nyl12_site": "S89"
+    },
+    {
+      "nylc": "H130",
+      "nyl12": "N97",
+      "protected": true,
+      "protection_reason": "recurring_inter_repeat_interface",
+      "class": "interface thermostability/activity modifier",
+      "evidence": "H130Y raises Tm (~11 C); H130Y single mutant has lower measured Ahx activity than WT in reported assays, while combined G122Y130 restores/improves activity and substrate affinity.",
+      "substrate_hydrolysis": "Context-dependent effect; not established as catalytic-essential.",
+      "confidence": "high that thermostability is demonstrated; low for direct catalytic role",
+      "source": "S2 Tables 1-2; S3 Table 1",
+      "alignment_reference_site": "Y130",
+      "mapped_nyl12_site": "N97"
+    },
+    {
+      "nylc": "D36",
+      "nyl12": "T21",
+      "protected": false,
+      "protection_reason": "mutable",
+      "class": "interface thermostability engineering",
+      "evidence": "D36A contributes only in combined thermostability constructs; no independent catalytic-essential test identified.",
+      "substrate_hydrolysis": "No direct mature-substrate catalytic evidence.",
+      "confidence": "low for direct function; high that it is not established essential",
+      "source": "S2 Table 2; S3 Table 1",
+      "alignment_reference_site": "D36",
+      "mapped_nyl12_site": "T21"
+    },
+    {
+      "nylc": "E263",
+      "nyl12": "E229",
+      "protected": true,
+      "protection_reason": "hard_core",
+      "class": "interface thermostability engineering",
+      "evidence": "E263Q appears in combined constructs that raise Tm; no evidence it is an essential catalytic residue.",
+      "substrate_hydrolysis": "Combination variants remain active; no isolated requirement shown.",
+      "confidence": "high that it is not established catalytic-essential",
+      "source": "S2 Table 2; S3 Table 1",
+      "alignment_reference_site": "E263",
+      "mapped_nyl12_site": "E229"
+    },
+    {
+      "nylc": "G111",
+      "nyl12": "I77",
+      "protected": true,
+      "protection_reason": "recurring_inter_repeat_interface",
+      "class": "interface stability/activity modifier",
+      "evidence": "G111S lowers Tm in NylCp2; NylCA carries the alternative Ser in an active enzyme.",
+      "substrate_hydrolysis": "No direct catalytic-essential evidence.",
+      "confidence": "high that it is not established catalytic-essential",
+      "source": "S2 Table 2; S3 Tables 1-2",
+      "alignment_reference_site": "S111",
+      "mapped_nyl12_site": "I77"
+    },
+    {
+      "nylc": "V225",
+      "nyl12": "L192",
+      "protected": false,
+      "protection_reason": "mutable",
+      "class": "interface stability/activity modifier",
+      "evidence": "V225M not expressed in one NylCp2 background; combined variants show context-dependent stability effects; natural NylCA carries Met.",
+      "substrate_hydrolysis": "Expression/stability effect, not a demonstrated catalytic role.",
+      "confidence": "high that it is not established catalytic-essential",
+      "source": "S2 Table 2; S3 Table 1",
+      "alignment_reference_site": "M225",
+      "mapped_nyl12_site": "L192"
+    }
+  ],
+  "additional_2018_processability_screen": [
+    {
+      "nylc_position": 75,
+      "mapped_nyl12": null,
+      "phenotype": "V75 variant aggregated as an insoluble precursor (type 3)",
+      "interpretation": "expression/assembly phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "I75",
+      "mapped_nyl12_site": null,
+      "protected": null,
+      "protection_reasons": null
+    },
+    {
+      "nylc_position": 106,
+      "mapped_nyl12": 72,
+      "phenotype": "R106 variant aggregated as an insoluble precursor (type 3)",
+      "interpretation": "expression/assembly phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "L106",
+      "mapped_nyl12_site": "F72",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 141,
+      "mapped_nyl12": 108,
+      "phenotype": "L141 variant fragmented during cultivation/purification (type 4)",
+      "interpretation": "processability phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "S141",
+      "mapped_nyl12_site": "S108",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 157,
+      "mapped_nyl12": 124,
+      "phenotype": "L157 variant aggregated as an insoluble precursor (type 3)",
+      "interpretation": "expression/assembly phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "P157",
+      "mapped_nyl12_site": "P124",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 179,
+      "mapped_nyl12": 146,
+      "phenotype": "T179 variant fragmented during cultivation/purification (type 4)",
+      "interpretation": "processability phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "A179",
+      "mapped_nyl12_site": "H146",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 191,
+      "mapped_nyl12": 158,
+      "phenotype": "N191 variant remained an active cleaved enzyme (type 1)",
+      "interpretation": "does not establish catalytic necessity",
+      "alignment_reference_site": "D191",
+      "mapped_nyl12_site": "L158",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 235,
+      "mapped_nyl12": 202,
+      "phenotype": "D235 variant aggregated as an insoluble precursor (type 3)",
+      "interpretation": "expression/assembly phenotype, not catalytic-essential evidence",
+      "alignment_reference_site": "N235",
+      "mapped_nyl12_site": "L202",
+      "protected": false,
+      "protection_reasons": "mutable"
+    },
+    {
+      "nylc_position": 295,
+      "mapped_nyl12": 261,
+      "phenotype": "T295 variant remained an active cleaved enzyme (type 1)",
+      "interpretation": "does not establish catalytic necessity",
+      "alignment_reference_site": "H295",
+      "mapped_nyl12_site": "S261",
+      "protected": true,
+      "protection_reasons": "recurring_inter_repeat_interface"
+    },
+    {
+      "nylc_position": 299,
+      "mapped_nyl12": 265,
+      "phenotype": "D299 variant fragmented (type 4); E299 variant aggregated as precursor (type 3)",
+      "interpretation": "context-specific expression/assembly phenotypes, not catalytic-essential evidence",
+      "alignment_reference_site": "Q299",
+      "mapped_nyl12_site": "H265",
+      "protected": true,
+      "protection_reasons": "recurring_inter_repeat_interface"
+    }
+  ]
+}

@@ -9,6 +9,11 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from .nyl12_sequence_protection import (
+    MINIMUM_PROTECTED_ALPHA,
+    MINIMUM_PROTECTED_BETA_LOCAL,
+)
+
 LOGGER = logging.getLogger(__name__)
 STANDARD_AA = frozenset("ACDEFGHIKLMNPQRSTVWY")
 THREE_TO_ONE = {
@@ -133,6 +138,8 @@ def _audit_ties_and_changes(
     job_id: str,
     sample_id: int,
 ) -> tuple[list[dict[str, Any]], str, str]:
+    protected_alpha = set(protected_alpha) | MINIMUM_PROTECTED_ALPHA
+    protected_beta = set(protected_beta) | MINIMUM_PROTECTED_BETA_LOCAL
     alpha, beta = chains["A"], chains["E"]
     if any(chains[chain] != alpha for chain in "BCD"):
         raise ValueError(f"Job {job_id} sample {sample_id} violates alpha A-D ties")

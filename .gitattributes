@@ -16,3 +16,8 @@ provenance/waterfree_ti1_reference_20261023/**/optimization.log.txt whitespace=-
 provenance/waterfree_ti1_trajectory_20261023/trajectory/optimization.log.txt whitespace=-blank-at-eol
 provenance/waterfree_ti1_trajectory_20261023/trajectory/optimization_trajectory.pdb whitespace=-blank-at-eol
 provenance/waterfree_ti1_trajectory_20261023/**/*.sdf whitespace=-blank-at-eol
+
+# Fixed-column structural inputs retain padding and exact source hashes.
+*.pdb -text whitespace=-blank-at-eol
+# Standard CSV writers emit CRLF; retain the hashed export bytes unchanged.
+*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol

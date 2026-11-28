@@ -1,0 +1,1775 @@
+{
+  "status": "accepted60ps_endpoints_verified",
+  "checked_utc": "2026-11-28T02:52:18.026332+00:00",
+  "windows": [
+    {
+      "window": "activation_full_001",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.84,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "d676092647ebfc7c56ebad7076a1ae76ea99750233a88be79e4da497aa5ce97a",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_002",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 301.74,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "d97d0c2ca52db41444dfbaccf89165bea9add4f6270685e5131ea0dbd9318445",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_003",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.82,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "3b3a0b042533e8257e28bf97a1d9b413ed4f215a45563f7408220a08d4fdb8e5",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_004",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 296.86,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "0b48c3e25e9c7f10132a9d1d147c1889169f64471b7ff3a24715bcee60bba565",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_005",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.38,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "512e2797b43dae84cea5d3839b4903120c5db4caa50cbdac831be0f3b3fbc9c4",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_006",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 304.2,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "62fefeed24462cd5f389b4533ef6bed065d316761bd1b18d463f387d676f9cf3",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_007",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 291.44,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "3ff89a37ea99b43401d1b285cd5e8142ba68eeea384e849577b19e08712e35bd",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_008",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 299.81,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "1c2633e7be8d299df65287a609f978fe2dc2b2810ba1040901807ebbe900c138",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_009",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 303.24,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "da443c1945254e506f60ed1d40e34f0c4731f79e6986ea3bdeab93b57a449725",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_010",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 300.01,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "dbabc28beae4ca93db8e02f96a7a9a3b45993e6ba1ebfff9e136513c18e96cfb",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_011",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.86,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "4380ebc50b71bd24265cee56076c2190f282e5aca048abd0c63f98a12da11a99",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_012",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 294.53,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "cfb95e8993523f5f2044c35064b15e5dad353eb41efd1fe7fb0d324b4f27b9b5",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_013",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 307.15,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "38396204c6a88ec6a5d097c46e3df0b7b35d493d8bee35941aea8aa494ccf288",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_014",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 301.24,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "ca9b69d9d0ad47b26c94fe7a687fb5898ece50a8b37bfc1061eeac74c8d934da",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_015",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 303.02,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "8ca4054405b04b77e81bfdd9919a00c5f4152ecce858f9535e7b467baa4a2fee",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_016",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 296.15,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "7ce7068c47a1255d38fb936bf04a2d7dcad7bb7ec0cf7f45b5ed69c54eeb70c7",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_017",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 297.46,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "aee43241adf3a7bb9db7b614e4645e3fca18bd82f2ade9bd84bbbd6a78f5f8a4",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_018",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.28,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "54c876d4e3f65af0c94cb69ff4ef2a73ce0b1311ed0b45735098aace6b3d3c51",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_019",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 300.03,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "03a533d5f0c96b9b006314155d7a5b69397cd9764f6508dd001f7a737cb0dfea",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_020",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 304.55,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "a3d6c9d06754fba167bcaf7550992723da1585169cd042d16a71221f07f22ac6",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_021",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 300.42,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "968aa2d3c9431d8c61657afd3b4408b3293996b5e2db2901fe17ce258f9ac3d7",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_022",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.64,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "ebc3dd0a802cc79a5a0cbb58869bd2139b2f620184f0e91c22ca0fb0a8b6c6bd",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_023",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.53,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "c7132bf3a165ac2938391881fdaaf2940182b32ab35b8957d3675b079dbc1e1f",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_024",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 300.08,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "79777e317992dec398b606dacd3a78a2f36f449cf59adf03a65aa97cc4f7af6b",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_025",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.94,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "4a4c47e91d20764a83a4ab912a25ced1eff8a7c30e4516e021bc69965456a5ee",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_026",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 292.78,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "a10ab495e3ec7ae6bb3a45dcd7a3d9ba5b59b041d2f533352d86099a334ee0a1",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_027",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.67,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "458e9e290888faf16dcc0bb2dfdc36e8e348f02890c2da3464b67148ad1ce3c9",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_028",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.83,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "46420257c61d908620489e180073368ce94ba34e5c0bf2f16631c7978b240548",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_029",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 299.6,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "d79f21248cbdef8bb4c063e1da0598b2c265c610531b2b1345c5dd98b0b95db6",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_030",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 297.5,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "932cc4dc569102dd51ac14faece638cf4ead206c05d514862d1e759178c0d060",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "activation_full_031",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 303.85,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "7654aad90423e7c38b62dfebb0f3db3b07be291d50d2b34ed7e84fdbbc562347",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_001",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 294.73,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "4176a3e25eb61651ecfd33ff72b379978bcdd725b227b7f849e50ff3013048b3",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_002",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 305.71,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "29970f86a07f7527053694c6573d06e76d2384010b1c60c92be5daac6e9b76f5",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_003",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 297.03,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "c07c69e2365f1e7392c4802b03622a1d1ec87152afe1375907ae1d5d907abc59",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_004",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 306.82,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "1d8449d2407f03f98be4965d8992d72153820067f11089e3e674f8edd56d5bd0",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_005",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 307.05,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "f0f343c91438a2e01e8dbf0fa0e858328da56576801a3ddec5fedfb74c91f530",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_006",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 307.9,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "2e11a7accf4da5d75cb4aed51f46772b6db0d6280c0f72fe6d5bd8ecb310c43e",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_007",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 294.77,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "2bfa8cf9c5154c6eb1f87d34928ba186e7f2e601f40f3f53e8fcc266f4135c26",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_008",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 296.2,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "492d6ae8f9f70339d07e51d2e4982eeedfeee6211e01cdea9eebb66680d6b9e6",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_009",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.69,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "7a75d830aadf530ef18f693d4220a298480ead28c20829f5872f1e822b042bd4",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_010",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.86,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "3b169be6833c53a1ea637104e99fc244c404fce75a1f73b19b35a837885dc830",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_011",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.42,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "e95b0d1ff9eb8f008726f8f176a8ab03942c59abd9ed89924bd2d102c6303af0",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_012",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 294.36,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "817e7c10d687ef32a825829319cb3ddd1ddff606c9f3b385e2e5de8d1306e4a5",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_013",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.76,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "f94be612aa39408b14a8ba9f04c395334abd12dcafe0e3ea4b9177832bf0667a",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_014",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.92,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "67d999998e5f29633ba6db414145b4e0ffe5f7b33a5ca9ae7137b947edd7766e",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_015",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 304.82,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "0ce8633bd02b1e4ab47055ab26ae3432ae973e82b1cdf259799cdbfffc069f0f",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_016",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 295.5,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "1327e3d2c71ee8640f5fb07bd386564e046425f84a415a6b10bc85fe405f1a8c",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_017",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 297.64,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "5f568542f2b2b3351b2e79ff9bab26c345f7ee828c07425ad4bb48e464cf1ba0",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_018",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 301.99,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "6466fa9d284339d224e838352f74688a0ba332d420e06a5c35e4433fc396054b",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_019",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 300.03,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "4d632b58ba1f97747970a0ce8ffd35d5309e1bf46b4e13a9a924c99fda106238",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_020",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.85,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "307fe994fdbfeb778931e2cd96984780c80a2c2e99f3300459e485264e8cc801",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_021",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 302.38,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "7c952739d366ba6103637e474c275aa31e89fca5d701b3b6b7c0dc5d19d0a1a8",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_022",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 299.55,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "a37713cbb87242c76e79eea752b6158631caf58de3c391bae4c55f4cca23ef8e",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_023",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 298.77,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "a910c7f4dfc6bfe71f4c41dead9daf0ffe2fe21a98d563a26099c31eb2ad42e8",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_024",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 299.98,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "e53e3417a4a241be35b07a8ddebff2dbc7045d5cd507ce06d9d2537f95ab8e87",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_025",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 308.92,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "8a447f57b757355d19a0c63d6aa05b46b5bc6b25b6f82c9615c0cecb6ec5521d",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    },
+    {
+      "window": "delivery_full_026",
+      "native": {
+        "accepted": true,
+        "completed_steps": 10000,
+        "final_temperature_K": 304.1,
+        "temperature_gate_K": [
+          225,
+          375
+        ],
+        "finite_energy_temperature": true,
+        "every_integration_step_SCC_converged": true,
+        "electronic_history": {
+          "passed": true,
+          "history_observed": true,
+          "verified_scc_history": true,
+          "recovered_trials": [],
+          "recovered_trial_count": 0,
+          "unresolved_trials": [],
+          "fatal_markers": [],
+          "temperature_changes": []
+        },
+        "checkpoint_sha256": "9fe4c0938fd9b71220e60273cac30612edc4408d1320695870b5c9aab895512d",
+        "frozen_outer_max_displacement_A": 0.0,
+        "temperature_acceptance_role": "thermalized_stage_final_instantaneous_temperature"
+      },
+      "natom": 104922,
+      "restart_time_ps": 66.00000000013311,
+      "velocities_retained": true,
+      "finite_coordinates_velocities_box": true
+    }
+  ],
+  "no_new_equilibration": true,
+  "unchanged_topology": true
+}

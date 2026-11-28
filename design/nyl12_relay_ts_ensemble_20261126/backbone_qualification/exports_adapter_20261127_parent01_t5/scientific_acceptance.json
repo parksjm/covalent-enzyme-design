@@ -1,0 +1,205 @@
+{
+  "accepted": true,
+  "fixed_max_A": 3.1776437161565096e-14,
+  "mobile_CA_rmsd_A": 0.38526972550584637,
+  "peptide_closure_pass": true,
+  "peptide_closures": [
+    {
+      "chain": "A",
+      "residue": 73,
+      "distance_A": 1.2847973472120449
+    },
+    {
+      "chain": "A",
+      "residue": 74,
+      "distance_A": 1.2083114818623066
+    },
+    {
+      "chain": "A",
+      "residue": 75,
+      "distance_A": 1.3655198369287567
+    },
+    {
+      "chain": "A",
+      "residue": 76,
+      "distance_A": 1.3450414254322247
+    },
+    {
+      "chain": "A",
+      "residue": 108,
+      "distance_A": 1.4194221358048578
+    },
+    {
+      "chain": "A",
+      "residue": 109,
+      "distance_A": 1.346947433418234
+    },
+    {
+      "chain": "A",
+      "residue": 110,
+      "distance_A": 1.3230475581926682
+    },
+    {
+      "chain": "A",
+      "residue": 111,
+      "distance_A": 1.4124287641967135
+    },
+    {
+      "chain": "A",
+      "residue": 112,
+      "distance_A": 1.3681813023074545
+    },
+    {
+      "chain": "A",
+      "residue": 113,
+      "distance_A": 1.3914551406073457
+    },
+    {
+      "chain": "A",
+      "residue": 114,
+      "distance_A": 1.435745443701919
+    },
+    {
+      "chain": "A",
+      "residue": 115,
+      "distance_A": 1.3286899278555881
+    },
+    {
+      "chain": "A",
+      "residue": 116,
+      "distance_A": 1.3444802607012674
+    },
+    {
+      "chain": "A",
+      "residue": 117,
+      "distance_A": 1.4585277853649674
+    },
+    {
+      "chain": "A",
+      "residue": 118,
+      "distance_A": 1.3702499021230194
+    },
+    {
+      "chain": "A",
+      "residue": 147,
+      "distance_A": 1.4284773307070318
+    },
+    {
+      "chain": "A",
+      "residue": 148,
+      "distance_A": 1.3231179485181501
+    },
+    {
+      "chain": "A",
+      "residue": 149,
+      "distance_A": 1.3529317982162379
+    },
+    {
+      "chain": "A",
+      "residue": 150,
+      "distance_A": 1.3223129312469832
+    },
+    {
+      "chain": "A",
+      "residue": 151,
+      "distance_A": 1.4213379672180724
+    },
+    {
+      "chain": "A",
+      "residue": 152,
+      "distance_A": 1.3698599986196003
+    },
+    {
+      "chain": "A",
+      "residue": 153,
+      "distance_A": 1.3022503831950223
+    },
+    {
+      "chain": "A",
+      "residue": 154,
+      "distance_A": 1.2549189558126457
+    },
+    {
+      "chain": "A",
+      "residue": 155,
+      "distance_A": 1.401472063041039
+    },
+    {
+      "chain": "A",
+      "residue": 183,
+      "distance_A": 1.2893162974186059
+    },
+    {
+      "chain": "A",
+      "residue": 184,
+      "distance_A": 1.3825390417223926
+    },
+    {
+      "chain": "A",
+      "residue": 185,
+      "distance_A": 1.2717525185968614
+    },
+    {
+      "chain": "A",
+      "residue": 186,
+      "distance_A": 1.407853253147159
+    },
+    {
+      "chain": "A",
+      "residue": 187,
+      "distance_A": 1.340452085532418
+    },
+    {
+      "chain": "A",
+      "residue": 188,
+      "distance_A": 1.2838830125576464
+    },
+    {
+      "chain": "E",
+      "residue": 33,
+      "distance_A": 1.5155919929420814
+    },
+    {
+      "chain": "E",
+      "residue": 34,
+      "distance_A": 1.3269661648607443
+    }
+  ],
+  "stereochemical_inversions": [],
+  "severe_heavy_clashes": [],
+  "forming_contact_excluded_from_clash_gate": [
+    9942,
+    6952
+  ],
+  "thresholds": {
+    "fixed_max_A": 0.05,
+    "mobile_CA_rmsd_min_A": 0.05,
+    "mobile_CA_rmsd_max_A": 3.0,
+    "peptide_min_A": 1.15,
+    "peptide_max_A": 1.65,
+    "clash_min_A": 1.8
+  },
+  "equivalent_Val_methyl_label_permutations": [
+    "A154:CB"
+  ],
+  "job_id": "parent01_t5_seed01_retry01",
+  "parent_source_id": "medoid01",
+  "source_atom_inventory_exact": true,
+  "source_sequence_exact": true,
+  "source_ligand_graph_exact": true,
+  "native_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/runs/parent01_t5_seed01_retry01/input_t5_medoid01_t5_0_model_0.cif.gz",
+  "native_cif_sha256": "ecb95535ce4e6a9e3fa181993a0ca28e2e1d5661cb61ca57dbc0fc041a462771",
+  "manifest": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/qualification_retry01_manifest.json",
+  "manifest_sha256": "60832919add5995ad3527698e4f735cff0ae90317febede6506827af75d5d4cc",
+  "pdb_path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/audited_parent.pdb",
+  "canonical_mapping": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/canonical_mapping.json",
+  "pa6_graph_receipt": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/pa6_graph_acceptance.json",
+  "authoritative_coordinates": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/derived_coordinates_and_typed_graph.json",
+  "explicit_graph_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/audited_parent_explicit_graph.cif",
+  "fixed_context_normalization": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/fixed_context_normalization.json",
+  "pdb_path_sha256": "93e0733975af23ae9f169fe1d7f4cc0e46ab5991b2a22e674e54b177766ba68a",
+  "canonical_mapping_sha256": "1667edf7b52f588a4fe921a2b6f3491dd7d026c79acbfac059206b3cf6fb4c43",
+  "pa6_graph_receipt_sha256": "199d3d5187bf243bcd0de1a2ff3c3f20510b7370d0c7eb6b915a89013988f135",
+  "authoritative_coordinates_sha256": "e10c796267c4b55b587657ae292d4ef39814c37b6a1a8cb0df7380e62ac28206",
+  "explicit_graph_cif_sha256": "c03394dde341cd06ebd445ed5fe3ce04da206dd596be676a0efedaff064f8467"
+}

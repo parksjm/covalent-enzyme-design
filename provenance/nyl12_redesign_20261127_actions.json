@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-11-28T03:19:05.294682+00:00",
+  "client_date": "2026-11-27",
+  "scope": "Complete live journal prefix at capture; later Git operations remain in live journal",
+  "source": "/data/jpc/covalent-enzyme-design/output_agent_actions/20261021.jsonl",
+  "source_sha256": "b304f9eb3c7a2842cef12b6c1895a6fea12dace780b6e9215ce2ae238a381819",
+  "source_bytes": 40260694,
+  "records": 65687,
+  "gzip_path": "provenance/nyl12_redesign_20261127_actions.jsonl.gz",
+  "gzip_sha256": "cd88c9a285a3d1f2d9a4a00bf31113010e32619de0d077764ea413629ed6446f",
+  "gzip_bytes": 4563584
+}

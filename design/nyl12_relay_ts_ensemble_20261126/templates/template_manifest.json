@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "campaign": "Exploratory relay barrier-region ensemble",
+  "scientific_status": "Umbrella-sampled medoids; not committor-verified transition states; sampling convergence unaccepted",
+  "selection": {
+    "selected": [
+      {
+        "cache_index0based": 20367,
+        "window": "delivery_full_010",
+        "stage": "07_production_5ps",
+        "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_010/07_production_5ps/trajectory.nc",
+        "source_sha256": "bfb4436faf63f1c8a1b02e607ae266ee47e2165cdbab2ace58785224496c4c01",
+        "source_frame1based": 68,
+        "production_time_ps": 23.400000000000002,
+        "s": 0.7253141627283545,
+        "weight": 2.2797443587625138e-22,
+        "q3cv_A": [
+          0.655626882328042,
+          1.215356817619019,
+          -0.08105765700861522
+        ],
+        "receipt_sha256": "e5897d64d9179aca07294de1cfe754d5617df233efd86489a5c2d3e96f740182",
+        "medoid_group": 0,
+        "conditional_frame_weight": 0.001810530926215101,
+        "represented_conditional_mass": 0.49503129923681555,
+        "represented_raw_frames": 458,
+        "weighted_mean_distance_A": 0.22792386632920747
+      },
+      {
+        "cache_index0based": 20805,
+        "window": "delivery_full_011",
+        "stage": "07_production_5ps",
+        "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_011/07_production_5ps/trajectory.nc",
+        "source_sha256": "ccfddf20d11e6c60a2eab2c9aab5a4aae447c7663e270803f44a3e57e1f8facf",
+        "source_frame1based": 6,
+        "production_time_ps": 20.3,
+        "s": 0.744908310513009,
+        "weight": 1.8681332052469008e-20,
+        "q3cv_A": [
+          0.7214468033354908,
+          1.2302312106423958,
+          0.0982991313715802
+        ],
+        "receipt_sha256": "a92133cdbe3168e531ca5f4cff4fac74bded3018b5c3b514f4b7cdf27ef3c1f8",
+        "medoid_group": 1,
+        "conditional_frame_weight": 0.14836369391105048,
+        "represented_conditional_mass": 0.1631461296829154,
+        "represented_raw_frames": 7,
+        "weighted_mean_distance_A": 0.024171022488535306
+      },
+      {
+        "cache_index0based": 18694,
+        "window": "delivery_full_007",
+        "stage": "05_production_5ps",
+        "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_007/05_production_5ps/trajectory.nc",
+        "source_sha256": "9c74c6d2c7c4cdc498fa8deeaf32856725429fe41115fcf3075393e5fcd619ee",
+        "source_frame1based": 95,
+        "production_time_ps": 14.75,
+        "s": 0.6719341904808367,
+        "weight": 8.020106298639631e-24,
+        "q3cv_A": [
+          0.34086536835190695,
+          1.2365500138377798,
+          -0.4486327497918039
+        ],
+        "receipt_sha256": "d2fcadabd4d168acebc62c84cf4caf012a88d32ec75843ab6328c7e02bab2b5b",
+        "medoid_group": 2,
+        "conditional_frame_weight": 6.369420513930626e-05,
+        "represented_conditional_mass": 0.34182257108026926,
+        "represented_raw_frames": 1249,
+        "weighted_mean_distance_A": 0.23639929526684694
+      }
+    ],
+    "regional_frames": 1714,
+    "regional_global_mass": 1.2591579219960077e-19,
+    "conditional_ESS": 35.70421673192367,
+    "max_conditional_frame_weight": 0.14836369391105048,
+    "features": "5core heavy pair distances and6A initial pocket-heavy-to-core distances; each group divided by sqrt dimension",
+    "algorithm": "Greedy weighted3medoids then within-cluster actual-medoid refinement; distinct source windows",
+    "source_hashes": {
+      "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/selection.py": "9cfd4815fc613f25475d27a95a928057cdb5cbd5280854f33f3aa48308438ccd",
+      "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/sample_lineage.json": "dbb80986b940a16b67c029273d1da81259fb700a969c05f699a81cc76d16e192",
+      "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/pocket_coordinates.npz": "49800d932cd18cc90c189037eac3c6465190fe834b97b30f4fc8b3b818a777a0"
+    }
+  },
+  "templates": [
+    {
+      "cache_index0based": 20367,
+      "window": "delivery_full_010",
+      "stage": "07_production_5ps",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_010/07_production_5ps/trajectory.nc",
+      "source_sha256": "bfb4436faf63f1c8a1b02e607ae266ee47e2165cdbab2ace58785224496c4c01",
+      "source_frame1based": 68,
+      "production_time_ps": 23.400000000000002,
+      "s": 0.7253141627283545,
+      "weight": 2.2797443587625138e-22,
+      "q3cv_A": [
+        0.655626882328042,
+        1.215356817619019,
+        -0.08105765700861522
+      ],
+      "receipt_sha256": "e5897d64d9179aca07294de1cfe754d5617df233efd86489a5c2d3e96f740182",
+      "medoid_group": 0,
+      "conditional_frame_weight": 0.001810530926215101,
+      "represented_conditional_mass": 0.49503129923681555,
+      "represented_raw_frames": 458,
+      "weighted_mean_distance_A": 0.22792386632920747,
+      "name": "medoid_01_delivery_full_010_frame_068",
+      "heavy_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_heavy.pdb",
+        "sha256": "04f0e01efa124c3441b995005bb0f8dce3683bd871a3d4b7541761dbbe8190e6",
+        "atoms": 9961,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "protonated_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/complex_protonated.pdb",
+        "sha256": "a3488ac0ac90a0c988c83c6700082edfb3b0c4b8a2d1e793bb988e8a0617b876",
+        "atoms": 19967,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "restart": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_01_delivery_full_010_frame_068/full_protonated_source.ncrst",
+        "sha256": "83e1fb20579e97c82c15dcc5e51251c6ad842cce1bac3175321c37dc896da747",
+        "physical_atoms": 104922,
+        "source_coordinate_identity": "exact",
+        "includes_velocities": false
+      },
+      "physical_time_ps": 29.399999618530273,
+      "geometry": {
+        "bond_distances_A": {
+          "C_N": 2.039484977722168,
+          "C_OG1": 1.3838582038879395,
+          "C_O": 1.2830238342285156,
+          "OG1_HG1": 2.4997031688690186,
+          "Nalpha_HG1": 1.284346342086792,
+          "Nleave_HG1": 1.3654040098190308,
+          "Nalpha_H1": 1.0274876356124878,
+          "Nalpha_H2": 1.0483955144882202,
+          "Nleave_H1": 3.0493955612182617,
+          "Nleave_H2": 3.1506104469299316,
+          "OG1_H1": 3.535224437713623,
+          "OG1_H2": 3.760972738265991
+        },
+        "severe_nonbonded_heavy_cutoff_A": 1.8,
+        "excluded_contacts": "Native1-2/1-3 pairs and formingOG1-carbonylC bond",
+        "severe_nonbonded_heavy_contacts": [],
+        "finite_coordinates": true
+      },
+      "proton_owners": {
+        "hg1_owner": "13905",
+        "nalpha_h1_owner": "13905",
+        "nalpha_h2_owner": "13905",
+        "hydrogen_owners": "{\"1639\": {\"distance_A\": 1.0330834870513768, \"owner\": 1638}, \"2733\": {\"distance_A\": 1.0071010683140829, \"owner\": 2732}, \"2734\": {\"distance_A\": 1.044109932860219, \"owner\": 2732}, \"13906\": {\"distance_A\": 1.0274876821671086, \"owner\": 13905}, \"13907\": {\"distance_A\": 1.048395508776683, \"owner\": 13905}, \"13917\": {\"distance_A\": 1.284346383693606, \"owner\": 13905}, \"13921\": {\"distance_A\": 1.0407894792294157, \"owner\": 13920}, \"13931\": {\"distance_A\": 0.9587683691834862, \"owner\": 13930}, \"19937\": {\"distance_A\": 1.0329393455778226, \"owner\": 19929}}",
+        "ambiguous_hydrogens_within_1_30_A": "[]"
+      },
+      "native_proton_inventory": {
+        "total_hydrogens": 66496,
+        "tracked_protons_1based": [
+          13906,
+          13907,
+          13917,
+          19937
+        ]
+      },
+      "window_g_by_column": [
+        1.3316639425624033,
+        3.1655435845435047,
+        5.4959290581724245,
+        1.312405945574587,
+        1.7071159720305789,
+        1.074990561349195,
+        4.315409231065035,
+        1.8304105386135576,
+        1.0823195496318676,
+        1.804383714630578,
+        2.1891203588243795,
+        2.405371271282325,
+        1.0512278276742681
+      ],
+      "diagnostic_columns": [
+        "q_acyl",
+        "q_act",
+        "q_del",
+        "r_c_n",
+        "r_c_og1",
+        "r_og1_hg1",
+        "r_nleave_hg1",
+        "cn_nleave_hpool",
+        "cn_og1_hpool",
+        "cn_progress",
+        "cn_nalpha_hpool",
+        "r_nalpha_h1",
+        "r_nalpha_h2"
+      ]
+    },
+    {
+      "cache_index0based": 20805,
+      "window": "delivery_full_011",
+      "stage": "07_production_5ps",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_011/07_production_5ps/trajectory.nc",
+      "source_sha256": "ccfddf20d11e6c60a2eab2c9aab5a4aae447c7663e270803f44a3e57e1f8facf",
+      "source_frame1based": 6,
+      "production_time_ps": 20.3,
+      "s": 0.744908310513009,
+      "weight": 1.8681332052469008e-20,
+      "q3cv_A": [
+        0.7214468033354908,
+        1.2302312106423958,
+        0.0982991313715802
+      ],
+      "receipt_sha256": "a92133cdbe3168e531ca5f4cff4fac74bded3018b5c3b514f4b7cdf27ef3c1f8",
+      "medoid_group": 1,
+      "conditional_frame_weight": 0.14836369391105048,
+      "represented_conditional_mass": 0.1631461296829154,
+      "represented_raw_frames": 7,
+      "weighted_mean_distance_A": 0.024171022488535306,
+      "name": "medoid_02_delivery_full_011_frame_006",
+      "heavy_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_02_delivery_full_011_frame_006/complex_heavy.pdb",
+        "sha256": "a89cb572e1021dc324cf228f6ca04e8b44e1c140864e71a5acf7b967de017090",
+        "atoms": 9961,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "protonated_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_02_delivery_full_011_frame_006/complex_protonated.pdb",
+        "sha256": "6c8f599b63cdb134f64d09686d2b05155f83ffb7975c439bdf8a5d72d97f2a4c",
+        "atoms": 19967,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "restart": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_02_delivery_full_011_frame_006/full_protonated_source.ncrst",
+        "sha256": "8ce58c8ec05574dbda54f3e3e43a6c70d0ad6bd28453e2473c981afa453e80ae",
+        "physical_atoms": 104922,
+        "source_coordinate_identity": "exact",
+        "includes_velocities": false
+      },
+      "physical_time_ps": 26.299999237060547,
+      "geometry": {
+        "bond_distances_A": {
+          "C_N": 2.11103892326355,
+          "C_OG1": 1.3895922899246216,
+          "C_O": 1.2609061002731323,
+          "OG1_HG1": 2.595081329345703,
+          "Nalpha_HG1": 1.3648500442504883,
+          "Nleave_HG1": 1.2665507793426514,
+          "Nalpha_H1": 1.0221481323242188,
+          "Nalpha_H2": 1.0143872499465942,
+          "Nleave_H1": 3.1057825088500977,
+          "Nleave_H2": 3.2750515937805176,
+          "OG1_H1": 3.5537099838256836,
+          "OG1_H2": 3.8121731281280518
+        },
+        "severe_nonbonded_heavy_cutoff_A": 1.8,
+        "excluded_contacts": "Native1-2/1-3 pairs and formingOG1-carbonylC bond",
+        "severe_nonbonded_heavy_contacts": [],
+        "finite_coordinates": true
+      },
+      "proton_owners": {
+        "hg1_owner": "19929",
+        "nalpha_h1_owner": "13905",
+        "nalpha_h2_owner": "13905",
+        "hydrogen_owners": "{\"1639\": {\"distance_A\": 1.0236992408311607, \"owner\": 1638}, \"2733\": {\"distance_A\": 1.0119502281465464, \"owner\": 2732}, \"2734\": {\"distance_A\": 1.0152891383451434, \"owner\": 2732}, \"13906\": {\"distance_A\": 1.0221480402917067, \"owner\": 13905}, \"13907\": {\"distance_A\": 1.0143872212199017, \"owner\": 13905}, \"13917\": {\"distance_A\": 1.2665508598648665, \"owner\": 19929}, \"13921\": {\"distance_A\": 1.073154403081098, \"owner\": 13920}, \"13931\": {\"distance_A\": 0.9663004735769442, \"owner\": 13930}, \"19937\": {\"distance_A\": 1.0510621703809127, \"owner\": 19929}}",
+        "ambiguous_hydrogens_within_1_30_A": "[]"
+      },
+      "native_proton_inventory": {
+        "total_hydrogens": 66496,
+        "tracked_protons_1based": [
+          13906,
+          13907,
+          13917,
+          19937
+        ]
+      },
+      "window_g_by_column": [
+        1.8452257538592687,
+        2.5484090596372497,
+        4.86761531571753,
+        2.1280272764587984,
+        1.0,
+        3.5655796692553388,
+        3.1176738842691405,
+        1.9867360664987508,
+        1.7756890892756068,
+        1.9791856422337673,
+        2.3970925081007266,
+        3.0958430911804977,
+        1.0
+      ],
+      "diagnostic_columns": [
+        "q_acyl",
+        "q_act",
+        "q_del",
+        "r_c_n",
+        "r_c_og1",
+        "r_og1_hg1",
+        "r_nleave_hg1",
+        "cn_nleave_hpool",
+        "cn_og1_hpool",
+        "cn_progress",
+        "cn_nalpha_hpool",
+        "r_nalpha_h1",
+        "r_nalpha_h2"
+      ]
+    },
+    {
+      "cache_index0based": 18694,
+      "window": "delivery_full_007",
+      "stage": "05_production_5ps",
+      "source": "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/delivery_full_007/05_production_5ps/trajectory.nc",
+      "source_sha256": "9c74c6d2c7c4cdc498fa8deeaf32856725429fe41115fcf3075393e5fcd619ee",
+      "source_frame1based": 95,
+      "production_time_ps": 14.75,
+      "s": 0.6719341904808367,
+      "weight": 8.020106298639631e-24,
+      "q3cv_A": [
+        0.34086536835190695,
+        1.2365500138377798,
+        -0.4486327497918039
+      ],
+      "receipt_sha256": "d2fcadabd4d168acebc62c84cf4caf012a88d32ec75843ab6328c7e02bab2b5b",
+      "medoid_group": 2,
+      "conditional_frame_weight": 6.369420513930626e-05,
+      "represented_conditional_mass": 0.34182257108026926,
+      "represented_raw_frames": 1249,
+      "weighted_mean_distance_A": 0.23639929526684694,
+      "name": "medoid_03_delivery_full_007_frame_095",
+      "heavy_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_03_delivery_full_007_frame_095/complex_heavy.pdb",
+        "sha256": "a4dea0ebbabba5ffd66ce7b6636615c851bab5f11ec18d1a5b623b38fc00b8b1",
+        "atoms": 9961,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "protonated_pdb": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_03_delivery_full_007_frame_095/complex_protonated.pdb",
+        "sha256": "070ebf57e3e8407579ed1a1619833a53a6e54271010ebbdd6928324179718564",
+        "atoms": 19967,
+        "residues": 1316,
+        "chain_residue_counts": {
+          "A": 232,
+          "B": 232,
+          "C": 232,
+          "D": 232,
+          "E": 96,
+          "F": 96,
+          "G": 96,
+          "H": 96,
+          "I": 4
+        },
+        "ter_records": 9,
+        "max_coordinate_roundtrip_error_A": 0.0005000000000023874
+      },
+      "restart": {
+        "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/medoid_03_delivery_full_007_frame_095/full_protonated_source.ncrst",
+        "sha256": "2dee07a1b05d20a67030cfad6956d8eba682e4f8453703c7b0b4ab7df4e52099",
+        "physical_atoms": 104922,
+        "source_coordinate_identity": "exact",
+        "includes_velocities": false
+      },
+      "physical_time_ps": 20.75,
+      "geometry": {
+        "bond_distances_A": {
+          "C_N": 1.770290493965149,
+          "C_OG1": 1.4294251203536987,
+          "C_O": 1.3438150882720947,
+          "OG1_HG1": 2.3987717628479004,
+          "Nalpha_HG1": 1.1622217893600464,
+          "Nleave_HG1": 1.6108545064926147,
+          "Nalpha_H1": 1.0282161235809326,
+          "Nalpha_H2": 1.058013916015625,
+          "Nleave_H1": 3.3234622478485107,
+          "Nleave_H2": 3.200570583343506,
+          "OG1_H1": 3.567183017730713,
+          "OG1_H2": 3.6540374755859375
+        },
+        "severe_nonbonded_heavy_cutoff_A": 1.8,
+        "excluded_contacts": "Native1-2/1-3 pairs and formingOG1-carbonylC bond",
+        "severe_nonbonded_heavy_contacts": [],
+        "finite_coordinates": true
+      },
+      "proton_owners": {
+        "hg1_owner": "13905",
+        "nalpha_h1_owner": "13905",
+        "nalpha_h2_owner": "13905",
+        "hydrogen_owners": "{\"1639\": {\"distance_A\": 1.0638306869421017, \"owner\": 1638}, \"2733\": {\"distance_A\": 1.0532191690892683, \"owner\": 2732}, \"2734\": {\"distance_A\": 1.0759553141672438, \"owner\": 2732}, \"13906\": {\"distance_A\": 1.0282161261781253, \"owner\": 13905}, \"13907\": {\"distance_A\": 1.0580138933284144, \"owner\": 13905}, \"13917\": {\"distance_A\": 1.1622217662504102, \"owner\": 13905}, \"13921\": {\"distance_A\": 1.0566116371407588, \"owner\": 13920}, \"13931\": {\"distance_A\": 0.9891091557459023, \"owner\": 13930}, \"19937\": {\"distance_A\": 1.0740545438099347, \"owner\": 19929}}",
+        "ambiguous_hydrogens_within_1_30_A": "[]"
+      },
+      "native_proton_inventory": {
+        "total_hydrogens": 66496,
+        "tracked_protons_1based": [
+          13906,
+          13907,
+          13917,
+          19937
+        ]
+      },
+      "window_g_by_column": [
+        1.0,
+        1.0,
+        1.1818012815658507,
+        1.0145520695415142,
+        1.7806701505844933,
+        1.0,
+        1.0634271217453823,
+        1.364928287673852,
+        1.0,
+        1.3928483488118126,
+        1.342455720689214,
+        1.0,
+        1.9291476687175424
+      ],
+      "diagnostic_columns": [
+        "q_acyl",
+        "q_act",
+        "q_del",
+        "r_c_n",
+        "r_c_og1",
+        "r_og1_hg1",
+        "r_nleave_hg1",
+        "cn_nleave_hpool",
+        "cn_og1_hpool",
+        "cn_progress",
+        "cn_nalpha_hpool",
+        "r_nalpha_h1",
+        "r_nalpha_h2"
+      ]
+    }
+  ],
+  "provenance": {
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/endpoint_diagnostics_20261126/weighted_bin_sensitivity_20261126/retry_with_historical_feature_mapping/matched_weights.npz": "3f5b7c61a1d177a2b5f28a59613d6186548f68ee8a0dc485f2e3bdf7ef0a2451",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/fixed_30ps_analysis.json": "3cbea42e161971bd24ace2fad8af881ae9ccb35134c8b8d7a04d2e50d6df23ba",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_30ps/analysis_request.json": "a3910cd3a9f2a1cfb091afcc6ebb87788b3582306e22455d25b92f61d4a93f89",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/vmd_progress/current/manifest.json": "8a819579870f06f91a58096054306be9ca46744b174e25afdbe59c1bda1ab134",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/vmd_progress/current/coordinate_probe_first.pdb": "35fdf6ff1bed00fd0af30579e012f7a795d95693da5ac97a81b5291de958629b"
+  },
+  "reactive_roles": {
+    "HG1": {
+      "original_atom_id1based": 13917,
+      "original_index0based": 13916,
+      "canonical_chain": "E",
+      "canonical_residue": 233,
+      "atom_name": "HG1"
+    },
+    "Nalpha": {
+      "original_atom_id1based": 13905,
+      "original_index0based": 13904,
+      "canonical_chain": "E",
+      "canonical_residue": 233,
+      "atom_name": "N"
+    },
+    "Nleave": {
+      "original_atom_id1based": 19929,
+      "original_index0based": 19928,
+      "canonical_chain": "I",
+      "canonical_residue": 3,
+      "atom_name": "N"
+    },
+    "OG1": {
+      "original_atom_id1based": 13916,
+      "original_index0based": 13915,
+      "canonical_chain": "E",
+      "canonical_residue": 233,
+      "atom_name": "OG1"
+    },
+    "carbonyl_C": {
+      "original_atom_id1based": 19916,
+      "original_index0based": 19915,
+      "canonical_chain": "I",
+      "canonical_residue": 2,
+      "atom_name": "C"
+    },
+    "carbonyl_O": {
+      "original_atom_id1based": 19917,
+      "original_index0based": 19916,
+      "canonical_chain": "I",
+      "canonical_residue": 2,
+      "atom_name": "O"
+    },
+    "Nalpha_H1": {
+      "original_atom_id1based": 13906,
+      "original_index0based": 13905,
+      "canonical_chain": "E",
+      "canonical_residue": 233,
+      "atom_name": "H1"
+    },
+    "Nalpha_H2": {
+      "original_atom_id1based": 13907,
+      "original_index0based": 13906,
+      "canonical_chain": "E",
+      "canonical_residue": 233,
+      "atom_name": "H2"
+    }
+  },
+  "physical_hamiltonian_sha256": "927a6e26d45b5db018db2dbb2b9bf5ce12b4f25e4b7e91b10a4d615903f9f5f0",
+  "physics": {
+    "active_atoms": 4165,
+    "active_mask": ":27-32,34,43-56,61,70-81,83,108-124,141,144-170,181-192,199-201,211,215,222-230,232,277,279,736-738,750-758,760-765,783,787,790,792-805,929-934,946,948-974,1006-1019,1037,1039-1040,1042-1051,1053-1054,1080-1097,1099-1100,1313-1316,1580,1639,1962,2010,2779,2942,3012,3152,3327,3528,4023,4079,4165,4529,4883,4917,4938,5084,5706,5709,5795,6363,6578,6687,6850,7060,7157,7321,7526,7766,8129,8194,8313,8357,8519,8530,8602,8607,8626,8632,8643,8695,8801,8826,8842,9270,9368,9381,9575,9845,9914,9980,10148,10260,10591,10594,10630,10664-10665,10669,10834,10881,11029,11088,11091,11108,11121,11137,11141,11523,11543,11609,11803,11818,12165,12507,12521,12889,13192,13712,13717,14449,14521,14601,14619,14694,14706,14860,15096,15728,15741,15909,15945,16110,16175,16273,16299,16403,16467,16499,16512,16585,16640,16651,16662,16670,16680,16783,16919,17370,17435,17448,17454-17455,17462,17486,17491,17497,17515,17564,17588-17589,17789,17827,18240,18323,18789,19041,19620,19919,20400,20505,21023,21288,21305,21674,21682,21697,21702,21713,21744,21792,21847,21873,21879,22201,22246,22254,22259,22352,22355,22373,22377,22382,22392,22396,22412,22414,22422,22473-22474,22504,22513,22535,22591,22622,22646,22658,22665,22676,22696,22708,22763,23143,23173,23182,23204,23217,23241,23266,23286,23335,23424,25439,25441,25664,25896,25954,26056,26160,26298,26361,26543,26714,26814,26993,26996,27090,27118,27154,27186,27219,27222,27231,27662,28155,28979,29147,29459,29695",
+    "electronic_temperature_K": 0,
+    "frozen_exterior": "Exact shared source coordinates; unchanged 4165-atom active selection.",
+    "full_atoms": 104922,
+    "qm_atom_ids_mask": "@1621-1655,2727-2734,13905-13931,14555-14560,14574-14579,19914-19917,19925-19931,19937-19941",
+    "qm_charge": -2,
+    "qm_method": "DFTB3/3ob-3-1",
+    "qm_mm_link_atoms": 8,
+    "qm_real_atoms": 98
+  },
+  "proton_policy": "No identity walls; retain valid proton swaps and evaluate all-three CVs plus full-pool ownership diagnostics per frame.",
+  "temperature_K": 300,
+  "restraints": "Originaltwo-CV harmonicumbrella;4165movable atoms; original frozenexterior",
+  "burn_in": "Fixed5ps discarded ONCE percontinuousproductionwindow; retained5.05through30.00ps; no refit",
+  "correlation": "Distinct sourcewindows; existinggdiagnostics retained; no independence/convergence claim",
+  "mapping": "A-Dalpha1-232; E-Hbeta233-328; A/E B/F C/G D/H maturepairs; I singlePA6L4res1-4; activeA/E; no232-to233peptide or clonedsubstrates",
+  "features": {
+    "core_atom_ids1based": [
+      19916,
+      19929,
+      13916,
+      13905,
+      19917
+    ],
+    "pocket_atom_ids1based": [
+      717,
+      720,
+      1617,
+      1618,
+      1619,
+      1621,
+      1623,
+      1625,
+      1629,
+      1636,
+      1637,
+      1638,
+      1640,
+      1642,
+      1645,
+      1646,
+      1654,
+      1656,
+      1657,
+      1658,
+      2280,
+      2723,
+      2725,
+      2727,
+      2730,
+      2731,
+      2732,
+      2735,
+      2736,
+      2737,
+      2739,
+      2741,
+      2745,
+      2747,
+      2757,
+      11878,
+      13908,
+      13910,
+      13912,
+      13918,
+      13919,
+      13920,
+      13922,
+      13924,
+      13930,
+      13932,
+      13934,
+      14489,
+      14534,
+      14536,
+      14549,
+      14550,
+      14551,
+      14553,
+      14555,
+      14558,
+      14559,
+      14560,
+      14561,
+      14562,
+      14563,
+      14565,
+      14568,
+      14569,
+      14570,
+      14572,
+      14574,
+      14577,
+      14578,
+      14579,
+      19912,
+      19913,
+      19914,
+      19915,
+      19930,
+      19931,
+      19932,
+      19933
+    ],
+    "hydrogens_used": false
+  },
+  "source_hashes": {
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/prepare_templates.py": "182f4254a6f0bcb72f4cd1dcdb1d5214bf88a895b3c560ca7f8f9c8e31cd50a3",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/extract_native.py": "f7926708dcda745acf8ad1ff09cfd987739c97e7f23eca51ed0092cfbefb719c",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/selection.py": "9cfd4815fc613f25475d27a95a928057cdb5cbd5280854f33f3aa48308438ccd",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/export_templates.py": "bf8c130dff1e4cf58897f19f193bbebda9138d5599a87a43bb48a404eacb4ed2",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/full_frame_coordinates.npz": "05300cd0e5b7db4d8069723202639ded0711ca8a8629bb9458772799d1a4339f",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/templates/pocket_coordinates.npz": "49800d932cd18cc90c189037eac3c6465190fe834b97b30f4fc8b3b818a777a0",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/analysis/fixed_burnin_20261126/endpoint_diagnostics_20261126/weighted_bin_sensitivity_20261126/retry_with_historical_feature_mapping/matched_weights.npz": "3f5b7c61a1d177a2b5f28a59613d6186548f68ee8a0dc485f2e3bdf7ef0a2451",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/inputs/system.prmtop": "448560852cfe65e86e6ef094f2bfc9551029dd1b3cf9847b17fb1a89116a8f63",
+    "/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K/prepared.json": "e277568203300c7880694d080568652c228e3717ccc69166fd4a895de84dd923"
+  }
+}

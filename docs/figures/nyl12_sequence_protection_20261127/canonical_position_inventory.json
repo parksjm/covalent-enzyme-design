@@ -1,0 +1,3282 @@
+[
+  {
+    "canonical_position": 1,
+    "wt": "M",
+    "wt_label": "M1",
+    "family": "alpha",
+    "local_position": 1,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 2,
+    "wt": "A",
+    "wt_label": "A2",
+    "family": "alpha",
+    "local_position": 2,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 3,
+    "wt": "A",
+    "wt_label": "A3",
+    "family": "alpha",
+    "local_position": 3,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 4,
+    "wt": "S",
+    "wt_label": "S4",
+    "family": "alpha",
+    "local_position": 4,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 5,
+    "wt": "S",
+    "wt_label": "S5",
+    "family": "alpha",
+    "local_position": 5,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 6,
+    "wt": "T",
+    "wt_label": "T6",
+    "family": "alpha",
+    "local_position": 6,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 7,
+    "wt": "D",
+    "wt_label": "D7",
+    "family": "alpha",
+    "local_position": 7,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 8,
+    "wt": "N",
+    "wt_label": "N8",
+    "family": "alpha",
+    "local_position": 8,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 9,
+    "wt": "I",
+    "wt_label": "I9",
+    "family": "alpha",
+    "local_position": 9,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 10,
+    "wt": "L",
+    "wt_label": "L10",
+    "family": "alpha",
+    "local_position": 10,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 11,
+    "wt": "H",
+    "wt_label": "H11",
+    "family": "alpha",
+    "local_position": 11,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 12,
+    "wt": "F",
+    "wt_label": "F12",
+    "family": "alpha",
+    "local_position": 12,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 13,
+    "wt": "D",
+    "wt_label": "D13",
+    "family": "alpha",
+    "local_position": 13,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 14,
+    "wt": "F",
+    "wt_label": "F14",
+    "family": "alpha",
+    "local_position": 14,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 15,
+    "wt": "P",
+    "wt_label": "P15",
+    "family": "alpha",
+    "local_position": 15,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 16,
+    "wt": "E",
+    "wt_label": "E16",
+    "family": "alpha",
+    "local_position": 16,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 17,
+    "wt": "V",
+    "wt_label": "V17",
+    "family": "alpha",
+    "local_position": 17,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 18,
+    "wt": "Q",
+    "wt_label": "Q18",
+    "family": "alpha",
+    "local_position": 18,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 19,
+    "wt": "I",
+    "wt_label": "I19",
+    "family": "alpha",
+    "local_position": 19,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 20,
+    "wt": "G",
+    "wt_label": "G20",
+    "family": "alpha",
+    "local_position": 20,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 21,
+    "wt": "T",
+    "wt_label": "T21",
+    "family": "alpha",
+    "local_position": 21,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 22,
+    "wt": "A",
+    "wt_label": "A22",
+    "family": "alpha",
+    "local_position": 22,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 23,
+    "wt": "I",
+    "wt_label": "I23",
+    "family": "alpha",
+    "local_position": 23,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 24,
+    "wt": "N",
+    "wt_label": "N24",
+    "family": "alpha",
+    "local_position": 24,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 25,
+    "wt": "P",
+    "wt_label": "P25",
+    "family": "alpha",
+    "local_position": 25,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 26,
+    "wt": "E",
+    "wt_label": "E26",
+    "family": "alpha",
+    "local_position": 26,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 27,
+    "wt": "G",
+    "wt_label": "G27",
+    "family": "alpha",
+    "local_position": 27,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 28,
+    "wt": "P",
+    "wt_label": "P28",
+    "family": "alpha",
+    "local_position": 28,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 29,
+    "wt": "T",
+    "wt_label": "T29",
+    "family": "alpha",
+    "local_position": 29,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 30,
+    "wt": "G",
+    "wt_label": "G30",
+    "family": "alpha",
+    "local_position": 30,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 31,
+    "wt": "I",
+    "wt_label": "I31",
+    "family": "alpha",
+    "local_position": 31,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 32,
+    "wt": "T",
+    "wt_label": "T32",
+    "family": "alpha",
+    "local_position": 32,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 33,
+    "wt": "L",
+    "wt_label": "L33",
+    "family": "alpha",
+    "local_position": 33,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 34,
+    "wt": "F",
+    "wt_label": "F34",
+    "family": "alpha",
+    "local_position": 34,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 35,
+    "wt": "Y",
+    "wt_label": "Y35",
+    "family": "alpha",
+    "local_position": 35,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 36,
+    "wt": "F",
+    "wt_label": "F36",
+    "family": "alpha",
+    "local_position": 36,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 37,
+    "wt": "P",
+    "wt_label": "P37",
+    "family": "alpha",
+    "local_position": 37,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 38,
+    "wt": "K",
+    "wt_label": "K38",
+    "family": "alpha",
+    "local_position": 38,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 39,
+    "wt": "G",
+    "wt_label": "G39",
+    "family": "alpha",
+    "local_position": 39,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 40,
+    "wt": "V",
+    "wt_label": "V40",
+    "family": "alpha",
+    "local_position": 40,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 41,
+    "wt": "Q",
+    "wt_label": "Q41",
+    "family": "alpha",
+    "local_position": 41,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 42,
+    "wt": "A",
+    "wt_label": "A42",
+    "family": "alpha",
+    "local_position": 42,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 43,
+    "wt": "S",
+    "wt_label": "S43",
+    "family": "alpha",
+    "local_position": 43,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 44,
+    "wt": "V",
+    "wt_label": "V44",
+    "family": "alpha",
+    "local_position": 44,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 45,
+    "wt": "D",
+    "wt_label": "D45",
+    "family": "alpha",
+    "local_position": 45,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 46,
+    "wt": "I",
+    "wt_label": "I46",
+    "family": "alpha",
+    "local_position": 46,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 47,
+    "wt": "Q",
+    "wt_label": "Q47",
+    "family": "alpha",
+    "local_position": 47,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 48,
+    "wt": "G",
+    "wt_label": "G48",
+    "family": "alpha",
+    "local_position": 48,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 49,
+    "wt": "G",
+    "wt_label": "G49",
+    "family": "alpha",
+    "local_position": 49,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 50,
+    "wt": "S",
+    "wt_label": "S50",
+    "family": "alpha",
+    "local_position": 50,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 51,
+    "wt": "V",
+    "wt_label": "V51",
+    "family": "alpha",
+    "local_position": 51,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 52,
+    "wt": "G",
+    "wt_label": "G52",
+    "family": "alpha",
+    "local_position": 52,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 53,
+    "wt": "T",
+    "wt_label": "T53",
+    "family": "alpha",
+    "local_position": 53,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 54,
+    "wt": "F",
+    "wt_label": "F54",
+    "family": "alpha",
+    "local_position": 54,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 55,
+    "wt": "F",
+    "wt_label": "F55",
+    "family": "alpha",
+    "local_position": 55,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 56,
+    "wt": "T",
+    "wt_label": "T56",
+    "family": "alpha",
+    "local_position": 56,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 57,
+    "wt": "Q",
+    "wt_label": "Q57",
+    "family": "alpha",
+    "local_position": 57,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 58,
+    "wt": "E",
+    "wt_label": "E58",
+    "family": "alpha",
+    "local_position": 58,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 59,
+    "wt": "K",
+    "wt_label": "K59",
+    "family": "alpha",
+    "local_position": 59,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 60,
+    "wt": "M",
+    "wt_label": "M60",
+    "family": "alpha",
+    "local_position": 60,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 61,
+    "wt": "Q",
+    "wt_label": "Q61",
+    "family": "alpha",
+    "local_position": 61,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 62,
+    "wt": "Q",
+    "wt_label": "Q62",
+    "family": "alpha",
+    "local_position": 62,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 63,
+    "wt": "G",
+    "wt_label": "G63",
+    "family": "alpha",
+    "local_position": 63,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 64,
+    "wt": "E",
+    "wt_label": "E64",
+    "family": "alpha",
+    "local_position": 64,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 65,
+    "wt": "A",
+    "wt_label": "A65",
+    "family": "alpha",
+    "local_position": 65,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 66,
+    "wt": "Y",
+    "wt_label": "Y66",
+    "family": "alpha",
+    "local_position": 66,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 67,
+    "wt": "L",
+    "wt_label": "L67",
+    "family": "alpha",
+    "local_position": 67,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 68,
+    "wt": "D",
+    "wt_label": "D68",
+    "family": "alpha",
+    "local_position": 68,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 69,
+    "wt": "G",
+    "wt_label": "G69",
+    "family": "alpha",
+    "local_position": 69,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 70,
+    "wt": "V",
+    "wt_label": "V70",
+    "family": "alpha",
+    "local_position": 70,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 71,
+    "wt": "A",
+    "wt_label": "A71",
+    "family": "alpha",
+    "local_position": 71,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 72,
+    "wt": "F",
+    "wt_label": "F72",
+    "family": "alpha",
+    "local_position": 72,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 73,
+    "wt": "T",
+    "wt_label": "T73",
+    "family": "alpha",
+    "local_position": 73,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 74,
+    "wt": "G",
+    "wt_label": "G74",
+    "family": "alpha",
+    "local_position": 74,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 75,
+    "wt": "G",
+    "wt_label": "G75",
+    "family": "alpha",
+    "local_position": 75,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 76,
+    "wt": "G",
+    "wt_label": "G76",
+    "family": "alpha",
+    "local_position": 76,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 77,
+    "wt": "I",
+    "wt_label": "I77",
+    "family": "alpha",
+    "local_position": 77,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 78,
+    "wt": "L",
+    "wt_label": "L78",
+    "family": "alpha",
+    "local_position": 78,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 79,
+    "wt": "G",
+    "wt_label": "G79",
+    "family": "alpha",
+    "local_position": 79,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 80,
+    "wt": "L",
+    "wt_label": "L80",
+    "family": "alpha",
+    "local_position": 80,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 81,
+    "wt": "E",
+    "wt_label": "E81",
+    "family": "alpha",
+    "local_position": 81,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 82,
+    "wt": "A",
+    "wt_label": "A82",
+    "family": "alpha",
+    "local_position": 82,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 83,
+    "wt": "V",
+    "wt_label": "V83",
+    "family": "alpha",
+    "local_position": 83,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 84,
+    "wt": "A",
+    "wt_label": "A84",
+    "family": "alpha",
+    "local_position": 84,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 85,
+    "wt": "G",
+    "wt_label": "G85",
+    "family": "alpha",
+    "local_position": 85,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 86,
+    "wt": "A",
+    "wt_label": "A86",
+    "family": "alpha",
+    "local_position": 86,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 87,
+    "wt": "V",
+    "wt_label": "V87",
+    "family": "alpha",
+    "local_position": 87,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 88,
+    "wt": "S",
+    "wt_label": "S88",
+    "family": "alpha",
+    "local_position": 88,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 89,
+    "wt": "S",
+    "wt_label": "S89",
+    "family": "alpha",
+    "local_position": 89,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 90,
+    "wt": "L",
+    "wt_label": "L90",
+    "family": "alpha",
+    "local_position": 90,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 91,
+    "wt": "F",
+    "wt_label": "F91",
+    "family": "alpha",
+    "local_position": 91,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 92,
+    "wt": "A",
+    "wt_label": "A92",
+    "family": "alpha",
+    "local_position": 92,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 93,
+    "wt": "D",
+    "wt_label": "D93",
+    "family": "alpha",
+    "local_position": 93,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 94,
+    "wt": "Q",
+    "wt_label": "Q94",
+    "family": "alpha",
+    "local_position": 94,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 95,
+    "wt": "T",
+    "wt_label": "T95",
+    "family": "alpha",
+    "local_position": 95,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 96,
+    "wt": "K",
+    "wt_label": "K96",
+    "family": "alpha",
+    "local_position": 96,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 97,
+    "wt": "N",
+    "wt_label": "N97",
+    "family": "alpha",
+    "local_position": 97,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 98,
+    "wt": "E",
+    "wt_label": "E98",
+    "family": "alpha",
+    "local_position": 98,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 99,
+    "wt": "V",
+    "wt_label": "V99",
+    "family": "alpha",
+    "local_position": 99,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 100,
+    "wt": "Q",
+    "wt_label": "Q100",
+    "family": "alpha",
+    "local_position": 100,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 101,
+    "wt": "F",
+    "wt_label": "F101",
+    "family": "alpha",
+    "local_position": 101,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 102,
+    "wt": "R",
+    "wt_label": "R102",
+    "family": "alpha",
+    "local_position": 102,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 103,
+    "wt": "R",
+    "wt_label": "R103",
+    "family": "alpha",
+    "local_position": 103,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 104,
+    "wt": "M",
+    "wt_label": "M104",
+    "family": "alpha",
+    "local_position": 104,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 105,
+    "wt": "P",
+    "wt_label": "P105",
+    "family": "alpha",
+    "local_position": 105,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 106,
+    "wt": "L",
+    "wt_label": "L106",
+    "family": "alpha",
+    "local_position": 106,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 107,
+    "wt": "I",
+    "wt_label": "I107",
+    "family": "alpha",
+    "local_position": 107,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 108,
+    "wt": "S",
+    "wt_label": "S108",
+    "family": "alpha",
+    "local_position": 108,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 109,
+    "wt": "G",
+    "wt_label": "G109",
+    "family": "alpha",
+    "local_position": 109,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 110,
+    "wt": "A",
+    "wt_label": "A110",
+    "family": "alpha",
+    "local_position": 110,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 111,
+    "wt": "V",
+    "wt_label": "V111",
+    "family": "alpha",
+    "local_position": 111,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 112,
+    "wt": "I",
+    "wt_label": "I112",
+    "family": "alpha",
+    "local_position": 112,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 113,
+    "wt": "F",
+    "wt_label": "F113",
+    "family": "alpha",
+    "local_position": 113,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core;recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 114,
+    "wt": "D",
+    "wt_label": "D114",
+    "family": "alpha",
+    "local_position": 114,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 115,
+    "wt": "Y",
+    "wt_label": "Y115",
+    "family": "alpha",
+    "local_position": 115,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 116,
+    "wt": "T",
+    "wt_label": "T116",
+    "family": "alpha",
+    "local_position": 116,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 117,
+    "wt": "P",
+    "wt_label": "P117",
+    "family": "alpha",
+    "local_position": 117,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 118,
+    "wt": "R",
+    "wt_label": "R118",
+    "family": "alpha",
+    "local_position": 118,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 119,
+    "wt": "Q",
+    "wt_label": "Q119",
+    "family": "alpha",
+    "local_position": 119,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 120,
+    "wt": "N",
+    "wt_label": "N120",
+    "family": "alpha",
+    "local_position": 120,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 121,
+    "wt": "M",
+    "wt_label": "M121",
+    "family": "alpha",
+    "local_position": 121,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 122,
+    "wt": "I",
+    "wt_label": "I122",
+    "family": "alpha",
+    "local_position": 122,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 123,
+    "wt": "Y",
+    "wt_label": "Y123",
+    "family": "alpha",
+    "local_position": 123,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 124,
+    "wt": "P",
+    "wt_label": "P124",
+    "family": "alpha",
+    "local_position": 124,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 125,
+    "wt": "D",
+    "wt_label": "D125",
+    "family": "alpha",
+    "local_position": 125,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 126,
+    "wt": "K",
+    "wt_label": "K126",
+    "family": "alpha",
+    "local_position": 126,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 127,
+    "wt": "A",
+    "wt_label": "A127",
+    "family": "alpha",
+    "local_position": 127,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 128,
+    "wt": "L",
+    "wt_label": "L128",
+    "family": "alpha",
+    "local_position": 128,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 129,
+    "wt": "G",
+    "wt_label": "G129",
+    "family": "alpha",
+    "local_position": 129,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 130,
+    "wt": "Q",
+    "wt_label": "Q130",
+    "family": "alpha",
+    "local_position": 130,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 131,
+    "wt": "K",
+    "wt_label": "K131",
+    "family": "alpha",
+    "local_position": 131,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 132,
+    "wt": "A",
+    "wt_label": "A132",
+    "family": "alpha",
+    "local_position": 132,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 133,
+    "wt": "F",
+    "wt_label": "F133",
+    "family": "alpha",
+    "local_position": 133,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 134,
+    "wt": "A",
+    "wt_label": "A134",
+    "family": "alpha",
+    "local_position": 134,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 135,
+    "wt": "A",
+    "wt_label": "A135",
+    "family": "alpha",
+    "local_position": 135,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 136,
+    "wt": "L",
+    "wt_label": "L136",
+    "family": "alpha",
+    "local_position": 136,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 137,
+    "wt": "S",
+    "wt_label": "S137",
+    "family": "alpha",
+    "local_position": 137,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 138,
+    "wt": "A",
+    "wt_label": "A138",
+    "family": "alpha",
+    "local_position": 138,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 139,
+    "wt": "G",
+    "wt_label": "G139",
+    "family": "alpha",
+    "local_position": 139,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 140,
+    "wt": "Q",
+    "wt_label": "Q140",
+    "family": "alpha",
+    "local_position": 140,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 141,
+    "wt": "F",
+    "wt_label": "F141",
+    "family": "alpha",
+    "local_position": 141,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 142,
+    "wt": "V",
+    "wt_label": "V142",
+    "family": "alpha",
+    "local_position": 142,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 143,
+    "wt": "Q",
+    "wt_label": "Q143",
+    "family": "alpha",
+    "local_position": 143,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 144,
+    "wt": "G",
+    "wt_label": "G144",
+    "family": "alpha",
+    "local_position": 144,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 145,
+    "wt": "R",
+    "wt_label": "R145",
+    "family": "alpha",
+    "local_position": 145,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 146,
+    "wt": "H",
+    "wt_label": "H146",
+    "family": "alpha",
+    "local_position": 146,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 147,
+    "wt": "G",
+    "wt_label": "G147",
+    "family": "alpha",
+    "local_position": 147,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 148,
+    "wt": "A",
+    "wt_label": "A148",
+    "family": "alpha",
+    "local_position": 148,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 149,
+    "wt": "G",
+    "wt_label": "G149",
+    "family": "alpha",
+    "local_position": 149,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 150,
+    "wt": "V",
+    "wt_label": "V150",
+    "family": "alpha",
+    "local_position": 150,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 151,
+    "wt": "S",
+    "wt_label": "S151",
+    "family": "alpha",
+    "local_position": 151,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 152,
+    "wt": "A",
+    "wt_label": "A152",
+    "family": "alpha",
+    "local_position": 152,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 153,
+    "wt": "S",
+    "wt_label": "S153",
+    "family": "alpha",
+    "local_position": 153,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 154,
+    "wt": "V",
+    "wt_label": "V154",
+    "family": "alpha",
+    "local_position": 154,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 155,
+    "wt": "G",
+    "wt_label": "G155",
+    "family": "alpha",
+    "local_position": 155,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 156,
+    "wt": "K",
+    "wt_label": "K156",
+    "family": "alpha",
+    "local_position": 156,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 157,
+    "wt": "L",
+    "wt_label": "L157",
+    "family": "alpha",
+    "local_position": 157,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 158,
+    "wt": "L",
+    "wt_label": "L158",
+    "family": "alpha",
+    "local_position": 158,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 159,
+    "wt": "R",
+    "wt_label": "R159",
+    "family": "alpha",
+    "local_position": 159,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 160,
+    "wt": "D",
+    "wt_label": "D160",
+    "family": "alpha",
+    "local_position": 160,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 161,
+    "wt": "G",
+    "wt_label": "G161",
+    "family": "alpha",
+    "local_position": 161,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 162,
+    "wt": "F",
+    "wt_label": "F162",
+    "family": "alpha",
+    "local_position": 162,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 163,
+    "wt": "Q",
+    "wt_label": "Q163",
+    "family": "alpha",
+    "local_position": 163,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 164,
+    "wt": "L",
+    "wt_label": "L164",
+    "family": "alpha",
+    "local_position": 164,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 165,
+    "wt": "A",
+    "wt_label": "A165",
+    "family": "alpha",
+    "local_position": 165,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 166,
+    "wt": "G",
+    "wt_label": "G166",
+    "family": "alpha",
+    "local_position": 166,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 167,
+    "wt": "Q",
+    "wt_label": "Q167",
+    "family": "alpha",
+    "local_position": 167,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 168,
+    "wt": "G",
+    "wt_label": "G168",
+    "family": "alpha",
+    "local_position": 168,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 169,
+    "wt": "G",
+    "wt_label": "G169",
+    "family": "alpha",
+    "local_position": 169,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 170,
+    "wt": "A",
+    "wt_label": "A170",
+    "family": "alpha",
+    "local_position": 170,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 171,
+    "wt": "F",
+    "wt_label": "F171",
+    "family": "alpha",
+    "local_position": 171,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 172,
+    "wt": "A",
+    "wt_label": "A172",
+    "family": "alpha",
+    "local_position": 172,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 173,
+    "wt": "Q",
+    "wt_label": "Q173",
+    "family": "alpha",
+    "local_position": 173,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 174,
+    "wt": "I",
+    "wt_label": "I174",
+    "family": "alpha",
+    "local_position": 174,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 175,
+    "wt": "G",
+    "wt_label": "G175",
+    "family": "alpha",
+    "local_position": 175,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 176,
+    "wt": "K",
+    "wt_label": "K176",
+    "family": "alpha",
+    "local_position": 176,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 177,
+    "wt": "T",
+    "wt_label": "T177",
+    "family": "alpha",
+    "local_position": 177,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 178,
+    "wt": "K",
+    "wt_label": "K178",
+    "family": "alpha",
+    "local_position": 178,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 179,
+    "wt": "I",
+    "wt_label": "I179",
+    "family": "alpha",
+    "local_position": 179,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 180,
+    "wt": "A",
+    "wt_label": "A180",
+    "family": "alpha",
+    "local_position": 180,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 181,
+    "wt": "V",
+    "wt_label": "V181",
+    "family": "alpha",
+    "local_position": 181,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 182,
+    "wt": "F",
+    "wt_label": "F182",
+    "family": "alpha",
+    "local_position": 182,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 183,
+    "wt": "T",
+    "wt_label": "T183",
+    "family": "alpha",
+    "local_position": 183,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 184,
+    "wt": "V",
+    "wt_label": "V184",
+    "family": "alpha",
+    "local_position": 184,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 185,
+    "wt": "V",
+    "wt_label": "V185",
+    "family": "alpha",
+    "local_position": 185,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 186,
+    "wt": "N",
+    "wt_label": "N186",
+    "family": "alpha",
+    "local_position": 186,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 187,
+    "wt": "A",
+    "wt_label": "A187",
+    "family": "alpha",
+    "local_position": 187,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 188,
+    "wt": "V",
+    "wt_label": "V188",
+    "family": "alpha",
+    "local_position": 188,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 189,
+    "wt": "G",
+    "wt_label": "G189",
+    "family": "alpha",
+    "local_position": 189,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 190,
+    "wt": "V",
+    "wt_label": "V190",
+    "family": "alpha",
+    "local_position": 190,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 191,
+    "wt": "I",
+    "wt_label": "I191",
+    "family": "alpha",
+    "local_position": 191,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 192,
+    "wt": "L",
+    "wt_label": "L192",
+    "family": "alpha",
+    "local_position": 192,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 193,
+    "wt": "D",
+    "wt_label": "D193",
+    "family": "alpha",
+    "local_position": 193,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 194,
+    "wt": "E",
+    "wt_label": "E194",
+    "family": "alpha",
+    "local_position": 194,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 195,
+    "wt": "K",
+    "wt_label": "K195",
+    "family": "alpha",
+    "local_position": 195,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 196,
+    "wt": "G",
+    "wt_label": "G196",
+    "family": "alpha",
+    "local_position": 196,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 197,
+    "wt": "E",
+    "wt_label": "E197",
+    "family": "alpha",
+    "local_position": 197,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 198,
+    "wt": "V",
+    "wt_label": "V198",
+    "family": "alpha",
+    "local_position": 198,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 199,
+    "wt": "I",
+    "wt_label": "I199",
+    "family": "alpha",
+    "local_position": 199,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 200,
+    "wt": "Y",
+    "wt_label": "Y200",
+    "family": "alpha",
+    "local_position": 200,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 201,
+    "wt": "G",
+    "wt_label": "G201",
+    "family": "alpha",
+    "local_position": 201,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 202,
+    "wt": "L",
+    "wt_label": "L202",
+    "family": "alpha",
+    "local_position": 202,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 203,
+    "wt": "P",
+    "wt_label": "P203",
+    "family": "alpha",
+    "local_position": 203,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 204,
+    "wt": "K",
+    "wt_label": "K204",
+    "family": "alpha",
+    "local_position": 204,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 205,
+    "wt": "G",
+    "wt_label": "G205",
+    "family": "alpha",
+    "local_position": 205,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 206,
+    "wt": "A",
+    "wt_label": "A206",
+    "family": "alpha",
+    "local_position": 206,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 207,
+    "wt": "T",
+    "wt_label": "T207",
+    "family": "alpha",
+    "local_position": 207,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 208,
+    "wt": "K",
+    "wt_label": "K208",
+    "family": "alpha",
+    "local_position": 208,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 209,
+    "wt": "Q",
+    "wt_label": "Q209",
+    "family": "alpha",
+    "local_position": 209,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 210,
+    "wt": "T",
+    "wt_label": "T210",
+    "family": "alpha",
+    "local_position": 210,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 211,
+    "wt": "L",
+    "wt_label": "L211",
+    "family": "alpha",
+    "local_position": 211,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 212,
+    "wt": "N",
+    "wt_label": "N212",
+    "family": "alpha",
+    "local_position": 212,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 213,
+    "wt": "Q",
+    "wt_label": "Q213",
+    "family": "alpha",
+    "local_position": 213,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 214,
+    "wt": "Q",
+    "wt_label": "Q214",
+    "family": "alpha",
+    "local_position": 214,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 215,
+    "wt": "V",
+    "wt_label": "V215",
+    "family": "alpha",
+    "local_position": 215,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 216,
+    "wt": "T",
+    "wt_label": "T216",
+    "family": "alpha",
+    "local_position": 216,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 217,
+    "wt": "E",
+    "wt_label": "E217",
+    "family": "alpha",
+    "local_position": 217,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 218,
+    "wt": "L",
+    "wt_label": "L218",
+    "family": "alpha",
+    "local_position": 218,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 219,
+    "wt": "L",
+    "wt_label": "L219",
+    "family": "alpha",
+    "local_position": 219,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 220,
+    "wt": "Q",
+    "wt_label": "Q220",
+    "family": "alpha",
+    "local_position": 220,
+    "protected": false,
+    "copies": "ABCD",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 221,
+    "wt": "Q",
+    "wt_label": "Q221",
+    "family": "alpha",
+    "local_position": 221,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core;recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 222,
+    "wt": "P",
+    "wt_label": "P222",
+    "family": "alpha",
+    "local_position": 222,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 223,
+    "wt": "K",
+    "wt_label": "K223",
+    "family": "alpha",
+    "local_position": 223,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core;recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 224,
+    "wt": "K",
+    "wt_label": "K224",
+    "family": "alpha",
+    "local_position": 224,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 225,
+    "wt": "P",
+    "wt_label": "P225",
+    "family": "alpha",
+    "local_position": 225,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 226,
+    "wt": "F",
+    "wt_label": "F226",
+    "family": "alpha",
+    "local_position": 226,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core;recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 227,
+    "wt": "W",
+    "wt_label": "W227",
+    "family": "alpha",
+    "local_position": 227,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core;recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 228,
+    "wt": "P",
+    "wt_label": "P228",
+    "family": "alpha",
+    "local_position": 228,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 229,
+    "wt": "E",
+    "wt_label": "E229",
+    "family": "alpha",
+    "local_position": 229,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 230,
+    "wt": "P",
+    "wt_label": "P230",
+    "family": "alpha",
+    "local_position": 230,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 231,
+    "wt": "K",
+    "wt_label": "K231",
+    "family": "alpha",
+    "local_position": 231,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 232,
+    "wt": "N",
+    "wt_label": "N232",
+    "family": "alpha",
+    "local_position": 232,
+    "protected": true,
+    "copies": "ABCD",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 233,
+    "wt": "T",
+    "wt_label": "T233",
+    "family": "beta_local",
+    "local_position": 1,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 234,
+    "wt": "T",
+    "wt_label": "T234",
+    "family": "beta_local",
+    "local_position": 2,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 235,
+    "wt": "L",
+    "wt_label": "L235",
+    "family": "beta_local",
+    "local_position": 3,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 236,
+    "wt": "T",
+    "wt_label": "T236",
+    "family": "beta_local",
+    "local_position": 4,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 237,
+    "wt": "I",
+    "wt_label": "I237",
+    "family": "beta_local",
+    "local_position": 5,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 238,
+    "wt": "V",
+    "wt_label": "V238",
+    "family": "beta_local",
+    "local_position": 6,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 239,
+    "wt": "I",
+    "wt_label": "I239",
+    "family": "beta_local",
+    "local_position": 7,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 240,
+    "wt": "T",
+    "wt_label": "T240",
+    "family": "beta_local",
+    "local_position": 8,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 241,
+    "wt": "N",
+    "wt_label": "N241",
+    "family": "beta_local",
+    "local_position": 9,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 242,
+    "wt": "E",
+    "wt_label": "E242",
+    "family": "beta_local",
+    "local_position": 10,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 243,
+    "wt": "K",
+    "wt_label": "K243",
+    "family": "beta_local",
+    "local_position": 11,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 244,
+    "wt": "L",
+    "wt_label": "L244",
+    "family": "beta_local",
+    "local_position": 12,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 245,
+    "wt": "A",
+    "wt_label": "A245",
+    "family": "beta_local",
+    "local_position": 13,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 246,
+    "wt": "P",
+    "wt_label": "P246",
+    "family": "beta_local",
+    "local_position": 14,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 247,
+    "wt": "R",
+    "wt_label": "R247",
+    "family": "beta_local",
+    "local_position": 15,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 248,
+    "wt": "H",
+    "wt_label": "H248",
+    "family": "beta_local",
+    "local_position": 16,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 249,
+    "wt": "L",
+    "wt_label": "L249",
+    "family": "beta_local",
+    "local_position": 17,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 250,
+    "wt": "K",
+    "wt_label": "K250",
+    "family": "beta_local",
+    "local_position": 18,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 251,
+    "wt": "Q",
+    "wt_label": "Q251",
+    "family": "beta_local",
+    "local_position": 19,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 252,
+    "wt": "L",
+    "wt_label": "L252",
+    "family": "beta_local",
+    "local_position": 20,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 253,
+    "wt": "G",
+    "wt_label": "G253",
+    "family": "beta_local",
+    "local_position": 21,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 254,
+    "wt": "R",
+    "wt_label": "R254",
+    "family": "beta_local",
+    "local_position": 22,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 255,
+    "wt": "Q",
+    "wt_label": "Q255",
+    "family": "beta_local",
+    "local_position": 23,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 256,
+    "wt": "V",
+    "wt_label": "V256",
+    "family": "beta_local",
+    "local_position": 24,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 257,
+    "wt": "H",
+    "wt_label": "H257",
+    "family": "beta_local",
+    "local_position": 25,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 258,
+    "wt": "H",
+    "wt_label": "H258",
+    "family": "beta_local",
+    "local_position": 26,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 259,
+    "wt": "A",
+    "wt_label": "A259",
+    "family": "beta_local",
+    "local_position": 27,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 260,
+    "wt": "L",
+    "wt_label": "L260",
+    "family": "beta_local",
+    "local_position": 28,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 261,
+    "wt": "S",
+    "wt_label": "S261",
+    "family": "beta_local",
+    "local_position": 29,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 262,
+    "wt": "Q",
+    "wt_label": "Q262",
+    "family": "beta_local",
+    "local_position": 30,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 263,
+    "wt": "V",
+    "wt_label": "V263",
+    "family": "beta_local",
+    "local_position": 31,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 264,
+    "wt": "I",
+    "wt_label": "I264",
+    "family": "beta_local",
+    "local_position": 32,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 265,
+    "wt": "H",
+    "wt_label": "H265",
+    "family": "beta_local",
+    "local_position": 33,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 266,
+    "wt": "P",
+    "wt_label": "P266",
+    "family": "beta_local",
+    "local_position": 34,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 267,
+    "wt": "Y",
+    "wt_label": "Y267",
+    "family": "beta_local",
+    "local_position": 35,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 268,
+    "wt": "A",
+    "wt_label": "A268",
+    "family": "beta_local",
+    "local_position": 36,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 269,
+    "wt": "T",
+    "wt_label": "T269",
+    "family": "beta_local",
+    "local_position": 37,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 270,
+    "wt": "I",
+    "wt_label": "I270",
+    "family": "beta_local",
+    "local_position": 38,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 271,
+    "wt": "L",
+    "wt_label": "L271",
+    "family": "beta_local",
+    "local_position": 39,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 272,
+    "wt": "D",
+    "wt_label": "D272",
+    "family": "beta_local",
+    "local_position": 40,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 273,
+    "wt": "G",
+    "wt_label": "G273",
+    "family": "beta_local",
+    "local_position": 41,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 274,
+    "wt": "D",
+    "wt_label": "D274",
+    "family": "beta_local",
+    "local_position": 42,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 275,
+    "wt": "V",
+    "wt_label": "V275",
+    "family": "beta_local",
+    "local_position": 43,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 276,
+    "wt": "L",
+    "wt_label": "L276",
+    "family": "beta_local",
+    "local_position": 44,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "hard_core"
+  },
+  {
+    "canonical_position": 277,
+    "wt": "Y",
+    "wt_label": "Y277",
+    "family": "beta_local",
+    "local_position": 45,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 278,
+    "wt": "T",
+    "wt_label": "T278",
+    "family": "beta_local",
+    "local_position": 46,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 279,
+    "wt": "V",
+    "wt_label": "V279",
+    "family": "beta_local",
+    "local_position": 47,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 280,
+    "wt": "S",
+    "wt_label": "S280",
+    "family": "beta_local",
+    "local_position": 48,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 281,
+    "wt": "T",
+    "wt_label": "T281",
+    "family": "beta_local",
+    "local_position": 49,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 282,
+    "wt": "R",
+    "wt_label": "R282",
+    "family": "beta_local",
+    "local_position": 50,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 283,
+    "wt": "S",
+    "wt_label": "S283",
+    "family": "beta_local",
+    "local_position": 51,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 284,
+    "wt": "I",
+    "wt_label": "I284",
+    "family": "beta_local",
+    "local_position": 52,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 285,
+    "wt": "E",
+    "wt_label": "E285",
+    "family": "beta_local",
+    "local_position": 53,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 286,
+    "wt": "S",
+    "wt_label": "S286",
+    "family": "beta_local",
+    "local_position": 54,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 287,
+    "wt": "D",
+    "wt_label": "D287",
+    "family": "beta_local",
+    "local_position": 55,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 288,
+    "wt": "L",
+    "wt_label": "L288",
+    "family": "beta_local",
+    "local_position": 56,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 289,
+    "wt": "Y",
+    "wt_label": "Y289",
+    "family": "beta_local",
+    "local_position": 57,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 290,
+    "wt": "A",
+    "wt_label": "A290",
+    "family": "beta_local",
+    "local_position": 58,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 291,
+    "wt": "P",
+    "wt_label": "P291",
+    "family": "beta_local",
+    "local_position": 59,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 292,
+    "wt": "G",
+    "wt_label": "G292",
+    "family": "beta_local",
+    "local_position": 60,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 293,
+    "wt": "A",
+    "wt_label": "A293",
+    "family": "beta_local",
+    "local_position": 61,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 294,
+    "wt": "D",
+    "wt_label": "D294",
+    "family": "beta_local",
+    "local_position": 62,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 295,
+    "wt": "I",
+    "wt_label": "I295",
+    "family": "beta_local",
+    "local_position": 63,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 296,
+    "wt": "E",
+    "wt_label": "E296",
+    "family": "beta_local",
+    "local_position": 64,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 297,
+    "wt": "S",
+    "wt_label": "S297",
+    "family": "beta_local",
+    "local_position": 65,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 298,
+    "wt": "D",
+    "wt_label": "D298",
+    "family": "beta_local",
+    "local_position": 66,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 299,
+    "wt": "L",
+    "wt_label": "L299",
+    "family": "beta_local",
+    "local_position": 67,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 300,
+    "wt": "N",
+    "wt_label": "N300",
+    "family": "beta_local",
+    "local_position": 68,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 301,
+    "wt": "A",
+    "wt_label": "A301",
+    "family": "beta_local",
+    "local_position": 69,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 302,
+    "wt": "K",
+    "wt_label": "K302",
+    "family": "beta_local",
+    "local_position": 70,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 303,
+    "wt": "F",
+    "wt_label": "F303",
+    "family": "beta_local",
+    "local_position": 71,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 304,
+    "wt": "I",
+    "wt_label": "I304",
+    "family": "beta_local",
+    "local_position": 72,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 305,
+    "wt": "Y",
+    "wt_label": "Y305",
+    "family": "beta_local",
+    "local_position": 73,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 306,
+    "wt": "L",
+    "wt_label": "L306",
+    "family": "beta_local",
+    "local_position": 74,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 307,
+    "wt": "G",
+    "wt_label": "G307",
+    "family": "beta_local",
+    "local_position": 75,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 308,
+    "wt": "M",
+    "wt_label": "M308",
+    "family": "beta_local",
+    "local_position": 76,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 309,
+    "wt": "V",
+    "wt_label": "V309",
+    "family": "beta_local",
+    "local_position": 77,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 310,
+    "wt": "A",
+    "wt_label": "A310",
+    "family": "beta_local",
+    "local_position": 78,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 311,
+    "wt": "G",
+    "wt_label": "G311",
+    "family": "beta_local",
+    "local_position": 79,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 312,
+    "wt": "E",
+    "wt_label": "E312",
+    "family": "beta_local",
+    "local_position": 80,
+    "protected": true,
+    "copies": "EFGH",
+    "reasons": "recurring_inter_repeat_interface"
+  },
+  {
+    "canonical_position": 313,
+    "wt": "L",
+    "wt_label": "L313",
+    "family": "beta_local",
+    "local_position": 81,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 314,
+    "wt": "A",
+    "wt_label": "A314",
+    "family": "beta_local",
+    "local_position": 82,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 315,
+    "wt": "K",
+    "wt_label": "K315",
+    "family": "beta_local",
+    "local_position": 83,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 316,
+    "wt": "Q",
+    "wt_label": "Q316",
+    "family": "beta_local",
+    "local_position": 84,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 317,
+    "wt": "A",
+    "wt_label": "A317",
+    "family": "beta_local",
+    "local_position": 85,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 318,
+    "wt": "V",
+    "wt_label": "V318",
+    "family": "beta_local",
+    "local_position": 86,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 319,
+    "wt": "W",
+    "wt_label": "W319",
+    "family": "beta_local",
+    "local_position": 87,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 320,
+    "wt": "S",
+    "wt_label": "S320",
+    "family": "beta_local",
+    "local_position": 88,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 321,
+    "wt": "A",
+    "wt_label": "A321",
+    "family": "beta_local",
+    "local_position": 89,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 322,
+    "wt": "V",
+    "wt_label": "V322",
+    "family": "beta_local",
+    "local_position": 90,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 323,
+    "wt": "G",
+    "wt_label": "G323",
+    "family": "beta_local",
+    "local_position": 91,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 324,
+    "wt": "Y",
+    "wt_label": "Y324",
+    "family": "beta_local",
+    "local_position": 92,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 325,
+    "wt": "S",
+    "wt_label": "S325",
+    "family": "beta_local",
+    "local_position": 93,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 326,
+    "wt": "H",
+    "wt_label": "H326",
+    "family": "beta_local",
+    "local_position": 94,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 327,
+    "wt": "R",
+    "wt_label": "R327",
+    "family": "beta_local",
+    "local_position": 95,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  },
+  {
+    "canonical_position": 328,
+    "wt": "P",
+    "wt_label": "P328",
+    "family": "beta_local",
+    "local_position": 96,
+    "protected": false,
+    "copies": "EFGH",
+    "reasons": "mutable"
+  }
+]

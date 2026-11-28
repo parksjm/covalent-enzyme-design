@@ -71,6 +71,14 @@ does not independently establish the residue's catalytic role in mature-enzyme
 substrate hydrolysis. These limitations motivate explicit protonation-state
 comparisons and separate evaluation of maturation and substrate chemistry.
 
+Negoro et al. also found that K189A in the H-GYAQ NylC background strongly
+reduced Ahx-cyclic-oligomer activity: its cleavage-normalized specific activity
+was 0.032 U mg⁻¹, about 0.6% of parental H-GYAQ, while processing reached only
+33% after further incubation [R25, Table 1, Fig. 8D]. This supports an
+important role in NylC enzyme function and hydrolysis beyond the maturation
+defect, although the exact chemical contribution remains proposed rather than
+isolated from every structural or maturation effect.
+
 Human asparaginase type III provides a particularly relevant multiscale
 substrate-hydrolysis precedent for an N-terminal threonine nucleophile [R41].
 In the selected acylation pathway, proton transfer from the threonine hydroxyl

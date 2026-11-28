@@ -1,3 +1,108 @@
+## Qualification of the redesign prediction workflow — 27 November 2026
+
+The PI-approved target pose corresponds to positive signed Herschlag phi
+under the unchanged atom-order convention. Earlier descriptions of a selected
+negative-phi cohort as the desired “flipped” pose are superseded for prospective
+design selection; their numerical observations are retained as historical
+cohort results. Pose direction is now tied to an explicit coordinate reference.
+
+The subsequent six-model loop-masked pilot completed prediction and
+unrestrained relaxation. Original WT seeds yielded zero and two positive-phi
+Tier A/B sites, whereas both relay_02 and both relay_23 seeds yielded none.
+An audit of actual template features found that all six used identical
+conditioning tensors but failed the intended alpha95–103 omission. The
+initial apparent WT-only difference was confined to nominal alignment-record
+boundaries, which the native featurizer did not enforce. These observations
+therefore describe the shared original conditioning and do not qualify the
+intended loop-masked experiment. Corrected inputs for the same six cases now
+pass full native-dataset feature qualification against an independently
+indexed reference. Prediction and identical relaxation are being rerun; no
+corrected comparative outcome is yet available.
+
+Four unguided, unrelaxed WT controls (two seeds each in AF3 and Boltz-2,
+query-only protein MSAs, no templates or substrate contact restraints)
+completed inference and passed protein/ligand atom-inventory acceptance.
+Protein-only interface contacts uniquely identified the four physical
+alpha–beta pairs independently of ligand placement. Nevertheless, none of
+the 16 assigned sites, or any of the 192 internal-amide/ligand/site
+comparisons, met even Tier C geometry. The protein-only Phe113 backbone N
+to Asn186 ND2 separation was 9.92–20.34 Å across predictions, compared with
+3.83–3.88 Å in the four n12c sites. Thus this control protocol did not recover
+the native catalytic pocket; it is not yet a suitable basis for rejecting
+designed sequences. These controls are nested static model observations,
+not independent activity measurements. Protein-MSA/template conditioning
+requires a separate controlled test; no particular cause is established.
+Methods, complete distances/angles and qualification limits are in SI S10.
+
+Both subsequent protein-MSA controls completed inference and canonical
+coordinate/metric roundtrips but produced zero assigned Tier A/B sites.
+Protein-only template controls were therefore prepared as a bounded
+follow-up; these preserve observed crystal coordinates and missing-residue
+gaps while leaving PA6 unguided. They do not yet establish a prediction
+protocol suitable for variant ranking. Both 5 Å RFD3 parent exports subsequently
+passed the unchanged graph, coordinate, stereochemistry, closure and clash
+audits, and the 24-sequence exploratory pilot completed native cross-scoring.
+
+Matched, fully unrestrained Amber minimization of the protein-template WT
+controls subsequently converged to RMS gradients of 0.047702 (AF3) and
+0.045807 (Boltz) kcal mol⁻¹ Å⁻¹. All four Boltz sites changed from rejected
+to Tier A geometry, with OG1–carbonyl-C distances 2.911–2.970 Å, attack angles
+100.46–108.26° and both oxyanion-hole contacts 2.842–2.994 Å. In contrast,
+AF3's four initial Tier C sites all rejected after relaxation, with lower
+attack angles and weakened Asn186 contacts. The selected amide identities
+were unchanged; exhaustive analysis of all 48 combinations agreed with the
+assigned-site result. Boltz retained positive signed phi (+84.20 to +88.23°),
+whereas AF3 retained negative phi. These are direction-dependent geometric
+outcomes rather than evidence of a lower activation barrier or enhanced
+activity. They also show that generic Tier A acceptance and a preference for
+one signed-phi orientation are separate criteria. Details are in SI S10.
+
+## Current relay-path assessment — 27 November 2026
+
+The first supplemental pooled reconstruction combines the main 57 histories
+at 50 ps with four completed 10 ps checks (61 independent histories and 59 distinct
+bias potentials). Its maximum is 25.913 kcal/mol at s = 0.6875, nearly unchanged
+from the main-only estimate. Newly added histories each retain only one 5 ps
+block after the fixed initial discard, so a defensible pooled block interval
+is not yet available; the main-only band is identified separately. The 33-grid
+and six additional initialization histories do not yet contribute eligible
+production data. This point-only progress fit therefore neither resolves the
+early projection/sampling issues nor establishes a converged free-energy
+barrier. Data sources and prospective incorporation are described in SI S11.
+
+The latest matched-protocol 50 ps/window reconstruction places the sampled
+relay PMF maximum at 25.910 kcal/mol, s = 0.6875. Its 738 configurations have
+Kish weight ESS 362.15; the conditional pointwise 95% interval is
+25.286–26.495 kcal/mol. However, early/late trajectory-half maxima differ
+by 2.087 kcal/mol, so a converged activation free energy is not established.
+The detailed 45 ps structural audit identifies comparatively stable local
+geometry near the maximum in delivery windows D007–D010, suitable for
+exploratory TS-like structural selection rather than a verified equilibrium
+transition-state ensemble.
+
+The early PMF features combine hard-corner projection and poorly supported
+configurations outside the original center line. A separate late-activation
+rearrangement changes HG1–leaving-N distances by 1.53–1.62 Å in A026–A028
+while HG1 stays associated with Nα. These observations motivated the running
+33-state activation supplement and six running independent-start controls;
+they do not imply that the corrected sampling has already converged. Original
+and revised analyses remain identifiable. Path provenance, quantitative
+support/drift tables, corrective protocols and unresolved acceptance criteria
+are consolidated in [SI S1–S8](SUPPORTING_INFORMATION_DRAFT.md); the dated
+entries below preserve earlier checkpoints.
+
+The 50 ps feature audit distinguishes a shoulder at s ≈ 0.4 from a shallow
+maximum at s = 0.5375 followed by a minimum at s = 0.5875. Their 1.086 kcal/mol
+difference persists in paired within-history bootstrap estimates (conditional
+95% interval 0.867–1.259 kcal/mol using 5 ps blocks) and both temporal halves.
+Nevertheless, its strong dependence on projection geometry, including 37.4%
+vertex-associated weight in the trough region of the frozen-45 ps audit,
+precludes assignment as a distinct chemical barrier or metastable TI1 basin.
+The shared TI1-like PES reference maps to s = 0.537776, rather than the
+s ≈ 0.4 shoulder. The early/late primary maxima remain at the same s = 0.6875;
+their 2.087 kcal/mol difference describes barrier-height drift. Detailed
+definitions, paired contrasts, geometry and caveats are in SI S1 and S9.
+
 ## Reassessment of direct-route TS connectivity (2026-11-23)
 
 Inspection of the installed Amber DFTB implementation showed that 70-cycle
@@ -569,6 +674,15 @@ Asn219, Thr267, Asp306 and Asp308 map to Lys156, Asn186, Thr233, Asp272
 and Asp274, respectively. The Tyr phenolic OH mechanism therefore cannot be
 transferred unchanged to the actual Nyl12 sequence.
 
+Negoro et al. reported that H-GYAQ K189A retained only 0.032 U mg⁻¹
+cleavage-normalized activity on Ahx cyclic oligomer (~0.6% of parental enzyme),
+but its processing reached only 33% after further incubation [R25, Table 1,
+Fig. 8D; Fig. S12]. The normalization addresses the incomplete cleavage, yet
+the mutation's activity effect does not by itself identify a specific proton
+transfer or substrate-contact role. Lys156 protection in Nyl12 is therefore a
+precaution based on this structural analogy; no direct Nyl12 K156-mutant
+evidence establishes that the same function is required there.
+
 ## Static pKa sensitivity: cleavage state and Asp-pair hypotheses
 
 The corrected NylC predictions are summarized below. Ranges span resolved
@@ -1086,3 +1200,133 @@ complete 5 ps checkpoints. Evidence is in
 PMF, burn-in/temporal and block-size sensitivity figures in the campaign's
 existing `plots/` directory. Methods and bibliography provide the statistical
 and recent QM/MM precedents [R55–R60].
+
+
+### Forty-five-picosecond support audit and corrective activation sampling
+
+The 45 ps/window relay estimate had a sampled maximum of 25.803 kcal/mol at
+s = 0.6875 (conditional pointwise 95% interval 25.159–26.307 kcal/mol at that
+fixed bin). Temporal-half maxima of 24.807 and 26.653 kcal/mol remained
+inconsistent, and the estimate was not accepted as converged. Persistent
+early structure was traced to both coordinate projection and poor reweighted
+support. At s = 0.1625, 29.7% of bin weight mapped exactly to a path corner;
+at s = 0.2375 and 0.2625, single configurations contributed 96.5% and 92.6%
+of bin weight, respectively (Kish ESS 1.07 and 1.16). Narrow intervals therefore
+did not establish that these features represented physical minima or barriers.
+
+Physical two-dimensional diagnostics showed important configurations around
+q_acyl = −1.5 to −1.75 Å outside the existing activation-center line. Projection
+also assigned appreciable early progress to changes in unrestrained q_del
+while HG1 remained on OG1. A differentiable-coordinate sensitivity reduced
+corner accumulation but did not resolve the missing configurational coverage.
+A marginal along q_act alone was inappropriate for the complete reaction
+because it combined activation and product configurations at similar q_act.
+Accordingly, neither visually smoothing the original profile nor interpreting
+the alternate marginal as a revised full-path barrier was justified.
+
+All four targeted diagnostic simulations completed without unresolved SCC
+failures. The reciprocal activation starts retained different q_del
+distributions (histogram intersections 0.136 and 0.262), while both product
+extensions retained acyl geometry and gave q_del intersections of 0.266 and
+0.300 with their respective neighbors. These short checks did not demonstrate
+equilibration. On 27 November we launched the specified 33-state physical-CV
+activation supplement and continued all four diagnostics toward 30 ps. These
+calculations are ongoing; no corrected converged PMF is claimed here.
+
+Evidence: relay `full_path_300K/analysis/fixed_burnin_20261126/` directories
+`physical_coordinate_diagnostic_20261127/` and `targeted_sampling_20261126/`;
+new native inputs are in `full_path_300K/activation_support_20261127/`.
+
+### Distance-resolved sampling diagnosis at 45 ps per window
+
+Five interatomic-distance traces were aligned to the 5,130-frame visualization
+trajectory. Independent windows were separated, and no continuous kinetic
+trajectory was inferred from their concatenation. Statistics used all 45,600
+native configurations retained after the common initial 5 ps production
+discard, rather than the downsampled visualization frames. Every available
+distance-difference identity was reproduced within 10⁻⁶ Å; six independent
+NetCDF/DCD comparisons agreed within 1.95×10⁻⁷ Å.
+
+| Activation window | HG1–leaving-N mean change, late minus early (Å) | Early/late histogram intersection | C–OG1 mean change (Å) |
+|---|---:|---:|---:|
+| 26 | +1.534 | 0.000 | +0.122 |
+| 27 | +1.536 | 0.000 | +0.186 |
+| 28 | +1.616 | 0.000 | +0.168 |
+
+Here early and late denote production 5.05–10 and 40.05–45 ps; histogram
+intersection uses common 0.05 Å bins. In these windows HG1 remained associated
+with the N-terminal nitrogen at approximately 1.05 Å. The large change in its
+distance to the leaving nitrogen therefore reflects geometric rearrangement
+while the activation umbrellas bias q_act and q_acyl, leaving q_del unrestrained.
+It identifies incomplete relaxation beyond the early projection artifact.
+The estimated statistical-inefficiency timescale gΔt reached 11.76 ps for this
+distance. Because the estimate presumes stationarity, it is itself uncertain
+in a drifting record; the 5 ps block-bootstrap bands do not establish total
+uncertainty or convergence. These observations motivate late-block and
+independent-start checks, not a post hoc discard chosen to hide the drift.
+
+The biased-window sequence displays HG1 moving from OG1 to Nα and subsequently
+to the leaving nitrogen, together with C–OG1 shortening and C–N elongation.
+This confirms that the sampled structures span the intended chemical
+connectivity changes, but does not establish their unbiased populations,
+kinetics, a stable tetrahedral minimum or a converged activation free energy.
+The tracked H1/H2 records contain no return to OG1; three isolated H2
+nearest-heavy-atom reassignments require structural context before mechanistic
+interpretation. Complete tables and figures are in relay
+`full_path_300K/plots/reaction_distance_statistics_45ps_20261127/`.
+
+### Thirty-picosecond relay PMF and endpoint diagnostics (26 November; preliminary)
+
+Using the common fixed 5 ps discard once per continuous production window,
+the 30 ps/window N-terminal-relay profile had a sampled maximum of 25.042
+kcal mol−1 (conditional pointwise 95% block-bootstrap interval 24.285–25.697).
+The early/late temporal-half maxima were 23.578 and 26.149 kcal mol−1; a
+converged activation free energy is not established. The beginning of the
+projected profile contains a persistent coordinate contribution: 4,841 of
+28,500 retained frames (16.99%) project exactly onto internal polyline vertices,
+including 533/1,666 frames in the bin centered at s=0.1625. A subsequent single-thread MBAR refit reproduced the saved primary PMF
+exactly and retained per-frame weights. Exact vertex projections contribute
+32.728% of the s=0.1625 bin weight, but only 0.203% at s=0.1875 despite its
+substantial raw vertex count. Thus projection pileup explains part of the
+local structure rather than the whole early profile. Earlier oscillations
+without vertex pileup cannot be assigned to this cause. The bins at s=1.0375/1.0625 lie
+beyond the reference endpoint and have Kish weight ESS=1.248/1.000; the last bin
+contains one frame and has no resolved bootstrap interval. They cannot establish
+product-basin thermodynamics. Sampling continues to 60 ps/window. Primary plots
+remain unchanged while separately labeled coordinate/binning sensitivities are
+examined; smoothing appearance is not a convergence criterion.
+
+A separately specified differentiable path-coordinate projection removed exact
+corner coincidences, but retained early oscillations (nominal PMF values at
+s=0.1375/0.1625/0.1875: 2.827/2.231/2.373 kcal mol−1); its sampled maximum
+and reference differ from the primary coordinate, so this is a coordinate
+diagnostic, not a replacement PMF or a revised barrier. Endpoint reweighting
+also shows that three delivery-window-026 frames carry 90.46% of the globally
+normalized unbiased MBAR weight; the penultimate and final bins have weight ESS 1.248 and
+1.000. The tail therefore does not establish a product minimum. In activation
+windows 021/022 the biased two-dimensional coordinates overlap (histogram
+intersection 0.556), while mean unrestrained q_del remains −2.663/−1.913 Å,
+respectively. Reciprocal-start sampling is needed to test relaxation at these
+biases; overlap alone does not establish equilibration. The activation-030 /
+delivery-001 junction remains connected (minimum overlap 0.110), although this
+does not by itself establish adequate sampling.
+
+The same-weight half-bin-offset and double-width histogram sensitivities
+changed early peak locations/heights without removing the overall early
+structure. The s=1.0375 estimate was dominated by one frame (89.013% of its
+weight, delivery window 026 at 5.50 ps production); at s=0.2375 a single frame
+contributed 98.416% (activation window 014 at 9.05 ps). Both follow the fixed
+5 ps discard but remain isolated high-weight observations. These diagnostics
+motivate improved local sampling and checks of the coordinate measure; they
+do not justify selecting a discard or smoothing rule to obtain a desired barrier.
+
+
+## Relay supporting-information record (27 November 2026)
+
+The [supporting-information draft](SUPPORTING_INFORMATION_DRAFT.md) consolidates
+the actual coordinate-driven relay seed construction, atom mapping, native
+two-CV biases, fixed-discard/global-MBAR analysis, ESS definitions and the
+45 ps support/drift diagnostics with source and figure links. It distinguishes
+the running 33-state activation supplement and four continuation checks from
+validated convergence; the original dated analyses above remain historical
+evidence. Initial TI1 minimum qualification and TS validation remain unresolved.

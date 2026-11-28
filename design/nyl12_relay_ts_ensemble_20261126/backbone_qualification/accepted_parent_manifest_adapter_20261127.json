@@ -1,0 +1,52 @@
+{
+  "accepted": true,
+  "status": "accepted",
+  "operational_status": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/job_parent03_20261127/status.json",
+  "parents": [
+    {
+      "parent_id": "parent01_t5_seed01_retry01",
+      "sequence_scope": "native_WT",
+      "parent_source_id": "medoid01",
+      "noise_A": 5,
+      "seed": 2026112605,
+      "pdb_path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/audited_parent.pdb",
+      "canonical_mapping": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/canonical_mapping.json",
+      "pa6_graph_receipt": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/pa6_graph_acceptance.json",
+      "pdb_path_sha256": "93e0733975af23ae9f169fe1d7f4cc0e46ab5991b2a22e674e54b177766ba68a",
+      "canonical_mapping_sha256": "1667edf7b52f588a4fe921a2b6f3491dd7d026c79acbfac059206b3cf6fb4c43",
+      "pa6_graph_receipt_sha256": "199d3d5187bf243bcd0de1a2ff3c3f20510b7370d0c7eb6b915a89013988f135",
+      "authoritative_coordinates": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/derived_coordinates_and_typed_graph.json",
+      "authoritative_coordinates_sha256": "e10c796267c4b55b587657ae292d4ef39814c37b6a1a8cb0df7380e62ac28206",
+      "explicit_graph_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/audited_parent_explicit_graph.cif",
+      "explicit_graph_cif_sha256": "c03394dde341cd06ebd445ed5fe3ce04da206dd596be676a0efedaff064f8467",
+      "scientific_acceptance": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t5/scientific_acceptance.json",
+      "scientific_acceptance_sha256": "b9da23c9993ba0099e2c3d40ae7069f8bd89c0edb45e6b634aaa32d8946f257a"
+    },
+    {
+      "parent_id": "parent03_t5_seed01_qualification_20261127",
+      "sequence_scope": "native_WT",
+      "parent_source_id": "medoid03",
+      "noise_A": 5,
+      "seed": 2026112915,
+      "pdb_path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/audited_parent.pdb",
+      "canonical_mapping": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/canonical_mapping.json",
+      "pa6_graph_receipt": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/pa6_graph_acceptance.json",
+      "pdb_path_sha256": "b77a7c0fae978b343f2caad4bc7be56fbe814ec75de212f41dd149a2c3b47adf",
+      "canonical_mapping_sha256": "1667edf7b52f588a4fe921a2b6f3491dd7d026c79acbfac059206b3cf6fb4c43",
+      "pa6_graph_receipt_sha256": "572e12ce4f11ca21cf789808ff6249fb935828d7f07d554ab438da6aeb36c9c0",
+      "authoritative_coordinates": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/derived_coordinates_and_typed_graph.json",
+      "authoritative_coordinates_sha256": "31ebc31f34813a7d4dbd200a365eab59661c23515ec7d52f3db87cc34880f44e",
+      "explicit_graph_cif": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/audited_parent_explicit_graph.cif",
+      "explicit_graph_cif_sha256": "fcb3229b2d364436226dbcf6de1ff9fbd3d7adb46eeb2d90c220a33f63af5adc",
+      "scientific_acceptance": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent03_t5/scientific_acceptance.json",
+      "scientific_acceptance_sha256": "0fa0bb1d4ae5a78ff682fc922cc30fe4fde3bbb5b99a0d270478836d095ec79f"
+    }
+  ],
+  "required_distinct_original_parents": [
+    "medoid01",
+    "medoid03"
+  ],
+  "historical_failures_retained": true,
+  "rejected_parent01_t2": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/backbone_qualification/exports_adapter_20261127_parent01_t2_rejected/scientific_acceptance.json",
+  "generation_launched": false
+}

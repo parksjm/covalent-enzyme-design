@@ -1,0 +1,20 @@
+{
+  "status": "prepared_source_and_mask_qualified",
+  "manifest_sha256": "7eb261a10bacd4046e083ead8cd523b27e283bba9555513da1490444d9a08795",
+  "shared_package": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/source_snapshot/src",
+  "generator_audit_function": "nyl12_covalent.relay_ensemble_sequences",
+  "score_audit_function": "nyl12_covalent.relay_ensemble_sequences",
+  "same_audit_function_object": true,
+  "protection_module": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/k156_protected_pilot_20261127/source_snapshot/src/nyl12_covalent/nyl12_sequence_protection.py",
+  "protection_module_sha256": "1ad73231278ccf9c459eb817eb2dc0f4709d5b749fbcd6dc9d0d290d9f0f572f",
+  "K156_fixed": true,
+  "fixed_positions": 101,
+  "mutable_positions": 227,
+  "all_four_copy_flags_regenerated": true,
+  "native_engines_and_checkpoint_unchanged": true,
+  "native_bytecode_disabled": true,
+  "source_files": 369,
+  "native_launched": false,
+  "namespace_tests_passed": 7,
+  "namespace_statement_coverage_percent": 100
+}
