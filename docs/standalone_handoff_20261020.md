@@ -1,5 +1,11 @@
 **Start here:** [active plan through 30 November](NYL12_THROUGH_NOV30.md).
 
+**ipSAE2 qualified, 28 November:** isolated installation, native token mapping
+and WT/design-06 numerical checks passed. Supplementary scoring is independent
+of the running prediction, relaxation and QM/MM/US jobs. Preserve native order,
+both score directions and all four ligands; no catalytic confidence cutoff is
+introduced. [Installation, evidence and usage](IPSAE2_QUALIFICATION.md).
+
 **Active matched comparison:** `nyl12_original_matched_20261127` waits for the
 two running `nyl12_msa_relay_prot101_{06,03}_20261127` searches, then runs six
 fresh matched WT/design Boltz models and automatic Amber follow-through.

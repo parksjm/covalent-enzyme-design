@@ -1,0 +1,25 @@
+case_id,candidate,seed,native_ligand,protein_aligned_ipsae,group,interpretation
+WT_seed_20261126,WT,20261126,I,0.026397,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261126,WT,20261126,J,0.01631,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261126,WT,20261126,K,0.014456,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261126,WT,20261126,L,0.018853,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261127,WT,20261127,I,0.019571,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261127,WT,20261127,J,0.014993,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261127,WT,20261127,K,0.010802,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+WT_seed_20261127,WT,20261127,L,0.016093,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261126,relay_prot101_03,20261126,I,0.016422,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261126,relay_prot101_03,20261126,J,0.012646,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261126,relay_prot101_03,20261126,K,0.009494,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261126,relay_prot101_03,20261126,L,0.008297,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261127,relay_prot101_03,20261127,I,0.014738,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261127,relay_prot101_03,20261127,J,0.01182,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261127,relay_prot101_03,20261127,K,0.011013,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_03_seed_20261127,relay_prot101_03,20261127,L,0.015285,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261126,relay_prot101_06,20261126,I,0.017145,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261126,relay_prot101_06,20261126,J,0.011036,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261126,relay_prot101_06,20261126,K,0.009317,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261126,relay_prot101_06,20261126,L,0.013247,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261127,relay_prot101_06,20261127,I,0.013981,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261127,relay_prot101_06,20261127,J,0.011739,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261127,relay_prot101_06,20261127,K,0.009676,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff
+relay_prot101_06_seed_20261127,relay_prot101_06,20261127,L,0.0118,A+B+C+D+E+F+G+H,whole-ligand prediction confidence; no catalytic cutoff

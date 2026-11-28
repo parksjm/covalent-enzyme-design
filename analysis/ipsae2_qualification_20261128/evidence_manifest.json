@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "scope": "Technical WT/design scoring qualification; no activity threshold",
+  "native_mapping_receipts": [
+    {
+      "source": "analysis/ipsae2_qualification_20261128/WT_seed_20261126_native_mapping.json",
+      "source_sha256": "b9609a90f76bd943381345eee1bc3aed87ac6d720b8738f183ca49169fc80a93",
+      "compressed": "analysis/ipsae2_qualification_20261128/evidence/WT_seed_20261126_native_mapping.json.gz",
+      "compressed_sha256": "08ed3b5e618aed41a6895782f05844f2c53fa984e08eb943cf5be68d2d62133d"
+    },
+    {
+      "source": "analysis/ipsae2_qualification_20261128/relay_prot101_06_seed_20261126_native_mapping.json",
+      "source_sha256": "3157c01157470674db202e6cc35bb55b865bb662549aecd250084d5e22fb99a3",
+      "compressed": "analysis/ipsae2_qualification_20261128/evidence/relay_prot101_06_seed_20261126_native_mapping.json.gz",
+      "compressed_sha256": "36a261ea9cc790086bcd7ddf426111525f4c1a3df95dc891ce72f7a2ce9a67a4"
+    }
+  ],
+  "source_sha256": {
+    "analysis/ipsae2_qualification_20261128/run_qualification.py": "95d5f167e6cc736e45dd59d88d46931b3085a4c5d921a6fb765c6383d8fe6c15",
+    "scripts/prepare_boltz_ipsae2.py": "11de6303b491cc312f63c3ed1b36c94901dc44037011023fc308ef6936f5667a",
+    "scripts/score_boltz_ipsae2.py": "07f5d70a81890f483ff8117fbe1255ed6efae8a87f6a51be8612ab4d44f3c0cf",
+    "scripts/verify_ipsae2_native_mapping.py": "043de0b61a310aac41cf50acd67a94efe7994d290c10ed8d358f835026db057f",
+    "src/nyl12_covalent/ipsae2_native_mapping.py": "ee772a7bff70b904f10022e316fe48054e468770710a82b4973a9152f7b56bc0",
+    "src/nyl12_covalent/ipsae2_prepare.py": "720b22ae5d6a8c61ff958aef5577e1f654a3e635fa3befe09b3fdb335f7c1a3a",
+    "src/nyl12_covalent/ipsae2_scoring.py": "f2e3d314a22d83045d350b5fa234d4d2b7f138c2781779f3b80c2e23793d7a48",
+    "src/nyl12_covalent/ipsae2_sidecar.py": "fe22f79be0bf46861037c818eac48a35034f515cca0f52e6ae01f263a1c9ba75",
+    "tests/test_ipsae2_native_mapping.py": "49ce4e14c229fd78acf2dee08b2d01d75386c89e70da070435777c73c59a009c",
+    "tests/test_ipsae2_production.py": "0630b5707a84ab1341f83d88d52e071a4fdb5d1e2db74b7ffaa91f4df8fda10d",
+    "tests/test_ipsae2_scoring.py": "ba26a30550f454e9289c20660c200fb2737a4ef0fe2b4d2c289450573cd340fb"
+  }
+}

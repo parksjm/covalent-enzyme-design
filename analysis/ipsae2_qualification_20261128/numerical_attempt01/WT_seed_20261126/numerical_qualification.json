@@ -1,0 +1,14 @@
+{
+  "case_id": "WT_seed_20261126",
+  "mapping_receipt_sha256": "b9609a90f76bd943381345eee1bc3aed87ac6d720b8738f183ca49169fc80a93",
+  "checks": {
+    "directional_values_checked": 448,
+    "max_absolute_error": 4.944932719130879e-07,
+    "TSV_rounding_tolerance": 5.1e-07,
+    "raw_PAE_no_transposition": true,
+    "grouped_scalar_requires_direction_override_count": 0,
+    "all_four_ligands_retained": true
+  },
+  "repeat_byte_identical": true,
+  "native_artifacts_unchanged": true
+}

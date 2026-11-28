@@ -1,13 +1,13 @@
 ## PRIMARY OBJECTIVE — qualify relay sampling for TS-based redesign, 27 November 2026
 
-**Additional model-confidence analysis proposed:** qualify ipSAE2 on raw
-matched WT/design Boltz outputs, then report assembly interfaces and
-protein-aligned ligand confidence at all four sites. This is a nonblocking
-descriptor, not an affinity, catalytic-activity or barrier estimate. Keep the
-native coordinate/PAE order intact; score before canonicalization/Amber and
-carry scores through the mapping. No universal PA6 cutoff or production
-installation has been adopted. Current jobs continue unchanged; see
-[the assessment](ipsae2_code_review_20261127.md).
+**Model-confidence qualification completed, 28 November:** isolated ipSAE2
+0.1.11 passed upstream tests and real WT/design-06 native-mapping and numerical
+checks. Add its assembly-interface and protein-aligned ligand descriptors to
+the matched Boltz comparison, retaining all four ligands and both directions.
+Use the original native coordinates/PAE and explicit chain mapping, independently
+of Amber geometry and positive-phi Tier A/B. No affinity, activity, barrier or
+universal PA6 threshold is inferred. Existing scientific jobs continue unchanged;
+see [qualification and integration](IPSAE2_QUALIFICATION.md).
 
 **Matched sequence-validation cohort queued:** the PI authorized fresh
 Boltz/Amber predictions for original-only likelihood ranks 1/2,

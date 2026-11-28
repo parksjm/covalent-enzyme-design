@@ -1,3 +1,15 @@
+## Supplementary prediction-confidence qualification — 28 November 2026
+
+The isolated ipSAE2 implementation passed native-input mapping and numerical
+checks on WT and design 06, retaining all four PA6 ligands and both score
+directions. Whole-ligand protein-aligned scores were low in both predictions
+(WT 0.0145–0.0264; design 06 0.0093–0.0171 in one matched seed). These values
+describe uncertain whole-ligand placement and do not establish relative activity
+or invalidate a specific reactive-amide geometry. They remain supplementary to
+the positive-phi geometry and physical checks; no catalytic cutoff was calibrated.
+The [SI](SUPPORTING_INFORMATION_DRAFT.md#supplementary-ipsae2-qualification--28-november-2026)
+retains all scores and technical acceptance tests.
+
 ## Qualification of the redesign prediction workflow — 27 November 2026
 
 The PI-approved target pose corresponds to positive signed Herschlag phi

@@ -1,12 +1,12 @@
 # Nyl12: active plan through 30 November 2026
 
-**Confidence-scoring addition under qualification:** ipSAE2 is recommended
-for raw Boltz assembly/ligand-confidence reporting, independently of the
-positive-phi catalytic filters. First qualify exact native coordinate/PAE
-mapping, directionality and group handling on WT plus one design. Use a
-separate uv environment after dependency approval; leave all active
-environments and frozen jobs unchanged. No PA6-specific cutoff is established.
-See [the assessment](ipsae2_code_review_20261127.md).
+**Confidence scoring qualified, 28 November:** ipSAE2 0.1.11 is installed in
+an isolated, locked uv environment at the reviewed Git revision. WT and
+design 06 passed native-token mapping, all-four-ligand reporting and 896
+independent directional numerical checks. Supplementary scoring uses a
+separate postprocessing job; active Boltz/Amber and QM/MM/US inputs remain
+unchanged. Scores describe prediction confidence, with no PA6-specific cutoff
+or catalytic-activity claim. See [qualification and usage](IPSAE2_QUALIFICATION.md).
 
 **Matched design comparison queued, 27 November:** evaluate `relay_prot101_06`
 and `relay_prot101_03` (original-only ranks 1/2; 92/99 substitutions; 41-position

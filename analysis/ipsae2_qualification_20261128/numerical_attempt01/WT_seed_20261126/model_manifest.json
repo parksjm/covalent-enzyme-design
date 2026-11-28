@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "cif": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/WT_seed_20261126_model_0.cif",
+      "sha256": "45d2e6929ad719f9b3b50384bb3728b8d8694f7a4cb2e64ded919683d80eeca0"
+    },
+    "confidence": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/confidence_WT_seed_20261126_model_0.json",
+      "sha256": "260e16cb29dc060acad035604756bbc53fd7e2318e8bc01b7543260c209c1c52"
+    },
+    "pae": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/pae_WT_seed_20261126_model_0.npz",
+      "sha256": "291a57781619c4a73d98270c7e5605299947cbb9853904372aace8a9d685c7ee"
+    },
+    "plddt": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/plddt_WT_seed_20261126_model_0.npz",
+      "sha256": "51a0a7dca17f7653298f345b2e888a1e232ab268fd2a967d9475a4062939c279"
+    },
+    "structure": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/processed/structures/WT_seed_20261126.npz",
+      "sha256": "1411acd1505f1bd017344b0d7d31f57d82fd12b2f0330888b51cc9bccd61d0f1"
+    }
+  },
+  "case_id": "WT_seed_20261126"
+}

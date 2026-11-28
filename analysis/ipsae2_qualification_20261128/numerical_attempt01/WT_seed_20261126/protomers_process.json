@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/ipsae",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/WT_seed_20261126_model_0.cif",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/pae_WT_seed_20261126_model_0.npz",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/WT_seed_20261126/runs/boltz_results_WT_seed_20261126/predictions/WT_seed_20261126/confidence_WT_seed_20261126_model_0.json",
+    "--all-pairs",
+    "--output-file",
+    "/data/jpc/covalent-enzyme-design/analysis/ipsae2_qualification_20261128/numerical_attempt01/WT_seed_20261126/protomers.tsv",
+    "--group",
+    "A+E",
+    "--group",
+    "B+F",
+    "--group",
+    "C+G",
+    "--group",
+    "D+H"
+  ],
+  "finished_utc": "2026-11-28T05:14:15.354311+00:00",
+  "returncode": 0,
+  "started_utc": "2026-11-28T05:14:06.501286+00:00"
+}

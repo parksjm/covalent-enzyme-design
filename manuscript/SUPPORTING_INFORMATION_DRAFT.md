@@ -7,6 +7,37 @@ the PMF, TI1 assignment and transition-state interpretation remain provisional.
 Dated historical analyses in Methods/Results are preserved. The current
 [roadmap](../docs/NYL12_MECHANISM_ROADMAP.md) records subsequent execution status.
 
+## Supplementary ipSAE2 qualification — 28 November 2026
+
+This technical supplement has a later evidence date than the trajectory audit
+above. ipSAE2 0.1.11 at commit
+`fe560f4c2461eeb91aebded61ac8c1e83b264f60` passed 53 upstream tests and an
+independent WT/design qualification. Native Boltz token records and token
+pLDDT verified each 1444 × 1444 PAE matrix against its raw CIF. Negative
+controls exchanged identical-copy blocks; these invalid mappings were rejected.
+All original native artifacts retained identical hashes after scoring.
+
+Original chain pairs, whole-protein and four mature-protomer groups were scored
+with both PAE directions retained. Independent evaluation of 448 directional
+values per model agreed with the six-decimal upstream TSV values within
+5 × 10⁻⁷; repeated chain-pair scoring was byte-identical. Protein-only assembly
+correspondence was necessary because native beta-chain pairing differed between
+the two models. Protein-aligned whole-protein versus PA6 scores were:
+
+| Native ligand ID | WT seed 20261126 | Design 06 seed 20261126 |
+|---|---:|---:|
+| I | 0.026397 | 0.017145 |
+| J | 0.016310 | 0.011036 |
+| K | 0.014456 | 0.009317 |
+| L | 0.018853 | 0.013247 |
+
+Each score includes all 33 ligand heavy atoms with d0 = 2 Å. Ligand IDs are
+native output labels, not independently matched biological sites. These are
+whole-ligand confidence descriptors, not catalytic rankings; four copies do
+not constitute four independent predictions. No PA6-specific cutoff is imposed.
+Commands, dependency lock, mapping evidence, numerical checks and limitations
+are detailed in [the qualification record](../docs/IPSAE2_QUALIFICATION.md).
+
 ## S1. Scientific model, provenance and atom mapping
 
 **Signed-angle definition and current pose reference.** Projected Herschlag

@@ -1,0 +1,47 @@
+{
+  "official_repository": "https://github.com/DunbrackLab/IPSAE2.git",
+  "source_commit": "fe560f4c2461eeb91aebded61ac8c1e83b264f60",
+  "source_clone_origin": "/tmp/nyl12_ipsae2_review_20261127",
+  "python_version": "3.12.11",
+  "python_executable": "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/python",
+  "cli_executable": "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/ipsae",
+  "installed_package_path": "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/__init__.py",
+  "installed_versions": {
+    "Pygments": "2.21.0",
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.69.1",
+    "gemmi": "0.7.5",
+    "iniconfig": "2.3.1",
+    "ipsae2": "0.1.11",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.5",
+    "packaging": "26.4",
+    "pandas": "3.1.1",
+    "pillow": "13.0.0",
+    "pluggy": "1.7.0",
+    "pyparsing": "3.3.3",
+    "pytest": "9.2.0",
+    "python-dateutil": "4.0.0",
+    "scipy": "1.18.1",
+    "tzdata": "2026.6"
+  },
+  "direct_url": {
+    "url": "https://github.com/DunbrackLab/IPSAE2.git",
+    "vcs_info": {
+      "vcs": "git",
+      "commit_id": "fe560f4c2461eeb91aebded61ac8c1e83b264f60",
+      "requested_revision": "fe560f4c2461eeb91aebded61ac8c1e83b264f60"
+    }
+  },
+  "resource_policy": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "CUDA_VISIBLE_DEVICES": "",
+    "UV_CONCURRENT_BUILDS": "2"
+  },
+  "scope": "isolated installation and synthetic upstream qualification only; no real models scored"
+}

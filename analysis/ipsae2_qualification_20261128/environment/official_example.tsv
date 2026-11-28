@@ -1,0 +1,4 @@
+chn1	chn2	type1	type2	mol1	mol2	iptm	ipsae	ipsae12	ipsae21	ipsae_source	align_token12	align_token21	iPAE12	iPAE21	n0_12	n0_21	d0_12	d0_21	n_scored_contact12	n_scored_contact21	pae_cutoff12	pae_cutoff21	native_iptm12	native_iptm21
+A	C	prot	lig	AA_1	ATP	0.800	0.535897	0.535897	0.200000	ipsae12	ALA:1:CA	ATP:1:C1	2.000	2.000	3	1	2.000	1.000	3	1	none	10.0	NA	NA
+A	D	prot	ion	AA_1	MG	0.700	0.800000	0.800000	NA	ipsae12	ALA:1:CA	NA	1.000	NA	1	NA	2.000	NA	1	NA	none	NA	NA	NA
+C	D	lig	ion	ATP	MG	0.900	0.800000	0.800000	NA	ipsae12	ATP:1:C1	NA	1.000	NA	1	NA	2.000	NA	1	NA	none	NA	NA	NA

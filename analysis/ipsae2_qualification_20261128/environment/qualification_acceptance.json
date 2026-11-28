@@ -1,0 +1,14 @@
+{
+  "process_acceptance": {
+    "upstream_tests": "53 passed in 5.13s",
+    "cli_version": "ipSAE2 0.1.11",
+    "all_exit_codes": 0
+  },
+  "synthetic_example_acceptance": {
+    "pair_rows": 3,
+    "A_C_ipsae12": "0.535897",
+    "A_C_ipsae21": "0.200000",
+    "expected_values_match": true
+  },
+  "qualification_limits": "Synthetic upstream tests only; real Nyl12 scientific validity not established; code coverage not measured; no scientific jobs launched."
+}

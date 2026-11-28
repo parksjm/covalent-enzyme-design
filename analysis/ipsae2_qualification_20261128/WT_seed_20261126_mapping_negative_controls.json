@@ -1,0 +1,38 @@
+[
+  {
+    "swap": [
+      "A",
+      "B"
+    ],
+    "relabel_to_original_ids": false,
+    "rejected": true,
+    "error": "Native/CIF atom order mismatch at atom 0"
+  },
+  {
+    "swap": [
+      "A",
+      "B"
+    ],
+    "relabel_to_original_ids": true,
+    "rejected": true,
+    "error": "Native/CIF pLDDT token binding mismatch at atom 0"
+  },
+  {
+    "swap": [
+      "I",
+      "J"
+    ],
+    "relabel_to_original_ids": false,
+    "rejected": true,
+    "error": "Native/CIF atom order mismatch at atom 9920"
+  },
+  {
+    "swap": [
+      "I",
+      "J"
+    ],
+    "relabel_to_original_ids": true,
+    "rejected": true,
+    "error": "Native/CIF pLDDT token binding mismatch at atom 9920"
+  }
+]

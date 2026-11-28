@@ -81,22 +81,29 @@ reference. All stages retain input/source hashes, maps, environments, process
 receipts and separate scientific acceptance. Detailed stage gates and reused
 entry points are recorded in the [protocol](../docs/NYL12_TS_ENSEMBLE_REDESIGN_PROTOCOL.md).
 
-## Proposed supplementary interface-confidence analysis
+## Supplementary interface-confidence analysis
 
-Directional ipSAE scoring with ipSAE2 [R64] is proposed as a supplementary
-assessment of predicted protein assembly and PA6 placement. This analysis is
-not yet qualified or reported as completed. The protocol will use each
-unmodified native Boltz structure and its matching PAE/confidence outputs;
-token order and chain identities will be verified before canonicalization.
-Scores will be mapped to subsequent structural records rather than
-reinterpreted as confidence estimates for Amber-relaxed coordinates. Protein
-interfaces and all four ligands will be reported separately. For virtual
-alpha/beta or whole-protein groups compared with a ligand, the explicitly
-protein-aligned directional score will be retained because the package's
-grouped scalar maximum can select the opposite direction. No confidence
-threshold will substitute for the positive-phi Tier A/B or physical checks.
-The package revision and environment will be pinned before use; PA6-specific
-calibration and catalytic-activity prediction are not claimed.
+Directional ipSAE scoring with ipSAE2 [R64] was technically qualified on matched
+WT and design-06 Boltz predictions. Version 0.1.11 at commit
+`fe560f4c2461eeb91aebded61ac8c1e83b264f60` was installed in a separate,
+uv-locked Python environment. Each unmodified native CIF was bound to its
+matching PAE, confidence, token-pLDDT and processed-structure artifacts by
+hashes. Native Boltz token records, atom order and pLDDT-to-CIF correspondence
+verified PAE-axis identity before canonicalization; dimensions alone were
+insufficient for identical protein copies and ligands. Protein-only structural
+correspondence established mature alpha/beta pairing independently for each
+prediction. No PAE transposition was applied.
+
+Original chain pairs, virtual mature protomers and the whole-protein group
+were scored separately, retaining both directions and all four ligands. For
+protein groups compared with a ligand, the explicitly protein-aligned score
+was retained because the grouped scalar maximum can select the opposite
+direction. Scores annotate native predictions through explicit identity maps;
+they are not newly estimated confidence values for Amber-relaxed coordinates.
+No confidence threshold substitutes for positive-phi Tier A/B or physical
+checks. PA6-specific calibration, binding affinity and catalytic-activity
+prediction are not claimed. Technical checks and first scores are reported
+in [Supporting Information](SUPPORTING_INFORMATION_DRAFT.md#supplementary-ipsae2-qualification--28-november-2026).
 
 ## Precursor-derived paired MSAs and template-free WT controls
 

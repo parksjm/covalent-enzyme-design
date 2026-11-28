@@ -1,5 +1,10 @@
 # ipSAE2 bounded implementation review — 27 November 2026
 
+**28 November implementation update:** PI-authorized isolated installation and
+WT/design qualification have passed. The assessment below remains the dated
+preinstallation review; its pending-installation statements are superseded by
+[the qualification record](IPSAE2_QUALIFICATION.md).
+
 ## Revision and scope
 
 Primary source: https://github.com/DunbrackLab/IPSAE2, pinned commit

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/ipsae"
+  ],
+  "revision": "fe560f4c2461eeb91aebded61ac8c1e83b264f60",
+  "version": "0.1.11",
+  "source_sha256": {
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/ipsae": "79a2a548c0ca1662e90b4bde6babd18e571f609da7ef51b398b8af810386af86",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/pyproject.toml": "c4b2373f42a4cad54d4397fd45571653c1044e40b43e9ddf3fd11c6d5affabcb",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/uv.lock": "e24b7994164bba712c5cf7fedc8280cf6e6762dac62d3cc5addf606c5337d017",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/__init__.py": "62e522076218b69c095bd5d50deaccd04e8731444c7975fdd3984c95a16e86fa",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/batch.py": "16f146138f81c847af056ebafa51ece8b188e1a8a8da5fb31359a5dcb0fe1289",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/cli.py": "d01d0648a2052e7bcb2c6762868369c113f4e9dca0632b995e42ed93a80834b2",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/contacts.py": "060bc0a318630317b39d9d33b48d9c91be405284759a67e30488cb5c74f3b32f",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/native_iptm.py": "a81462f090889e7e7e13b2e2905b84c40ce7ea90408bb9f91d4ab9fc768efb08",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/pae_plot.py": "e5a905d7a5abb3c94e38a201935d1132ec07a0dd0e14b44218b03453ca4c2e39",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/readers.py": "ecc400becfd10f350185c773277925d34808791dfab98c1c8bf84d1f0ad7456c",
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/lib/python3.12/site-packages/ipsae/scores.py": "0de5a233ed888e2135c0ad20a1c36104e8a6e11c18f1224faa37c7a4b8b323dd"
+  }
+}

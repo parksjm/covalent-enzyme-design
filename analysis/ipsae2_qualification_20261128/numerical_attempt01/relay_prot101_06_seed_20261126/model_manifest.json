@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "cif": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/relay_prot101_06_seed_20261126_model_0.cif",
+      "sha256": "e97132f992d9163beb0ea649b009208bfa286ca277b2da922608ffd4d6d619a1"
+    },
+    "confidence": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/confidence_relay_prot101_06_seed_20261126_model_0.json",
+      "sha256": "42d3a7dd7da966866cf4d823d9fcd953fc9702b295eedbde26bacf7388f9a8bf"
+    },
+    "pae": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/pae_relay_prot101_06_seed_20261126_model_0.npz",
+      "sha256": "6f8a7f4bd791da712f9673d9919771fe791fb49bb0cd7b7525c91d9c37839ba0"
+    },
+    "plddt": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/plddt_relay_prot101_06_seed_20261126_model_0.npz",
+      "sha256": "240ac93a974bec36ccf1be3e78b5900ff0eaac20b268aac455e4ef0bd195a67d"
+    },
+    "structure": {
+      "path": "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/processed/structures/relay_prot101_06_seed_20261126.npz",
+      "sha256": "f9e25c79985cc502abbac282a0937af45b91d0478c7361615353ccbc56cf1abf"
+    }
+  },
+  "case_id": "relay_prot101_06_seed_20261126"
+}

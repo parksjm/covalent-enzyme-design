@@ -1,0 +1,15 @@
+[project]
+name = "nyl12-ipsae2-qualification"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "ipsae2",
+]
+
+[tool.uv.sources]
+ipsae2 = { git = "https://github.com/DunbrackLab/IPSAE2.git", rev = "fe560f4c2461eeb91aebded61ac8c1e83b264f60" }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]

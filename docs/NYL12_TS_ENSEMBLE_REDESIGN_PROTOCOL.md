@@ -140,9 +140,9 @@ qualified comparison, not a compulsory step for every candidate.
 
 ## 6. Postprocess, reject pathological assemblies, then relax
 
-**Prospective confidence analysis:** ipSAE2 is recommended as an additional
-descriptor after a pinned WT/design input-mapping qualification, not as a new
-catalytic filter. Score original native coordinates with their matching PAE
+**Qualified confidence analysis, 28 November:** isolated ipSAE2 passed pinned
+WT/design input-mapping and numerical checks. It is an additional descriptor,
+not a catalytic filter. Score original native coordinates with their matching PAE
 and confidence files before canonicalization or relaxation. Retain native
 chain/token maps, all protein interfaces and protein-aligned PA6 scores for
 each ligand. Grouped scores require explicit direction selection; their
@@ -150,7 +150,7 @@ default scalar maximum can reverse the intended protein-to-ligand direction.
 Attach the raw scores to canonical site records without treating them as new
 confidence estimates for Amber-relaxed structures. Retain positive-phi Tier
 A/B, graph, clash and force checks independently. See
-[the pinned review and qualification plan](ipsae2_code_review_20261127.md).
+[the accepted qualification and integration record](IPSAE2_QUALIFICATION.md).
 
 **Matched cohort queued, 27 November:** the two highest-ranked original-only
 designs, `relay_prot101_06` and `relay_prot101_03`, have 92/99 substitutions

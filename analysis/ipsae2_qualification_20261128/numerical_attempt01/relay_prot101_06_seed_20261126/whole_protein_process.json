@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/data/jpc/covalent-enzyme-design/environments/ipsae2_20261128/.venv/bin/ipsae",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/relay_prot101_06_seed_20261126_model_0.cif",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/pae_relay_prot101_06_seed_20261126_model_0.npz",
+    "/data/jpc/covalent-enzyme-design/design/nyl12_relay_ts_ensemble_20261126/broader_pilot/original_backbone_matched_20261127/prediction/cases/relay_prot101_06_seed_20261126/runs/boltz_results_relay_prot101_06_seed_20261126/predictions/relay_prot101_06_seed_20261126/confidence_relay_prot101_06_seed_20261126_model_0.json",
+    "--all-pairs",
+    "--output-file",
+    "/data/jpc/covalent-enzyme-design/analysis/ipsae2_qualification_20261128/numerical_attempt01/relay_prot101_06_seed_20261126/whole_protein.tsv",
+    "--group",
+    "A+B+C+D+E+F+G+H"
+  ],
+  "finished_utc": "2026-11-28T05:14:46.739422+00:00",
+  "returncode": 0,
+  "started_utc": "2026-11-28T05:14:38.116065+00:00"
+}
