@@ -750,7 +750,7 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/source.json' \
         --include='/umbrella_sampling/full_path_300K/analysis/cumulative_progression_20261125/checkpoint_*ps/analysis_request.json' \
         --include='/umbrella_sampling/full_path_300K/vmd_progress/' \
-        --include='/umbrella_sampling/full_path_300K/vmd_progress/current/***' \
+        --exclude='/umbrella_sampling/full_path_300K/vmd_progress/current/***' \
         --include='/umbrella_sampling/full_path_300K/vmd_progress/relay_us_movie_5ps_20261126/***' \
         --include='/vmd_progress/***' --include='/*/vmd_progress/***' \
         --include='/*/plots/' --include='/*/plots/*.png' \
@@ -767,23 +767,6 @@ if ssh "$remote" test -f "$nterminal_relay_source/config.json"; then
     if [[ $dry_run -eq 0 ]]; then
         if [[ -f "$nterminal_relay_destination/vmd_progress/SHA256SUMS.txt" ]]; then
             (cd "$nterminal_relay_destination/vmd_progress" && "${checksum[@]}" SHA256SUMS.txt)
-        fi
-        current_us_movie="$nterminal_relay_destination/umbrella_sampling/full_path_300K/vmd_progress/current"
-        if [[ -f "$current_us_movie/SHA256SUMS.txt" ]]; then
-            # The 30 ps trajectory is 820 MB, above the curated pull's 500 MB
-            # cap. Pull this one published artifact explicitly, then verify the
-            # complete bundle against the manifest copied above.
-            current_us_movie_rsync_args=(-rtpvz --safe-links --checksum)
-            if [[ $dry_run -eq 1 ]]; then
-                current_us_movie_rsync_args+=(--dry-run)
-            fi
-            rsync "${current_us_movie_rsync_args[@]}" \
-                "$remote:$nterminal_relay_source/umbrella_sampling/full_path_300K/vmd_progress/current/path.dcd" \
-                "$current_us_movie/path.dcd"
-            if ! (cd "$current_us_movie" && "${checksum[@]}" SHA256SUMS.txt); then
-                echo "Checksum verification failed for current relay US movie at: $current_us_movie" >&2
-                exit 1
-            fi
         fi
         echo "Combined relay movie: $nterminal_relay_destination/vmd_progress/view_path.vmd"
         echo "N-terminal relay movies: $nterminal_relay_destination/BRANCH/vmd_progress/view_path.vmd"
@@ -1150,7 +1133,7 @@ relay_current_source=/data/jpc/covalent-enzyme-design/qmmm/pa6_flipped_model30/1
 relay_current_destination="$destination/qmmm/pa6_flipped_model30/12_nterminal_relay/umbrella_sampling/full_path_300K"
 # Deliberately uncapped: the main DCD is about 1.3 GiB, supplemental about 19 MiB.
 # Print remote sizes before transfer; rsync reuses unchanged laptop payloads.
-relay_current_rsync_args=(-rtpvz --safe-links)
+relay_current_rsync_args=(-rtpvz --safe-links --checksum)
 if [[ $dry_run -eq 1 ]]; then relay_current_rsync_args+=(--dry-run); fi
 for movie_relative in vmd_progress/current additional_sampling_20261126/vmd_progress/current; do
     movie_pointer="$relay_current_source/${movie_relative%/current}/latest_verified"

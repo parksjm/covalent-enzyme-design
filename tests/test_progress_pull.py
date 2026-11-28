@@ -133,17 +133,17 @@ def test_relay_cumulative_pmfs_include_extensions_without_raw_data(
         f"{progression}/checkpoint_35ps/analysis.json",
         f"{progression}/checkpoint_35ps/analysis_request.json",
         f"{progression}/checkpoint_35ps/progression.png",
+        "umbrella_sampling/full_path_300K/vmd_progress/relay_us_movie_5ps_20261126/view_path.vmd",
+        "umbrella_sampling/full_path_300K/plots/pmf_20ps_readable.png",
+        "umbrella_sampling/full_path_300K/plots/mbar_overlap_20ps.pdf",
+    ]
+    reject = [
         "umbrella_sampling/full_path_300K/vmd_progress/current/view_path.vmd",
         "umbrella_sampling/full_path_300K/vmd_progress/current/path.dcd",
         "umbrella_sampling/full_path_300K/vmd_progress/current/path.parm7",
         "umbrella_sampling/full_path_300K/vmd_progress/current/manifest.json",
         "umbrella_sampling/full_path_300K/vmd_progress/current/qm_indices.json",
         "umbrella_sampling/full_path_300K/vmd_progress/current/SHA256SUMS.txt",
-        "umbrella_sampling/full_path_300K/vmd_progress/relay_us_movie_5ps_20261126/view_path.vmd",
-        "umbrella_sampling/full_path_300K/plots/pmf_20ps_readable.png",
-        "umbrella_sampling/full_path_300K/plots/mbar_overlap_20ps.pdf",
-    ]
-    reject = [
         f"{progression}/checkpoint_35ps/raw.nc",
         f"{progression}/checkpoint_35ps/source_snapshot/model.py",
         f"{prefix}/watcher_inputs_20261125_continuation03/source_snapshot/code.py",

@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import hashlib
+import os
 import shlex
 import shutil
 import subprocess
@@ -16,6 +17,59 @@ def _rules(marker: str, variable: str) -> list[str]:
         .split('"$remote:$' + variable + '/"', 1)[0]
         .replace("\\\n", "")
     )
+
+
+def _current_transfer_args() -> list[str]:
+    text = Path("scripts/pull_nyl12_inspection.sh").read_text()
+    declaration = text.split("relay_current_rsync_args=(", 1)[1].split(")", 1)[0]
+    return shlex.split(declaration)
+
+
+def test_mutable_current_is_excluded_and_immutable_source_is_checksummed() -> None:
+    """Keep the post-symlink mutable publication out of the legacy relay pull."""
+    text = Path("scripts/pull_nyl12_inspection.sh").read_text()
+    legacy = text.split("nterminal_relay_rsync_args=", 1)[1].split(
+        "# Deacylation hydration:", 1
+    )[0]
+    assert (
+        "--exclude='/umbrella_sampling/full_path_300K/vmd_progress/current/***'"
+        in legacy
+    )
+    assert (
+        "--include='/umbrella_sampling/full_path_300K/vmd_progress/current/***'"
+        not in legacy
+    )
+    assert "current_us_movie_rsync_args" not in legacy
+    assert 'movie_source=$(ssh "$remote" readlink -f "$movie_pointer")' in text
+    assert "--checksum" in _current_transfer_args()
+
+
+def test_production_current_transfer_repairs_same_size_same_mtime_corruption(
+    tmp_path: Path,
+) -> None:
+    """Checksum mode repairs a laptop file rsync's size/mtime check would reuse."""
+    rsync = shutil.which("rsync")
+    if not rsync:
+        pytest.skip("rsync unavailable")
+    source = tmp_path / "immutable_verified_70ps_57windows_001"
+    target = tmp_path / "laptop" / "vmd_progress" / "current"
+    source.mkdir()
+    target.mkdir(parents=True)
+    source_file = source / "path.dcd"
+    target_file = target / "path.dcd"
+    source_file.write_bytes(b"verified trajectory payload")
+    target_file.write_bytes(b"corruptd trajectory payload")
+    timestamp = 1_700_000_000
+    os.utime(source_file, (timestamp, timestamp))
+    os.utime(target_file, (timestamp, timestamp))
+    assert source_file.stat().st_size == target_file.stat().st_size
+    assert source_file.stat().st_mtime == target_file.stat().st_mtime
+
+    subprocess.run(
+        [rsync, *_current_transfer_args(), f"{source}/", f"{target}/"],
+        check=True,
+    )
+    assert target_file.read_bytes() == source_file.read_bytes()
 
 
 @pytest.mark.parametrize("kind", ["movie", "pmf"])
